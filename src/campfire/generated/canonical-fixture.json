@@ -1,0 +1,71 @@
+{
+  "format": "CAMPFIRE_MAPWEAVER",
+  "version": 1,
+  "mapId": "00000000-0000-4000-8000-000000000001",
+  "revision": 1,
+  "name": "Contract fixture",
+  "dimensions": {
+    "pixelWidth": 1024,
+    "pixelHeight": 768
+  },
+  "grid": {
+    "type": "SQUARE",
+    "sizePx": 80,
+    "feetPerCell": 5
+  },
+  "image": {
+    "path": "images/map.webp",
+    "mimeType": "image/webp"
+  },
+  "walls": [
+    {
+      "id": "wall-1",
+      "start": {
+        "x": 400,
+        "y": 0
+      },
+      "end": {
+        "x": 400,
+        "y": 300
+      },
+      "blocksVision": true
+    }
+  ],
+  "doors": [
+    {
+      "id": "door-1",
+      "geometry": {
+        "start": {
+          "x": 400,
+          "y": 300
+        },
+        "end": {
+          "x": 400,
+          "y": 380
+        }
+      },
+      "blocksVisionWhenClosed": true,
+      "label": "Entry"
+    }
+  ],
+  "lighting": {
+    "ambient": {
+      "intensity": 0.25
+    },
+    "lights": [
+      {
+        "id": "light-1",
+        "type": "point",
+        "position": {
+          "x": 200,
+          "y": 200
+        },
+        "radiusFt": 20,
+        "intensity": 0.8,
+        "color": "#ffcc88",
+        "affectsVision": true,
+        "enabled": true
+      }
+    ]
+  }
+}

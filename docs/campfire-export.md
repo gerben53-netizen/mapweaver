@@ -1,0 +1,41 @@
+# Campfire Map Contract v1 export
+
+Use **Export Campfire Map → Download Campfire package** in the editor. The ZIP contains exactly `map.json` and `map.png`, at original map resolution. Extract both files together for Campfire file ingest. JSON references the safe relative local path `map.png`; there are no external URLs or API calls. Export is a transfer and does not claim to save the editable project.
+
+## Canonical contract and immutable dependency
+
+Campfire exclusively owns `@campfire/map-contract`. The linked source is `C:/Users/gerbe/Documents/ChatGPT/Campfire/packages/map-contract` (or `../Campfire/packages/map-contract`). All files there are immutable/read-only to MapWeaver. Canonical `src/schema.ts`, inferred types and the canonical shape/semantic validators are used byte-for-byte in `src/campfire/generated/`; these are derived artifacts, never a local contract fork. `provenance.json` records SHA-256 for the canonical package files. `npm run check:campfire-contract` checks the artifact hashes and compares all pinned source files when the source is available; `npm run build` runs this check first. `CAMPFIRE_MAP_CONTRACT_DIR` may identify another read-only canonical checkout. In an environment without the canonical checkout, the pinned artifact hashes are still verified.
+
+After an owner-approved canonical change, deliberately refresh the derived copies and provenance, review the owner changes, and rerun contract tests. Never edit generated types, schemas or validators by hand, and never run the Campfire build/generator from MapWeaver. Report missing semantics; block only the dependent export, not independent authoring.
+
+## Identity and revisions
+
+The existing persistent project UUID (`ProjectFile.id`) is the exported `mapId`; the map has no independent path/name-derived identity. Renaming, saving, opening and exporting preserve it. Existing service New/Duplicate/Save separate copy/import-as-new actions create a fresh project UUID, so their external identity is independent. Wall, opening and light identities are scoped to that map. Copying a whole map may retain its internal object IDs because its new mapId distinguishes it; duplicating individual wall assemblies or lights creates fresh IDs.
+
+Optional format-12 `map.campfireRevision` is a positive safe integer, initially 1. It is separate from SQLite's optimistic save revision. The parser defaults existing projects to 1; no data reset or destructive migration occurs. Committed effective edits bump it once per completed history transaction. Undo/redo create newer revisions rather than restoring an old revision. Cancelled gestures, no-op edits, editor zoom/pan/selection, lighting-preview toggles, layer/object locks and layer names do not bump it. Revision changes are metadata that must be saved even after undo returns the authored content to a previously saved appearance.
+
+Revision dependencies conservatively include visible baked artwork/ordering, map dimensions/background, physical game scale and contract grid mode/size/origin, semantic walls/openings and lighting, plus map finish/generation data used by rendering. Hidden-object edits do not bump while hidden; making them visible does. Generic visible object properties are conservatively included. Contract door artwork uses the initial closed pose, so changing only the editor door pose does not change export. The service compares the same content dependency signature plus map name, advancing on rename and changed content while retaining the revision on repeated unchanged saves/reads. Incoming client revisions never reduce the stored revision. Exports are pure: they do not assign IDs or bump revisions.
+
+## Coordinates, grid and geometry
+
+Coordinates are absolute original image pixels with top-left `(0,0)`, x right, y down. There is no viewport conversion or resolution multiplier. `contractPoint` is the central mapper. Endpoints and lights must lie inside inclusive map bounds; no silent clamp/crop is applied to exported geometry.
+
+A visible square grid exports `SQUARE`; a disabled square grid exports `NONE`. Both retain positive `sizePx` and `feetPerCell`. A physical game scale must be explicitly configured in Map settings. Meter scales convert using exactly 0.3048 meters per foot. The PNG does not bake the grid. Visible grid offsets must normalize to zero. Hex grids are unsupported by canonical v1 and block export rather than being misrepresented. V1 has no grid-offset fields or hex enum; supporting those needs a Campfire-owned contract version/extension. Maps remain editable meanwhile.
+
+Only visible native Wall objects produce semantic blocking lines. Their canonical path geometry, not generated artwork bounds, supplies the line positions. Outside wall paths retain their native inner-boundary reference. Straight segments remain exact; curves use the existing adaptive subdivision with 0.25-map-pixel tolerance. Open/closed paths remain open/closed via their actual segment topology. The native wall ID is retained on its first line; additional lines use deterministic wall/node/opening/piece IDs. Moving the same endpoints retains IDs where subdivision topology is unchanged. Adding/removing nodes, openings or curve subdivisions may change derived piece IDs. There is no wall-rendering style in JSON. All native wall sections block vision in this v1 exporter.
+
+Door apertures are removed from blocking wall lines. Each ordinary door exports its persistent opening ID, aperture endpoint line, label and `blocksVisionWhenClosed: true`; editor door pose/status is not runtime DoorState. Passages and windows create transparent gaps and do not export interactive doors. Window/passages have no separate runtime identity in this v1 payload. Door geometry is an aperture chord on the canonical wall path. No Room/Area conversion is involved.
+
+Canonical v1 limits: 8192 pixels per dimension, 80 blocking wall lines, 20 doors, 32 point lights and radius up to 500 ft. Generated curved lines count toward the 80-line limit. MapWeaver's existing PNG memory/pixel limits may be stricter. Unsupported or out-of-bounds maps get an actionable error rather than altered geometry or a partial archive.
+
+## Lighting authoring and preview
+
+Open **Map actions → Lighting**. Set ambient intensity, add a point light, and edit its map-pixel X/Y, radius in feet, intensity, color, affects-vision flag and authored/default enabled flag. Point lights use stable UUIDs; Duplicate light assigns a new UUID; delete/update/duplicate are undoable. Close the dialog to drag preview handles within map bounds. At most 32 lights are stored. Canonical validation rejects invalid intensity, radius, color and duplicate IDs. Lights persist in optional format-12 `map.lighting`, using canonical `MapLightingV1` types. Absent lighting means ambient 1 and no lights.
+
+The toggle enables an approximate editor-only illumination overlay and radius guides; it is not Campfire/PixiJS rendering. Preview state is temporary and resets on project load. The preview is separate from the existing export renderer. Campfire PNG export includes terrain, floors, physical wall artwork, furniture/stamps/decoration and contact/soft shadows. It excludes semantic ambient/point illumination and the editor preview. Existing authored decorative atmosphere is baked artwork, not Campfire runtime fog/visibility. Campfire manages DoorState, LightState, TokenState, Fog/Visibility and combat state.
+
+## Validation and separation
+
+`src/campfire/serialize.ts` maps domain data to a validated `CampfireMapContractV1` without rendering or transport. It calls the canonical shape AND semantic validator, including IDs, bounds, resources, image paths and zero-length geometry. Errors include object IDs or canonical field paths. `src/campfire/package.ts` takes a captured snapshot, renders through the existing PNG pipeline, checks encoded image dimensions, and builds the complete ZIP before download. No half-package is written on failure. Stable ordering, static image paths and fixed ZIP entry timestamps make unchanged output deterministic.
+
+A future authenticated API client must consume this same serializer and validated payload. No API client, credentials, runtime-state import, bidirectional sync, fog or token authoring is implemented by this sprint.

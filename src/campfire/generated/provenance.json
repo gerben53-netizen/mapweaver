@@ -1,0 +1,25 @@
+{
+  "canonicalLocation": "C:\\Users\\gerbe\\Documents\\ChatGPT\\Campfire\\packages\\map-contract",
+  "generatedNotice": "Read-only derived copy; Campfire owns the contract. Never edit these artifacts manually.",
+  "sha256": {
+    "generate-schema.mjs": "f9fa8e02303b2288a3cda8f2d7c30bbf5b7e26bc06412cfc3db3e1ee67adc0d0",
+    "package.json": "c8dbe7eaf9df8368d93eecf13caad5053e5eff432f04c2e2ade79358d2b1bf5b",
+    "README.md": "12b1ad03b3c55c042f1f99e08422ac9d5a78705785abcda879dde86b1aea41c2",
+    "tsconfig.json": "d0c4f68471959f2b027677a86f872f621402a28f1ee27f09870c67358ea73bb1",
+    "dist/index.d.ts": "68834baba62588aa3ef6cd360c541bfb76e1b614dd5ecef05543198367c30898",
+    "dist/index.js": "207ea2019146eacdbe9c173c5f1ad293320845c8a716bbac0cd1d991665c9c7a",
+    "dist/schema.d.ts": "168933c9f6af84295eab8221f130f15784c5ea5a4267c96324144b91eb1a5532",
+    "dist/schema.js": "2142a340afb9ef254f2811335fcb0800612848507681a76cc730c02997d5ba2b",
+    "dist/types.d.ts": "f93d1f8ecd35398e78e13b12fa6ef0d7e47e6160e68bdd51a5f4a0597d6dd439",
+    "dist/types.js": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+    "dist/validation.d.ts": "ca11e2d289f1685717a0a3a3d9eb62db58946e64880435fad169f67332b2dc58",
+    "dist/validation.js": "4dd1fb5a24bc3cbd3d8c99c0f90014f17b78aad49b20dd3672094e5dff6c1b60",
+    "fixtures/minimal-valid-map-v1.json": "209d7fe429dbb20b4d0eb8760e67bed51422665cc8dd96e9266c93080bbf6d11",
+    "schemas/campfire-map-contract-v1.schema.json": "fdc4313bf6a1e404a75a09146f3d529605507e1f48bb3e0fd2868e441f4f0c40",
+    "src/index.ts": "b6f50c754825722cdbaa3a9f222b5b4eedbd7b4c08a3e060dfb363d7040f215d",
+    "src/schema.ts": "fa1b4c5b84d9e2077b475146ff6080cc030cb78167b220c73f4487fa0ee9f235",
+    "src/types.ts": "bfa1b2ca003be5a07a9e55cad3b45d9441ca119219a28ac65d7a9dd5fc0107c8",
+    "src/validation.ts": "b2e8b18c5c8b7227ca228a3fa54b8b6c14a84238f40181b6679787ac2684f5d8",
+    "tests/contract.test.mjs": "a788d9b8e905071a31de416baeb94541b830ca8bff312ecf82c285e7c074bf23"
+  }
+}

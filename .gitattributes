@@ -1,0 +1,2 @@
+# Preserve byte-identical artifacts derived from the immutable Campfire contract.
+src/campfire/generated/* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
