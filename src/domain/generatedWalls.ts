@@ -2,6 +2,7 @@ import timberRustic from './timberRusticPack.json'
 import timberRefined from './timberRefinedPack.json'
 import roughStone from './roughStonePack.json'
 import caveRock from './caveRockPack.json'
+import naturalCaveRock from './naturalCaveRockPack.json'
 import marble from './marblePack.json'
 import palePalaceStone from './palePalaceStonePack.json'
 import masonryRough from './masonryRoughPack.json'
@@ -38,6 +39,7 @@ registerGeneratedDefinition(timberRustic)
 registerGeneratedDefinition(timberRefined)
 registerGeneratedDefinition(roughStone)
 registerGeneratedDefinition(caveRock)
+registerGeneratedDefinition(naturalCaveRock)
 registerGeneratedDefinition(marble)
 registerGeneratedDefinition(palePalaceStone)
 registerGeneratedDefinition(productionPack)

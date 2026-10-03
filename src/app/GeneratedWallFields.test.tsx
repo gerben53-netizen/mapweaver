@@ -31,7 +31,7 @@ it('offers only regularity and variation for masonry and preserves the native wi
  fireEvent.change(screen.getByLabelText('Wall variation'),{target:{value:40}});expect(onChange.mock.lastCall?.[0].wall.generated.variation).toBe(.4)
 })
 
-it('offers only rock roughness/variation and exposes DEV cave choices outside installer builds',()=>{
+it('offers only rock roughness/variation and retains an exact saved DEV cave selection',()=>{
  const map={...defaultMapStyle(),width:800,height:600,background:null},value=generatedWallStyle(SIMPLE_WALL,map,'cave-rock','dev-1'),onChange=vi.fn();
  render(<WallFields value={value} onChange={onChange}/>);expect(screen.getAllByRole('slider')).toHaveLength(2);expect(screen.queryByLabelText('Living Root preset')).toBeNull();expect(screen.queryByLabelText('Wall regularity')).toBeNull();
  fireEvent.change(screen.getByLabelText('Wall roughness'),{target:{value:80}});expect(onChange.mock.lastCall?.[0].wall.generated.roughness).toBe(.8);expect(screen.getByRole('option',{name:/Cave Rock/})).toHaveValue('cave-rock@dev-1');
@@ -40,4 +40,12 @@ it('offers only rock roughness/variation and exposes DEV cave choices outside in
 it.each(['timber-rustic','timber-refined'])('offers %s DEV with only regularity/variation and hides it in installer choices',id=>{
  const map={...defaultMapStyle(),width:800,height:600,background:null},value=generatedWallStyle(SIMPLE_WALL,map,id,'dev-1'),onChange=vi.fn();const view=render(<WallFields value={value} onChange={onChange}/>);expect(screen.getByLabelText('Wall material or generator')).toHaveValue(id+'@dev-1');expect(screen.getAllByRole('slider')).toHaveLength(2);expect(screen.getByLabelText('Wall regularity')).toHaveValue(id==='timber-refined'?'95':'65');expect(screen.queryByLabelText('Living Root preset')).toBeNull();fireEvent.change(screen.getByLabelText('Wall variation'),{target:{value:70}});expect(onChange.mock.lastCall?.[0].wall.generated.variation).toBe(.7);
  vi.stubEnv('VITE_MAPWEAVER_INSTALLER','true');try{view.rerender(<WallFields value={generatedWallStyle(SIMPLE_WALL,map)} onChange={onChange}/>);expect(screen.queryByRole('option',{name:/Timber/})).toBeNull();view.rerender(<WallFields value={value} onChange={onChange}/>);expect(screen.getByLabelText('Wall material or generator')).toHaveValue(id+'@dev-1')}finally{vi.unstubAllEnvs()}
+})
+
+it.each(['', 'true'])('offers production Cave Rock and hides unselected DEV rock in build %s',installer=>{
+ vi.stubEnv('VITE_MAPWEAVER_INSTALLER',installer)
+ try{const map={...defaultMapStyle(),width:800,height:600,background:null},value=generatedWallStyle(SIMPLE_WALL,map,'natural-cave-rock','production-1'),onChange=vi.fn(),view=render(<WallFields value={value} onChange={onChange}/>);
+ expect(screen.getByRole('option',{name:'Natuurlijke grotrots'})).toHaveValue('natural-cave-rock@production-1');expect(screen.queryByRole('option',{name:/Cave Rock/})).toBeNull();expect(screen.getByLabelText('Wall roughness')).toHaveValue('55');expect(screen.getByLabelText('Wall variation')).toHaveValue('70');expect(screen.getAllByRole('slider')).toHaveLength(2);
+ view.rerender(<WallFields value={generatedWallStyle(SIMPLE_WALL,map,'cave-rock','dev-1')} onChange={onChange}/>);expect(screen.getByLabelText('Wall material or generator')).toHaveValue('cave-rock@dev-1');expect(screen.getByRole('option',{name:/Cave Rock/})).toBeInTheDocument();
+ }finally{vi.unstubAllEnvs()}
 })

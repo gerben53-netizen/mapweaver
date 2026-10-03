@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "libraryRevision": "production-20261003-rough-stone",
+  "libraryRevision": "production-20261004-natural-cave-rock",
   "publicDirectories": ["fonts", "terrain-textures-painterly", "world-assets-painterly", "settlement-assets-painterly", "generated-walls", "premium-core-interior-materials"],
   "libraryPacks": [
     {"name": "Painterly World hierarchy", "file": "world-assets-painterly/mapweaver-world-painterly.zip", "revision": "hierarchy-v1", "assets": 46},
@@ -13,12 +13,13 @@
     "Bleke paleissteen generated masonry walls: six production-1 components",
     "Marmer generated masonry walls: six production-1 components",
     "Ruwe natuursteen generated masonry walls: six production-1 components",
+    "Natuurlijke grotrots generated rock walls: nine production-1 components",
     "8 curated font families plus Liberation Sans with original license notices",
     "Editor tools, area/path/wall/opening tools, soft shadow, local save and PNG export"
   ],
   "fontFamilies": ["Cinzel", "Marcellus SC", "Cormorant Garamond", "EB Garamond", "IM Fell English", "Spectral", "Source Sans 3", "Roboto Condensed", "Liberation Sans"],
-  "compatibilityOnly": ["generated-walls/living-root-dev-1: saved-wall resolution only; hidden from new wall choices", "generated-walls/masonry-dev-1: development fixtures and saved-wall resolution only; hidden from new wall choices"],
+  "compatibilityOnly": ["generated-walls/living-root-dev-1: saved-wall resolution only; hidden from new wall choices", "generated-walls/masonry-dev-1: development fixtures and saved-wall resolution only; hidden from new wall choices", "generated-walls/cave-rock-dev-1: saved-wall resolution and development fixtures only; hidden from new wall choices"],
   "excluded": ["Private asset library/databases", "REPLACE/REJECT/inactive personal assets", "Asset templates and old Engraved pack", "Demo maps", "Source artwork and production intermediates", "QA fixtures/sprint evidence", "Full developer documentation and caches"],
   "documentation": ["INSTALLATIE.md", "THIRD_PARTY_FONTS.md"],
-  "attribution": ["public/world-assets-painterly/LICENSE.txt", "public/settlement-assets-painterly/LICENSE.txt", "public/premium-core-interior-materials/LICENSE.txt", "public/premium-core-interior-materials/provenance.json", "docs/wall-sets/living-root-production-provenance.json", "docs/wall-sets/pale-palace-stone-production-provenance.json", "docs/wall-sets/marble-production-provenance.json", "docs/wall-sets/rough-stone-production-provenance.json", "public/terrain-textures-painterly/provenance.json", "launcher/licenses/Node-LICENSE"]
+  "attribution": ["public/world-assets-painterly/LICENSE.txt", "public/settlement-assets-painterly/LICENSE.txt", "public/premium-core-interior-materials/LICENSE.txt", "public/premium-core-interior-materials/provenance.json", "docs/wall-sets/living-root-production-provenance.json", "docs/wall-sets/pale-palace-stone-production-provenance.json", "docs/wall-sets/marble-production-provenance.json", "docs/wall-sets/rough-stone-production-provenance.json", "docs/wall-sets/natural-cave-rock-production-provenance.json", "public/terrain-textures-painterly/provenance.json", "launcher/licenses/Node-LICENSE"]
 }

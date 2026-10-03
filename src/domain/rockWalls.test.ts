@@ -64,3 +64,17 @@ it('covers independent T/cross junctions with ordinary overlapping masses and ke
  for(const second of [cross,branch]){const parts=[...generatedPlacements(a),...generatedPlacements(second)];for(let x=196;x<=204;x++)for(let y=38;y<=42;y++)expect(parts.some(p=>Math.hypot(p.x-x,p.y-y)<p.width*.39)).toBe(true);expect(second.closed).toBe(false);expect(second.id).not.toBe(a.id)}
  const make=(y:number)=>createWall([...nodes,{id:'c',x:380,y,mode:'corner'}],false,style());const earlier=(y:number)=>generatedPlacements(make(y)).filter(p=>p.distance<330);expect(earlier(180)).toEqual(earlier(230));
 })
+
+it('registers Natural Cave Rock as production while retaining DEV footprints and identical native geometry',()=>{
+ const d=generatedDefinition({id:'natural-cave-rock',revision:'production-1'}),dev=generatedDefinition({id:'cave-rock',revision:'dev-1'}),production=generatedWallStyle(SIMPLE_WALL,map,d.id,d.revision)
+ expect(d.name).toBe('Natuurlijke grotrots');expect(d.defaults).toEqual(dev.defaults);expect(production.strokeWidth).toBe(10)
+ expect(d.components.map(({image,...c})=>{expect(image).toContain('/natural-cave-rock-production-1/');return c})).toEqual(dev.components.map(({image,...c})=>{expect(image).toContain('/cave-rock-dev-1/');return c}))
+ for(const closed of [false,true])for(const width of [5,10,20,30]){
+  const ns=[...nodes,{id:'c',x:250,y:220,mode:'corner' as const}],a=createWall(ns,closed,{...style(),strokeWidth:width}),b=createWall(ns,closed,{...production,strokeWidth:width})
+  expect(validatePath(b).closed).toBe(closed)
+  const normalize=(w:ReturnType<typeof createWall>)=>generatedPlacements(w).map(({component,...p})=>({...p,component:{...component,image:''}}))
+  expect(normalize(b)).toEqual(normalize(a))
+  const door=createOpening(b,.5,'door',30);expect(generatedPlacements(b,[door])).not.toEqual(generatedPlacements(b))
+ }
+ expect(()=>createWall(nodes,false,{...production,wall:{...production.wall,alignment:'outside'}})).toThrow('Outside')
+})
