@@ -1,7 +1,7 @@
 import { generatedDefinition,generatedPixelsPerFoot,ROOT_WIDTHS,ROOT_PRESETS } from '../domain/generatedWalls'
 import type { WallStyle } from '../domain/walls'
 export function GeneratedWallFields({value,onChange}:{value:WallStyle;onChange:(s:WallStyle)=>void}){
- const g=value.wall.generated!,masonry=generatedDefinition(g).generatorType==='masonry',rock=generatedDefinition(g).generatorType==='rock',pixels=generatedPixelsPerFoot(value)
+ const g=value.wall.generated!,masonry=['masonry','linear'].includes(generatedDefinition(g).generatorType),rock=generatedDefinition(g).generatorType==='rock',pixels=generatedPixelsPerFoot(value)
  const patch=(p:Partial<typeof g>)=>onChange({...value,wall:{...value.wall,generated:{...g,...p}}})
  return <>
  <label>Width<select aria-label="Wall width preset" value="" onChange={e=>onChange({...value,strokeWidth:ROOT_WIDTHS[e.target.value as keyof typeof ROOT_WIDTHS]*pixels})}><option value="" disabled>Custom / choose width</option>{Object.entries(ROOT_WIDTHS).map(([name,n])=><option key={name} value={name} disabled={n*pixels>(value.wall.alignment==='outside'?512:1024)}>{name}</option>)}</select></label>

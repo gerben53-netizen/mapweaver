@@ -126,7 +126,7 @@ Gebruik in code, documentatie en interface consequent de volgende betekenis:
 
 - **Scatter** — één bewerkbaar object met een versiegebonden seed/recipe en begrensde stampinstanties, die bestaande assets delen; zie ADR-0014.
 
-- **Generated Wall** — één native Wall met een opgeslagen generatorrevision, seed en parameters; gebundelde PNG-componenten vormen tijdelijke wortelbanen en een gecachte surface, zonder scene-stamps. Functionele geometrie en visuele bounds blijven afzonderlijk; zie ADR-0051.
+- **Generated Wall** — één native Wall met een opgeslagen generatorrevision, seed en parameters; gebundelde PNG-componenten vormen tijdelijke root-, masonry-, rock- of linear/timber-plaatsingen en een gecachte surface, zonder scene-stamps. Functionele geometrie en visuele bounds blijven afzonderlijk; zie ADR-0051, ADR-0055, ADR-0057 en ADR-0058.
 
 - **Wall Material** — een onveranderlijke atlasdefinitie met een optionele continue, versiegebonden materiaalrecipe; world-space schaal, organische visuele rand, bronkanalen en opgeslagen seed/parameters boven één native Wall-path. Bestaande strip/segment Wall sets blijven ondersteund; zie ADR-0050.
 
