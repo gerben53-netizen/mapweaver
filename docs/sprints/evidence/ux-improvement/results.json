@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "Existing project opens; grouped tools and 1280 layout",
+    "Wall context and globally separated room detection",
+    "Square resize and live grid persistence retain viewport",
+    "Advanced live opacity and explicit game scale",
+    "Shortcut input guards, Fit and reversible focus mode preserve inspector state",
+    "Selection actions, fit selection and Escape deselection",
+    "Both pan methods leave map object coordinates unchanged",
+    "Concise autosave status, larger layout and saved document reload",
+    "New battlemap uses squares while retaining project format and exact pixel dimensions"
+  ],
+  "errors": []
+}

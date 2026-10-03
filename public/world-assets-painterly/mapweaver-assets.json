@@ -1,0 +1,3024 @@
+{
+  "schemaVersion": 3,
+  "assets": [
+    {
+      "file": "assets/ridge-01.png",
+      "type": "stamp",
+      "title": "Painterly Ridge 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Mountains. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Mountains"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "mountains",
+        "ridge-01",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "0fb3524ab0ca3d463fa8a257a6cf8b008563c288136baed39d348886706918b0",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "ridge"
+        ],
+        "biomes": [
+          "temperate",
+          "alpine"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest",
+        "ridgeAxis": 30
+      }
+    },
+    {
+      "file": "assets/ridge-02.png",
+      "type": "stamp",
+      "title": "Painterly Ridge 02",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Mountains. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Mountains"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "mountains",
+        "ridge-02",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "8dacb103bebe3768b8a3fbbaf22eca99fd9ef7594507e42570d2f0345c92e21d",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "ridge"
+        ],
+        "biomes": [
+          "temperate",
+          "alpine"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest",
+        "ridgeAxis": 20
+      }
+    },
+    {
+      "file": "assets/peak-01.png",
+      "type": "stamp",
+      "title": "Painterly Peak 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Mountains. Hierarchy: hero.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Mountains"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "mountains",
+        "peak-01",
+        "hero"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 550000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "6b9a53d3015b5ff750d3299bd2cde126ada6074762862676597ec00861896fa1",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "peak",
+          "isolatedFeature",
+          "landmark"
+        ],
+        "biomes": [
+          "temperate",
+          "alpine"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 2,
+        "scale": {
+          "min": 0.96,
+          "max": 1.06
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "hero",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/connector-01.png",
+      "type": "stamp",
+      "title": "Painterly Connector 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Mountains. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Mountains"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "mountains",
+        "connector-01",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 900000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "e8d16014d053d91a5bf9361f830e7596d4dc47826ab0e2dd5ef07f967bbaae2c",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "ridge"
+        ],
+        "biomes": [
+          "temperate",
+          "alpine"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 5,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest",
+        "ridgeAxis": -20
+      }
+    },
+    {
+      "file": "assets/foothill-01.png",
+      "type": "stamp",
+      "title": "Painterly Foothill 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Mountains. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Mountains"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "mountains",
+        "foothill-01",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "33aba9bffa98661c4626e774a0fdebbfa5459dc70a31e9fb1b6bc7365cb6116d",
+      "generator": {
+        "version": 1,
+        "semanticType": "hill",
+        "roles": [
+          "foothill",
+          "ridge"
+        ],
+        "biomes": [
+          "temperate",
+          "alpine"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/snow-ridge-01.png",
+      "type": "stamp",
+      "title": "Painterly Snow Ridge 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Snow & Alpine. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Snow & Alpine"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "snow & alpine",
+        "snow-ridge-01",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "36fb634f60590ac9ad2e3cab336280df94d001adc1aebb138a39edeb42a648e0",
+      "generator": {
+        "version": 1,
+        "semanticType": "snowMountain",
+        "roles": [
+          "ridge",
+          "peak"
+        ],
+        "biomes": [
+          "alpine",
+          "snow",
+          "tundra"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest",
+        "ridgeAxis": 0
+      }
+    },
+    {
+      "file": "assets/snow-peak-01.png",
+      "type": "stamp",
+      "title": "Painterly Snow Peak 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Snow & Alpine. Hierarchy: hero.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Snow & Alpine"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "snow & alpine",
+        "snow-peak-01",
+        "hero"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "aa81029d2b987875867f9de679d54a12f0733ae2276fd27f3b91805f58a25c45",
+      "generator": {
+        "version": 1,
+        "semanticType": "snowMountain",
+        "roles": [
+          "peak",
+          "landmark"
+        ],
+        "biomes": [
+          "alpine",
+          "snow",
+          "tundra"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 2,
+        "scale": {
+          "min": 0.96,
+          "max": 1.06
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "hero",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/snow-cluster-01.png",
+      "type": "stamp",
+      "title": "Painterly Snow Cluster 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Snow & Alpine. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Snow & Alpine"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "snow & alpine",
+        "snow-cluster-01",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "68f733427be120b409e69d16f5e8e5c6343dc2c84cc22e49d517146b771b91cd",
+      "generator": {
+        "version": 1,
+        "semanticType": "snowMountain",
+        "roles": [
+          "ridge",
+          "peak"
+        ],
+        "biomes": [
+          "alpine",
+          "snow",
+          "tundra"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest",
+        "ridgeAxis": -20
+      }
+    },
+    {
+      "file": "assets/snow-foothill-01.png",
+      "type": "stamp",
+      "title": "Painterly Snow Foothill 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Snow & Alpine. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Snow & Alpine"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "snow & alpine",
+        "snow-foothill-01",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "5fcf7d270fe7342a6e3f404c941ef29070af56f1a6ee5d1d3840dd8c6baae8ef",
+      "generator": {
+        "version": 1,
+        "semanticType": "hill",
+        "roles": [
+          "foothill",
+          "ridge"
+        ],
+        "biomes": [
+          "alpine",
+          "snow",
+          "tundra"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/broadleaf-interior-01.png",
+      "type": "stamp",
+      "title": "Painterly Broadleaf Interior 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Broadleaf Forest. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Broadleaf Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "broadleaf forest",
+        "broadleaf-interior-01",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "745ac3c51410fdd424b4f2f253fcfb942d7574a274cee37c2b005f2e8826ed25",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestInterior",
+          "forestCluster"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/broadleaf-interior-02.png",
+      "type": "stamp",
+      "title": "Painterly Broadleaf Interior 02",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Broadleaf Forest. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Broadleaf Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "broadleaf forest",
+        "broadleaf-interior-02",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "796654d14661aefed63ef7aa431410385751099d9715802c554b4a10df2a8ca8",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestInterior",
+          "forestCluster"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/broadleaf-edge-01.png",
+      "type": "stamp",
+      "title": "Painterly Broadleaf Edge 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Broadleaf Forest. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Broadleaf Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "broadleaf forest",
+        "broadleaf-edge-01",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "c8bf14e39f5f4dc3d58024643decbb132521485dab5fb5cbcfe6839938b1f796",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestEdge"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/broadleaf-edge-02.png",
+      "type": "stamp",
+      "title": "Painterly Broadleaf Edge 02",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Broadleaf Forest. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Broadleaf Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "broadleaf forest",
+        "broadleaf-edge-02",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "61a5d95b5ca3b2638c248f7cdca4a7ee971d444c7cbb65988d80be1c82bc425a",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestEdge"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/broadleaf-sparse-01.png",
+      "type": "stamp",
+      "title": "Painterly Broadleaf Sparse 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Broadleaf Forest. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Broadleaf Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "broadleaf forest",
+        "broadleaf-sparse-01",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 550000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "f3b6503f1378ea5e2cdd2b25419f649fb6f0faa4992e0a338faaac07b9843bd1",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "sparseVegetation",
+          "forestEdge"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/landmark-grove-01.png",
+      "type": "stamp",
+      "title": "Painterly Landmark Grove 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Broadleaf Forest. Hierarchy: hero.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Broadleaf Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "broadleaf forest",
+        "landmark-grove-01",
+        "hero"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 350000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "d85fbd88dc20c52a086463aa2e70a9f2503b95de896fd4b70dc71a1d7cad269c",
+      "generator": {
+        "version": 1,
+        "semanticType": "tree",
+        "roles": [
+          "landmark",
+          "isolatedFeature",
+          "sparseVegetation",
+          "forestEdge"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 1,
+        "scale": {
+          "min": 0.96,
+          "max": 1.06
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "hero",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/conifer-interior-01.png",
+      "type": "stamp",
+      "title": "Painterly Conifer Interior 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Conifer Forest. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Conifer Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "conifer forest",
+        "conifer-interior-01",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "b142b78f0e66df1b6c8345ab74395b069dd2e7bf94576e35234e56fe3916bbbd",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestInterior",
+          "forestCluster"
+        ],
+        "biomes": [
+          "conifer",
+          "alpine",
+          "snow"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/conifer-dense-01.png",
+      "type": "stamp",
+      "title": "Painterly Conifer Dense 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Conifer Forest. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Conifer Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "conifer forest",
+        "conifer-dense-01",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "a882b521025f125fe0ee01ee54bc85cff81a793c0edc6bb070e15b1daca9045d",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestInterior",
+          "forestCluster"
+        ],
+        "biomes": [
+          "conifer",
+          "alpine",
+          "snow"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/conifer-edge-01.png",
+      "type": "stamp",
+      "title": "Painterly Conifer Edge 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Conifer Forest. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Conifer Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "conifer forest",
+        "conifer-edge-01",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "70de3a884a5bb0c873ca29d880ed3f583eb66b01e97d48b4972eee228c8c2840",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestEdge"
+        ],
+        "biomes": [
+          "conifer",
+          "alpine",
+          "snow"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/conifer-sparse-01.png",
+      "type": "stamp",
+      "title": "Painterly Conifer Sparse 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Conifer Forest. Hierarchy: detail.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Conifer Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "conifer forest",
+        "conifer-sparse-01",
+        "detail"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 350000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "c72cee67ef9496ec02f5626336d084657fc1f0021e0b833e21c3e4c9ceb54a7c",
+      "generator": {
+        "version": 1,
+        "semanticType": "tree",
+        "roles": [
+          "forestEdge",
+          "sparseVegetation",
+          "isolatedFeature"
+        ],
+        "biomes": [
+          "conifer",
+          "alpine",
+          "snow"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.75,
+          "max": 1.05
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "detail",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/swamp-twisted-01.png",
+      "type": "stamp",
+      "title": "Painterly Swamp Twisted 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Swamp. Hierarchy: hero.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Swamp"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "swamp",
+        "swamp-twisted-01",
+        "hero"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 500000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "570d451b87bfb05350d871b9c0155704ec84cf4d3d73d84a61c84b8bf5660e1e",
+      "generator": {
+        "version": 1,
+        "semanticType": "swampVegetation",
+        "roles": [
+          "swampInterior",
+          "landmark"
+        ],
+        "biomes": [
+          "swamp",
+          "wetland"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.96,
+          "max": 1.06
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "hero",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/swamp-dead-01.png",
+      "type": "stamp",
+      "title": "Painterly Swamp Dead 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Swamp. Hierarchy: detail.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Swamp"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "swamp",
+        "swamp-dead-01",
+        "detail"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 500000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "f7d2749034d5dc121f3d31b4fa5ad4020ab4c265cb2b072e8a0daa30dfc06832",
+      "generator": {
+        "version": 1,
+        "semanticType": "swampVegetation",
+        "roles": [
+          "swampEdge",
+          "sparseVegetation"
+        ],
+        "biomes": [
+          "swamp",
+          "wetland"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.75,
+          "max": 1.05
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "detail",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/marsh-reeds-01.png",
+      "type": "stamp",
+      "title": "Painterly Marsh Reeds 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Swamp. Hierarchy: detail.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Swamp"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "swamp",
+        "marsh-reeds-01",
+        "detail"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 500000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "a1bed24aa0e346194dd158d6718551f1af80f736e7781fd6043857201b881d91",
+      "generator": {
+        "version": 1,
+        "semanticType": "marshCluster",
+        "roles": [
+          "swampEdge",
+          "sparseVegetation"
+        ],
+        "biomes": [
+          "swamp",
+          "wetland"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.75,
+          "max": 1.05
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "detail",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/swamp-interior-01.png",
+      "type": "stamp",
+      "title": "Painterly Swamp Interior 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Swamp. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Swamp"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "swamp",
+        "swamp-interior-01",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 500000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "599eb2433c048bd2fd1516d31c81572d14b2714c6581da279c68d9f4f2ecfdb1",
+      "generator": {
+        "version": 1,
+        "semanticType": "swampVegetation",
+        "roles": [
+          "swampInterior",
+          "landmark"
+        ],
+        "biomes": [
+          "swamp",
+          "wetland"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/swamp-edge-01.png",
+      "type": "stamp",
+      "title": "Painterly Swamp Edge 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Swamp. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Swamp"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "swamp",
+        "swamp-edge-01",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 500000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "8bc6aaf047eb0a3ac1ff8e56622beb3823a4352b0c2365787a88ccf5978fcca1",
+      "generator": {
+        "version": 1,
+        "semanticType": "swampVegetation",
+        "roles": [
+          "swampEdge",
+          "sparseVegetation"
+        ],
+        "biomes": [
+          "swamp",
+          "wetland"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/hill-green-01.png",
+      "type": "stamp",
+      "title": "Painterly Hill Green 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Hills & Rocks. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Hills & Rocks"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "hills & rocks",
+        "hill-green-01",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "32375a111fdef1ae7887f866e6b98ca3c67b7af396170ba928477944f26e1a2f",
+      "generator": {
+        "version": 1,
+        "semanticType": "hill",
+        "roles": [
+          "foothill",
+          "ridge"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/hill-rocky-01.png",
+      "type": "stamp",
+      "title": "Painterly Hill Rocky 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Hills & Rocks. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Hills & Rocks"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "hills & rocks",
+        "hill-rocky-01",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "e9172938dc8ce81dbaac77882fafab9679d291bf10b4bacbcee5894d4801b512",
+      "generator": {
+        "version": 1,
+        "semanticType": "hill",
+        "roles": [
+          "foothill",
+          "ridge"
+        ],
+        "biomes": [
+          "alpine",
+          "temperate",
+          "generic"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/hill-arid-01.png",
+      "type": "stamp",
+      "title": "Painterly Hill Arid 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Hills & Rocks. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Hills & Rocks"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "hills & rocks",
+        "hill-arid-01",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "335146335659b14f61b1dd2511fbefa06b623b1261706c98877b1a2c1d869238",
+      "generator": {
+        "version": 1,
+        "semanticType": "hill",
+        "roles": [
+          "foothill",
+          "ridge"
+        ],
+        "biomes": [
+          "arid",
+          "desert"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/rock-01.png",
+      "type": "stamp",
+      "title": "Painterly Rock 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Hills & Rocks. Hierarchy: detail.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Hills & Rocks"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "hills & rocks",
+        "rock-01",
+        "detail"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 280000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "ce7c86ff28370470ccc8e12e480dc488cbc2c99f5949dc7920b0cda0dc4777be",
+      "generator": {
+        "version": 1,
+        "semanticType": "rock",
+        "roles": [
+          "rockScatter",
+          "foothill",
+          "isolatedFeature"
+        ],
+        "biomes": [
+          "generic",
+          "alpine",
+          "arid"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.75,
+          "max": 1.05
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "detail",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/rock-cluster-01.png",
+      "type": "stamp",
+      "title": "Painterly Rock Cluster 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Hills & Rocks. Hierarchy: detail.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Hills & Rocks"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "hills & rocks",
+        "rock-cluster-01",
+        "detail"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 450000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "f20dc5b1c6d39574c05c034c2ce53962bc9afe86a0e13ecfe324c1d379b4d5f5",
+      "generator": {
+        "version": 1,
+        "semanticType": "rockCluster",
+        "roles": [
+          "rockScatter",
+          "foothill",
+          "isolatedFeature"
+        ],
+        "biomes": [
+          "generic",
+          "alpine",
+          "arid"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.75,
+          "max": 1.05
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "detail",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/cliff-01.png",
+      "type": "stamp",
+      "title": "Painterly Cliff 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Hills & Rocks. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Hills & Rocks"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "hills & rocks",
+        "cliff-01",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 450000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "860104f34d63bc398f627dc8cb41238880b9d9052ead7075a8ee6259e9d53fec",
+      "generator": {
+        "version": 1,
+        "semanticType": "rockCluster",
+        "roles": [
+          "ridge",
+          "landmark",
+          "rockScatter"
+        ],
+        "biomes": [
+          "generic",
+          "alpine",
+          "arid"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/volcano-dormant-01.png",
+      "type": "stamp",
+      "title": "Painterly Volcano Dormant 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Volcanic. Hierarchy: hero.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Volcanic"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "volcanic",
+        "volcano-dormant-01",
+        "hero"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "135200cbd4860bbc40001baa9c0dd82af871d5ba639e0c3cd2925651d3960efe",
+      "generator": {
+        "version": 1,
+        "semanticType": "volcano",
+        "roles": [
+          "landmark",
+          "isolatedFeature"
+        ],
+        "biomes": [
+          "volcanic"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 5,
+        "scale": {
+          "min": 0.96,
+          "max": 1.06
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "hero",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/volcano-active-01.png",
+      "type": "stamp",
+      "title": "Painterly Volcano Active 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Volcanic. Hierarchy: hero.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Volcanic"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "volcanic",
+        "volcano-active-01",
+        "hero"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "e87cb3c36156e94d51601fe6fe88baf1aa3f5b49c991b928709fb9064cfcb8d3",
+      "generator": {
+        "version": 1,
+        "semanticType": "volcano",
+        "roles": [
+          "landmark",
+          "isolatedFeature"
+        ],
+        "biomes": [
+          "volcanic"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 1,
+        "scale": {
+          "min": 0.96,
+          "max": 1.06
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "hero",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/volcanic-mountain-01.png",
+      "type": "stamp",
+      "title": "Painterly Volcanic Mountain 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Volcanic. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Volcanic"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "volcanic",
+        "volcanic-mountain-01",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "aa0403aaedfb3b827b9df5b817900a528a1c4f0254c82b66c4c677b08bf13d7d",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "ridge",
+          "peak"
+        ],
+        "biomes": [
+          "volcanic"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 5,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/volcanic-rocks-01.png",
+      "type": "stamp",
+      "title": "Painterly Volcanic Rocks 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Volcanic. Hierarchy: detail.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Volcanic"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "volcanic",
+        "volcanic-rocks-01",
+        "detail"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 450000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "72139e5824e3001b1d1ba9240c82f909e354dea1cefe23d9cd32b96eac5e333d",
+      "generator": {
+        "version": 1,
+        "semanticType": "rockCluster",
+        "roles": [
+          "rockScatter",
+          "foothill"
+        ],
+        "biomes": [
+          "volcanic"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 5,
+        "scale": {
+          "min": 0.75,
+          "max": 1.05
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "detail",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/ridge-03.png",
+      "type": "stamp",
+      "title": "Painterly Ridge 03",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Mountains. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Mountains"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "mountains",
+        "ridge-03",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "ae3af282327d57fd0cf12dedd4d8f025be1b99b4be6d1fd20c0e3c482d05d0ba",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "ridge"
+        ],
+        "biomes": [
+          "temperate",
+          "alpine"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest",
+        "ridgeAxis": -10
+      }
+    },
+    {
+      "file": "assets/peak-02.png",
+      "type": "stamp",
+      "title": "Painterly Peak 02",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Mountains. Hierarchy: hero.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Mountains"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "mountains",
+        "peak-02",
+        "hero"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 550000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "2500da44b1402467f7bea201e15214a8175bd7f2b84b4dd7d12d82ea0358fc92",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "peak",
+          "isolatedFeature",
+          "landmark"
+        ],
+        "biomes": [
+          "temperate",
+          "alpine"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 2,
+        "scale": {
+          "min": 0.96,
+          "max": 1.06
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "hero",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/connector-02.png",
+      "type": "stamp",
+      "title": "Painterly Connector 02",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Mountains. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Mountains"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "mountains",
+        "connector-02",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 900000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "3011bb6db457191c9947f4233a478b47dcadc7715fa7f4a1778f8ed70f6c0afc",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "ridge"
+        ],
+        "biomes": [
+          "temperate",
+          "alpine"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 5,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest",
+        "ridgeAxis": -25
+      }
+    },
+    {
+      "file": "assets/foothill-02.png",
+      "type": "stamp",
+      "title": "Painterly Foothill 02",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Mountains. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Mountains"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "mountains",
+        "foothill-02",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "9c5a8f9d4e067e428599e9aef39aad90b92ffe04492e9499c090005cd3ed6485",
+      "generator": {
+        "version": 1,
+        "semanticType": "hill",
+        "roles": [
+          "foothill",
+          "ridge"
+        ],
+        "biomes": [
+          "temperate",
+          "alpine"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "support",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/broadleaf-interior-03.png",
+      "type": "stamp",
+      "title": "Painterly Broadleaf Interior 03",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Broadleaf Forest. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Broadleaf Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "broadleaf forest",
+        "broadleaf-interior-03",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "592830cd9a8a0c7f19aa9bb445eda769ba0323e2dae908517097767349d25104",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestInterior",
+          "forestCluster"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/conifer-interior-02.png",
+      "type": "stamp",
+      "title": "Painterly Conifer Interior 02",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Conifer Forest. Hierarchy: primary.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Conifer Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "conifer forest",
+        "conifer-interior-02",
+        "primary"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "734c8873ecf79f49fe21d7c05542d81906ec7a0afe0f68a0b2d96754ebbed0c3",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestInterior",
+          "forestCluster"
+        ],
+        "biomes": [
+          "conifer",
+          "alpine",
+          "snow"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.9,
+          "max": 1.12
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "primary",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/landmark-tower-01.png",
+      "type": "stamp",
+      "title": "Painterly Landmark Tower 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Landmarks.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Landmarks"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "landmarks",
+        "landmark-tower-01"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 300000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "d145044d46fc1440e5fa903fe3745d534b5b66161e50b3b6976113369edaa29f"
+    },
+    {
+      "file": "assets/broadleaf-tree-01.png",
+      "type": "stamp",
+      "title": "Painterly Broadleaf Tree 01",
+      "description": "Painted atlas miniature; northwest light, cool southeast shadow, transparent edges. Broadleaf Forest. Hierarchy: detail.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Broadleaf Forest"
+      ],
+      "tags": [
+        "world-map",
+        "painterly",
+        "northwest-light",
+        "broadleaf forest",
+        "broadleaf-tree-01",
+        "detail"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 350000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; prompt and original hash in provenance.json.",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "c6b89215ab018c6492b7afc16bd04e3d4f6e9d58a692bed7c9ec1a19b06be765",
+      "generator": {
+        "version": 1,
+        "semanticType": "tree",
+        "roles": [
+          "forestEdge",
+          "sparseVegetation",
+          "isolatedFeature"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.75,
+          "max": 1.05
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1,
+        "hierarchy": "detail",
+        "lighting": "northwest"
+      }
+    },
+    {
+      "file": "assets/frost-tree-detail-01.png",
+      "type": "stamp",
+      "title": "Painterly frost tree detail 01",
+      "description": "Painterly atlas miniature, northwest lighting. Hierarchy: detail.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Conifer Forest"
+      ],
+      "tags": [
+        "painterly",
+        "northwest-light",
+        "detail"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 220000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; hierarchy-provenance.json",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "e307177158f8e985ca96aa3f548e8e3789bd6eeb14e6522d642f71048b96f4dd",
+      "generator": {
+        "version": 1,
+        "semanticType": "tree",
+        "roles": [
+          "sparseVegetation",
+          "forestEdge"
+        ],
+        "biomes": [
+          "snow",
+          "alpine",
+          "conifer"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "hierarchy": "detail",
+        "lighting": "northwest",
+        "scale": {
+          "min": 0.75,
+          "max": 1.05
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 0.8
+      }
+    },
+    {
+      "file": "assets/broadleaf-edge-support-01.png",
+      "type": "stamp",
+      "title": "Painterly broadleaf edge support 01",
+      "description": "Painterly atlas miniature, northwest lighting. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Broadleaf Forest"
+      ],
+      "tags": [
+        "painterly",
+        "northwest-light",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 450000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; hierarchy-provenance.json",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "76051cfff34e04bf9ef9b6314f049611160f15bd4c61e41fd08f6c0e3e1150d2",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestEdge",
+          "forestCluster"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "hierarchy": "support",
+        "lighting": "northwest",
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 0.9
+      }
+    },
+    {
+      "file": "assets/ridge-low-support-01.png",
+      "type": "stamp",
+      "title": "Painterly ridge low support 01",
+      "description": "Painterly atlas miniature, northwest lighting. Hierarchy: support.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Mountains"
+      ],
+      "tags": [
+        "painterly",
+        "northwest-light",
+        "support"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; hierarchy-provenance.json",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "200e2a82c0269d1f3a54f1954a31db87caa2815a46f25f7b80e19fd5bc5261b3",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "ridge",
+          "foothill"
+        ],
+        "biomes": [
+          "temperate",
+          "alpine"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "hierarchy": "support",
+        "lighting": "northwest",
+        "scale": {
+          "min": 0.82,
+          "max": 1.08
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 0.9,
+        "ridgeAxis": -30
+      }
+    },
+    {
+      "file": "assets/alpine-rock-detail-01.png",
+      "type": "stamp",
+      "title": "Painterly alpine rock detail 01",
+      "description": "Painterly atlas miniature, northwest lighting. Hierarchy: detail.",
+      "categoryPath": [
+        "World Map",
+        "Painterly World",
+        "Snow & Alpine"
+      ],
+      "tags": [
+        "painterly",
+        "northwest-light",
+        "detail"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 180000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver — AI-assisted artwork",
+      "source": "OpenAI built-in imagegen; hierarchy-provenance.json",
+      "license": "See LICENSE.txt — generated asset usage note",
+      "sha256": "440432bf344dfb27a496463bd22d299be269bf86526cdbf8bab339143e532e6e",
+      "generator": {
+        "version": 1,
+        "semanticType": "rockCluster",
+        "roles": [
+          "rockScatter",
+          "foothill"
+        ],
+        "biomes": [
+          "snow",
+          "alpine",
+          "generic"
+        ],
+        "themes": [
+          "painterlyFantasy"
+        ],
+        "weight": 8,
+        "hierarchy": "detail",
+        "lighting": "northwest",
+        "scale": {
+          "min": 0.75,
+          "max": 1.05
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 0.8
+      }
+    }
+  ],
+  "collections": [
+    {
+      "title": "Painterly World — Mountains",
+      "description": "Coherent northwest-lit fantasy atlas family",
+      "members": [
+        {
+          "file": "assets/ridge-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/ridge-02.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/peak-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/connector-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/foothill-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/ridge-03.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/peak-02.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/connector-02.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/foothill-02.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/ridge-low-support-01.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "Painterly World — Snow & Alpine",
+      "description": "Coherent northwest-lit fantasy atlas family",
+      "members": [
+        {
+          "file": "assets/snow-ridge-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/snow-peak-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/snow-cluster-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/snow-foothill-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/alpine-rock-detail-01.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "Painterly World — Broadleaf Forest",
+      "description": "Coherent northwest-lit fantasy atlas family",
+      "members": [
+        {
+          "file": "assets/broadleaf-interior-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/broadleaf-interior-02.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/broadleaf-edge-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/broadleaf-edge-02.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/broadleaf-sparse-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/landmark-grove-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/broadleaf-interior-03.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/broadleaf-tree-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/broadleaf-edge-support-01.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "Painterly World — Conifer Forest",
+      "description": "Coherent northwest-lit fantasy atlas family",
+      "members": [
+        {
+          "file": "assets/conifer-interior-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/conifer-dense-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/conifer-edge-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/conifer-sparse-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/conifer-interior-02.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/frost-tree-detail-01.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "Painterly World — Swamp",
+      "description": "Coherent northwest-lit fantasy atlas family",
+      "members": [
+        {
+          "file": "assets/swamp-twisted-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/swamp-dead-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/marsh-reeds-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/swamp-interior-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/swamp-edge-01.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "Painterly World — Hills & Rocks",
+      "description": "Coherent northwest-lit fantasy atlas family",
+      "members": [
+        {
+          "file": "assets/hill-green-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/hill-rocky-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/hill-arid-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/rock-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/rock-cluster-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/cliff-01.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "Painterly World — Volcanic",
+      "description": "Coherent northwest-lit fantasy atlas family",
+      "members": [
+        {
+          "file": "assets/volcano-dormant-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/volcano-active-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/volcanic-mountain-01.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/volcanic-rocks-01.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "Painterly World — Landmarks",
+      "description": "Coherent northwest-lit fantasy atlas family",
+      "members": [
+        {
+          "file": "assets/landmark-tower-01.png",
+          "type": "stamp"
+        }
+      ]
+    }
+  ]
+}

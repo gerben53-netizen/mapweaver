@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "collection": {
+    "title": "Paleis van Sylvenglen",
+    "description": "Example collection with a desk and an empty category."
+  },
+  "assets": [
+    {
+      "file": "meubilair/06_manuscriptlessenaar.png",
+      "type": "stamp",
+      "title": "Manuscriptlessenaar",
+      "description": "An original Mapweaver example desk, reusable under CC0.",
+      "categoryPath": [
+        "Eryndor",
+        "Sylvenglen",
+        "Paleis",
+        "Meubilair"
+      ],
+      "tags": [
+        "desk",
+        "study",
+        "paleis"
+      ],
+      "defaultSize": {
+        "mode": "grid",
+        "width": 2,
+        "height": 1,
+        "unit": "cells",
+        "lockAspectRatio": false
+      },
+      "applicableMapTypes": [
+        "battlemap"
+      ],
+      "author": "Mapweaver example artwork",
+      "license": "CC0-1.0"
+    }
+  ],
+  "categories": [
+    {
+      "path": [
+        "Eryndor",
+        "Sylvenglen",
+        "Paleis",
+        "Lege kamer"
+      ],
+      "sortOrder": 2
+    }
+  ]
+}

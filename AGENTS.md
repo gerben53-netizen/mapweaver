@@ -350,6 +350,16 @@ Documenteer iedere wijziging aan het persistente formaat.
 
 ## 13. Veiligheid en externe acties
 
+### Lokale Git-werkwijze
+
+Mapweaver wordt onderhouden in de bestaande lokale Git-repository. Normale ontwikkeling gebeurt op `develop`. Controleer vóór iedere sprint de werkboom; deze is bij voorkeur schoon.
+
+Wanneer een sprint tracked projectbestanden wijzigt, eindig de sprint met diffcontrole en precies één eigen lokale commit: `Sprint: <korte sprinttitel>` of bij een gerichte bugfix `Fix: <korte beschrijving>`. Maak geen lege commit voor analyse of werk zonder tracked wijzigingen. Combineer geen ongerelateerd sprintwerk.
+
+Behoud ongerelateerde vooraf bestaande wijzigingen en neem ze nooit stilzwijgend mee. Als ambiguïteit veilig committen verhindert, rapporteer de blokkade; commit alleen wanneer de eigen sprintwijzigingen veilig te isoleren zijn. Maak geen remote en push niet, tenzij de gebruiker dit expliciet vraagt.
+
+De eenmalige baseline bevat de bestaande canonieke code plus repositoryhygiëne, met onderwerp `Baseline: Mapweaver before sprint-level Git workflow`; historische sprints worden niet gereconstrueerd.
+
 
 
 - Voer geen externe acties uit zoals deployen, publiceren, pushen, mergen of cloudresources wijzigen, tenzij de gebruiker daar expliciet opdracht voor geeft.

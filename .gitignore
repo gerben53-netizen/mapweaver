@@ -1,0 +1,32 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+coverage/
+*.local
+.npm-cache/
+dist-service/
+
+# Root-local workspaces may contain source artwork or copied user data: ignore,
+# preserve, and inspect before any deletion. Canonical fixtures live in tests/.
+/*.local/
+/npm-cache/
+/test-results/
+/playwright-report/
+*.log
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.tmp

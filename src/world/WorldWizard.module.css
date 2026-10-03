@@ -1,0 +1,9 @@
+.layout {display:grid;grid-template-columns:220px minmax(0,1fr);gap:20px;align-items:start;}
+.layout fieldset {max-height:48vh;overflow:auto;padding:4px;}
+.layout legend {font-weight:600;}
+.layout input[type=range] {width:100%;accent-color:var(--color-accent);}
+.layout output {float:right;color:var(--color-text);}
+.preview canvas {width:100%;height:auto;background:var(--color-shell);border:1px solid var(--color-border);}
+.preview p {font-size:12px;}
+.actions {display:flex;justify-content:flex-end;gap:8px;margin-top:16px;}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.layout fieldset{max-height:30vh}}

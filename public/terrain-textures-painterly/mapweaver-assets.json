@@ -1,0 +1,1193 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "file": "materials/grass-lush.png",
+      "type": "fillPattern",
+      "title": "Lush Atlas Grassland",
+      "description": "Organic meadow relief; enrich open plains beneath symbols. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Grassland"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "grassland",
+        "grass-lush",
+        "grassland"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "4bd8785aec704f1636621fb5d18cfb5e650c341eada2a8fd68b5f9cdd6951c9a"
+    },
+    {
+      "file": "materials/grass-dry.png",
+      "type": "fillPattern",
+      "title": "Dry Grassland Breakup",
+      "description": "Warm soil glimpses and straw patches for transitional plains. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Grassland"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "grassland",
+        "grass-dry",
+        "grassland"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "ccd5e3ead250e8c53eb7521a012ececa0f108783835e57f5c9c95432f0c6a89e"
+    },
+    {
+      "file": "materials/rock-light.png",
+      "type": "fillPattern",
+      "title": "Light Limestone Scree",
+      "description": "Broken pale slabs and scree; ground mountain edges. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Rocky upland"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "rocky upland",
+        "rock-light",
+        "rocky"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "a9f9135c21e42516a9b9dd47f6b770b0cc290a762ddfa85e5222923ace637f13"
+    },
+    {
+      "file": "materials/rock-dark.png",
+      "type": "fillPattern",
+      "title": "Dark Slate Upland",
+      "description": "Cool weathered rock and earthy seams; use lightly under labels. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Rocky upland"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "rocky upland",
+        "rock-dark",
+        "rocky"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "079f6c3d98815de68994d5fa2107844b12ff603e33649052db90b017169b1574"
+    },
+    {
+      "file": "materials/foothill.png",
+      "type": "fillPattern",
+      "title": "Foothill Scree",
+      "description": "Grassy low relief with mineral tongues beneath mountain bases. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Foothills"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "foothills",
+        "foothill",
+        "rocky"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "238248eadf6bc0b278f0a145ecc02ca397492a596005f0f25ae1057ef98c6408"
+    },
+    {
+      "file": "materials/alpine.png",
+      "type": "fillPattern",
+      "title": "Patchy Alpine Snow",
+      "description": "Interlocking exposed rock and snow tongues at the snowline. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Alpine & snow"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "alpine & snow",
+        "alpine",
+        "snow"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "d281ee1833cf376036eab32e1bb4ec132462a7d16bf676d05955fe185bb17f5f"
+    },
+    {
+      "file": "materials/forest-temperate.png",
+      "type": "fillPattern",
+      "title": "Temperate Forest Floor",
+      "description": "Muted humus and understory; supports forest cores without new trees. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Forest floor"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "forest floor",
+        "forest-temperate",
+        "forest"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "1c6e0325fbda3583bc94e2c434ba978474e4f44dbdd269a144400147dadae309"
+    },
+    {
+      "file": "materials/forest-moss.png",
+      "type": "fillPattern",
+      "title": "Mossy Woodland Floor",
+      "description": "Soft moss cushions for damp woodland edges. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Forest floor"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "forest floor",
+        "forest-moss",
+        "forest"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "86ac6ce00c82d15e5dcf2bc494106c2aafe135a3d669d353065a6692d570155c"
+    },
+    {
+      "file": "materials/swamp-wet.png",
+      "type": "fillPattern",
+      "title": "Mottled Wet Marsh",
+      "description": "Wet silt islands, pooled hollows and muted reed-like marks. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Swamp & marsh"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "swamp & marsh",
+        "swamp-wet",
+        "swamp"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "197a25cc99152c21446c0b562e443268ec99828037fff633cb868d96d04d8e4a"
+    },
+    {
+      "file": "materials/swamp-bog.png",
+      "type": "fillPattern",
+      "title": "Dark Peat Bog",
+      "description": "Dark peat and low hummocks; restrained use beneath marsh symbols. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Swamp & marsh"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "swamp & marsh",
+        "swamp-bog",
+        "swamp"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "fb66e90b79684b11a1c596fe8f10c2a6afbb5ef897168598a57abf11ffaa8dc8"
+    },
+    {
+      "file": "materials/arid.png",
+      "type": "fillPattern",
+      "title": "Dusty Broken Earth",
+      "description": "Dry clay and muted scrub tone without a photographic crack pattern. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "arid",
+        "desert"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "fda166f72318fefcb803ef139314dea57d891a9f929f83d1f40cf6b87d24a597"
+    },
+    {
+      "file": "materials/shore.png",
+      "type": "fillPattern",
+      "title": "Coastal Silt and Shallows",
+      "description": "Silt and shallow water; paint narrow bands without covering coastline ink. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Coast & shore"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "coast & shore",
+        "shore",
+        "shallow"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "3dc5740da745f3bd7bda9add47b4afc05ef81c332ebd49ee4deba1d1103fee13"
+    },
+    {
+      "file": "materials/volcanic.png",
+      "type": "fillPattern",
+      "title": "Weathered Volcanic Ash",
+      "description": "Basalt and ash, without glowing lava or competing landmarks. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Volcanic"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "volcanic",
+        "volcanic",
+        "volcanic"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "8aaa38f26a8c58fc2d94c46584a272f1ecf75a482604d046562bdcc88e23b909"
+    },
+    {
+      "file": "materials/neutral.png",
+      "type": "fillPattern",
+      "title": "Soft Atlas Earth",
+      "description": "Low-contrast material between other families; not the Blend operation. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Neutral blends"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "neutral blends",
+        "neutral",
+        "land"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "a4e889a4aaaf620fe0c6e220d5b62a7d39cf10b04b3a0fb65830fdb29b9b4b93"
+    },
+    {
+      "file": "materials/sand-soft.png",
+      "type": "fillPattern",
+      "title": "Soft Sand Desert",
+      "description": "Quiet fine sand for broad desert washes. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "sand-soft",
+        "desert",
+        "sand",
+        "sandy",
+        "desert",
+        "arid"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "780ca6ef892af50f60dab28f49efe826fb69d41b31b4768c8f0bf16ceb3a2995"
+    },
+    {
+      "file": "materials/dunes.png",
+      "type": "fillPattern",
+      "title": "Wind-Swept Dunes",
+      "description": "Broken crescent dunes with quiet sandy intervals. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "dunes",
+        "desert",
+        "dune",
+        "dunes",
+        "wind",
+        "sand",
+        "desert",
+        "arid"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "c3b27b3a275d42449682dff9a411df8b2e27056eed54e4ac6df4ee860e244ad8"
+    },
+    {
+      "file": "materials/desert-stone.png",
+      "type": "fillPattern",
+      "title": "Stony Desert",
+      "description": "Low desert pavement and gravel for rugged dry transitions. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "desert-stone",
+        "desert",
+        "rocky",
+        "stony",
+        "desert",
+        "gravel",
+        "arid"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "c654e310ad3ee510e8ba3c41da73b9f9d3a9d5857662794107a887b3add94caa"
+    },
+    {
+      "file": "materials/dry-basin.png",
+      "type": "fillPattern",
+      "title": "Cracked Dry Basin",
+      "description": "Pale clay fissures for dried lakes and arid basins. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "dry-basin",
+        "desert",
+        "cracked",
+        "dry",
+        "basin",
+        "clay",
+        "desert",
+        "arid"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "378ae2a7dd7bc43135d5073061392458af6f3432ff6028974be54912c2987cd2"
+    },
+    {
+      "file": "materials/cave-damp.png",
+      "type": "fillPattern",
+      "title": "Damp Cavern Floor",
+      "description": "Dark mineral earth for humid caves and dungeon underlayers. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-damp",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "damp",
+        "wet",
+        "tunnel"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "bdd0f741a0ec3c49b1fbbb276706adab69b5421e196dac18366a6a77ac527317"
+    },
+    {
+      "file": "materials/cave-moss.png",
+      "type": "fillPattern",
+      "title": "Mossy Cave Ground",
+      "description": "Low olive moss on humid limestone soil, without canopy. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-moss",
+        "forest",
+        "cave",
+        "cavern",
+        "underground",
+        "damp",
+        "moss",
+        "mossy",
+        "humid"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "ee2924f6e4fbb2ecd68747740509f09232590d03c2973602b34ae52162d7833b"
+    },
+    {
+      "file": "materials/cave-wet-stone.png",
+      "type": "fillPattern",
+      "title": "Wet Stone Floor",
+      "description": "Cool damp stone with restrained mineral seams and no gloss. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-wet-stone",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "damp",
+        "wet",
+        "stone",
+        "tunnel"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "2d77ff800e851282ab44e15f5999b53e543c53f19d5b17ad0b5732616d7e8d5d"
+    },
+    {
+      "file": "materials/cave-mud.png",
+      "type": "fillPattern",
+      "title": "Moist Cavern Earth",
+      "description": "Soft damp umber mud for natural subterranean chambers. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-mud",
+        "swamp",
+        "cave",
+        "cavern",
+        "underground",
+        "damp",
+        "wet",
+        "mud",
+        "muddy",
+        "earth",
+        "soil",
+        "tunnel"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "887c74b97e1b212eac229a37b350c7e18781316e3b86d2d0b9d748e3ef1c76aa"
+    },
+    {
+      "file": "materials/cave-broken.png",
+      "type": "fillPattern",
+      "title": "Broken Cave Floor",
+      "description": "Fractured limestone plates embedded in fine cave dust. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-broken",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "broken",
+        "uneven",
+        "rough"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "acb9f712b88e9e28a18cfc382a81304dcf10d5138eddcfe66a4d983e4a6e00b3"
+    },
+    {
+      "file": "materials/cave-rubble.png",
+      "type": "fillPattern",
+      "title": "Rubble-Strewn Cavern",
+      "description": "Scattered small angular debris for collapsed passages. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-rubble",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "rubble",
+        "uneven",
+        "collapsed",
+        "tunnel"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "79dc2619f105745497a796acfd719a4a84617d6c1f288baeba2c60b9b3d9d3bf"
+    },
+    {
+      "file": "materials/cave-jagged.png",
+      "type": "fillPattern",
+      "title": "Jagged Stone Ground",
+      "description": "Fine slate splinters and shallow fractures, without giant rocks. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-jagged",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "jagged",
+        "uneven",
+        "rocky",
+        "rough"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "235d481d38e7db485cc5f23a113f5bb39d87e5ebffe582a21f053914277207a8"
+    },
+    {
+      "file": "materials/cave-uneven.png",
+      "type": "fillPattern",
+      "title": "Uneven Rocky Underground",
+      "description": "Weathered mineral humps and dusty hollows for rough ground. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-uneven",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "uneven",
+        "rocky",
+        "rough",
+        "tunnel"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "7c5481214a2a3de4f51e36ad9d2df565ebde4aa630e222736bffdf4f46bff335"
+    },
+    {
+      "file": "materials/salt-flats.png",
+      "type": "fillPattern",
+      "title": "Salt-Worn Flats",
+      "description": "Chalky salt crust and faint mineral islands for dry flats. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "salt-flats",
+        "desert",
+        "salt",
+        "flats",
+        "desert",
+        "arid",
+        "basin"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "e2291ae00e97408c5cbdb3aa7760e5188af5ba3f79203a7522cad94ed6fe5b57"
+    },
+    {
+      "file": "materials/leaf-litter.png",
+      "type": "fillPattern",
+      "title": "Leaf-Litter Forest Floor",
+      "description": "Subdued fallen leaves over dark humus beneath woodland. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Forest floor"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "forest floor",
+        "leaf-litter",
+        "forest",
+        "leaf",
+        "leaves",
+        "litter",
+        "forest",
+        "woodland",
+        "autumn"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "314e109c9ec3b0bf0648ed6cc5145e096a470b811334e7dada0095b1880824ff"
+    },
+    {
+      "file": "materials/rooty-floor.png",
+      "type": "fillPattern",
+      "title": "Rooty Woodland Floor",
+      "description": "Fine weathered root threads in muted woodland earth. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Forest floor"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "forest floor",
+        "rooty-floor",
+        "forest",
+        "root",
+        "roots",
+        "rooty",
+        "forest",
+        "woodland",
+        "floor"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "ff058e79071cee2cadb2134e073b33aa40822c32aff94b1e8630c19ae22e053a"
+    },
+    {
+      "file": "materials/clay-earth.png",
+      "type": "fillPattern",
+      "title": "Soft Clay Earth",
+      "description": "Quiet terracotta earth for gentle soil transitions. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Neutral blends"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "neutral blends",
+        "clay-earth",
+        "land",
+        "clay",
+        "soil",
+        "earth",
+        "dirt",
+        "neutral",
+        "transition"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "1cf6f6712be71cfeed1b9b5aeb057c7b0f7b124aa562b08f4b8c27211ef7ebb4"
+    },
+    {
+      "file": "materials/gravel-ground.png",
+      "type": "fillPattern",
+      "title": "Gravel Path Ground",
+      "description": "Small worn gravel in warm grey dust for paths and margins. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Rocky upland"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "rocky upland",
+        "gravel-ground",
+        "rocky",
+        "gravel",
+        "path",
+        "pebble",
+        "rocky",
+        "transition"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "335824f76c8fbe7cd571626bdff5135e65ee604c0d43621391720e83fdab4912"
+    },
+    {
+      "file": "materials/cavern-lichen.png",
+      "type": "fillPattern",
+      "title": "Cavern Lichen Ground",
+      "description": "Pale sage lichen flecks across cool cave stone. Ordinary Area fill copy. Terrain Brush uses the bundled immutable preset with this name.",
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cavern-lichen",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "lichen",
+        "damp",
+        "rocky",
+        "tunnel"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver generated material collection",
+      "source": "Generated using the built-in OpenAI image tool; prompt and hashes in provenance.json.",
+      "license": "Generated for the Mapweaver project. See LICENSE.txt.",
+      "sha256": "3f83cf386d4b7e676cd784290446ae452b52fa01c5249ede69c9a70f1d100ff0"
+    }
+  ],
+  "categories": [
+    {
+      "path": [
+        "Painterly Terrain",
+        "Grassland"
+      ],
+      "sortOrder": 0
+    },
+    {
+      "path": [
+        "Painterly Terrain",
+        "Rocky upland"
+      ],
+      "sortOrder": 1
+    },
+    {
+      "path": [
+        "Painterly Terrain",
+        "Foothills"
+      ],
+      "sortOrder": 2
+    },
+    {
+      "path": [
+        "Painterly Terrain",
+        "Alpine & snow"
+      ],
+      "sortOrder": 3
+    },
+    {
+      "path": [
+        "Painterly Terrain",
+        "Forest floor"
+      ],
+      "sortOrder": 4
+    },
+    {
+      "path": [
+        "Painterly Terrain",
+        "Swamp & marsh"
+      ],
+      "sortOrder": 5
+    },
+    {
+      "path": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "sortOrder": 6
+    },
+    {
+      "path": [
+        "Painterly Terrain",
+        "Coast & shore"
+      ],
+      "sortOrder": 7
+    },
+    {
+      "path": [
+        "Painterly Terrain",
+        "Volcanic"
+      ],
+      "sortOrder": 8
+    },
+    {
+      "path": [
+        "Painterly Terrain",
+        "Neutral blends"
+      ],
+      "sortOrder": 9
+    },
+    {
+      "path": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "sortOrder": 10
+    }
+  ],
+  "collections": [
+    {
+      "title": "Painterly Terrain — Grassland",
+      "description": "Painterly atlas ground materials: Grassland",
+      "members": [
+        {
+          "file": "materials/grass-lush.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/grass-dry.png",
+          "type": "fillPattern"
+        }
+      ]
+    },
+    {
+      "title": "Painterly Terrain — Rocky upland",
+      "description": "Painterly atlas ground materials: Rocky upland",
+      "members": [
+        {
+          "file": "materials/rock-light.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/rock-dark.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/gravel-ground.png",
+          "type": "fillPattern"
+        }
+      ]
+    },
+    {
+      "title": "Painterly Terrain — Foothills",
+      "description": "Painterly atlas ground materials: Foothills",
+      "members": [
+        {
+          "file": "materials/foothill.png",
+          "type": "fillPattern"
+        }
+      ]
+    },
+    {
+      "title": "Painterly Terrain — Alpine & snow",
+      "description": "Painterly atlas ground materials: Alpine & snow",
+      "members": [
+        {
+          "file": "materials/alpine.png",
+          "type": "fillPattern"
+        }
+      ]
+    },
+    {
+      "title": "Painterly Terrain — Forest floor",
+      "description": "Painterly atlas ground materials: Forest floor",
+      "members": [
+        {
+          "file": "materials/forest-temperate.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/forest-moss.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/leaf-litter.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/rooty-floor.png",
+          "type": "fillPattern"
+        }
+      ]
+    },
+    {
+      "title": "Painterly Terrain — Swamp & marsh",
+      "description": "Painterly atlas ground materials: Swamp & marsh",
+      "members": [
+        {
+          "file": "materials/swamp-wet.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/swamp-bog.png",
+          "type": "fillPattern"
+        }
+      ]
+    },
+    {
+      "title": "Painterly Terrain — Arid & dry",
+      "description": "Painterly atlas ground materials: Arid & dry",
+      "members": [
+        {
+          "file": "materials/arid.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/sand-soft.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/dunes.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/desert-stone.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/dry-basin.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/salt-flats.png",
+          "type": "fillPattern"
+        }
+      ]
+    },
+    {
+      "title": "Painterly Terrain — Coast & shore",
+      "description": "Painterly atlas ground materials: Coast & shore",
+      "members": [
+        {
+          "file": "materials/shore.png",
+          "type": "fillPattern"
+        }
+      ]
+    },
+    {
+      "title": "Painterly Terrain — Volcanic",
+      "description": "Painterly atlas ground materials: Volcanic",
+      "members": [
+        {
+          "file": "materials/volcanic.png",
+          "type": "fillPattern"
+        }
+      ]
+    },
+    {
+      "title": "Painterly Terrain — Neutral blends",
+      "description": "Painterly atlas ground materials: Neutral blends",
+      "members": [
+        {
+          "file": "materials/neutral.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/clay-earth.png",
+          "type": "fillPattern"
+        }
+      ]
+    },
+    {
+      "title": "Painterly Terrain — Underground & cavern",
+      "description": "Painterly atlas ground materials: Underground & cavern",
+      "members": [
+        {
+          "file": "materials/cave-damp.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/cave-moss.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/cave-wet-stone.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/cave-mud.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/cave-broken.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/cave-rubble.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/cave-jagged.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/cave-uneven.png",
+          "type": "fillPattern"
+        },
+        {
+          "file": "materials/cavern-lichen.png",
+          "type": "fillPattern"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "author": "Unspecified",
+  "source": "Unspecified",
+  "license": "Unspecified",
+  "id": "living-root",
+  "title": "Living Root",
+  "description": "Replace with a truthful production material description.",
+  "renderingMode": "continuous",
+  "nominalWidthPx": 128,
+  "defaultThickness": 35,
+  "repeatLengthPx": 512,
+  "overlapPx": 0,
+  "coreColor": "#746047",
+  "roughnessLimits": {
+    "max": 0,
+    "default": 0,
+    "maxProtrusionPx": 0
+  },
+  "bodyVariants": [
+    {
+      "file": "assets/fill-a.png",
+      "width": 512,
+      "height": 256,
+      "anchor": {
+        "x": 256,
+        "y": 128
+      },
+      "weight": 1,
+      "rotation": 0,
+      "scaleVariation": 0
+    }
+  ],
+  "continuous": {
+    "version": 1,
+    "category": "Organic",
+    "sources": {
+      "fill": [
+        0
+      ]
+    },
+    "scale": {
+      "unit": "ft",
+      "textureLength": 6,
+      "textureWidth": 3,
+      "organicWavelength": 5,
+      "edgeWidth": 0.2
+    },
+    "widths": {
+      "thin": 1.5,
+      "standard": 3.5,
+      "heavy": 6,
+      "massive": 10
+    },
+    "supported": [
+      "variation",
+      "organic"
+    ],
+    "defaults": {
+      "variation": 0.7,
+      "organic": 0.65,
+      "growth": 0,
+      "overgrowth": 0
+    },
+    "presets": [
+      {
+        "name": "Clean",
+        "values": {
+          "variation": 0.15,
+          "organic": 0,
+          "growth": 0,
+          "overgrowth": 0
+        }
+      },
+      {
+        "name": "Natural",
+        "values": {
+          "variation": 0.7,
+          "organic": 0.65,
+          "growth": 0,
+          "overgrowth": 0
+        }
+      },
+      {
+        "name": "Ancient",
+        "values": {
+          "variation": 0.85,
+          "organic": 0.8,
+          "growth": 0,
+          "overgrowth": 0
+        }
+      }
+    ],
+    "options": [
+      {
+        "id": "textureScale",
+        "label": "Texture scale",
+        "target": "textureScale",
+        "min": 0.25,
+        "max": 4,
+        "default": 1
+      },
+      {
+        "id": "edgeStrength",
+        "label": "Contact edge",
+        "target": "edgeStrength",
+        "min": 0.05,
+        "max": 2,
+        "default": 1
+      }
+    ]
+  }
+}

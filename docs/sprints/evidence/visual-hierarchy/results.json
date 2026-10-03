@@ -1,0 +1,20 @@
+{
+  "checks": [
+    "Primary navigation, active rail, hover and keyboard focus have distinct computed styles",
+    "Campaign selection retains its tint on hover and open-map edge remains separate",
+    "Selected folder and current open map remain independently identifiable",
+    "Library selected card, bulk actions and destructive confirmation share the theme",
+    "Properties and Objects preserve selection and current inspector state",
+    "Saved status stays neutral and Projects dialog contrast passes"
+  ],
+  "errors": [],
+  "contrastScreens": [
+    "Editor",
+    "Campaign folder",
+    "Asset library",
+    "Remove assets dialog",
+    "Properties",
+    "Objects",
+    "Projects"
+  ]
+}

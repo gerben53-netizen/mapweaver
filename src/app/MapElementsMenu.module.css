@@ -1,0 +1,10 @@
+.palette { position:fixed; z-index:100; width:280px; max-height:calc(100vh - 16px); overflow:auto; padding:12px; border:1px solid var(--color-border); border-radius:8px; background:var(--color-panel); box-shadow:0 12px 32px #0006; }
+.palette h2 { margin:0; font-size:14px; }
+.palette p { margin:6px 0 12px; font-size:12px; color:var(--color-muted); }
+.palette button { width:100%; text-align:left; padding:9px 10px; margin:2px 0; display:flex; flex-direction:column; align-items:flex-start; gap:3px; }
+.palette button span { font-size:11px; color:var(--color-muted); }
+
+
+.palette { border-top-color:var(--color-brass); box-shadow:var(--shadow-crafted),0 12px 32px #0006; }
+.palette h2 { border-left:2px solid var(--color-divider); padding-left:8px; }
+

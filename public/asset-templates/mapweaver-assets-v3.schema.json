@@ -1,0 +1,664 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://mapweaver.local/schemas/mapweaver-assets-v3.schema.json",
+  "title": "Mapweaver assets version 3",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "assets"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 3
+    },
+    "assets": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "type": "object",
+        "required": [
+          "file",
+          "type"
+        ],
+        "properties": {
+          "file": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240,
+            "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(?:/|$))[^\\\\:<>\"|?*\\u0000-\\u001f]+$"
+          },
+          "type": {
+            "enum": [
+              "stamp",
+              "fillPattern",
+              "prefab"
+            ]
+          },
+          "originalName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^(?=.*\\S)[^\\u0000-\\u001f\\u007f]*$"
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120,
+                "pattern": "^(?=.*\\S)[^\\u0000-\\u001f\\u007f]*$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 0,
+                "maxLength": 4000,
+                "pattern": "^[^\\u0000-\\u0008\\u000b-\\u001f\\u007f]*$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "categoryPath": {
+            "anyOf": [
+              {
+                "type": "array",
+                "maxItems": 8,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80,
+                  "pattern": "^(?=.*\\S)[^\\u0000-\\u001f\\u007f]*$"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tags": {
+            "anyOf": [
+              {
+                "type": "array",
+                "maxItems": 30,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80,
+                  "pattern": "^(?=.*\\S)[^\\u0000-\\u001f\\u007f]*$"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "defaultSize": {
+            "anyOf": [
+              {
+                "type": "object",
+                "required": [
+                  "mode",
+                  "lockAspectRatio"
+                ],
+                "properties": {
+                  "mode": {
+                    "enum": [
+                      "native",
+                      "grid",
+                      "world"
+                    ]
+                  },
+                  "lockAspectRatio": {
+                    "type": "boolean"
+                  },
+                  "width": {
+                    "type": "number",
+                    "exclusiveMinimum": 0,
+                    "maximum": 1000000
+                  },
+                  "height": {
+                    "type": "number",
+                    "exclusiveMinimum": 0,
+                    "maximum": 1000000
+                  },
+                  "unit": {
+                    "enum": [
+                      "cells",
+                      "ft",
+                      "m"
+                    ]
+                  }
+                },
+                "allOf": [
+                  {
+                    "if": {
+                      "properties": {
+                        "mode": {
+                          "const": "grid"
+                        }
+                      }
+                    },
+                    "then": {
+                      "required": [
+                        "unit"
+                      ],
+                      "properties": {
+                        "unit": {
+                          "const": "cells"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "mode": {
+                          "const": "world"
+                        }
+                      }
+                    },
+                    "then": {
+                      "required": [
+                        "unit"
+                      ],
+                      "properties": {
+                        "unit": {
+                          "enum": [
+                            "ft",
+                            "m"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "mode": {
+                          "enum": [
+                            "grid",
+                            "world"
+                          ]
+                        },
+                        "lockAspectRatio": {
+                          "const": false
+                        }
+                      }
+                    },
+                    "then": {
+                      "required": [
+                        "width",
+                        "height"
+                      ]
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "mode": {
+                          "enum": [
+                            "grid",
+                            "world"
+                          ]
+                        }
+                      }
+                    },
+                    "then": {
+                      "anyOf": [
+                        {
+                          "required": [
+                            "width"
+                          ]
+                        },
+                        {
+                          "required": [
+                            "height"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "applicableMapTypes": {
+            "anyOf": [
+              {
+                "anyOf": [
+                  {
+                    "const": "any"
+                  },
+                  {
+                    "const": [
+                      "any"
+                    ]
+                  },
+                  {
+                    "type": "array",
+                    "maxItems": 3,
+                    "items": {
+                      "enum": [
+                        "battlemap",
+                        "regional-map",
+                        "world-map"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "author": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 0,
+                "maxLength": 240,
+                "pattern": "^[^\\u0000-\\u0008\\u000b-\\u001f\\u007f]*$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "source": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 0,
+                "maxLength": 1000,
+                "pattern": "^[^\\u0000-\\u0008\\u000b-\\u001f\\u007f]*$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "license": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 0,
+                "maxLength": 1000,
+                "pattern": "^[^\\u0000-\\u0008\\u000b-\\u001f\\u007f]*$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "favorite": {
+            "type": "boolean"
+          },
+          "prefab": {
+            "$ref": "https://mapweaver.local/schemas/prefab-v1.schema.json"
+          },
+          "generator": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "version",
+                  "semanticType",
+                  "roles",
+                  "biomes",
+                  "themes"
+                ],
+                "properties": {
+                  "version": {
+                    "const": 1
+                  },
+                  "semanticType": {
+                    "enum": [
+                      "mountain",
+                      "hill",
+                      "tree",
+                      "forestCluster",
+                      "snowMountain",
+                      "volcano",
+                      "rock",
+                      "rockCluster",
+                      "swampVegetation",
+                      "marshCluster"
+                    ]
+                  },
+                  "weight": {
+                    "type": "number",
+                    "minimum": 1e-06,
+                    "maximum": 1000000,
+                    "default": 1
+                  },
+                  "scale": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "min",
+                      "max"
+                    ],
+                    "properties": {
+                      "min": {
+                        "type": "number",
+                        "minimum": 0.01,
+                        "maximum": 100
+                      },
+                      "max": {
+                        "type": "number",
+                        "minimum": 0.01,
+                        "maximum": 100
+                      }
+                    }
+                  },
+                  "rotation": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "allowed",
+                      "min",
+                      "max"
+                    ],
+                    "properties": {
+                      "allowed": {
+                        "type": "boolean"
+                      },
+                      "min": {
+                        "type": "number",
+                        "minimum": -180,
+                        "maximum": 180
+                      },
+                      "max": {
+                        "type": "number",
+                        "minimum": -180,
+                        "maximum": 180
+                      }
+                    }
+                  },
+                  "spacing": {
+                    "type": "number",
+                    "minimum": 0.1,
+                    "maximum": 10
+                  },
+                  "roles": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 12,
+                    "uniqueItems": true,
+                    "items": {
+                      "enum": [
+                        "ridge",
+                        "peak",
+                        "foothill",
+                        "isolatedFeature",
+                        "forestInterior",
+                        "forestEdge",
+                        "forestCluster",
+                        "sparseVegetation",
+                        "rockScatter",
+                        "swampInterior",
+                        "swampEdge",
+                        "landmark"
+                      ]
+                    }
+                  },
+                  "biomes": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 13,
+                    "uniqueItems": true,
+                    "items": {
+                      "enum": [
+                        "temperate",
+                        "alpine",
+                        "snow",
+                        "conifer",
+                        "deciduous",
+                        "tropical",
+                        "arid",
+                        "desert",
+                        "volcanic",
+                        "swamp",
+                        "wetland",
+                        "tundra",
+                        "generic"
+                      ]
+                    }
+                  },
+                  "themes": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 4,
+                    "uniqueItems": true,
+                    "items": {
+                      "enum": [
+                        "painterlyFantasy",
+                        "parchment",
+                        "darkFantasy",
+                        "genericFantasy"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "patternScale": {
+            "type": "number",
+            "minimum": 0.01,
+            "maximum": 100,
+            "description": "Recommended repeat scale for fillPattern brush placement; not valid on stamps."
+          },
+          "quality": {
+            "type": "object",
+            "required": [
+              "classification",
+              "reason",
+              "semanticClass",
+              "softShadowDefault"
+            ],
+            "properties": {
+              "classification": {
+                "enum": [
+                  "KEEP",
+                  "FIX",
+                  "REPLACE",
+                  "REJECT",
+                  "DUPLICATE"
+                ]
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 4000
+              },
+              "semanticClass": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[a-z_]{1,80}$"
+              },
+              "softShadowDefault": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "prefab"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "prefab"
+              ]
+            },
+            "else": {
+              "not": {
+                "required": [
+                  "prefab"
+                ]
+              }
+            }
+          },
+          {
+            "if": {
+              "required": [
+                "generator"
+              ]
+            },
+            "then": {
+              "properties": {
+                "type": {
+                  "const": "stamp"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "required": [
+                "patternScale"
+              ]
+            },
+            "then": {
+              "properties": {
+                "type": {
+                  "const": "fillPattern"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "collection": {
+      "type": "object",
+      "required": [
+        "title"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120,
+          "pattern": "^(?=.*\\S)[^\\u0000-\\u001f\\u007f]*$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 4000,
+          "pattern": "^[^\\u0000-\\u0008\\u000b-\\u001f\\u007f]*$"
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "maxItems": 2000,
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "sortOrder"
+        ],
+        "properties": {
+          "path": {
+            "type": "array",
+            "maxItems": 8,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80,
+              "pattern": "^(?=.*\\S)[^\\u0000-\\u001f\\u007f]*$"
+            }
+          },
+          "sortOrder": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "collections": {
+      "type": "array",
+      "maxItems": 200,
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "members"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^(?=.*\\S)[^\\u0000-\\u001f\\u007f]*$"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 4000,
+            "pattern": "^[^\\u0000-\\u0008\\u000b-\\u001f\\u007f]*$"
+          },
+          "members": {
+            "type": "array",
+            "maxItems": 1000,
+            "items": {
+              "type": "object",
+              "required": [
+                "file",
+                "type"
+              ],
+              "properties": {
+                "file": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240,
+                  "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(?:/|$))[^\\\\:<>\"|?*\\u0000-\\u001f]+$"
+                },
+                "type": {
+                  "enum": [
+                    "stamp",
+                    "fillPattern",
+                    "prefab"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

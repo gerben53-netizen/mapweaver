@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0",
+  "author": "Mapweaver project",
+  "source": "Procedural SVG artwork in scripts/create-wall-examples.mjs",
+  "license": "Project-authored; no separate artwork license specified.",
+  "id": "cave-rock",
+  "title": "Cave rock",
+  "description": "Overlapping fractured rock clusters with three irregular silhouettes.",
+  "renderingMode": "segments",
+  "nominalWidthPx": 80,
+  "defaultThickness": 56,
+  "repeatLengthPx": 96,
+  "overlapPx": 44,
+  "coreColor": "#667168",
+  "roughnessLimits": {
+    "max": 1,
+    "default": 0.65,
+    "maxProtrusionPx": 24
+  },
+  "bodyVariants": [
+    {
+      "file": "assets/cave-1.png",
+      "width": 128,
+      "height": 128,
+      "anchor": {
+        "x": 64,
+        "y": 64
+      },
+      "weight": 1,
+      "rotation": 8,
+      "scaleVariation": 0.06
+    },
+    {
+      "file": "assets/cave-2.png",
+      "width": 128,
+      "height": 128,
+      "anchor": {
+        "x": 64,
+        "y": 64
+      },
+      "weight": 1,
+      "rotation": 8,
+      "scaleVariation": 0.06
+    },
+    {
+      "file": "assets/cave-3.png",
+      "width": 128,
+      "height": 128,
+      "anchor": {
+        "x": 64,
+        "y": 64
+      },
+      "weight": 1,
+      "rotation": 8,
+      "scaleVariation": 0.06
+    }
+  ],
+  "cap": {
+    "file": "assets/cave-cap.png",
+    "width": 128,
+    "height": 128,
+    "anchor": {
+      "x": 64,
+      "y": 64
+    },
+    "weight": 1,
+    "rotation": 0,
+    "scaleVariation": 0
+  },
+  "join": {
+    "file": "assets/cave-cap.png",
+    "width": 128,
+    "height": 128,
+    "anchor": {
+      "x": 64,
+      "y": 64
+    },
+    "weight": 1,
+    "rotation": 0,
+    "scaleVariation": 0
+  }
+}

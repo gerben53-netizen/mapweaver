@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "capital-temperate",
+      "sourceSha256": "aa43782844ee9b808c1f9dcdb9556f56cf18255619ae5d0076f173b8d82e5c07",
+      "outputSha256": "f7eefa5ce16d7e4979c3f275e6f6aa7bbd1d4bdfb404d89029d866e9a94f602e",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "capital-temperate"
+    },
+    {
+      "id": "capital-arid",
+      "sourceSha256": "c6f2d225dcf9edac7737a486dc2f27b5677148c8f0ae9caf68ebea8c72ebb5a9",
+      "outputSha256": "b520cc41719fa56a0781b5b3204ca769dc175e3760eac86470a2afe4e42cd150",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "capital-arid"
+    },
+    {
+      "id": "capital-northern",
+      "sourceSha256": "d63cac576f4eaa095db1b7a969a4faaa5787a5fe4babafe38b2df7e606bcbffd",
+      "outputSha256": "7c5c764ea25690302849f6effea15cf12a9dfceaa8b517ba3252e01b2ff6ecf0",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "capital-northern"
+    },
+    {
+      "id": "city-river",
+      "sourceSha256": "073d84bf585e0c5cf41b1f254201c1165778d9b3f9b6a4d403a931ba52e1cb03",
+      "outputSha256": "745d892f6018c6302362b9d34e6ccd0c6d201f8e39c7dbe150c75b202ed6d9b7",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "city-river"
+    },
+    {
+      "id": "city-stone",
+      "sourceSha256": "42bab58677897ce7e82d3dc50877236d7424d655daab0914f7b2f76afcc7c6a0",
+      "outputSha256": "e3ff0bcd2546b4b4ab9fe8c369bd0772be8536469170be111c67b132875bd544",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "city-stone"
+    },
+    {
+      "id": "city-arid",
+      "sourceSha256": "e129e49ac1d188ed65144498771f6149766eba1146dbdf25eae4b3c7b69a4dad",
+      "outputSha256": "4f9db71e9058ae673b48a86af4b20750cad426513a87fe6c1c6e79049466a017",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "city-arid"
+    },
+    {
+      "id": "city-northern",
+      "sourceSha256": "aebbd6c47267ce79c54fa08de7f3daa6bf00cafef7724de657cd731d9e74944b",
+      "outputSha256": "f4e94bdfe5e509d2e265e780645bef99bc3eeb715cbfb50323ffcd4cba49bc39",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "city-northern"
+    },
+    {
+      "id": "town-market",
+      "sourceSha256": "b49a305c07b86fa95901f2a9a39d7ebaf94cb5429c8c9eaee0530be0f064fbf5",
+      "outputSha256": "15c46158cc3660a85101f09281f796bb2a0ef730fe0c4552de2eefb8e078498e",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "town-market"
+    },
+    {
+      "id": "town-walled",
+      "sourceSha256": "4360324cf0d006302017c28842ef2769a32e6ed0ac6f501dff31c5ce08d3d706",
+      "outputSha256": "4109854710770cc3478f2cb287bf4546a55d30e75aaf75ee0433cf610c1ac81f",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "town-walled"
+    },
+    {
+      "id": "town-arid",
+      "sourceSha256": "9b310151041d6adf8dd7dee29a0aacb800f53283e4b55c5b518bd0a8320b5965",
+      "outputSha256": "b4e393597724e2a6a4ef3018d4edf66ca645425e589afe330061e89dbc6aa867",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "town-arid"
+    },
+    {
+      "id": "town-alpine",
+      "sourceSha256": "88868e09f11f3651675afceffde8d18c2a014b708343a6e016b7e5b225e8a38c",
+      "outputSha256": "b0308e01ccad9374c372a1260415c008018445545a471d51def61b78ee38b411",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "town-alpine"
+    },
+    {
+      "id": "village-wooded",
+      "sourceSha256": "844ced9f943ae0df6d93a2f76cf4972bf45f6453acd103ab4705d88649210ff9",
+      "outputSha256": "bee27d080419071698e489c58d1aa4e9ab3cb9b7873a9288a9b630e3c92b63b2",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "village-wooded"
+    },
+    {
+      "id": "village-farm",
+      "sourceSha256": "eebd3c19b87dad6287e78fce7cce7df137f694111044543de3826c62a2ee55e9",
+      "outputSha256": "f193f29c9593aee25581cbd37d447a7bf75a7ffe2179ed88347a3011c5709de3",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "village-farm"
+    },
+    {
+      "id": "village-northern",
+      "sourceSha256": "af8a69fb2da67b8775f2e33198b9f6aa906d9b3300f15cc88217d76453ec1291",
+      "outputSha256": "091cf5a8b0198271c104dc969f3e56a4155db8ecbfb0ba6218a3677f6718a034",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "village-northern"
+    },
+    {
+      "id": "fort-keep",
+      "sourceSha256": "275a18a5abae88827dbbd821d71ce79735a687e6a22a40d864ba8eb7c54c38db",
+      "outputSha256": "1c12fda24ef44d5660baf911d5519fac3d56bbef466acd491c4e1d43b7711804",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "fort-keep"
+    },
+    {
+      "id": "fort-arid",
+      "sourceSha256": "ec61ab58316f234b1f4111ccb306b65d8f22feecc8d0db13c7c958f550dc5cdc",
+      "outputSha256": "f7aab80557a5e8ca92f4e56064a187f8cf44c71b3f3092682e5f70f547696e1e",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "fort-arid"
+    },
+    {
+      "id": "fort-northern",
+      "sourceSha256": "fd8a88861d98e81707e7c992ec7e532b690f579dea56713332c4311429a266d5",
+      "outputSha256": "e799fe476bb65f257a2076ca4035654540c5a994bffd2905fbf04318c8095cf8",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "fort-northern"
+    },
+    {
+      "id": "fort-ruled",
+      "sourceSha256": "85501aabef18113c99a7827f8f454ab237d695e0d5a77d5fc91f258d2992abc6",
+      "outputSha256": "8146b6b20c7b8f3bc34beeab2060ecf510d93988d2fd65e43af82284deb826be",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "fort-ruled"
+    },
+    {
+      "id": "harbor-merchant",
+      "sourceSha256": "95a28b85770aff92bd74af78af422d082e25ef8d71b565c02a7238e0fc184061",
+      "outputSha256": "82f8fd16d77698d212a08c936487108c1085757a1c994e3803b36f873af8ed91",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "harbor-merchant"
+    },
+    {
+      "id": "harbor-northern",
+      "sourceSha256": "0cf83a5299001cdcf5e4fac952d04c9058856e40415ab994f3a1703c5997750f",
+      "outputSha256": "4fd20981b2a3171ff5a053c9dc3a30d7b3fc0f0bdce1ef5560d9d3e659ecbe99",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "harbor-northern"
+    },
+    {
+      "id": "harbor-arid",
+      "sourceSha256": "be0bae3eac99e3c61ee4eb4d2cc5caef8c9eeacc5ef40a708cc0752cd1e68c32",
+      "outputSha256": "ec0aa6de9ae3b7aa2351dc487bfcdf08c56db225d1ee941698dd4523eb2d9e82",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "harbor-arid"
+    },
+    {
+      "id": "ruin-arch",
+      "sourceSha256": "0dd502576fb4775f7125aea20abe54228d2a33b6806f67e721f6d114dd280db7",
+      "outputSha256": "ba7ae4ef1797f33f005885b86724cbb191be3eba8eda8efca6320af9f3011c46",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "ruin-arch"
+    },
+    {
+      "id": "ruin-keep",
+      "sourceSha256": "1e74a817061447dc439d489d3dc2fca6ae52b5640b9130ec363300023ddcb1e8",
+      "outputSha256": "be7b6d361c599650083d53ef48b01812fa4a947e07766caa121fd0a6547904c7",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "ruin-keep"
+    },
+    {
+      "id": "ruin-arid",
+      "sourceSha256": "fa16dba964e576ec1832288d9bd76d83028ef81937dc23d0e1836adbae6b71a9",
+      "outputSha256": "3c2a804d95306c8f188591f7a2e800577b8809812e6dbe7171e05e9b22a1f6eb",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "ruin-arid"
+    },
+    {
+      "id": "tower-watch",
+      "sourceSha256": "b38e99515c643c392ec836dc31096fa5338e6f946879d48193326440807e723a",
+      "outputSha256": "a818e04bbe32895625f5c9fbbfa70c4608b8b35b8cb05f98dd81d76f51082efa",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "tower-watch"
+    },
+    {
+      "id": "tower-beacon",
+      "sourceSha256": "d78ea4a2d77a4f629732ab31483e0ae3dce81c6ddb9ba8874434e08041976979",
+      "outputSha256": "ca0d7422def3a4c977fc95723c6f5ab175cfbcc838fe2605e8b915065fc5d82b",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "tower-beacon"
+    },
+    {
+      "id": "temple-column",
+      "sourceSha256": "75f3c25057dd3419335b727e18b818037c902ec8b5b0f0894e8c7a7d76643962",
+      "outputSha256": "7d80092c81e37682c5714975ec824297602da7ff24a8d370839dc1e50bf402a1",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "temple-column"
+    },
+    {
+      "id": "temple-northern",
+      "sourceSha256": "b99c2a9bd6a97b6c730baf6331b9437c5b28f4f9c5d20b8869f04978c69e23f2",
+      "outputSha256": "467a6283b70e3d54d447725e67fc23ec1bf0d79bdf92503a6965b36d0f9c3feb",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "temple-northern"
+    },
+    {
+      "id": "landmark-stones",
+      "sourceSha256": "62b798ed0c8b8156106c92f3da022d1929d0dd800386e36c2305f308f00460ef",
+      "outputSha256": "1aa6c1352b2964595cc31e6b362d4becdcad48c256734fe904d0ad1b01cee971",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "landmark-stones"
+    },
+    {
+      "id": "landmark-tree",
+      "sourceSha256": "4b4e3f1dc9e8cb2d8913e926a5faaf3eda28fc88821534033f5dec259b534835",
+      "outputSha256": "d175b8b686c6522aa40ffef93bc1604b5c380870f6ba7dd9d557161d9e75732b",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "landmark-tree"
+    },
+    {
+      "id": "landmark-obelisk",
+      "sourceSha256": "b65403f12a0603e0f5ad152b61ac91c6fa40ef4347eaf359a9dbf83f9e0058eb",
+      "outputSha256": "22b129fda7298a1910a1e820ad71da4627918ce1f343b9f221d87ed225b44c18",
+      "tool": "OpenAI built-in imagegen",
+      "promptId": "landmark-obelisk"
+    }
+  ]
+}

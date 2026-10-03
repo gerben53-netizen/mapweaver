@@ -1,0 +1,44 @@
+{
+  "checks": [
+    "Selection, group, layer and layer-group sources; cancellation leaves source unchanged",
+    "Editable and 2× Flattened saved through browser with explicit physical size and preview",
+    "Independent rotated placement preserving layers; one undo/redo removes/restores entire composition",
+    "Flattened crop/anchor places one ordinary stamp on the active layer",
+    "Save/restart/reload preserves composition and library definitions",
+    "Clean-library pack and project transfer preserves byte-identical rendered PNG",
+    "Second map physical scale doubles new geometry exactly; prior instances remain concrete",
+    "Library metadata edit leaves placed instances unchanged",
+    "Ungroup and edit one door independently; source map, other copy and canonical prefab unchanged",
+    "Keyboard Escape cancels placement; empty source has explicit error and disabled preview",
+    "Measured create/preview/place for 1,000 ordinary objects and 5,000 scatter instances"
+  ],
+  "performance": {
+    "environment": {
+      "platform": "win32",
+      "node": "v24.17.0",
+      "cpu": "AMD Ryzen 5 2600 Six-Core Processor            ",
+      "browser": "153.0.8010.53"
+    },
+    "editableCreatePreviewMs": 427.85289999999804,
+    "flattenedCreatePreviewMs": 611.8126000000011,
+    "1000-objects": {
+      "ordinaryObjects": 1000,
+      "renderedInstances": 1000,
+      "createPreviewMs": 1048.5743000000002,
+      "commitMs": 130.13229999999749,
+      "placementAndAutosaveMs": 1665.0274000000063,
+      "heapBefore": 12473525,
+      "heapAfter": 69588626
+    },
+    "5000-scatter-instances": {
+      "ordinaryObjects": 1,
+      "renderedInstances": 5000,
+      "createPreviewMs": 920.3326000000015,
+      "commitMs": 242.2204999999958,
+      "placementAndAutosaveMs": 1987.7733000000007,
+      "heapBefore": 76215994,
+      "heapAfter": 114964998
+    }
+  },
+  "errors": []
+}

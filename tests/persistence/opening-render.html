@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Opening rendering acceptance</title></head><body><canvas id="result" width="720" height="360"></canvas><script type="module">
+import {createWall,SIMPLE_WALL} from '/src/domain/walls.ts';
+import {createOpening,openingCutout} from '/src/domain/openings.ts';
+import {paintWall} from '/src/canvas/drawWall.ts';
+import {paintOpening,clipWallOpenings} from '/src/canvas/drawOpening.ts';
+import {pathTrace} from '/src/canvas/drawPath.ts';
+import {pointAtDistance,pathGeometry} from '/src/domain/paths.ts';
+import {buildScene} from '/src/export/render.ts';
+const canvas=document.querySelector('canvas'),c=canvas.getContext('2d'),texture=document.createElement('canvas');texture.width=texture.height=8;const t=texture.getContext('2d');t.fillStyle='#938068';t.fillRect(0,0,8,8);t.fillStyle='#d5c3a0';t.fillRect(0,0,4,8);
+const results=[];window.results=results;
+for(const [i,curved,textured] of [[0,false,false],[1,false,true],[2,true,false],[3,true,true]]){
+ const x=i%2*360,y=Math.floor(i/2)*180;
+ const nodes=[{id:'a',x:x+30,y:y+60,mode:'corner',...(curved?{out:{x:30,y:90}}:{})},{id:'b',x:x+330,y:y+60,mode:'corner',...(curved?{in:{x:-30,y:90}}:{})}];
+ const wall=createWall(nodes,false,{...SIMPLE_WALL,strokeWidth:28,stroke:textured?{kind:'texture',assetId:'texture',scale:1,spacing:16,offset:0}:{kind:'solid',color:'#938068'}}),opening={...createOpening(wall,.5,'door',70),doorType:'passage'},image=textured?texture:undefined;
+ c.save();c.translate(wall.x,wall.y);paintWall(c,wall,image,[],[opening]);c.restore();c.save();c.translate(opening.x,opening.y);paintOpening(c,opening,wall);c.restore();
+ const center=pointAtDistance(wall,pathGeometry(wall).length*.5).point,pixel=[...c.getImageData(Math.round(center.x),Math.round(center.y),1,1).data];
+ const hit=document.createElement('canvas');hit.width=720;hit.height=360;const h=hit.getContext('2d');h.translate(wall.x,wall.y);clipWallOpenings(h,wall,[opening]);h.strokeStyle='#ff0000';h.lineWidth=40;pathTrace(h,wall,wall.x,wall.y);h.stroke();
+ const hitAlpha=h.getImageData(Math.round(center.x),Math.round(center.y),1,1).data[3];
+ const scene={map:{width:720,height:360},scale:1,width:720,height:360,items:[{kind:'object',object:wall},{kind:'object',object:opening}]},group=buildScene(scene,new Map(textured?[['texture',texture]]:[]));const exported=group.toCanvas({x:0,y:0,width:720,height:360,pixelRatio:1});const exportPixel=[...exported.getContext('2d').getImageData(Math.round(center.x),Math.round(center.y),1,1).data];group.destroy();
+ results.push({curved,textured,pixel,hitAlpha,exportPixel,points:openingCutout(opening,wall).length});
+}
+window.ready=true;
+</script></body></html>

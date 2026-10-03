@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "Four vector carriers placed through existing Title flow; preview keyboard navigation and text-preserving style changes work",
+    "PNG paints frame and editable text, preserves transparent canvas, and is pixel-identical with selection off",
+    "Title content, carrier IDs, proportional size and typography survive save/reload with no library assets"
+  ],
+  "errors": []
+}

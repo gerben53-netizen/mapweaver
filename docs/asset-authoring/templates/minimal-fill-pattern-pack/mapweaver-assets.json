@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "file": "images/tile.png",
+      "type": "fillPattern",
+      "title": "Example neutral repeat tile",
+      "description": "Small periodic diagnostic tile for learning import and repeat scale; not production terrain artwork.",
+      "categoryPath": [
+        "Examples",
+        "Fill patterns"
+      ],
+      "tags": [
+        "repeat",
+        "neutral"
+      ],
+      "applicableMapTypes": [],
+      "author": "Mapweaver example artwork",
+      "source": "Original deterministic periodic color tile.",
+      "license": "CC0-1.0",
+      "sha256": "d8586ea73cea3911ed6951953a6b71ae1ea01a6e651a6b9aa2f151deedaee361"
+    }
+  ]
+}

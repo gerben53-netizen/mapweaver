@@ -1,0 +1,10 @@
+{
+  "verifiedFiles": 4452,
+  "packagedRuntime": true,
+  "productionBrowser": true,
+  "secondServiceRejected": true,
+  "prefabImportCreatePlace": true,
+  "saveReload": true,
+  "gracefulServiceStopRestart": true,
+  "nativeLauncherGUI": "Not manually exercised: tray buttons, default-browser opening, URL copy and second launcher activation remain separate native acceptance."
+}

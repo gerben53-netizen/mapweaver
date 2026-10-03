@@ -1,0 +1,26 @@
+.projects { display: flex; align-items: center; gap: 5px; flex: 1; min-width: 0; }
+.projects > button { padding: 6px 8px; font-size: 12px; }
+.identity { margin-right: auto; padding: 0 8px; min-width: 100px; max-width: 220px; overflow: hidden; }
+.identity strong, .identity small { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.identity strong { font-size: 12px; font-weight: 500; }
+.identity small { font-size: 12px; color: var(--color-muted); margin-top: 3px; }
+.notice { position: fixed; z-index: 20; left: 50%; top: 72px; transform: translateX(-50%); padding: 12px; background: var(--color-surface); border: 1px solid var(--color-border-hover); border-radius: 5px; box-shadow: 0 4px 20px #0005; max-width: 80vw; }
+.notice button { margin-left: 12px; }
+.recent { padding: 12px 0; border-bottom: 1px solid var(--color-border); }
+.recent strong, .recent time { display: block; margin-bottom: 8px; }
+.recent time { color: var(--color-muted); font-size: 11px; }
+.edit { position: relative; }
+.edit summary { padding: 7px; font-size: 12px; }
+.menu { position: absolute; right: 0; top: 36px; z-index: 30; padding: 8px; width: 160px; background: var(--color-panel); border: 1px solid var(--color-border); border-radius: 5px; box-shadow: 0 8px 20px #0005; }
+
+.primaryActions { display:flex; gap:8px; margin:16px 0; }
+.management { margin:12px 0; color:var(--color-muted); }
+.management summary, .rowMenu summary { padding:8px; cursor:pointer; }
+.management button, .rowMenu button { margin:4px; }
+.rowMenu { display:inline-block; margin-left:12px; vertical-align:top; font-size:12px; }
+.rowMenu > div { display:flex; flex-wrap:wrap; max-width:420px; padding:8px; background:var(--color-surface); border-radius:var(--radius); }
+
+.identity strong { color:var(--color-text); }
+.identity small[data-save-state=saving] { color:var(--color-active-text); }
+.identity small[data-save-state=error], .identity small[data-save-state=conflict] { color:var(--color-danger); }
+.notice[role=alert] { color:var(--color-danger); border-color:var(--color-danger-border); }

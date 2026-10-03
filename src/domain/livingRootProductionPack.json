@@ -1,0 +1,239 @@
+{
+  "id": "living-root",
+  "revision": "production-1",
+  "name": "Living Root",
+  "renderingMode": "generated",
+  "generatorType": "living-root",
+  "components": [
+    {
+      "id": "root-long-1",
+      "role": "root-long",
+      "image": "/generated-walls/living-root-production-1/root-long-1.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "root-long-2",
+      "role": "root-long",
+      "image": "/generated-walls/living-root-production-1/root-long-2.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.2
+    },
+    {
+      "id": "root-long-3",
+      "role": "root-long",
+      "image": "/generated-walls/living-root-production-1/root-long-3.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.4
+    },
+    {
+      "id": "root-long-4",
+      "role": "root-long",
+      "image": "/generated-walls/living-root-production-1/root-long-4.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "root-long-5",
+      "role": "root-long",
+      "image": "/generated-walls/living-root-production-1/root-long-5.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.2
+    },
+    {
+      "id": "root-long-6",
+      "role": "root-long",
+      "image": "/generated-walls/living-root-production-1/root-long-6.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.4
+    },
+    {
+      "id": "root-long-7",
+      "role": "root-long",
+      "image": "/generated-walls/living-root-production-1/root-long-7.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "root-medium-1",
+      "role": "root-medium",
+      "image": "/generated-walls/living-root-production-1/root-medium-1.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "root-medium-2",
+      "role": "root-medium",
+      "image": "/generated-walls/living-root-production-1/root-medium-2.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.2
+    },
+    {
+      "id": "root-medium-3",
+      "role": "root-medium",
+      "image": "/generated-walls/living-root-production-1/root-medium-3.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.4
+    },
+    {
+      "id": "root-medium-4",
+      "role": "root-medium",
+      "image": "/generated-walls/living-root-production-1/root-medium-4.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "root-medium-5",
+      "role": "root-medium",
+      "image": "/generated-walls/living-root-production-1/root-medium-5.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.2
+    },
+    {
+      "id": "root-small-1",
+      "role": "root-small",
+      "image": "/generated-walls/living-root-production-1/root-small-1.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "root-small-2",
+      "role": "root-small",
+      "image": "/generated-walls/living-root-production-1/root-small-2.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.2
+    },
+    {
+      "id": "root-small-3",
+      "role": "root-small",
+      "image": "/generated-walls/living-root-production-1/root-small-3.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.4
+    },
+    {
+      "id": "root-small-4",
+      "role": "root-small",
+      "image": "/generated-walls/living-root-production-1/root-small-4.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "knot-1",
+      "role": "knot",
+      "image": "/generated-walls/living-root-production-1/knot-1.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "knot-2",
+      "role": "knot",
+      "image": "/generated-walls/living-root-production-1/knot-2.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1.2
+    },
+    {
+      "id": "knot-3",
+      "role": "knot",
+      "image": "/generated-walls/living-root-production-1/knot-3.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1.4
+    },
+    {
+      "id": "root-end-1",
+      "role": "root-end",
+      "image": "/generated-walls/living-root-production-1/root-end-1.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "root-end-2",
+      "role": "root-end",
+      "image": "/generated-walls/living-root-production-1/root-end-2.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.2
+    },
+    {
+      "id": "root-end-3",
+      "role": "root-end",
+      "image": "/generated-walls/living-root-production-1/root-end-3.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.4
+    },
+    {
+      "id": "moss-1",
+      "role": "moss",
+      "image": "/generated-walls/living-root-production-1/moss-1.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "moss-2",
+      "role": "moss",
+      "image": "/generated-walls/living-root-production-1/moss-2.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1.2
+    },
+    {
+      "id": "moss-3",
+      "role": "moss",
+      "image": "/generated-walls/living-root-production-1/moss-3.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1.4
+    },
+    {
+      "id": "leaves-1",
+      "role": "leaves",
+      "image": "/generated-walls/living-root-production-1/leaves-1.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "leaves-2",
+      "role": "leaves",
+      "image": "/generated-walls/living-root-production-1/leaves-2.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.2
+    },
+    {
+      "id": "leaves-3",
+      "role": "leaves",
+      "image": "/generated-walls/living-root-production-1/leaves-3.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1.4
+    }
+  ],
+  "defaults": {
+    "width": 1,
+    "organic": 0.55,
+    "growth": 0.45,
+    "overgrowth": 0.15
+  }
+}

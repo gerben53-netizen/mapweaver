@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Scatter rendering comparison</title><style>canvas {position:static!important;width:500px!important;height:420px!important;border:1px solid #789;} body{margin:8px;}</style></head><body style="background:#252b2a;color:white"><h1>Scatter: shared editor painter / PNG / expanded stamps</h1><script type="module">
+import {createScatter,generateScatter,expandScatter} from '/src/domain/scatter.ts'
+import {transformSelection} from '/src/domain/selectionTransform.ts'
+import {rectangleGeometry} from '/src/domain/areas.ts'
+import {defaultMapStyle} from '/src/domain/mapSettings.ts'
+import {paintScatter} from '/src/canvas/drawScatter.ts'
+import {renderScene} from '/src/export/render.ts'
+import {exportScene} from '/src/export/scene.ts'
+const image=new Image();image.src='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36"><ellipse cx="14" cy="16" rx="12" ry="14" fill="#467535"/><path d="M12 14h4v20h-4z" fill="#ad865c"/></svg>');await image.decode()
+const map={width:500,height:420,background:null,...defaultMapStyle()},geometry={polygons:[{outer:rectangleGeometry({x:20,y:20,width:420,height:340}).polygons[0].outer,holes:[rectangleGeometry({x:180,y:130,width:130,height:130}).polygons[0].outer]}]},o=generateScatter({...createScatter([{assetId:'tree',weight:1,width:28,height:36}],undefined,552),area:geometry}),images=new Map([['tree',image]])
+window.results=[]
+for(const transform of [{},{rotation:31,scale:.75,flipX:true}]){
+ const object=transformSelection([o],transform)[0],snapshot={map,objects:[object],layers:[{id:'layer',name:'Layer',visible:true,locked:false,objectIds:[object.id]}]}
+ const editor=document.createElement('canvas');editor.width=500;editor.height=420;const ctx=editor.getContext('2d');ctx.translate(object.x,object.y);paintScatter(ctx,object,images)
+ const exported=renderScene(exportScene(snapshot,{scale:1,includeGrid:false,transparent:true}),images),expanded=expandScatter(object),expandedPNG=renderScene(exportScene({...snapshot,objects:expanded,layers:[{...snapshot.layers[0],objectIds:expanded.map(o=>o.id)}]},{scale:1,includeGrid:false,transparent:true}),images)
+ const a=ctx.getImageData(0,0,500,420).data,b=exported.getContext('2d').getImageData(0,0,500,420).data,c=expandedPNG.getContext('2d').getImageData(0,0,500,420).data
+ let difference=0,expandedDifference=0,changed=0,premultipliedDifference=0,alphaDifference=0;for(let i=0;i<a.length;i++){difference=Math.max(difference,Math.abs(a[i]-b[i]));expandedDifference=Math.max(expandedDifference,Math.abs(a[i]-c[i]));if(a[i]!==c[i])changed++}
+ for(let i=0;i<a.length;i+=4){alphaDifference=Math.max(alphaDifference,Math.abs(a[i+3]-c[i+3]));for(let channel=0;channel<3;channel++)premultipliedDifference=Math.max(premultipliedDifference,Math.abs(a[i+channel]*a[i+3]/255-c[i+channel]*c[i+3]/255))}
+ window.results.push({premultipliedDifference,alphaDifference,transform,instances:object.instances.length,difference,expandedDifference,expandedChangedChannels:changed,holeAlpha:transform.rotation?null:a[(200*500+220)*4+3]});document.body.append(editor,exported,expandedPNG)
+}
+window.ready=true
+</script></body></html>

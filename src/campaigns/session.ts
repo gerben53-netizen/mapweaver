@@ -1,0 +1,24 @@
+import { history } from '../store/history'
+import { create } from 'zustand'
+import { api } from '../storage/api'
+import type { CampaignSnapshot, CampaignPreferences } from './model'
+import { campaignIndex, nodePath } from './model'
+import { loadLocalProject, saveLocalProject } from '../projects/localSession'
+import { hasUnsavedChanges, useProjectSession } from '../projects/session'
+import { useEditorStore } from '../store/editorStore'
+export const useCampaignStore=create(()=>({snapshot:null as CampaignSnapshot|null,selected:null as string|null,expanded:[] as string[],view:'list' as 'list'|'gallery',browsing:false,visible:true,filter:'all' as 'all'|'recent'|'favorites'|'trash',search:'',newMap:false,error:''}))
+let preferenceWrites=Promise.resolve()
+export function persistNavigation(){const {snapshot,selected,expanded,view}=useCampaignStore.getState();if(!snapshot)return;const id=snapshot.campaign.id,value:CampaignPreferences={selected,expanded,view};preferenceWrites=preferenceWrites.catch(()=>{}).then(()=>api(`/campaigns/${id}/preferences`,'PUT',value)).then(()=>{}).catch(()=>{useCampaignStore.setState({error:'Explorer preferences could not be saved. Refresh when storage is available.'})})}
+export function acceptCampaign(snapshot:CampaignSnapshot,mapId?:string) {
+ const prior=useCampaignStore.getState(),same=prior.snapshot?.campaign.id===snapshot.campaign.id,selected=mapId?snapshot.nodes.find(n=>n.mapId===mapId&&!n.deletedAt)?.id||null:same?prior.selected:snapshot.preferences.selected
+ const {byId}=campaignIndex(snapshot.nodes),expanded=[...new Set([...(same?prior.expanded:snapshot.preferences.expanded),...nodePath(selected,byId).filter(n=>!n.mapId).map(n=>n.id)])]
+ useCampaignStore.setState({snapshot,selected:byId.has(selected||'')&&!byId.get(selected!)?.deletedAt?selected:null,expanded:expanded.filter(id=>byId.has(id)&&!byId.get(id)!.deletedAt),view:same?prior.view:snapshot.preferences.view,browsing:mapId?false:same?prior.browsing:true,search:same?prior.search:'',filter:same?prior.filter:'all',error:''})
+}
+export async function refreshCampaign(){const id=useCampaignStore.getState().snapshot?.campaign.id;if(id)acceptCampaign(await api<CampaignSnapshot>(`/campaigns/${id}`))}
+export async function enterCampaign(id:string){const snapshot=await api<CampaignSnapshot>(`/campaigns/${id}`);if(snapshot.campaign.deletedAt)throw Error('Restore this campaign first.');await api(`/campaigns/${id}/opened`,'POST');acceptCampaign(snapshot);const selected=snapshot.nodes.find(n=>n.id===useCampaignStore.getState().selected);useCampaignStore.setState({selected:selected?.mapId?selected.parentId:selected?.id||null,browsing:true,visible:true});useEditorStore.setState({workspace:'editor'})}
+export async function openedCampaignMap(campaignId:string,mapId:string){acceptCampaign(await api<CampaignSnapshot>(`/campaigns/${campaignId}`),mapId);persistNavigation()}
+export function selectLocation(id:string|null){const s=useCampaignStore.getState();useCampaignStore.setState({selected:id,browsing:true,filter:'all',search:'',expanded:id?[...new Set([...s.expanded,...nodePath(id,campaignIndex(s.snapshot?.nodes||[]).byId).filter(n=>!n.mapId).map(n=>n.id)])]:s.expanded});persistNavigation()}
+export function mapCreationQuery(){const s=useCampaignStore.getState();if(!s.snapshot)return '';const selected=s.snapshot.nodes.find(n=>n.id===s.selected),parentId=selected?.mapId?selected.parentId:selected?.id||null;return '?'+new URLSearchParams({campaignId:s.snapshot.campaign.id,...(parentId?{parentId}:{})})}
+export async function preserveWorkingMap(){if(hasUnsavedChanges()){await saveLocalProject();if(hasUnsavedChanges())throw Error('Save or resolve the current map before switching or managing maps.')}}
+export async function openCampaignMap(mapId:string){await preserveWorkingMap();if(await loadLocalProject(mapId,()=>false)){useCampaignStore.setState({browsing:false,filter:'all',search:''});return true}return false}
+export async function commandCampaign(body:Record<string,unknown>){const s=useCampaignStore.getState();if(!s.snapshot)return;await preserveWorkingMap();const next=await api<CampaignSnapshot>(`/campaigns/${s.snapshot.campaign.id}/command`,'POST',{...body,revision:s.snapshot.campaign.revision,mapRevision:body.id===s.snapshot.nodes.find(n=>n.mapId===useProjectSession.getState().info.id)?.id?useProjectSession.getState().revision:s.snapshot.nodes.find(n=>n.id===body.id)?.mapRevision});acceptCampaign(next);const current=next.nodes.find(n=>n.mapId===useProjectSession.getState().info.id);if(current?.deletedAt){history.reset();useProjectSession.setState({revision:null,savedAt:null,saveStatus:'clean'});useCampaignStore.setState({browsing:true})}else if(body.op==='rename'&&current&&current.id===body.id){useProjectSession.setState(s=>({info:{...s.info,name:current.name},revision:current.mapRevision!}))}return next}

@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Geographic rendering checks</title><style>body{background:#242b30;color:white;font:14px sans-serif}canvas{position:static!important;width:500px!important;height:350px!important;border:1px solid #789}</style></head><body><h1>Coastline: editor painter / PNG / PNG with scale bar</h1><script type="module">
+import {createArea,rectangleGeometry,withGeometry} from '/src/domain/areas.ts'
+import {defaultLandArea} from '/src/domain/landAreas.ts'
+import {defaultGeography} from '/src/domain/geography.ts'
+import {defaultMapStyle} from '/src/domain/mapSettings.ts'
+import {paintArea} from '/src/canvas/drawArea.ts'
+import {renderScene} from '/src/export/render.ts'
+import {exportScene} from '/src/export/scene.ts'
+import {parseProject} from '/src/projects/format.ts'
+const map={width:500,height:350,background:null,...defaultMapStyle(),mapType:'world-map',geography:defaultGeography('world-map')},shape=createArea(rectangleGeometry({x:30,y:30,width:440,height:250}),{kind:'solid',color:'#aab981'});shape.geometry.polygons[0].holes=[rectangleGeometry({x:180,y:100,width:120,height:100}).polygons[0].outer];const object=withGeometry({...shape,strokeWidth:3,land:{...defaultLandArea('landmass'),coastline:{seed:49,roughness:7,step:12}}},shape.geometry),snapshot={map,objects:[object],layers:[{id:'land',name:'Land',visible:true,locked:false,objectIds:[object.id]}],objectGroups:[],layerTree:{roots:['land'],groups:[]}}
+const editor=document.createElement('canvas');editor.width=500;editor.height=350;const c=editor.getContext('2d');c.translate(object.x,object.y);paintArea(c,object)
+const noBar=renderScene(exportScene(snapshot,{scale:1,includeGrid:false,transparent:true,includeScaleBar:false}),new Map()),bar=renderScene(exportScene(snapshot,{scale:1,includeGrid:false,transparent:true,includeScaleBar:true}),new Map()),double=renderScene(exportScene(snapshot,{scale:2,includeGrid:false,transparent:true,includeScaleBar:true}),new Map())
+const pixels=canvas=>canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data,difference=(a,b)=>{a=pixels(a);b=pixels(b);let max=0;for(let i=0;i<a.length;i++)max=Math.max(max,Math.abs(a[i]-b[i]));return max}
+const legacyMap={...map};delete legacyMap.mapType;delete legacyMap.geography;const legacyObject={...object};delete legacyObject.land;const legacy={...snapshot,map:legacyMap,objects:[legacyObject]},before=renderScene(exportScene(legacy,{scale:1,includeGrid:true,transparent:false}),new Map()),date='2026-09-24T00:00:00.000Z',migrated=parseProject({...legacy,formatVersion:9,id:'old',name:'Battlemap',createdAt:date,modifiedAt:date,assets:[]}),after=renderScene(exportScene(migrated,{scale:1,includeGrid:true,transparent:false}),new Map())
+window.results={editorPngDifference:difference(editor,noBar),migrationDifference:difference(before,after),holeAlpha:pixels(noBar)[(150*500+220)*4+3],barOffAlpha:pixels(noBar)[(330*500+30)*4+3],barOnAlpha:pixels(bar)[(330*500+30)*4+3],doubleWidth:double.width,doubleHeight:double.height}
+document.body.append(editor,noBar,bar);const h=document.createElement('h1');h.textContent='Original battlemap / migrated battlemap';document.body.append(h,before,after);window.ready=true
+</script></body></html>

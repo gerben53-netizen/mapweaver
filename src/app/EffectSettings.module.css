@@ -1,0 +1,11 @@
+.panel { margin: 12px 0; }
+.panel summary { cursor: pointer; padding: 8px 0; font-weight: 600; }
+.form { display: grid; gap: 12px; font-size: 12px; }
+.form fieldset { display: grid; gap: 8px; border: 1px solid var(--color-border); border-radius: 4px; margin: 0; padding: 10px; min-width: 0; }
+.form label { display: grid; gap: 4px; min-width: 0; }
+.form input, .form select { width: 100%; min-width: 0; box-sizing: border-box; }
+.form input[type=color] { height: 30px; padding: 3px; }
+.form .check { display: flex; align-items: center; gap: 8px; }
+.form .check input { width: auto; }
+.form p { color: var(--color-muted); font-size: 11px; line-height: 1.5; margin: 4px 0; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }

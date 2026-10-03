@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://mapweaver.local/schemas/prefab-v1.schema.json",
+  "title": "Mapweaver reusable composition payload version 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "formatVersion",
+    "mode",
+    "bounds",
+    "visibleBounds",
+    "anchor",
+    "sourceMap",
+    "document",
+    "renderScale"
+  ],
+  "properties": {
+    "formatVersion": {
+      "const": 1
+    },
+    "mode": {
+      "enum": [
+        "editable",
+        "flattened"
+      ]
+    },
+    "bounds": {
+      "type": "object",
+      "required": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": -1000000000.0,
+          "maximum": 1000000000.0
+        },
+        "y": {
+          "type": "number",
+          "minimum": -1000000000.0,
+          "maximum": 1000000000.0
+        },
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1000000000.0
+        },
+        "height": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1000000000.0
+        }
+      }
+    },
+    "visibleBounds": {
+      "type": "object",
+      "required": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": -1000000000.0,
+          "maximum": 1000000000.0
+        },
+        "y": {
+          "type": "number",
+          "minimum": -1000000000.0,
+          "maximum": 1000000000.0
+        },
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1000000000.0
+        },
+        "height": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1000000000.0
+        }
+      }
+    },
+    "anchor": {
+      "type": "object",
+      "required": [
+        "x",
+        "y"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": -1000000000.0,
+          "maximum": 1000000000.0
+        },
+        "y": {
+          "type": "number",
+          "minimum": -1000000000.0,
+          "maximum": 1000000000.0
+        }
+      }
+    },
+    "renderScale": {
+      "enum": [
+        1,
+        2
+      ]
+    },
+    "sourceMap": {
+      "type": "object",
+      "description": "Canonical format-12 MapDocument, without a background. Validated with the shared project parser."
+    },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "formatVersion",
+        "id",
+        "name",
+        "createdAt",
+        "modifiedAt",
+        "map",
+        "objects",
+        "layers",
+        "assets",
+        "objectGroups",
+        "layerTree"
+      ],
+      "properties": {
+        "formatVersion": {
+          "const": 12
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "modifiedAt": {
+          "type": "string"
+        },
+        "map": {
+          "type": "object"
+        },
+        "objects": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2000,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "kind"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "stamp",
+                  "area",
+                  "path",
+                  "door",
+                  "window",
+                  "scatter",
+                  "place",
+                  "label",
+                  "legend",
+                  "compass"
+                ]
+              }
+            }
+          }
+        },
+        "layers": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 128
+        },
+        "assets": {
+          "type": "array",
+          "maxItems": 512
+        },
+        "objectGroups": {
+          "type": "array"
+        },
+        "layerTree": {
+          "type": "object"
+        }
+      },
+      "description": "Canonical project-format-12 schema and all semantic/admission checks are enforced by parseProject; this public envelope is not a replacement object validator."
+    }
+  },
+  "description": "Maximum encoded payload 4 MiB. No recursive prefab objects or live source references. Runtime additionally validates every object schema, bounds, reference, image and resource budget."
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "file": "images/tile.png",
+      "type": "fillPattern",
+      "title": "Example grassland surface",
+      "description": "Small periodic diagnostic tile for learning import and repeat scale; not production terrain artwork.",
+      "categoryPath": [
+        "Examples",
+        "Terrain surfaces"
+      ],
+      "tags": [
+        "grassland",
+        "area-fill"
+      ],
+      "applicableMapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "author": "Mapweaver example artwork",
+      "source": "Original deterministic periodic color tile.",
+      "license": "CC0-1.0",
+      "sha256": "181bd7d34933dddd69e1fa61b0c295a3c511dbbbbd025c006998457009f42d45"
+    }
+  ]
+}

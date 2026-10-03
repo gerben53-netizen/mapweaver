@@ -1,0 +1,29 @@
+.bar { display:flex; flex-wrap:wrap; gap:6px; padding:5px 8px; align-items:center; font-size:12px; }
+.bar label { display:flex; gap:4px; align-items:center; }
+.bar input { width:62px; }
+.fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+.fields label { display:flex; flex-direction:column; gap:3px; }
+.fields input,.fields select { min-width:0; width:100%; }
+.list { max-height:42vh; overflow:auto; margin:8px 0; }
+.asset { display:flex; align-items:center; gap:8px; padding:5px; border-bottom:1px solid var(--color-border); }
+.asset label { display:flex; gap:8px; align-items:center; flex:1; min-width:0; }
+.asset small { display:block; color:var(--color-muted); }
+.asset img { object-fit:contain; }
+.asset input[type=number] { width:64px; }
+.actions { display:flex; gap:6px; flex-wrap:wrap; margin-top:10px; }
+.properties { padding:8px; display:grid; gap:8px; font-size:12px; }
+.properties button { max-width:100%; white-space:normal; }
+
+/* Keep this transient toolbar one row; smaller editors can scroll its controls. */
+.bar { flex-wrap:nowrap; overflow-x:auto; flex-shrink:0; }
+.bar > * { flex-shrink:0; }
+.bar label { white-space:nowrap; }
+.rotation { display:flex; gap:6px; align-items:center; padding:0; margin:0; border:0; min-width:0; }
+.rotationRange { display:flex; gap:4px; align-items:center; }
+.rotationRange input { width:56px; }
+.rotationRange [aria-invalid="true"] { outline:1px solid var(--color-danger, #d88779); }
+.fields .rotation { grid-column:1 / -1; }
+
+.bar input { width:50px; }
+.bar button { padding-inline:7px; }
+.bar > strong { display:none; }

@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Annotation render checks</title><style>body{background:#242b30;color:white;font:14px sans-serif}canvas{position:static!important;max-width:48%;height:auto;border:1px solid #789}</style></head><body><h1>Annotation editor painter / PNG</h1><script type="module">
+import {createPlace,createLabel,createLegend,createCompass,legendEntries,restyleLabel} from '/src/domain/annotations.ts'
+import {defaultGeography} from '/src/domain/geography.ts'
+import {defaultMapStyle} from '/src/domain/mapSettings.ts'
+import {paintAnnotation} from '/src/canvas/drawAnnotation.ts'
+import {loadAnnotationFonts} from '/src/canvas/annotationFonts.ts'
+import {renderScene,exportPng} from '/src/export/render.ts'
+import {exportScene} from '/src/export/scene.ts'
+await loadAnnotationFonts()
+const map={width:700,height:500,background:null,...defaultMapStyle(),mapType:'world-map',geography:defaultGeography('world-map')},objects=[]
+for(let i=0;i<3;i++){const p=createPlace({x:110+i*230,y:85},'Harbor '+i,['capital','fort','ruin'][i],map),l=createLabel({x:0,y:0},'Harbor '+i+'\nNorthern shore',p);objects.push(p,restyleLabel(l,{...l.style,bold:i===0,italic:i===1,letterSpacing:i,lineHeight:1.3,strokeWidth:i===2?2:0,maxWidth:130}))}
+const standalone=restyleLabel(createLabel({x:340,y:245},'The western kingdom'),{...objects[1].style,size:28,maxWidth:400,align:'center'});objects.push(standalone,createLegend({x:160,y:380},legendEntries(objects)),{...createCompass({x:530,y:380}),rotation:45})
+const snapshot={map,objects,layers:[{id:'objects',name:'Objects',visible:true,locked:false,objectIds:objects.map(o=>o.id)}],objectGroups:[],layerTree:{roots:['objects'],groups:[]}},images=new Map()
+const editor=document.createElement('canvas');editor.width=700;editor.height=500;const c=editor.getContext('2d');for(const o of objects){c.save();c.translate(o.x+o.width/2,o.y+o.height/2);c.rotate(o.rotation*Math.PI/180);c.translate(-o.width/2,-o.height/2);paintAnnotation(c,o,images);c.restore()}
+const png=renderScene(exportScene(snapshot,{scale:1,includeGrid:false,includeScaleBar:false,transparent:true}),images),double=renderScene(exportScene(snapshot,{scale:2,includeGrid:false,includeScaleBar:true,transparent:true}),images)
+const pixels=canvas=>canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data,difference=(a,b)=>{a=pixels(a);b=pixels(b);let max=0;for(let i=0;i<a.length;i++)max=Math.max(max,Math.abs(a[i]-b[i]));return max}
+let missingAsset=false;try{await exportPng({...snapshot,objects:[{...objects[0],assetId:'missing'}],layers:[{...snapshot.layers[0],objectIds:[objects[0].id]}]},{scale:1,includeGrid:false,transparent:true},async()=>{throw Error('Missing')})}catch(e){missingAsset=e.message.includes('readable images')}
+window.results={editorPngDifference:difference(editor,png),missingAsset,doubleWidth:double.width,doubleHeight:double.height,fontFaces:document.fonts.size,textPixelCount:[...pixels(png)].filter((v,i)=>i%4===3&&v>0).length}
+document.body.append(editor,png);window.ready=true
+</script></body></html>

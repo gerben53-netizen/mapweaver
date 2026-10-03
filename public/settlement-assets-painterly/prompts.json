@@ -1,0 +1,188 @@
+[
+  {
+    "id": "capital-temperate",
+    "type": "capital",
+    "title": "Temperate capital",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A grand compact medieval capital: oval stone curtain wall, ivory palace, six clustered ochre roofs and two blue-slate civic spires, a few dark green trees. Broad majestic silhouette. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "capital-arid",
+    "type": "capital",
+    "title": "Arid capital",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: An arid sandstone capital: domed citadel and compact terracotta rooftops within a low pale fortress wall, two slender square towers. No real-world religious emblems. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "capital-northern",
+    "type": "capital",
+    "title": "Northern capital",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A northern grey-stone capital: imposing high keep above blue slate steep roofs and crenellated walls, restrained snow on roof ridges. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "city-river",
+    "type": "city",
+    "title": "River city",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A walled market city with compact red tile rooftops and one strong central hall, small arched bridge at the front, no painted water around it. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "city-stone",
+    "type": "city",
+    "title": "Stone city",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A fortified limestone city cluster with two round gate towers, ochre roof blocks and a small tall central civic tower. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "city-arid",
+    "type": "city",
+    "title": "Arid city",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A compact desert city cluster of warm sandstone flat-roofed buildings, small domed palace and two palms. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "city-northern",
+    "type": "city",
+    "title": "Northern city",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A northern town-sized city of steep timber roofs around one grey-stone hall, little snow along roof lines and two fir trees. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "town-market",
+    "type": "town",
+    "title": "Market town",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: Five ochre half-timber houses surrounding a modest market hall, warm russet roofs, loosely clustered unfortified town. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "town-walled",
+    "type": "town",
+    "title": "Walled town",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: Small town of four red-roof houses behind a short semicircular grey stone town wall and a single square gatehouse. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "town-arid",
+    "type": "town",
+    "title": "Arid town",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: Four small sandy adobe houses with flat roofs and one taller wind tower, two modest palms. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "town-alpine",
+    "type": "town",
+    "title": "Alpine town",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: Four timber alpine houses with steep slate roofs, modest stone hall and one tall spruce, tiny snow accents. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "village-wooded",
+    "type": "village",
+    "title": "Woodland village",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: Three simple thatched timber cottages nestled beside two rounded dark green deciduous trees. Very small and simple village silhouette. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "village-farm",
+    "type": "village",
+    "title": "Farm village",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: Three humble ochre-roof farm cottages and one small haystack. A simple low rural silhouette, no fields or fences extending away. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "village-northern",
+    "type": "village",
+    "title": "Northern village",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: Three small timber longhouses with steep dark slate roofs and one thin spruce, restrained northern snow accents. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "fort-keep",
+    "type": "fort",
+    "title": "Stone keep",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A compact grey-stone castle with a stout central keep, two battlement towers and short curtain walls, ochre highlights. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "fort-arid",
+    "type": "fort",
+    "title": "Desert fortress",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A compact ochre sandstone fortress with four square corner towers and an inner flat-roofed keep, bold austere silhouette. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "fort-northern",
+    "type": "fort",
+    "title": "Northern fortress",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A compact alpine fortress with a high angular grey keep and blue slate tower roofs, tiny snow accents, no mountain base. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "fort-ruled",
+    "type": "fort",
+    "title": "Round-tower castle",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A compact pale-stone concentric castle: four round crenellated towers around a low inner courtyard, reddish roofs on inner buildings. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "harbor-merchant",
+    "type": "harbor",
+    "title": "Merchant harbor",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: Small harbor settlement: three tiled warehouses, a squat watchtower and a wooden pier with one tiny furled-sail boat. No painted water background. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "harbor-northern",
+    "type": "harbor",
+    "title": "Northern harbor",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: Small northern fishing port: two dark timber boat houses, a stone beacon tower and a short jetty with one small boat, no surrounding painted water. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "harbor-arid",
+    "type": "harbor",
+    "title": "Arid port",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: Small sandstone port: two pale domed warehouses and a tall square beacon beside a short wooden jetty and one small boat. No surrounding painted water. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "ruin-arch",
+    "type": "ruin",
+    "title": "Ruined arch",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: An ancient broken stone arch with two tumbled columns and small scattered masonry at its foot, ivy in cracks. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "ruin-keep",
+    "type": "ruin",
+    "title": "Ruined keep",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A compact ruined castle keep with a collapsed corner, broken battlements and a low rubble wall, muted moss. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "ruin-arid",
+    "type": "ruin",
+    "title": "Desert ruins",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: Broken sandstone temple facade with two weathered pillars and a partly collapsed small dome, minimal loose rubble. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "tower-watch",
+    "type": "tower",
+    "title": "Watchtower",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: One stout medieval stone watchtower with crenellated top and a small red-roof stair turret, no terrain base. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "tower-beacon",
+    "type": "tower",
+    "title": "Beacon tower",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: One slender pale-stone beacon tower with an open lantern gallery and slate cap, restrained ochre highlights. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "temple-column",
+    "type": "temple",
+    "title": "Columned sanctuary",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A modest classical stone sanctuary: triangular ochre roof, four simple pale columns and compact stairs, no religious symbols. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "temple-northern",
+    "type": "temple",
+    "title": "Timber shrine",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A small northern timber sanctuary with layered steep shingle roofs and simple carved gables, no religious symbols. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "landmark-stones",
+    "type": "landmark",
+    "title": "Standing stones",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: A cluster of three ancient tall standing stones, one leaning, mossy cracks and a few small chips, strong recognizable silhouette. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "landmark-tree",
+    "type": "landmark",
+    "title": "Ancient tree",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: One majestic broad ancient oak with thick twisting trunk and restrained dark green rounded canopy, small visible roots. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  },
+  {
+    "id": "landmark-obelisk",
+    "type": "landmark",
+    "title": "Broken obelisk",
+    "prompt": "Use case: stylized-concept. Create ONE production game asset: an illustrated fantasy-atlas settlement/landmark symbol for a painterly world map. Subject: One weathered pale-stone obelisk with broken top and two small fallen fragments, restrained golden highlights, no writing or symbols. Style: refined hand-painted gouache and ink, subdued earthy ochre/grey/green/slate colors, confident silhouette, restrained broad detail readable when reduced to 60 pixels. Consistent slightly elevated three-quarter atlas perspective, light from upper left (northwest), soft painted shading on the subject only. Center the whole subject with 8 percent transparent margin, fully visible, modest asymmetric organic outline. True transparent alpha background. No ground tile, no square or circular terrain base, no scenery, no vignette, no external shadow or glow, no text, no lettering, no labels, no badge, no border, no cartouche, no watermark. This is a WORLD MAP symbol, not a battlemap or isometric terrain tile. Single coherent subject only, not a sprite sheet."
+  }
+]

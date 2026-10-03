@@ -1,0 +1,23 @@
+.panel { border-bottom: 1px solid var(--color-border); padding: 12px; }
+.panel summary { cursor: pointer; font-size: 12px; font-weight: 600; padding: 8px 0; }
+.form { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.form label { display: block; font-size: 11px; min-width: 0; }
+.form input { display: block; width: 100%; min-width: 0; box-sizing: border-box; background: var(--color-input); color: var(--color-text); border: 1px solid var(--color-border); border-radius: 3px; padding: 5px; font: inherit; margin: 4px 0; }
+.form .check { display: flex; align-items: center; gap: 7px; margin: 7px 0; }
+.form input[type=checkbox] { width: auto; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.color { display: flex; gap: 5px; }
+.color input[type=color] { width: 32px; flex-shrink: 0; padding: 2px; height: 28px; }
+.form fieldset { margin: 0; padding: 8px; min-width: 0; border: 1px solid var(--color-border); }
+.form legend { font-size: 12px; }
+.panel .summary { font-size: 10px; margin-top: 8px; overflow-wrap: anywhere; }
+
+.form p { margin:6px 0; }
+.form label { font-size:12px; }
+.panel .summary { font-size:12px; }
+
+
+.form fieldset { border-radius:var(--radius-card); border-color:var(--color-border); background:var(--color-panel); }
+.form legend { color:var(--color-text); padding:0 5px; }
+.panel > h2 { border-left:2px solid var(--color-divider); padding-left:8px; }
+

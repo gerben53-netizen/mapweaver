@@ -1,6 +1,7 @@
 export type AssetKind = 'stamp' | 'fillPattern'
 // Optional only at the legacy import boundary; repositories and pickers return TypedAsset.
 export interface StampAsset {
+  quality?: import('./assetQuality').AssetQuality | null
   patternScale?:number|null
   sizing?: import('./assetSizing').AssetSizing
   kind?: AssetKind

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "masonry",
+    "title": "Masonry",
+    "version": "1.0",
+    "defaultThickness": 40
+  },
+  {
+    "id": "timber",
+    "title": "Timber",
+    "version": "1.0",
+    "defaultThickness": 32
+  },
+  {
+    "id": "cave-rock",
+    "title": "Cave rock",
+    "version": "1.0",
+    "defaultThickness": 56
+  }
+]

@@ -1,0 +1,150 @@
+[
+  {
+    "id": "cinzel",
+    "name": "Cinzel",
+    "category": "Map / Display",
+    "fallback": "serif",
+    "source": "https://github.com/google/fonts/tree/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/cinzel",
+    "copyright": "Copyright 2020 The Cinzel Project Authors (https://github.com/NDISCOVER/Cinzel)",
+    "license": "OFL-1.1",
+    "files": [
+      {
+        "file": "Cinzel[wght].ttf",
+        "sha256": "f4d83d34d1f6c741193e4acf4b3dff9531e5a67b6aa65228d00a7db72a4e0f34"
+      }
+    ]
+  },
+  {
+    "id": "marcellussc",
+    "name": "Marcellus SC",
+    "category": "Map / Display",
+    "fallback": "serif",
+    "source": "https://github.com/google/fonts/tree/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/marcellussc",
+    "copyright": "Copyright (c) 2012, Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astigmatic.com), with Reserved Font Names \"Marcellus\"",
+    "license": "OFL-1.1",
+    "files": [
+      {
+        "file": "MarcellusSC-Regular.ttf",
+        "sha256": "03044ab65228b0554c9a5c1e63df29d4e58a71857e212801aaf768dfd106bdf0"
+      }
+    ]
+  },
+  {
+    "id": "cormorantgaramond",
+    "name": "Cormorant Garamond",
+    "category": "Map / Display",
+    "fallback": "serif",
+    "source": "https://github.com/google/fonts/tree/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/cormorantgaramond",
+    "copyright": "Copyright 2015 the Cormorant Project Authors (github.com/CatharsisFonts/Cormorant)",
+    "license": "OFL-1.1",
+    "files": [
+      {
+        "file": "CormorantGaramond[wght].ttf",
+        "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0"
+      },
+      {
+        "file": "CormorantGaramond-Italic[wght].ttf",
+        "sha256": "0f48ea6abb2084537854f7174c470991a463b13036309e3b50a81511611c530d"
+      }
+    ]
+  },
+  {
+    "id": "ebgaramond",
+    "name": "EB Garamond",
+    "category": "Book / Cartography",
+    "fallback": "serif",
+    "source": "https://github.com/google/fonts/tree/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/ebgaramond",
+    "copyright": "Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/EBGaramond12)",
+    "license": "OFL-1.1",
+    "files": [
+      {
+        "file": "EBGaramond[wght].ttf",
+        "sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027"
+      },
+      {
+        "file": "EBGaramond-Italic[wght].ttf",
+        "sha256": "bba2c4499c93c9612b90b9825d32b07da52fce2fe57562a1eb6b833553f93c4e"
+      }
+    ]
+  },
+  {
+    "id": "spectral",
+    "name": "Spectral",
+    "category": "Readable",
+    "fallback": "serif",
+    "source": "https://github.com/google/fonts/tree/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/spectral",
+    "copyright": "Copyright 2017 The Spectral Project Authors (https://github.com/productiontype/Spectral)",
+    "license": "OFL-1.1",
+    "files": [
+      {
+        "file": "Spectral-Regular.ttf",
+        "sha256": "c89021dc20720c8d0dcf40b0b2f6e00c13665fa8041717f581396f51b8c78f5d"
+      },
+      {
+        "file": "Spectral-Bold.ttf",
+        "sha256": "70ddb1ec6ae3b0b8d0c79231f670de786978f19baeba2130757526e407aebf9b"
+      },
+      {
+        "file": "Spectral-Italic.ttf",
+        "sha256": "7ec97244259db4008c4b1224c7914e5371c797c0044af9d85c2d761ba0e5f787"
+      },
+      {
+        "file": "Spectral-BoldItalic.ttf",
+        "sha256": "709fa4f2da9be216fd52125db2d6caa4f90150f48de1a453c9ecf91117ab49b6"
+      }
+    ]
+  },
+  {
+    "id": "imfellenglish",
+    "name": "IM FELL English",
+    "category": "Historic",
+    "fallback": "serif",
+    "source": "https://github.com/google/fonts/tree/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/imfellenglish",
+    "copyright": "Copyright (c) 2010, Igino Marini (mail@iginomarini.com)",
+    "license": "OFL-1.1",
+    "files": [
+      {
+        "file": "IMFeENrm28P.ttf",
+        "sha256": "fe9705bbde51af802719246d4608d08d37bde956ab99d9a590da996a5221a24c"
+      },
+      {
+        "file": "IMFeENit28P.ttf",
+        "sha256": "47cd75dce54b1f2e0831359d22d5e688f519d68ae45706b664fd310fd0e3ccf7"
+      }
+    ]
+  },
+  {
+    "id": "sourcesans3",
+    "name": "Source Sans 3",
+    "category": "Readable",
+    "fallback": "sans-serif",
+    "source": "https://github.com/google/fonts/tree/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/sourcesans3",
+    "copyright": "Copyright 2010-2020 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe in the United States and/or other countries.",
+    "license": "OFL-1.1",
+    "files": [
+      {
+        "file": "SourceSans3[wght].ttf",
+        "sha256": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9"
+      },
+      {
+        "file": "SourceSans3-Italic[wght].ttf",
+        "sha256": "39e3ab05ccd7cb94907c31005bb5bec1d5432f0b096a2b782976e217a540eb6c"
+      }
+    ]
+  },
+  {
+    "id": "robotocondensed",
+    "name": "Roboto Condensed",
+    "category": "Readable",
+    "fallback": "sans-serif",
+    "source": "https://github.com/google/fonts/tree/23e54b51ddffbc7713c583748e3bd86f62b1fa4a/ofl/robotocondensed",
+    "copyright": "Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)",
+    "license": "OFL-1.1",
+    "files": [
+      {
+        "file": "RobotoCondensed[wght].ttf",
+        "sha256": "dace262afcee68a5276f200d8026c57221735c0118ab5fda8c2c0d3dc409a8d0"
+      }
+    ]
+  }
+]

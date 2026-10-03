@@ -1,0 +1,10 @@
+import {beforeEach,expect,it,vi} from 'vitest'
+import {useProjectStore as project} from '../store/projectStore'
+import {useEditorStore as editor} from '../store/editorStore'
+import {history,useHistoryStore} from '../store/history'
+import {defaultMapStyle} from '../domain/mapSettings'
+import {resetSelectedAssetSizes} from './resetAssetSizes'
+import {installProjectAssets} from '../projects/assets'
+vi.mock('../storage/api',()=>({api:vi.fn(async()=>({id:'asset',type:'stamp',name:'Desk',originalName:'desk.png',width:40,height:20,mimeType:'image/png',sha256:'a'.repeat(64),categoryId:'uncategorized',createdAt:'',sizingMode:'grid',defaultWidth:2,defaultHeight:1,sizingUnit:'cells',aspectRatioLocked:false,sizingScope:'any',applicableMapTypes:'[]'}))}))
+beforeEach(()=>{const objects=[{id:'one',kind:'stamp' as const,assetId:'asset',x:30,y:40,width:30,height:30,rotation:35,scaleX:-1,scaleY:1,opacity:1},{id:'two',kind:'stamp' as const,assetId:'asset',x:80,y:60,width:20,height:20,rotation:0,scaleX:1,scaleY:1,opacity:1,locked:true}];project.setState({map:{width:1200,height:900,background:null,...defaultMapStyle()},objects,layers:[{id:'objects',name:'Objects',visible:true,locked:false,objectIds:['one','two']}],objectGroups:[],layerTree:null});editor.setState({selectedObjectIds:['one','two'],activeLayerId:'objects',soloLayerId:null,editingGroupId:null});installProjectAssets(new Map([['asset',{manifest:{id:'asset',kind:'stamp',fileName:'desk.png',mimeType:'image/png',width:40,height:20,hash:'a'.repeat(64),path:'assets/a.png'},blob:new Blob(['x'])}]]));history.reset()})
+it('resets suitable selected stamps around their centre in exactly one undo, preserving rotation and mirror',async()=>{const before=project.getState().objects;expect(await resetSelectedAssetSizes()).toContain('1 stamps reset; 1');const after=project.getState().objects;expect(after[0]).toMatchObject({width:100,height:50,rotation:35,scaleX:-1});expect(after[0].x+after[0].width/2).toBe(before[0].x+before[0].width/2);expect(after[1]).toEqual(before[1]);expect(useHistoryStore.getState().undoCount).toBe(1);history.undo();expect(project.getState().objects).toEqual(before)})

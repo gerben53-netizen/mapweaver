@@ -1,0 +1,10 @@
+{
+  "package": "C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\distribution.local\\Mapweaver-AssetExplorer-20260924-Final",
+  "checks": [
+    "4579 package checksums verified",
+    "Tree selection, expand/collapse, global filters and search scope",
+    "New collection, collection selection, management, ZIP export, selection/details and layout",
+    "Actual Mapweaver.exe startup, graceful stop/restart and last map/campaign restored"
+  ],
+  "userDataUntouched": true
+}

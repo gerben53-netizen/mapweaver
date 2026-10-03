@@ -19,7 +19,7 @@ import { validateFile, validateDimensions, MAX_IMAGE_PIXELS } from '../src/impor
 import type { AssetSizing } from '../src/domain/assetSizing'
 import type { PreparedProject } from '../src/projects/types'
 
-export const SCHEMA_VERSION = 9
+export const SCHEMA_VERSION = 10
 export class StorageError extends Error {
   constructor(public code: string, message: string, public status = 400) { super(message) }
 }
@@ -63,7 +63,7 @@ export async function validateImage(file: File) {
   const thumb = await sharp(decoded.data, { raw: decoded.info }).resize(192, 192, { fit: 'inside', withoutEnlargement: true }).png().toBuffer()
   return { blob: file as Blob, width:decoded.info.width, height:decoded.info.height, mimeType: file.type, thumbnail: new Blob([new Uint8Array(thumb)], { type: 'image/png' }) }
 }
-export interface AssetRow extends Omit<AssetSizing, 'applicableMapTypes'> { id: string; patternScale?:number|null; generator?: string | null; prefab?: string | null; type: 'stamp' | 'fill-pattern' | 'background' | 'prefab'; name: string; originalName: string; mimeType: string; width: number; height: number; size: number; sha256: string; originalPath: string; previewPath: string; categoryId: string; tags: string; createdAt: string; modifiedAt: string }
+export interface AssetRow extends Omit<AssetSizing, 'applicableMapTypes'> { quality?: string | null; id: string; patternScale?:number|null; generator?: string | null; prefab?: string | null; type: 'stamp' | 'fill-pattern' | 'background' | 'prefab'; name: string; originalName: string; mimeType: string; width: number; height: number; size: number; sha256: string; originalPath: string; previewPath: string; categoryId: string; tags: string; createdAt: string; modifiedAt: string }
 export const assetFromRow = <T extends AssetRow>(row: T): T => ({ ...row, aspectRatioLocked: Boolean(row.aspectRatioLocked) })
 export interface ProjectRow { id: string; name: string; document: string; revision: number; createdAt: string; modifiedAt: string; openedAt: string | null; deletedAt: string | null }
 export class Storage {
@@ -182,6 +182,14 @@ export class Storage {
     if(!this.db.prepare('SELECT 1 FROM schema_migrations WHERE version=9').get()){
       if(has)this.db.prepare('VACUUM INTO ?').run(managedPath(this.root,`backups/pre-pattern-scale-${randomUUID()}.sqlite3`))
       this.db.transaction(()=>{this.db.exec("ALTER TABLE assets ADD COLUMN patternScale REAL CHECK(patternScale IS NULL OR (type='fill-pattern' AND patternScale>=0.01 AND patternScale<=100));");this.db.prepare('INSERT INTO schema_migrations VALUES(9,?,?)').run('Recommended fill pattern scale',new Date().toISOString())})()
+    }
+
+    if (!this.db.prepare('SELECT 1 FROM schema_migrations WHERE version=10').get()) {
+      if (has) this.db.prepare('VACUUM INTO ?').run(managedPath(this.root, `backups/pre-asset-quality-${randomUUID()}.sqlite3`))
+      this.db.transaction(() => {
+        this.db.exec("ALTER TABLE assets ADD COLUMN quality TEXT CHECK(quality IS NULL OR (json_valid(quality) AND json_extract(quality,'$.classification') IN ('KEEP','FIX','REPLACE','REJECT','DUPLICATE')));")
+        this.db.prepare('INSERT INTO schema_migrations VALUES(10,?,?)').run('Non-destructive asset quality audit',new Date().toISOString())
+      })()
     }
 
   }

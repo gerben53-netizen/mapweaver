@@ -1,0 +1,222 @@
+{
+  "elapsed": 720.7000000029802,
+  "faces": [
+    {
+      "family": "\"Mapweaver Marcellus SC\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Cinzel\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Cinzel\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Cormorant Garamond\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Cormorant Garamond\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Cormorant Garamond\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "italic"
+    },
+    {
+      "family": "\"Mapweaver Cormorant Garamond\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "italic"
+    },
+    {
+      "family": "\"Mapweaver Spectral\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver EB Garamond\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "italic"
+    },
+    {
+      "family": "\"Mapweaver EB Garamond\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "italic"
+    },
+    {
+      "family": "\"Mapweaver EB Garamond\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver EB Garamond\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Spectral\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Spectral\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "italic"
+    },
+    {
+      "family": "\"Mapweaver Spectral\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "italic"
+    },
+    {
+      "family": "\"Mapweaver IM FELL English\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver IM FELL English\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "italic"
+    },
+    {
+      "family": "\"Mapweaver Source Sans 3\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Source Sans 3\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Source Sans 3\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "italic"
+    },
+    {
+      "family": "\"Mapweaver Source Sans 3\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "italic"
+    },
+    {
+      "family": "\"Mapweaver Roboto Condensed\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Roboto Condensed\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Liberation Sans\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Liberation Sans\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "normal"
+    },
+    {
+      "family": "\"Mapweaver Liberation Sans\"",
+      "status": "loaded",
+      "weight": "400",
+      "style": "italic"
+    },
+    {
+      "family": "\"Mapweaver Liberation Sans\"",
+      "status": "loaded",
+      "weight": "700",
+      "style": "italic"
+    }
+  ],
+  "metricErrors": [],
+  "failures": [],
+  "recorded": [
+    "30px \"Mapweaver Cinzel\", serif",
+    "bold 32px \"Mapweaver Cinzel\", serif",
+    "bold 17.6px \"Mapweaver Cinzel\", serif",
+    "20.5083px \"Mapweaver Cinzel\", serif",
+    "11.2796px \"Mapweaver Cinzel\", serif",
+    "bold 18px \"Mapweaver Cinzel\", serif",
+    "14px \"Mapweaver Cinzel\", serif",
+    "30px \"Mapweaver Cormorant Garamond\", serif",
+    "bold 32px \"Mapweaver Cormorant Garamond\", serif",
+    "bold 17.6px \"Mapweaver Cormorant Garamond\", serif",
+    "italic 20.5083px \"Mapweaver Cormorant Garamond\", serif",
+    "italic 11.2796px \"Mapweaver Cormorant Garamond\", serif",
+    "bold 18px \"Mapweaver Cormorant Garamond\", serif",
+    "14px \"Mapweaver Cormorant Garamond\", serif",
+    "30px \"Mapweaver EB Garamond\", serif",
+    "bold 32px \"Mapweaver EB Garamond\", serif",
+    "bold 17.6px \"Mapweaver EB Garamond\", serif",
+    "italic 20.5083px \"Mapweaver EB Garamond\", serif",
+    "italic 11.2796px \"Mapweaver EB Garamond\", serif",
+    "bold 18px \"Mapweaver EB Garamond\", serif",
+    "14px \"Mapweaver EB Garamond\", serif",
+    "30px \"Mapweaver Source Sans 3\", sans-serif",
+    "bold 32px \"Mapweaver Source Sans 3\", sans-serif",
+    "bold 17.6px \"Mapweaver Source Sans 3\", sans-serif",
+    "italic 20.5083px \"Mapweaver Source Sans 3\", sans-serif",
+    "italic 11.2796px \"Mapweaver Source Sans 3\", sans-serif",
+    "bold 18px \"Mapweaver Source Sans 3\", sans-serif",
+    "14px \"Mapweaver Source Sans 3\", sans-serif",
+    "30px \"Mapweaver IM FELL English\", serif",
+    "32px \"Mapweaver IM FELL English\", serif",
+    "17.6px \"Mapweaver IM FELL English\", serif",
+    "italic 20.5083px \"Mapweaver IM FELL English\", serif",
+    "italic 11.2796px \"Mapweaver IM FELL English\", serif",
+    "18px \"Mapweaver IM FELL English\", serif",
+    "14px \"Mapweaver IM FELL English\", serif"
+  ],
+  "fontCount": 9,
+  "keyboard": true,
+  "missingFontsReported": {
+    "failures": [
+      "Cinzel",
+      "Marcellus SC",
+      "Cormorant Garamond",
+      "EB Garamond",
+      "Spectral",
+      "IM FELL English",
+      "Source Sans 3",
+      "Roboto Condensed",
+      "Liberation Sans"
+    ],
+    "bytes": 9639
+  }
+}

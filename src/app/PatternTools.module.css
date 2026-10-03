@@ -1,0 +1,13 @@
+.tools { display: flex; align-items: center; gap: 12px; min-width: 0; font-size: 12px; }
+.tools > span { white-space: nowrap; }
+.choice { min-width: 0; max-width: 190px; height: 32px; }
+.choice img { width: 24px; height: 24px; object-fit: contain; }
+.choice span:first-of-type { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.tools { flex-wrap: wrap; padding: 4px 8px; gap: 8px; }
+.tools label { display: inline-flex; align-items: center; gap: 4px; }
+.tools input[type=color] { width: 30px; height: 28px; padding: 0; }
+.tools small { flex-basis: 100%; color: var(--color-muted); }
+
+.tools { background:var(--color-palette); }
+.tools > label { color:var(--color-muted); }

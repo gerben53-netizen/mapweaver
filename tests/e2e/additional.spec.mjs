@@ -1,0 +1,112 @@
+import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+import fs from 'node:fs/promises';
+import { capture, fixtures, snapshot, model, point, dragMap } from './helpers.mjs';
+test('large library and layer list remain searchable, scrollable and keyboard reachable', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('tab', { name: 'Asset library', exact: true }).click();
+    const started = performance.now();
+    for (let batch = 0; batch < 4; batch++) {
+        await page.getByLabel('Import library assets').setInputFiles(Array.from({ length: 50 }, (_, i) => `${fixtures}/library-${String(batch * 50 + i).padStart(3, '0')}.png`));
+        await expect(page.getByRole('button', { name: 'Import stamps', exact: true })).toBeEnabled({ timeout: 30000 });
+    }
+    await page.getByRole('button', { name: /library-199.*16/ }).waitFor({ timeout: 90000 });
+    const imported = performance.now() - started;
+    await page.getByRole('searchbox').fill('library-199');
+    await expect(page.getByRole('button', { name: /library-199.*16/ })).toBeVisible();
+    await capture(page, '16-library-200-search');
+    await page.getByRole('tab', { name: 'Map editor', exact: true }).click();
+    const start = performance.now();
+    await page.getByRole('button', { name: 'Place stamp', exact: true }).click();
+    await page.getByRole('button', { name: 'Choose library-199', exact: true }).waitFor();
+    const pickerMs = performance.now() - start;
+    await page.getByRole('button', { name: 'Choose library-199', exact: true }).scrollIntoViewIfNeeded();
+    await page.getByRole('button', { name: 'Choose library-199', exact: true }).locator('img').waitFor();
+    await capture(page, '17-picker-200');
+    const axe = await new AxeBuilder({ page }).analyze();
+    await page.keyboard.press('Escape');
+    await page.getByLabel('Mapweaver project file').setInputFiles(`${fixtures}/layers-256.mapweaver`);
+    await expect.poll(async () => (await snapshot(page)).layers.length).toBe(256);
+    await page.getByRole('button', { name: 'Activate Layer 256', exact: true }).scrollIntoViewIfNeeded();
+    await capture(page, '18-layers-256');
+    await page.getByRole('button', { name: 'Add layer', exact: true }).click();
+    expect((await snapshot(page)).layers).toHaveLength(256);
+    await fs.writeFile('.audit.local/large-library.json', JSON.stringify({ imported, pickerMs, axe: axe.violations }, null, 2));
+});
+test('Space pan release, multiselect movement, text shortcuts and rejected open preserve the document', async ({ page }) => {
+    await page.goto('/');
+    await page.getByLabel('Mapweaver project file').setInputFiles(`${fixtures}/map-20.mapweaver`);
+    await expect.poll(async () => (await snapshot(page)).objects.length).toBe(20);
+    const before = model(await snapshot(page)), p = await point(page, 800, 500);
+    await page.mouse.move(p.x, p.y);
+    await page.getByRole('region', { name: 'Map canvas', exact: true }).focus();
+    await page.keyboard.down('Space');
+    await page.mouse.down();
+    await page.mouse.move(p.x + 50, p.y + 30, { steps: 10 });
+    await page.keyboard.up('Space');
+    await page.mouse.up();
+    const viewport = (await snapshot(page)).editor.viewport;
+    await page.mouse.move(p.x + 90, p.y + 60);
+    expect((await snapshot(page)).editor.viewport).toEqual(viewport);
+    expect(model(await snapshot(page))).toEqual(before);
+    await page.getByRole('button', { name: 'Fit to map' }).click();
+    // Two visible even-index stamps in Layer 1, opaque centers; pattern occupies x40..140.
+    for (const [x, y] of [[290, 60], [406, 60]]) {
+        const at = await point(page, x, y);
+        await page.keyboard.down('Shift');
+        await page.mouse.click(at.x, at.y);
+        await page.keyboard.up('Shift');
+    }
+    expect((await snapshot(page)).editor.selectedObjectIds).toHaveLength(2);
+    await dragMap(page, 290, 60, 300, 80);
+    await page.getByRole('button', { name: /^Undo:/ }).click();
+    expect(model(await snapshot(page))).toEqual(before);
+    await page.getByRole('tab', { name: 'Map', exact: true }).click();
+    const input = page.getByLabel('Width (px)', { exact: true });
+    await input.focus();
+    await input.press('Control+a');
+    await input.pressSequentially('1200');
+    const history = (await snapshot(page)).history;
+    await input.press('Control+z');
+    expect((await snapshot(page)).history).toEqual(history);
+    await input.fill('100');
+    page.once('dialog', d => d.dismiss());
+    await page.getByRole('button', { name: 'Apply map settings' }).click();
+    expect((await snapshot(page)).map.width).toBe(1600);
+    page.once('dialog', d => d.accept());
+    await page.getByRole('button', { name: 'Apply map settings' }).click();
+    expect((await snapshot(page)).map.width).toBe(100);
+    await page.getByRole('button', { name: /^Undo:/ }).click();
+    expect((await snapshot(page)).map.width).toBe(1600);
+    await page.getByRole('tab', { name: 'Layers', exact: true }).click();
+    await page.getByRole('button', { name: 'Add layer', exact: true }).click();
+    const changed = model(await snapshot(page));
+    page.once('dialog', d => d.dismiss());
+    await page.getByLabel('Mapweaver project file').setInputFiles(`${fixtures}/empty.mapweaver`);
+    await expect(page.getByRole('button', { name: 'Download', exact: true })).toBeEnabled();
+    expect(model(await snapshot(page))).toEqual(changed);
+});
+test('long names and many categories keep library controls usable', async ({ page }) => {
+    await page.goto('/');
+    await page.getByRole('tab', { name: 'Asset library', exact: true }).click();
+    for (let i = 0; i < 20; i++) {
+        await page.getByLabel('New category', { exact: true }).fill(`Category ${i} ${'long '.repeat(12)}`);
+        await page.getByRole('button', { name: 'Create category', exact: true }).click();
+    }
+    await page.getByLabel('Import library assets').setInputFiles(`${fixtures}/stamp.png`);
+    await page.getByRole('button', { name: /stamp.*64/ }).click();
+    const name = 'Long asset name '.repeat(7);
+    await page.getByLabel('Name', { exact: true }).fill(name);
+    await page.getByRole('button', { name: 'Save details', exact: true }).click();
+    await page.getByRole('button', { name: 'Check usage', exact: true }).click();
+    await expect(page.getByText('No current or recovery references found.', { exact: true })).toBeVisible();
+    await capture(page, '21-long-names-categories');
+    await page.getByRole('tab', { name: 'Map editor', exact: true }).click();
+    await page.getByRole('button', { name: 'Place stamp', exact: true }).click();
+    await expect(page.getByRole('button', { name: `Choose ${name.trim()}`, exact: true })).toBeVisible();
+    await capture(page, '22-long-name-picker');
+    await page.keyboard.press('Tab');
+    expect(await page.evaluate(() => document.activeElement.closest('dialog') !== null)).toBe(true);
+    await page.keyboard.press('Escape');
+    await expect(page.getByRole('button', { name: 'Place stamp', exact: true })).toBeFocused();
+});

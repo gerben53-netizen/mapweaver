@@ -1,0 +1,301 @@
+[
+  {
+    "name": "Editor",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            "button[aria-label=\"Hide Campaign Explorer\"]"
+          ],
+          [
+            "button[aria-label=\"Campaign actions\"]"
+          ],
+          [
+            "div[aria-current=\"page\"] > span:nth-child(1)"
+          ],
+          [
+            "span[title=\"Open map\"]"
+          ],
+          [
+            "div[aria-current=\"page\"] > button[aria-label=\"Actions for The Amber Coast\"]"
+          ],
+          [
+            "._surface_1ltog_17 > div:nth-child(2) > div:nth-child(1)"
+          ],
+          [
+            "div[aria-label=\"Map scale bar\"]"
+          ],
+          [
+            "button[aria-label=\"Hide Labels\"]"
+          ],
+          [
+            "summary[aria-label=\"More actions for Labels\"]"
+          ],
+          [
+            "button[aria-label=\"Move Labels down\"]"
+          ],
+          [
+            "button[aria-label=\"Hide Places\"]"
+          ],
+          [
+            "summary[aria-label=\"More actions for Places\"]"
+          ],
+          [
+            "button[aria-label=\"Move Places up\"]"
+          ],
+          [
+            "button[aria-label=\"Move Places down\"]"
+          ],
+          [
+            "button[aria-label=\"Hide Borders\"]"
+          ],
+          [
+            "summary[aria-label=\"More actions for Borders\"]"
+          ],
+          [
+            "button[aria-label=\"Move Borders up\"]"
+          ],
+          [
+            "button[aria-label=\"Move Borders down\"]"
+          ],
+          [
+            "button[aria-label=\"Hide Routes\"]"
+          ],
+          [
+            "summary[aria-label=\"More actions for Routes\"]"
+          ],
+          [
+            "button[aria-label=\"Move Routes up\"]"
+          ],
+          [
+            "button[aria-label=\"Move Routes down\"]"
+          ],
+          [
+            "button[aria-label=\"Hide Terrain\"]"
+          ],
+          [
+            "summary[aria-label=\"More actions for Terrain\"]"
+          ],
+          [
+            "button[aria-label=\"Move Terrain up\"]"
+          ],
+          [
+            "button[aria-label=\"Move Terrain down\"]"
+          ],
+          [
+            "button[aria-label=\"Hide Landmasses\"]"
+          ],
+          [
+            "summary[aria-label=\"More actions for Landmasses\"]"
+          ],
+          [
+            "button[aria-label=\"Move Landmasses up\"]"
+          ],
+          [
+            "button[aria-label=\"Move Landmasses down\"]"
+          ],
+          [
+            "button[aria-label=\"Hide Background\"]"
+          ],
+          [
+            "summary[aria-label=\"More actions for Background\"]"
+          ],
+          [
+            "button[aria-label=\"Move Background up\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Campaign folder",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            "button[aria-label=\"Hide Campaign Explorer\"]"
+          ],
+          [
+            "button[aria-label=\"Campaign actions\"]"
+          ],
+          [
+            "div[aria-current=\"page\"] > span:nth-child(1)"
+          ],
+          [
+            "span[title=\"Open map\"]"
+          ],
+          [
+            "button[aria-label=\"Actions for The Amber Coast\"]"
+          ],
+          [
+            "button[aria-label=\"Collapse Reference maps\"]"
+          ],
+          [
+            "button[aria-label=\"Actions for Reference maps\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Asset library",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            "button[aria-label=\"Collapse Recovery pack\"]"
+          ],
+          [
+            "button[aria-label=\"Collapse Trees\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Remove assets dialog",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            "dialog > p:nth-child(2)"
+          ],
+          [
+            "dialog > p:nth-child(3)"
+          ],
+          [
+            "dialog > p:nth-child(4)"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Properties",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            "button[aria-label=\"Hide Campaign Explorer\"]"
+          ],
+          [
+            "button[aria-label=\"Campaign actions\"]"
+          ],
+          [
+            "div[aria-current=\"page\"] > span[aria-hidden=\"true\"]"
+          ],
+          [
+            "span[title=\"Open map\"]"
+          ],
+          [
+            "button[aria-label=\"Actions for The Amber Coast\"]"
+          ],
+          [
+            "button[aria-label=\"Collapse Reference maps\"]"
+          ],
+          [
+            "button[aria-label=\"Actions for Reference maps\"]"
+          ],
+          [
+            "._surface_1ltog_17 > div:nth-child(2) > div:nth-child(1)"
+          ],
+          [
+            "div[aria-label=\"Map scale bar\"]"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Objects",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            "button[aria-label=\"Hide Campaign Explorer\"]"
+          ],
+          [
+            "button[aria-label=\"Campaign actions\"]"
+          ],
+          [
+            "div[aria-current=\"page\"] > span[aria-hidden=\"true\"]"
+          ],
+          [
+            "span[title=\"Open map\"]"
+          ],
+          [
+            "button[aria-label=\"Actions for The Amber Coast\"]"
+          ],
+          [
+            "button[aria-label=\"Collapse Reference maps\"]"
+          ],
+          [
+            "button[aria-label=\"Actions for Reference maps\"]"
+          ],
+          [
+            "._surface_1ltog_17 > div:nth-child(2) > div:nth-child(1)"
+          ],
+          [
+            "div[aria-label=\"Map scale bar\"]"
+          ],
+          [
+            "._symbol_eyhe6_23"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Projects",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          [
+            "dialog > h2"
+          ],
+          [
+            "dialog > p:nth-child(2)"
+          ],
+          [
+            "button[data-autofocus=\"true\"]"
+          ],
+          [
+            "dialog > button:nth-child(4)"
+          ],
+          [
+            "dialog > details > summary"
+          ],
+          [
+            "dialog > .muted"
+          ],
+          [
+            "dialog > div > strong"
+          ],
+          [
+            "dialog > div > small"
+          ],
+          [
+            "dialog > div > .primary"
+          ],
+          [
+            "dialog > button:nth-child(8)"
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 3,
+  "assets": [
+    {
+      "file": "assets/temperate-mountain.png",
+      "type": "stamp",
+      "title": "Temperate mountain",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Mountains",
+        "Temperate"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 600000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "ridge",
+          "peak"
+        ],
+        "biomes": [
+          "temperate"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      },
+      "sha256": "b6ba0a7b84f3eb83f2404768e1b15be01e824bbf1bbf39fec8684b6f1566e719"
+    },
+    {
+      "file": "assets/temperate-forest.png",
+      "type": "stamp",
+      "title": "Temperate forest cluster",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Forests",
+        "Temperate"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestInterior",
+          "forestCluster"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      },
+      "sha256": "387d9a7833f47666d6cd922e994d10e9d597738c89d92399fc4f551573b71c42"
+    }
+  ],
+  "categories": [
+    {
+      "path": [
+        "World Map",
+        "Mountains",
+        "Temperate"
+      ],
+      "sortOrder": 0
+    },
+    {
+      "path": [
+        "World Map",
+        "Forests",
+        "Temperate"
+      ],
+      "sortOrder": 1
+    }
+  ],
+  "collections": [
+    {
+      "title": "Example generator terrain",
+      "description": "Two original Engraved symbols",
+      "members": [
+        {
+          "file": "assets/temperate-mountain.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/temperate-forest.png",
+          "type": "stamp"
+        }
+      ]
+    }
+  ]
+}

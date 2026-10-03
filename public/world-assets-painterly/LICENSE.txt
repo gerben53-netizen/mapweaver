@@ -1,0 +1,10 @@
+Mapweaver Painterly World — generated asset usage note
+
+These original images were created for this Mapweaver project with the OpenAI
+built-in imagegen tool. No third-party reference artwork was supplied to the
+generator. Generation prompts and source-image hashes are in provenance.json.
+
+The assets are provided for use, modification and redistribution in Mapweaver
+projects and asset packs. No claim of exclusive copyright, hand-painted human
+authorship, or third-party license clearance is made. This usage note is not a
+license for the OpenAI service or for unrelated third-party artwork.

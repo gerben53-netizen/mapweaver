@@ -1,0 +1,23 @@
+.workspace{height:100%;display:flex;flex-direction:column;min-width:0;min-height:0}.breadcrumbs{display:flex;align-items:center;gap:8px;padding:5px 8px;border-bottom:1px solid var(--color-border);min-height:38px}.breadcrumbs nav{flex:1;min-width:0;white-space:nowrap;overflow-x:auto}.breadcrumbs nav button{max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px}.body{display:flex;flex:1;min-height:0}.explorer{width:220px;min-width:180px;flex-shrink:0;display:flex;flex-direction:column;padding:8px;border-right:1px solid var(--color-border);background:var(--color-panel);gap:6px}.explorer[hidden],.contents[hidden],.canvas[hidden]{display:none}.title{display:flex;align-items:center;justify-content:space-between;gap:8px}.title strong{font-size:12px}.title h2{font-size:18px;overflow-wrap:anywhere}.explorer input{width:100%;min-width:0}.quick{display:flex;gap:4px;flex-wrap:wrap}.quick button{font-size:12px}.root{text-align:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tree{overflow:auto;flex:1;min-height:80px}.tree [role=treeitem]{display:flex;align-items:center;min-height:34px;gap:3px;border:1px solid transparent;font-size:12px}.tree button{padding:4px;border-color:transparent;background:transparent;font-size:12px}.nodeName{flex:1;min-width:30px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.tree [aria-selected=true]{background:var(--color-selected);border-color:var(--color-accent-border)}.tree [aria-current=page]{box-shadow:inset 3px 0 var(--color-accent)}.tree [role=treeitem]:hover{background:var(--color-hover)}.tree [role=treeitem]:focus-visible{outline:2px solid var(--color-focus);outline-offset:-2px}.main{flex:1;min-width:0;min-height:0;display:flex;flex-direction:column}.canvas{flex:1;min-height:0}.contents{overflow:auto;padding:18px;flex:1}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}.list{display:flex;flex-direction:column;gap:4px}.card{display:flex;align-items:center;border:1px solid var(--color-border);border-radius:5px;padding:6px;min-width:0}.open{display:flex;align-items:center;gap:10px;flex:1;min-width:0;text-align:left;background:transparent;border-color:transparent}.open>span:last-child{min-width:0}.open strong,.open small{display:block;overflow-wrap:anywhere}.open small{font-size:11px;color:var(--color-muted);margin-top:4px}.preview{font-size:28px;color:var(--color-muted)}.gallery .open{flex-direction:column;align-items:flex-start}.gallery .preview{display:grid;place-items:center;width:100%;height:65px;background:var(--color-shell)}.error{padding:8px;color:var(--color-danger)}.error button{margin-left:8px}[data-drop=inside]{outline:2px solid var(--color-accent);outline-offset:-2px}[data-drop=before]{border-top:3px solid var(--color-accent)!important}[data-drop=after]{border-bottom:3px solid var(--color-accent)!important}
+@media(max-width:1100px){.explorer{width:190px;min-width:160px}.breadcrumbs nav button{max-width:120px}}
+
+.breadcrumbs { background:var(--color-toolbar); }
+.tree [role=treeitem][aria-selected=true]:hover { background:var(--color-selected-hover); }
+.tree [aria-current=page] .nodeName { font-weight:600; }
+.card:hover { background:var(--color-hover); }
+
+
+.explorer { background:var(--color-sidebar); }
+.title > strong { display:flex; align-items:center; gap:7px; letter-spacing:.15px; }
+.title > strong::before { content:''; width:5px; height:5px; transform:rotate(45deg); background:var(--color-brass); }
+.root { justify-content:flex-start; box-shadow:var(--shadow-crafted); }
+.tree [role=treeitem] { border-radius:var(--radius); }
+.tree [aria-current=page] { box-shadow:inset 2px 0 var(--color-brass); }
+.tree [title='Open map'] { color:var(--color-brass); font-size:9px; }
+.nodeIcon { display:flex; flex-shrink:0; color:var(--color-muted); }
+.nodeIcon svg { width:15px; height:15px; }
+.nodeName { justify-content:flex-start; }
+.card { border-radius:var(--radius-card); background:var(--color-panel); }
+.preview svg { width:28px; height:28px; }
+.contents > p { color:var(--color-muted); padding:18px 0; }
+

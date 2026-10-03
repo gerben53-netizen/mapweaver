@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "Preview and same-seed regeneration are deterministic; cancel creates no saved map",
+    "Apply creates a normal world map with editable layers, native Areas/rivers, ownership, seed and version",
+    "Generated geometry and metadata survive service save/reload; ordinary PNG export succeeds",
+    "Generated river is editable through ordinary Properties, undo/redo and save"
+  ],
+  "errors": [],
+  "objects": 79,
+  "nodes": 1510
+}

@@ -1,0 +1,20 @@
+// Read-only repository inventory; results contain paths/counts, never secret values.
+import fs from 'node:fs'
+import path from 'node:path'
+import crypto from 'node:crypto'
+import { execFileSync } from 'node:child_process'
+const root=process.cwd(),out=path.join(root,'.repository-cleanup.local')
+fs.mkdirSync(out,{recursive:true})
+const candidates=execFileSync('git',['ls-files','--cached','--others','--exclude-standard','-z'],{encoding:'utf8'}).split('\0').filter(Boolean)
+const textFiles=candidates.filter(f=>/\.(?:[cm]?js|tsx?|json|md|css|html|ps1|cs|iss|ya?ml)$/.test(f)||path.basename(f).startsWith('.'))
+const texts=textFiles.map(f=>({file:f,text:fs.readFileSync(f,'utf8')}))
+const local=fs.readdirSync(root,{withFileTypes:true}).filter(d=>d.isDirectory()&&d.name.endsWith('.local'))
+function inventory(dir){let files=0,bytes=0;const extensions={},samples=[],sensitive=[];for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isSymbolicLink())continue;if(e.isDirectory()){const a=inventory(p);files+=a.files;bytes+=a.bytes;for(const [k,n]of Object.entries(a.extensions))extensions[k]=(extensions[k]||0)+n;sensitive.push(...a.sensitive);samples.push(...a.samples.slice(0,2))}else{files++;bytes+=fs.statSync(p).size;const ext=path.extname(p)||'(none)';extensions[ext]=(extensions[ext]||0)+1;if(samples.length<8)samples.push(path.relative(root,p).replaceAll('\\','/'));if(/\.(sqlite3?|db|mapweaver)$|source|sources/i.test(p))sensitive.push(path.relative(root,p).replaceAll('\\','/'))}}return{files,bytes,extensions,samples:samples.slice(0,8),sensitive}}
+const directories=local.map(d=>{const a=inventory(path.join(root,d.name)),refs=texts.filter(t=>t.text.includes(d.name)).map(t=>t.file),creators=refs.filter(f=>/^(scripts|tests|service)\//.test(f));const persistent=d.name==='asset-production.local'||a.sensitive.length>0||d.name==='deliverables.local'||d.name==='.qa.local';return{name:d.name,...a,sensitive:a.sensitive.slice(0,12),references:refs,creators,classification:persistent?'C — ignored/preserved; source or persistent evidence':'B — ignored/preserved; generated evidence',reproducibility:persistent?'Partial: preserve source/user inputs; do not assume reproducible':creators.length?'Referenced harness/tool can regenerate evidence with documented prerequisites':'Creator not identified; retain conservatively',purpose:d.name==='asset-production.local'?'Original user sprite sheets/metadata plus extracted/build outputs':d.name==='deliverables.local'?'Current delivered packs, maps, specifications and proofs':d.name==='distribution.local'?'Portable Windows distribution output':d.name==='launcher.local'?'Compiled launcher/runtime staging':d.name+'. Sprint/tool evidence workspace; see samples and references'}})
+const secretPatterns=[['private-key',/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/],['service-key',/\b(?:sk-[A-Za-z0-9]{30,}|gh[pousr]_[A-Za-z0-9]{30,}|AKIA[A-Z0-9]{16})\b/],['literal-credential',/(?:password|api[_-]?key|secret|access[_-]?token)\s*[:=]\s*["'][^"'\s]{12,}["']/i]]
+const findings=texts.flatMap(t=>secretPatterns.filter(([,p])=>p.test(t.text)).map(([kind])=>({file:t.file,kind})))
+const absolutePaths=texts.filter(t=>/C:\\Users|C:\/Users/.test(t.text)).map(t=>t.file)
+const largest=candidates.map(file=>({file,bytes:fs.statSync(file).size})).sort((a,b)=>b.bytes-a.bytes).slice(0,30)
+const result={root,branch:execFileSync('git',['branch','--show-current'],{encoding:'utf8'}).trim(),rootEntries:fs.readdirSync(root),directories,candidateCount:candidates.length,largest,secretFindings:findings,absolutePathFiles:absolutePaths,contractProvenanceSha256:crypto.createHash('sha256').update(fs.readFileSync('src/campfire/generated/provenance.json')).digest('hex')}
+fs.writeFileSync(path.join(out,'inventory.json'),JSON.stringify(result,null,2)+'\n')
+console.log(JSON.stringify({localDirectories:directories.length,candidates:candidates.length,secretFindings:findings,absolutePathFiles:absolutePaths,largest,report:path.join(out,'inventory.json')},null,2))

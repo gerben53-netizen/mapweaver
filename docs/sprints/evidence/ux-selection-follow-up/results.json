@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "Objects browser: unmistakable selection and no duplicate editing controls",
+    "Single Properties: identity and primary fields first; contextual controls and closed asset settings",
+    "Proportional dimensions persist and undo updates Properties",
+    "Canvas selection and direct drag synchronize Objects and Properties; deselection clears fields",
+    "Duplicate names gain shared item context; multi-selection exposes only applicable bulk controls",
+    "Keyboard selection and layouts at 1280 × 720 and 1600 × 1000",
+    "Existing format 12 project imports, edits, saves and reloads"
+  ],
+  "errors": []
+}

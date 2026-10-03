@@ -1,0 +1,221 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "urn:mapweaver:wall-set:1",
+  "title": "Mapweaver wall set v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "version",
+    "title",
+    "description",
+    "renderingMode",
+    "nominalWidthPx",
+    "defaultThickness",
+    "repeatLengthPx",
+    "overlapPx",
+    "coreColor",
+    "roughnessLimits",
+    "bodyVariants",
+    "author",
+    "source",
+    "license"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.-]{1,40}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+      "description": "Picker name."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500,
+      "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+      "description": "Brief material description."
+    },
+    "renderingMode": {
+      "enum": [
+        "strip",
+        "segments"
+      ]
+    },
+    "nominalWidthPx": {
+      "type": "number",
+      "minimum": 8,
+      "maximum": 1024,
+      "description": "Solid core width in source pixels."
+    },
+    "defaultThickness": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 1024,
+      "description": "Suggested map-pixel thickness; no implicit physical units."
+    },
+    "repeatLengthPx": {
+      "type": "number",
+      "minimum": 8,
+      "maximum": 2048,
+      "description": "Source-space repeat length."
+    },
+    "overlapPx": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1536,
+      "description": "Segments spacing = repeatLengthPx - overlapPx. Runtime requires <= 75% repeat length. Strip uses contiguous slices."
+    },
+    "coreColor": {
+      "type": "string",
+      "pattern": "^#[a-fA-F0-9]{6}$"
+    },
+    "roughnessLimits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "max",
+        "default",
+        "maxProtrusionPx"
+      ],
+      "properties": {
+        "max": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Zero disables the control."
+        },
+        "default": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Runtime requires <= max."
+        },
+        "maxProtrusionPx": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1024,
+          "description": "Maximum source alpha extent beyond half nominalWidthPx; runtime requires <= nominalWidthPx."
+        }
+      }
+    },
+    "bodyVariants": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/definitions/art"
+      }
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+      "description": "Known author or explicitly unknown."
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+      "description": "Provenance text only; never downloaded."
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+      "description": "Actual permission/license or explicitly unspecified."
+    },
+    "cap": {
+      "$ref": "#/definitions/art"
+    },
+    "join": {
+      "$ref": "#/definitions/art"
+    }
+  },
+  "definitions": {
+    "art": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file",
+        "width",
+        "height",
+        "anchor",
+        "weight",
+        "rotation",
+        "scaleVariation"
+      ],
+      "properties": {
+        "file": {
+          "type": "string",
+          "pattern": "^assets/[a-zA-Z0-9_-]{1,80}\\.(png|webp)$"
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 2048
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 2048
+        },
+        "anchor": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "x",
+            "y"
+          ],
+          "properties": {
+            "x": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2048,
+              "description": "Source pixels from image left; runtime requires <= width."
+            },
+            "y": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2048,
+              "description": "Source pixels from image top; runtime requires <= height."
+            }
+          }
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0.01,
+          "maximum": 100,
+          "description": "Relative deterministic selection weight."
+        },
+        "rotation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 15,
+          "description": "Maximum allowed deviation in degrees, multiplied by roughness; never mirrored."
+        },
+        "scaleVariation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.15,
+          "description": "Maximum fractional variation, multiplied by roughness."
+        }
+      }
+    }
+  }
+}

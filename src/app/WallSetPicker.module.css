@@ -1,0 +1,6 @@
+.sets {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+.sets button {display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px;min-width:0}
+.sets img {height:80px;width:100%;object-fit:contain;background:#343a39;border-radius:4px}
+.preview {border-top:1px solid var(--border);margin-top:16px;padding-top:12px}
+.preview img {float:left;max-width:180px;max-height:150px;object-fit:contain;margin:0 16px 12px 0;background:#404744}
+.preview::after {content:'';display:block;clear:both}

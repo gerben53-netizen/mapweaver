@@ -1,0 +1,1322 @@
+{
+  "schemaVersion": 3,
+  "assets": [
+    {
+      "file": "assets/temperate-mountain.png",
+      "type": "stamp",
+      "title": "Temperate mountain",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Mountains",
+        "Temperate"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 600000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "ridge",
+          "peak"
+        ],
+        "biomes": [
+          "temperate"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/high-mountain.png",
+      "type": "stamp",
+      "title": "High mountain",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Mountains",
+        "Temperate"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 550000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "peak",
+          "landmark"
+        ],
+        "biomes": [
+          "alpine",
+          "temperate"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 3,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/ridge-cluster.png",
+      "type": "stamp",
+      "title": "Ridge cluster",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Mountains",
+        "Temperate"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 900000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "ridge"
+        ],
+        "biomes": [
+          "temperate",
+          "alpine"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/isolated-peak.png",
+      "type": "stamp",
+      "title": "Isolated peak",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Mountains",
+        "Temperate"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 600000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "isolatedFeature",
+          "peak"
+        ],
+        "biomes": [
+          "generic"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 4,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/snow-mountain.png",
+      "type": "stamp",
+      "title": "Snow mountain",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Mountains",
+        "Snow"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 600000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "snowMountain",
+        "roles": [
+          "peak"
+        ],
+        "biomes": [
+          "snow",
+          "alpine"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/snow-ridge.png",
+      "type": "stamp",
+      "title": "Snow ridge",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Mountains",
+        "Snow"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 900000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "snowMountain",
+        "roles": [
+          "ridge"
+        ],
+        "biomes": [
+          "snow",
+          "alpine"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/alpine-peak.png",
+      "type": "stamp",
+      "title": "Alpine peak",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Mountains",
+        "Snow"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 600000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "snowMountain",
+        "roles": [
+          "peak",
+          "landmark"
+        ],
+        "biomes": [
+          "alpine",
+          "tundra"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 3,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/green-hills.png",
+      "type": "stamp",
+      "title": "Green hills",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Hills"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "hill",
+        "roles": [
+          "foothill",
+          "ridge"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/rocky-hills.png",
+      "type": "stamp",
+      "title": "Rocky hills",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Hills"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "hill",
+        "roles": [
+          "foothill",
+          "ridge"
+        ],
+        "biomes": [
+          "alpine",
+          "generic"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/arid-hills.png",
+      "type": "stamp",
+      "title": "Arid hills",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Hills"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "hill",
+        "roles": [
+          "foothill",
+          "ridge"
+        ],
+        "biomes": [
+          "arid",
+          "desert"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/temperate-forest.png",
+      "type": "stamp",
+      "title": "Temperate forest cluster",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Forests",
+        "Temperate"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestInterior",
+          "forestCluster"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/conifer-forest.png",
+      "type": "stamp",
+      "title": "Conifer cluster",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Forests",
+        "Conifer"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 700000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestInterior",
+          "forestCluster"
+        ],
+        "biomes": [
+          "conifer",
+          "alpine",
+          "snow"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/sparse-woodland.png",
+      "type": "stamp",
+      "title": "Sparse woodland",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Forests",
+        "Sparse"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "sparseVegetation",
+          "forestEdge"
+        ],
+        "biomes": [
+          "temperate",
+          "generic"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/forest-edge.png",
+      "type": "stamp",
+      "title": "Forest edge cluster",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Forests",
+        "Temperate"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "forestCluster",
+        "roles": [
+          "forestEdge"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/solitary-tree.png",
+      "type": "stamp",
+      "title": "Solitary tree",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Forests",
+        "Temperate"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 350000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "tree",
+        "roles": [
+          "isolatedFeature",
+          "sparseVegetation"
+        ],
+        "biomes": [
+          "temperate",
+          "deciduous"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/dormant-volcano.png",
+      "type": "stamp",
+      "title": "Dormant volcano",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Mountains",
+        "Volcanic"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "volcano",
+        "roles": [
+          "landmark",
+          "isolatedFeature"
+        ],
+        "biomes": [
+          "volcanic"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 3,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/active-volcano.png",
+      "type": "stamp",
+      "title": "Active volcano",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Mountains",
+        "Volcanic"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "volcano",
+        "roles": [
+          "landmark",
+          "isolatedFeature"
+        ],
+        "biomes": [
+          "volcanic"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 1,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/volcanic-mountain.png",
+      "type": "stamp",
+      "title": "Volcanic mountain",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Mountains",
+        "Volcanic"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 600000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "mountain",
+        "roles": [
+          "ridge",
+          "peak"
+        ],
+        "biomes": [
+          "volcanic"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 6,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/isolated-rock.png",
+      "type": "stamp",
+      "title": "Isolated rock",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Rocks"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 280000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "rock",
+        "roles": [
+          "isolatedFeature",
+          "rockScatter"
+        ],
+        "biomes": [
+          "generic",
+          "arid"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/rock-cluster.png",
+      "type": "stamp",
+      "title": "Rock cluster",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Rocks"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 450000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "rockCluster",
+        "roles": [
+          "rockScatter",
+          "foothill"
+        ],
+        "biomes": [
+          "generic",
+          "alpine"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/rough-cliff.png",
+      "type": "stamp",
+      "title": "Rough cliff",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Rocks"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 550000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "rockCluster",
+        "roles": [
+          "ridge",
+          "landmark"
+        ],
+        "biomes": [
+          "arid",
+          "generic"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 4,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/swamp-tree.png",
+      "type": "stamp",
+      "title": "Twisted swamp tree",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Swamp"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 400000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "swampVegetation",
+        "roles": [
+          "swampInterior",
+          "landmark"
+        ],
+        "biomes": [
+          "swamp",
+          "wetland"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/marsh-reeds.png",
+      "type": "stamp",
+      "title": "Reeds and marsh",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Swamp"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 450000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "marshCluster",
+        "roles": [
+          "swampEdge",
+          "sparseVegetation"
+        ],
+        "biomes": [
+          "wetland",
+          "swamp"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    },
+    {
+      "file": "assets/swamp-cluster.png",
+      "type": "stamp",
+      "title": "Swamp vegetation cluster",
+      "description": "Mapweaver Engraved: muted terrain symbols, upper-left lighting, transparent background.",
+      "categoryPath": [
+        "World Map",
+        "Swamp"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 650000,
+        "unit": "m",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "world-map",
+        "regional-map"
+      ],
+      "author": "Mapweaver",
+      "source": "Bundled original vector artwork; editable SVG sources in public/world-assets/source.",
+      "license": "CC0-1.0",
+      "generator": {
+        "version": 1,
+        "semanticType": "swampVegetation",
+        "roles": [
+          "swampInterior",
+          "swampEdge"
+        ],
+        "biomes": [
+          "swamp",
+          "wetland"
+        ],
+        "themes": [
+          "genericFantasy"
+        ],
+        "weight": 8,
+        "scale": {
+          "min": 0.85,
+          "max": 1.2
+        },
+        "rotation": {
+          "allowed": false,
+          "min": 0,
+          "max": 0
+        },
+        "spacing": 1.05
+      }
+    }
+  ],
+  "collections": [
+    {
+      "title": "World — Mountains",
+      "description": "Mapweaver Engraved world symbols",
+      "members": [
+        {
+          "file": "assets/temperate-mountain.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/high-mountain.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/ridge-cluster.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/isolated-peak.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "World — Snow & Alpine",
+      "description": "Mapweaver Engraved world symbols",
+      "members": [
+        {
+          "file": "assets/snow-mountain.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/snow-ridge.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/alpine-peak.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "World — Hills",
+      "description": "Mapweaver Engraved world symbols",
+      "members": [
+        {
+          "file": "assets/green-hills.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/rocky-hills.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/arid-hills.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "World — Forests",
+      "description": "Mapweaver Engraved world symbols",
+      "members": [
+        {
+          "file": "assets/temperate-forest.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/conifer-forest.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/sparse-woodland.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/forest-edge.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/solitary-tree.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "World — Volcano & Rock",
+      "description": "Mapweaver Engraved world symbols",
+      "members": [
+        {
+          "file": "assets/dormant-volcano.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/active-volcano.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/volcanic-mountain.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/isolated-rock.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/rock-cluster.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/rough-cliff.png",
+          "type": "stamp"
+        }
+      ]
+    },
+    {
+      "title": "World — Swamp",
+      "description": "Mapweaver Engraved world symbols",
+      "members": [
+        {
+          "file": "assets/swamp-tree.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/marsh-reeds.png",
+          "type": "stamp"
+        },
+        {
+          "file": "assets/swamp-cluster.png",
+          "type": "stamp"
+        }
+      ]
+    }
+  ]
+}

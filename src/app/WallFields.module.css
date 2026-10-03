@@ -1,0 +1,6 @@
+.compact { display: contents; }
+.fields { display: grid; gap: 10px; margin: 12px 0; min-width: 0; }
+.fields label { display: grid; gap: 5px; min-width: 0; font-size: 12px; }
+.fields input:not([type='checkbox']), .fields select { width: 100%; min-width: 0; }
+.fields label:has(input[type='checkbox']) { display: flex; align-items: center; }
+.fields button { display: flex; align-items: center; gap: 8px; }

@@ -1,0 +1,70 @@
+.app { height: 100%; display: flex; flex-direction: column; }
+.header { height: 64px; flex-shrink: 0; display: flex; align-items: center; gap: 18px; padding: 0 16px; border-bottom: 1px solid var(--color-border); background: var(--color-toolbar); }
+.brand { display: flex; gap: 9px; align-items: center; flex-shrink: 0; }
+.brand h1 { font-size: 15px; margin: 0; letter-spacing: -.35px; }
+.brand h1 small { display: block; font-size: 10px; letter-spacing: .3px; color: var(--color-muted); font-weight: 400; }
+.brandMark { width: 29px; height: 29px; display: grid; place-items: center; font-weight: 700; border: 1px solid var(--color-border); color: var(--color-text); border-radius: 7px; background: var(--color-surface); }
+.main { flex: 1; min-height: 0; }
+.editor { display: flex; height: 100%; }
+.editor[hidden], .library[hidden] { display: none; }
+.library { height: 100%; }
+.rail { overflow-y:auto; min-height:0; width: 72px; flex-shrink: 0; border-right: 1px solid var(--color-border); background: var(--color-panel); display: flex; align-items: center; flex-direction: column; padding: 12px 6px; gap: 8px; }
+.panel { width: 284px; flex-shrink: 0; background: var(--color-panel); border-left: 1px solid var(--color-border); display: flex; flex-direction: column; min-height: 0; }
+.collapsed { width: 44px; flex-shrink: 0; border-left: 1px solid var(--color-border); background: var(--color-panel); }
+.inspectorHead { min-height: 49px; display: flex; align-items: center; justify-content: space-between; gap: 4px; padding: 0 8px; border-bottom: 1px solid var(--color-border); }
+.inspectorHead :global([role=tab]) { padding: 8px 4px; font-size: 12px; }
+.inspectorBody { display: flex; flex: 1; min-height: 0; }
+.inspectorPage { flex: 1; overflow: auto; min-width: 0; }
+.inspectorBody[hidden], .inspectorPage[hidden] { display: none; }
+.inspectorBody h2 { font-size: 13px; margin: 0 0 12px; }
+.pin { display: flex; align-items: center; gap: 7px; padding: 12px; color: var(--color-muted); font-size: 11px; }
+.background { padding: 16px; border-top: 1px solid var(--color-border); }
+@media (max-width: 1350px) { .header { gap: 10px; padding: 0 10px; } .brand { gap: 6px; } }
+
+@media (max-width: 1000px) { .header { overflow-x: auto; } .header > * { flex-shrink: 0; } .header > :last-child { min-width: 660px; } .panel { width: min(284px, 42vw); } }
+
+.landRail { width: 72px; }
+.landRail button { max-width:100%; font-size:11px; padding-left:5px; padding-right:5px; }
+
+.focus > nav, .focus > aside { display:none; }
+.toolGroup { display:flex; flex-direction:column; gap:3px; width:100%; padding:5px 0; border-bottom:1px solid var(--color-border); }
+.toolGroup button { display:flex; justify-content:center; align-items:center; min-height:34px; width:100%; position:relative; }
+.toolGroup button[aria-pressed=true] { box-shadow:inset 3px 0 var(--color-accent); font-weight:600; }
+.rail { width:56px; gap:0; padding:4px; }
+
+.editor > :only-child { width:100%; min-width:0; }
+
+.rail button { background:transparent; border-color:transparent; color:var(--color-muted); }
+.rail button[aria-pressed=true] { background:var(--color-selected); border-color:var(--color-accent-border); color:var(--color-active-text); }
+.inspectorHead { background:var(--color-toolbar); }
+
+.rail button:disabled { color:var(--color-disabled); background:var(--color-panel); border-color:var(--color-border); box-shadow:none; }
+
+/* A workstation signature, with neutral chrome surrounding the artwork. */
+.header { box-shadow:var(--shadow-crafted); }
+.brandMark { color:var(--color-brass); border-color:var(--color-divider); background:var(--color-sidebar); }
+.brandMark svg { width:22px; height:22px; }
+.brand h1 { letter-spacing:.1px; }
+.rail { background:var(--color-sidebar); }
+.toolGroup { border-color:var(--color-divider); }
+.toolGroup:last-child { border-bottom:0; }
+.rail button { border-radius:var(--radius-tool); }
+.rail button[aria-pressed=true] { box-shadow:inset 3px 0 var(--color-brass),var(--shadow-crafted); }
+.rail button:hover:not(:disabled) { color:var(--color-text); }
+.panel { background:var(--color-inspector); }
+.inspectorHead { box-shadow:var(--shadow-crafted); }
+.inspectorBody h2 { letter-spacing:.15px; }
+.background h2::before { content:''; display:inline-block; width:14px; height:2px; background:var(--color-brass); margin-right:8px; vertical-align:middle; }
+.panel { position:relative; width:320px; max-width:calc(100vw - 360px); }
+.inspectorHead { padding:5px; gap:2px; }
+.inspectorHead :global([role=tablist]) { flex:1; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; }
+.inspectorHead :global([role=tab]) { white-space:nowrap; padding:7px 2px; font-size:11px; }
+
+
+.withStampBrowser { display:flex; }
+.withStampBrowser>.editor { flex:1; min-width:0; }
+.stampBrowser { order:-1; flex:0 0 330px; width:330px; height:100%; min-height:0; border-right:1px solid var(--color-border); }
+.stampBrowser[hidden] { display:none; }
+
+.scenePage { flex:1;min-height:0;min-width:0;overflow:hidden; }
+.scenePage[hidden] { display:none; }

@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "Grouped palette fits 1280×720 and Escape restores keyboard focus",
+    "Five compass presets placed and editable without creating asset records",
+    "Title/subtitle, physical bar length, editable legend and numbered notes save through the local service",
+    "Undo/redo and direct selected-object dragging use normal editor interactions",
+    "Real 1×/2× PNGs contain all elements, preserve transparency and are byte-identical with selection on/off",
+    "All editable content, presets and transforms survive restart/reload",
+    "All title, legend, note and scale-bar preset variants pass service validation and actual PNG rendering"
+  ],
+  "errors": []
+}

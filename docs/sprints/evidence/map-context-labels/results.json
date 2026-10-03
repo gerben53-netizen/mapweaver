@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "Battlemap tool matrix and readable boxless functional label",
+    "Regional capabilities, contextual actions and cartographic label preset",
+    "Existing battlemap structure remains visible and editable after workspace change",
+    "World preset and explicit editable rotation with unchanged existing label styles",
+    "Actual PNG includes light glyphs and dark halo, transparent surroundings, and no selected-only chrome",
+    "Active tool fallback, old boxed labels and all saved styles survive map-type changes and reload",
+    "Asset picker defaults to map applicability and offers deliberate all-assets browsing"
+  ],
+  "errors": []
+}

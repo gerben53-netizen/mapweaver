@@ -1,0 +1,1046 @@
+{
+  "version": 1,
+  "textures": [
+    {
+      "id": "painterly.v1.grass-lush",
+      "title": "Lush Atlas Grassland",
+      "family": "Grassland",
+      "style": "grassland",
+      "preset": "Plains soft enrichment",
+      "scale": 0.6,
+      "softness": 0.8,
+      "strength": 0.45,
+      "notes": "Organic meadow relief; enrich open plains beneath symbols.",
+      "file": "/terrain-textures-painterly/materials/grass-lush.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Grassland"
+      ],
+      "collection": "Painterly Terrain — Grassland",
+      "tags": [
+        "painterly",
+        "terrain",
+        "grassland",
+        "grass-lush",
+        "grassland"
+      ]
+    },
+    {
+      "id": "painterly.v1.grass-dry",
+      "title": "Dry Grassland Breakup",
+      "family": "Grassland",
+      "style": "grassland",
+      "preset": "Dry meadow variation",
+      "scale": 0.65,
+      "softness": 0.8,
+      "strength": 0.4,
+      "notes": "Warm soil glimpses and straw patches for transitional plains.",
+      "file": "/terrain-textures-painterly/materials/grass-dry.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Grassland"
+      ],
+      "collection": "Painterly Terrain — Grassland",
+      "tags": [
+        "painterly",
+        "terrain",
+        "grassland",
+        "grass-dry",
+        "grassland"
+      ]
+    },
+    {
+      "id": "painterly.v1.rock-light",
+      "title": "Light Limestone Scree",
+      "family": "Rocky upland",
+      "style": "rocky",
+      "preset": "Rocky slope detailing",
+      "scale": 0.55,
+      "softness": 0.75,
+      "strength": 0.5,
+      "notes": "Broken pale slabs and scree; ground mountain edges.",
+      "file": "/terrain-textures-painterly/materials/rock-light.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Rocky upland"
+      ],
+      "collection": "Painterly Terrain — Rocky upland",
+      "tags": [
+        "painterly",
+        "terrain",
+        "rocky upland",
+        "rock-light",
+        "rocky"
+      ]
+    },
+    {
+      "id": "painterly.v1.rock-dark",
+      "title": "Dark Slate Upland",
+      "family": "Rocky upland",
+      "style": "rocky",
+      "preset": "Dark upland detailing",
+      "scale": 0.65,
+      "softness": 0.8,
+      "strength": 0.4,
+      "notes": "Cool weathered rock and earthy seams; use lightly under labels.",
+      "file": "/terrain-textures-painterly/materials/rock-dark.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Rocky upland"
+      ],
+      "collection": "Painterly Terrain — Rocky upland",
+      "tags": [
+        "painterly",
+        "terrain",
+        "rocky upland",
+        "rock-dark",
+        "rocky"
+      ]
+    },
+    {
+      "id": "painterly.v1.foothill",
+      "title": "Foothill Scree",
+      "family": "Foothills",
+      "style": "rocky",
+      "preset": "Foothill roughening",
+      "scale": 0.7,
+      "softness": 0.85,
+      "strength": 0.5,
+      "notes": "Grassy low relief with mineral tongues beneath mountain bases.",
+      "file": "/terrain-textures-painterly/materials/foothill.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Foothills"
+      ],
+      "collection": "Painterly Terrain — Foothills",
+      "tags": [
+        "painterly",
+        "terrain",
+        "foothills",
+        "foothill",
+        "rocky"
+      ]
+    },
+    {
+      "id": "painterly.v1.alpine",
+      "title": "Patchy Alpine Snow",
+      "family": "Alpine & snow",
+      "style": "snow",
+      "preset": "Alpine snow break-up",
+      "scale": 0.6,
+      "softness": 0.8,
+      "strength": 0.5,
+      "notes": "Interlocking exposed rock and snow tongues at the snowline.",
+      "file": "/terrain-textures-painterly/materials/alpine.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Alpine & snow"
+      ],
+      "collection": "Painterly Terrain — Alpine & snow",
+      "tags": [
+        "painterly",
+        "terrain",
+        "alpine & snow",
+        "alpine",
+        "snow"
+      ]
+    },
+    {
+      "id": "painterly.v1.forest-temperate",
+      "title": "Temperate Forest Floor",
+      "family": "Forest floor",
+      "style": "forest",
+      "preset": "Forest floor darkening",
+      "scale": 0.65,
+      "softness": 0.85,
+      "strength": 0.4,
+      "notes": "Muted humus and understory; supports forest cores without new trees.",
+      "file": "/terrain-textures-painterly/materials/forest-temperate.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Forest floor"
+      ],
+      "collection": "Painterly Terrain — Forest floor",
+      "tags": [
+        "painterly",
+        "terrain",
+        "forest floor",
+        "forest-temperate",
+        "forest"
+      ]
+    },
+    {
+      "id": "painterly.v1.forest-moss",
+      "title": "Mossy Woodland Floor",
+      "family": "Forest floor",
+      "style": "forest",
+      "preset": "Mossy woodland edge",
+      "scale": 0.55,
+      "softness": 0.85,
+      "strength": 0.4,
+      "notes": "Soft moss cushions for damp woodland edges.",
+      "file": "/terrain-textures-painterly/materials/forest-moss.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Forest floor"
+      ],
+      "collection": "Painterly Terrain — Forest floor",
+      "tags": [
+        "painterly",
+        "terrain",
+        "forest floor",
+        "forest-moss",
+        "forest"
+      ]
+    },
+    {
+      "id": "painterly.v1.swamp-wet",
+      "title": "Mottled Wet Marsh",
+      "family": "Swamp & marsh",
+      "style": "swamp",
+      "preset": "Marsh wet edge",
+      "scale": 0.6,
+      "softness": 0.85,
+      "strength": 0.45,
+      "notes": "Wet silt islands, pooled hollows and muted reed-like marks.",
+      "file": "/terrain-textures-painterly/materials/swamp-wet.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Swamp & marsh"
+      ],
+      "collection": "Painterly Terrain — Swamp & marsh",
+      "tags": [
+        "painterly",
+        "terrain",
+        "swamp & marsh",
+        "swamp-wet",
+        "swamp"
+      ]
+    },
+    {
+      "id": "painterly.v1.swamp-bog",
+      "title": "Dark Peat Bog",
+      "family": "Swamp & marsh",
+      "style": "swamp",
+      "preset": "Bog depth pass",
+      "scale": 0.6,
+      "softness": 0.85,
+      "strength": 0.35,
+      "notes": "Dark peat and low hummocks; restrained use beneath marsh symbols.",
+      "file": "/terrain-textures-painterly/materials/swamp-bog.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Swamp & marsh"
+      ],
+      "collection": "Painterly Terrain — Swamp & marsh",
+      "tags": [
+        "painterly",
+        "terrain",
+        "swamp & marsh",
+        "swamp-bog",
+        "swamp"
+      ]
+    },
+    {
+      "id": "painterly.v1.arid",
+      "title": "Dusty Broken Earth",
+      "family": "Arid & dry",
+      "style": "desert",
+      "preset": "Dry patch variation",
+      "scale": 0.65,
+      "softness": 0.8,
+      "strength": 0.45,
+      "notes": "Dry clay and muted scrub tone without a photographic crack pattern.",
+      "file": "/terrain-textures-painterly/materials/arid.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "collection": "Painterly Terrain — Arid & dry",
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "arid",
+        "desert"
+      ]
+    },
+    {
+      "id": "painterly.v1.shore",
+      "title": "Coastal Silt and Shallows",
+      "family": "Coast & shore",
+      "style": "shallow",
+      "preset": "Coastal shallows transition",
+      "scale": 0.55,
+      "softness": 0.9,
+      "strength": 0.35,
+      "notes": "Silt and shallow water; paint narrow bands without covering coastline ink.",
+      "file": "/terrain-textures-painterly/materials/shore.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Coast & shore"
+      ],
+      "collection": "Painterly Terrain — Coast & shore",
+      "tags": [
+        "painterly",
+        "terrain",
+        "coast & shore",
+        "shore",
+        "shallow"
+      ]
+    },
+    {
+      "id": "painterly.v1.volcanic",
+      "title": "Weathered Volcanic Ash",
+      "family": "Volcanic",
+      "style": "volcanic",
+      "preset": "Volcanic ash pass",
+      "scale": 0.6,
+      "softness": 0.8,
+      "strength": 0.4,
+      "notes": "Basalt and ash, without glowing lava or competing landmarks.",
+      "file": "/terrain-textures-painterly/materials/volcanic.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Volcanic"
+      ],
+      "collection": "Painterly Terrain — Volcanic",
+      "tags": [
+        "painterly",
+        "terrain",
+        "volcanic",
+        "volcanic",
+        "volcanic"
+      ]
+    },
+    {
+      "id": "painterly.v1.neutral",
+      "title": "Soft Atlas Earth",
+      "family": "Neutral blends",
+      "style": "land",
+      "preset": "Neutral terrain enrichment",
+      "scale": 0.7,
+      "softness": 0.9,
+      "strength": 0.3,
+      "notes": "Low-contrast material between other families; not the Blend operation.",
+      "file": "/terrain-textures-painterly/materials/neutral.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Neutral blends"
+      ],
+      "collection": "Painterly Terrain — Neutral blends",
+      "tags": [
+        "painterly",
+        "terrain",
+        "neutral blends",
+        "neutral",
+        "land"
+      ]
+    },
+    {
+      "id": "painterly.v1.sand-soft",
+      "title": "Soft Sand Desert",
+      "family": "Arid & dry",
+      "style": "desert",
+      "preset": "Soft Sand Desert pass",
+      "scale": 0.65,
+      "softness": 0.9,
+      "strength": 0.4,
+      "notes": "Quiet fine sand for broad desert washes.",
+      "file": "/terrain-textures-painterly/materials/sand-soft.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "collection": "Painterly Terrain — Arid & dry",
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "sand-soft",
+        "desert",
+        "sand",
+        "sandy",
+        "desert",
+        "arid"
+      ]
+    },
+    {
+      "id": "painterly.v1.dunes",
+      "title": "Wind-Swept Dunes",
+      "family": "Arid & dry",
+      "style": "desert",
+      "preset": "Wind-Swept Dunes pass",
+      "scale": 0.55,
+      "softness": 0.85,
+      "strength": 0.4,
+      "notes": "Broken crescent dunes with quiet sandy intervals.",
+      "file": "/terrain-textures-painterly/materials/dunes.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "collection": "Painterly Terrain — Arid & dry",
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "dunes",
+        "desert",
+        "dune",
+        "dunes",
+        "wind",
+        "sand",
+        "desert",
+        "arid"
+      ]
+    },
+    {
+      "id": "painterly.v1.desert-stone",
+      "title": "Stony Desert",
+      "family": "Arid & dry",
+      "style": "desert",
+      "preset": "Stony Desert pass",
+      "scale": 0.55,
+      "softness": 0.8,
+      "strength": 0.45,
+      "notes": "Low desert pavement and gravel for rugged dry transitions.",
+      "file": "/terrain-textures-painterly/materials/desert-stone.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "collection": "Painterly Terrain — Arid & dry",
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "desert-stone",
+        "desert",
+        "rocky",
+        "stony",
+        "desert",
+        "gravel",
+        "arid"
+      ]
+    },
+    {
+      "id": "painterly.v1.dry-basin",
+      "title": "Cracked Dry Basin",
+      "family": "Arid & dry",
+      "style": "desert",
+      "preset": "Cracked Dry Basin pass",
+      "scale": 0.6,
+      "softness": 0.85,
+      "strength": 0.4,
+      "notes": "Pale clay fissures for dried lakes and arid basins.",
+      "file": "/terrain-textures-painterly/materials/dry-basin.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "collection": "Painterly Terrain — Arid & dry",
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "dry-basin",
+        "desert",
+        "cracked",
+        "dry",
+        "basin",
+        "clay",
+        "desert",
+        "arid"
+      ]
+    },
+    {
+      "id": "painterly.v1.cave-damp",
+      "title": "Damp Cavern Floor",
+      "family": "Underground & cavern",
+      "style": "rocky",
+      "preset": "Damp Cavern Floor pass",
+      "scale": 0.55,
+      "softness": 0.85,
+      "strength": 0.4,
+      "notes": "Dark mineral earth for humid caves and dungeon underlayers.",
+      "file": "/terrain-textures-painterly/materials/cave-damp.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "collection": "Painterly Terrain — Underground & cavern",
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-damp",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "damp",
+        "wet",
+        "tunnel"
+      ]
+    },
+    {
+      "id": "painterly.v1.cave-moss",
+      "title": "Mossy Cave Ground",
+      "family": "Underground & cavern",
+      "style": "forest",
+      "preset": "Mossy Cave Ground pass",
+      "scale": 0.5,
+      "softness": 0.9,
+      "strength": 0.4,
+      "notes": "Low olive moss on humid limestone soil, without canopy.",
+      "file": "/terrain-textures-painterly/materials/cave-moss.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "collection": "Painterly Terrain — Underground & cavern",
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-moss",
+        "forest",
+        "cave",
+        "cavern",
+        "underground",
+        "damp",
+        "moss",
+        "mossy",
+        "humid"
+      ]
+    },
+    {
+      "id": "painterly.v1.cave-wet-stone",
+      "title": "Wet Stone Floor",
+      "family": "Underground & cavern",
+      "style": "rocky",
+      "preset": "Wet Stone Floor pass",
+      "scale": 0.5,
+      "softness": 0.85,
+      "strength": 0.4,
+      "notes": "Cool damp stone with restrained mineral seams and no gloss.",
+      "file": "/terrain-textures-painterly/materials/cave-wet-stone.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "collection": "Painterly Terrain — Underground & cavern",
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-wet-stone",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "damp",
+        "wet",
+        "stone",
+        "tunnel"
+      ]
+    },
+    {
+      "id": "painterly.v1.cave-mud",
+      "title": "Moist Cavern Earth",
+      "family": "Underground & cavern",
+      "style": "swamp",
+      "preset": "Moist Cavern Earth pass",
+      "scale": 0.6,
+      "softness": 0.9,
+      "strength": 0.4,
+      "notes": "Soft damp umber mud for natural subterranean chambers.",
+      "file": "/terrain-textures-painterly/materials/cave-mud.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "collection": "Painterly Terrain — Underground & cavern",
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-mud",
+        "swamp",
+        "cave",
+        "cavern",
+        "underground",
+        "damp",
+        "wet",
+        "mud",
+        "muddy",
+        "earth",
+        "soil",
+        "tunnel"
+      ]
+    },
+    {
+      "id": "painterly.v1.cave-broken",
+      "title": "Broken Cave Floor",
+      "family": "Underground & cavern",
+      "style": "rocky",
+      "preset": "Broken Cave Floor pass",
+      "scale": 0.5,
+      "softness": 0.8,
+      "strength": 0.45,
+      "notes": "Fractured limestone plates embedded in fine cave dust.",
+      "file": "/terrain-textures-painterly/materials/cave-broken.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "collection": "Painterly Terrain — Underground & cavern",
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-broken",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "broken",
+        "uneven",
+        "rough"
+      ]
+    },
+    {
+      "id": "painterly.v1.cave-rubble",
+      "title": "Rubble-Strewn Cavern",
+      "family": "Underground & cavern",
+      "style": "rocky",
+      "preset": "Rubble-Strewn Cavern pass",
+      "scale": 0.45,
+      "softness": 0.8,
+      "strength": 0.45,
+      "notes": "Scattered small angular debris for collapsed passages.",
+      "file": "/terrain-textures-painterly/materials/cave-rubble.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "collection": "Painterly Terrain — Underground & cavern",
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-rubble",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "rubble",
+        "uneven",
+        "collapsed",
+        "tunnel"
+      ]
+    },
+    {
+      "id": "painterly.v1.cave-jagged",
+      "title": "Jagged Stone Ground",
+      "family": "Underground & cavern",
+      "style": "rocky",
+      "preset": "Jagged Stone Ground pass",
+      "scale": 0.45,
+      "softness": 0.8,
+      "strength": 0.4,
+      "notes": "Fine slate splinters and shallow fractures, without giant rocks.",
+      "file": "/terrain-textures-painterly/materials/cave-jagged.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "collection": "Painterly Terrain — Underground & cavern",
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-jagged",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "jagged",
+        "uneven",
+        "rocky",
+        "rough"
+      ]
+    },
+    {
+      "id": "painterly.v1.cave-uneven",
+      "title": "Uneven Rocky Underground",
+      "family": "Underground & cavern",
+      "style": "rocky",
+      "preset": "Uneven Rocky Underground pass",
+      "scale": 0.55,
+      "softness": 0.85,
+      "strength": 0.4,
+      "notes": "Weathered mineral humps and dusty hollows for rough ground.",
+      "file": "/terrain-textures-painterly/materials/cave-uneven.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "collection": "Painterly Terrain — Underground & cavern",
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cave-uneven",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "uneven",
+        "rocky",
+        "rough",
+        "tunnel"
+      ]
+    },
+    {
+      "id": "painterly.v1.salt-flats",
+      "title": "Salt-Worn Flats",
+      "family": "Arid & dry",
+      "style": "desert",
+      "preset": "Salt-Worn Flats pass",
+      "scale": 0.7,
+      "softness": 0.9,
+      "strength": 0.35,
+      "notes": "Chalky salt crust and faint mineral islands for dry flats.",
+      "file": "/terrain-textures-painterly/materials/salt-flats.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "collection": "Painterly Terrain — Arid & dry",
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "salt-flats",
+        "desert",
+        "salt",
+        "flats",
+        "desert",
+        "arid",
+        "basin"
+      ]
+    },
+    {
+      "id": "painterly.v1.leaf-litter",
+      "title": "Leaf-Litter Forest Floor",
+      "family": "Forest floor",
+      "style": "forest",
+      "preset": "Leaf-Litter Forest Floor pass",
+      "scale": 0.5,
+      "softness": 0.9,
+      "strength": 0.4,
+      "notes": "Subdued fallen leaves over dark humus beneath woodland.",
+      "file": "/terrain-textures-painterly/materials/leaf-litter.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Forest floor"
+      ],
+      "collection": "Painterly Terrain — Forest floor",
+      "tags": [
+        "painterly",
+        "terrain",
+        "forest floor",
+        "leaf-litter",
+        "forest",
+        "leaf",
+        "leaves",
+        "litter",
+        "forest",
+        "woodland",
+        "autumn"
+      ]
+    },
+    {
+      "id": "painterly.v1.rooty-floor",
+      "title": "Rooty Woodland Floor",
+      "family": "Forest floor",
+      "style": "forest",
+      "preset": "Rooty Woodland Floor pass",
+      "scale": 0.5,
+      "softness": 0.85,
+      "strength": 0.4,
+      "notes": "Fine weathered root threads in muted woodland earth.",
+      "file": "/terrain-textures-painterly/materials/rooty-floor.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Forest floor"
+      ],
+      "collection": "Painterly Terrain — Forest floor",
+      "tags": [
+        "painterly",
+        "terrain",
+        "forest floor",
+        "rooty-floor",
+        "forest",
+        "root",
+        "roots",
+        "rooty",
+        "forest",
+        "woodland",
+        "floor"
+      ]
+    },
+    {
+      "id": "painterly.v1.clay-earth",
+      "title": "Soft Clay Earth",
+      "family": "Neutral blends",
+      "style": "land",
+      "preset": "Soft Clay Earth pass",
+      "scale": 0.65,
+      "softness": 0.9,
+      "strength": 0.35,
+      "notes": "Quiet terracotta earth for gentle soil transitions.",
+      "file": "/terrain-textures-painterly/materials/clay-earth.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Neutral blends"
+      ],
+      "collection": "Painterly Terrain — Neutral blends",
+      "tags": [
+        "painterly",
+        "terrain",
+        "neutral blends",
+        "clay-earth",
+        "land",
+        "clay",
+        "soil",
+        "earth",
+        "dirt",
+        "neutral",
+        "transition"
+      ]
+    },
+    {
+      "id": "painterly.v1.gravel-ground",
+      "title": "Gravel Path Ground",
+      "family": "Rocky upland",
+      "style": "rocky",
+      "preset": "Gravel Path Ground pass",
+      "scale": 0.45,
+      "softness": 0.85,
+      "strength": 0.4,
+      "notes": "Small worn gravel in warm grey dust for paths and margins.",
+      "file": "/terrain-textures-painterly/materials/gravel-ground.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Rocky upland"
+      ],
+      "collection": "Painterly Terrain — Rocky upland",
+      "tags": [
+        "painterly",
+        "terrain",
+        "rocky upland",
+        "gravel-ground",
+        "rocky",
+        "gravel",
+        "path",
+        "pebble",
+        "rocky",
+        "transition"
+      ]
+    },
+    {
+      "id": "painterly.v1.cavern-lichen",
+      "title": "Cavern Lichen Ground",
+      "family": "Underground & cavern",
+      "style": "rocky",
+      "preset": "Cavern Lichen Ground pass",
+      "scale": 0.5,
+      "softness": 0.9,
+      "strength": 0.35,
+      "notes": "Pale sage lichen flecks across cool cave stone.",
+      "file": "/terrain-textures-painterly/materials/cavern-lichen.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Underground & cavern"
+      ],
+      "collection": "Painterly Terrain — Underground & cavern",
+      "tags": [
+        "painterly",
+        "terrain",
+        "underground & cavern",
+        "cavern-lichen",
+        "rocky",
+        "cave",
+        "cavern",
+        "underground",
+        "lichen",
+        "damp",
+        "rocky",
+        "tunnel"
+      ]
+    }
+  ]
+}

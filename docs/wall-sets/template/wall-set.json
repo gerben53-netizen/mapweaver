@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0",
+  "author": "Replace with author",
+  "source": "Replace with provenance",
+  "license": "Replace with actual artwork permission",
+  "id": "my-wall-set",
+  "title": "My wall set",
+  "description": "Replace the sample components with your own top-down transparent artwork.",
+  "renderingMode": "strip",
+  "nominalWidthPx": 60,
+  "defaultThickness": 40,
+  "repeatLengthPx": 128,
+  "overlapPx": 0,
+  "coreColor": "#63685e",
+  "roughnessLimits": {
+    "max": 0,
+    "default": 0,
+    "maxProtrusionPx": 8
+  },
+  "bodyVariants": [
+    {
+      "file": "assets/masonry.png",
+      "width": 128,
+      "height": 96,
+      "anchor": {
+        "x": 0,
+        "y": 48
+      },
+      "weight": 1,
+      "rotation": 0,
+      "scaleVariation": 0
+    }
+  ],
+  "cap": {
+    "file": "assets/masonry-cap.png",
+    "width": 96,
+    "height": 96,
+    "anchor": {
+      "x": 48,
+      "y": 48
+    },
+    "weight": 1,
+    "rotation": 0,
+    "scaleVariation": 0
+  }
+}

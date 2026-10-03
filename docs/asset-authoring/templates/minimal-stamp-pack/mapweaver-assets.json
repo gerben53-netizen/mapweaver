@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "collection": {
+    "title": "Example study",
+    "description": "One instructional desk"
+  },
+  "categories": [
+    {
+      "path": [
+        "Examples",
+        "Furniture"
+      ],
+      "sortOrder": 0
+    }
+  ],
+  "assets": [
+    {
+      "file": "images/desk.png",
+      "type": "stamp",
+      "title": "Example desk",
+      "description": "Original instructional desk image; a 5 ft wide placement example.",
+      "categoryPath": [
+        "Examples",
+        "Furniture"
+      ],
+      "tags": [
+        "desk",
+        "study"
+      ],
+      "defaultSize": {
+        "mode": "world",
+        "width": 5,
+        "unit": "ft",
+        "lockAspectRatio": true
+      },
+      "applicableMapTypes": [
+        "battlemap"
+      ],
+      "author": "Mapweaver example artwork",
+      "source": "Original desk from the bundled public/asset-templates example.",
+      "license": "CC0-1.0",
+      "sha256": "5d5e5043702b996c1a5fc5f64fb7a6703f67ed31c58c1c663d1f70223177f726"
+    }
+  ]
+}

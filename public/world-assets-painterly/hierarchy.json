@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "overrides": {
+    "ridge-01": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      },
+      "ridgeAxis": 30
+    },
+    "ridge-02": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      },
+      "ridgeAxis": 20
+    },
+    "peak-01": {
+      "hierarchy": "hero",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.96,
+        "max": 1.06
+      }
+    },
+    "connector-01": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      },
+      "ridgeAxis": -20
+    },
+    "foothill-01": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "snow-ridge-01": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      },
+      "ridgeAxis": 0
+    },
+    "snow-peak-01": {
+      "hierarchy": "hero",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.96,
+        "max": 1.06
+      }
+    },
+    "snow-cluster-01": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      },
+      "ridgeAxis": -20
+    },
+    "snow-foothill-01": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "broadleaf-interior-01": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      }
+    },
+    "broadleaf-interior-02": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      }
+    },
+    "broadleaf-edge-01": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "broadleaf-edge-02": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "broadleaf-sparse-01": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "landmark-grove-01": {
+      "hierarchy": "hero",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.96,
+        "max": 1.06
+      }
+    },
+    "conifer-interior-01": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      }
+    },
+    "conifer-dense-01": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      }
+    },
+    "conifer-edge-01": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "conifer-sparse-01": {
+      "hierarchy": "detail",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.75,
+        "max": 1.05
+      }
+    },
+    "swamp-twisted-01": {
+      "hierarchy": "hero",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.96,
+        "max": 1.06
+      }
+    },
+    "swamp-dead-01": {
+      "hierarchy": "detail",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.75,
+        "max": 1.05
+      }
+    },
+    "marsh-reeds-01": {
+      "hierarchy": "detail",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.75,
+        "max": 1.05
+      }
+    },
+    "swamp-interior-01": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      }
+    },
+    "swamp-edge-01": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "hill-green-01": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "hill-rocky-01": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "hill-arid-01": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "rock-01": {
+      "hierarchy": "detail",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.75,
+        "max": 1.05
+      }
+    },
+    "rock-cluster-01": {
+      "hierarchy": "detail",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.75,
+        "max": 1.05
+      }
+    },
+    "cliff-01": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "volcano-dormant-01": {
+      "hierarchy": "hero",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.96,
+        "max": 1.06
+      }
+    },
+    "volcano-active-01": {
+      "hierarchy": "hero",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.96,
+        "max": 1.06
+      }
+    },
+    "volcanic-mountain-01": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      }
+    },
+    "volcanic-rocks-01": {
+      "hierarchy": "detail",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.75,
+        "max": 1.05
+      }
+    },
+    "ridge-03": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      },
+      "ridgeAxis": -10
+    },
+    "peak-02": {
+      "hierarchy": "hero",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.96,
+        "max": 1.06
+      }
+    },
+    "connector-02": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      },
+      "ridgeAxis": -25
+    },
+    "foothill-02": {
+      "hierarchy": "support",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.82,
+        "max": 1.08
+      }
+    },
+    "broadleaf-interior-03": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      }
+    },
+    "conifer-interior-02": {
+      "hierarchy": "primary",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.9,
+        "max": 1.12
+      }
+    },
+    "broadleaf-tree-01": {
+      "hierarchy": "detail",
+      "lighting": "northwest",
+      "scale": {
+        "min": 0.75,
+        "max": 1.05
+      }
+    }
+  }
+}

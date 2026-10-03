@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0",
+  "author": "Mapweaver project",
+  "source": "Procedural SVG artwork in scripts/create-wall-examples.mjs",
+  "license": "Project-authored; no separate artwork license specified.",
+  "id": "timber",
+  "title": "Timber",
+  "description": "Three warm timber courses with flowing grain, knots and notched edges.",
+  "renderingMode": "strip",
+  "nominalWidthPx": 60,
+  "defaultThickness": 32,
+  "repeatLengthPx": 128,
+  "overlapPx": 0,
+  "coreColor": "#795633",
+  "roughnessLimits": {
+    "max": 0,
+    "default": 0,
+    "maxProtrusionPx": 8
+  },
+  "bodyVariants": [
+    {
+      "file": "assets/timber.png",
+      "width": 128,
+      "height": 96,
+      "anchor": {
+        "x": 0,
+        "y": 48
+      },
+      "weight": 1,
+      "rotation": 0,
+      "scaleVariation": 0
+    }
+  ],
+  "cap": {
+    "file": "assets/timber-cap.png",
+    "width": 96,
+    "height": 96,
+    "anchor": {
+      "x": 48,
+      "y": 48
+    },
+    "weight": 1,
+    "rotation": 0,
+    "scaleVariation": 0
+  },
+  "join": {
+    "file": "assets/timber-cap.png",
+    "width": 96,
+    "height": 96,
+    "anchor": {
+      "x": 48,
+      "y": 48
+    },
+    "weight": 1,
+    "rotation": 0,
+    "scaleVariation": 0
+  }
+}

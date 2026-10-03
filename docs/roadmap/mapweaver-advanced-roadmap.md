@@ -1,0 +1,24 @@
+# Mapweaver advanced roadmap
+
+This file was absent at the start of Sprint 14. It records only the supplied scope and verified project status; it does not invent acceptance for unprovided future sprints.
+
+- Sprint 12: local SQLite/filesystem storage implemented; see its report.
+- Sprint 13: portable packaging and data safety implemented with outstanding installer/default-browser acceptance limitations; see its report.
+- Sprint 14: generic Area tool, bounded geometry, points, Union/Subtract, canonical migration and storage/export integration. Evidence and final status: [Sprint 14 report](../sprints/sprint-14-freeform-areas-and-masks-report.md).
+- Sprint 15: generic straight/curved paths, editable nodes/handles, three strokes, measurements and format v4. Evidence: [Sprint 15 report](../sprints/sprint-15-generic-path-engine-report.md).
+- Sprint 16: completed — persistent object groups and hierarchical layer groups, shared transforms, arrangement, indexed smart guides and virtualized object management. Format v5, targeted tests, storage/backup transfer, Chromium workflows and measured 1,000-object acceptance are documented in [the Sprint 16 report](../sprints/sprint-16-advanced-object-and-layer-management-report.md).
+- Sprint 17: delivered — specialized Wall paths, full-width drawing, joins/caps, clipped textures, endpoint/T snapping, explicit extension, bulk styles, format v6, storage/export and measured Chromium acceptance. See [Sprint 17 report](../sprints/sprint-17-wall-tool-report.md) for validation and texture boundaries.
+- Sprint 18: completed — linked doors/windows, shared real cutouts, explicit bounded room detection and Area floor regeneration. See [Sprint 18 report](../sprints/sprint-18-doors-windows-rooms-report.md).
+- Sprint 19: completed — weighted deterministic Scatter brush, atomic Paint/Erase, copied Area masks with holes, source replacement, expansion, format v9 and shared PNG rendering. Targeted tests, 14 Chromium checks and measured 5,000-instance acceptance: [Sprint 19 report](../sprints/sprint-19-scatter-brush-report.md).
+- Sprint 20: completed — Regional/World workspaces, canonical physical scale, landmass/terrain Area roles, copied clipping, contour/coastline previews, measurement and optional exported scale bar. Existing battlemaps retain identical pixels. See [Sprint 20 report](../sprints/sprint-20-map-workspace-report.md) for 10,000-node measurements and validation. No GIS, rivers, roads or labels.
+- Sprint 21: completed — River/Road/Border specializations of the shared path engine, physical width references, variable river profiles, road styles/joins, border patterns/halos, shared snapping/editing, previewed conversion/Area-edge following, atomic splitting/extension, format 11 and PNG. Evidence and 400-route measurements: [Sprint 21 report](../sprints/sprint-21-rivers-roads-borders-report.md). No hydrology, routefinding, bridge override or path labels.
+- Sprint 22: completed — semantic Places, explicit symbol scale modes, editable standalone/linked Labels, controlled local fonts, bounded overlap previews, Legend/Compass, safe object relationships and format 12 persistence/PNG. 80 targeted client tests, 4 service tests, Chromium workflows, pixel comparison and 500-place measurements are documented in [the Sprint 22 report](../sprints/sprint-22-places-symbols-labels-report.md). No lore, complex-script shaping, path text, general asset taxonomy or automatic cartographic generalization.
+- Execution order explicitly requested by the user: 16 → 17 → 18 → 19 → 20 → 21 → 22. Later scopes do not replace unfinished prerequisites. New Windows packages are created only on explicit user request; normal targeted validation and production builds remain permitted.
+- Later, not implemented here: arbitrary layer masks.
+- Sprint 23: advanced asset library, virtual category tree, metadata/default sizing, transactional pack import/export and measured 10,000-record browsing. See [Sprint 23 report](../sprints/sprint-23-advanced-asset-library-report.md) for verification and explicit boundaries. Prefabs remain a separate Sprint 23B.
+- Sprint 24: feathering, blur, shadows and blend effects remain deferred.
+
+
+- Sprint 23B: Editable/Flattened reusable compositions integrated into the existing asset library, independent placement, dependency-complete transfer, schema 6 and requested Windows portable package. Technical, visual and native acceptance are tracked separately in the [Sprint 23B report](../sprints/sprint-23b-prefabs-and-reusable-compositions-report.md).
+
+- Editor UX refinement: grouped tool icons, contextual/global action separation, square-based battlemap setup, live grid controls, transient focus mode and concise autosave feedback. No format change or Windows package. See [UX improvement report](../sprints/ux-improvement-sprint-report.md).

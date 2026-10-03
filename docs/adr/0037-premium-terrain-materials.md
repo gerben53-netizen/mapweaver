@@ -1,0 +1,21 @@
+# ADR 0037 — Immutable painterly brush materials
+
+Accepted 26 September 2026 for the Premium Terrain Brush Texture Library sprint.
+
+The explicit sprint requirement to preserve existing painted maps takes precedence over the general permission to discard old data. Terrain paint version 1 and its procedural grain/sand/waves rendering remain unchanged. Opening a map never changes its paint or theme.
+
+Format-12 maps may now contain terrain paint **version 2**. The mask codec, weight sums, tile sizes, 32-material/4096-tile/2-MiB budgets and Paint/Erase/Blend behavior are retained. A v2 material may include `textureId`, which must resolve to the immutable `painterly.v1.*` bundled registry and match its legacy style fallback. Its canonical key is `style_scale@textureId`. Classic materials retain `style_scale`, even in mixed v2 paint. Only an explicit premium paint stroke upgrades a layer; selecting a preset does not modify the document. Unknown IDs, URLs, mismatched styles and texture fields in v1 are rejected. Old applications reject v2 paint rather than silently substituting artwork.
+
+Fourteen 512×512 opaque sRGB PNGs cover ten named families. Each registry entry owns title, family, tags, category, collection, theme family, World/Regional applicability, source path, notes and a scale/softness/strength preset. Source prompts and hashes accompany the distribution. Existing pixels must not be replaced under a persisted ID: later artwork revisions require a new ID and retained old resources.
+
+These are bundled local application resources, not mutable library database references. They need no library import, account or runtime external service. Project ZIPs store immutable IDs; applications supporting this revision supply the associated resources. This avoids introducing a new user asset type, dependency migration or arbitrary resource URL. The optional ordinary fill-pattern ZIP is a convenience copy for Areas; importing it cannot register new brush materials. Arbitrary third-party brush pack installation remains outside this sprint.
+
+The shared resource loader decodes each requested source once and uses separable cosine overlap-add across opposite edges. A 512px source becomes a 384px periodic sample without mirroring directional geological forms. This technical seam treatment is not the artwork: all material detail comes from separately generated raster art. Result surfaces are retained for at most the 14 fixed IDs (8,257,536 RGBA bytes); source decode images are not retained by the loader. Existing paint-tile cache remains bounded at 64 MiB. Rendering uses map coordinates and the same native CanvasPattern and weighted mask blend in editor, swatch and export.
+
+The editor waits for required material resources before drawing paint; failures produce a visible message. Painting waits for the current layer and selected texture. The selected-material control supports retry. Export awaits required resources and fails rather than substituting legacy color. Fractional scale remains 0.01–100. Paint samples still have two-map-pixel coverage resolution; 2× export does not invent subpixel mask detail.
+
+Presets are explicit user choices, not automatic repaint/theme migration. Painterly Fantasy is the supported art family. Other world themes can use them manually, but no unvalidated recolor mapping is implied. Terrain paint remains independent of geography finish, semantic biomes, land editing, object placement and label state.
+
+## Additional Terrain extension — 26 September 2026
+
+Append 18 immutable v1 IDs, retaining all 14 original entries, pixels and provenance. One new family, Underground & cavern, joins the existing ten. New aliases use the existing tags/search index. No format or paint schema changes; all new images are 512×512 opaque sRGB and use the same 384px overlap-add sampler. The fixed resource-cache upper bound increases to 32 surfaces, 18,874,368 RGBA bytes (18 MiB); resources remain lazy and single-decoded. Map paint budgets remain 32 used style/scale/material combinations, 4,096 tiles and 2 MiB. Package generation now checks existing hashes before reusing resources and refuses mutated immutable images. New projects using new IDs need this application revision or later; older revisions reject unknown IDs. Existing projects remain unchanged. Generic UI behavior presets remain unchanged.

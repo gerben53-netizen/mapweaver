@@ -1,0 +1,25 @@
+.dialog { width: min(520px, calc(100vw - 48px)); max-height: calc(100vh - 48px); overflow: auto; background: var(--color-surface); color: var(--color-text); border: 1px solid var(--color-border-hover); border-radius: 10px; padding: 24px; box-shadow: 0 16px 70px #0008; font-size: 13px; }
+.dialog.wide { width: min(850px, calc(100vw - 80px)); }
+.dialog::backdrop { background: #0d111abd; }
+.dialog h2 { margin: 0 0 18px; font-size: 18px; font-weight: 600; }
+.dialog label { display: block; margin: 12px 0; color: var(--color-muted); font-size: 12px; }
+.dialog input:not([type=checkbox]), .dialog select { display: block; width: 100%; margin-top: 5px; }
+.dialog pre { white-space: pre-wrap; line-height: 1.6; font: inherit; }
+.dialog button { margin: 3px 4px 0 0; }
+.dialog fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.dialog [role=alert] { white-space: pre-wrap; }
+
+
+.dialog { background:var(--color-panel); border-radius:12px; border-top-color:var(--color-brass); box-shadow:var(--shadow-crafted),0 16px 70px #0008; }
+.dialog::backdrop { background:var(--color-backdrop); }
+.dialog h2 { display:flex; align-items:center; gap:10px; letter-spacing:.1px; }
+.dialog h2::before { content:''; width:6px; height:6px; background:var(--color-brass); transform:rotate(45deg); flex-shrink:0; }
+.dialog > p, .dialog > form > p { color:var(--color-muted); }
+
+
+.dialog.preview { width: min(400px, calc(100vw - 48px)); margin: 24px 24px 24px auto; max-height: calc(100vh - 48px); padding: 16px; }
+.dialog.preview::backdrop { background: transparent; }
+
+.dialog.preview { display: flex; flex-direction: column; overflow: hidden; height: calc(100vh - 48px); box-sizing: border-box; }
+.dialog.preview > h2, .dialog.preview > p, .dialog.preview > div { flex-shrink: 0; }
+.dialog.preview > fieldset { min-height: 0; overflow: auto; }

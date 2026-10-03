@@ -1,0 +1,258 @@
+[
+  {
+    "id": "painterly.v1.grass-lush",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: production terrain brush material, square opaque image, 1024x1024. Paint a seamless repeat-safe LUSH GRASSLAND surface for a premium fantasy world atlas. Aerial cartographic painterly oil/gouache miniature, broad soft meadow forms, sage and olive grassy hummocks, delicate ochre soil glimpses, low rolling organic tonal changes and restrained northwest highlights. Material must feel rich beside detailed painted mountain miniatures, while subdued beneath map labels. Full-bleed flat top-down material, not a scene, not perspective landscape; no individual trees, no mountain peaks, no coastline, no sky, no text, no border or vignette. Continuous similar detail at all edges; no prominent repeated landmarks, no photographic satellite texture, no noisy microdots. Low-to-medium frequency forms, medium-low contrast; slight physical grass/earth relief, not generic green noise. Make one coherent material only.",
+    "originalSha256": "8cc7aabdbea7a46bdcee851bb7285534e3da5bd19244ec82f6d06c7d4c4557f3",
+    "sha256": "4bd8785aec704f1636621fb5d18cfb5e650c341eada2a8fd68b5f9cdd6951c9a",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.grass-dry",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: DRY MIXED GRASSLAND. straw ochre grassy patches, pale sage meadow hummocks, warm exposed loam, scattered fading green organic shapes; gently broken dry grassy plains, no cracks dominating",
+    "originalSha256": "df349866e959b27447bac8c503835c5832df521e13b849fe6c41b2bf223b66ce",
+    "sha256": "ccd5e3ead250e8c53eb7521a012ececa0f108783835e57f5c9c95432f0c6a89e",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.rock-light",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: LIGHT ROCKY SCREE. pale limestone and warm grey broken stone plates, small irregular scree fans, restrained strata, sparse muted olive soil gaps; broadly readable stone structure",
+    "originalSha256": "76cfeae8ed0e57e5d67a1f90760cbd0db81403d00860dfbe41efb02058edcdcd",
+    "sha256": "a9f9135c21e42516a9b9dd47f6b770b0cc290a762ddfa85e5222923ace637f13",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.rock-dark",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: DARK ROCKY UPLAND. weathered cool slate grey rock outcrops and fractured broad slabs with dark earthy seams, sparse muted moss, softly grounded broken angular planes; not molten",
+    "originalSha256": "f5e6d0242490db9372ef2634a45ca58b1f230817fe7dfe34c783c14c3facdf5d",
+    "sha256": "079f6c3d98815de68994d5fa2107844b12ff603e33649052db90b017169b1574",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.foothill",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: FOOTHILL SCREE. soft low rolling ochre-olive grassy foothill forms crossed by light weathered limestone scree tongues and small broken crags, rounded bases, restrained northwest relief highlights; ground to integrate underneath high mountain symbols, NOT mountain peaks",
+    "originalSha256": "beb4ba0dd6532bfdd4be2ec225e707d3ee20d30f2e45214198516eeecf5412f8",
+    "sha256": "238248eadf6bc0b278f0a145ecc02ca397492a596005f0f25ae1057ef98c6408",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.alpine",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: PATCHY ALPINE SNOW. irregular soft ivory snow tongues and patches lying between cool grey rocky ground and pale tundra, exposed scree, delicate cold shadows; snow and rock interlock broadly, no isolated mountains",
+    "originalSha256": "3f16f0b26727bc1295c3ac555f079778d1dacfb79f0ae61161e0ba42b992cf6e",
+    "sha256": "d281ee1833cf376036eab32e1bb4ec132462a7d16bf676d05955fe185bb17f5f",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.forest-temperate",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: TEMPERATE FOREST FLOOR. deep muted olive brown earthy understory, broken moss cushions, warm humus and scattered faint leaf litter, low woodland ground forms; no actual individual tree crowns, branches, logs or tree silhouettes",
+    "originalSha256": "21c1f90d20bb5ede19478b54e5a55b895e40b7f9920dd51a204f82273ad25296",
+    "sha256": "1c6e0325fbda3583bc94e2c434ba978474e4f44dbdd269a144400147dadae309",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.forest-moss",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: MOSSY WOODLAND FLOOR. soft broad sage and moss green velvety cushions on dark warm humus, damp olive earth pockets, sparse fern-like implied texture without recognizable plants; no canopy trees",
+    "originalSha256": "0a1de2dae2e28915c713e025b9c0cf0bb0efe5993fc153b777d7990ca6029d11",
+    "sha256": "86ac6ce00c82d15e5dcf2bc494106c2aafe135a3d669d353065a6692d570155c",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.swamp-wet",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: MOTTLED WET MARSH. muted grey green wet ground with irregular small shallow smoky teal pools and dark peat margins, soft silt islands and restrained ochre reed-like surface strokes, not a river or shoreline",
+    "originalSha256": "1199a547602ffa31bde5393d30b649184819bb7a1f3059f2c33ddfdfce7e28ef",
+    "sha256": "197a25cc99152c21446c0b562e443268ec99828037fff633cb868d96d04d8e4a",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.swamp-bog",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: DARK PEAT BOG. dark warm brown peat, desaturated olive hummocks, small dark still-water hollows and subtly tangled low reed texture; low contrast, rich wet earth, no neon green",
+    "originalSha256": "8f5242f42197fd31fbf12900d884f097e1ce992ac26cf54f27ba27e0ff96e0c6",
+    "sha256": "fb66e90b79684b11a1c596fe8f10c2a6afbb5ef897168598a57abf11ffaa8dc8",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.arid",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: DRY EARTH BREAKUP. dusty ochre sand and pale clay, broad irregular hardened earth plates and sparse muted sage scrub-like tones, fine restrained erosion contours; not a desert landscape or aerial photograph",
+    "originalSha256": "2f2817d6b50308e68644c9be980885f35557e128f0a30e0fa2cc4aa301886d5f",
+    "sha256": "fda166f72318fefcb803ef139314dea57d891a9f929f83d1f40cf6b87d24a597",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.shore",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: COASTAL SILT AND SHALLOWS. pale sandy silt patches interwoven with muted jade-grey shallow water and creamy fine sediment wisps; subtle rippled material clues, no continuous coastline boundary, no foam stripes",
+    "originalSha256": "de83bdafcc9fb9f1b67c44237376c36b661b07e470faf251ce06d5171793ddec",
+    "sha256": "3dc5740da745f3bd7bda9add47b4afc05ef81c332ebd49ee4deba1d1103fee13",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.volcanic",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: VOLCANIC ASH. muted charcoal and warm grey ash beds, irregular porous dark basalt fragments, pale grey mineral dust drifts; no glowing lava, no mountains, no smoke",
+    "originalSha256": "fb4849c495fde635c99b80442a496cfd548861795bacdc09d0a10c9b6a9cbbad",
+    "sha256": "8aaa38f26a8c58fc2d94c46584a272f1ecf75a482604d046562bdcc88e23b909",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.neutral",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: SOFT NEUTRAL ATLAS EARTH. warm muted sage-beige earth and softly merging olive-grey broad organic tonal patches, delicate hand-painted ground relief and mineral grain; versatile subtle transition material without distinctive landmark",
+    "originalSha256": "f62b935440d70f394434bdafc02551ebd43ae3db08bf9e5544a404f9c5d7c784",
+    "sha256": "a4e889a4aaaf620fe0c6e220d5b62a7d39cf10b04b3a0fb65830fdb29b9b4b93",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.sand-soft",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Create one square opaque seamless terrain texture asset: Soft Sand Desert. Top-down orthographic painterly fantasy atlas ground material, muted warm pale ochre sand, fine soft brush grain and subtle small drifting sand mounds, broad calm tonal fields, no large dunes. Even diffuse illumination, low contrast, matte watercolor/gouache geological surface, edge-to-edge homogeneous material. Made to repeat across large map areas beneath labels and symbols. No text, borders, vignette, landmarks, objects, horizon, perspective, hard stripes, photographic grain or glossy highlights. 1024x1024 square.",
+    "originalSha256": "70a3d35ca2f7074d466b21670bee24b3fbb04ce0394d40428262ac96ebad031c",
+    "sha256": "780ca6ef892af50f60dab28f49efe826fb69d41b31b4768c8f0bf16ceb3a2995",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.dunes",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. One square opaque seamless terrain material: Wind-Swept Dunes. Muted honey ochre sand with soft small crescent dune shoulders at varying angles and unequal spacing, broken curved ridges separated by quiet broad sand, no parallel repeated stripes. Top-down orthographic painterly fantasy atlas ground, matte hand-painted gouache/watercolor brushwork, fine organic grain, low contrast, even diffuse lighting. Edge-to-edge homogeneous repeat-safe material for large map areas beneath labels. No border, vignette, text, horizon, landmarks, giant stones, glossy highlights, photorealism or obvious repeating motifs. 1024x1024.",
+    "originalSha256": "4c3cec4648848024e79781f4cd52dabf44f3c8a72f8687a5f31287aac22128da",
+    "sha256": "c3b27b3a275d42449682dff9a411df8b2e27056eed54e4ac6df4ee860e244ad8",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.desert-stone",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. One square opaque seamless terrain material: Stony Desert. Warm tan desert pavement with irregular small rounded ochre gravel fragments embedded in pale dusty sand, widely varied natural clustering, low relief and restrained earth shadow. Top-down orthographic painterly fantasy atlas ground, matte hand-painted gouache/watercolor brushwork, fine organic grain, low contrast, even diffuse lighting. Edge-to-edge homogeneous repeat-safe material for large map areas beneath labels. No border, vignette, text, horizon, landmarks, giant stones, glossy highlights, photorealism or obvious repeating motifs. 1024x1024.",
+    "originalSha256": "5b86322aa8fe1f3106ff689a3efe5a29621421f5f95f65cd4bbada8b57104760",
+    "sha256": "c654e310ad3ee510e8ba3c41da73b9f9d3a9d5857662794107a887b3add94caa",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.dry-basin",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. One square opaque seamless terrain material: Cracked Dry Basin. Pale desaturated clay-beige dried lakebed, thin soft irregular polygon fissures in varied scales, subtle salt dust, sparse worn ochre edges, no dramatic dark black cracks. Top-down orthographic painterly fantasy atlas ground, matte hand-painted gouache/watercolor brushwork, fine organic grain, low contrast, even diffuse lighting. Edge-to-edge homogeneous repeat-safe material for large map areas beneath labels. No border, vignette, text, horizon, landmarks, giant stones, glossy highlights, photorealism or obvious repeating motifs. 1024x1024.",
+    "originalSha256": "86ad3e61a3da5138d1d7226d99739b19898b6246985aeb146157a0b4b5b9eaab",
+    "sha256": "378ae2a7dd7bc43135d5073061392458af6f3432ff6028974be54912c2987cd2",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.cave-damp",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. One square opaque seamless terrain texture. Damp Cavern Floor: muted dark umber and cool grey damp earth, soft mineral mottling and sparse flat stones, moisture indicated only by deeper tone, no puddles or highlights. Top-down orthographic painterly fantasy atlas material. Matte gouache and delicate watercolor grain with restrained hand-painted geological detail, low contrast, small varied shapes, evenly distributed nonrepeating composition and diffuse flat light. Edge-to-edge material for repetition under map symbols. No text, borders, vignette, large objects, cave walls, horizon, perspective, photorealism, gloss or bright highlights. 1024x1024.",
+    "originalSha256": "52889695b9d1a59dbea1901899095f643a2f088cb72e5bf735810a0290f53127",
+    "sha256": "bdd0f741a0ec3c49b1fbbb276706adab69b5421e196dac18366a6a77ac527317",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.cave-moss",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. One square opaque seamless terrain texture. Mossy Cave Ground: soft patchy muted olive moss cushions over dark brown grey limestone soil, irregular quiet earthy gaps, ground cover only, no grass blades or trees. Top-down orthographic painterly fantasy atlas material. Matte gouache and delicate watercolor grain with restrained hand-painted geological detail, low contrast, small varied shapes, evenly distributed nonrepeating composition and diffuse flat light. Edge-to-edge material for repetition under map symbols. No text, borders, vignette, large objects, cave walls, horizon, perspective, photorealism, gloss or bright highlights. 1024x1024.",
+    "originalSha256": "d7bdee6dc93e83915ec05ad698b8dee1a781b2b38f728ff34bfb3071a963b88e",
+    "sha256": "ee2924f6e4fbb2ecd68747740509f09232590d03c2973602b34ae52162d7833b",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.cave-wet-stone",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Square opaque repeat-safe terrain texture Wet Stone Floor. Top-down hand-painted fantasy atlas cavern ground, broad worn irregular cool charcoal and muted blue-grey limestone surfaces separated by soft dark damp seams, flat rounded stone facets with subtle mineral sediment, restrained tonal variation suggesting wetness without shine or reflections. Fine matte watercolor/gouache brush grain. Small varied surface forms, evenly distributed detail and illumination. Seamless edges, no border, vignette, man-made pavement, walls, objects, text, perspective, photographic detail or gloss. 1024x1024.",
+    "originalSha256": "0d36bd941ef0082cf5c68b15be8fffb0fa752d3938084ec5318fd7229795963f",
+    "sha256": "2d77ff800e851282ab44e15f5999b53e543c53f19d5b17ad0b5732616d7e8d5d",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.cave-mud",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Square opaque seamless Mud and Moist Cavern Earth terrain texture for painterly fantasy atlas maps. Direct top-down view of soft wet umber and muted sepia silt, smooth darker moisture pockets and small mineral specks, gentle irregular earthen folds, no cracking, no moss, almost no stones. Matte hand-painted gouache with watercolor grain, low contrast, evenly distributed subtle detail, uniform diffuse illumination. Repeat-safe edge-to-edge ground material. No text, frame, vignette, footprints, landmarks, perspective, cave walls, gloss, reflections, photorealism or repeating stripes. 1024x1024.",
+    "originalSha256": "4765ecd1e2eafdc57ce0ccb542051863502a43fc1719d816eed1415539eb5bff",
+    "sha256": "887c74b97e1b212eac229a37b350c7e18781316e3b86d2d0b9d748e3ef1c76aa",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.cave-broken",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. One square seamless opaque Broken Cave Floor material for painterly fantasy atlas terrain. Top-down ground of fractured warm grey limestone plates embedded in dusty taupe stone flour. Small to medium irregular flat angular plates with worn chipped edges and restrained shallow shadow, not huge boulders. Matte hand-painted watercolor and gouache, quiet varied surface grain, low medium contrast, even diffuse illumination. Reusable homogeneous material for large maps, no focal point. No text, border, vignette, walls, giant rocks, repeated tiling shapes, perspective, photorealism or glossy effects. 1024x1024.",
+    "originalSha256": "324c921a704a2e62f90dfe2e6dfc048a5275d4d08b8d6e1b2bf8e5151e24b54a",
+    "sha256": "acb9f712b88e9e28a18cfc382a81304dcf10d5138eddcfe66a4d983e4a6e00b3",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.cave-rubble",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Square seamless opaque Rubble-Strewn Cavern terrain material. Small angular limestone debris and chalky chips loosely scattered through warm dark grey brown cave dust, dense irregular clusters interspersed with quiet dusty openings, many small fragments and no large boulders. Top-down orthographic hand-painted fantasy atlas ground, matte gouache watercolor geological illustration, low contrast, soft local shadows, evenly lit. Continuous homogeneous ground across all edges, not a scene. No walls, objects, text, frame, vignette, horizon, photorealism, gloss or conspicuous repeated pattern. 1024x1024.",
+    "originalSha256": "e46cfbfb7773be033833e3d0e999ed964c277501e5c2031aef8757a79ea27f73",
+    "sha256": "79dc2619f105745497a796acfd719a4a84617d6c1f288baeba2c60b9b3d9d3bf",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.cave-jagged",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Square opaque seamless Jagged Stone Ground texture. Fine angular charcoal slate splinters and fractured small shale chips embedded in subdued cool grey earth, varied diagonal orientations, shallow unevenness, small forms throughout with no dominant boulder. Top-down orthographic painterly fantasy atlas ground, matte gouache watercolor with soft brush grain, restrained mineral highlights and low contrast. Homogeneous even lighting and distribution, natural irregularity. No text, border, vignette, cave walls, giant rocks, lava, gloss, photographic detail or rigid repeated stripes. 1024x1024.",
+    "originalSha256": "802d02cf1182fb8cf9774ab3a0e58454675b701d3800a63c356cca5b28e05684",
+    "sha256": "235d481d38e7db485cc5f23a113f5bb39d87e5ebffe582a21f053914277207a8",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.cave-uneven",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Square opaque seamless Uneven Rocky Underground terrain material. Top-down naturally weathered grey-taupe cave ground, many low rounded mineral humps with subdued shallow dusty hollows and occasional pale mineral streaks, irregular eroded bedrock rather than loose rubble or sharp slate. Matte hand-painted fantasy atlas gouache and watercolor grain, low contrast, soft local shading with even overall illumination. Homogeneous varied terrain across edges, no central subject. No large rocks, walls, text, border, vignette, perspective, gloss, photorealism or obvious repeated pattern. 1024x1024.",
+    "originalSha256": "93589349ed4b8ee3293f39441a418d5bb0a41e99e95055efee6761e242ac2beb",
+    "sha256": "7c5481214a2a3de4f51e36ad9d2df565ebde4aa630e222736bffdf4f46bff335",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.salt-flats",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Square seamless opaque Salt-Worn Flats terrain texture for painterly fantasy atlas maps. Pale warm ivory and chalk-white mineral crust across muted beige dry earth, delicate irregular thin salt rims and soft faded mineral islands, very faint dusty pink undertones, nearly flat and tranquil. Top-down matte hand-painted gouache watercolor, fine subtle brush grain, low contrast, evenly lit. Homogeneous continuous material repeated over broad flats. No prominent cracks, rocks, objects, text, border, vignette, horizon, glossy crystals, photography or regular patterned shapes. 1024x1024.",
+    "originalSha256": "d7e7ec74fe9299de835af0ec83de32509bcf04e7bfb766ca99d0abde2cae4d15",
+    "sha256": "e2291ae00e97408c5cbdb3aa7760e5188af5ba3f79203a7522cad94ed6fe5b57",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.leaf-litter",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Square opaque seamless Leaf-Litter Forest Floor texture. Top-down painterly fantasy atlas ground, many tiny decomposing russet and muted ochre leaf fragments over soft dark umber humus, subdued olive traces, sparse thin twig flecks, organic scattered distribution with quiet earthy patches. Fine matte gouache watercolor brushwork, low contrast, flat diffuse lighting. Ground material beneath woodland symbols, no large recognizable hero leaves. Continuous all edges, no trees, branches, creatures, text, frame, vignette, perspective, photography or glossy highlights. 1024x1024.",
+    "originalSha256": "296b5328e4ca50fbd141204998ae472ec915a8294a53e54004fb5b4a48dc7f34",
+    "sha256": "314e109c9ec3b0bf0648ed6cc5145e096a470b811334e7dada0095b1880824ff",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.rooty-floor",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Square opaque seamless Rooty Woodland Floor ground texture. Top-down painterly fantasy atlas material of soft muted brown and olive earth with many very fine weathered branching root threads partially buried in humus, a few sparse moss flecks and tiny wood fragments. Roots modest and thin, irregular orientation with quiet gaps, no central trunk or giant root. Matte gouache watercolor grain, low contrast and uniform diffuse light, edge-to-edge organic surface for repetition under forest symbols. No trees, mushrooms, stones, text, border, vignette, perspective, photo detail or gloss. 1024x1024.",
+    "originalSha256": "a55be1ec63a85970e81d7f49b634ca944716ed0379136e37d03eb96d4375ad73",
+    "sha256": "ff058e79071cee2cadb2134e073b33aa40822c32aff94b1e8630c19ae22e053a",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.clay-earth",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. One square opaque seamless Soft Clay Earth terrain texture. Quiet warm muted terracotta and dusty rose-brown clay soil, very soft shallow irregular swirls and fine earthen grain with pale ochre flecks, almost smooth but subtly hand-worked, no obvious cracks or gravel. Top-down hand-painted fantasy atlas matte gouache watercolor surface, low contrast and evenly lit. Homogeneous edge-to-edge ground for soft transitions across broad maps. No text, frame, vignette, focal point, objects, footprints, horizon, gloss, photography or regular stripes. 1024x1024.",
+    "originalSha256": "0b404708af52dfbf25d7f173dba0000d276975d3ab5e2034a74433a175cb723f",
+    "sha256": "1cf6f6712be71cfeed1b9b5aeb057c7b0f7b124aa562b08f4b8c27211ef7ebb4",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.gravel-ground",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Square opaque seamless Gravel Path Ground material for painterly fantasy atlas maps. Very small worn rounded grey beige pebbles embedded densely but irregularly in warm pale grey compacted dust, varied grain size with occasional quiet patches, subtle tawny mineral flecks. Top-down matte hand-painted gouache watercolor, low contrast, restrained shadow, uniform soft lighting. Continuous material not a drawn path; suited beneath roads or transitions. No large stones, cracks, objects, text, border, vignette, horizon, perspective, photography, gloss or repeating motifs. 1024x1024.",
+    "originalSha256": "a808112dca23c95847321745453785996bd333e931d9aeb84a5bee0239ec9415",
+    "sha256": "335824f76c8fbe7cd571626bdff5135e65ee604c0d43621391720e83fdab4912",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  },
+  {
+    "id": "painterly.v1.cavern-lichen",
+    "method": "Built-in image_gen",
+    "prompt": "Use case: stylized-concept. Square opaque seamless Cavern Lichen Ground terrain texture. Top-down matte painterly fantasy atlas surface of subdued cool grey cave stone with tiny irregular pale sage and muted chalk-green crustose lichen flecks, fine mineral speckles and faint earthy seams. Lichen patchy and flat rather than moss cushions, no bright fluorescence. Small varied shapes, low contrast, soft watercolor gouache grain, flat even diffuse light. Edge-to-edge homogeneous repeat-safe material. No mushrooms, large rocks, objects, text, border, vignette, perspective, photorealism or glossy reflections. 1024x1024.",
+    "originalSha256": "94db4fabdb8d5dda68a0fd09931a4a52089103297a25811bba63e1ded6aae8b9",
+    "sha256": "3f83cf386d4b7e676cd784290446ae452b52fa01c5249ede69c9a70f1d100ff0",
+    "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+  }
+]

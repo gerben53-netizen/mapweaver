@@ -1,0 +1,7 @@
+.form { display:grid; gap:20px; }
+.form legend { font-weight:600; color:var(--color-text); margin-bottom:8px; }
+.fields { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; }
+.fields label { margin:0; }
+.start label { display:inline-flex; align-items:center; gap:8px; margin-right:24px; }
+.start input[type=radio] { width:auto; margin:0; }
+.actions { position:sticky; bottom:-24px; background:var(--color-panel); padding:12px 0; display:flex; justify-content:flex-end; gap:8px; border-top:1px solid var(--color-border); z-index:1; }

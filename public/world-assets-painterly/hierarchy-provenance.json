@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "style": "Elevated oblique cartographic gouache miniature, restrained fine ink edges, warm northwest highlights and cool southeast shadows; transparent background; no text or scenery.",
+  "assets": [
+    {
+      "id": "frost-tree-detail-01",
+      "originalSha256": "ff66a2a59d36d71d757a96535b79d6fea30fdb52ea58aede59dd156b1da3b8c3",
+      "subject": "One small, asymmetrical frost-dusted spruce, sparse branches, exposed roots, no ground island.",
+      "tool": "OpenAI built-in imagegen",
+      "lightingReview": "Northwest highlight and southeast shadow visually inspected; alpha composited on neutral ground."
+    },
+    {
+      "id": "broadleaf-edge-support-01",
+      "originalSha256": "5435d1deb4ab9a05c38d1d44f9cccb570bb130060955b5c48d4f06d06f4b574c",
+      "subject": "Three modest young broadleaf trees with unequal heights, sparse open canopy, no ground island.",
+      "tool": "OpenAI built-in imagegen",
+      "lightingReview": "Northwest highlight and southeast shadow visually inspected; alpha composited on neutral ground."
+    },
+    {
+      "id": "ridge-low-support-01",
+      "originalSha256": "30db263384f66f0fc03f210844d46b56f4f5b19333c6d0027c8653df32666525",
+      "subject": "Long low saddle ridge with three unequal rocky knolls from lower left to upper right, mossy foothill skirt.",
+      "tool": "OpenAI built-in imagegen",
+      "lightingReview": "Northwest highlight and southeast shadow visually inspected; alpha composited on neutral ground."
+    },
+    {
+      "id": "alpine-rock-detail-01",
+      "originalSha256": "0285da8fa1bd3338a5fed6402378269a1abd6c03977c9fdaf09235e1e8c4d9ee",
+      "subject": "Three small angular slate rocks with patchy snow, unequal forms, no tall peak or ground island.",
+      "tool": "OpenAI built-in imagegen",
+      "lightingReview": "Northwest highlight and southeast shadow visually inspected; alpha composited on neutral ground."
+    }
+  ]
+}

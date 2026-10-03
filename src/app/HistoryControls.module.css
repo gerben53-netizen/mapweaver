@@ -1,0 +1,2 @@
+.controls { display: flex; gap: 3px; }
+.controls button { width: 30px; padding: 5px; }

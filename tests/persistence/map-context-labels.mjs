@@ -1,0 +1,48 @@
+import {chromium} from '@playwright/test'
+import {spawn} from 'node:child_process'
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import assert from 'node:assert/strict'
+import sharp from 'sharp'
+const root=path.resolve('.map-context.local',String(Date.now())),base='http://127.0.0.1:48010',token=crypto.randomUUID()
+await fs.mkdir(root,{recursive:true})
+const poll=async fn=>{for(let i=0;i<250;i++){if(await fn())return;await new Promise(r=>setTimeout(r,100))}throw Error('Timed out')}
+let service,health,browser,page
+const headers=()=>({'Content-Type':'application/json','X-Mapweaver':'1','X-Mapweaver-Instance':health.instanceId,'X-Mapweaver-Generation':health.generation,'X-Mapweaver-Control':token})
+const api=async(url,options={})=>{const r=await fetch(base+'/api/v1'+url,{...options,headers:{...headers(),...options.headers}});assert(r.ok,await r.clone().text());return r.json()}
+const checks=[],errors=[],check=text=>{checks.push(text);console.log('PASS '+text)}
+try{
+ service=spawn(process.execPath,['dist-service/main.js'],{windowsHide:true,stdio:'pipe',env:{...process.env,MAPWEAVER_PORT:'48010',MAPWEAVER_DATA_DIR:path.join(root,'data'),MAPWEAVER_CONTROL_TOKEN:token}});service.stdout.resume();service.stderr.on('data',b=>process.stderr.write(b));await poll(async()=>{try{health=await fetch(base+'/api/v1/health').then(r=>r.json());return health.pid===service.pid}catch{return false}})
+ const imported=await api('/projects/import',{method:'POST',headers:{'Content-Type':'application/zip'},body:await fs.readFile('public/examples/prefabs/house.mapweaver')})
+ browser=await chromium.launch({channel:'chrome',headless:true});page=await browser.newPage({viewport:{width:1280,height:720}});page.setDefaultTimeout(20000);page.setDefaultNavigationTimeout(45000);page.on('pageerror',e=>errors.push(e.message));await page.goto(base,{waitUntil:'domcontentloaded'});await page.getByRole('button',{name:'Open Prefab house demonstration',exact:true}).click()
+
+
+ const canvas=page.getByRole('region',{name:'Map canvas'}),tools=page.getByRole('navigation',{name:'Map tools'}),props=page.getByRole('region',{name:'Object properties'})
+ const doc=async()=>(await api('/projects/'+imported.id)).document
+ const changeType=async type=>{
+  await page.getByRole('tab',{name:'Map',exact:true}).click();const details=page.locator('details').filter({has:page.getByLabel('Map type',{exact:true})});if(!(await details.getAttribute('open')!==null))await details.locator('summary').click()
+  await page.getByLabel('Map type',{exact:true}).selectOption(type);await page.getByRole('button',{name:'Preview workspace change',exact:true}).click();await page.getByRole('button',{name:'Apply workspace change',exact:true}).click();await poll(async()=>(await doc()).map.mapType===type)
+ }
+ const create=async(name,x,y)=>{
+  await tools.getByRole('button',{name:'Label',exact:true}).click();await page.waitForTimeout(150);await page.getByRole('button',{name:'Fit to map',exact:true}).click();const b=await canvas.boundingBox(),zoom=parseInt(await page.getByLabel('Zoom level').innerText())/100,d=await doc();await page.mouse.click(b.x+b.width/2+(x-d.map.width/2)*zoom,b.y+b.height/2+(y-d.map.height/2)*zoom)
+  const dialog=page.getByRole('dialog',{name:'New label'});await dialog.getByLabel('Label text').fill(name);await dialog.getByRole('button',{name:'Create',exact:true}).click();await poll(async()=>(await doc()).objects.some(o=>o.text===name));await tools.getByRole('button',{name:'Select',exact:true}).click();await page.getByRole('tab',{name:'Properties',exact:true}).click();return (await doc()).objects.find(o=>o.text===name)
+ }
+ assert.equal(await tools.getByRole('button',{name:'Route',exact:true}).count(),0);assert(await tools.getByRole('button',{name:'Wall',exact:true}).isVisible())
+ const original=(await doc()).objects,oldLabel=original.find(o=>o.kind==='label');assert.equal(oldLabel.style.backgroundOpacity,.85)
+ const battle=await create('Storeroom',1100,800);assert.equal(battle.style.backgroundOpacity,0);assert.equal(battle.style.strokeWidth,1.5);await page.screenshot({path:path.join(root,'battle-label.png')});check('Battlemap tool matrix and readable boxless functional label')
+ await changeType('regional-map');assert.equal(await tools.getByRole('button',{name:'Wall',exact:true}).count(),0);assert.equal(await tools.getByRole('button',{name:'Opening',exact:true}).count(),0);assert(await tools.getByRole('button',{name:'Route',exact:true}).isVisible());await page.getByText('Map actions',{exact:true}).click();assert.equal(await page.getByRole('button',{name:'Detect rooms',exact:true}).count(),0);await page.getByText('Map actions',{exact:true}).click()
+ const regional=await create('Alderhaven',1100,600);assert.equal(regional.style.size,24);assert.equal(regional.style.strokeWidth,2);await page.screenshot({path:path.join(root,'regional-label.png')});check('Regional capabilities, contextual actions and cartographic label preset')
+ // The battlemap walls remain editable in the regional workspace.
+ await page.getByRole('tab',{name:'Objects',exact:true}).click();await page.getByRole('searchbox',{name:'Search objects'}).fill('House material walls');await page.getByRole('listbox',{name:'Map objects'}).getByRole('option').filter({has:page.getByText('House material walls',{exact:true})}).click();await page.getByRole('tab',{name:'Properties',exact:true}).click();await props.getByRole('button',{name:'Enter group'}).click();await page.getByRole('tab',{name:'Objects',exact:true}).click();await page.getByRole('listbox',{name:'Map objects'}).getByRole('option').filter({has:page.getByText('House material walls',{exact:true})}).click();await page.getByRole('tab',{name:'Properties',exact:true}).click();assert(await props.getByRole('heading',{name:'House material walls',exact:true}).isVisible());check('Existing battlemap structure remains visible and editable after workspace change')
+ await changeType('world-map');const world=await create('Azure Sea',1100,400);assert.equal(world.style.size,30);assert.equal(world.style.letterSpacing,1.5)
+ await props.getByRole('spinbutton',{name:'Rotation',exact:true}).fill('20');await props.getByRole('spinbutton',{name:'Rotation',exact:true}).press('Enter');await props.getByRole('button',{name:'Apply properties',exact:true}).click();await poll(async()=>(await doc()).objects.find(o=>o.text==='Azure Sea').rotation===20);await page.screenshot({path:path.join(root,'world-label.png')});check('World preset and explicit editable rotation with unchanged existing label styles')
+ const download=async filename=>{await page.getByRole('button',{name:'Export PNG',exact:true}).click();const dialog=page.getByRole('dialog',{name:'Export PNG',exact:true});await dialog.getByLabel('Include grid',{exact:true}).uncheck();await dialog.getByLabel('Transparent canvas background').check();const pending=page.waitForEvent('download');await dialog.getByRole('button',{name:'Download PNG',exact:true}).click();await (await pending).saveAs(path.join(root,filename));await dialog.getByRole('button',{name:'Close',exact:true}).click()}
+ await download('selected.png');await canvas.focus();await page.keyboard.press('Escape');await download('unselected.png')
+ const selected=await sharp(path.join(root,'selected.png')).ensureAlpha().raw().toBuffer(),unselected=await sharp(path.join(root,'unselected.png')).ensureAlpha().raw().toBuffer();assert(selected.equals(unselected));assert.equal(selected[3],0)
+ const crop=await sharp(path.join(root,'selected.png')).extract({left:880,top:290,width:450,height:260}).ensureAlpha().raw().toBuffer();let light=0,dark=0,clear=0;for(let i=0;i<crop.length;i+=4){if(!crop[i+3])clear++;if(crop[i]===247&&crop[i+1]===242&&crop[i+2]===230&&crop[i+3]===255)light++;if(crop[i]===40&&crop[i+1]===52&&crop[i+2]===47&&crop[i+3]===255)dark++}assert(light>20&&dark>20&&clear>1000);check('Actual PNG includes light glyphs and dark halo, transparent surroundings, and no selected-only chrome')
+ await tools.getByRole('button',{name:'Route',exact:true}).click();await changeType('battlemap');assert.equal(await tools.getByRole('button',{name:'Route',exact:true}).count(),0);assert.equal(await tools.getByRole('button',{name:'Select',exact:true}).getAttribute('aria-pressed'),'true')
+ const saved=await doc();for(const label of [oldLabel,battle,regional])assert.deepEqual(saved.objects.find(o=>o.id===label.id),label);assert.equal(saved.objects.length,10)
+ await page.reload();await page.getByRole('button',{name:'Open Prefab house demonstration',exact:true}).click();assert.deepEqual((await doc()).objects,saved.objects);check('Active tool fallback, old boxed labels and all saved styles survive map-type changes and reload')
+ await tools.getByRole('button',{name:'Place asset',exact:true}).click();const picker=page.getByRole('dialog',{name:'Choose a stamp'});assert(await picker.getByText('Assets for Battlemap',{exact:true}).isVisible());await picker.getByLabel('Show assets for all map types').check();assert(await picker.getByText('All map types',{exact:true}).isVisible());await picker.getByRole('button',{name:'Cancel',exact:true}).click();check('Asset picker defaults to map applicability and offers deliberate all-assets browsing')
+ assert.deepEqual(errors,[]);await api('/lifecycle/control',{method:'POST',body:'{"action":"stop"}'});await poll(()=>service.exitCode!==null||service.signalCode!==null);await fs.writeFile(path.join(root,'results.json'),JSON.stringify({checks,errors},null,2));console.log('EVIDENCE '+root)
+}catch(e){if(page&&!page.isClosed())await page.screenshot({path:path.join(root,'failure.png')});throw e}finally{await browser?.close();if(service?.exitCode===null&&service.signalCode===null)service.kill()}

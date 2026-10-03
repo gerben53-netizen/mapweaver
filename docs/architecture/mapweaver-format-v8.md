@@ -1,0 +1,11 @@
+# Mapweaver project format v8
+
+Format 8 extends the v7 Wall settings with optional `material: {set, seed, roughness}`. `set` is the validated packed wall-set v1 definition: metadata/source-space rules, immutable SHA-256 revision, atlas dimensions, body/cap/join rectangles and compact alpha hulls. `seed` is an unsigned 32-bit integer; roughness must lie in the declared range. The existing `stroke.kind: texture` / `stroke.assetId` is its sole atlas asset dependency, of type fillPattern. Manifest dimensions must match the atlas. The atlas's existing asset hash verifies its bytes.
+
+The set definition is a source contract, not cached render geometry. No viewport, sampled curve, generated tile list or bitmap is serialized in objects. Different walls may embed the same definition; image bytes remain deduplicated by the existing asset register and archive paths. Format admission and the local service enforce the same contract. Generic Path, Wall without material, Area, openings, groups and layers retain their v7 meaning. v1–v7 are still normalized by the existing central parser; the application never resets old projects to introduce materials.
+
+`PathNode.junction?: string` records an explicit snap to a Wall ID. It is a historical visual relationship, not a foreign-key assembly or movement constraint. Missing/moved targets disable the junction. Group/clipboard remapping updates included targets. A material patch is drawn only when the target still shares the point and the set revision; otherwise normal object order defines the transition.
+
+SQLite schema 4 adds `wall_sets(id,version,title,revision,definition,assetId)`, primary key `(id,version)`, with an existing-assets foreign key using delete restriction. There is no new blob table and no data rewrite. Read-only previews register nothing. Confirmed imports commit atlas metadata and definition transactionally; ordinary failed writes remove newly created image files. Full backup validation checks registrations, dimensions and asset references. Portable project import remaps the existing atlas ID and leaves the embedded immutable definition/seed unchanged; it does not silently register a foreign project's sets in the library.
+
+Older binaries cannot read v8 or SQLite schema 4. They fail safely rather than resetting the dataset. Keep a verified backup if rolling back application versions.

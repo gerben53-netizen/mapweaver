@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Route rendering checks</title><style>body{background:#242b30;color:white;font:14px sans-serif}canvas{position:static!important;max-width:48%;height:auto;border:1px solid #789}</style></head><body><h1>Route editor painter / PNG</h1><script type="module">
+import {createRoute,routePreset,routeConnections} from '/src/domain/routes.ts'
+import {withPathGeometry,reversePath} from '/src/domain/paths.ts'
+import {defaultGeography} from '/src/domain/geography.ts'
+import {defaultMapStyle} from '/src/domain/mapSettings.ts'
+import {paintPath} from '/src/canvas/drawPath.ts'
+import {renderScene} from '/src/export/render.ts'
+import {exportScene} from '/src/export/scene.ts'
+const nodes=points=>points.map(([x,y],i)=>({id:'n'+i,x,y,mode:'corner'})),objects=[]
+const river=createRoute(nodes([[40,60],[180,60],[330,60]]),false,routePreset('river'));river.route={...river.route,startWidth:4,startFactor:1,endWidth:30};objects.push(withPathGeometry(river))
+const tributary=createRoute(nodes([[180,140],[180,60]]),false,routePreset('river'));tributary.nodes[1].junction=river.id;objects.push(tributary)
+for(const [i,preset] of ['standard','trail','major'].entries()){const road=createRoute(nodes([[40,190+i*65],[180,190+i*65],[220,160+i*65],[330,190+i*65]]),false,routePreset('road',preset));if(i===2)road.route.marking.width=1;objects.push(withPathGeometry(road))}
+const t=createRoute(nodes([[120,365],[120,320]]),false,routePreset('road'));t.nodes[1].junction=objects[4].id;objects.push(t)
+for(const [i,style] of ['solid','dashed','dotted','double'].entries()){const b=createRoute(nodes([[400,40+i*90],[550,40+i*90],[530,100+i*90],[410,90+i*90]]),true,routePreset('border'));b.route.style=style;objects.push(withPathGeometry(b))}
+const texture=document.createElement('canvas');texture.width=8;texture.height=8;const tx=texture.getContext('2d');tx.fillStyle='#679982';tx.fillRect(0,0,8,8);tx.fillStyle='#3c7560';tx.fillRect(0,0,4,4)
+const textured=createRoute(nodes([[40,435],[170,465],[280,415],[330,450]]),false,{...routePreset('river'),stroke:{kind:'texture',assetId:'pattern',scale:1,spacing:16,offset:0}});objects.push(textured)
+const map={width:600,height:500,background:null,...defaultMapStyle(),mapType:'world-map',geography:defaultGeography('world-map')},snapshot={map,objects,layers:[{id:'routes',name:'Routes',visible:true,locked:false,objectIds:objects.map(o=>o.id)}],objectGroups:[],layerTree:{roots:['routes'],groups:[]}},images=new Map([['pattern',texture]])
+const connections=routeConnections(objects),editor=document.createElement('canvas');editor.width=600;editor.height=500;const c=editor.getContext('2d');for(const p of objects){c.save();c.translate(p.x,p.y);paintPath(c,p,p.stroke.kind==='texture'?texture:undefined,connections.get(p.id));c.restore()}
+const png=renderScene(exportScene(snapshot,{scale:1,includeGrid:false,transparent:true}),images),double=renderScene(exportScene(snapshot,{scale:2,includeGrid:false,transparent:true}),images)
+const pixels=canvas=>canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data,difference=(a,b)=>{a=pixels(a);b=pixels(b);let max=0;for(let i=0;i<a.length;i++)max=Math.max(max,Math.abs(a[i]-b[i]));return max},alpha=(x,y)=>pixels(png)[(y*600+x)*4+3]
+const isolated=p=>{const el=document.createElement('canvas');el.width=600;el.height=500;const ctx=el.getContext('2d');ctx.translate(p.x,p.y);paintPath(ctx,p);return el}
+const reverse=isolated(reversePath(objects[0])),original=isolated(objects[0]),half=isolated({...objects[0],opacity:.5})
+const halfPng=renderScene(exportScene({...snapshot,objects:[{...objects[0],opacity:.5}],layers:[{...snapshot.layers[0],objectIds:[objects[0].id]}]},{scale:1,includeGrid:false,transparent:true}),images)
+window.results={halfDifference:difference(half,halfPng),halfOpacityAlpha:pixels(half)[(60*600+100)*4+3],junctionCount:[...connections.values()].flat().length,editorPngDifference:difference(editor,png),reverseDifference:difference(original,reverse),sourceOutside:alpha(45,50),mouthInside:alpha(320,50),riverJoin:alpha(180,60),roadJoin:alpha(120,320),textureOutside:alpha(50,405),doubleWidth:double.width,doubleHeight:double.height}
+document.body.append(editor,png);window.ready=true
+</script></body></html>

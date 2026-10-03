@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Wall material visual acceptance</title><style>body{margin:0;background:#242928;color:#eee;font:14px Segoe UI}canvas{display:block;margin:12px}label{display:block;padding:8px}</style></head><body><script type="module">
+import {createWall,SIMPLE_WALL} from '/src/domain/walls.ts';
+import {materialStyle} from '/src/domain/wallSets.ts';
+import {materialPieces} from '/src/domain/wallMaterialGeometry.ts';
+import {paintWall} from '/src/canvas/drawWall.ts';
+import {paintWallMaterial} from '/src/canvas/drawWallMaterial.ts';
+import {clipWallOpenings} from '/src/canvas/drawOpening.ts';
+import {createOpening} from '/src/domain/openings.ts';
+import {buildScene} from '/src/export/render.ts';
+const data=await(await fetch('/wall-test-data')).json(),images=await Promise.all(data.map(async a=>{const image=new Image();image.src=a.image;await image.decode();return image}));
+window.results=[];
+const points=(x,y)=>[{id:'a',x,y,mode:'corner',out:{x:60,y:-150}},{id:'b',x:x+230,y,mode:'smooth',in:{x:-50,y:-150},out:{x:50,y:150}},{id:'c',x:x+450,y,mode:'corner',in:{x:-60,y:150}}];
+window.draw=(zoom=1,dark=false)=>{
+ document.querySelectorAll('canvas,label').forEach(c=>c.remove());
+ const label=document.createElement('label');label.textContent=`${zoom*100}% · ${dark?'dark':'light'} ground · Masonry / Timber / Cave`;document.body.append(label);
+ const canvas=document.createElement('canvas');canvas.width=1600*zoom;canvas.height=1150*zoom;document.body.append(canvas);const c=canvas.getContext('2d');c.scale(zoom,zoom);c.fillStyle=dark?'#252d2b':'#e2dfce';c.fillRect(0,0,1600,1150);
+ for(let i=0;i<3;i++){
+  const s=materialStyle({definition:data[i].definition,assetId:'atlas'}, {...SIMPLE_WALL,strokeWidth:48});s.wall.material.seed=997;const x=55+i*530;
+  const rows=[createWall([{id:'a',x,y:80,mode:'corner'},{id:'b',x:x+440,y:80,mode:'corner'}],false,s),createWall(points(x,310),false,s),createWall([{id:'a',x,y:480,mode:'corner'},{id:'b',x:x+230,y:480,mode:'corner'},{id:'c',x:x+130,y:560,mode:'corner'}],false,s),createWall([{id:'a',x,y:690,mode:'corner'},{id:'b',x:x+190,y:690,mode:'corner'},{id:'c',x:x+190,y:800,mode:'corner'},{id:'d',x,y:800,mode:'corner'}],true,s),createWall([{id:'a',x:x+300,y:745,mode:'smooth',out:{x:0,y:-130}},{id:'b',x:x+320,y:745,mode:'smooth',in:{x:0,y:-130}}],false,s)];
+  for(const wall of rows){c.save();c.translate(wall.x,wall.y);paintWall(c,wall,images[i]);c.restore()}
+  const wall=createWall([{id:'a',x,y:960,mode:'corner'},{id:'b',x:x+440,y:960,mode:'corner'}],false,s),opening={...createOpening(wall,.5,'door',90),doorType:'passage'};
+  c.save();c.translate(wall.x,wall.y);paintWall(c,wall,images[i],[],[opening]);c.restore();
+  if(zoom===1&&!dark){
+   const raw=document.createElement('canvas');raw.width=1600;raw.height=1150;const r=raw.getContext('2d');r.translate(wall.x,wall.y);paintWall(r,wall,images[i],[],[opening]);r.resetTransform();
+   const hit=document.createElement('canvas');hit.width=1600;hit.height=1150;const h=hit.getContext('2d');h.translate(wall.x,wall.y);clipWallOpenings(h,wall,[opening]);paintWallMaterial(h,wall,images[i],[],'#ff0000');h.resetTransform();
+   const group=buildScene({map:{width:1600,height:1150},scale:1,width:1600,height:1150,items:[{kind:'object',object:wall}]},new Map([['atlas',images[i]]]));const exported=group.toCanvas({x:0,y:0,width:1600,height:1150,pixelRatio:1});group.destroy();
+   const pixel=(ctx,x,y)=>[...ctx.getImageData(Math.round(x),Math.round(y),1,1).data];
+   window.results.push({material:data[i].definition.id,gap:pixel(r,x+220,960)[3],hitGap:pixel(h,x+220,960)[3],outside:pixel(h,x+200,wall.y+1)[3],editor:pixel(r,x+100,960),export:pixel(exported.getContext('2d'),x+100,960),parts:materialPieces(wall).length});
+  }
+ }
+ return canvas.toDataURL('image/png');
+};
+window.draw();window.ready=true;
+</script></body></html>

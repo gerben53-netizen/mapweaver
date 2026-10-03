@@ -1,0 +1,4 @@
+.grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:4px;}
+.grid button {display:flex;flex-direction:column;min-width:0;padding:8px;}
+.grid canvas {width:100%;height:auto;background:#aaa99b;border-radius:3px;}
+.grid span {font-size:12px;}

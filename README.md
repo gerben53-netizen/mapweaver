@@ -565,3 +565,9 @@ See [Open Wall Paths & Manual Openings validation](docs/sprints/open-wall-paths.
 ## Campfire Map Contract export
 
 Use **Export Campfire Map** for a ZIP containing canonical v1 `map.json` and original-resolution `map.png`. Configure a physical game scale first. **Map actions → Lighting** authors ambient and point lights; its approximate preview is excluded from the PNG. See [Campfire export](docs/campfire-export.md) for identity, revisions, stable object IDs, mapping, validation and supported geometry. Campfire owns the immutable contract; no API client is included.
+
+## Local Git workflow
+
+Mapweaver uses its existing local Git repository on `develop`. Start each sprint with a working-tree check. Review the diff and finish each sprint that changes tracked project files with exactly one dedicated local commit (`Sprint: <title>` or `Fix: <description>`). Do not create empty commits or silently include unrelated pre-existing changes. Preserve and report ambiguous changes if the sprint cannot be isolated safely. Do not create remotes or push unless explicitly requested.
+
+Source, runtime resources and canonical test fixtures are tracked. Root `*.local` workspaces, dependencies, build outputs and caches are ignored and retained locally. Ignored does **not** mean disposable: `asset-production.local`, deliverables and QA datasets can contain unique artwork or copied user data. Inspect contents and references before any deletion. See [repository cleanup](docs/repository-cleanup.md).

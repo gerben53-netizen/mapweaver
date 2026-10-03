@@ -1,0 +1,524 @@
+{
+  "catalog": [
+    {
+      "id": "painterly.v1.grass-lush",
+      "title": "Lush Atlas Grassland",
+      "family": "Grassland",
+      "style": "grassland",
+      "preset": "Plains soft enrichment",
+      "scale": 0.6,
+      "softness": 0.8,
+      "strength": 0.45,
+      "notes": "Organic meadow relief; enrich open plains beneath symbols.",
+      "file": "/terrain-textures-painterly/materials/grass-lush.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Grassland"
+      ],
+      "collection": "Painterly Terrain \u2014 Grassland",
+      "tags": [
+        "painterly",
+        "terrain",
+        "grassland",
+        "grass-lush",
+        "grassland"
+      ]
+    },
+    {
+      "id": "painterly.v1.grass-dry",
+      "title": "Dry Grassland Breakup",
+      "family": "Grassland",
+      "style": "grassland",
+      "preset": "Dry meadow variation",
+      "scale": 0.65,
+      "softness": 0.8,
+      "strength": 0.4,
+      "notes": "Warm soil glimpses and straw patches for transitional plains.",
+      "file": "/terrain-textures-painterly/materials/grass-dry.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Grassland"
+      ],
+      "collection": "Painterly Terrain \u2014 Grassland",
+      "tags": [
+        "painterly",
+        "terrain",
+        "grassland",
+        "grass-dry",
+        "grassland"
+      ]
+    },
+    {
+      "id": "painterly.v1.rock-light",
+      "title": "Light Limestone Scree",
+      "family": "Rocky upland",
+      "style": "rocky",
+      "preset": "Rocky slope detailing",
+      "scale": 0.55,
+      "softness": 0.75,
+      "strength": 0.5,
+      "notes": "Broken pale slabs and scree; ground mountain edges.",
+      "file": "/terrain-textures-painterly/materials/rock-light.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Rocky upland"
+      ],
+      "collection": "Painterly Terrain \u2014 Rocky upland",
+      "tags": [
+        "painterly",
+        "terrain",
+        "rocky upland",
+        "rock-light",
+        "rocky"
+      ]
+    },
+    {
+      "id": "painterly.v1.rock-dark",
+      "title": "Dark Slate Upland",
+      "family": "Rocky upland",
+      "style": "rocky",
+      "preset": "Dark upland detailing",
+      "scale": 0.65,
+      "softness": 0.8,
+      "strength": 0.4,
+      "notes": "Cool weathered rock and earthy seams; use lightly under labels.",
+      "file": "/terrain-textures-painterly/materials/rock-dark.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Rocky upland"
+      ],
+      "collection": "Painterly Terrain \u2014 Rocky upland",
+      "tags": [
+        "painterly",
+        "terrain",
+        "rocky upland",
+        "rock-dark",
+        "rocky"
+      ]
+    },
+    {
+      "id": "painterly.v1.foothill",
+      "title": "Foothill Scree",
+      "family": "Foothills",
+      "style": "rocky",
+      "preset": "Foothill roughening",
+      "scale": 0.7,
+      "softness": 0.85,
+      "strength": 0.5,
+      "notes": "Grassy low relief with mineral tongues beneath mountain bases.",
+      "file": "/terrain-textures-painterly/materials/foothill.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Foothills"
+      ],
+      "collection": "Painterly Terrain \u2014 Foothills",
+      "tags": [
+        "painterly",
+        "terrain",
+        "foothills",
+        "foothill",
+        "rocky"
+      ]
+    },
+    {
+      "id": "painterly.v1.alpine",
+      "title": "Patchy Alpine Snow",
+      "family": "Alpine & snow",
+      "style": "snow",
+      "preset": "Alpine snow break-up",
+      "scale": 0.6,
+      "softness": 0.8,
+      "strength": 0.5,
+      "notes": "Interlocking exposed rock and snow tongues at the snowline.",
+      "file": "/terrain-textures-painterly/materials/alpine.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Alpine & snow"
+      ],
+      "collection": "Painterly Terrain \u2014 Alpine & snow",
+      "tags": [
+        "painterly",
+        "terrain",
+        "alpine & snow",
+        "alpine",
+        "snow"
+      ]
+    },
+    {
+      "id": "painterly.v1.forest-temperate",
+      "title": "Temperate Forest Floor",
+      "family": "Forest floor",
+      "style": "forest",
+      "preset": "Forest floor darkening",
+      "scale": 0.65,
+      "softness": 0.85,
+      "strength": 0.4,
+      "notes": "Muted humus and understory; supports forest cores without new trees.",
+      "file": "/terrain-textures-painterly/materials/forest-temperate.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Forest floor"
+      ],
+      "collection": "Painterly Terrain \u2014 Forest floor",
+      "tags": [
+        "painterly",
+        "terrain",
+        "forest floor",
+        "forest-temperate",
+        "forest"
+      ]
+    },
+    {
+      "id": "painterly.v1.forest-moss",
+      "title": "Mossy Woodland Floor",
+      "family": "Forest floor",
+      "style": "forest",
+      "preset": "Mossy woodland edge",
+      "scale": 0.55,
+      "softness": 0.85,
+      "strength": 0.4,
+      "notes": "Soft moss cushions for damp woodland edges.",
+      "file": "/terrain-textures-painterly/materials/forest-moss.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Forest floor"
+      ],
+      "collection": "Painterly Terrain \u2014 Forest floor",
+      "tags": [
+        "painterly",
+        "terrain",
+        "forest floor",
+        "forest-moss",
+        "forest"
+      ]
+    },
+    {
+      "id": "painterly.v1.swamp-wet",
+      "title": "Mottled Wet Marsh",
+      "family": "Swamp & marsh",
+      "style": "swamp",
+      "preset": "Marsh wet edge",
+      "scale": 0.6,
+      "softness": 0.85,
+      "strength": 0.45,
+      "notes": "Wet silt islands, pooled hollows and muted reed-like marks.",
+      "file": "/terrain-textures-painterly/materials/swamp-wet.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Swamp & marsh"
+      ],
+      "collection": "Painterly Terrain \u2014 Swamp & marsh",
+      "tags": [
+        "painterly",
+        "terrain",
+        "swamp & marsh",
+        "swamp-wet",
+        "swamp"
+      ]
+    },
+    {
+      "id": "painterly.v1.swamp-bog",
+      "title": "Dark Peat Bog",
+      "family": "Swamp & marsh",
+      "style": "swamp",
+      "preset": "Bog depth pass",
+      "scale": 0.6,
+      "softness": 0.85,
+      "strength": 0.35,
+      "notes": "Dark peat and low hummocks; restrained use beneath marsh symbols.",
+      "file": "/terrain-textures-painterly/materials/swamp-bog.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Swamp & marsh"
+      ],
+      "collection": "Painterly Terrain \u2014 Swamp & marsh",
+      "tags": [
+        "painterly",
+        "terrain",
+        "swamp & marsh",
+        "swamp-bog",
+        "swamp"
+      ]
+    },
+    {
+      "id": "painterly.v1.arid",
+      "title": "Dusty Broken Earth",
+      "family": "Arid & dry",
+      "style": "desert",
+      "preset": "Dry patch variation",
+      "scale": 0.65,
+      "softness": 0.8,
+      "strength": 0.45,
+      "notes": "Dry clay and muted scrub tone without a photographic crack pattern.",
+      "file": "/terrain-textures-painterly/materials/arid.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Arid & dry"
+      ],
+      "collection": "Painterly Terrain \u2014 Arid & dry",
+      "tags": [
+        "painterly",
+        "terrain",
+        "arid & dry",
+        "arid",
+        "desert"
+      ]
+    },
+    {
+      "id": "painterly.v1.shore",
+      "title": "Coastal Silt and Shallows",
+      "family": "Coast & shore",
+      "style": "shallow",
+      "preset": "Coastal shallows transition",
+      "scale": 0.55,
+      "softness": 0.9,
+      "strength": 0.35,
+      "notes": "Silt and shallow water; paint narrow bands without covering coastline ink.",
+      "file": "/terrain-textures-painterly/materials/shore.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Coast & shore"
+      ],
+      "collection": "Painterly Terrain \u2014 Coast & shore",
+      "tags": [
+        "painterly",
+        "terrain",
+        "coast & shore",
+        "shore",
+        "shallow"
+      ]
+    },
+    {
+      "id": "painterly.v1.volcanic",
+      "title": "Weathered Volcanic Ash",
+      "family": "Volcanic",
+      "style": "volcanic",
+      "preset": "Volcanic ash pass",
+      "scale": 0.6,
+      "softness": 0.8,
+      "strength": 0.4,
+      "notes": "Basalt and ash, without glowing lava or competing landmarks.",
+      "file": "/terrain-textures-painterly/materials/volcanic.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Volcanic"
+      ],
+      "collection": "Painterly Terrain \u2014 Volcanic",
+      "tags": [
+        "painterly",
+        "terrain",
+        "volcanic",
+        "volcanic",
+        "volcanic"
+      ]
+    },
+    {
+      "id": "painterly.v1.neutral",
+      "title": "Soft Atlas Earth",
+      "family": "Neutral blends",
+      "style": "land",
+      "preset": "Neutral terrain enrichment",
+      "scale": 0.7,
+      "softness": 0.9,
+      "strength": 0.3,
+      "notes": "Low-contrast material between other families; not the Blend operation.",
+      "file": "/terrain-textures-painterly/materials/neutral.png",
+      "theme": "painterlyFantasy",
+      "mapTypes": [
+        "regional-map",
+        "world-map"
+      ],
+      "categoryPath": [
+        "Painterly Terrain",
+        "Neutral blends"
+      ],
+      "collection": "Painterly Terrain \u2014 Neutral blends",
+      "tags": [
+        "painterly",
+        "terrain",
+        "neutral blends",
+        "neutral",
+        "land"
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "id": "painterly.v1.grass-lush",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: production terrain brush material, square opaque image, 1024x1024. Paint a seamless repeat-safe LUSH GRASSLAND surface for a premium fantasy world atlas. Aerial cartographic painterly oil/gouache miniature, broad soft meadow forms, sage and olive grassy hummocks, delicate ochre soil glimpses, low rolling organic tonal changes and restrained northwest highlights. Material must feel rich beside detailed painted mountain miniatures, while subdued beneath map labels. Full-bleed flat top-down material, not a scene, not perspective landscape; no individual trees, no mountain peaks, no coastline, no sky, no text, no border or vignette. Continuous similar detail at all edges; no prominent repeated landmarks, no photographic satellite texture, no noisy microdots. Low-to-medium frequency forms, medium-low contrast; slight physical grass/earth relief, not generic green noise. Make one coherent material only.",
+      "originalSha256": "8cc7aabdbea7a46bdcee851bb7285534e3da5bd19244ec82f6d06c7d4c4557f3",
+      "sha256": "4bd8785aec704f1636621fb5d18cfb5e650c341eada2a8fd68b5f9cdd6951c9a",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.grass-dry",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: DRY MIXED GRASSLAND. straw ochre grassy patches, pale sage meadow hummocks, warm exposed loam, scattered fading green organic shapes; gently broken dry grassy plains, no cracks dominating",
+      "originalSha256": "df349866e959b27447bac8c503835c5832df521e13b849fe6c41b2bf223b66ce",
+      "sha256": "ccd5e3ead250e8c53eb7521a012ececa0f108783835e57f5c9c95432f0c6a89e",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.rock-light",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: LIGHT ROCKY SCREE. pale limestone and warm grey broken stone plates, small irregular scree fans, restrained strata, sparse muted olive soil gaps; broadly readable stone structure",
+      "originalSha256": "76cfeae8ed0e57e5d67a1f90760cbd0db81403d00860dfbe41efb02058edcdcd",
+      "sha256": "a9f9135c21e42516a9b9dd47f6b770b0cc290a762ddfa85e5222923ace637f13",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.rock-dark",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: DARK ROCKY UPLAND. weathered cool slate grey rock outcrops and fractured broad slabs with dark earthy seams, sparse muted moss, softly grounded broken angular planes; not molten",
+      "originalSha256": "f5e6d0242490db9372ef2634a45ca58b1f230817fe7dfe34c783c14c3facdf5d",
+      "sha256": "079f6c3d98815de68994d5fa2107844b12ff603e33649052db90b017169b1574",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.foothill",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: FOOTHILL SCREE. soft low rolling ochre-olive grassy foothill forms crossed by light weathered limestone scree tongues and small broken crags, rounded bases, restrained northwest relief highlights; ground to integrate underneath high mountain symbols, NOT mountain peaks",
+      "originalSha256": "beb4ba0dd6532bfdd4be2ec225e707d3ee20d30f2e45214198516eeecf5412f8",
+      "sha256": "238248eadf6bc0b278f0a145ecc02ca397492a596005f0f25ae1057ef98c6408",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.alpine",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: PATCHY ALPINE SNOW. irregular soft ivory snow tongues and patches lying between cool grey rocky ground and pale tundra, exposed scree, delicate cold shadows; snow and rock interlock broadly, no isolated mountains",
+      "originalSha256": "3f16f0b26727bc1295c3ac555f079778d1dacfb79f0ae61161e0ba42b992cf6e",
+      "sha256": "d281ee1833cf376036eab32e1bb4ec132462a7d16bf676d05955fe185bb17f5f",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.forest-temperate",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: TEMPERATE FOREST FLOOR. deep muted olive brown earthy understory, broken moss cushions, warm humus and scattered faint leaf litter, low woodland ground forms; no actual individual tree crowns, branches, logs or tree silhouettes",
+      "originalSha256": "21c1f90d20bb5ede19478b54e5a55b895e40b7f9920dd51a204f82273ad25296",
+      "sha256": "1c6e0325fbda3583bc94e2c434ba978474e4f44dbdd269a144400147dadae309",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.forest-moss",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: MOSSY WOODLAND FLOOR. soft broad sage and moss green velvety cushions on dark warm humus, damp olive earth pockets, sparse fern-like implied texture without recognizable plants; no canopy trees",
+      "originalSha256": "0a1de2dae2e28915c713e025b9c0cf0bb0efe5993fc153b777d7990ca6029d11",
+      "sha256": "86ac6ce00c82d15e5dcf2bc494106c2aafe135a3d669d353065a6692d570155c",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.swamp-wet",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: MOTTLED WET MARSH. muted grey green wet ground with irregular small shallow smoky teal pools and dark peat margins, soft silt islands and restrained ochre reed-like surface strokes, not a river or shoreline",
+      "originalSha256": "1199a547602ffa31bde5393d30b649184819bb7a1f3059f2c33ddfdfce7e28ef",
+      "sha256": "197a25cc99152c21446c0b562e443268ec99828037fff633cb868d96d04d8e4a",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.swamp-bog",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: DARK PEAT BOG. dark warm brown peat, desaturated olive hummocks, small dark still-water hollows and subtly tangled low reed texture; low contrast, rich wet earth, no neon green",
+      "originalSha256": "8f5242f42197fd31fbf12900d884f097e1ce992ac26cf54f27ba27e0ff96e0c6",
+      "sha256": "fb66e90b79684b11a1c596fe8f10c2a6afbb5ef897168598a57abf11ffaa8dc8",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.arid",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: DRY EARTH BREAKUP. dusty ochre sand and pale clay, broad irregular hardened earth plates and sparse muted sage scrub-like tones, fine restrained erosion contours; not a desert landscape or aerial photograph",
+      "originalSha256": "2f2817d6b50308e68644c9be980885f35557e128f0a30e0fa2cc4aa301886d5f",
+      "sha256": "fda166f72318fefcb803ef139314dea57d891a9f929f83d1f40cf6b87d24a597",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.shore",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: COASTAL SILT AND SHALLOWS. pale sandy silt patches interwoven with muted jade-grey shallow water and creamy fine sediment wisps; subtle rippled material clues, no continuous coastline boundary, no foam stripes",
+      "originalSha256": "de83bdafcc9fb9f1b67c44237376c36b661b07e470faf251ce06d5171793ddec",
+      "sha256": "3dc5740da745f3bd7bda9add47b4afc05ef81c332ebd49ee4deba1d1103fee13",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.volcanic",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: VOLCANIC ASH. muted charcoal and warm grey ash beds, irregular porous dark basalt fragments, pale grey mineral dust drifts; no glowing lava, no mountains, no smoke",
+      "originalSha256": "fb4849c495fde635c99b80442a496cfd548861795bacdc09d0a10c9b6a9cbbad",
+      "sha256": "8aaa38f26a8c58fc2d94c46584a272f1ecf75a482604d046562bdcc88e23b909",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    },
+    {
+      "id": "painterly.v1.neutral",
+      "method": "Built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: one production terrain brush material, square opaque 1024x1024 full bleed. Premium hand-painted fantasy atlas oil/gouache miniature ground surface. Flat top-down map material, broad low-to-medium frequency forms, layered base tone, secondary tonal breakup and physical material cues, restrained northwest light and shadow. Rich yet medium-low contrast to support mountain miniatures and labels. Seamless/repeat-safe across all four edges, uniformly distributed material without centered subject. No text, border, vignette, sky, map grid, individual trees, buildings, mountain peaks, macro photograph or satellite style; no cheap noise or blurry wash. Material identity: SOFT NEUTRAL ATLAS EARTH. warm muted sage-beige earth and softly merging olive-grey broad organic tonal patches, delicate hand-painted ground relief and mineral grain; versatile subtle transition material without distinctive landmark",
+      "originalSha256": "f62b935440d70f394434bdafc02551ebd43ae3db08bf9e5544a404f9c5d7c784",
+      "sha256": "a4e889a4aaaf620fe0c6e220d5b62a7d39cf10b04b3a0fb65830fdb29b9b4b93",
+      "processing": "Resize to 512x512, sRGB opaque PNG. Runtime overlap-add makes a 384px periodic sample."
+    }
+  ]
+}

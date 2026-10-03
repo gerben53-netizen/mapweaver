@@ -1,0 +1,19 @@
+.context { flex-shrink:0; min-width:0; }
+.header { display:flex; gap:10px; align-items:center; min-height:34px; }
+.header h2 { margin:0; font-size:16px; overflow-wrap:anywhere; }
+.header>span { color:var(--color-muted); font-size:12px; white-space:nowrap; }
+.header button { padding:3px 8px; font-size:12px; }
+.recent { margin-left:auto; max-width:180px; font-size:10px; color:var(--color-muted); }
+.recent select { display:block; max-width:100%; font-size:11px; padding:3px; }
+.breadcrumb { display:flex; align-items:center; gap:4px; white-space:nowrap; overflow-x:auto; padding:4px 0!important; }
+.breadcrumb>span { display:inline-flex; align-items:center; gap:4px; }
+.breadcrumb button { border-color:transparent; background:transparent; padding:4px; font-size:12px; }
+.breadcrumb button[aria-current] { font-weight:600; color:var(--color-accent); }
+.children { display:flex; gap:6px; flex-wrap:wrap; max-height:78px; overflow:auto; padding:5px 0; }
+.children button { padding:4px 8px; font-size:12px; }
+.count { color:var(--color-muted); margin-left:5px; }
+.matches { font-size:12px; border-block:1px solid var(--color-border); padding:6px 0; }
+.matches>div { display:flex; flex-wrap:wrap; gap:6px; max-height:112px; overflow:auto; margin-top:4px; }
+.matches button { text-align:left; padding:5px 8px; max-width:100%; }
+.matches b,.matches small { display:block; overflow-wrap:anywhere; }
+.matches small { color:var(--color-muted); font-size:10px; }
