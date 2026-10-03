@@ -1,0 +1,48 @@
+{
+  "status": "DEVELOPMENT ONLY — DO NOT COPY VISUAL STYLE",
+  "authoring": "Original procedural SVG stone-top polygons rasterized with Sharp, 3 October 2026. Neutral diagnostic colors and alpha footprints; no Premium or user artwork used.",
+  "components": [
+    {
+      "id": "block-large-1",
+      "path": "public/generated-walls/masonry-dev-1/block-large-1.png",
+      "width": 384,
+      "height": 128,
+      "sha256": "bec7b10d217ce95dbbecd4ee83aa086dee6b3efae87051070eb641c7945e91e0"
+    },
+    {
+      "id": "block-large-2",
+      "path": "public/generated-walls/masonry-dev-1/block-large-2.png",
+      "width": 384,
+      "height": 128,
+      "sha256": "f3f1d1b2f4f55538095d4e17b580b9fd57b52c2e07275708d3922d5572efd27d"
+    },
+    {
+      "id": "block-medium-1",
+      "path": "public/generated-walls/masonry-dev-1/block-medium-1.png",
+      "width": 256,
+      "height": 128,
+      "sha256": "96ae5b2a6b78e7b101c8b231c3fdf5b5f2a5ea09f686d06cedb2dc46a1ece403"
+    },
+    {
+      "id": "block-medium-2",
+      "path": "public/generated-walls/masonry-dev-1/block-medium-2.png",
+      "width": 256,
+      "height": 128,
+      "sha256": "6ad55adeb4e06bb06c61d66317abe00402bc7079d655c1da84de531ae7c652a9"
+    },
+    {
+      "id": "block-small-1",
+      "path": "public/generated-walls/masonry-dev-1/block-small-1.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "d50db86fb1266010b72dc4ded45c5c45e07d71c971a756ad7a4f5883f26d589a"
+    },
+    {
+      "id": "block-small-2",
+      "path": "public/generated-walls/masonry-dev-1/block-small-2.png",
+      "width": 128,
+      "height": 128,
+      "sha256": "d46f4a34b593e781a8d09b846d69fa193863bd06e58f250aea5a3deda68f5bac"
+    }
+  ]
+}

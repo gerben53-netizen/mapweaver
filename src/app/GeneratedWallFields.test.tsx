@@ -23,3 +23,10 @@ it('hides development wall choices in installer builds while retaining a saved d
   expect(screen.getByLabelText('Wall material or generator')).toHaveValue('living-root@dev-1')
  }finally{vi.unstubAllEnvs()}
 })
+it('offers only regularity and variation for masonry and preserves the native width control',()=>{
+ const value=generatedWallStyle(SIMPLE_WALL,{...defaultMapStyle(),width:800,height:600,background:null},'masonry-rough','dev-1'),onChange=vi.fn()
+ render(<GeneratedWallFields value={value} onChange={onChange}/>);
+ expect(screen.getAllByRole('slider')).toHaveLength(2);expect(screen.queryByLabelText('Living Root preset')).toBeNull()
+ fireEvent.change(screen.getByLabelText('Wall regularity'),{target:{value:80}});expect(onChange.mock.lastCall?.[0].wall.generated.regularity).toBe(.8)
+ fireEvent.change(screen.getByLabelText('Wall variation'),{target:{value:40}});expect(onChange.mock.lastCall?.[0].wall.generated.variation).toBe(.4)
+})

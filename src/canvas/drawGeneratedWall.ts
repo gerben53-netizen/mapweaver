@@ -22,7 +22,7 @@ export function paintGeneratedWall(ctx:CanvasRenderingContext2D,p:PathObject,ope
   const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.ceil(bounds.width*ratio));canvas.height=Math.max(1,Math.ceil(bounds.height*ratio));const c=canvas.getContext('2d')!;c.scale(ratio,ratio);c.translate(-bounds.x,-bounds.y)
   // Only doorway cutouts constrain artwork; never clip to the nominal wall envelope.
   c.save();c.translate(p.x,p.y);clipWallOpenings(c,p,openings,p.strokeWidth*4);c.translate(-p.x,-p.y)
-  for(const placement of placements){c.save();c.translate(placement.x,placement.y);c.rotate(placement.angle);c.drawImage(images.get(placement.component.image)!,-placement.width/2,-placement.height/2,placement.width,placement.height);c.restore()}c.restore()
+  for(const placement of placements){c.save();c.translate(placement.x,placement.y);c.rotate(placement.angle);const image=images.get(placement.component.image)!;if(placement.sourceFraction)c.drawImage(image,0,0,image.naturalWidth*placement.sourceFraction,image.naturalHeight,-placement.width/2,-placement.height/2,placement.width,placement.height);else c.drawImage(image,-placement.width/2,-placement.height/2,placement.width,placement.height);c.restore()}c.restore()
   surface={canvas,...bounds};const pixels=canvas.width*canvas.height
   while(surfaces.size&&(surfaces.size>=128||cachedPixels+pixels>GENERATED_LIMITS.cachedPixels)){const [old,s]=surfaces.entries().next().value!;cachedPixels-=s.canvas.width*s.canvas.height;surfaces.delete(old)}
   surfaces.set(key,surface);cachedPixels+=pixels;generatedRenderStats.builds++;generatedRenderStats.lastBuildMs=performance.now()-begin;generatedRenderStats.lastComponents=placements.length;generatedRenderStats.lastRatio=ratio

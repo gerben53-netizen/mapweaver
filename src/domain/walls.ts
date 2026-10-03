@@ -1,4 +1,4 @@
-import { validateGeneratedWall, generatedPixelsPerFoot } from './generatedWalls'
+import { validateGeneratedWall, generatedPixelsPerFoot, generatedDefinition } from './generatedWalls'
 import { materialPieces } from './wallMaterialGeometry'
 import { wallField } from './continuousWallGeometry'
 import { validateMaterial } from './wallSets'
@@ -33,7 +33,8 @@ export function validateWall(p: PathObject) {
   const o=w.outline
   if(!o || !keys(o,['enabled','color','width','opacity']) || typeof o.enabled!=='boolean' || !/^#[\da-f]{6}$/i.test(o.color) || !finite(o.width,WALL_LIMITS.outline) || !finite(o.opacity,1))throw new Error('Invalid wall outline.')
   if(p.stroke.kind==='dashed')throw new Error('Walls support solid or texture strokes.')
-  if(w.generated){const runs=Math.max(2,Math.min(9,Math.round(1.5+p.strokeWidth/generatedPixelsPerFoot(wallStyle(p))*1.8)));if((Math.ceil(pathGeometry(p).length/Math.max(1,p.strokeWidth*.45))+64)*(runs+2)+p.nodes.length>12000)throw Error('Generated wall exceeds 12,000 components. Shorten the wall or increase its width.')}
+  if(w.generated&&generatedDefinition(w.generated).generatorType==='masonry'){const rows=Math.max(1,Math.ceil(p.strokeWidth/generatedPixelsPerFoot(wallStyle(p))/.5)),course=p.strokeWidth/rows;if((Math.ceil(pathGeometry(p).length/Math.max(.1,course*.45))+128)*rows+p.nodes.length*rows*rows>12000)throw Error('Generated wall exceeds 12,000 components. Shorten the wall or increase its width.')}
+  if(w.generated&&generatedDefinition(w.generated).generatorType==='living-root'){const runs=Math.max(2,Math.min(9,Math.round(1.5+p.strokeWidth/generatedPixelsPerFoot(wallStyle(p))*1.8)));if((Math.ceil(pathGeometry(p).length/Math.max(1,p.strokeWidth*.45))+64)*(runs+2)+p.nodes.length>12000)throw Error('Generated wall exceeds 12,000 components. Shorten the wall or increase its width.')}
   if(pathGeometry(p).length>WALL_LIMITS.length)throw new Error('Wall exceeds 1,000,000 map pixels.')
 }
 export function wallUnits(value:number,unit:WallSettings['unit'],pixelsPerUnit:number) {
