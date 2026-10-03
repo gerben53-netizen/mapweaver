@@ -1,3 +1,4 @@
+import { rockPlacements } from './rockWallGeometry'
 import { validateGeneratedWall, generatedPixelsPerFoot, generatedDefinition } from './generatedWalls'
 import { materialPieces } from './wallMaterialGeometry'
 import { wallField } from './continuousWallGeometry'
@@ -27,6 +28,7 @@ export function validateWall(p: PathObject) {
   if(w.alignment !== undefined && (w.alignment !== 'outside' || !p.closed || p.strokeWidth < .5 || p.strokeWidth > 512)) throw Error('Outside walls must be closed and between 0.5 and 512 map pixels thick.')
   if(w.renderingMode!==undefined&&w.renderingMode!=='generated')throw Error('Invalid wall rendering mode.')
   if(w.renderingMode==='generated'){validateGeneratedWall(w.generated!);if(w.material||p.stroke.kind!=='solid')throw Error('Generated walls cannot combine another material or texture.')}else if(w.generated!==undefined)throw Error('Generated settings require generated rendering mode.')
+  if(w.generated&&generatedDefinition(w.generated).generatorType==='rock')rockPlacements(p)
   validateMaterial(p)
   if(p.wall?.material&&!p.wall.material.set.continuous)materialPieces(p)
   if(p.wall?.material?.set.continuous)wallField(p)

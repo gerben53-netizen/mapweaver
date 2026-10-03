@@ -13,7 +13,7 @@ it('offers width presets and only the three generated parameters, with explicit 
  fireEvent.click(screen.getByRole('button',{name:'Randomize variation'}));expect(onChange.mock.lastCall?.[0].wall.generated.seed).not.toBe(value.wall.generated!.seed);expect(screen.getAllByRole('slider')).toHaveLength(3)
 })
 it('hides development wall choices in normal builds while retaining a saved development selection',()=>{
- vi.stubEnv('VITE_MAPWEAVER_INSTALLER','')
+ vi.stubEnv('VITE_MAPWEAVER_INSTALLER','true')
  try{
   const map={...defaultMapStyle(),width:800,height:600,background:null},production=generatedWallStyle(SIMPLE_WALL,map),legacy=generatedWallStyle(SIMPLE_WALL,map,'living-root','dev-1'),onChange=vi.fn()
   const view=render(<WallFields value={production} onChange={onChange}/>)
@@ -29,4 +29,10 @@ it('offers only regularity and variation for masonry and preserves the native wi
  expect(screen.getAllByRole('slider')).toHaveLength(2);expect(screen.queryByLabelText('Living Root preset')).toBeNull()
  fireEvent.change(screen.getByLabelText('Wall regularity'),{target:{value:80}});expect(onChange.mock.lastCall?.[0].wall.generated.regularity).toBe(.8)
  fireEvent.change(screen.getByLabelText('Wall variation'),{target:{value:40}});expect(onChange.mock.lastCall?.[0].wall.generated.variation).toBe(.4)
+})
+
+it('offers only rock roughness/variation and exposes DEV cave choices outside installer builds',()=>{
+ const map={...defaultMapStyle(),width:800,height:600,background:null},value=generatedWallStyle(SIMPLE_WALL,map,'cave-rock','dev-1'),onChange=vi.fn();
+ render(<WallFields value={value} onChange={onChange}/>);expect(screen.getAllByRole('slider')).toHaveLength(2);expect(screen.queryByLabelText('Living Root preset')).toBeNull();expect(screen.queryByLabelText('Wall regularity')).toBeNull();
+ fireEvent.change(screen.getByLabelText('Wall roughness'),{target:{value:80}});expect(onChange.mock.lastCall?.[0].wall.generated.roughness).toBe(.8);expect(screen.getByRole('option',{name:/Cave Rock/})).toHaveValue('cave-rock@dev-1');
 })

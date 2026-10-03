@@ -1,3 +1,4 @@
+import { rockPlacements } from './rockWallGeometry'
 import { masonryPlacements } from './masonryWallGeometry'
 import type { PathObject,OpeningObject } from './models'
 import { generatedDefinition,generatedPixelsPerFoot,type GeneratedComponent } from './generatedWalls'
@@ -11,6 +12,7 @@ function random(seed:number,n:number){let x=(seed^Math.imul(n+1,0x9e3779b1))>>>0
 function noise(seed:number,d:number){const i=Math.floor(d),t=d-i,u=t*t*(3-2*t);return (random(seed,i)*(1-u)+random(seed,i+1)*u)*2-1}
 export function rootRunCount(widthFt:number){return Math.max(2,Math.min(9,Math.round(1.5+widthFt*1.8)))}
 export function generatedPlacements(path:PathObject,openings:OpeningObject[]=[]){
+ if(generatedDefinition(path.wall!.generated!).generatorType==='rock')return rockPlacements(path,openings)
  if(generatedDefinition(path.wall!.generated!).generatorType==='masonry')return masonryPlacements(path,openings)
  const g=path.wall!.generated!,definition=generatedDefinition(g),geometry=pathGeometry(path),width=path.strokeWidth,runs=rootRunCount(width/generatedPixelsPerFoot(wallStyle(path))),result:GeneratedPlacement[]=[]
  const cuts=openings.map(o=>openingPlacement(o,path)).sort((a,b)=>a.start-b.start),intervals:{start:number;end:number}[]=[];let start=0

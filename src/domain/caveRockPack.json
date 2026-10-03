@@ -1,0 +1,89 @@
+{
+  "id": "cave-rock",
+  "revision": "dev-1",
+  "name": "Cave Rock — DEV",
+  "renderingMode": "generated",
+  "generatorType": "rock",
+  "components": [
+    {
+      "id": "rock-large-1",
+      "role": "rock-large",
+      "image": "/generated-walls/cave-rock-dev-1/rock-large-1.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "rock-large-2",
+      "role": "rock-large",
+      "image": "/generated-walls/cave-rock-dev-1/rock-large-2.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "rock-large-3",
+      "role": "rock-large",
+      "image": "/generated-walls/cave-rock-dev-1/rock-large-3.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "rock-medium-1",
+      "role": "rock-medium",
+      "image": "/generated-walls/cave-rock-dev-1/rock-medium-1.png",
+      "nominalLengthFt": 0.75,
+      "nominalWidthFt": 0.75,
+      "weight": 1
+    },
+    {
+      "id": "rock-medium-2",
+      "role": "rock-medium",
+      "image": "/generated-walls/cave-rock-dev-1/rock-medium-2.png",
+      "nominalLengthFt": 0.75,
+      "nominalWidthFt": 0.75,
+      "weight": 1
+    },
+    {
+      "id": "rock-medium-3",
+      "role": "rock-medium",
+      "image": "/generated-walls/cave-rock-dev-1/rock-medium-3.png",
+      "nominalLengthFt": 0.75,
+      "nominalWidthFt": 0.75,
+      "weight": 1
+    },
+    {
+      "id": "rock-small-1",
+      "role": "rock-small",
+      "image": "/generated-walls/cave-rock-dev-1/rock-small-1.png",
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "rock-small-2",
+      "role": "rock-small",
+      "image": "/generated-walls/cave-rock-dev-1/rock-small-2.png",
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "rock-small-3",
+      "role": "rock-small",
+      "image": "/generated-walls/cave-rock-dev-1/rock-small-3.png",
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    }
+  ],
+  "defaults": {
+    "width": 1,
+    "organic": 0,
+    "growth": 0,
+    "overgrowth": 0,
+    "roughness": 0.55,
+    "variation": 0.7
+  }
+}
