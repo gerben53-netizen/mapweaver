@@ -1,3 +1,4 @@
+import { useWindowLightPreview } from '../store/windowLightPreview'
 import { useLightingPreview } from '../store/lightingPreview'
 import { scatterDefaults } from '../domain/scatter'
 import { texturePaintAssetIds } from '../domain/terrainPaint'
@@ -32,6 +33,7 @@ export function applyPrepared(prepared: PreparedProject, confirm: () => boolean,
     return [manifest.id, { ...source, manifest }] as const
   }))
   useLightingPreview.setState({enabled:false,selectedId:''})
+  useWindowLightPreview.setState({enabled:false})
   useTextureBrushStore.setState({preview:null,cursor:null,images:new Map(),imageGeneration:-1,materialName:'Choose material',settings:{...useTextureBrushStore.getState().settings,assetId:undefined}})
   installProjectAssets(assets, d.map.background && !texturePaintAssetIds(d.map.texturePaint).includes(d.map.background.id) && !d.objects.some(o => objectAssetIds(o).includes(d.map.background!.id)) ? d.map.background.id : undefined)
   const availableWall=d.objects.find(o=>o.kind==='path'&&o.pathKind==='wall'),toolStyle=availableWall?.kind==='path'?wallDrawingStyle(wallStyle(availableWall)):structuredClone(SIMPLE_WALL)

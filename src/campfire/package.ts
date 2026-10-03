@@ -1,9 +1,9 @@
 import { zipSync,strToU8 } from 'fflate'
-import type { CampfireMapContractV1 } from './generated/index'
+import type { CampfireMapContract } from './generated/index'
 import { validateMapContract } from './generated/index'
 import { serializeCampfire,CampfireExportError } from './serialize'
 import type { ProjectSnapshot } from '../store/history'
-export async function packageCampfire(payload:CampfireMapContractV1,image:Blob):Promise<Blob>{
+export async function packageCampfire(payload:CampfireMapContract,image:Blob):Promise<Blob>{
  const checked=validateMapContract(payload);if(!checked.valid)throw new CampfireExportError(checked.errors)
  if(payload.image.path!=='map.png'||payload.image.mimeType!=='image/png')throw Error('This package requires the serializer’s local map.png reference.')
  const bytes=new Uint8Array(await image.arrayBuffer())

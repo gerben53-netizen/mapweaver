@@ -1,0 +1,13 @@
+# ADR-0056 — Canonical Campfire v2 windows and Window Light authoring
+
+Accepted 3 October 2026; additive to ADR-0052. Campfire remains the exclusive owner of its read-only contract. Mapweaver consumes the current v2 semantic-aperture extension through byte-identical derived files and reviewed SHA-256 provenance. V1 schema/fixture/meaning stay unchanged; current producer output is explicit v2, without implicit negotiation or deprecated compatibility output.
+
+Window Light is not a new point/cone light. The canonical v2 Window describes a permanent aperture with stable ID, wallId, nonzero geometry on its wall, transmitsExteriorLight and optional exteriorLightTransmission (0–1, default 1). Campfire owns exterior side, environment, color, intensity, range and runtime rendering/state. Mapweaver adds only optional WindowObject.exteriorLight authored inputs, typed via Pick of the canonical inferred MapWindowV2. Actual canonical validation enforces the properties/values; no copied hand-written schema or general lighting engine.
+
+Native Window ownership and existing attachment position/width/path remain canonical authoring inputs. Export emits one stable wall chord per aperture (`wall-id:window:window-id`) at its arc-length endpoints; each Window references that chord. This explicitly approximates curved aperture intervals by one straight segment, matching the transport's required straight wall reference. Other curve sections retain existing subdivision. All windows keep blocksVision on their parent chord; doors/passages retain their separate gaps/door semantics. The chord contributes to the 80-wall budget, and windows to the 16-window budget. No room conversion, visible extra wall, alternate opening model or user-data migration is created.
+
+The optional native field survives existing JSON/SQLite/archive save/reload and undo/redo. Missing fields remain missing and disabled. Window deletion removes the owned data; confirmed wall deletion cascades existing openings; restoration uses existing stable IDs. Dangling references fail deterministically before visible-object projection can silently omit them.
+
+A separate map-clipped, non-interactive editor overlay visualizes an aperture origin, both normal directions and a diagnostic transmission tint. Its guide length/color are explicitly not physical illumination inputs or predictions. Toggle is temporary, and artwork/PNG/Campfire bitmap remains lighting-neutral. No export-renderer or runtime environment fields are added.
+
+Existing Masonry and Living Root engines are unchanged. They continue to use native centerlines and openings; only shared Campfire serialization observes v2 semantic windows. Detailed authoring/migration/export limits: docs/campfire-export.md.

@@ -255,7 +255,7 @@ export const useProjectStore = create<ProjectState>((rawSet, get) => {
     if(!allowed.has(input.id)||!allowed.has(input.wallId))throw new Error('Choose a visible, unlocked opening and wall.')
     const layer=state.layers.find(l=>l.objectIds.includes(input.wallId))!
     if(state.objectGroups.some(g=>g.objectIds.includes(input.id)&&g.layerId!==layer.id))throw new Error('Remove this opening from its group before choosing a wall in another layer.')
-    set({objects:state.objects.map(o=>o.id===input.id?input:o),...(layer.objectIds.includes(input.id)?{}:{layers:state.layers.map(l=>({...l,objectIds:[...l.objectIds.filter(id=>id!==input.id),...(l.id===layer.id?[input.id]:[])]}))})})
+    set({objects:reconcileOpenings(state.objects.map(o=>o.id===input.id?input:o)),...(layer.objectIds.includes(input.id)?{}:{layers:state.layers.map(l=>({...l,objectIds:[...l.objectIds.filter(id=>id!==input.id),...(l.id===layer.id?[input.id]:[])]}))})})
   },
   ...createManagementActions(set, get, canAdd),
   nudge: (delta) => history.run('Nudge objects', () => {

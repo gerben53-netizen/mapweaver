@@ -71,7 +71,7 @@ interface OpeningBase extends Omit<ObjectBase, 'assetId'> {
   rotation: 0; scaleX: 1; scaleY: 1
 }
 export interface DoorObject extends OpeningBase { kind: 'door'; doorType: 'single' | 'double' | 'passage'; status: 'closed' | 'open-left' | 'open-right' }
-export interface WindowObject extends OpeningBase { kind: 'window'; windowType: 'simple' | 'wide' }
+export interface WindowObject extends OpeningBase { kind: 'window'; windowType: 'simple' | 'wide'; exteriorLight?: Pick<import('../campfire/generated/index').MapWindowV2,'transmitsExteriorLight'|'exteriorLightTransmission'> }
 export type OpeningObject = DoorObject | WindowObject
 export type MapObject = import('./annotations').Annotation | import('./scatter').ScatterObject | StampObject | PatternFillObject | AreaObject | PathObject | OpeningObject
 export type PlacedObject = MapObject

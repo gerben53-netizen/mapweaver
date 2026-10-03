@@ -1,3 +1,4 @@
+import { validateWindowLight } from '../campfire/windowLights'
 import { wallMaterialRadius } from './wallSets'
 import { outsideWall, wallWinding } from './wallAlignment'
 import type { MapLayer, MapObject, OpeningObject, PathObject } from './models'
@@ -70,7 +71,7 @@ export function createOpening(wall: PathObject, position: number, kind: OpeningO
 }
 export function validateOpening(input: OpeningObject): OpeningObject {
   if (!input || (input.kind !== 'door' && input.kind !== 'window')) throw new Error('Invalid opening type.')
-  const keys = ['kind','id','name','visible','locked','assetId','wallId','position','openingWidth','unit','pixelsPerUnit','side','flip','x','y','width','height','rotation','scaleX','scaleY','opacity', ...(input.kind === 'door' ? ['doorType','status'] : ['windowType'])]
+  const keys = ['kind','id','name','visible','locked','assetId','wallId','position','openingWidth','unit','pixelsPerUnit','side','flip','x','y','width','height','rotation','scaleX','scaleY','opacity', ...(input.kind === 'door' ? ['doorType','status'] : ['windowType','exteriorLight'])]
   if (Object.keys(input).some(k => !keys.includes(k))) throw new Error('Unknown opening field.')
   for (const id of [input.id, input.wallId, ...(input.assetId === undefined ? [] : [input.assetId])]) if (typeof id !== 'string' || !/^[a-zA-Z0-9_-]{1,80}$/.test(id)) throw new Error('Invalid opening identifier.')
   if (input.name !== undefined && (typeof input.name !== 'string' || !input.name.trim() || input.name.length > 120 || [...input.name].some(c=>c.charCodeAt(0)<32||c.charCodeAt(0)===127))) throw new Error('Invalid opening name.')
@@ -78,6 +79,7 @@ export function validateOpening(input: OpeningObject): OpeningObject {
   if (![input.position,input.openingWidth,input.pixelsPerUnit,input.x,input.y,input.width,input.height,input.opacity].every(n => typeof n === 'number' && Number.isFinite(n)) || Math.abs(input.x) > 1e9 || Math.abs(input.y) > 1e9 || input.width <= 0 || input.height <= 0 || input.width > 1e9 || input.height > 1e9 || input.position < 0 || input.position > 1 || input.openingWidth < OPENING_LIMITS.minimum || input.openingWidth > OPENING_LIMITS.width || input.pixelsPerUnit <= 0 || input.pixelsPerUnit > 1e6 || (input.unit==='px'&&input.pixelsPerUnit!==1) || input.opacity < 0 || input.opacity > 1) throw new Error('Invalid opening dimensions or position.')
   if (!['px','cells','ft','m'].includes(input.unit) || ![-1,1].includes(input.side) || typeof input.flip !== 'boolean' || input.rotation !== 0 || input.scaleX !== 1 || input.scaleY !== 1) throw new Error('Invalid opening orientation or units.')
   if (input.kind === 'door' ? !['single','double','passage'].includes(input.doorType) || !['closed','open-left','open-right'].includes(input.status) : !['simple','wide'].includes(input.windowType)) throw new Error('Invalid opening style.')
+  if(input.kind==='window'&&input.exteriorLight!==undefined)validateWindowLight(input.exteriorLight)
   return input
 }
 export function reconcileOpenings(objects: MapObject[], layers?: MapLayer[], strictBounds = false): MapObject[] {

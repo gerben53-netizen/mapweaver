@@ -1,7 +1,7 @@
-import { mapContractSchemaV1 } from './schema.js';
-import type { CampfireMapContractV1 } from './types.js';
+import { mapContractSchemaV1,mapContractSchemaV2 } from './schema.js';
+import type { CampfireMapContract } from './types.js';
 type Schema = { type?: string; const?: unknown; enum?: readonly unknown[]; properties?: Record<string, Schema>; required?: readonly string[]; additionalProperties?: boolean; items?: Schema; maxItems?: number; minimum?: number; maximum?: number; exclusiveMinimum?: number; minLength?: number; maxLength?: number; pattern?: string };
-export type MapContractValidation = { valid: true; value: CampfireMapContractV1 } | { valid: false; errors: string[] };
+export type MapContractValidation = { valid: true; value: CampfireMapContract } | { valid: false; errors: string[] };
 // Only the vocabulary used by the canonical schema. Not an application-wide schema framework.
 export function validateMapContractShape(value: unknown): string[] {
   const errors: string[] = [];
@@ -29,13 +29,14 @@ export function validateMapContractShape(value: unknown): string[] {
       if ((s.minLength !== undefined && v.length < s.minLength) || (s.maxLength !== undefined && v.length > s.maxLength) || (s.pattern && !new RegExp(s.pattern).test(v))) fail('invalid text');
     } else if (s.type === 'boolean' && typeof v !== 'boolean') fail('expected boolean');
   }
-  check(mapContractSchemaV1, value, 'map');
+  const version=(value as {version?:unknown}|null)?.version;
+  check(version===2?mapContractSchemaV2:mapContractSchemaV1, value, 'map');
   return errors;
 }
 export function validateMapContract(value: unknown): MapContractValidation {
   const errors = validateMapContractShape(value);
   if (errors.length) return { valid: false, errors };
-  const map = value as CampfireMapContractV1;
+  const map = value as CampfireMapContract;
   if (!map.name.trim()) errors.push('map.name: empty name');
   if (map.image.path.split('/').some(p => p === '..' || p === '.' || !p)) errors.push('map.image.path: unsafe relative path');
   const point = (p: { x: number; y: number }, path: string) => { if (p.x > map.dimensions.pixelWidth || p.y > map.dimensions.pixelHeight) errors.push(`${path}: out of bounds`); };
@@ -48,5 +49,13 @@ export function validateMapContract(value: unknown): MapContractValidation {
     if (l.start.x === l.end.x && l.start.y === l.end.y) errors.push(`${kind}.${l.id}: zero length`);
   }
   for (const l of map.lighting?.lights ?? []) point(l.position, `lights.${l.id}.position`);
+  if(map.version===2){const seen=new Set<string>();for(const w of map.windows??[]){
+   if(seen.has(w.id))errors.push(`windows: duplicate id ${w.id}`);seen.add(w.id);
+   const wall=map.walls.find(l=>l.id===w.wallId),a=w.geometry.start,b=w.geometry.end;
+   point(a,`windows.${w.id}.start`);point(b,`windows.${w.id}.end`);
+   if(Math.hypot(b.x-a.x,b.y-a.y)<1e-6)errors.push(`windows.${w.id}: zero length`);
+   const on=(p:{x:number;y:number})=>{if(!wall)return false;const dx=wall.end.x-wall.start.x,dy=wall.end.y-wall.start.y,n=dx*dx+dy*dy,t=((p.x-wall.start.x)*dx+(p.y-wall.start.y)*dy)/n;return n>0&&t>=-1e-7&&t<=1+1e-7&&Math.abs((p.x-wall.start.x)*dy-(p.y-wall.start.y)*dx)/Math.sqrt(n)<1e-5;};
+   if(!on(a)||!on(b))errors.push(`windows.${w.id}: geometry must lie on referenced wall`);
+  }}
   return errors.length ? { valid: false, errors } : { valid: true, value: map };
 }

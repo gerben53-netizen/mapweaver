@@ -1,3 +1,4 @@
+import { useWindowLightPreview } from '../store/windowLightPreview'
 import { InspectorSection } from './InspectorSection'
 import { useEditorStore } from '../store/editorStore'
 import { useState } from 'react'
@@ -10,6 +11,7 @@ import { editableProjectIds } from '../domain/projectView'
 import styles from './OpeningTools.module.css'
 
 export function OpeningProperties({object}:{object:OpeningObject}){
+  const preview=useWindowLightPreview(s=>s.enabled)
   const [draft,setDraft]=useState(object),[error,setError]=useState(''),objects=useProjectStore(s=>s.objects)
   const allowed=editableProjectIds(useProjectStore.getState()), walls=objects.filter((o):o is PathObject=>o.kind==='path'&&o.pathKind==='wall'&&allowed.has(o.id)),wall=walls.find(w=>w.id===draft.wallId)
   function commit(next=draft){try{history.run('Change opening',()=>useProjectStore.getState().updateOpening(next));setError('')}catch(e){setError((e as Error).message)}}
@@ -17,6 +19,12 @@ export function OpeningProperties({object}:{object:OpeningObject}){
     <label>Width ({draft.unit})<input aria-label="Opening width value" type="number" step="any" min={4/draft.pixelsPerUnit} max={4096/draft.pixelsPerUnit} value={draft.openingWidth/draft.pixelsPerUnit} onChange={e=>setDraft({...draft,openingWidth:Number(e.target.value)*draft.pixelsPerUnit})}/></label>
     <label>Position (%)<input aria-label="Opening position" type="number" step="any" min="0" max="100" value={Number((draft.position*100).toFixed(2))} onChange={e=>setDraft({...draft,position:Number(e.target.value)/100})}/></label>
     {draft.kind==='door'?<><label>Door type<select aria-label="Door type" value={draft.doorType} onChange={e=>setDraft({...draft,doorType:e.target.value as typeof draft.doorType})}><option value="single">Single</option><option value="double">Double</option><option value="passage">Open passage</option></select></label><label>Status<select aria-label="Door status" value={draft.status} onChange={e=>setDraft({...draft,status:e.target.value as typeof draft.status})}><option value="closed">Closed</option><option value="open-left">Open left</option><option value="open-right">Open right</option></select></label></>:<label>Window type<select value={draft.windowType} onChange={e=>setDraft({...draft,windowType:e.target.value as typeof draft.windowType})}><option value="simple">Simple</option><option value="wide">Wide</option></select></label>}
+    {draft.kind==='window'&&<fieldset><legend>Window Light — Campfire</legend>
+      <label><input aria-label="Transmit exterior light" type="checkbox" checked={draft.exteriorLight?.transmitsExteriorLight===true} onChange={e=>setDraft({...draft,exteriorLight:{...draft.exteriorLight,transmitsExteriorLight:e.target.checked}})}/> Transmit exterior light</label>
+      <label>Transmission (0–1)<input aria-label="Exterior light transmission" type="number" min={0} max={1} step={.05} placeholder="1 (contract default)" value={draft.exteriorLight?.exteriorLightTransmission??''} onChange={e=>{const light={...draft.exteriorLight,transmitsExteriorLight:draft.exteriorLight?.transmitsExteriorLight??false};if(e.target.value==='')delete light.exteriorLightTransmission;else light.exteriorLightTransmission=Number(e.target.value);setDraft({...draft,exteriorLight:light})}}/></label>
+      <label><input aria-label="Window light preview" type="checkbox" checked={preview} onChange={e=>useWindowLightPreview.setState({enabled:e.target.checked})}/> Show aperture preview</label>
+      <p>Apply to save. Campfire chooses exterior side, environment, color and reach. The two-sided guide is schematic; its size is not a light range.</p>
+    </fieldset>}
     <label><input type="checkbox" checked={draft.flip} onChange={e=>setDraft({...draft,flip:e.target.checked})}/> Flip symbol</label>
     <button type="submit">Apply opening properties</button>
     <InspectorSection type="opening" title="Opening actions"><button type="button" onClick={()=>commit({...draft,side:draft.side===1?-1:1})}>Reverse opening side</button>

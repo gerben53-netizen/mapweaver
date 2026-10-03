@@ -42,3 +42,10 @@ export const mapContractSchemaV1 = {
     } }
   }
 } as const;
+
+// v1 stays immutable. v2 adds permanent apertures, never runtime environment state.
+export const mapContractSchemaV2={...mapContractSchemaV1,
+ $id:'https://campfire.local/schemas/campfire-map-contract-v2.schema.json',title:'CAMPFIRE_MAPWEAVER v2',
+ properties:{...mapContractSchemaV1.properties,version:{const:2},windows:{type:'array',maxItems:16,items:{type:'object',additionalProperties:false,
+ required:['id','geometry','wallId','transmitsExteriorLight'],properties:{id,geometry:line,wallId:id,transmitsExteriorLight:{type:'boolean'},exteriorLightTransmission:intensity}}}}
+} as const;
