@@ -52,7 +52,7 @@ npm start
 
 The process serves frontend and `/api/v1`; Ctrl+C requests the same safe drain for a terminal launch. Frozen tabs can prevent completion. Native better-sqlite3 and Sharp must match the runtime/platform. See [Windows troubleshooting, upgrades and uninstall](docs/troubleshooting.md).
 
-Build a new Windows package using `npm run package:windows`; it refuses to overwrite an existing package. Retain/move the old output first, or after building use `node scripts/package-windows.mjs Mapweaver-20260926` for a separate, non-existing output directory. `npm run build:client`, `build:service`, and `build:launcher` build individual parts. The package build generates `distribution.local/SHA256SUMS.txt`. An Inno Setup configuration targets the same `Mapweaver-20260926` package (override `PackageDir` when needed); `npm run package:installer` needs ISCC.exe, which was unavailable here. No installer binary is claimed.
+Build a portable Windows package using `npm run package:windows`; existing output is never overwritten. Use `node scripts/package-windows.mjs Mapweaver-<release-name>` after building for a separate output. `npm run build:client`, `build:service`, and `build:launcher` build individual parts. For the normal per-user Windows installer, run `npm run package:installer`; it builds an explicitly curated package and `distribution.local/Mapweaver-Setup-<version>.exe`, with SHA-256 checksums. Set up the Inno compiler as described in [distribution documentation](docs/distribution/README.md). The end-user guide is [INSTALLATIE.md](INSTALLATIE.md).
 
 Production data defaults to `%LOCALAPPDATA%\Mapweaver` on Windows, `~/Library/Application Support/Mapweaver` on macOS, or `$XDG_DATA_HOME/Mapweaver` / `~/.local/share/Mapweaver` on Linux. Only Windows has been exercised. `MAPWEAVER_PORT` changes the default 47831 port. **Project → Storage** shows the resolved location, integrity findings and estimated registered storage usage.
 
@@ -567,6 +567,8 @@ See [Open Wall Paths & Manual Openings validation](docs/sprints/open-wall-paths.
 Use **Export Campfire Map** for a ZIP containing canonical v1 `map.json` and original-resolution `map.png`. Configure a physical game scale first. **Map actions → Lighting** authors ambient and point lights; its approximate preview is excluded from the PNG. See [Campfire export](docs/campfire-export.md) for identity, revisions, stable object IDs, mapping, validation and supported geometry. Campfire owns the immutable contract; no API client is included.
 
 ## Local Git workflow
+
+For the Windows end-user installer, see [INSTALLATIE.md](INSTALLATIE.md). The reproducible release command is `npm run package:installer`; build prerequisites and the canonical bundled-content inventory are in [distribution documentation](docs/distribution/README.md).
 
 Mapweaver uses its existing local Git repository on `develop`. Start each sprint with a working-tree check. Review the diff and finish each sprint that changes tracked project files with exactly one dedicated local commit (`Sprint: <title>` or `Fix: <description>`). Do not create empty commits or silently include unrelated pre-existing changes. Preserve and report ambiguous changes if the sprint cannot be isolated safely. Do not create remotes or push unless explicitly requested.
 

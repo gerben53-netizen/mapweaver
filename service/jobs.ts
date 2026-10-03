@@ -1,3 +1,4 @@
+import packageMetadata from '../package.json'
 import { lifecycleLog } from './lifecycleLog'
 import { randomUUID } from 'node:crypto'
 import { createReadStream, createWriteStream, mkdirSync, existsSync, rmSync, readdirSync } from 'node:fs'
@@ -87,7 +88,7 @@ export function registerJobs(app: FastifyInstance, jobs: Jobs) {
   app.post('/api/v1/diagnostics', (_request, reply) => jobs.serialize(async () => {
     const store = jobs.getStore(); let integrity = 'healthy'
     try { await validateDataset(store.root) } catch { integrity = 'restore required' }
-    const data = { appVersion: '1.0.0', schemaVersion: SCHEMA_VERSION, os: { platform: os.platform(), release: os.release(), arch: os.arch() }, runtime: process.version, health: 'running', integrity, projects: (store.db.prepare('SELECT COUNT(*) AS n FROM projects').get() as { n: number }).n, assets: (store.db.prepare('SELECT COUNT(*) AS n FROM assets').get() as { n: number }).n, bytes: diskUsage(store.root), config: { loopbackOnly: true, backupLimit: MAX_BACKUP_BYTES }, logs: lifecycleLog(store.root).read() }
+    const data = { appVersion: packageMetadata.version, schemaVersion: SCHEMA_VERSION, os: { platform: os.platform(), release: os.release(), arch: os.arch() }, runtime: process.version, health: 'running', integrity, projects: (store.db.prepare('SELECT COUNT(*) AS n FROM projects').get() as { n: number }).n, assets: (store.db.prepare('SELECT COUNT(*) AS n FROM assets').get() as { n: number }).n, bytes: diskUsage(store.root), config: { loopbackOnly: true, backupLimit: MAX_BACKUP_BYTES }, logs: lifecycleLog(store.root).read() }
     return reply.type('application/zip').send(Buffer.from(zipSync({ 'diagnostics.json': strToU8(JSON.stringify(data, null, 2)) })))
   }))
 }

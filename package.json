@@ -24,7 +24,7 @@
     "build:client": "tsc -b && vite build",
     "build:launcher": "powershell -NoProfile -ExecutionPolicy Bypass -File launcher/build.ps1",
     "package:windows": "npm run build && node scripts/package-windows.mjs",
-    "package:installer": "ISCC.exe launcher/installer.iss",
+    "package:installer": "node scripts/build-installer.mjs",
     "checksums:windows": "node scripts/package-checksums.mjs",
     "check:campfire-contract": "node scripts/check-campfire-contract.mjs"
   },

@@ -1,4 +1,8 @@
 import { ACTIVE_ASSET_SQL } from '../src/domain/assetQuality'
+import packageMetadata from '../package.json'
+import { existsSync } from 'node:fs'
+import path from 'node:path'
+import { initializeDefaultContent } from './defaultContent'
 import { readStampPalettes, writeStampPalettes } from './stampPalettes'
 import { queryGeneratorAssets, generatorAssetReadiness } from './generatorAssets'
 import { removalPreview, undoRemovalIds, libraryRevision } from './library'
@@ -28,8 +32,10 @@ export async function createApp(options: { directory?: string; port?: number; fr
     const dev = new URL(options.developmentOrigin)
     if (dev.protocol !== 'http:' || !['127.0.0.1','localhost'].includes(dev.hostname) || dev.origin !== options.developmentOrigin) throw new StorageError('INVALID_DEV_ORIGIN','Development origin must be an exact local HTTP origin.')
   }
+  const existingDatabase = options.directory ? existsSync(path.join(options.directory, 'mapweaver.sqlite3')) : true
   let store = new Storage(options.directory, options.failWrite)
   recoverLibraryImports(store)
+  if (options.frontend) await initializeDefaultContent(store, options.frontend, existingDatabase)
   const app = Fastify({ logger: false, bodyLimit: 4 * 1024 * 1024 })
   const lifecycle = new Lifecycle(), log = lifecycleLog(store.root)
   const instanceId = options.instanceId || randomUUID()
@@ -81,7 +87,7 @@ export async function createApp(options: { directory?: string; port?: number; fr
   app.addContentTypeParser(['image/png','image/jpeg','image/webp','application/zip','application/octet-stream'], { parseAs: 'buffer', bodyLimit: 128 * 1024 * 1024 }, (_request, body, done) => done(null, body))
   const params = (request: { params: unknown }) => request.params as { id: string }
   registerJobs(app, jobs)
-  app.get('/api/v1/health', () => { if(!store.db.open&&!jobs.maintenance&&lifecycle.phase!=='closing')throw new StorageError('RECOVERY_REQUIRED','Storage needs manual recovery. Retained datasets were kept.',503); return ({ application: 'Mapweaver', dataKey: createHash('sha256').update(process.platform==='win32'?store.root.toLowerCase():store.root).digest('hex'), version: '1.0.0', generation: datasetId, instanceId, pid: process.pid, supervisorId: options.supervisorId || null, lifecycle: lifecycle.view(work()), maintenance: jobs.maintenance }) })
+  app.get('/api/v1/health', () => { if(!store.db.open&&!jobs.maintenance&&lifecycle.phase!=='closing')throw new StorageError('RECOVERY_REQUIRED','Storage needs manual recovery. Retained datasets were kept.',503); return ({ application: 'Mapweaver', dataKey: createHash('sha256').update(process.platform==='win32'?store.root.toLowerCase():store.root).digest('hex'), version: packageMetadata.version, generation: datasetId, instanceId, pid: process.pid, supervisorId: options.supervisorId || null, lifecycle: lifecycle.view(work()), maintenance: jobs.maintenance }) })
   const requestStop = () => { if (!options.shutdown) throw new StorageError('UNAVAILABLE', 'Stop is unavailable in this environment.'); lifecycle.request(); if (options.supervisorId && work().length) lifecycle.hold = true; log.event('stop-requested'); if(work().length) log.event('active-work'); return lifecycle.view(work()) }
   const releaseTabs = (confirmed: unknown, keep?: string) => {
     if (confirmed !== true || lifecycle.phase !== 'error' || activeRequests || pendingWrites || [...jobs.jobs.values()].some(j => j.state === 'running' || j.state === 'ready')) throw new StorageError('UNSAFE_RELEASE', 'Wait for storage work to finish. Browser waits can be released only after a stop timeout and explicit confirmation.', 409)
