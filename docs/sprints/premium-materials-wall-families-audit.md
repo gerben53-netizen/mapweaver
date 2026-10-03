@@ -1,0 +1,15 @@
+# Premium Materials and Wall Families Audit
+
+3 October 2026. Scope: read-only repository/library inventory, visual repeat analysis, standalone production brief and canonical roadmap. No application implementation or artwork generation.
+
+The canonical plan is [Premium materials roadmap](../premium-materials-roadmap.md). The ignored standalone pack is `deliverables.local/Premium-Materials-Requirements/`; its ZIP is beside the folder. The evidence database stays local and is excluded from the external ZIP.
+
+Inspected: pattern and Area sampling; terrain styles, painterly registry and overlap-add loader; terrain/texture paint sampling; wall presets, validation, picker, atlas import, segment/strip/continuous renderers; generated definitions/placement/rendering; authoring/import limits; current installer manifest; read-only copy of the local schema-10 library; nine non-deleted map documents and earlier PQA scene proofs. Source image bytes, per-map usage, current active flags, license text, physical-scale limitations and exact wall component definitions are captured in the inventory.
+
+The inventory contains 81 material/appearance records: 31 library fill patterns (four are wall atlases), 32 painterly terrains, 11 procedural terrain styles, five procedural water styles and two instructional tiles. Classification is a new audit recommendation, not a mutation of existing library quality flags. Procedural styles remain KEEP as deliberately simple cartography, not Premium interior approval. No current floor PNG is newly certified Premium. The wall inventory distinguishes 16 existing definitions/capabilities, including nine simple solid styles, four registered sets, two Living Root revisions and generic custom texture support. No masonry/palace/marble/rock/linear component generator is invented.
+
+Core production batch: nine ARTWORK READY floor images, including Paleisparket. The current PQA floor is pale timber, not parket. Masonry generated courses are ENGINE REQUIRED; improved cave segments are artwork-ready but richer rock placement is BOTH; structural timber/linear generation is ENGINE REQUIRED. Production Living Root is KEEP unchanged. Installer defaults should receive approved generic floors first; development/example wall download choices currently lack their files in the installer manifest.
+
+Validation and exact counts are recorded in the standalone audit report and `pack-validation.json`. The five targeted domain files passed 32 of 33 tests; the existing terrain archive round-trip assertion fails because the current parser adds `map.campfireRevision: 1` to its older fixture. The two wall service files passed all seven tests. Lint and production build (including client/service TypeScript checks and read-only Campfire provenance verification) passed, with existing chunk-size/dynamic-import warnings. No application/test code was changed to hide the unrelated baseline failure.
+
+No server was started, no browser or Playwright checks were introduced, no Windows package was built and no primary database/asset bytes were changed. Local Git commit only; no push.
