@@ -50,10 +50,16 @@ it('stores masonry seed and controls through exact native wall undo/redo without
  expect(changed).toHaveLength(1);expect(validatePath(JSON.parse(JSON.stringify(changed[0])))).toEqual(changed[0])
 })
 
-it('admits production pale palace components with the shared engine at all widths and preserves DEV fixtures',()=>{
- const definition=generatedDefinition({id:'pale-palace-stone',revision:'production-1'});expect(validateGeneratedDefinition(definition)).toBe(definition);expect(definition.components).toHaveLength(6);expect(definition.defaults).toMatchObject({regularity:.9,variation:.2});
- for(const c of definition.components){expect(c.weight).toBe(1);expect(c.image).toBe('/generated-walls/pale-palace-stone-production-1/'+c.id+'.png');expect(c.nominalWidthFt).toBe(.5)}
+it.each(['pale-palace-stone','marble'])('admits production %s components with the shared engine at all widths and preserves DEV fixtures',id=>{
+ const definition=generatedDefinition({id,revision:'production-1'});expect(validateGeneratedDefinition(definition)).toBe(definition);expect(definition.components).toHaveLength(6);expect(definition.defaults).toMatchObject({regularity:.9,variation:.2});
+ for(const c of definition.components){expect(c.weight).toBe(1);expect(c.image).toBe('/generated-walls/'+id+'-production-1/'+c.id+'.png');expect(c.nominalWidthFt).toBe(.5)}
  const prod=generatedWallStyle(SIMPLE_WALL,map,definition.id,definition.revision);for(const width of [5,10,20,30]){const wall=createWall(nodes,false,{...prod,strokeWidth:width});expect(validatePath(wall)).toEqual(wall);expect(generatedPlacements(wall)).toEqual(generatedPlacements(wall));expect(new Set(generatedPlacements(wall).map(p=>p.run)).size).toBe(width/5)}
  expect(generatedDefinition({id:'masonry-dressed',revision:'dev-1'}).generatorType).toBe('masonry');expect(generatedDefinition({id:'masonry-rough',revision:'dev-1'}).generatorType).toBe('masonry');
  const prototype=createWall(nodes,false,style()),wall=createWall(nodes,false,prod);const shape=(w:typeof wall)=>generatedPlacements(w).map(p=>({...p,component:{...p.component,image:''}}));expect(shape(wall)).toEqual(shape(prototype));
+})
+
+it('keeps Marble curves, endpoints and openings equivalent to pale stone at equal recipes without material-specific geometry',()=>{
+ const prod=generatedWallStyle(SIMPLE_WALL,map,'marble','production-1'),pale=generatedWallStyle(SIMPLE_WALL,map,'pale-palace-stone','production-1'),curved=[{...nodes[0],out:{x:60,y:90}},{...nodes[1],in:{x:-60,y:-90}}];
+ const wall=createWall(curved,false,prod),other=createWall(curved,false,pale),opening=createOpening(wall,.5,'door',30),otherOpening={...opening,wallId:other.id};const shape=(w:typeof wall,cut:typeof opening)=>generatedPlacements(w,[cut]).map(p=>({...p,component:{...p.component,image:''}}));expect(shape(wall,opening)).toEqual(shape(other,otherOpening));
+ for(const field of ['seed','regularity','variation'] as const){const changed={...wall,wall:{...wall.wall!,generated:{...wall.wall!.generated!,[field]:field==='seed'?17:.4}}};expect(generatedPlacements(changed,[opening])).not.toEqual(generatedPlacements(wall,[opening]))}
 })

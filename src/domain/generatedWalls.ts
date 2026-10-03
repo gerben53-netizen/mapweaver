@@ -1,3 +1,4 @@
+import marble from './marblePack.json'
 import palePalaceStone from './palePalaceStonePack.json'
 import masonryRough from './masonryRoughPack.json'
 import masonryDressed from './masonryDressedPack.json'
@@ -26,6 +27,7 @@ export function validateGeneratedDefinition(value:unknown):GeneratedDefinition {
 }
 /** Add immutable bundled packs as data, never executable generator plugins. */
 export function registerGeneratedDefinition(value:unknown){const d=structuredClone(validateGeneratedDefinition(value)),key=d.id+'@'+d.revision,old=records.get(key);if(old&&JSON.stringify(old)!==JSON.stringify(d))throw Error('Generated wall revision is immutable.');if(!old&&records.size>=16)throw Error('Generated wall pack limit exceeded.');d.components.forEach(Object.freeze);Object.freeze(d.components);Object.freeze(d.defaults);Object.freeze(d);records.set(key,d);return d}
+registerGeneratedDefinition(marble)
 registerGeneratedDefinition(palePalaceStone)
 registerGeneratedDefinition(productionPack)
 registerGeneratedDefinition(pack)
