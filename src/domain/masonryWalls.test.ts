@@ -63,3 +63,10 @@ it('keeps Marble curves, endpoints and openings equivalent to pale stone at equa
  const wall=createWall(curved,false,prod),other=createWall(curved,false,pale),opening=createOpening(wall,.5,'door',30),otherOpening={...opening,wallId:other.id};const shape=(w:typeof wall,cut:typeof opening)=>generatedPlacements(w,[cut]).map(p=>({...p,component:{...p.component,image:''}}));expect(shape(wall,opening)).toEqual(shape(other,otherOpening));
  for(const field of ['seed','regularity','variation'] as const){const changed={...wall,wall:{...wall.wall!,generated:{...wall.wall!.generated!,[field]:field==='seed'?17:.4}}};expect(generatedPlacements(changed,[opening])).not.toEqual(generatedPlacements(wall,[opening]))}
 })
+
+it('keeps production Rough Stone in the shared masonry strategy with rustic defaults, curves, widths and openings',()=>{
+ const d=generatedDefinition({id:'rough-stone',revision:'production-1'});expect(validateGeneratedDefinition(d)).toBe(d);expect(d.defaults).toMatchObject({width:1,regularity:.25,variation:.7});expect(d.components).toHaveLength(6);
+ const prod=generatedWallStyle(SIMPLE_WALL,map,d.id,d.revision),dev=generatedWallStyle(SIMPLE_WALL,map,'masonry-rough','dev-1'),curved=[{...nodes[0],out:{x:60,y:90}},{...nodes[1],in:{x:-60,y:-90}}];
+ for(const width of [5,10,20,30])for(const closed of [false,true]){const geometry=closed?[...curved,{id:'c',x:200,y:200,mode:'corner' as const}]:curved,wall=createWall(geometry,closed,{...prod,strokeWidth:width}),other=createWall(geometry,closed,{...dev,strokeWidth:width,wall:{...dev.wall,generated:{...prod.wall.generated!}}}),opening=createOpening(wall,.5,'door',10),shape=(w:typeof wall)=>generatedPlacements(w,[{...opening,wallId:w.id}]).map(p=>({...p,component:{...p.component,image:''}}));expect(validatePath(JSON.parse(JSON.stringify(wall)))).toEqual(wall);expect(shape(wall)).toEqual(shape(other));expect(shape(wall).length).toBeGreaterThan(0)}
+ expect(()=>createWall(nodes,false,{...prod,wall:{...prod.wall,alignment:'outside'}})).toThrow('Outside');
+})

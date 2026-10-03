@@ -17,7 +17,7 @@ it('hides development wall choices in normal builds while retaining a saved deve
  try{
   const map={...defaultMapStyle(),width:800,height:600,background:null},production=generatedWallStyle(SIMPLE_WALL,map),legacy=generatedWallStyle(SIMPLE_WALL,map,'living-root','dev-1'),onChange=vi.fn()
   const view=render(<WallFields value={production} onChange={onChange}/>)
-  expect(screen.queryByRole('option',{name:/development/})).toBeNull();expect(screen.getByRole('option',{name:'Bleke paleissteen'})).toHaveValue('pale-palace-stone@production-1');expect(screen.getByRole('option',{name:'Marmer'})).toHaveValue('marble@production-1')
+  expect(screen.queryByRole('option',{name:/development/})).toBeNull();expect(screen.getByRole('option',{name:'Bleke paleissteen'})).toHaveValue('pale-palace-stone@production-1');expect(screen.getByRole('option',{name:'Marmer'})).toHaveValue('marble@production-1');expect(screen.getByRole('option',{name:'Ruwe natuursteen'})).toHaveValue('rough-stone@production-1')
   view.rerender(<WallFields value={legacy} onChange={onChange}/>)
   expect(screen.getByRole('option',{name:/development/})).toBeInTheDocument()
   expect(screen.getByLabelText('Wall material or generator')).toHaveValue('living-root@dev-1')
