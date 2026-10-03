@@ -1,0 +1,134 @@
+{
+  "source": "Premium-Pale-Palace-Stone-Production-Artwork.zip",
+  "license": "Supplied for incorporation, modification, distribution in Mapweaver and map exports; no additional attribution or redistribution restrictions. AI-generated; no exclusivity guarantee.",
+  "processing": "None; production PNG bytes copied unchanged.",
+  "components": [
+    {
+      "id": "block-large-1",
+      "role": "block-large",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-large-1.png",
+      "nominalLengthFt": 1.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "pixelWidth": 384,
+      "pixelHeight": 128,
+      "alphaBounds": {
+        "left": 5,
+        "top": 3,
+        "right": 378,
+        "bottom": 124
+      },
+      "opaque": 44314,
+      "partial": 1212,
+      "sha256": "320da5381ac88d73140f3369ec8e7b12c810c54f7ec5eb80a56fafbf53bc46f8",
+      "authoringDirection": "+X",
+      "anchor": "canvas center"
+    },
+    {
+      "id": "block-large-2",
+      "role": "block-large",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-large-2.png",
+      "nominalLengthFt": 1.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "pixelWidth": 384,
+      "pixelHeight": 128,
+      "alphaBounds": {
+        "left": 5,
+        "top": 3,
+        "right": 378,
+        "bottom": 124
+      },
+      "opaque": 44452,
+      "partial": 1056,
+      "sha256": "c641726452968049e57417a6d83ce512acd193266b2bc53fcb03abcb17df4255",
+      "authoringDirection": "+X",
+      "anchor": "canvas center"
+    },
+    {
+      "id": "block-medium-1",
+      "role": "block-medium",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-medium-1.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "pixelWidth": 256,
+      "pixelHeight": 128,
+      "alphaBounds": {
+        "left": 3,
+        "top": 3,
+        "right": 252,
+        "bottom": 124
+      },
+      "opaque": 29485,
+      "partial": 907,
+      "sha256": "c3e8cbe479d7c0b4cc16111d3165f3c20712aaa5348c471e16df1251f2118c87",
+      "authoringDirection": "+X",
+      "anchor": "canvas center"
+    },
+    {
+      "id": "block-medium-2",
+      "role": "block-medium",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-medium-2.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "pixelWidth": 256,
+      "pixelHeight": 128,
+      "alphaBounds": {
+        "left": 3,
+        "top": 3,
+        "right": 252,
+        "bottom": 124
+      },
+      "opaque": 29167,
+      "partial": 874,
+      "sha256": "83289b2e46e90222d55242c3f07ac1e2e7be0e7cde56ca7d8e9ee970aab0471f",
+      "authoringDirection": "+X",
+      "anchor": "canvas center"
+    },
+    {
+      "id": "block-small-1",
+      "role": "block-small",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-small-1.png",
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "pixelWidth": 128,
+      "pixelHeight": 128,
+      "alphaBounds": {
+        "left": 3,
+        "top": 3,
+        "right": 124,
+        "bottom": 124
+      },
+      "opaque": 14324,
+      "partial": 533,
+      "sha256": "2084918dd60b5a71d098a937c7b2acf027c30c55f3af8d9f636ac2c643174d6f",
+      "authoringDirection": "+X",
+      "anchor": "canvas center"
+    },
+    {
+      "id": "block-small-2",
+      "role": "block-small",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-small-2.png",
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "pixelWidth": 128,
+      "pixelHeight": 128,
+      "alphaBounds": {
+        "left": 3,
+        "top": 3,
+        "right": 124,
+        "bottom": 124
+      },
+      "opaque": 14387,
+      "partial": 489,
+      "sha256": "d129111aff2f329c7c98d461614602e9dc7e5469edc61dc0db6ebd0794a52f6f",
+      "authoringDirection": "+X",
+      "anchor": "canvas center"
+    }
+  ],
+  "alphaBoundsConvention": "Zero-based; right and bottom inclusive. Supplied report used exclusive right/bottom; same measured pixels."
+}

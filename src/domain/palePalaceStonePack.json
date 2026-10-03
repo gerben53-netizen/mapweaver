@@ -1,0 +1,65 @@
+{
+  "id": "pale-palace-stone",
+  "revision": "production-1",
+  "name": "Bleke paleissteen",
+  "renderingMode": "generated",
+  "generatorType": "masonry",
+  "components": [
+    {
+      "id": "block-large-1",
+      "role": "block-large",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-large-1.png",
+      "nominalLengthFt": 1.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "block-large-2",
+      "role": "block-large",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-large-2.png",
+      "nominalLengthFt": 1.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "block-medium-1",
+      "role": "block-medium",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-medium-1.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "block-medium-2",
+      "role": "block-medium",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-medium-2.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "block-small-1",
+      "role": "block-small",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-small-1.png",
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "block-small-2",
+      "role": "block-small",
+      "image": "/generated-walls/pale-palace-stone-production-1/block-small-2.png",
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    }
+  ],
+  "defaults": {
+    "width": 1,
+    "organic": 0,
+    "growth": 0,
+    "overgrowth": 0,
+    "regularity": 0.9,
+    "variation": 0.2
+  }
+}

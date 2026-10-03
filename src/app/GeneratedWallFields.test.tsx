@@ -12,12 +12,12 @@ it('offers width presets and only the three generated parameters, with explicit 
  fireEvent.change(screen.getByLabelText('Wall growth'),{target:{value:90}});expect(onChange.mock.lastCall?.[0].wall.generated.growth).toBe(.9)
  fireEvent.click(screen.getByRole('button',{name:'Randomize variation'}));expect(onChange.mock.lastCall?.[0].wall.generated.seed).not.toBe(value.wall.generated!.seed);expect(screen.getAllByRole('slider')).toHaveLength(3)
 })
-it('hides development wall choices in installer builds while retaining a saved development selection',()=>{
- vi.stubEnv('VITE_MAPWEAVER_INSTALLER','1')
+it('hides development wall choices in normal builds while retaining a saved development selection',()=>{
+ vi.stubEnv('VITE_MAPWEAVER_INSTALLER','')
  try{
   const map={...defaultMapStyle(),width:800,height:600,background:null},production=generatedWallStyle(SIMPLE_WALL,map),legacy=generatedWallStyle(SIMPLE_WALL,map,'living-root','dev-1'),onChange=vi.fn()
   const view=render(<WallFields value={production} onChange={onChange}/>)
-  expect(screen.queryByRole('option',{name:/development/})).toBeNull()
+  expect(screen.queryByRole('option',{name:/development/})).toBeNull();expect(screen.getByRole('option',{name:'Bleke paleissteen'})).toHaveValue('pale-palace-stone@production-1')
   view.rerender(<WallFields value={legacy} onChange={onChange}/>)
   expect(screen.getByRole('option',{name:/development/})).toBeInTheDocument()
   expect(screen.getByLabelText('Wall material or generator')).toHaveValue('living-root@dev-1')

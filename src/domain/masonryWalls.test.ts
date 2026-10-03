@@ -49,3 +49,11 @@ it('stores masonry seed and controls through exact native wall undo/redo without
  const changed=structuredClone(project.getState().objects);history.undo();expect(project.getState().objects).toEqual([wall]);history.redo();expect(project.getState().objects).toEqual(changed)
  expect(changed).toHaveLength(1);expect(validatePath(JSON.parse(JSON.stringify(changed[0])))).toEqual(changed[0])
 })
+
+it('admits production pale palace components with the shared engine at all widths and preserves DEV fixtures',()=>{
+ const definition=generatedDefinition({id:'pale-palace-stone',revision:'production-1'});expect(validateGeneratedDefinition(definition)).toBe(definition);expect(definition.components).toHaveLength(6);expect(definition.defaults).toMatchObject({regularity:.9,variation:.2});
+ for(const c of definition.components){expect(c.weight).toBe(1);expect(c.image).toBe('/generated-walls/pale-palace-stone-production-1/'+c.id+'.png');expect(c.nominalWidthFt).toBe(.5)}
+ const prod=generatedWallStyle(SIMPLE_WALL,map,definition.id,definition.revision);for(const width of [5,10,20,30]){const wall=createWall(nodes,false,{...prod,strokeWidth:width});expect(validatePath(wall)).toEqual(wall);expect(generatedPlacements(wall)).toEqual(generatedPlacements(wall));expect(new Set(generatedPlacements(wall).map(p=>p.run)).size).toBe(width/5)}
+ expect(generatedDefinition({id:'masonry-dressed',revision:'dev-1'}).generatorType).toBe('masonry');expect(generatedDefinition({id:'masonry-rough',revision:'dev-1'}).generatorType).toBe('masonry');
+ const prototype=createWall(nodes,false,style()),wall=createWall(nodes,false,prod);const shape=(w:typeof wall)=>generatedPlacements(w).map(p=>({...p,component:{...p.component,image:''}}));expect(shape(wall)).toEqual(shape(prototype));
+})
