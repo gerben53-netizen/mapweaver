@@ -15,11 +15,11 @@ function fixture() {
   const store = new Storage(path.join(root, 'data')); stores.push(store)
   return { store, frontend }
 }
-it('installs the 77 deliberate standard stamps once and never revives an inactive existing asset', async () => {
+it('installs the 77 standard stamps and nine production floors once without reviving inactive assets', async () => {
   const { store, frontend } = fixture()
   await initializeDefaultContent(store, frontend, false)
   const before = store.db.prepare('SELECT id,sha256 FROM assets ORDER BY id').all()
-  expect(before).toHaveLength(77)
+  expect(before).toHaveLength(86)
   const id = (before[0] as { id: string }).id
   const quality = JSON.stringify({ classification: 'REJECT', reason: 'User deactivated', semanticClass: null, softShadowDefault: null })
   store.db.prepare('UPDATE assets SET quality=? WHERE id=?').run(quality, id)
@@ -42,6 +42,6 @@ it('resumes a partially completed first install without duplicating its imported
   expect(first).toHaveLength(46)
   copyFileSync(path.join('public', second), path.join(frontend, second))
   await initializeDefaultContent(store, frontend, true)
-  expect(store.db.prepare('SELECT id FROM assets').all()).toHaveLength(77)
+  expect(store.db.prepare('SELECT id FROM assets').all()).toHaveLength(86)
   for (const row of first) expect(store.db.prepare('SELECT id FROM assets WHERE id=?').get((row as { id: string }).id)).toEqual(row)
 })

@@ -18,7 +18,7 @@ export async function initializeDefaultContent(store: Storage, frontend: string,
   store.db.prepare('INSERT OR REPLACE INTO settings VALUES(?,?)').run(key, 'pending')
   const manifest = JSON.parse(readFileSync(file, 'utf8')) as { libraryRevision: string; libraryPacks: { file: string; assets: number }[] }
   for (const pack of manifest.libraryPacks) {
-    if (!/^(world-assets-painterly|settlement-assets-painterly)\/[-a-z]+\.zip$/.test(pack.file)) throw Error('Invalid bundled content path.')
+    if (!/^(world-assets-painterly|settlement-assets-painterly|premium-core-interior-materials)\/[-a-z]+\.zip$/.test(pack.file)) throw Error('Invalid bundled content path.')
     const preview = await previewPack(store, readFileSync(path.join(frontend, pack.file)))
     if (preview.errors.length) throw Error('Bundled asset pack validation failed: ' + preview.errors.join('; '))
     const result = commitPack(store, { token: preview.token, revision: preview.revision, duplicate: 'keep', createCategories: true, useExistingCategories: true })

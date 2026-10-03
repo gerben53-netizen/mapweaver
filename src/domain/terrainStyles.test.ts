@@ -17,7 +17,7 @@ import { WORLD_DEFAULTS } from '../world/model'
 const area = () => ({...createArea(rectangleGeometry({x:20,y:20,width:200,height:160})),land:{...defaultLandArea('landmass'),appearance:terrainAppearance('grassland')}})
 function document() {
   const o = area(),layers=[{id:'land',name:'Land',visible:true,locked:false,objectIds:[o.id]}]
-  return {formatVersion:12 as const,id:'terrain',name:'Terrain',createdAt:'2026-09-25T00:00:00.000Z',modifiedAt:'2026-09-25T00:00:00.000Z',assets:[],map:{width:800,height:600,...defaultMapStyle(),background:null,mapType:'world-map' as const,geography:defaultGeography('world-map'),water:waterAppearance('calm')},objects:[o],layers,objectGroups:[],layerTree:flatLayerTree(layers)}
+  return {formatVersion:12 as const,id:'terrain',name:'Terrain',createdAt:'2026-09-25T00:00:00.000Z',modifiedAt:'2026-09-25T00:00:00.000Z',assets:[],map:{width:800,height:600,...defaultMapStyle(),campfireRevision:1,background:null,mapType:'world-map' as const,geography:defaultGeography('world-map'),water:waterAppearance('calm')},objects:[o],layers,objectGroups:[],layerTree:flatLayerTree(layers)}
 }
 beforeEach(()=>{const d=document();store.setState(d);editor.setState({activeLayerId:'land',selectedObjectIds:[]});history.reset()})
 it('validates every versioned terrain/coast/water preset and bounded fractional scales',()=>{

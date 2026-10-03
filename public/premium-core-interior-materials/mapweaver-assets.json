@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "collection": {
+    "title": "Premium interieurmaterialen — basis"
+  },
+  "assets": [
+    {
+      "file": "images/wood-pale.png",
+      "title": "Lichte houten vloer",
+      "categoryPath": [
+        "Materialen",
+        "Vloeren",
+        "Hout"
+      ],
+      "applicableMapTypes": [
+        "battlemap"
+      ],
+      "patternScale": 0.1594896331738437,
+      "author": "AI-productie via ingebouwde OpenAI-beeldgeneratie, in opdracht van gebruiker",
+      "source": "Nieuw gegenereerde materiaaltextuur; supplied requirements als art direction. Geen bestaande materiaal-PNG gekopieerd.",
+      "license": "Nieuw AI-artwork voor de opdrachtgever; geen aanvullende beperkingen vanuit deze productie op gebruik, wijziging of herdistributie in Mapweaver, inclusief installer. Toepasselijke voorwaarden van de gebruikte OpenAI-dienst blijven gelden. Geen claim op exclusiviteit of rechten op aangeleverde referentie-assets.",
+      "type": "fillPattern",
+      "tags": [
+        "premium",
+        "vloer",
+        "hout",
+        "premium.floor.v1.wood-pale"
+      ],
+      "sha256": "85bdeb98244864fb5991f5cc5524059c688bd43b98fcb67bf4a03affc3cc6ee2",
+      "description": "premium.floor.v1.wood-pale. Native 1254 × 1254 px; complete repeat tile 20 × 20 ft. At 10 px/ft set Area repeat scale explicitly to 200/1254 (0.1594896331738437). Existing Area transforms are preserved. Texture Brush uses the recommended patternScale.",
+      "quality": {
+        "classification": "KEEP",
+        "reason": "Accepted native production core floor; verified source/proofs and canonical scale.",
+        "semanticClass": "interior_floor",
+        "softShadowDefault": false
+      }
+    },
+    {
+      "file": "images/wood-natural.png",
+      "title": "Natuurlijke houten vloer",
+      "categoryPath": [
+        "Materialen",
+        "Vloeren",
+        "Hout"
+      ],
+      "applicableMapTypes": [
+        "battlemap"
+      ],
+      "patternScale": 0.1594896331738437,
+      "author": "AI-productie via ingebouwde OpenAI-beeldgeneratie, in opdracht van gebruiker",
+      "source": "Nieuw gegenereerde materiaaltextuur; supplied requirements als art direction. Geen bestaande materiaal-PNG gekopieerd.",
+      "license": "Nieuw AI-artwork voor de opdrachtgever; geen aanvullende beperkingen vanuit deze productie op gebruik, wijziging of herdistributie in Mapweaver, inclusief installer. Toepasselijke voorwaarden van de gebruikte OpenAI-dienst blijven gelden. Geen claim op exclusiviteit of rechten op aangeleverde referentie-assets.",
+      "type": "fillPattern",
+      "tags": [
+        "premium",
+        "vloer",
+        "hout",
+        "premium.floor.v1.wood-natural"
+      ],
+      "sha256": "7f14c0b801387ec68adb1b6cdeec6d8a0c6a63bc04160671f2b7e91249321776",
+      "description": "premium.floor.v1.wood-natural. Native 1254 × 1254 px; complete repeat tile 20 × 20 ft. At 10 px/ft set Area repeat scale explicitly to 200/1254 (0.1594896331738437). Existing Area transforms are preserved. Texture Brush uses the recommended patternScale.",
+      "quality": {
+        "classification": "KEEP",
+        "reason": "Accepted native production core floor; verified source/proofs and canonical scale.",
+        "semanticClass": "interior_floor",
+        "softShadowDefault": false
+      }
+    },
+    {
+      "file": "images/wood-worn.png",
+      "title": "Versleten houten vloer",
+      "categoryPath": [
+        "Materialen",
+        "Vloeren",
+        "Hout"
+      ],
+      "applicableMapTypes": [
+        "battlemap"
+      ],
+      "patternScale": 0.1594896331738437,
+      "author": "AI-productie via ingebouwde OpenAI-beeldgeneratie, in opdracht van gebruiker",
+      "source": "Nieuw gegenereerde materiaaltextuur; supplied requirements als art direction. Geen bestaande materiaal-PNG gekopieerd.",
+      "license": "Nieuw AI-artwork voor de opdrachtgever; geen aanvullende beperkingen vanuit deze productie op gebruik, wijziging of herdistributie in Mapweaver, inclusief installer. Toepasselijke voorwaarden van de gebruikte OpenAI-dienst blijven gelden. Geen claim op exclusiviteit of rechten op aangeleverde referentie-assets.",
+      "type": "fillPattern",
+      "tags": [
+        "premium",
+        "vloer",
+        "hout",
+        "premium.floor.v1.wood-worn"
+      ],
+      "sha256": "20479d0f3facb7056590a9dfd330c38835f710d2ba1db29a137ff77f4c986ee5",
+      "description": "premium.floor.v1.wood-worn. Native 1254 × 1254 px; complete repeat tile 20 × 20 ft. At 10 px/ft set Area repeat scale explicitly to 200/1254 (0.1594896331738437). Existing Area transforms are preserved. Texture Brush uses the recommended patternScale.",
+      "quality": {
+        "classification": "KEEP",
+        "reason": "Accepted native production core floor; verified source/proofs and canonical scale.",
+        "semanticClass": "interior_floor",
+        "softShadowDefault": false
+      }
+    },
+    {
+      "file": "images/wood-heartwood.png",
+      "title": "Kernhout- en wortelvloer",
+      "categoryPath": [
+        "Materialen",
+        "Vloeren",
+        "Hout"
+      ],
+      "applicableMapTypes": [
+        "battlemap"
+      ],
+      "patternScale": 0.1594896331738437,
+      "author": "AI-productie via ingebouwde OpenAI-beeldgeneratie, in opdracht van gebruiker",
+      "source": "Nieuw gegenereerde materiaaltextuur; supplied requirements als art direction. Geen bestaande materiaal-PNG gekopieerd.",
+      "license": "Nieuw AI-artwork voor de opdrachtgever; geen aanvullende beperkingen vanuit deze productie op gebruik, wijziging of herdistributie in Mapweaver, inclusief installer. Toepasselijke voorwaarden van de gebruikte OpenAI-dienst blijven gelden. Geen claim op exclusiviteit of rechten op aangeleverde referentie-assets.",
+      "type": "fillPattern",
+      "tags": [
+        "premium",
+        "vloer",
+        "hout",
+        "premium.floor.v1.wood-heartwood"
+      ],
+      "sha256": "ba0afe83ba34b7ed6a92e7ce3ff9a4301371272b2b26bfcccc43e1420ad070b0",
+      "description": "premium.floor.v1.wood-heartwood. Native 1254 × 1254 px; complete repeat tile 20 × 20 ft. At 10 px/ft set Area repeat scale explicitly to 200/1254 (0.1594896331738437). Existing Area transforms are preserved. Texture Brush uses the recommended patternScale.",
+      "quality": {
+        "classification": "KEEP",
+        "reason": "Accepted native production core floor; verified source/proofs and canonical scale.",
+        "semanticClass": "interior_floor",
+        "softShadowDefault": false
+      }
+    },
+    {
+      "file": "images/stone-pale.png",
+      "title": "Lichte stenen vloer",
+      "categoryPath": [
+        "Materialen",
+        "Vloeren",
+        "Steen"
+      ],
+      "applicableMapTypes": [
+        "battlemap"
+      ],
+      "patternScale": 0.1594896331738437,
+      "author": "AI-productie via ingebouwde OpenAI-beeldgeneratie, in opdracht van gebruiker",
+      "source": "Nieuw gegenereerde materiaaltextuur; supplied requirements als art direction. Geen bestaande materiaal-PNG gekopieerd.",
+      "license": "Nieuw AI-artwork voor de opdrachtgever; geen aanvullende beperkingen vanuit deze productie op gebruik, wijziging of herdistributie in Mapweaver, inclusief installer. Toepasselijke voorwaarden van de gebruikte OpenAI-dienst blijven gelden. Geen claim op exclusiviteit of rechten op aangeleverde referentie-assets.",
+      "type": "fillPattern",
+      "tags": [
+        "premium",
+        "vloer",
+        "steen",
+        "premium.floor.v1.stone-pale"
+      ],
+      "sha256": "d005a6fc2bf587d7dd92df28e79a3e7d2a72e96f580ba9bc6c16c57523c2e27f",
+      "description": "premium.floor.v1.stone-pale. Native 1254 × 1254 px; complete repeat tile 20 × 20 ft. At 10 px/ft set Area repeat scale explicitly to 200/1254 (0.1594896331738437). Existing Area transforms are preserved. Texture Brush uses the recommended patternScale.",
+      "quality": {
+        "classification": "KEEP",
+        "reason": "Accepted native production core floor; verified source/proofs and canonical scale.",
+        "semanticClass": "interior_floor",
+        "softShadowDefault": false
+      }
+    },
+    {
+      "file": "images/stone-palace.png",
+      "title": "Paleisstenen vloer",
+      "categoryPath": [
+        "Materialen",
+        "Vloeren",
+        "Steen"
+      ],
+      "applicableMapTypes": [
+        "battlemap"
+      ],
+      "patternScale": 0.1594896331738437,
+      "author": "AI-productie via ingebouwde OpenAI-beeldgeneratie, in opdracht van gebruiker",
+      "source": "Nieuw gegenereerde materiaaltextuur; supplied requirements als art direction. Geen bestaande materiaal-PNG gekopieerd.",
+      "license": "Nieuw AI-artwork voor de opdrachtgever; geen aanvullende beperkingen vanuit deze productie op gebruik, wijziging of herdistributie in Mapweaver, inclusief installer. Toepasselijke voorwaarden van de gebruikte OpenAI-dienst blijven gelden. Geen claim op exclusiviteit of rechten op aangeleverde referentie-assets.",
+      "type": "fillPattern",
+      "tags": [
+        "premium",
+        "vloer",
+        "steen",
+        "premium.floor.v1.stone-palace"
+      ],
+      "sha256": "68786e100a6a64c6f0b301c242e8f9d0d4658944ff067525f614c08edeb5f776",
+      "description": "premium.floor.v1.stone-palace. Native 1254 × 1254 px; complete repeat tile 20 × 20 ft. At 10 px/ft set Area repeat scale explicitly to 200/1254 (0.1594896331738437). Existing Area transforms are preserved. Texture Brush uses the recommended patternScale.",
+      "quality": {
+        "classification": "KEEP",
+        "reason": "Accepted native production core floor; verified source/proofs and canonical scale.",
+        "semanticClass": "interior_floor",
+        "softShadowDefault": false
+      }
+    },
+    {
+      "file": "images/marble-neutral.png",
+      "title": "Marmeren vloer",
+      "categoryPath": [
+        "Materialen",
+        "Vloeren",
+        "Steen"
+      ],
+      "applicableMapTypes": [
+        "battlemap"
+      ],
+      "patternScale": 0.1594896331738437,
+      "author": "AI-productie via ingebouwde OpenAI-beeldgeneratie, in opdracht van gebruiker",
+      "source": "Nieuw gegenereerde materiaaltextuur; supplied requirements als art direction. Geen bestaande materiaal-PNG gekopieerd.",
+      "license": "Nieuw AI-artwork voor de opdrachtgever; geen aanvullende beperkingen vanuit deze productie op gebruik, wijziging of herdistributie in Mapweaver, inclusief installer. Toepasselijke voorwaarden van de gebruikte OpenAI-dienst blijven gelden. Geen claim op exclusiviteit of rechten op aangeleverde referentie-assets.",
+      "type": "fillPattern",
+      "tags": [
+        "premium",
+        "vloer",
+        "steen",
+        "premium.floor.v1.marble-neutral"
+      ],
+      "sha256": "e4691c71c61ce7d2535e690a54bcb0da7ba151b820c936c6b9274cfa06c65a8a",
+      "description": "premium.floor.v1.marble-neutral. Native 1254 × 1254 px; complete repeat tile 20 × 20 ft. At 10 px/ft set Area repeat scale explicitly to 200/1254 (0.1594896331738437). Existing Area transforms are preserved. Texture Brush uses the recommended patternScale.",
+      "quality": {
+        "classification": "KEEP",
+        "reason": "Accepted native production core floor; verified source/proofs and canonical scale.",
+        "semanticClass": "interior_floor",
+        "softShadowDefault": false
+      }
+    },
+    {
+      "file": "images/earth-restrained.png",
+      "title": "Rustige aarden vloer",
+      "categoryPath": [
+        "Materialen",
+        "Vloeren",
+        "Natuurlijke bodem"
+      ],
+      "applicableMapTypes": [
+        "battlemap"
+      ],
+      "patternScale": 0.1594896331738437,
+      "author": "AI-productie via ingebouwde OpenAI-beeldgeneratie, in opdracht van gebruiker",
+      "source": "Nieuw gegenereerde materiaaltextuur; supplied requirements als art direction. Geen bestaande materiaal-PNG gekopieerd.",
+      "license": "Nieuw AI-artwork voor de opdrachtgever; geen aanvullende beperkingen vanuit deze productie op gebruik, wijziging of herdistributie in Mapweaver, inclusief installer. Toepasselijke voorwaarden van de gebruikte OpenAI-dienst blijven gelden. Geen claim op exclusiviteit of rechten op aangeleverde referentie-assets.",
+      "type": "fillPattern",
+      "tags": [
+        "premium",
+        "vloer",
+        "natuurlijke bodem",
+        "premium.floor.v1.earth-restrained"
+      ],
+      "sha256": "05da564da7aa86ea8cb4b51f9864baa9c0ba62a83326c6c5f3e5cc208485e04b",
+      "description": "premium.floor.v1.earth-restrained. Native 1254 × 1254 px; complete repeat tile 20 × 20 ft. At 10 px/ft set Area repeat scale explicitly to 200/1254 (0.1594896331738437). Existing Area transforms are preserved. Texture Brush uses the recommended patternScale.",
+      "quality": {
+        "classification": "KEEP",
+        "reason": "Accepted native production core floor; verified source/proofs and canonical scale.",
+        "semanticClass": "interior_floor",
+        "softShadowDefault": false
+      }
+    },
+    {
+      "file": "images/wood-parquet.png",
+      "title": "Paleisparket",
+      "categoryPath": [
+        "Materialen",
+        "Vloeren",
+        "Hout"
+      ],
+      "applicableMapTypes": [
+        "battlemap"
+      ],
+      "patternScale": 0.1594896331738437,
+      "author": "AI-productie via ingebouwde OpenAI-beeldgeneratie, in opdracht van gebruiker",
+      "source": "Nieuw gegenereerde materiaaltextuur; supplied requirements als art direction. Geen bestaande materiaal-PNG gekopieerd.",
+      "license": "Nieuw AI-artwork voor de opdrachtgever; geen aanvullende beperkingen vanuit deze productie op gebruik, wijziging of herdistributie in Mapweaver, inclusief installer. Toepasselijke voorwaarden van de gebruikte OpenAI-dienst blijven gelden. Geen claim op exclusiviteit of rechten op aangeleverde referentie-assets.",
+      "type": "fillPattern",
+      "tags": [
+        "premium",
+        "vloer",
+        "hout",
+        "premium.floor.v1.wood-parquet"
+      ],
+      "sha256": "f738010d35e7cb56acf0d4e5107c38c8663da3f3063e83f31c05233eee3fe30a",
+      "description": "premium.floor.v1.wood-parquet. Native 1254 × 1254 px; complete repeat tile 20 × 20 ft. At 10 px/ft set Area repeat scale explicitly to 200/1254 (0.1594896331738437). Existing Area transforms are preserved. Texture Brush uses the recommended patternScale.",
+      "quality": {
+        "classification": "KEEP",
+        "reason": "Accepted native production core floor; verified source/proofs and canonical scale.",
+        "semanticClass": "interior_floor",
+        "softShadowDefault": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "sourcePack": "Mapweaver-Premium-Core-Interior-Materials-Pack.zip",
+  "sourceDate": "2026-10-03",
+  "rights": "LICENSE.txt",
+  "identity": "Stable technical IDs in asset tags; runtime IDs use the existing role/SHA-256 identity and persist after import. This is provenance, not a separate material registry.",
+  "assets": [
+    {
+      "id": "premium.floor.v1.wood-pale",
+      "file": "images/wood-pale.png",
+      "title": "Lichte houten vloer",
+      "sha256": "85bdeb98244864fb5991f5cc5524059c688bd43b98fcb67bf4a03affc3cc6ee2",
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "physicalTileFt": [
+        20,
+        20
+      ],
+      "canonicalPixelsPerFoot": 10,
+      "patternScale": 0.1594896331738437,
+      "replacesLegacyAssetIds": [
+        "b64d2ea2-ebab-4a7f-bd9a-475b297251c6",
+        "af19cbaa-4473-4927-9b1e-f658d1743c82"
+      ],
+      "postprocessing": "None: supplied PNG bytes preserved exactly."
+    },
+    {
+      "id": "premium.floor.v1.wood-natural",
+      "file": "images/wood-natural.png",
+      "title": "Natuurlijke houten vloer",
+      "sha256": "7f14c0b801387ec68adb1b6cdeec6d8a0c6a63bc04160671f2b7e91249321776",
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "physicalTileFt": [
+        20,
+        20
+      ],
+      "canonicalPixelsPerFoot": 10,
+      "patternScale": 0.1594896331738437,
+      "replacesLegacyAssetIds": [
+        "a14e2aa2-94b1-43f7-b4b3-5fc4cabba235"
+      ],
+      "postprocessing": "None: supplied PNG bytes preserved exactly."
+    },
+    {
+      "id": "premium.floor.v1.wood-worn",
+      "file": "images/wood-worn.png",
+      "title": "Versleten houten vloer",
+      "sha256": "20479d0f3facb7056590a9dfd330c38835f710d2ba1db29a137ff77f4c986ee5",
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "physicalTileFt": [
+        20,
+        20
+      ],
+      "canonicalPixelsPerFoot": 10,
+      "patternScale": 0.1594896331738437,
+      "replacesLegacyAssetIds": [
+        "56b550b6-9903-4206-a618-f913713aa72b",
+        "beb6c30d-b9fb-469f-ac23-3863732a6fb9"
+      ],
+      "postprocessing": "None: supplied PNG bytes preserved exactly."
+    },
+    {
+      "id": "premium.floor.v1.wood-heartwood",
+      "file": "images/wood-heartwood.png",
+      "title": "Kernhout- en wortelvloer",
+      "sha256": "ba0afe83ba34b7ed6a92e7ce3ff9a4301371272b2b26bfcccc43e1420ad070b0",
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "physicalTileFt": [
+        20,
+        20
+      ],
+      "canonicalPixelsPerFoot": 10,
+      "patternScale": 0.1594896331738437,
+      "replacesLegacyAssetIds": [
+        "09e406f9-2ee0-4571-b7e9-e3a43bcc8e24",
+        "37e14bf4-6164-4628-9ba7-7781a0abfba3",
+        "c57e5fa5-dda8-4833-840c-c5c915e09c7f"
+      ],
+      "postprocessing": "None: supplied PNG bytes preserved exactly."
+    },
+    {
+      "id": "premium.floor.v1.stone-pale",
+      "file": "images/stone-pale.png",
+      "title": "Lichte stenen vloer",
+      "sha256": "d005a6fc2bf587d7dd92df28e79a3e7d2a72e96f580ba9bc6c16c57523c2e27f",
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "physicalTileFt": [
+        20,
+        20
+      ],
+      "canonicalPixelsPerFoot": 10,
+      "patternScale": 0.1594896331738437,
+      "replacesLegacyAssetIds": [
+        "9352772d-5cea-455c-a997-5d9988857905",
+        "3e5558c7-dba6-4818-b0a4-5e3692987cff"
+      ],
+      "postprocessing": "None: supplied PNG bytes preserved exactly."
+    },
+    {
+      "id": "premium.floor.v1.stone-palace",
+      "file": "images/stone-palace.png",
+      "title": "Paleisstenen vloer",
+      "sha256": "68786e100a6a64c6f0b301c242e8f9d0d4658944ff067525f614c08edeb5f776",
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "physicalTileFt": [
+        20,
+        20
+      ],
+      "canonicalPixelsPerFoot": 10,
+      "patternScale": 0.1594896331738437,
+      "replacesLegacyAssetIds": [],
+      "postprocessing": "None: supplied PNG bytes preserved exactly."
+    },
+    {
+      "id": "premium.floor.v1.marble-neutral",
+      "file": "images/marble-neutral.png",
+      "title": "Marmeren vloer",
+      "sha256": "e4691c71c61ce7d2535e690a54bcb0da7ba151b820c936c6b9274cfa06c65a8a",
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "physicalTileFt": [
+        20,
+        20
+      ],
+      "canonicalPixelsPerFoot": 10,
+      "patternScale": 0.1594896331738437,
+      "replacesLegacyAssetIds": [],
+      "postprocessing": "None: supplied PNG bytes preserved exactly."
+    },
+    {
+      "id": "premium.floor.v1.earth-restrained",
+      "file": "images/earth-restrained.png",
+      "title": "Rustige aarden vloer",
+      "sha256": "05da564da7aa86ea8cb4b51f9864baa9c0ba62a83326c6c5f3e5cc208485e04b",
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "physicalTileFt": [
+        20,
+        20
+      ],
+      "canonicalPixelsPerFoot": 10,
+      "patternScale": 0.1594896331738437,
+      "replacesLegacyAssetIds": [
+        "a28e9211-d40d-48e2-8a9c-f7271994d385",
+        "d14245ed-675c-417f-b0e7-f4c5feb7de94"
+      ],
+      "postprocessing": "None: supplied PNG bytes preserved exactly."
+    },
+    {
+      "id": "premium.floor.v1.wood-parquet",
+      "file": "images/wood-parquet.png",
+      "title": "Paleisparket",
+      "sha256": "f738010d35e7cb56acf0d4e5107c38c8663da3f3063e83f31c05233eee3fe30a",
+      "nativePixels": [
+        1254,
+        1254
+      ],
+      "physicalTileFt": [
+        20,
+        20
+      ],
+      "canonicalPixelsPerFoot": 10,
+      "patternScale": 0.1594896331738437,
+      "replacesLegacyAssetIds": [],
+      "postprocessing": "None: supplied PNG bytes preserved exactly."
+    }
+  ]
+}

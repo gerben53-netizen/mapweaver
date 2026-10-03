@@ -1,0 +1,7 @@
+HERKOMST EN GEBRUIK
+
+Nieuw AI-artwork voor de opdrachtgever; geen aanvullende beperkingen vanuit deze productie op gebruik, wijziging of herdistributie in Mapweaver, inclusief installer. Toepasselijke voorwaarden van de gebruikte OpenAI-dienst blijven gelden. Geen claim op exclusiviteit of rechten op aangeleverde referentie-assets.
+
+Productie: ingebouwde OpenAI-beeldgeneratie in ChatGPT, 3 oktober 2026. Geen API/CLI-generatie, API-sleutel of externe stocktextures gebruikt. De negen materiaalbeelden zijn nieuw gegenereerd. PNG-opslag voegt alleen sRGB-kleurmetadata toe; RGB-pixels en bronafmetingen blijven behouden.
+
+Aangeleverde referenties: Premium-Materials-Requirements.zip, inventarissen, requirements, sfeerbeelden, eerdere PQA-context, Premium stamps en Living Root production-1. Hun oorspronkelijke rechten blijven bij de betreffende rechthebbenden. Zij zijn uitsluitend verwerkt in de gevraagde review-/contextproeven, niet als losse productie-assets meegeleverd. Deze montages niet als afzonderlijk referentie-assetproduct herdistribueren. Er wordt geen nieuwe licentie op die referenties verstrekt.

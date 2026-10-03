@@ -20,7 +20,7 @@ Doelplatform: Windows 10 of 11, x64, met een recente Edge, Chrome of Firefox. No
 
 Mapweaver start op de achtergrond en opent de editor in uw standaardbrowser. Het M-pictogram staat in het systeemvak, eventueel onder de verborgen pictogrammen. Het browservenster sluiten stopt Mapweaver niet; gebruik **Stop Mapweaver** of het systeemvakmenu.
 
-Bij een volledig nieuwe gegevensmap worden de database en 77 standaardstamps aangemaakt. Een bestaande bibliotheek wordt behouden en niet opnieuw gevuld. De laatste kaart wordt heropend als die bestaat; anders kunt u een campagne en een nieuwe kaart maken.
+Bij een volledig nieuwe gegevensmap worden de database, 77 standaardstamps en negen Premium-interieurvloeren aangemaakt. Een bestaande bibliotheek wordt behouden en niet opnieuw gevuld. De laatste kaart wordt heropend als die bestaat; anders kunt u een campagne en een nieuwe kaart maken.
 
 De lokale service is alleen bereikbaar op uw eigen computer. Er hoeft geen firewallpoort te worden geopend.
 
@@ -28,7 +28,7 @@ De lokale service is alleen bereikbaar op uw eigen computer. Er hoeft geen firew
 
 De editor bevat lagen, selectie, stamps, gebieden, paden, muren, deuren/ramen, brushes, rasters, undo/redo, lokale opslag en PNG-export. Stamp Soft Shadow is beschikbaar. Living Root gebruikt 28 productiecomponenten. Er zijn 32 Painterly Terrain-materialen, 46 Painterly World-stamps en 31 geïllustreerde nederzettingen/landmarks. Acht gecureerde lettertypefamilies plus Liberation Sans en hun licenties zijn inbegrepen.
 
-De standaardstamps zijn vooral voor regionale en wereldkaarten. De bibliotheek kan assets filteren op kaarttype. Eigen interieur- of battlemapillustraties kunt u toevoegen. Er worden geen persoonlijke campagnes, voorbeeldkaarten, ontwikkelbibliotheek of QA-bestanden geïnstalleerd.
+De standaardstamps zijn vooral voor regionale en wereldkaarten. De negen Premium-interieurvloeren staan onder Materialen → Vloeren, voor battlemaps. Een volledige tegel is 20 × 20 ft. Bij 10 px/ft gebruikt de Texture Brush de aanbevolen schaal; stel voor een Area de herhaalschaal expliciet in op `200/1254` (ongeveer `0.15949`). Bestaande Area-transformaties blijven behouden. De bibliotheek kan assets filteren op kaarttype. Eigen interieur- of battlemapillustraties kunt u toevoegen. Er worden geen persoonlijke campagnes, voorbeeldkaarten, ontwikkelbibliotheek of QA-bestanden geïnstalleerd.
 
 ## Wat kun je zelf toevoegen?
 
