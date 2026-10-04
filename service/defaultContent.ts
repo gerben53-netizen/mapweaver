@@ -16,17 +16,24 @@ export async function initializeDefaultContent(store: Storage, frontend: string,
     return
   }
   if (!additive) store.db.prepare('INSERT OR REPLACE INTO settings VALUES(?,?)').run(key, 'pending')
-  const manifest = JSON.parse(readFileSync(file, 'utf8')) as { libraryRevision: string; libraryPacks: { file: string; assets: number }[] }
+  const manifest = JSON.parse(readFileSync(file, 'utf8')) as { libraryRevision: string; libraryPacks: { file: string; assets: number; revision?: string }[] }
   for (const pack of manifest.libraryPacks) {
-    if (!/^(world-assets-painterly|settlement-assets-painterly|premium-core-interior-materials)\/[-a-z]+\.zip$/.test(pack.file)) throw Error('Invalid bundled content path.')
+    if (!/^(world-assets-painterly|settlement-assets-painterly|premium-core-interior-materials|pqa-premium-stamps)\/[-a-z]+\.zip$/.test(pack.file)) throw Error('Invalid bundled content path.')
     const packKey = 'primary-default-pack:' + pack.file
     const applied = store.db.prepare('SELECT value FROM settings WHERE key=?').get(packKey) as {value: string} | undefined
-    if (additive && applied?.value === manifest.libraryRevision) continue
+    const packRevision = pack.revision || manifest.libraryRevision
+    if (additive && (applied?.value === packRevision || applied?.value === manifest.libraryRevision)) continue
     const preview = await previewPack(store, readFileSync(path.join(additive?.contentRoot || frontend, pack.file)))
     if (preview.errors.length) throw Error('Bundled asset pack validation failed: ' + preview.errors.join('; '))
+    // Older receipts used the distribution revision. An unchanged, fully present
+    // pack needs no metadata write when another pack changes that revision.
+    if (additive && applied && preview.entries.length === pack.assets && preview.entries.every(entry => entry.existing)) {
+      store.db.prepare('INSERT OR REPLACE INTO settings VALUES(?,?)').run(packKey, packRevision)
+      continue
+    }
     const result = commitPack(store, { token: preview.token, revision: preview.revision, duplicate: 'keep', createCategories: true, useExistingCategories: true })
     if (result.entries.length !== pack.assets) throw Error('Bundled asset count differs from the distribution inventory.')
-    if (additive) store.db.prepare('INSERT OR REPLACE INTO settings VALUES(?,?)').run(packKey, manifest.libraryRevision)
+    if (additive) store.db.prepare('INSERT OR REPLACE INTO settings VALUES(?,?)').run(packKey, packRevision)
   }
   if (!additive) store.db.prepare('INSERT OR REPLACE INTO settings VALUES(?,?)').run(key, manifest.libraryRevision)
 }

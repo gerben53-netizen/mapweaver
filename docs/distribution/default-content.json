@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
-  "libraryRevision": "production-20261004-rustic-heavy-timber",
-  "publicDirectories": ["fonts", "terrain-textures-painterly", "world-assets-painterly", "settlement-assets-painterly", "generated-walls", "premium-core-interior-materials"],
+  "libraryRevision": "production-20261004-pqa-wave-two",
+  "publicDirectories": ["fonts", "terrain-textures-painterly", "world-assets-painterly", "settlement-assets-painterly", "generated-walls", "premium-core-interior-materials", "pqa-premium-stamps"],
   "libraryPacks": [
     {"name": "Painterly World hierarchy", "file": "world-assets-painterly/mapweaver-world-painterly.zip", "revision": "hierarchy-v1", "assets": 46},
     {"name": "Illustrated settlements", "file": "settlement-assets-painterly/mapweaver-settlements-painterly.zip", "revision": "painterly-v1", "assets": 31},
-    {"name": "Premium interieurmaterialen — basis", "file": "premium-core-interior-materials/mapweaver-premium-core-interiors.zip", "revision": "premium.floor.v1", "assets": 9}
+    {"name": "Premium interieurmaterialen — basis", "file": "premium-core-interior-materials/mapweaver-premium-core-interiors.zip", "revision": "premium.floor.v1", "assets": 9},
+    {"name": "PQA Premium Stamp Families — Wave 2", "file": "pqa-premium-stamps/mapweaver-pqa-wave-two.zip", "revision": "pqa-premium-stamps-wave-02@1", "assets": 69}
   ],
   "builtIn": [
     "32 Painterly Terrain materials, revision painterly.v1",
@@ -23,5 +24,5 @@
   "compatibilityOnly": ["generated-walls/living-root-dev-1: saved-wall resolution only; hidden from new wall choices", "generated-walls/masonry-dev-1: development fixtures and saved-wall resolution only; hidden from new wall choices", "generated-walls/cave-rock-dev-1: saved-wall resolution and development fixtures only; hidden from new wall choices", "generated-walls/timber-dev-1: saved refined/rustic wall resolution and development fixtures only; hidden from new wall choices", "generated-walls/sung-wood-production-1: supplied-artwork QA reference only; FAIL ARTWORK, hidden from new wall choices, not approved production content"],
   "excluded": ["Private asset library/databases", "REPLACE/REJECT/inactive personal assets", "Asset templates and old Engraved pack", "Demo maps", "Source artwork and production intermediates", "QA fixtures/sprint evidence", "Full developer documentation and caches"],
   "documentation": ["INSTALLATIE.md", "THIRD_PARTY_FONTS.md"],
-  "attribution": ["public/world-assets-painterly/LICENSE.txt", "public/settlement-assets-painterly/LICENSE.txt", "public/premium-core-interior-materials/LICENSE.txt", "public/premium-core-interior-materials/provenance.json", "docs/wall-sets/living-root-production-provenance.json", "docs/wall-sets/pale-palace-stone-production-provenance.json", "docs/wall-sets/marble-production-provenance.json", "docs/wall-sets/rough-stone-production-provenance.json", "docs/wall-sets/natural-cave-rock-production-provenance.json", "docs/wall-sets/refined-timber-production-provenance.json", "docs/wall-sets/rustic-heavy-timber-production-provenance.json", "public/terrain-textures-painterly/provenance.json", "launcher/licenses/Node-LICENSE", "docs/wall-sets/sung-wood-production-provenance.json"]
+  "attribution": ["public/world-assets-painterly/LICENSE.txt", "public/settlement-assets-painterly/LICENSE.txt", "public/premium-core-interior-materials/LICENSE.txt", "public/premium-core-interior-materials/provenance.json", "public/pqa-premium-stamps/provenance.json", "docs/wall-sets/living-root-production-provenance.json", "docs/wall-sets/pale-palace-stone-production-provenance.json", "docs/wall-sets/marble-production-provenance.json", "docs/wall-sets/rough-stone-production-provenance.json", "docs/wall-sets/natural-cave-rock-production-provenance.json", "docs/wall-sets/refined-timber-production-provenance.json", "docs/wall-sets/rustic-heavy-timber-production-provenance.json", "public/terrain-textures-painterly/provenance.json", "launcher/licenses/Node-LICENSE", "docs/wall-sets/sung-wood-production-provenance.json"]
 }

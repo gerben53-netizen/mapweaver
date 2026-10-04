@@ -16,11 +16,11 @@ function fixture() {
   const store = new Storage(path.join(root, 'data')); stores.push(store)
   return { store, frontend }
 }
-it('installs the 77 standard stamps and nine production floors once without reviving inactive assets', async () => {
+it('installs the standard stamps, nine floors and 22 Wave 2 families once without reviving inactive assets', async () => {
   const { store, frontend } = fixture()
   await initializeDefaultContent(store, frontend, false)
   const before = store.db.prepare('SELECT id,sha256 FROM assets ORDER BY id').all()
-  expect(before).toHaveLength(86)
+  expect(before).toHaveLength(155)
   const id = (before[0] as { id: string }).id
   const quality = JSON.stringify({ classification: 'REJECT', reason: 'User deactivated', semanticClass: null, softShadowDefault: null })
   store.db.prepare('UPDATE assets SET quality=? WHERE id=?').run(quality, id)
@@ -28,7 +28,7 @@ it('installs the 77 standard stamps and nine production floors once without revi
   expect(store.db.prepare('SELECT id,sha256 FROM assets ORDER BY id').all()).toEqual(before)
   expect((store.db.prepare('SELECT quality FROM assets WHERE id=?').get(id) as { quality: string }).quality).toBe(quality)
   expect((store.db.prepare('SELECT MAX(version) AS v FROM schema_migrations').get() as { v: number }).v).toBe(12)
-})
+}, 60000)
 it('preserves an existing database, including an intentionally empty library', async () => {
   const { store, frontend } = fixture()
   await initializeDefaultContent(store, frontend, true)
@@ -43,9 +43,9 @@ it('resumes a partially completed first install without duplicating its imported
   expect(first).toHaveLength(46)
   copyFileSync(path.join('public', second), path.join(frontend, second))
   await initializeDefaultContent(store, frontend, true)
-  expect(store.db.prepare('SELECT id FROM assets').all()).toHaveLength(86)
+  expect(store.db.prepare('SELECT id FROM assets').all()).toHaveLength(155)
   for (const row of first) expect(store.db.prepare('SELECT id FROM assets WHERE id=?').get((row as { id: string }).id)).toEqual(row)
-})
+}, 60000)
 
 it('additive Primary installation preserves legacy quality and IDs across restarts', async () => {
   const { store, frontend } = fixture()
@@ -59,9 +59,20 @@ it('additive Primary installation preserves legacy quality and IDs across restar
   await initializeDefaultContent(store, frontend, true, options)
   expect(store.db.prepare('SELECT id,sha256 FROM assets ORDER BY id').all()).toEqual(before)
   expect((store.db.prepare('SELECT quality FROM assets WHERE id=?').get(id) as {quality:string}).quality).toBe(quality)
-}, 20000)
+}, 60000)
 
 it('test storage rejects Primary Development before opening its database', () => {
   expect(() => new Storage(primaryDirectory())).toThrow('Tests require isolated storage')
   expect(() => new Storage()).toThrow('Tests require isolated storage')
 })
+
+it('a distribution revision change does not rewrite unchanged Primary packs with old receipts', async () => {
+  const {store, frontend} = fixture()
+  const options = {manifest:path.join(frontend,'default-content.json'),contentRoot:frontend}
+  await initializeDefaultContent(store,frontend,false,options)
+  const before = store.db.prepare('SELECT * FROM assets ORDER BY id').all()
+  for(const pack of inventory.libraryPacks)store.db.prepare('UPDATE settings SET value=? WHERE key=?').run('previous-distribution','primary-default-pack:'+pack.file)
+  writeFileSync(options.manifest,JSON.stringify({...inventory,libraryRevision:'another-wave'}))
+  await initializeDefaultContent(store,frontend,true,options)
+  expect(store.db.prepare('SELECT * FROM assets ORDER BY id').all()).toEqual(before)
+},60000)

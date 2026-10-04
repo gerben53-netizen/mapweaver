@@ -1,0 +1,1052 @@
+{
+  "sourceArchive": "PQA-Premium-Stamps-Wave-02.zip",
+  "sourceArchiveSha256": "0d06a0c7c1af694eb4c82811da6ea9f85f47c90d1b6fca9240adb2f1d40930d9",
+  "originalPack": {
+    "id": "pqa-reconciled-stamps",
+    "revision": 1
+  },
+  "canonicalPack": {
+    "id": "pqa-premium-stamps-wave-02",
+    "revision": 1
+  },
+  "identityResolution": "Separate delivered wave gets distinct pack ID; original family and variant IDs and all PNG bytes unchanged.",
+  "productionPixels": "User supplied; no regeneration, repaint, cropping or resize.",
+  "excludedCandidate": "ERRONEOUS_SOURCE excluded; selected bookshelf-curved-6/v01 source checked against authoring production record.",
+  "images": [
+    {
+      "familyId": "planter-round-2",
+      "variantId": "v01",
+      "file": "artwork/planter-round-2/v01.png",
+      "sha256": "a6111a3d2f6b260de3b4131c290c0b923f76a68bb430500840bb0e5f012fff2b",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "planter-round-2",
+      "variantId": "v02",
+      "file": "artwork/planter-round-2/v02.png",
+      "sha256": "be86f6b1e7f6517acc9e4997960871c3a6dd0e7105f93240ac55431d063365d0",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "planter-round-2",
+      "variantId": "v03",
+      "file": "artwork/planter-round-2/v03.png",
+      "sha256": "d7bedcab8fb8e0a4f0da6e8e34af7af94baf779faecaaf275a7241e7dc57229b",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "planter-round-2",
+      "variantId": "v04",
+      "file": "artwork/planter-round-2/v04.png",
+      "sha256": "be8512bc901febec0f216a7a69deac3af2154c30b779af1ab9c98c04881d7ee7",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bookshelf-straight-5",
+      "variantId": "v01",
+      "file": "artwork/bookshelf-straight-5/v01.png",
+      "sha256": "09a676568c96a0659b1fa23c553bc2383294ac7c080af05b6e742aabf3109259",
+      "canvas": [
+        800,
+        240
+      ],
+      "footprintFt": [
+        5,
+        1.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bookshelf-straight-5",
+      "variantId": "v02",
+      "file": "artwork/bookshelf-straight-5/v02.png",
+      "sha256": "de36026c72ba57efb96a6e3acbb48fc4ef4b665a5866416a10d96ec679053c9e",
+      "canvas": [
+        800,
+        240
+      ],
+      "footprintFt": [
+        5,
+        1.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bookshelf-straight-5",
+      "variantId": "v03",
+      "file": "artwork/bookshelf-straight-5/v03.png",
+      "sha256": "e6acebf20fa17d432d93bc002326dab1aea67d071f6561af641d27341016726a",
+      "canvas": [
+        800,
+        240
+      ],
+      "footprintFt": [
+        5,
+        1.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bookshelf-straight-5",
+      "variantId": "v04",
+      "file": "artwork/bookshelf-straight-5/v04.png",
+      "sha256": "156373dadada1a2d43fb9480e1e777089410be7608d6dddb29834559f2a19a3c",
+      "canvas": [
+        800,
+        240
+      ],
+      "footprintFt": [
+        5,
+        1.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "stool-round-15",
+      "variantId": "v01",
+      "file": "artwork/stool-round-15/v01.png",
+      "sha256": "81de0c61d46ef4069db45f1202f81a2b4e2c6fbb9e5b454a4a57a73809a74dcd",
+      "canvas": [
+        240,
+        240
+      ],
+      "footprintFt": [
+        1.5,
+        1.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "stool-round-15",
+      "variantId": "v02",
+      "file": "artwork/stool-round-15/v02.png",
+      "sha256": "d928387bf47ae0e7e9b122275795eab075633d8a4f8855be08677907bc672077",
+      "canvas": [
+        240,
+        240
+      ],
+      "footprintFt": [
+        1.5,
+        1.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "stool-round-15",
+      "variantId": "v03",
+      "file": "artwork/stool-round-15/v03.png",
+      "sha256": "63e6968c8b0338d2ef2860e99e642031b3b7b95b0b6d8cfcfe30634d84cdc2d3",
+      "canvas": [
+        240,
+        240
+      ],
+      "footprintFt": [
+        1.5,
+        1.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "armchair-square-3",
+      "variantId": "v01",
+      "file": "artwork/armchair-square-3/v01.png",
+      "sha256": "714db32d3f23da48a34aa77a1303d896b3116a12b1ff14ac4033858ca28a6041",
+      "canvas": [
+        480,
+        480
+      ],
+      "footprintFt": [
+        3,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "armchair-square-3",
+      "variantId": "v02",
+      "file": "artwork/armchair-square-3/v02.png",
+      "sha256": "4720ecf83bb9e635e3c5993ff069c637d3165798e7fa5e7ef575e571565574ef",
+      "canvas": [
+        480,
+        480
+      ],
+      "footprintFt": [
+        3,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "armchair-square-3",
+      "variantId": "v03",
+      "file": "artwork/armchair-square-3/v03.png",
+      "sha256": "84a6b7cf517abf4f12d290fd6b2515682309a9719258f8aa8455ec8825db7dc0",
+      "canvas": [
+        480,
+        480
+      ],
+      "footprintFt": [
+        3,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "writing-desk-6",
+      "variantId": "v01",
+      "file": "artwork/writing-desk-6/v01.png",
+      "sha256": "a482c38f19e037d0c97a5ee82649f3acfb13d24008b1e3f5ecfcc3ebeaa31ecf",
+      "canvas": [
+        960,
+        480
+      ],
+      "footprintFt": [
+        6,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "writing-desk-6",
+      "variantId": "v02",
+      "file": "artwork/writing-desk-6/v02.png",
+      "sha256": "6540d4d370b45901e500f401dfe7b702d2385757984369d7e92c49814854bb7e",
+      "canvas": [
+        960,
+        480
+      ],
+      "footprintFt": [
+        6,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "writing-desk-6",
+      "variantId": "v03",
+      "file": "artwork/writing-desk-6/v03.png",
+      "sha256": "1eeb2a9ec7cb3892d01361a6ada41b8e58b3695997a5e862f871dd91d58ae676",
+      "canvas": [
+        960,
+        480
+      ],
+      "footprintFt": [
+        6,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "writing-desk-6",
+      "variantId": "v04",
+      "file": "artwork/writing-desk-6/v04.png",
+      "sha256": "d442dc277777e399071178b1404e7b82f48ed450117db7bf5fd26ea271c3bca8",
+      "canvas": [
+        960,
+        480
+      ],
+      "footprintFt": [
+        6,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bed-single-35",
+      "variantId": "v01",
+      "file": "artwork/bed-single-35/v01.png",
+      "sha256": "641a1eb493208462aa218760724739ea76a4070e16f473ae5ee8788cd0b2bc39",
+      "canvas": [
+        560,
+        1120
+      ],
+      "footprintFt": [
+        3.5,
+        7
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bed-single-35",
+      "variantId": "v02",
+      "file": "artwork/bed-single-35/v02.png",
+      "sha256": "7926ad2736bd496790e1cb28298cc750e64896e9333f99d654e83cdbef07e125",
+      "canvas": [
+        560,
+        1120
+      ],
+      "footprintFt": [
+        3.5,
+        7
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bed-single-35",
+      "variantId": "v03",
+      "file": "artwork/bed-single-35/v03.png",
+      "sha256": "43a11756fe3e8c8834e1991e86a804db08480143767f8524c1fbea4ec5a3bce0",
+      "canvas": [
+        560,
+        1120
+      ],
+      "footprintFt": [
+        3.5,
+        7
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bookshelf-curved-6",
+      "variantId": "v01",
+      "file": "artwork/bookshelf-curved-6/v01.png",
+      "sha256": "231ece5e00b4a730ab277756b494beb13cb03735d1556525c205aa5cd889db91",
+      "canvas": [
+        960,
+        480
+      ],
+      "footprintFt": [
+        6,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bookshelf-curved-6",
+      "variantId": "v02",
+      "file": "artwork/bookshelf-curved-6/v02.png",
+      "sha256": "2220ee357f41467e19cfa56f8a035373a4127741a62be0934efa1c638d91e3a9",
+      "canvas": [
+        960,
+        480
+      ],
+      "footprintFt": [
+        6,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bookshelf-curved-6",
+      "variantId": "v03",
+      "file": "artwork/bookshelf-curved-6/v03.png",
+      "sha256": "f1fe93f901db869d3a476e5203da2ec13ce42d2e0382e533d868315cab55ede4",
+      "canvas": [
+        960,
+        480
+      ],
+      "footprintFt": [
+        6,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "chair-office-25",
+      "variantId": "v01",
+      "file": "artwork/chair-office-25/v01.png",
+      "sha256": "ef70e6a0e28b55563f6aca166b3acf4ba12a0db025f9f22d290286ec8bf0a918",
+      "canvas": [
+        400,
+        400
+      ],
+      "footprintFt": [
+        2.5,
+        2.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "chair-office-25",
+      "variantId": "v02",
+      "file": "artwork/chair-office-25/v02.png",
+      "sha256": "efa41444005c344dfcafa9567486eef00b608c254bc9047f14f35f1cef3a0383",
+      "canvas": [
+        400,
+        400
+      ],
+      "footprintFt": [
+        2.5,
+        2.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "chair-office-25",
+      "variantId": "v03",
+      "file": "artwork/chair-office-25/v03.png",
+      "sha256": "64c5bdf9cfdfc2eda2b52be30db70ed5e3646c2ead5b253359a523fac9bf6e32",
+      "canvas": [
+        400,
+        400
+      ],
+      "footprintFt": [
+        2.5,
+        2.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "chair-trapezoid-2",
+      "variantId": "v01",
+      "file": "artwork/chair-trapezoid-2/v01.png",
+      "sha256": "c240378365bc32a592937da19ed90f5461c08d5cdb8d96f2ca5f6d68f9ebe43b",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "chair-trapezoid-2",
+      "variantId": "v02",
+      "file": "artwork/chair-trapezoid-2/v02.png",
+      "sha256": "38e5dd3bd019ec350d2257e94bb96654600dd22aa2b9224f7a410d2a285dd8be",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "chair-trapezoid-2",
+      "variantId": "v03",
+      "file": "artwork/chair-trapezoid-2/v03.png",
+      "sha256": "d67ce8295c3a174e614bdf70ecaed6bb7605cd496ff98e8d7f3af2224ba37c05",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "chair-woven-round-2",
+      "variantId": "v01",
+      "file": "artwork/chair-woven-round-2/v01.png",
+      "sha256": "1eacf79a724ba312f73d2e127492a9b616022128f36bcef0936a4d356b9da6df",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "chair-woven-round-2",
+      "variantId": "v02",
+      "file": "artwork/chair-woven-round-2/v02.png",
+      "sha256": "943d4466ea6e313e1b86f9ff9312aec0b182dca9cdb97c02ce15795e72542961",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "chair-woven-round-2",
+      "variantId": "v03",
+      "file": "artwork/chair-woven-round-2/v03.png",
+      "sha256": "30c4dc9dbbb55157925acec9f59f72b9aceaa5928ce0b04eed1f83f278fabc7c",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "table-round-3",
+      "variantId": "v01",
+      "file": "artwork/table-round-3/v01.png",
+      "sha256": "be383ad371d3543614a7d2408a6525da7c59dddf8b1d100b168c97de68a5087f",
+      "canvas": [
+        480,
+        480
+      ],
+      "footprintFt": [
+        3,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "table-round-3",
+      "variantId": "v02",
+      "file": "artwork/table-round-3/v02.png",
+      "sha256": "9610a138dabdbc9810b515d437e9ae5a7a98d1de1f1c73d7b60c5b0e73e8d9c1",
+      "canvas": [
+        480,
+        480
+      ],
+      "footprintFt": [
+        3,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "table-round-3",
+      "variantId": "v03",
+      "file": "artwork/table-round-3/v03.png",
+      "sha256": "ff711d7b14eda4768104b670abf371b36bc5878886f77947615bb6573daf591f",
+      "canvas": [
+        480,
+        480
+      ],
+      "footprintFt": [
+        3,
+        3
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "planter-octagonal-2",
+      "variantId": "v01",
+      "file": "artwork/planter-octagonal-2/v01.png",
+      "sha256": "6bd90bc76fe4d1488a0fd2a73b29fb7e40011c34013e4a1748e8885afe930498",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "planter-octagonal-2",
+      "variantId": "v02",
+      "file": "artwork/planter-octagonal-2/v02.png",
+      "sha256": "df5b0e4475e392d745e68550980ff66b27df413d54a446da2006bd94aa600916",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "planter-octagonal-2",
+      "variantId": "v03",
+      "file": "artwork/planter-octagonal-2/v03.png",
+      "sha256": "22970d55f81a84133c95367e32e7b695301be845e55b62358ddeb4ef8b92a749",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "planter-round-25",
+      "variantId": "v01",
+      "file": "artwork/planter-round-25/v01.png",
+      "sha256": "dd01902a74721cbc3d1539be0f81d03240a1d4ce696e347d5c458ca424787fea",
+      "canvas": [
+        400,
+        400
+      ],
+      "footprintFt": [
+        2.5,
+        2.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "planter-round-25",
+      "variantId": "v02",
+      "file": "artwork/planter-round-25/v02.png",
+      "sha256": "597f8c14897a3af32b8ab02625ed9de4bf9abbc249438fd13d7cdc7112363384",
+      "canvas": [
+        400,
+        400
+      ],
+      "footprintFt": [
+        2.5,
+        2.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "planter-round-25",
+      "variantId": "v03",
+      "file": "artwork/planter-round-25/v03.png",
+      "sha256": "a73653d283e3a22345c18e638ce0814efc44db3bc3714c4c25adc8abe746d23b",
+      "canvas": [
+        400,
+        400
+      ],
+      "footprintFt": [
+        2.5,
+        2.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bed-double-root-6",
+      "variantId": "v01",
+      "file": "artwork/bed-double-root-6/v01.png",
+      "sha256": "9bbe7ec43aeb0a4f680cd5e684388ff9fff49f32786662422f8e9ccaaa43fc8e",
+      "canvas": [
+        960,
+        1120
+      ],
+      "footprintFt": [
+        6,
+        7
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bed-double-root-6",
+      "variantId": "v02",
+      "file": "artwork/bed-double-root-6/v02.png",
+      "sha256": "cd98a21b7c70c8bf150acbedda8ae6402c79bfd75810229d8c41c046693f8f03",
+      "canvas": [
+        960,
+        1120
+      ],
+      "footprintFt": [
+        6,
+        7
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bed-double-root-6",
+      "variantId": "v03",
+      "file": "artwork/bed-double-root-6/v03.png",
+      "sha256": "804e586547e503b867abf6ca5171a84f8ce5e5cec791c07164bcc1865503f86c",
+      "canvas": [
+        960,
+        1120
+      ],
+      "footprintFt": [
+        6,
+        7
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bed-guest-woven-35",
+      "variantId": "v01",
+      "file": "artwork/bed-guest-woven-35/v01.png",
+      "sha256": "d16d80aaf28ca68ecea91960f9f436f8ccde5d3b899cbf2822b62883b4ae0e42",
+      "canvas": [
+        560,
+        1120
+      ],
+      "footprintFt": [
+        3.5,
+        7
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bed-guest-woven-35",
+      "variantId": "v02",
+      "file": "artwork/bed-guest-woven-35/v02.png",
+      "sha256": "cc25824657075f308e2e1f9bfe0a49271f7c8e979a3880690205049e6f3eced1",
+      "canvas": [
+        560,
+        1120
+      ],
+      "footprintFt": [
+        3.5,
+        7
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "bed-guest-woven-35",
+      "variantId": "v03",
+      "file": "artwork/bed-guest-woven-35/v03.png",
+      "sha256": "70b1c4a29c77337596bfe35e8701c648d7c9490fdcbefa69c2ed48aede650129",
+      "canvas": [
+        560,
+        1120
+      ],
+      "footprintFt": [
+        3.5,
+        7
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "table-round-2",
+      "variantId": "v01",
+      "file": "artwork/table-round-2/v01.png",
+      "sha256": "143ab4223afd6dfa446712a2f2c0a99f727a3d68fbea8f0324837554b7c4482c",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "table-round-2",
+      "variantId": "v02",
+      "file": "artwork/table-round-2/v02.png",
+      "sha256": "1dc37374150e53bdf7f11a22dbb29e83e3f0afff5b485c2d6a6b6b833f56ff09",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "table-round-2",
+      "variantId": "v03",
+      "file": "artwork/table-round-2/v03.png",
+      "sha256": "86f6ad0316e0e6f0d46aae452680d77e02ff80cedb76b73abaf23cf35500bd43",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "table-square-2",
+      "variantId": "v01",
+      "file": "artwork/table-square-2/v01.png",
+      "sha256": "a26adc85ac0a57d90d671420c0eb24b229f6e9a883eff9774a99641bbd5c09af",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "table-square-2",
+      "variantId": "v02",
+      "file": "artwork/table-square-2/v02.png",
+      "sha256": "8678911c93579aadd757634c71e56f9f8dd6b0b76c0b5a5aece7fa165845768d",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "table-square-2",
+      "variantId": "v03",
+      "file": "artwork/table-square-2/v03.png",
+      "sha256": "05bc8fdeca96bd6d48149671bf5b12e96e65bed1011b37c5a707c18a36b847b1",
+      "canvas": [
+        320,
+        320
+      ],
+      "footprintFt": [
+        2,
+        2
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "wardrobe-3",
+      "variantId": "v01",
+      "file": "artwork/wardrobe-3/v01.png",
+      "sha256": "425d2bbe432c5f63dedd802fd411efb0ff5870d9ff311adace5dd8aa9965d627",
+      "canvas": [
+        480,
+        240
+      ],
+      "footprintFt": [
+        3,
+        1.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "wardrobe-3",
+      "variantId": "v02",
+      "file": "artwork/wardrobe-3/v02.png",
+      "sha256": "54bc706cf3fa409d9750e4802af69a88ccdd27b96c3725d7add12382719abeca",
+      "canvas": [
+        480,
+        240
+      ],
+      "footprintFt": [
+        3,
+        1.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "wardrobe-3",
+      "variantId": "v03",
+      "file": "artwork/wardrobe-3/v03.png",
+      "sha256": "dd6f75a89f244e4fea85e8c888876bb8063760540a54e276400d86e7cf667be0",
+      "canvas": [
+        480,
+        240
+      ],
+      "footprintFt": [
+        3,
+        1.5
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "book-open-15",
+      "variantId": "v01",
+      "file": "artwork/book-open-15/v01.png",
+      "sha256": "cfc612618dccd8c3d6efeeac4fc2e3401b1c370b7ad3c01b8fe0b9cfd9bff614",
+      "canvas": [
+        240,
+        160
+      ],
+      "footprintFt": [
+        1.5,
+        1
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "book-open-15",
+      "variantId": "v02",
+      "file": "artwork/book-open-15/v02.png",
+      "sha256": "27463c950e1deae6646bc790614a76635ad3d8c37c9ba6479ed2f2c1da1f1dc0",
+      "canvas": [
+        240,
+        160
+      ],
+      "footprintFt": [
+        1.5,
+        1
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "book-open-15",
+      "variantId": "v03",
+      "file": "artwork/book-open-15/v03.png",
+      "sha256": "3cf65f8a8c63787e191d0b8526c468be993fe0908cd416cf00c3fcc94b738cfd",
+      "canvas": [
+        240,
+        160
+      ],
+      "footprintFt": [
+        1.5,
+        1
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "folio-closed-1",
+      "variantId": "v01",
+      "file": "artwork/folio-closed-1/v01.png",
+      "sha256": "89bd7e3ad05c8664496a55e6c9f7835efbcd0906dafbb04fa51fb5b04e837f0e",
+      "canvas": [
+        160,
+        120
+      ],
+      "footprintFt": [
+        1,
+        0.75
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "folio-closed-1",
+      "variantId": "v02",
+      "file": "artwork/folio-closed-1/v02.png",
+      "sha256": "cbbe7c827f6c49ff72fdb04ce56ef443931fdcd8eb7b26f927d20e8c8c2d5b2f",
+      "canvas": [
+        160,
+        120
+      ],
+      "footprintFt": [
+        1,
+        0.75
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "folio-closed-1",
+      "variantId": "v03",
+      "file": "artwork/folio-closed-1/v03.png",
+      "sha256": "20955f732f324b1a1bfadc1c6f9f3664bebdab7ef99018faf45156d0f1488310",
+      "canvas": [
+        160,
+        120
+      ],
+      "footprintFt": [
+        1,
+        0.75
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "letters-sealed-15",
+      "variantId": "v01",
+      "file": "artwork/letters-sealed-15/v01.png",
+      "sha256": "f4a9da6b30c8308ccfcd059bc31edc45bdb30f34c125a34473dff28875c9cc1a",
+      "canvas": [
+        240,
+        160
+      ],
+      "footprintFt": [
+        1.5,
+        1
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "letters-sealed-15",
+      "variantId": "v02",
+      "file": "artwork/letters-sealed-15/v02.png",
+      "sha256": "69ed51ee7e415c48443d20d886497e530035816fa2150f09d1f5788c0c50509f",
+      "canvas": [
+        240,
+        160
+      ],
+      "footprintFt": [
+        1.5,
+        1
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "letters-sealed-15",
+      "variantId": "v03",
+      "file": "artwork/letters-sealed-15/v03.png",
+      "sha256": "f5ac44bb24e9a710ef0b1315245fc9cd7b2b61919668501b0ed1093d363cc644",
+      "canvas": [
+        240,
+        160
+      ],
+      "footprintFt": [
+        1.5,
+        1
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "gift-box-1",
+      "variantId": "v01",
+      "file": "artwork/gift-box-1/v01.png",
+      "sha256": "e7fa59da51bc4dc681994e4bd08eeb61a6c21e4343880da7dd95a664f9adba70",
+      "canvas": [
+        160,
+        160
+      ],
+      "footprintFt": [
+        1,
+        1
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "gift-box-1",
+      "variantId": "v02",
+      "file": "artwork/gift-box-1/v02.png",
+      "sha256": "9d129c1bf473d004c7e4d3967b3c39b390dc9cdabdbf0ffc907e763f249d31e8",
+      "canvas": [
+        160,
+        160
+      ],
+      "footprintFt": [
+        1,
+        1
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    },
+    {
+      "familyId": "gift-box-1",
+      "variantId": "v03",
+      "file": "artwork/gift-box-1/v03.png",
+      "sha256": "1ad8a303dab598aa572b060dcdb510e4547f4a40abf8e80d56c1fb2f750fae8a",
+      "canvas": [
+        160,
+        160
+      ],
+      "footprintFt": [
+        1,
+        1
+      ],
+      "orientation": "90° orthografisch; lange objectas +X; voorkant/open gebruikszijde +Y; bij bed ligt het hoofdeinde aan -Y."
+    }
+  ]
+}
