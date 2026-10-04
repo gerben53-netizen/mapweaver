@@ -1,5 +1,6 @@
 import rusticHeavyTimber from './rusticHeavyTimberPack.json'
 import sungWood from './sungWoodPack.json'
+import sungWoodProduction from './sungWoodProductionPack.json'
 import timberRustic from './timberRusticPack.json'
 import timberRefined from './timberRefinedPack.json'
 import refinedTimber from './refinedTimberPack.json'
@@ -16,13 +17,14 @@ import type { WallStyle } from './walls'
 import type { MapDocument } from './models'
 import { materialMapReference } from './continuousWallMaterial'
 export interface GeneratedComponent { id:string; role:'beam-long'|'beam-medium'|'beam-short'|'root-long'|'root-medium'|'root-small'|'knot'|'root-end'|'moss'|'leaves'|'block-large'|'block-medium'|'block-small'|'rock-large'|'rock-medium'|'rock-small'; image:string; nominalLengthFt:number; nominalWidthFt:number; weight:number }
-export interface GeneratedDefinition {id:string;revision:string;name:string;renderingMode:'generated';generatorType:'living-root'|'masonry'|'rock'|'linear';components:GeneratedComponent[];defaults:{width:number;organic:number;growth:number;overgrowth:number;regularity?:number;variation?:number;roughness?:number}}
+export interface GeneratedDefinition {catalogVisibility?:'reference-only';id:string;revision:string;name:string;renderingMode:'generated';generatorType:'living-root'|'masonry'|'rock'|'linear';components:GeneratedComponent[];defaults:{width:number;organic:number;growth:number;overgrowth:number;regularity?:number;variation?:number;roughness?:number}}
 export interface GeneratedWall {id:string;revision:string;seed:number;organic:number;growth:number;overgrowth:number;regularity?:number;variation?:number;roughness?:number}
 const records=new Map<string,GeneratedDefinition>()
 const keys=(v:object,allowed:string[])=>Object.keys(v).every(k=>allowed.includes(k))
 export function validateGeneratedDefinition(value:unknown):GeneratedDefinition {
  const d=value as GeneratedDefinition
- if(!d||!keys(d,['id','revision','name','renderingMode','generatorType','components','defaults'])||!/^[-a-z0-9]{1,64}$/.test(d.id)||!/^[-a-z0-9]{1,64}$/.test(d.revision)||typeof d.name!=='string'||!d.name.trim()||d.name.length>80||d.renderingMode!=='generated'||!['living-root','masonry','rock','linear'].includes(d.generatorType)||!Array.isArray(d.components)||d.components.length>64||!d.defaults||!keys(d.defaults,['width','organic','growth','overgrowth','regularity','variation','roughness']))throw Error('Invalid generated wall definition.')
+ if(!d||!keys(d,['catalogVisibility','id','revision','name','renderingMode','generatorType','components','defaults'])||!/^[-a-z0-9]{1,64}$/.test(d.id)||!/^[-a-z0-9]{1,64}$/.test(d.revision)||typeof d.name!=='string'||!d.name.trim()||d.name.length>80||d.renderingMode!=='generated'||!['living-root','masonry','rock','linear'].includes(d.generatorType)||!Array.isArray(d.components)||d.components.length>64||!d.defaults||!keys(d.defaults,['width','organic','growth','overgrowth','regularity','variation','roughness']))throw Error('Invalid generated wall definition.')
+ if(d.catalogVisibility!==undefined&&d.catalogVisibility!=='reference-only')throw Error('Invalid generated wall catalog visibility.')
  const defaults=d.defaults;if(!Number.isFinite(defaults.width)||defaults.width<.1||defaults.width>20||![defaults.organic,defaults.growth,defaults.overgrowth].every(n=>Number.isFinite(n)&&n>=0&&n<=1))throw Error('Invalid generated wall defaults.')
  if(d.generatorType==='living-root'&&(defaults.regularity!==undefined||defaults.variation!==undefined||defaults.roughness!==undefined))throw Error('Non-root defaults require their own generator strategy.')
  if(d.generatorType!=='living-root'&&[defaults.organic,defaults.growth,defaults.overgrowth].some(n=>n!==0))throw Error('This generated strategy does not use root growth settings.')
@@ -40,6 +42,7 @@ export function validateGeneratedDefinition(value:unknown):GeneratedDefinition {
 export function registerGeneratedDefinition(value:unknown){const d=structuredClone(validateGeneratedDefinition(value)),key=d.id+'@'+d.revision,old=records.get(key);if(old&&JSON.stringify(old)!==JSON.stringify(d))throw Error('Generated wall revision is immutable.');if(!old&&records.size>=16)throw Error('Generated wall pack limit exceeded.');d.components.forEach(Object.freeze);Object.freeze(d.components);Object.freeze(d.defaults);Object.freeze(d);records.set(key,d);return d}
 registerGeneratedDefinition(rusticHeavyTimber)
 registerGeneratedDefinition(sungWood)
+registerGeneratedDefinition(sungWoodProduction)
 registerGeneratedDefinition(timberRustic)
 registerGeneratedDefinition(timberRefined)
 registerGeneratedDefinition(refinedTimber)
@@ -53,6 +56,8 @@ registerGeneratedDefinition(pack)
 registerGeneratedDefinition(masonryRough)
 registerGeneratedDefinition(masonryDressed)
 export const generatedDefinitions=()=>[...records.values()]
+/** Reference-only and DEV revisions resolve saved walls but are not offered for new authoring. */
+export const generatedWallChoices=(current?:Pick<GeneratedWall,'id'|'revision'>)=>generatedDefinitions().filter(d=>(d.revision!=='dev-1'&&d.catalogVisibility!=='reference-only')||(current?.id===d.id&&current.revision===d.revision))
 export function generatedDefinition(g:Pick<GeneratedWall,'id'|'revision'>){const d=records.get(g.id+'@'+g.revision);if(!d)throw Error('Generated wall pack revision is unavailable.');return d}
 export function validateGeneratedWall(g:GeneratedWall){if(!g||!keys(g,['id','revision','seed','organic','growth','overgrowth','regularity','variation','roughness'])||!Number.isInteger(g.seed)||g.seed<0||g.seed>0xffffffff||![g.organic,g.growth,g.overgrowth].every(n=>Number.isFinite(n)&&n>=0&&n<=1))throw Error('Invalid generated wall settings.');const d=generatedDefinition(g);if(d.generatorType!=='living-root'&&[g.organic,g.growth,g.overgrowth].some(n=>n!==0))throw Error('This generated strategy does not use root growth settings.');if((d.generatorType==='masonry'||d.generatorType==='linear')&&![g.regularity,g.variation].every(n=>typeof n==='number'&&Number.isFinite(n)&&n>=0&&n<=1))throw Error('Invalid masonry settings.');if(d.generatorType==='rock'&&(![g.roughness,g.variation].every(n=>typeof n==='number'&&Number.isFinite(n)&&n>=0&&n<=1)||g.regularity!==undefined))throw Error('Invalid rock settings.');if(d.generatorType!=='rock'&&g.roughness!==undefined)throw Error('Rock roughness requires a rock generator.');if(d.generatorType==='living-root'&&(g.regularity!==undefined||g.variation!==undefined))throw Error('Masonry parameters require a masonry generator.')}
 export const ROOT_PRESETS={Clean:{organic:.35,growth:.2,overgrowth:0},Natural:{organic:.55,growth:.45,overgrowth:.15},Ancient:{organic:.7,growth:.7,overgrowth:.2},Overgrown:{organic:.65,growth:.65,overgrowth:.7}}

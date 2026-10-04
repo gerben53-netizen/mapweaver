@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "id": "sung-wood",
+  "revision": "production-1",
+  "name": "Gezongen hout",
+  "status": "FAIL ARTWORK",
+  "sourceArchive": "Premium-Sung-Wood-Generated-Wall-Component-Pack.zip",
+  "sourceSha256": "67fc8e31fd38725d9dc8e5b5df5c64e56d494c16730f6a8e6b25258cf00b9aa6",
+  "reportSha256": "ba49715de40724d12a20e0c980cc96170919fa952532bf9fa588b6b80eca3a85",
+  "specificationSha256": "362ad10836e6698af93a612f8f8d35cd11cdc23944886e881d5a6d395254e106",
+  "referenceSpecZipSha256": "0ecef17a466ae49f11390cd22632b31bd6ebdae3d49d49b5205862138d1bddb0",
+  "artwork": "Supplier OpenAI-generated artwork, byte-identical PNG integration; no integration crop/resize/repaint/alpha correction.",
+  "distribution": "User-supplied for Mapweaver production/default content; generated-output terms apply, no exclusive-rights guarantee.",
+  "defaults": {
+    "width": 1,
+    "organic": 0.08,
+    "growth": 0,
+    "overgrowth": 0
+  },
+  "components": [
+    {
+      "id": "grown-body-long-1",
+      "role": "root-long",
+      "image": "grown-body-long-1.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1,
+      "filename": "grown-body-long-1.png",
+      "canvas": {
+        "width": 480,
+        "height": 160
+      },
+      "physicalFootprintFt": {
+        "length": 3,
+        "width": 1
+      },
+      "pixelsPerFoot": 160,
+      "anchor": {
+        "x": 240,
+        "y": 80
+      },
+      "authoringDirection": "left to right / +X; top-down 90 degrees",
+      "allowedRotation": "Any in-plane angle, including 180 degrees; lighting must be neutral",
+      "allowedScaling": "Integration scales complete canvas to physical footprint; artist must not rescale or trim",
+      "allowedCrop": false,
+      "safeBounds": {
+        "left": 8,
+        "top": 28,
+        "right": 472,
+        "bottom": 132
+      },
+      "continuityCore": {
+        "left": 58,
+        "top": 65,
+        "right": 422,
+        "bottom": 95
+      },
+      "referenceAlphaBounds": {
+        "left": 10,
+        "top": 43,
+        "right": 470,
+        "bottom": 118
+      },
+      "alphaRequirements": "RGBA 8-bit, sRGB; alpha 0 outside safe bounds; opaque continuity core; antialias edges; no background, fringe or baked shadow",
+      "referenceSha256": "c67112855b8b8488f767b71c6ab8d7422c55ed6bd10dd0b8d6e8c1f45391a5ee",
+      "sha256": "8419166c9f1168e1be99f461ad96a09f676ba4b33472a8caa70f80966df8be75",
+      "alphaBounds": [
+        15,
+        50,
+        465,
+        108
+      ],
+      "outsideSafe": 0,
+      "transparentRgbPixels": 0,
+      "missingCore": 0
+    },
+    {
+      "id": "grown-body-medium-1",
+      "role": "root-medium",
+      "image": "grown-body-medium-1.png",
+      "nominalLengthFt": 2,
+      "nominalWidthFt": 1,
+      "weight": 1,
+      "filename": "grown-body-medium-1.png",
+      "canvas": {
+        "width": 320,
+        "height": 160
+      },
+      "physicalFootprintFt": {
+        "length": 2,
+        "width": 1
+      },
+      "pixelsPerFoot": 160,
+      "anchor": {
+        "x": 160,
+        "y": 80
+      },
+      "authoringDirection": "left to right / +X; top-down 90 degrees",
+      "allowedRotation": "Any in-plane angle, including 180 degrees; lighting must be neutral",
+      "allowedScaling": "Integration scales complete canvas to physical footprint; artist must not rescale or trim",
+      "allowedCrop": false,
+      "safeBounds": {
+        "left": 8,
+        "top": 28,
+        "right": 312,
+        "bottom": 132
+      },
+      "continuityCore": {
+        "left": 39,
+        "top": 65,
+        "right": 281,
+        "bottom": 95
+      },
+      "referenceAlphaBounds": {
+        "left": 10,
+        "top": 43,
+        "right": 310,
+        "bottom": 118
+      },
+      "alphaRequirements": "RGBA 8-bit, sRGB; alpha 0 outside safe bounds; opaque continuity core; antialias edges; no background, fringe or baked shadow",
+      "referenceSha256": "c79915a7f9e385e71daaf1998cdcac60348f93205947dd617e09ec3cc602dd21",
+      "sha256": "c6d08732a8653c4dfdcbe4a9aba6d5de4d04cfaa83aa9350b43b8d97b1ac033d",
+      "alphaBounds": [
+        8,
+        51,
+        312,
+        108
+      ],
+      "outsideSafe": 0,
+      "transparentRgbPixels": 0,
+      "missingCore": 0
+    },
+    {
+      "id": "grown-body-small-1",
+      "role": "root-small",
+      "image": "grown-body-small-1.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1,
+      "filename": "grown-body-small-1.png",
+      "canvas": {
+        "width": 160,
+        "height": 160
+      },
+      "physicalFootprintFt": {
+        "length": 1,
+        "width": 1
+      },
+      "pixelsPerFoot": 160,
+      "anchor": {
+        "x": 80,
+        "y": 80
+      },
+      "authoringDirection": "left to right / +X; top-down 90 degrees",
+      "allowedRotation": "Any in-plane angle, including 180 degrees; lighting must be neutral",
+      "allowedScaling": "Integration scales complete canvas to physical footprint; artist must not rescale or trim",
+      "allowedCrop": false,
+      "safeBounds": {
+        "left": 8,
+        "top": 28,
+        "right": 152,
+        "bottom": 132
+      },
+      "continuityCore": {
+        "left": 20,
+        "top": 65,
+        "right": 140,
+        "bottom": 95
+      },
+      "referenceAlphaBounds": {
+        "left": 10,
+        "top": 43,
+        "right": 150,
+        "bottom": 118
+      },
+      "alphaRequirements": "RGBA 8-bit, sRGB; alpha 0 outside safe bounds; opaque continuity core; antialias edges; no background, fringe or baked shadow",
+      "referenceSha256": "cf572270e304350333608972d89a3e944a91465ccc4cc99f705e408263dc72c0",
+      "sha256": "16f649a9949da95a6fdfd2f61c72f2e92b5f41221c5723acb24d2026b69e4c7a",
+      "alphaBounds": [
+        9,
+        46,
+        151,
+        114
+      ],
+      "outsideSafe": 0,
+      "transparentRgbPixels": 0,
+      "missingCore": 0
+    },
+    {
+      "id": "grown-join-1",
+      "role": "knot",
+      "image": "grown-join-1.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1,
+      "filename": "grown-join-1.png",
+      "canvas": {
+        "width": 160,
+        "height": 160
+      },
+      "physicalFootprintFt": {
+        "length": 1,
+        "width": 1
+      },
+      "pixelsPerFoot": 160,
+      "anchor": {
+        "x": 80,
+        "y": 80
+      },
+      "authoringDirection": "left to right / +X; top-down 90 degrees",
+      "allowedRotation": "Any in-plane angle, including 180 degrees; lighting must be neutral",
+      "allowedScaling": "Integration scales complete canvas to physical footprint; artist must not rescale or trim",
+      "allowedCrop": false,
+      "safeBounds": {
+        "left": 8,
+        "top": 28,
+        "right": 152,
+        "bottom": 132
+      },
+      "continuityCore": {
+        "left": 55,
+        "top": 65,
+        "right": 105,
+        "bottom": 95
+      },
+      "referenceAlphaBounds": {
+        "left": 17,
+        "top": 34,
+        "right": 144,
+        "bottom": 125
+      },
+      "alphaRequirements": "RGBA 8-bit, sRGB; alpha 0 outside safe bounds; opaque continuity core; antialias edges; no background, fringe or baked shadow",
+      "referenceSha256": "ea0beb00a33f634f88d31b42e19f384e7bd4a8ee070a24de055a843092b36e88",
+      "sha256": "6725d107ecae9ccfe6145193bec76f0bf6b3d2a1afae4bd6b37cc5b8457bc0ed",
+      "alphaBounds": [
+        19,
+        44,
+        141,
+        118
+      ],
+      "outsideSafe": 0,
+      "transparentRgbPixels": 0,
+      "missingCore": 0
+    },
+    {
+      "id": "grown-end-1",
+      "role": "root-end",
+      "image": "grown-end-1.png",
+      "nominalLengthFt": 2,
+      "nominalWidthFt": 1,
+      "weight": 1,
+      "filename": "grown-end-1.png",
+      "canvas": {
+        "width": 320,
+        "height": 160
+      },
+      "physicalFootprintFt": {
+        "length": 2,
+        "width": 1
+      },
+      "pixelsPerFoot": 160,
+      "anchor": {
+        "x": 160,
+        "y": 80
+      },
+      "authoringDirection": "left to right / +X; top-down 90 degrees",
+      "allowedRotation": "Any in-plane angle, including 180 degrees; lighting must be neutral",
+      "allowedScaling": "Integration scales complete canvas to physical footprint; artist must not rescale or trim",
+      "allowedCrop": false,
+      "safeBounds": {
+        "left": 8,
+        "top": 28,
+        "right": 312,
+        "bottom": 132
+      },
+      "continuityCore": {
+        "left": 39,
+        "top": 65,
+        "right": 281,
+        "bottom": 95
+      },
+      "referenceAlphaBounds": {
+        "left": 10,
+        "top": 43,
+        "right": 310,
+        "bottom": 118
+      },
+      "alphaRequirements": "RGBA 8-bit, sRGB; alpha 0 outside safe bounds; opaque continuity core; antialias edges; no background, fringe or baked shadow",
+      "referenceSha256": "c79915a7f9e385e71daaf1998cdcac60348f93205947dd617e09ec3cc602dd21",
+      "sha256": "bec6cff719d340539612f18ab21c80642deee1e321bd1142121a3a9c4434afb8",
+      "alphaBounds": [
+        15,
+        53,
+        305,
+        112
+      ],
+      "outsideSafe": 0,
+      "transparentRgbPixels": 0,
+      "missingCore": 0
+    }
+  ],
+  "assessment": "Technical footprint/alpha contract passes. Under the unchanged bundle, required hard corners form projecting crossed bodies and Massive endpoints expose parallel rounded runs. Not approved for production; reference-only. No generic engine regression demonstrated.",
+  "catalogVisibility": "reference-only"
+}

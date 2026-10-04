@@ -1,0 +1,56 @@
+{
+  "id": "sung-wood",
+  "revision": "production-1",
+  "name": "Gezongen hout",
+  "renderingMode": "generated",
+  "generatorType": "living-root",
+  "components": [
+    {
+      "id": "grown-body-long-1",
+      "role": "root-long",
+      "image": "/generated-walls/sung-wood-production-1/grown-body-long-1.png",
+      "nominalLengthFt": 3,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "grown-body-medium-1",
+      "role": "root-medium",
+      "image": "/generated-walls/sung-wood-production-1/grown-body-medium-1.png",
+      "nominalLengthFt": 2,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "grown-body-small-1",
+      "role": "root-small",
+      "image": "/generated-walls/sung-wood-production-1/grown-body-small-1.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "grown-join-1",
+      "role": "knot",
+      "image": "/generated-walls/sung-wood-production-1/grown-join-1.png",
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 1,
+      "weight": 1
+    },
+    {
+      "id": "grown-end-1",
+      "role": "root-end",
+      "image": "/generated-walls/sung-wood-production-1/grown-end-1.png",
+      "nominalLengthFt": 2,
+      "nominalWidthFt": 1,
+      "weight": 1
+    }
+  ],
+  "defaults": {
+    "width": 1,
+    "organic": 0.08,
+    "growth": 0,
+    "overgrowth": 0
+  },
+  "catalogVisibility": "reference-only"
+}
