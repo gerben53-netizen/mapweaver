@@ -63,6 +63,8 @@ Een onbekende ID/path blokkeert review en bevestiging tot een mapping is gekozen
 
 ## Tags
 
+Lever manifesten aan als UTF-8. Controleer zichtbare namen, variantlabels en tags vóór productieacceptatie op mojibake (zoals `â€”`, `Â°` of `Ã©`). Corrigeer uitsluitend ondubbelzinnige tekst met steun van de canonieke taxonomy/authoringcontext en leg veld, oorspronkelijke tekst en correctie vast. Technische IDs, PNG-bytes, footprint en revisie-identiteit blijven intact. Blokkeer ambigue tekst voor verduidelijking; de importer raadt geen bedoelde spelling. Doe deze controle vóór de eerste import: een geregistreerde familyrevision is onveranderlijk.
+
 Spaties worden getrimd, casing genormaliseerd, bekende audit-aliases vertaald en doublures verwijderd. `Palace`, `palace`, `Paleis` worden `paleis`; bekende eigennamen zoals Eldric behouden hun afgesproken spelling. Onbekende zinvolle tags blijven toegestaan, in kleine letters. Maximaal 30 tags van elk 80 tekens. Preview toont het concrete resultaat. Zoekopdrachten ondersteunen oorspronkelijke én bekende aliasspellingen; oude assetrecords worden niet massaal herschreven.
 
 ## Schaal en fysieke afmetingen

@@ -35,3 +35,21 @@ it('adds variants with immutable IDs, retains removed variants as deprecated, re
 it('rejects duplicate family IDs, invalid cover, missing image and invalid weight without writes',async()=>{
   const s=storage();for(const override of [{coverVariantId:'missing'},{variants:[]},{variants:[{id:'x',file:'missing.png',weight:1}]},{variants:[{id:'x',file:'shelf-0.png',weight:0}]}]) {expect((await previewPack(s,await pack(6,1,override))).errors.length).toBeGreaterThan(0);expect(libraryQuery(s,{}).total).toBe(0)}
 })
+
+it('keeps exact family reimports idempotent and rejects duplicate family or variant identities',async()=>{
+  const s=storage(),bytes=await pack(4),first=await imported(s,bytes)
+  const repeat=await imported(s,bytes)
+  expect(repeat.summary.imported).toBe(0);expect(repeat.summary.skipped).toBe(4)
+  expect(repeat.entries.map(a=>a.id)).toEqual(first.entries.map(a=>a.id))
+  const before=libraryQuery(s,{})
+  for(const duplicate of ['family','variant']) {
+    const files=unzipSync(bytes),manifest=JSON.parse(new TextDecoder().decode(files['mapweaver-assets.json']))
+    if(duplicate==='family')manifest.families.push(structuredClone(manifest.families[0]))
+    else manifest.families[0].variants[1].id=manifest.families[0].variants[0].id
+    files['mapweaver-assets.json']=strToU8(JSON.stringify(manifest))
+    const preview=await previewPack(s,Buffer.from(zipSync(files,{level:0})))
+    expect(preview.errors.length).toBeGreaterThan(0)
+    expect(()=>commitPack(s,{token:preview.token,revision:preview.revision,duplicate:'keep'})).toThrow()
+    expect(libraryQuery(s,{})).toEqual(before)
+  }
+})
