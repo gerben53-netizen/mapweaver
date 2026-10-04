@@ -1,0 +1,65 @@
+{
+  "id": "rustic-heavy-timber",
+  "revision": "production-1",
+  "name": "Robuust hout",
+  "renderingMode": "generated",
+  "generatorType": "linear",
+  "components": [
+    {
+      "id": "beam-long-1",
+      "role": "beam-long",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-long-1.png",
+      "nominalLengthFt": 4,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "beam-long-2",
+      "role": "beam-long",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-long-2.png",
+      "nominalLengthFt": 4,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "beam-medium-1",
+      "role": "beam-medium",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-medium-1.png",
+      "nominalLengthFt": 2,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "beam-medium-2",
+      "role": "beam-medium",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-medium-2.png",
+      "nominalLengthFt": 2,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "beam-short-1",
+      "role": "beam-short",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-short-1.png",
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    },
+    {
+      "id": "beam-short-2",
+      "role": "beam-short",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-short-2.png",
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1
+    }
+  ],
+  "defaults": {
+    "width": 1,
+    "organic": 0,
+    "growth": 0,
+    "overgrowth": 0,
+    "regularity": 0.65,
+    "variation": 0.55
+  }
+}

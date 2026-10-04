@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "id": "rustic-heavy-timber",
+  "revision": "production-1",
+  "name": "Robuust hout",
+  "status": "PASS WITH NOTE",
+  "sourceArchive": "Premium-Rustic-Heavy-Timber-Generated-Wall-Component-Pack.zip",
+  "sourceSha256": "7839099b111b9fb0006345976fdc98882164f0ff6a8f0bbc0ffc75a29b544938",
+  "reportSha256": "f472a3924c03d7e1e83f54c4874370d170abd722aed804f7bcf00781e1b6b341",
+  "candidateFamily": "C1 — six KEEP, zero open FIX, zero REJECT",
+  "license": "Bestemd voor gebruik, bewerking en distributie in Mapweaver-applicaties, onder de toepasselijke voorwaarden voor gegenereerde output. Dit rapport legt geen aanvullende gebruiks- of distributiebeperkingen op; geen garantie van exclusief auteursrecht of juridisch gecontroleerde rechtenstatus.",
+  "artwork": "Six independently supplier-generated masters, one supplier technical correction each; admitted PNG bytes unchanged, no integration crop/resize/repaint/alpha correction.",
+  "sourcePixelsPerFoot": 256,
+  "anchor": "Center of full untrimmed canvas",
+  "authoringDirection": "+X horizontal longitudinal grain; exact orthographic overhead",
+  "allowedRotation": "Local construction/path heading only; short stock follows join tangent/fan. No arbitrary variation quarter-turns or mirroring.",
+  "allowedScaling": "Uniform row-depth scaling; X source crop for remainders/curvature, never grain stretching; existing bounded length/depth overlap.",
+  "alpha": "RGBA8 sRGB straight alpha; full opaque rectangular core inside two-pixel transparent-black gutter.",
+  "alphaBoundsConvention": "left/top inclusive; right/bottom exclusive",
+  "components": [
+    {
+      "id": "beam-long-1",
+      "role": "beam-long",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-long-1.png",
+      "nominalLengthFt": 4,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "filename": "beam-long-1.png",
+      "sourcePath": "artwork/beam-long-1.png",
+      "width": 1024,
+      "height": 128,
+      "anchor": {
+        "x": 512,
+        "y": 64
+      },
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "right": 1022,
+        "bottom": 126
+      },
+      "opaquePixels": 126480,
+      "sha256": "29aea536da5b21eaa50bb49591bbe74306cc2ba37ee01ac67f17d302145779c8",
+      "brokenCore": 0,
+      "gutter": 0
+    },
+    {
+      "id": "beam-long-2",
+      "role": "beam-long",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-long-2.png",
+      "nominalLengthFt": 4,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "filename": "beam-long-2.png",
+      "sourcePath": "artwork/beam-long-2.png",
+      "width": 1024,
+      "height": 128,
+      "anchor": {
+        "x": 512,
+        "y": 64
+      },
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "right": 1022,
+        "bottom": 126
+      },
+      "opaquePixels": 126480,
+      "sha256": "c91100e7ac75601a754960b78df84b45a94357e035dc4f1a3500ad7344b3c5b0",
+      "brokenCore": 0,
+      "gutter": 0
+    },
+    {
+      "id": "beam-medium-1",
+      "role": "beam-medium",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-medium-1.png",
+      "nominalLengthFt": 2,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "filename": "beam-medium-1.png",
+      "sourcePath": "artwork/beam-medium-1.png",
+      "width": 512,
+      "height": 128,
+      "anchor": {
+        "x": 256,
+        "y": 64
+      },
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "right": 510,
+        "bottom": 126
+      },
+      "opaquePixels": 62992,
+      "sha256": "99defa0eedfd97bff232566fa2f2ac44874d90b653755f2858d1948e7013e6a0",
+      "brokenCore": 0,
+      "gutter": 0
+    },
+    {
+      "id": "beam-medium-2",
+      "role": "beam-medium",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-medium-2.png",
+      "nominalLengthFt": 2,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "filename": "beam-medium-2.png",
+      "sourcePath": "artwork/beam-medium-2.png",
+      "width": 512,
+      "height": 128,
+      "anchor": {
+        "x": 256,
+        "y": 64
+      },
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "right": 510,
+        "bottom": 126
+      },
+      "opaquePixels": 62992,
+      "sha256": "310de56d8a45a3f693776ea643ee8f4bc16f246db9fa77b8a375d8462d51a935",
+      "brokenCore": 0,
+      "gutter": 0
+    },
+    {
+      "id": "beam-short-1",
+      "role": "beam-short",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-short-1.png",
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "filename": "beam-short-1.png",
+      "sourcePath": "artwork/beam-short-1.png",
+      "width": 128,
+      "height": 128,
+      "anchor": {
+        "x": 64,
+        "y": 64
+      },
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "right": 126,
+        "bottom": 126
+      },
+      "opaquePixels": 15376,
+      "sha256": "33e15c708845c852201a096dea5b16ff0df65467ccff76ddfe6f32d0e21a82cc",
+      "brokenCore": 0,
+      "gutter": 0
+    },
+    {
+      "id": "beam-short-2",
+      "role": "beam-short",
+      "image": "/generated-walls/rustic-heavy-timber-production-1/beam-short-2.png",
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "filename": "beam-short-2.png",
+      "sourcePath": "artwork/beam-short-2.png",
+      "width": 128,
+      "height": 128,
+      "anchor": {
+        "x": 64,
+        "y": 64
+      },
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "right": 126,
+        "bottom": 126
+      },
+      "opaquePixels": 15376,
+      "sha256": "c47740cdabf8d25a8cee007a733cb956347820cc7278c8e461d1eb7e2498750c",
+      "brokenCore": 0,
+      "gutter": 0
+    }
+  ],
+  "acceptance": "docs/wall-sets/refined-timber-production-integration.md"
+}

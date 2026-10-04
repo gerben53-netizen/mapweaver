@@ -57,3 +57,11 @@ it.each(['', 'true'])('offers production Refined Timber and hides both unselecte
  for(const id of ['timber-refined','timber-rustic']){view.rerender(<WallFields value={generatedWallStyle(SIMPLE_WALL,map,id,'dev-1')} onChange={onChange}/>);expect(screen.getByLabelText('Wall material or generator')).toHaveValue(id+'@dev-1');expect(screen.getAllByRole('option',{name:/Timber/})).toHaveLength(1)}
  }finally{vi.unstubAllEnvs()}
 })
+
+it.each(['', 'true'])('offers Robuust hout with Rustic controls and hides both unselected timber DEV variants in build %s',installer=>{
+ vi.stubEnv('VITE_MAPWEAVER_INSTALLER',installer)
+ try{const map={...defaultMapStyle(),width:800,height:600,background:null},onChange=vi.fn(),value=generatedWallStyle(SIMPLE_WALL,map,'rustic-heavy-timber','production-1'),view=render(<WallFields value={value} onChange={onChange}/>);
+ expect(screen.getByRole('option',{name:'Robuust hout'})).toHaveValue('rustic-heavy-timber@production-1');expect(screen.queryByRole('option',{name:/Timber/})).toBeNull();expect(screen.getByLabelText('Wall regularity')).toHaveValue('65');expect(screen.getByLabelText('Wall variation')).toHaveValue('55');expect(screen.getAllByRole('slider')).toHaveLength(2);
+ for(const id of ['timber-refined','timber-rustic']){view.rerender(<WallFields value={generatedWallStyle(SIMPLE_WALL,map,id,'dev-1')} onChange={onChange}/>);expect(screen.getByLabelText('Wall material or generator')).toHaveValue(id+'@dev-1');expect(screen.getAllByRole('option',{name:/Timber/})).toHaveLength(1)}
+ }finally{vi.unstubAllEnvs()}
+})
