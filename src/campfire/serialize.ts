@@ -1,6 +1,6 @@
 import { ceilingRegions, isCeiling } from '../domain/ceilings'
 import { validateMapContract } from './generated/index'
-import type { CampfireMapContractV3, MapWallV1 } from './generated/index'
+import type { CampfireMapContract, CampfireMapContractV3, MapWallV1 } from './generated/index'
 import type { ProjectSnapshot } from '../store/history'
 import { projectObjects } from '../domain/projectView'
 import { pathGeometry, sampleSegments, pointAtDistance } from '../domain/paths'
@@ -10,7 +10,9 @@ import { normalizeOffset } from '../domain/mapSettings'
 export class CampfireExportError extends Error { constructor(public readonly errors:string[]){super(errors.join('\n'));this.name='CampfireExportError'} }
 const compareId=(a:{id:string},b:{id:string})=>a.id<b.id?-1:a.id>b.id?1:0
 export const contractPoint=(point:{x:number;y:number})=>({x:point.x,y:point.y})
-export function serializeCampfire(project:ProjectSnapshot,info:{id:string;name:string}):CampfireMapContractV3 {
+export function serializeCampfire(project:ProjectSnapshot,info:{id:string;name:string}):CampfireMapContractV3
+export function serializeCampfire(project:ProjectSnapshot,info:{id:string;name:string},version:1|2|3):CampfireMapContract
+export function serializeCampfire(project:ProjectSnapshot,info:{id:string;name:string},version:1|2|3=3):CampfireMapContract {
  const {map}=project,g=map.grid,errors:string[]=[],objects=projectObjects(project,true),walls:MapWallV1[]=[],doors:CampfireMapContractV3['doors']=[],windows:NonNullable<CampfireMapContractV3['windows']>=[]
  if(g.type&&g.type!=='square')errors.push('Campfire v3 cannot represent a hex grid. Choose a square grid before export.')
  if(g.visible&&(normalizeOffset(g.offsetX,g.cellSize)>1e-8||normalizeOffset(g.offsetY,g.cellSize)>1e-8))errors.push('Campfire v3 has no grid origin offsets. Set both grid offsets to zero before export.')
@@ -41,10 +43,13 @@ export function serializeCampfire(project:ProjectSnapshot,info:{id:string;name:s
   }
  }
  const candidate={format:'CAMPFIRE_MAPWEAVER',version:3,mapId:info.id,revision:map.campfireRevision??1,name:info.name,...(map.ceilingExposure==='explicit'||project.objects.some(isCeiling)?{ceilingRegions:ceilingRegions(project.objects)}:{}),dimensions:{pixelWidth:map.width,pixelHeight:map.height},grid:{type:g.visible?'SQUARE':'NONE',sizePx:g.cellSize,feetPerCell:g.physicalScale?g.physicalScale.distancePerCell*(g.physicalScale.unit==='m'?1/.3048:1):NaN},image:{path:'map.png',mimeType:'image/png'},walls:walls.sort((a,b)=>compareId(a,b)),doors:doors.sort((a,b)=>compareId(a,b)),windows:windows.sort((a,b)=>compareId(a,b)),lighting:{...(map.lighting||defaultLighting()),lights:[...(map.lighting||defaultLighting()).lights].sort((a,b)=>compareId(a,b))}}
- const checked=validateMapContract(candidate)
+ if(version<3&&candidate.ceilingRegions!==undefined)errors.push('Deze contractversie ondersteunt geen Ceiling / Sky Exposure. Gebruik Campfire v3.')
+ if(version<2&&windows.length)errors.push('Deze contractversie ondersteunt geen ramen. Gebruik Campfire v2 of hoger.')
+ const versioned=version===3?candidate:version===2?(({ceilingRegions:ignored,...rest})=>{void ignored;return {...rest,version:2}})(candidate):(({ceilingRegions:ignored,windows:ignoredWindows,...rest})=>{void ignored;void ignoredWindows;return {...rest,version:1}})(candidate)
+ const checked=validateMapContract(versioned)
  if(!checked.valid)errors.push(...checked.errors)
  if(errors.length)throw new CampfireExportError(errors)
  if(!checked.valid)throw Error('Unreachable validation state')
- if(checked.value.version!==3)throw Error('Expected canonical v3 contract.')
+ if(checked.value.version!==version)throw Error('Expected selected canonical contract version.')
  return checked.value
 }

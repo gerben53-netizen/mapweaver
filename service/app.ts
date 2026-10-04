@@ -1,3 +1,4 @@
+import { registerCampfirePublishing } from './campfirePublishing'
 import { ACTIVE_ASSET_SQL } from '../src/domain/assetQuality'
 import packageMetadata from '../package.json'
 import { existsSync } from 'node:fs'
@@ -56,6 +57,7 @@ export async function createApp(options: { directory?: string; port?: number; fr
     reply.header('X-Content-Type-Options', 'nosniff').header('Cache-Control', 'no-store')
     if (request.headers.host !== new URL(origin).host || (request.headers.origin && ![origin, options.developmentOrigin].includes(request.headers.origin)) || request.headers['sec-fetch-site'] === 'cross-site') throw new StorageError('FORBIDDEN_ORIGIN', 'Only the local Mapweaver application may access this service.', 403)
     if (!['GET','HEAD'].includes(request.method) && request.headers['x-mapweaver'] !== '1') throw new StorageError('FORBIDDEN_REQUEST', 'A Mapweaver request header is required.', 403)
+    if (request.url.startsWith('/api/v1/campfire/') && !['GET','HEAD'].includes(request.method) && (jobs.maintenance || request.headers['x-mapweaver-generation'] !== generation(store))) throw new StorageError('DATASET_CHANGED','Storage changed. Reload before publishing.',409)
     const control = request.url.split('?')[0].startsWith('/api/v1/lifecycle')
     if (request.url.split('?')[0].startsWith('/api/') && request.url.split('?')[0] !== '/api/v1/health' && options.instanceId && (!['GET','HEAD'].includes(request.method) || request.headers['x-mapweaver-instance']) && request.headers['x-mapweaver-instance'] !== instanceId) throw new StorageError('INSTANCE_CHANGED', 'Mapweaver restarted. Export unsaved work and reload explicitly.', 409)
     if (control) return
@@ -87,6 +89,7 @@ export async function createApp(options: { directory?: string; port?: number; fr
   app.addContentTypeParser(['image/png','image/jpeg','image/webp','application/zip','application/octet-stream'], { parseAs: 'buffer', bodyLimit: 128 * 1024 * 1024 }, (_request, body, done) => done(null, body))
   const params = (request: { params: unknown }) => request.params as { id: string }
   registerJobs(app, jobs)
+  registerCampfirePublishing(app, () => store)
   app.get('/api/v1/health', () => { if(!store.db.open&&!jobs.maintenance&&lifecycle.phase!=='closing')throw new StorageError('RECOVERY_REQUIRED','Storage needs manual recovery. Retained datasets were kept.',503); return ({ application: 'Mapweaver', dataKey: createHash('sha256').update(process.platform==='win32'?store.root.toLowerCase():store.root).digest('hex'), version: packageMetadata.version, generation: datasetId, instanceId, pid: process.pid, supervisorId: options.supervisorId || null, lifecycle: lifecycle.view(work()), maintenance: jobs.maintenance }) })
   const requestStop = () => { if (!options.shutdown) throw new StorageError('UNAVAILABLE', 'Stop is unavailable in this environment.'); lifecycle.request(); if (options.supervisorId && work().length) lifecycle.hold = true; log.event('stop-requested'); if(work().length) log.event('active-work'); return lifecycle.view(work()) }
   const releaseTabs = (confirmed: unknown, keep?: string) => {

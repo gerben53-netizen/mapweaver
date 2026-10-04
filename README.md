@@ -564,7 +564,7 @@ See [Open Wall Paths & Manual Openings validation](docs/sprints/open-wall-paths.
 
 ## Campfire Map Contract export
 
-Use **Export Campfire Map** for a ZIP containing canonical v3 `map.json` and original-resolution `map.png`. Configure a physical game scale first. **Map actions → Lighting** authors ambient and point lights; its approximate preview is excluded from the PNG. See [Campfire export](docs/campfire-export.md) for identity, revisions, stable object IDs, mapping, validation and supported geometry. Campfire owns the immutable contract; no API client is included.
+Use **Export Campfire Map** for a ZIP containing canonical v3 `map.json` and original-resolution `map.png`. Configure a physical game scale first. **Map actions → Lighting** authors ambient and point lights; its approximate preview is excluded from the PNG. See [Campfire export](docs/campfire-export.md) for identity, revisions, stable object IDs, mapping, validation and supported geometry. Campfire owns the immutable contract. **Naar Campfire sturen** adds authenticated API publishing with mandatory DM review; see [Campfire API publishing](docs/campfire-api-publishing.md).
 
 ## Local Git workflow
 

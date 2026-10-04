@@ -5,7 +5,7 @@ import { validateMapContract,mapContractSchemaV1 } from './generated/index'
 import fixture from './generated/canonical-fixture.json'
 import schema from './generated/canonical-schema.json'
 import { defaultLighting,newPointLight,validateLighting } from './authoring'
-import { packageCampfire,exportCampfire } from './package'
+import { packageCampfire,exportCampfire,prepareCampfire } from './package'
 import { createWall,SIMPLE_WALL } from '../domain/walls'
 import { createOpening } from '../domain/openings'
 import { createLayeredContent } from '../domain/layers'
@@ -21,6 +21,15 @@ import { unzipSync,strFromU8 } from 'fflate'
 import type { ProjectSnapshot } from '../store/history'
 import type { MapObject } from '../domain/models'
 const info={id:'00000000-0000-4000-8000-000000000001',name:'Contract map'}
+it('produces selected supported versions without silently discarding windows or sky exposure',()=>{
+ const p=project();for(const version of [1,2,3] as const){const payload=serializeCampfire(p,info,version);expect(payload.version).toBe(version);expect(validateMapContract(payload).valid).toBe(true);expect(payload.mapId).toBe(info.id)}
+ const w=wall(),window=createOpening(w,.5,'window',40),withWindow=project([w,window]);expect(()=>serializeCampfire(withWindow,info,1)).toThrow('ramen');expect(serializeCampfire(withWindow,info,2).version).toBe(2)
+ p.map.ceilingExposure='explicit';expect(()=>serializeCampfire(p,info,2)).toThrow('Sky Exposure');expect(serializeCampfire(p,info,3)).toMatchObject({ceilingRegions:[]})
+})
+it('shares the exact canonical contract and bitmap preparation between API and manual export',async()=>{
+ const renderer=await import('../export/render'),image=png(),spy=vi.spyOn(renderer,'exportPng').mockResolvedValue(image),p=project();p.map.width=1;p.map.height=1;p.map.ceilingExposure='explicit'
+ try{const api=await prepareCampfire(p,info,3),manual=unzipSync(new Uint8Array(await (await exportCampfire(p,info)).arrayBuffer()));expect(JSON.parse(strFromU8(manual['map.json']))).toEqual(api.payload);expect(manual['map.png']).toEqual(new Uint8Array(await api.image.arrayBuffer()));expect(api.payload).toMatchObject({version:3,ceilingRegions:[]});expect(spy).toHaveBeenCalledWith(expect.anything(),{scale:1,includeGrid:false,transparent:false,includeScaleBar:false})}finally{spy.mockRestore()}
+})
 function project(objects:MapObject[]=[]):ProjectSnapshot{return {map:{...defaultMapStyle(),width:800,height:600,background:null,campfireRevision:1,mapType:'battlemap',geography:defaultGeography(),grid:{...defaultMapStyle().grid,physicalScale:{unit:'ft',distancePerCell:5}}},...createLayeredContent(objects),objectGroups:[],layerTree:{roots:['objects'],groups:[]}}}
 function wall(){return createWall([{id:'a',x:100,y:100,mode:'corner'},{id:'b',x:700,y:100,mode:'corner'}],false,{...SIMPLE_WALL,strokeWidth:10})}
 function png(){return new Blob([new Uint8Array(Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=','base64'))],{type:'image/png'})}
