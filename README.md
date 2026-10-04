@@ -56,18 +56,20 @@ Build a portable Windows package using `npm run package:windows`; existing outpu
 
 Production data defaults to `%LOCALAPPDATA%\Mapweaver` on Windows, `~/Library/Application Support/Mapweaver` on macOS, or `$XDG_DATA_HOME/Mapweaver` / `~/.local/share/Mapweaver` on Linux. Only Windows has been exercised. `MAPWEAVER_PORT` changes the default 47831 port. **Project → Storage** shows the resolved location, integrity findings and estimated registered storage usage.
 
-Development uses an explicit isolated data directory and a Vite proxy. In PowerShell:
+Development starts the backend and Vite together, using an isolated data directory by default (`.development.local`). In PowerShell:
 
 ```powershell
-# Terminal 1: local API (rebuild/restart after service changes)
+# Check for an existing Mapweaver instance before starting a separate session.
+# Use non-default ports for an independent development/QA instance.
 $env:MAPWEAVER_DATA_DIR = Join-Path $PWD '.development.local'
-$env:MAPWEAVER_DEV_ORIGIN = 'http://127.0.0.1:5173'
-npm run dev:service
-# Terminal 2: browser client with HMR
-npm run dev -- --port 5173 --strictPort
+$env:MAPWEAVER_PORT = '49181'
+$env:MAPWEAVER_DEV_PORT = '49182'
+npm run dev
 ```
 
-Never point tests at a real data directory. An explicit `MAPWEAVER_DATA_DIR` must be an absolute path, not a filesystem root or symlink/junction. Development may explicitly use an ignored `*.local` directory; production never implicitly uses the repository, Downloads or current directory. The client always uses relative API routes. When changing the API port, set `MAPWEAVER_PORT` in both terminals. `npm run preview` alone is not a storage-capable production start; use `npm start`.
+The command builds the service, starts it, waits for its health response, then starts Vite with HMR. Backend stderr remains visible. If the backend fails, the whole dev session fails and Vite closes. Ctrl+C stops both. Service changes require restarting `npm run dev`; client changes use HMR. `-- --port <port>` overrides the frontend port; binding is always strict. An existing healthy service on the configured backend port is reported instead of starting another backend. No one-click development launcher is implemented.
+
+Never point tests at a real data directory. An explicit `MAPWEAVER_DATA_DIR` must be an absolute path, not a filesystem root or symlink/junction. Development may explicitly use an ignored `*.local` directory; production never implicitly uses the repository, Downloads or current directory. The client uses relative API routes; the orchestrator passes one `MAPWEAVER_PORT` to the backend and proxy. `npm run dev:service` remains an independent backend-only command for diagnosis. `npm run preview` alone is not a storage-capable production start; use `npm start`. Campfire credentials/connectivity are not required for local startup.
 
 ```sh
 npm run typecheck       # Client and service

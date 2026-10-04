@@ -17,4 +17,4 @@ try {
   await app.listen({ host: '127.0.0.1', port })
   console.log(`Mapweaver: http://127.0.0.1:${port}`)
   for (const signal of ['SIGINT','SIGTERM'] as const) process.on(signal, () => { requestStop() })
-} catch (error) { await release?.(); if (error instanceof StorageError) console.error(error.code); else if (['EADDRINUSE','EACCES','EPERM'].includes(String((error as { code?: string }).code))) console.error((error as { code: string }).code); console.error('Mapweaver could not start. Check the data directory, running instances, database version, permissions and configured port.'); process.exitCode = 1 }
+} catch (error) { await release?.(); if (error instanceof StorageError) console.error(error.code); else if (['EADDRINUSE','EACCES','EPERM'].includes(String((error as { code?: string }).code))) console.error((error as { code: string }).code); console.error(error instanceof Error ? error.message : error); console.error('Mapweaver could not start. Check the data directory, running instances, database version, permissions and configured port.'); process.exitCode = 1 }

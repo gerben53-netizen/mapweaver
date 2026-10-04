@@ -8,7 +8,7 @@
   },
   "scripts": {
     "validate-asset-pack": "node scripts/validate-asset-pack.mjs",
-    "dev": "vite --host 127.0.0.1",
+    "dev": "node scripts/dev.mjs",
     "build": "npm run check:campfire-contract && tsc -b && vite build && npm run build:service && node scripts/check-font-resources.mjs",
     "typecheck": "tsc -b && tsc -p tsconfig.service.json",
     "preview": "vite preview --host 127.0.0.1",
