@@ -1,3 +1,4 @@
+import { StampVariantProperties } from './StampVariantProperties'
 import { useState, useId } from 'react'
 import { useEditorStore } from '../store/editorStore'
 import { useProjectStore } from '../store/projectStore'
@@ -79,6 +80,7 @@ export function ObjectProperties() {
       {selected?.kind==='area'&&section('Appearance details',<AreaProperties key={JSON.stringify(selected)} object={selected} section="appearance"/>)}
       {selected?.kind==='path'&&section('Style details',<PathProperties key={JSON.stringify(selected)} object={selected} section="appearance"/>)}
       {selected?.kind==='label'&&section('Text layout and links',<AnnotationProperties key={JSON.stringify(selected)} object={selected}/>)}
+      {selected?.kind==='stamp'&&selected.family&&section('Variant',<StampVariantProperties object={selected}/>,true)}
       {selected?.kind==='stamp'&&section('Appearance',<StampEffectSettings object={selected}/>)}
       {chosen.length>1&&walls.length===chosen.length&&section('Wall style',<WallBulkProperties key={JSON.stringify(walls)} objects={walls}/>)}
       {chosen.length>1&&chosen.every(o=>o.kind==='label')&&section('Text style',<LabelBulkProperties objects={chosen as LabelObject[]}/>)}

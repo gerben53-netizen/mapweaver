@@ -1,3 +1,4 @@
+import { chooseVariant } from './stampFamilies'
 import { assetAvailableForPlacement } from './assetQuality'
 import { defaultStampEffects } from './mapEffects'
 import { isLandMap } from './geography'
@@ -41,6 +42,7 @@ export function placementSize(asset: Pick<StampAsset, 'naturalWidth' | 'naturalH
 export function createPlacedObject(asset: StampAsset, center: Point, map: Size): PlacedObject {
   if (!assetAvailableForPlacement(asset.quality)) throw Error('Asset is unavailable for new placement.')
   const size = placementSize(asset, map)
-  return { ...(asset.quality?.softShadowDefault===false?{effects:{...defaultStampEffects(),softShadow:'off' as const}}:{}), kind: 'stamp', id: crypto.randomUUID(), assetId: asset.id, x: center.x - size.width / 2, y: center.y - size.height / 2, ...size, rotation: 0, scaleX: 1, scaleY: 1, opacity: 1 }
+  const variant = asset.family ? chooseVariant(asset.family) : null
+  return { ...(asset.quality?.softShadowDefault===false?{effects:{...defaultStampEffects(),softShadow:'off' as const}}:{}), kind: 'stamp', id: crypto.randomUUID(), assetId: variant?.assetId || asset.id, ...(variant && asset.family ? { family: { family: asset.family, variantId: variant.id } } : {}), x: center.x - size.width / 2, y: center.y - size.height / 2, ...size, rotation: 0, scaleX: 1, scaleY: 1, opacity: 1 }
 }
 

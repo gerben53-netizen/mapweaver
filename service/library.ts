@@ -1,3 +1,4 @@
+import { validateFamily } from '../src/domain/stampFamilies'
 import { normalizeStampSearch,resolveStampCategory,STAMP_CATEGORIES } from '../src/domain/stampTaxonomy'
 import { ACTIVE_ASSET_SQL, validateAssetQuality } from '../src/domain/assetQuality'
 import { validateMarkerAssetTags } from '../src/domain/illustratedMarkers'
@@ -17,7 +18,7 @@ export interface LibraryQuery { mapType?: string; type?: string; search?: string
 export const libraryRevision = (s: Storage) => Number((s.db.prepare("SELECT value FROM settings WHERE key='libraryRevision'").get() as { value: string }).value)
 export function checkRevision(s: Storage, revision: unknown) { if (revision !== libraryRevision(s)) throw new StorageError('LIBRARY_CONFLICT', 'Library changed in another tab. Refresh and review your draft before retrying.', 409) }
 export function categories(s: Storage) { return s.db.prepare('SELECT * FROM categories ORDER BY sortOrder,normalizedName,id').all() as LibraryCategory[] }
-export function publicAsset(a: LibraryAsset) { return { ...assetFromRow(a), quality:a.quality?validateAssetQuality(JSON.parse(a.quality)):null, generator:a.generator?validateGeneratorMetadata(JSON.parse(a.generator)):null, prefab: undefined, prefabBounds: a.prefab ? JSON.parse(a.prefab).bounds as import('../src/domain/prefabs').Bounds : a.prefabBoundsSummary ? JSON.parse(a.prefabBoundsSummary) as import('../src/domain/prefabs').Bounds : undefined, prefabMode: a.prefab ? JSON.parse(a.prefab).mode as 'editable'|'flattened' : a.prefabMode, favorite: !!a.favorite, tags: JSON.parse(a.tags), applicableMapTypes: JSON.parse(a.applicableMapTypes), defaultSize: { mode: a.sizingMode, lockAspectRatio: a.aspectRatioLocked === true || Number(a.aspectRatioLocked) === 1, ...(a.defaultWidth ? { width: a.defaultWidth } : {}), ...(a.defaultHeight ? { height: a.defaultHeight } : {}), ...(a.sizingUnit ? { unit: a.sizingUnit } : {}) } as DefaultSize } }
+export function publicAsset(a: LibraryAsset) { return { ...assetFromRow(a), family:a.family?validateFamily(JSON.parse(a.family)):undefined, quality:a.quality?validateAssetQuality(JSON.parse(a.quality)):null, generator:a.generator?validateGeneratorMetadata(JSON.parse(a.generator)):null, prefab: undefined, prefabBounds: a.prefab ? JSON.parse(a.prefab).bounds as import('../src/domain/prefabs').Bounds : a.prefabBoundsSummary ? JSON.parse(a.prefabBoundsSummary) as import('../src/domain/prefabs').Bounds : undefined, prefabMode: a.prefab ? JSON.parse(a.prefab).mode as 'editable'|'flattened' : a.prefabMode, favorite: !!a.favorite, tags: JSON.parse(a.tags), applicableMapTypes: JSON.parse(a.applicableMapTypes), defaultSize: { mode: a.sizingMode, lockAspectRatio: a.aspectRatioLocked === true || Number(a.aspectRatioLocked) === 1, ...(a.defaultWidth ? { width: a.defaultWidth } : {}), ...(a.defaultHeight ? { height: a.defaultHeight } : {}), ...(a.sizingUnit ? { unit: a.sizingUnit } : {}) } as DefaultSize } }
 export type PublicLibraryAsset = ReturnType<typeof publicAsset>
 const metadataColumns=(s:Storage)=>(s.db.prepare('PRAGMA table_info(assets)').all() as {name:string}[]).filter(c=>c.name!=='prefab').map(c=>c.name).join(',')
 export function libraryQuery(s: Storage, q: LibraryQuery, all = false) {
@@ -34,13 +35,13 @@ export function libraryQuery(s: Storage, q: LibraryQuery, all = false) {
   const targets=q.category?(byId.has(q.category)?[q.category]:aliases.categories[q.category]|| (canonicalTargets.length?canonicalTargets:[q.category])):[]
   const scope = q.category ? new Set(tree.filter(c=>targets.some(id=>ancestors.get(c.id)!.includes(id))).map(c=>c.id)) : null
   const members = q.collection ? new Set((s.db.prepare('SELECT assetId FROM library_members WHERE collectionId=?').all(q.collection) as { assetId: string }[]).map(r => r.assetId)) : null
-  const filtered = (s.db.prepare(`SELECT ${metadataColumns(s)},json_extract(prefab,'$.mode') AS prefabMode,json_extract(prefab,'$.bounds') AS prefabBoundsSummary FROM assets WHERE deletedAt IS NULL AND ${ACTIVE_ASSET_SQL} AND type=?`).all(q.type === 'prefab' ? 'prefab' : q.type === 'fill-pattern' ? 'fill-pattern' : 'stamp') as LibraryAsset[]).filter(a => (!q.mapType||assetAppliesToMap(JSON.parse(a.applicableMapTypes),q.mapType as MapType)) && (!q.favorite || !!a.favorite) && (!members || members.has(a.id)) && (!search || [rawSearch,search].some(term=>normalizeLibraryText([a.name, a.originalName, a.description, ...JSON.parse(a.tags)].join(' ')).includes(term))))
+  const filtered = (s.db.prepare(`SELECT ${metadataColumns(s)},json_extract(prefab,'$.mode') AS prefabMode,json_extract(prefab,'$.bounds') AS prefabBoundsSummary FROM assets WHERE deletedAt IS NULL AND familyMember IS NULL AND ${ACTIVE_ASSET_SQL} AND type=?`).all(q.type === 'prefab' ? 'prefab' : q.type === 'fill-pattern' ? 'fill-pattern' : 'stamp') as LibraryAsset[]).filter(a => (!q.mapType||assetAppliesToMap(JSON.parse(a.applicableMapTypes),q.mapType as MapType)) && (!q.favorite || !!a.favorite) && (!members || members.has(a.id)) && (!search || [rawSearch,search].some(term=>normalizeLibraryText([a.name, a.originalName, a.description, a.quality ? JSON.parse(a.quality).semanticClass || '' : '', ...JSON.parse(a.tags)].join(' ')).includes(term))))
   const counts = new Map<string, number>(); filtered.forEach(a => counts.set(a.categoryId, (counts.get(a.categoryId) || 0) + 1))
   const totals = new Map<string,number>()
   for(const [id,count] of counts)for(const parent of ancestors.get(id)||[])totals.set(parent,(totals.get(parent)||0)+count)
   // True emptiness is independent of active role/search/favorites/collection filters.
   const libraryTotals = new Map<string, number>()
-  const allCounts = s.db.prepare(`SELECT categoryId,COUNT(*) AS count FROM assets WHERE deletedAt IS NULL AND ${ACTIVE_ASSET_SQL} GROUP BY categoryId`).all() as {categoryId:string;count:number}[]
+  const allCounts = s.db.prepare(`SELECT categoryId,COUNT(*) AS count FROM assets WHERE deletedAt IS NULL AND familyMember IS NULL AND ${ACTIVE_ASSET_SQL} GROUP BY categoryId`).all() as {categoryId:string;count:number}[]
   for (const {categoryId,count} of allCounts) for (const id of ancestors.get(categoryId) || []) libraryTotals.set(id,(libraryTotals.get(id)||0)+count)
   const treeCounts = tree.map(c=>({...c,direct:counts.get(c.id)||0,total:totals.get(c.id)||0,libraryTotal:libraryTotals.get(c.id)||0}))
   const rows = filtered.filter(a => !scope || scope.has(a.categoryId)).sort((a, b) => {
@@ -49,8 +50,9 @@ export function libraryQuery(s: Storage, q: LibraryQuery, all = false) {
   })
   return { revision: libraryRevision(s), total: rows.length, ids: all ? rows.map(a => a.id) : undefined, assets: all ? [] : rows.slice(offset, offset + limit).map(publicAsset), categories: treeCounts, collections: s.db.prepare('SELECT * FROM library_collections ORDER BY name,id').all() as LibraryCollection[] }
 }
-export function patchAsset(s: Storage, id: string, patch: Record<string, unknown>) {
+export function patchAsset(s: Storage, id: string, patch: Record<string, unknown>, familyImport = false) {
   const a = s.asset(id) as LibraryAsset
+  if (!familyImport && a.family && Object.keys(patch).some(k=>!['favorite'].includes(k))) throw Error('Shared family metadata is immutable. Import a new family revision instead.')
   const quality = patch.quality === undefined ? undefined : patch.quality === null ? null : JSON.stringify(validateAssetQuality(patch.quality))
   const title = patch.title === undefined ? a.name : libraryText(patch.title, 120, true)
   const categoryId = patch.categoryId === undefined ? a.categoryId : String(patch.categoryId)
@@ -99,7 +101,7 @@ export function usage(s: Storage, ids: string[]):AssetUsage[] {
 export interface RemovalPreview {revision:number;assets:{id:string;name:string}[];usage:AssetUsage[]}
 export function removalPreview(s:Storage,input:unknown):RemovalPreview {
  if(!Array.isArray(input)||!input.length||input.length>10000||input.some(id=>typeof id!=='string'))throw Error('Select 1–10,000 assets.')
- const ids=[...new Set(input)] as string[],assets=ids.map(id=>{const a=s.asset(id) as LibraryAsset;if(a.deletedAt)throw Error('Selection changed. Refresh the library.');return {id,name:a.name}})
+ const ids=[...new Set(input)] as string[]; if(ids.some(id=>!!s.asset(id).family || !!s.asset(id).familyMember))throw Error('Family components are retained for stable map references and cannot be removed individually.');const assets=ids.map(id=>{const a=s.asset(id) as LibraryAsset;if(a.deletedAt)throw Error('Selection changed. Refresh the library.');return {id,name:a.name}})
  return {revision:libraryRevision(s),assets,usage:usage(s,ids)}
 }
 function persistentUsageError(s:Storage,ids:string[]){

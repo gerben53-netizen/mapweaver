@@ -1,3 +1,4 @@
+import { validateFamily, type StampFamily } from './stampFamilies'
 import { validateAssetQuality, type AssetQuality } from './assetQuality'
 import { validateMarkerAssetTags } from './illustratedMarkers'
 import { validateGeneratorMetadata, type GeneratorMetadata } from './generatorAssets'
@@ -7,7 +8,7 @@ import { deriveTitle, libraryText, mapTypes, normalizeTags, validateDefaultSize 
 import type { DefaultSize } from './library'
 import type { MapType } from './geography'
 export interface AssetEntry { id?:string; categoryId?:string; quality?: AssetQuality; patternScale?:number; file: string; generator?: GeneratorMetadata | null; prefab?: Prefab; type: 'stamp' | 'fillPattern' | 'prefab'; originalName?: string; title?: string; description?: string; categoryPath?: string[]; tags?: string[]; defaultSize?: DefaultSize; applicableMapTypes?: MapType[]; sha256?: string; author?: string; source?: string; license?: string; favorite?: boolean }
-export interface AssetManifest { schemaVersion: 1 | 2 | 3; pack?:{id:string;revision:number}; collection?: { title: string; description?: string }; assets: AssetEntry[]; categories?: { path: string[]; sortOrder: number }[]; collections?: { title: string; description: string; members: { file: string; type: 'stamp' | 'fillPattern' | 'prefab' }[] }[] }
+export interface AssetManifest { families?: (StampFamily & { files: Record<string,string> })[]; schemaVersion: 1 | 2 | 3; pack?:{id:string;revision:number}; collection?: { title: string; description?: string }; assets: AssetEntry[]; categories?: { path: string[]; sortOrder: number }[]; collections?: { title: string; description: string; members: { file: string; type: 'stamp' | 'fillPattern' | 'prefab' }[] }[] }
 export function safeAssetPath(value: unknown): string {
   if (typeof value !== 'string' || value.length > 240 || value.includes('\\') || value.split('/').some(s => !s || s === '.' || s === '..' || /[<>:"|?*]/.test(s) || [...s].some(c => c.charCodeAt(0) < 32) || /[. ]$/.test(s) || /^(con|prn|aux|nul|com[1-9]|lpt[1-9])(\.|$)/i.test(s))) throw Error('Unsafe relative asset path.')
   return value
@@ -17,7 +18,7 @@ export function parseAssetManifest(value: unknown): { manifest: AssetManifest; w
   if (!value || typeof value !== 'object' || ![1,2,3].includes((value as AssetManifest).schemaVersion)) throw Error('Unsupported asset manifest schemaVersion; expected 1, 2 or 3.')
   const v = value as Record<string, unknown>, warnings: string[] = []
   const unknown = (r: object, allowed: string[], where: string) => Object.keys(r).forEach(k => { if (!allowed.includes(k)) warnings.push(`${where}: unknown field ${k} ignored.`) })
-  unknown(v, ['schemaVersion', 'pack', 'collection', 'assets', 'categories', 'collections'], 'manifest')
+  unknown(v, ['schemaVersion', 'pack', 'families', 'collection', 'assets', 'categories', 'collections'], 'manifest')
   if (!Array.isArray(v.assets) || v.assets.length > 1000) throw Error('A batch supports at most 1,000 assets.')
   const seen = new Set<string>()
   const assets = v.assets.map((raw: unknown): AssetEntry => {
@@ -44,6 +45,24 @@ export function parseAssetManifest(value: unknown): { manifest: AssetManifest; w
     return result
   })
   const manifest: AssetManifest = { schemaVersion: v.schemaVersion as 1|2|3, assets }; if(v.pack!==undefined){const p=v.pack as {id:string;revision:number};if(!p||typeof p.id!=='string'||!/^[a-zA-Z0-9_-]{1,80}$/.test(p.id)||!Number.isSafeInteger(p.revision)||p.revision<1)throw Error('Invalid pack identity/revision.');manifest.pack={id:p.id,revision:p.revision}} const ids=assets.filter(a=>a.id).map(a=>a.id);if(new Set(ids).size!==ids.length)throw Error('Duplicate asset ID.');if(ids.length&&!manifest.pack)throw Error('Asset IDs require pack identity/revision.')
+  if (v.families !== undefined) {
+    if (!manifest.pack || !Array.isArray(v.families) || v.families.length > 100) throw Error('Families require a pack identity and at most 100 families.')
+    const familyIds = new Set<string>()
+    manifest.families = v.families.map(raw => {
+      const f = raw as Record<string, unknown>, variants = f.variants as {id:string;file:string;weight?:number;label?:string;deprecated?:boolean;sha256?:string}[]
+      if (Object.keys(f).some(k=>!['id','displayName','coverVariantId','anchor','variants','categoryId','categoryPath','tags','semanticClass','softShadowDefault','defaultSize','applicableMapTypes'].includes(k))) throw Error('Unsupported family field.')
+      if (Array.isArray(variants) && variants.some(v=>Object.keys(v).some(k=>!['id','file','weight','label','deprecated','sha256'].includes(k)))) throw Error('Variant overrides are not allowed; use shared family metadata.')
+      if (!Array.isArray(variants)) throw Error('Family variants are required.')
+      const family = validateFamily({ ...f, revision: manifest.pack!.revision, anchor: f.anchor || 'center', coverVariantId: f.coverVariantId || variants[0]?.id, variants: variants.map(v => ({...v, assetId:v.id,weight:v.weight ?? 1})) })
+      if (familyIds.has(family.id)) throw Error('Duplicate family ID.'); familyIds.add(family.id)
+      const size = validateDefaultSize(f.defaultSize)
+      if (size.mode !== 'world' || !size.width || !size.height || !['ft','m'].includes(size.unit || '')) throw Error('Family requires explicit world width, height and unit.')
+      if (typeof f.semanticClass !== 'string' || typeof f.softShadowDefault !== 'boolean') throw Error('Family requires shared semanticClass and softShadowDefault.')
+      const parsed = parseAssetManifest({schemaVersion:3,pack:manifest.pack,assets:variants.map(v => ({type:'stamp',id:family.id+'_'+v.id,file:v.file,title:family.displayName,categoryId:f.categoryId,categoryPath:f.categoryPath,tags:f.tags,semanticClass:f.semanticClass,softShadowDefault:f.softShadowDefault,defaultSize:size,applicableMapTypes:f.applicableMapTypes,sha256:v.sha256}))})
+      for (const entry of parsed.manifest.assets) { if (seen.has(entry.file+'/stamp') || assets.some(a=>a.id===entry.id)) throw Error('Conflicting family image/asset identity.'); seen.add(entry.file+'/stamp'); assets.push(entry) }
+      return {...family,files:Object.fromEntries(variants.map(v=>[v.id,safeAssetPath(v.file)]))}
+    })
+  }
   if (v.collection !== undefined) { const c = v.collection as Record<string, unknown>;unknown(c,['title','description'],'collection'); manifest.collection = { title: libraryText(c.title, 120, true), description: libraryText(c.description || '', 4000) } }
   if (v.categories !== undefined) {
     if (!Array.isArray(v.categories) || v.categories.length > 2000) throw Error('At most 2,000 categories per manifest.')

@@ -112,6 +112,8 @@ Gebruik in code, documentatie en interface consequent de volgende betekenis:
 
 - **Stamp** — een herbruikbaar visueel bronobject uit de bibliotheek.
 
+- **Stamp Family** — één semantisch bibliotheekitem met onveranderlijke concrete PNG-varianten; een native Stamp bewaart de eenmaal gekozen variant-ID en revision-snapshot. Zie ADR-0060.
+
 - **Stamp Palette** — campagnegebonden werklijst van bibliotheekasset-ID’s voor herhaald klikken en eenmalig slepen; geen kopie van assets en onafhankelijk van Favorites. Zie ADR-0048.
 
 - **Fill pattern** — een herbruikbare afbeelding van het assettype `fillPattern`, gebruikt als herhaling of uitgerekte afbeelding binnen een generiek Area-object. Een expliciete kopie naar het andere assettype houdt logische items gescheiden.

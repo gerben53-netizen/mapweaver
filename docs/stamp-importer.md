@@ -94,3 +94,44 @@ Geen maprewrite, reset, beeldvervanging of massamigratie. Oude lokale asset-IDs 
 ## Goed/fout en volgende PQA-fase
 
 Fout: categorie Palace / Library / Eldric. Goed: `categoryId: "bookcases"`, naam Gebogen boekenkast, tags paleis/bibliotheek/Eldric, expliciete fysieke maten en bronrechten. Houd pack-ID/asset-ID stabiel, verhoog revision bij een bewuste update en controleer preview/mapping voor bevestiging. Laat toekomstige PQA-families hetzelfde object, footprint en anchor delen. Het REPLACE-backlog en Family/Variant-model worden in afzonderlijke sprints uitgevoerd; bestaande legacy-IDs blijven nodig voor oude kaarten.
+
+
+## Stamp Families en varianten
+
+Een Stamp Family bundelt varianten van **hetzelfde semantische object** tot één kaart in de picker. Een familie met zes actieve beelden toont `×6`; zoeken op naam, categorie, tags en semanticClass vindt de familie één keer. De eerste cover blijft vast en wordt niet willekeurig gekozen.
+
+Voorbeeld van `mapweaver-assets.json` (de genoemde PNG's moeten werkelijk in de ZIP staan):
+
+```json
+{
+  "schemaVersion": 3,
+  "pack": { "id": "palace-bookshelves", "revision": 1 },
+  "assets": [],
+  "families": [{
+    "id": "palace-bookshelf",
+    "displayName": "Palace bookshelf",
+    "categoryId": "bookcases",
+    "tags": ["paleis", "bibliotheek"],
+    "semanticClass": "storage",
+    "softShadowDefault": true,
+    "anchor": "center",
+    "coverVariantId": "full",
+    "defaultSize": { "mode": "world", "width": 10, "height": 5, "unit": "ft", "lockAspectRatio": true },
+    "applicableMapTypes": ["battlemap"],
+    "variants": [
+      { "id": "full", "file": "images/full.png", "weight": 2, "label": "Full shelves" },
+      { "id": "sparse", "file": "images/sparse.png", "weight": 1, "label": "Sparse shelves" }
+    ]
+  }]
+}
+```
+
+Importeer via hetzelfde Import assets → preview → Review resolved changes → Confirm import-pad. Category ID/path moet canoniek of expliciet gemapt zijn. Elke variant heeft een unieke ID en eigen PNG; standaardgewicht is 1, toegestane positieve gewichten zijn maximaal 10.000. Family-ID en `familyId_variantId` moeten veilige identifiers van maximaal 80 tekens zijn. Maximaal 64 varianten inclusief behouden deprecated beelden. Duplicate family/variant IDs, ongeldige cover, ontbrekende afbeeldingen, verschillende canvases, foutieve footprints en conflicterende revisies blokkeren de batch. Per-variant semantische/default-size-overrides zijn verboden.
+
+PQA-authoring: identieke objectrol, fysieke breedte/hoogte, gecentreerde anchor, canvasafmetingen, lichtbehandeling en art direction. Alleen inhoudsvariatie binnen hetzelfde functionele silhouet. Kleine alpha-afwijkingen mogen; crop geen variant afzonderlijk naar een ander canvas. Gebruik geen willekeurige meubels met verschillende footprints als één familie. De importer controleert techniek; de producent blijft verantwoordelijk voor visuele/semantische equivalence.
+
+Bij plaatsing wordt één actieve variant gewogen gekozen en direct opgeslagen. Pannen, zoomen, redraw, PNG, reload en heropenen kiezen nooit opnieuw. Kopiëren/dupliceren behoudt de keuze. Properties → Variant kiest expliciet; Andere variant kiest gewogen uit andere actieve varianten wanneer beschikbaar. Beide behouden positie, rotatie, spiegeling, afmetingen, laag, zichtbaarheid en persoonlijke schaduwinstellingen; één wijziging is één undo-stap. Voor meerdere geselecteerde stamps zijn variantcontrols in v1 verborgen.
+
+Een nieuwe packrevision kan varianten toevoegen of met `deprecated: true` uitsluiten van automatische nieuwe plaatsing. Weggelaten oude varianten blijven als deprecated behouden. Bestaande objecten bewaren hun eigen snapshot en gekozen variant. Een stabiele variant-ID mag nooit een andere afbeelding krijgen; nieuwe artwork krijgt een nieuwe variant-ID. De cover blijft gelijk. Gedeelde footprint, categorie, semanticClass, schaduw-default en kaarttypes blijven gelijk; bestaande maps worden niet herschreven. Familieonderdelen kunnen in v1 niet afzonderlijk worden verwijderd of los gewijzigd.
+
+Projectsave en portable `.mapweaver` bevatten de familie-snapshot en de benodigde PNG's; variantkeuze blijft daardoor ook op een andere pc bewerkbaar. Familie-ZIP-export groepeert de beelden opnieuw en ondersteunt één pack/revision per export. Bestaande losse stamps blijven normale losse stamps. De volledige PQA REPLACE-backlog wordt hiermee niet automatisch geconsolideerd.

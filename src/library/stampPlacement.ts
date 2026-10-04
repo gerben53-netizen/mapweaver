@@ -34,7 +34,18 @@ export async function prepareStamp(id: string) {
   if (meta && !assetAvailableForPlacement(meta.quality)) throw Error('This asset is retained for existing maps and is unavailable for new placement.')
   if (!meta || meta.kind !== 'stamp') throw Error('This stamp is missing. Remove it from the palette or choose another asset.')
   if (!stampMapCompatible(meta, useProjectStore.getState().map.mapType)) throw Error('This stamp is not compatible with this map type.')
-  const asset = await adoptLibraryAsset(meta), lease = acquireAssetImage(asset.id, 'stamp')
+  let asset = await adoptLibraryAsset(meta)
+  if (meta.family) {
+    const variants = await Promise.all(meta.family.variants.map(async variant => {
+      if (variant.assetId === meta.id) return { ...variant, assetId: asset.id }
+      const source = await libraryRepository.getAsset(variant.assetId)
+      if (!source) throw Error('Family variant is missing.')
+      const adopted = await adoptLibraryAsset(source)
+      return { ...variant, assetId: adopted.id }
+    }))
+    asset = { ...asset, family: { ...meta.family, variants } }
+  }
+  const lease = acquireAssetImage(asset.id, 'stamp')
   try { await lease.promise; if (generation !== useAssetContext.getState().generation) throw Error('The project changed. Choose the stamp again.'); return { ...asset, kind: 'stamp' as const } }
   finally { lease.release() }
 }

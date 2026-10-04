@@ -26,7 +26,7 @@ it('installs the 77 standard stamps and nine production floors once without revi
   await initializeDefaultContent(store, frontend, true)
   expect(store.db.prepare('SELECT id,sha256 FROM assets ORDER BY id').all()).toEqual(before)
   expect((store.db.prepare('SELECT quality FROM assets WHERE id=?').get(id) as { quality: string }).quality).toBe(quality)
-  expect((store.db.prepare('SELECT MAX(version) AS v FROM schema_migrations').get() as { v: number }).v).toBe(11)
+  expect((store.db.prepare('SELECT MAX(version) AS v FROM schema_migrations').get() as { v: number }).v).toBe(12)
 })
 it('preserves an existing database, including an intentionally empty library', async () => {
   const { store, frontend } = fixture()

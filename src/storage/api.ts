@@ -1,6 +1,6 @@
 import type { ProjectFile } from '../projects/types'
 import type { AssetSizing } from '../domain/assetSizing'
-export interface RemoteAsset extends AssetSizing { quality?: string | import('../domain/assetQuality').AssetQuality | null; patternScale?:number|null; applicableMapTypes?: import('../domain/geography').MapType[]; id:string;type:'stamp'|'fill-pattern'|'background'|'prefab';name:string;originalName:string;mimeType:string;width:number;height:number;size:number;sha256:string;categoryId:string;createdAt:string;modifiedAt:string }
+export interface RemoteAsset extends AssetSizing { family?: import("../domain/stampFamilies").StampFamily | string | null; quality?: string | import('../domain/assetQuality').AssetQuality | null; patternScale?:number|null; applicableMapTypes?: import('../domain/geography').MapType[]; id:string;type:'stamp'|'fill-pattern'|'background'|'prefab';name:string;originalName:string;mimeType:string;width:number;height:number;size:number;sha256:string;categoryId:string;createdAt:string;modifiedAt:string }
 export interface RemoteProject { id:string;name:string;revision:number;createdAt:string;modifiedAt:string;document:ProjectFile }
 export class ApiError extends Error { constructor(public code:string,message:string) { super(message) } }
 export let storageWork = 0

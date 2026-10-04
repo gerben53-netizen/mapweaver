@@ -1,3 +1,4 @@
+import { prepareStamp } from './stampPlacement'
 import { useTextureBrushStore } from '../store/textureBrushStore'
 import { textureBrushMaterial } from '../domain/textureBrush'
 import { resolvePlacementSize } from '../domain/placement'
@@ -12,7 +13,7 @@ import { useEditorStore } from '../store/editorStore'
 import { useProjectStore } from '../store/projectStore'
 export type AssetSource = 'library' | 'project'
 export function pickerAssets(assets: TypedAsset[], kind: AssetKind, query = '', category = '') {
-  return assets.filter((a) => a.kind === kind && a.name.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()) && (!category || a.categoryId === category))
+  return assets.filter((a) => a.kind === kind && [a.name,...(a.family?.metadata?.tags || []),a.family?.metadata?.semanticClass || ''].join(' ').toLocaleLowerCase().includes(query.trim().toLocaleLowerCase()) && (!category || a.categoryId === category))
 }
 export async function chooseAsset(id: string, source: AssetSource, kind: AssetKind, replacementId?: string) {
   const purpose=useEditorStore.getState().picker?.purpose
@@ -22,7 +23,7 @@ export async function chooseAsset(id: string, source: AssetSource, kind: AssetKi
   const generation = useAssetContext.getState().generation
   let asset = source === 'library' ? await libraryRepository.getAsset(id) : projectAssets().find((a) => a.id === id)
   if (!asset || asset.kind !== kind) throw new Error('This asset does not match the selected tool.')
-  if (source === 'library') asset = await adoptLibraryAsset(asset)
+  if (source === 'library') asset = asset.family && kind === 'stamp' ? await prepareStamp(id) : await adoptLibraryAsset(asset)
   const lease = acquireAssetImage(asset.id, kind)
   try {
     const loadedImage = await lease.promise

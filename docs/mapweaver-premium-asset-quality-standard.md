@@ -173,3 +173,7 @@ Require:
 - list of rejected candidates (do not import them).
 20. Final rule
 Do not judge premium assets by how attractive they look in isolation. Judge them by how clearly they communicate their function and how convincingly they combine into a finished Mapweaver battlemap.
+
+## Stamp families
+
+Varianten van één semantisch object moeten dezelfde footprint, gecentreerde anchor, canvasafmetingen, functioneel silhouet, neutrale verlichting en art direction delen. Variatie verandert inhoud, niet plaatsingsgeometrie. Nieuwe pixels vereisen een nieuwe variant-ID. Zie [familie-authoring](stamp-importer.md#stamp-families-en-varianten). Deze mogelijkheid voert geen automatische REPLACE-consolidatie uit.

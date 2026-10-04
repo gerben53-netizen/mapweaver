@@ -1,3 +1,4 @@
+import { switchVariant, remapFamilyObject } from '../domain/stampFamilies'
 import { campfireContentSignature, nextCampfireRevision, validateLighting } from '../campfire/authoring'
 import { stampMapCompatible } from '../domain/stampPlacement'
 import { markAutomaticLabelEdit, automaticLabelFingerprint } from '../domain/automaticLabelMetadata'
@@ -87,6 +88,7 @@ export interface ProjectState extends ManagementActions {
   commitTranslation: (before: PlacedObject[], after: PlacedObject[]) => void
   removeBackground: () => void
   setBackground: (background: Background) => void
+  changeStampVariant: (id: string, variantId?: string) => void
   place: (asset: StampAsset, point: Point, bypass?: boolean) => void
   addLayer: () => void
   changeLayer: (id: string, patch: Partial<Pick<MapLayer, 'name' | 'visible' | 'locked'>>) => void
@@ -418,6 +420,13 @@ export const useProjectStore = create<ProjectState>((rawSet, get) => {
     if (!canAdd({ ...state, map }, [])) throw new Error('The background exceeds the project asset limit.')
     set({ map })
   }),
+  changeStampVariant: (id, variantId) => history.run('Change stamp variant', () => {
+    const state = get(), object = state.objects.find(o => o.id === id)
+    if (!object || object.kind !== 'stamp' || !editableProjectIds(state).has(id)) return
+    const next = switchVariant(object, variantId)
+    if (!assetHasKind(next.assetId, 'stamp') || !canAdd({...state, objects:state.objects.filter(o=>o.id!==id)}, [next])) return
+    set({objects:state.objects.map(o=>o.id===id?next:o)})
+  }),
   place: (asset, point, bypass = false) => history.run('Place stamp', () => {
     if (!stampMapCompatible(asset, get().map.mapType)) { message('This stamp is not compatible with this map type.'); return }
     if (asset.kind !== 'stamp' || !assetHasKind(asset.id, 'stamp')) { message('Choose a stamp asset before placing.'); return }
@@ -473,7 +482,7 @@ export const useProjectStore = create<ProjectState>((rawSet, get) => {
     if (!layer || !editor.clipboard.length) return
     const pasteCount = editor.pasteCount + 1
     const remap=restoreClipboardAssets()
-    const source: PlacedObject[]=editor.clipboard.map(o=>o.kind==='label'||o.kind==='scaleBar'||o.kind==='title'||o.kind==='infoPanel'?o:o.kind==='legend'?{...o,entries:o.entries.map(e=>({...e,...(e.assetId?{assetId:remap.get(e.assetId)||e.assetId}:{})}))}:o.kind==='scatter'?remapScatter(o,remap):o.kind==='area'?{...o,fill:o.fill.kind==='pattern'?{...o.fill,assetId:remap.get(o.fill.assetId)||o.fill.assetId}:o.fill}:o.kind==='path'?{...o,stroke:o.stroke.kind==='texture'?{...o.stroke,assetId:remap.get(o.stroke.assetId)||o.stroke.assetId}:o.stroke}:{...o,...(o.assetId?{assetId:remap.get(o.assetId)||o.assetId}:{})})
+    const source: PlacedObject[]=editor.clipboard.map(o=>o.kind==='stamp'?remapFamilyObject(o,remap):o.kind==='label'||o.kind==='scaleBar'||o.kind==='title'||o.kind==='infoPanel'?o:o.kind==='legend'?{...o,entries:o.entries.map(e=>({...e,...(e.assetId?{assetId:remap.get(e.assetId)||e.assetId}:{})}))}:o.kind==='scatter'?remapScatter(o,remap):o.kind==='area'?{...o,fill:o.fill.kind==='pattern'?{...o.fill,assetId:remap.get(o.fill.assetId)||o.fill.assetId}:o.fill}:o.kind==='path'?{...o,stroke:o.stroke.kind==='texture'?{...o.stroke,assetId:remap.get(o.stroke.assetId)||o.stroke.assetId}:o.stroke}:{...o,...(o.assetId?{assetId:remap.get(o.assetId)||o.assetId}:{})})
     const copies: PlacedObject[] = source.map((object) => ({ ...offsetObject(object,OBJECT_OFFSET * pasteCount,OBJECT_OFFSET * pasteCount), id: crypto.randomUUID() }))
     const ids=new Map(editor.clipboard.map((o,i)=>[o.id,copies[i].id]))
     for(let i=0;i<copies.length;i++)copies[i]=remapOpening(copies[i],ids)

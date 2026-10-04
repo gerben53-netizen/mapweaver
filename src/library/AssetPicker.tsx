@@ -36,7 +36,7 @@ function Picker({ kind, replacementId, purpose }: NonNullable<ReturnType<typeof 
   }
   const assets = source === 'library' ? library.assets : pickerAssets(owned, kind, query, category).filter(a=>showAll||assetAppliesToMap(a.sizing?.applicableMapTypes,mapType))
   const recentItems = assets.filter((a) => recent.some((r) => r.id === a.id && r.kind === kind && r.source === source)).slice(0, 6)
-  const grid = (items: typeof assets) => <div className={styles.grid}>{items.map((a) => <button key={a.id} className={styles.card} title={a.name} aria-label={`Choose ${a.name}`} aria-pressed={selected === a.id} disabled={material && !assetAppliesToMap(a.sizing?.applicableMapTypes,mapType)} onClick={() => { void highlight(a.id) }} onDoubleClick={() => { if (!material) void pick(a.id) }}><AssetThumbnail id={a.id} source={source} /><span>{a.name}</span><small>{a.naturalWidth} × {a.naturalHeight}</small></button>)}</div>
+  const grid = (items: typeof assets) => <div className={styles.grid}>{items.map((a) => <button key={a.id} className={styles.card} title={a.name} aria-label={`Choose ${a.name}`} aria-pressed={selected === a.id} disabled={material && !assetAppliesToMap(a.sizing?.applicableMapTypes,mapType)} onClick={() => { void highlight(a.id) }} onDoubleClick={() => { if (!material) void pick(a.id) }}><AssetThumbnail id={a.id} source={source} /><span>{a.name}{a.family&&<small> ×{a.family.variants.filter(v=>!v.deprecated).length}</small>}</span><small>{a.naturalWidth} × {a.naturalHeight}</small></button>)}</div>
   async function pick(id: string) {
     if (busy || !assets.some((a) => a.id === id)) return
     setBusy(true); setError('')

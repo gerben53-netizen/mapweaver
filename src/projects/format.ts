@@ -1,3 +1,4 @@
+import { validateFamilySelection } from '../domain/stampFamilies'
 import { validateLighting } from '../campfire/authoring'
 import { validateCoastalContours } from '../domain/coastalContours'
 import { validateWaterDepth } from '../domain/waterDepth'
@@ -95,11 +96,11 @@ export function parseProject(value: unknown): ProjectFile {
       const fill = (area as unknown as AreaObject).fill
       return validateArea({ ...area, ...(fill?.kind === 'pattern' && fill.scale === undefined ? { fill: { ...fill, scale: 1 } } : {}) } as unknown as AreaObject)
     }
-    const o = record(value, ['effects', 'kind', 'id', 'assetId', 'x', 'y', 'width', 'height', 'opacity', 'locked', 'name', 'visible', 'rotation', 'scaleX', 'scaleY', ...(typeof value === 'object' && value && 'kind' in value && value.kind === 'patternFill' ? ['mode', 'patternScale', 'patternRotation', 'patternOffsetX', 'patternOffsetY'] : [])], 'object')
+    const o = record(value, ['family', 'effects', 'kind', 'id', 'assetId', 'x', 'y', 'width', 'height', 'opacity', 'locked', 'name', 'visible', 'rotation', 'scaleX', 'scaleY', ...(typeof value === 'object' && value && 'kind' in value && value.kind === 'patternFill' ? ['mode', 'patternScale', 'patternRotation', 'patternOffsetX', 'patternOffsetY'] : [])], 'object')
     const base = { id: id(o.id), assetId: id(o.assetId), x: num(o.x, 'x'), y: num(o.y, 'y'), width: num(o.width, 'width', Number.MIN_VALUE), height: num(o.height, 'height', Number.MIN_VALUE), opacity: num(o.opacity, 'opacity', 0, 1), ...(o.locked === undefined ? {} : { locked: bool(o.locked) }), ...(o.visible === undefined ? {} : { visible: bool(o.visible) }), ...(o.name === undefined ? {} : { name: text(o.name, 'object name') }) }
     if (o.kind === 'stamp') {
       if (![1, -1].includes(Number(o.scaleX)) || typeof o.scaleX !== 'number' || ![1, -1].includes(Number(o.scaleY)) || typeof o.scaleY !== 'number') fail('stamp mirror signs')
-      return { ...base, ...(o.effects===undefined?{}:{effects:validateStampEffects(o.effects)}), kind: 'stamp', rotation: rotation(o.rotation), scaleX: o.scaleX as number, scaleY: o.scaleY as number }
+      return { ...base, ...(o.family === undefined ? {} : { family: validateFamilySelection(o.family, base.assetId) }), ...(o.effects===undefined?{}:{effects:validateStampEffects(o.effects)}), kind: 'stamp', rotation: rotation(o.rotation), scaleX: o.scaleX as number, scaleY: o.scaleY as number }
     }
     if(o.effects!==undefined)fail('effects require a stamp')
     if (o.kind !== 'patternFill' || !['repeat', 'stretch'].includes(String(o.mode)) || base.width < 8 || base.height < 8 || (o.rotation === undefined ? 0 : o.rotation) !== 0 || (o.scaleX === undefined ? 1 : o.scaleX) !== 1 || (o.scaleY === undefined ? 1 : o.scaleY) !== 1) return fail('pattern')
@@ -124,6 +125,10 @@ export function parseProject(value: unknown): ProjectFile {
   if ([...new Map(assets.map((a) => [a.path, a])).values()].reduce((total, a) => total + a.width * a.height, 0) > L.pixels) fail('total decoded pixels')
   const paths = new Map<string, AssetManifest>()
   for (const asset of assets) { const prior = paths.get(asset.path); if (prior && (prior.hash !== asset.hash || prior.width !== asset.width || prior.height !== asset.height || prior.mimeType !== asset.mimeType)) fail('conflicting shared asset path'); paths.set(asset.path, asset) }
+  for(const object of objects)if(object.kind==='stamp'&&object.family){
+    const images=object.family.family.variants.map(v=>assets.find(a=>a.id===v.assetId))
+    if(images.some(a=>!a||a.width!==images[0]?.width||a.height!==images[0]?.height||a.mimeType!=='image/png'))fail('family variant canvas/PNG')
+  }
   if (!legacy && objects.some((o) => objectAssetIds(o).some(id=>assets.find(a=>a.id===id)?.kind !== (isAnnotation(o) || o.kind === 'scatter' || o.kind === 'stamp' || isOpening(o) ? 'stamp' : 'fillPattern')))) fail('object asset kind')
   for(const o of objects)if(o.kind==='path'&&o.wall?.material&&o.stroke.kind==='texture'){
     const assetId=o.stroke.assetId,a=assets.find(a=>a.id===assetId),set=o.wall.material.set

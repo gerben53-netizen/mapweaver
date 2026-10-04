@@ -15,7 +15,7 @@ import { libraryRepository } from '../storage/libraryRepository'
 import { placementSize } from '../domain/placement'
 const asset: TypedAsset = { id:'bookcase',kind:'stamp',name:'Bookcase',naturalWidth:400,naturalHeight:200,mimeType:'image/png',contentHash:'a'.repeat(64),categoryId:'room',createdAt:'',sizing:{sizingMode:'world',defaultWidth:20,defaultHeight:null,sizingUnit:'ft',sizingScope:'battlemap',aspectRatioLocked:true,applicableMapTypes:['battlemap']} }
 vi.mock('../images/imageCache', () => ({ acquireAssetImage: () => ({ promise: Promise.resolve({ width:400,height:200 }),release:vi.fn() }) }))
-vi.mock('../storage/libraryRepository', () => ({ libraryRepository: { getAsset:vi.fn(),getBlob:vi.fn(async()=>new Blob(['image'])) } }))
+vi.mock('../storage/libraryRepository', () => ({ libraryRepository: { getAsset:vi.fn(),getThumbnail:vi.fn(async()=>new Blob(['thumb'])),getBlob:vi.fn(async()=>new Blob(['image'])) } }))
 beforeEach(() => {
   project.setState({ map:{width:1000,height:800,background:null,...defaultMapStyle(),mapType:'battlemap',grid:{...defaultMapStyle().grid,cellSize:50,snapEnabled:true,physicalScale:{unit:'ft',distancePerCell:5}}},...createLayeredContent() })
   editor.setState({activeTool:'select',workspace:'editor',stampAsset:null,activeLayerId:'objects',soloLayerId:null,viewport:{zoom:1,pan:{x:0,y:0}},message:''})
@@ -65,4 +65,15 @@ it('Library and Palette drag payloads create exactly one stamp without changing 
     await waitFor(()=>expect(project.getState().objects).toHaveLength(source==='library'?1:2))
     expect(editor.getState().activeTool).toBe('select')
   }
+})
+
+it('adopts a colliding family cover once, so repeated placement survives history resource pruning',async()=>{
+  const family={id:'bookcase-family',revision:1,displayName:'Bookcase',anchor:'center' as const,coverVariantId:'cover',variants:[{id:'cover',assetId:asset.id,weight:1},{id:'other',assetId:'other-image',weight:1}]}
+  const chosen={...asset,family},other={...asset,id:'other-image',contentHash:'c'.repeat(64)}
+  installProjectAssets(new Map([[asset.id,{blob:new Blob(['old']),manifest:{id:asset.id,kind:'stamp',fileName:'Existing unrelated image',mimeType:'image/png',width:10,height:10,hash:'b'.repeat(64),path:'assets/old.png'}}]]))
+  vi.mocked(libraryRepository.getAsset).mockImplementation(async id=>id===asset.id?chosen:other)
+  render(<Harness/>);await act(()=>activateStamp(asset.id));const prepared=editor.getState().stampAsset!
+  expect(prepared.id).not.toBe(asset.id);expect(prepared.family!.variants[0].assetId).toBe(prepared.id)
+  for(let i=0;i<3;i++){pointer('pointerdown');pointer('pointerup')}
+  expect(project.getState().objects).toHaveLength(3);expect(useHistoryStore.getState().undoCount).toBe(3)
 })

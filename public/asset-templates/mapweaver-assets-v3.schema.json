@@ -347,7 +347,7 @@
                   },
                   "weight": {
                     "type": "number",
-                    "minimum": 0.000001,
+                    "minimum": 1e-06,
                     "maximum": 1000000,
                     "default": 1
                   },
@@ -696,6 +696,294 @@
         "revision": {
           "type": "integer",
           "minimum": 1
+        }
+      }
+    },
+    "families": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "displayName",
+          "semanticClass",
+          "softShadowDefault",
+          "defaultSize",
+          "variants"
+        ],
+        "properties": {
+          "categoryId": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+          },
+          "categoryPath": {
+            "anyOf": [
+              {
+                "type": "array",
+                "maxItems": 8,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80,
+                  "pattern": "^(?=.*\\S)[^\\u0000-\\u001f\\u007f]*$"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tags": {
+            "anyOf": [
+              {
+                "type": "array",
+                "maxItems": 30,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80,
+                  "pattern": "^(?=.*\\S)[^\\u0000-\\u001f\\u007f]*$"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "semanticClass": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[a-z_]{1,80}$"
+          },
+          "softShadowDefault": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "defaultSize": {
+            "anyOf": [
+              {
+                "type": "object",
+                "required": [
+                  "mode",
+                  "lockAspectRatio"
+                ],
+                "properties": {
+                  "mode": {
+                    "enum": [
+                      "native",
+                      "grid",
+                      "world"
+                    ]
+                  },
+                  "lockAspectRatio": {
+                    "type": "boolean"
+                  },
+                  "width": {
+                    "type": "number",
+                    "exclusiveMinimum": 0,
+                    "maximum": 1000000
+                  },
+                  "height": {
+                    "type": "number",
+                    "exclusiveMinimum": 0,
+                    "maximum": 1000000
+                  },
+                  "unit": {
+                    "enum": [
+                      "cells",
+                      "ft",
+                      "m"
+                    ]
+                  }
+                },
+                "allOf": [
+                  {
+                    "if": {
+                      "properties": {
+                        "mode": {
+                          "const": "grid"
+                        }
+                      }
+                    },
+                    "then": {
+                      "required": [
+                        "unit"
+                      ],
+                      "properties": {
+                        "unit": {
+                          "const": "cells"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "mode": {
+                          "const": "world"
+                        }
+                      }
+                    },
+                    "then": {
+                      "required": [
+                        "unit"
+                      ],
+                      "properties": {
+                        "unit": {
+                          "enum": [
+                            "ft",
+                            "m"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "mode": {
+                          "enum": [
+                            "grid",
+                            "world"
+                          ]
+                        },
+                        "lockAspectRatio": {
+                          "const": false
+                        }
+                      }
+                    },
+                    "then": {
+                      "required": [
+                        "width",
+                        "height"
+                      ]
+                    }
+                  },
+                  {
+                    "if": {
+                      "properties": {
+                        "mode": {
+                          "enum": [
+                            "grid",
+                            "world"
+                          ]
+                        }
+                      }
+                    },
+                    "then": {
+                      "anyOf": [
+                        {
+                          "required": [
+                            "width"
+                          ]
+                        },
+                        {
+                          "required": [
+                            "height"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "applicableMapTypes": {
+            "anyOf": [
+              {
+                "anyOf": [
+                  {
+                    "const": "any"
+                  },
+                  {
+                    "const": [
+                      "any"
+                    ]
+                  },
+                  {
+                    "type": "array",
+                    "maxItems": 3,
+                    "items": {
+                      "enum": [
+                        "battlemap",
+                        "regional-map",
+                        "world-map"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+          },
+          "displayName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "anchor": {
+            "const": "center"
+          },
+          "coverVariantId": {
+            "type": "string"
+          },
+          "variants": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 64,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "file"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+                },
+                "file": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240,
+                  "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.?(?:/|$))[^\\\\:<>\"|?*\\u0000-\\u001f]+$"
+                },
+                "weight": {
+                  "type": "number",
+                  "exclusiveMinimum": 0,
+                  "maximum": 10000
+                },
+                "label": {
+                  "type": "string",
+                  "maxLength": 120
+                },
+                "deprecated": {
+                  "type": "boolean"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              }
+            }
+          }
         }
       }
     }

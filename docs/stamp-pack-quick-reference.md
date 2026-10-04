@@ -72,3 +72,8 @@ Klassen: furniture, storage, large_fixture, tabletop_prop, floor_decal, decorati
 Checklist: exacte relatieve PNG-paden; unieke stabiele IDs; positieve packrevision; canonieke objectcategorie; context als tags; world/grid/native schaal; optionele softShadowDefault; rechten/hash; preview; onbekende mapping; review; bevestiging.
 
 Veelgemaakte fouten: Palace als categorie, packnaam als categorie, ontbrekend PNG, gewijzigde pixels onder dezelfde revision, dubbele asset-ID, onjuiste schaaleenheid.
+
+
+## Families
+
+Gebruik `families[]` naast `assets[]`, met pack-ID/revision, gedeelde metadata en stabiele variant-ID’s/file/weight. Exact voorbeeld, validatie, PQA-eisen en revisiebeheer: [Stamp Families en varianten](stamp-importer.md#stamp-families-en-varianten). Eén fysieke footprint en gecentreerde anchor; identieke PNG-canvasafmetingen; cover blijft stabiel. Geen variant-overrides of gewijzigde pixels onder een bestaande variant-ID.

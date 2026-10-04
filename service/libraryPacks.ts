@@ -1,3 +1,4 @@
+import { validateImportedFamilies, registerImportedFamilies } from './stampFamilies'
 import { categoryResolution,ensureStampTaxonomy } from './stampGovernance'
 import { normalizeStampTags } from '../src/domain/stampTaxonomy'
 import { reviveRemovedAsset } from './removedAssets'
@@ -73,6 +74,7 @@ export async function previewPack(s: Storage, bytes: Buffer, type = 'stamp', pre
         prepared.entries.push({ entry, bytes: image, thumbnail: Buffer.from(await validated.thumbnail.arrayBuffer()), width: validated.width, height: validated.height, mimeType, digest, existing: old?.id })
       } catch (e) { prepared.errors.push(`${entry.file}: ${(e as Error).message}`) }
     }
+    validateImportedFamilies(s, prepared.manifest, prepared.entries)
     for(const p of prepared.entries) if(p.entry.prefab) for(const dep of p.entry.prefab.document.assets) {
       const found=prepared.entries.find(e=>e.entry.type===dep.kind&&e.digest===dep.hash&&e.width===dep.width&&e.height===dep.height&&e.mimeType===dep.mimeType)
       if(!found)prepared.errors.push(`Missing prefab dependency ${dep.fileName} (${dep.id}). Include its image entry; recursive prefab dependencies are not supported.`)
@@ -146,10 +148,11 @@ export function commitPack(s: Storage, body: { token: string; revision: number; 
           }
           if (entry.prefab) s.db.prepare('UPDATE assets SET prefab=? WHERE id=?').run(JSON.stringify(entry.prefab),id)
           if (entry.type !== 'stamp' && entry.type !== 'prefab') delete metadata.defaultSize
-          patchAsset(s, id, metadata)
+          patchAsset(s, id, metadata, true)
         }
         ids.set(`${entry.file}/${entry.type}`, id)
       }
+      registerImportedFamilies(s, p.manifest, p.entries, ids)
       for(const item of p.entries) if(item.entry.prefab) {
         const mapping=new Map(item.entry.prefab.document.assets.map(dep=>{
           const source=p.entries.find(e=>e.entry.type===dep.kind&&e.digest===dep.hash)
@@ -172,7 +175,7 @@ export function commitPack(s: Storage, body: { token: string; revision: number; 
 }
 export function exportLibrary(s: Storage, ids: string[], category?: string, metadataOnly = false, collectionId?: string) {
   if (ids.length > 1000) throw new StorageError('PACK_LIMIT','Export at most 1,000 assets per pack; use smaller selections or a full backup.')
-  const closure=new Set(ids);for(const id of ids){const a=s.asset(id);if(a.prefab)for(const dep of validatePrefab(JSON.parse(a.prefab)).document.assets)closure.add(dep.id)};ids=[...closure];if(ids.length>1000)throw Error('Prefab dependency closure exceeds 1,000 pack entries.')
+  const closure=new Set(ids);for(const id of ids){const a=s.asset(id);if(a.family)for(const v of JSON.parse(a.family).variants)closure.add(v.assetId);if(a.prefab)for(const dep of validatePrefab(JSON.parse(a.prefab)).document.assets)closure.add(dep.id)};ids=[...closure];if(ids.length>1000)throw Error('Prefab dependency closure exceeds 1,000 pack entries.')
   const tree = categories(s), files: Record<string, Uint8Array> = {}, manifest: AssetManifest = { schemaVersion: 1, assets: [], categories: [], collections: [] }, selected = new Set(ids)
   for (const id of selected) {
     if (!ids.some(key=>!!s.asset(key).prefab) && s.db.prepare('SELECT 1 FROM wall_sets WHERE assetId=?').get(id)) throw new StorageError('WALL_SET_PACK_REQUIRED','This selection includes a wall set. Use its original specialized wall-set ZIP or a full backup; a loose atlas cannot preserve its contract.')
@@ -186,6 +189,26 @@ export function exportLibrary(s: Storage, ids: string[], category?: string, meta
   for (const c of s.db.prepare('SELECT * FROM library_collections').all() as { id: string; name: string; description: string }[]) {
     const members = (s.db.prepare('SELECT assetId FROM library_members WHERE collectionId=?').all(c.id) as { assetId: string }[]).filter(m => selected.has(m.assetId)).map(m => ({ file: entries.get(m.assetId)!.file, type: entries.get(m.assetId)!.type }))
     if (members.length || c.id === collectionId) manifest.collections!.push({ title: c.name, description: c.description, members })
+  }
+  const familyRows = [...selected].map(id=>s.asset(id)).filter(a=>a.family)
+  if(familyRows.length) {
+    const owners = new Set(familyRows.map(a=>JSON.parse(a.family!).id))
+    const revisions = familyRows.map(a=>JSON.parse(a.family!).revision as number)
+    if(new Set(revisions).size!==1)throw Error('Export families with matching pack revisions separately.')
+    const registrations=familyRows.map(a=>s.db.prepare('SELECT packId FROM stamp_family_revisions WHERE id=? AND revision=?').get(JSON.parse(a.family!).id,revisions[0]) as {packId:string})
+    if(new Set(registrations.map(r=>r.packId)).size!==1)throw Error('Export families from one pack at a time.')
+    manifest.pack={id:registrations[0].packId,revision:revisions[0]};manifest.schemaVersion=3
+    const familyAssets=new Set<string>()
+    const families=familyRows.map(a=>{
+      const f=JSON.parse(a.family!) as import('../src/domain/stampFamilies').StampFamily,p=publicAsset(a as LibraryAsset)
+      const registration=s.db.prepare('SELECT definition FROM stamp_family_revisions WHERE id=? AND revision=?').get(f.id,f.revision) as {definition:string}
+      const declared=new Set(JSON.parse(registration.definition).signature.family.variants.map((v:{id:string})=>v.id))
+      f.variants.forEach(v=>familyAssets.add(v.assetId))
+      return {id:f.id,displayName:f.displayName,coverVariantId:f.coverVariantId,anchor:f.anchor,categoryPath:categoryPath(tree,a.categoryId).map(c=>c.name),tags:p.tags,defaultSize:p.defaultSize,semanticClass:p.quality?.semanticClass,softShadowDefault:p.quality?.softShadowDefault,applicableMapTypes:p.applicableMapTypes,variants:f.variants.filter(v=>declared.has(v.id)).map(v=>{const entry=entries.get(v.assetId)!;return {id:v.id,file:entry.file,weight:v.weight,label:v.label,deprecated:v.deprecated,sha256:entry.sha256}})}
+    })
+    if(owners.size!==families.length)throw Error('Conflicting family selection.')
+    manifest.assets=manifest.assets.filter(a=>![...familyAssets].some(id=>entries.get(id)===a))
+    Object.assign(manifest,{families})
   }
   files['mapweaver-assets.json'] = strToU8(JSON.stringify(manifest, null, 2))
   if (Object.values(files).reduce((n, a) => n + a.length, 0) > MAX_BYTES) throw new StorageError('PACK_LIMIT','Export exceeds 128 MiB. Select fewer assets.')

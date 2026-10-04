@@ -1,3 +1,4 @@
+import { useProjectStore } from '../store/projectStore'
 import { PROJECT_LIMITS as L } from './limits'
 import type { AssetKind, TypedAsset } from '../domain/models'
 import { create } from 'zustand'
@@ -49,7 +50,16 @@ export async function adoptLibraryAsset(asset: import('../domain/models').StampA
 
 export function assetHasKind(id: string, kind: AssetKind) { return kinds.get(id) === kind }
 export function projectAssets(): TypedAsset[] {
-  return [...embedded.values()].filter((a) => a.manifest.kind && a.manifest.id !== backgroundOnly).map(({ manifest: a }) => ({ id: a.id, kind: a.kind!, name: a.fileName, mimeType: a.mimeType, naturalWidth: a.width, naturalHeight: a.height, categoryId: 'project', createdAt: '', contentHash: a.hash }))
+  const assets:TypedAsset[] = [...embedded.values()].filter((a) => a.manifest.kind && a.manifest.id !== backgroundOnly).map(({ manifest: a }) => ({ id: a.id, kind: a.kind!, name: a.fileName, mimeType: a.mimeType, naturalWidth: a.width, naturalHeight: a.height, categoryId: 'project', createdAt: '', contentHash: a.hash }))
+  const families=new Map<string,import('../domain/stampFamilies').StampFamily>()
+  for(const object of useProjectStore.getState().objects)if(object.kind==='stamp'&&object.family){const f=object.family.family;if(!families.has(f.id)||families.get(f.id)!.revision<f.revision)families.set(f.id,f)}
+  const members=new Set([...families.values()].flatMap(f=>f.variants.map(v=>v.assetId)))
+  return [...assets.filter(a=>!members.has(a.id)), ...[...families.values()].flatMap(f=>{
+    const asset=assets.find(a=>a.id===f.variants.find(v=>v.id===f.coverVariantId)?.assetId);if(!asset)return []
+    const m=f.metadata,size=m?.defaultSize
+    return [{...asset,name:f.displayName,family:f,...(m?{quality:{classification:'KEEP' as const,reason:'Family author metadata',semanticClass:m.semanticClass,softShadowDefault:m.softShadowDefault}}:{}),...(size?{sizing:{sizingMode:size.mode,defaultWidth:size.width || null,defaultHeight:size.height || null,sizingUnit:size.unit || null,aspectRatioLocked:size.lockAspectRatio,sizingScope:'any' as const,applicableMapTypes:m!.applicableMapTypes}}:{})}]
+  })]
+
 }
 
 let clipboardAssets = new Map<string, ProjectAsset>()

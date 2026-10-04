@@ -1,3 +1,4 @@
+import { remapFamilyObject } from '../src/domain/stampFamilies'
 import { campfireContentSignature, nextCampfireRevision } from '../src/campfire/authoring'
 import { texturePaintAssetIds, remapTexturePaint } from '../src/domain/terrainPaint'
 import { reviveRemovedAsset } from './removedAssets'
@@ -19,7 +20,7 @@ import { validateFile, validateDimensions, MAX_IMAGE_PIXELS } from '../src/impor
 import type { AssetSizing } from '../src/domain/assetSizing'
 import type { PreparedProject } from '../src/projects/types'
 
-export const SCHEMA_VERSION = 11
+export const SCHEMA_VERSION = 12
 export class StorageError extends Error {
   constructor(public code: string, message: string, public status = 400) { super(message) }
 }
@@ -63,7 +64,7 @@ export async function validateImage(file: File) {
   const thumb = await sharp(decoded.data, { raw: decoded.info }).resize(192, 192, { fit: 'inside', withoutEnlargement: true }).png().toBuffer()
   return { blob: file as Blob, width:decoded.info.width, height:decoded.info.height, mimeType: file.type, thumbnail: new Blob([new Uint8Array(thumb)], { type: 'image/png' }) }
 }
-export interface AssetRow extends Omit<AssetSizing, 'applicableMapTypes'> { quality?: string | null; id: string; patternScale?:number|null; generator?: string | null; prefab?: string | null; type: 'stamp' | 'fill-pattern' | 'background' | 'prefab'; name: string; originalName: string; mimeType: string; width: number; height: number; size: number; sha256: string; originalPath: string; previewPath: string; categoryId: string; tags: string; createdAt: string; modifiedAt: string }
+export interface AssetRow extends Omit<AssetSizing, 'applicableMapTypes'> { family?: string | null; familyMember?: string | null; quality?: string | null; id: string; patternScale?:number|null; generator?: string | null; prefab?: string | null; type: 'stamp' | 'fill-pattern' | 'background' | 'prefab'; name: string; originalName: string; mimeType: string; width: number; height: number; size: number; sha256: string; originalPath: string; previewPath: string; categoryId: string; tags: string; createdAt: string; modifiedAt: string }
 export const assetFromRow = <T extends AssetRow>(row: T): T => ({ ...row, aspectRatioLocked: Boolean(row.aspectRatioLocked) })
 export interface ProjectRow { id: string; name: string; document: string; revision: number; createdAt: string; modifiedAt: string; openedAt: string | null; deletedAt: string | null }
 export class Storage {
@@ -194,6 +195,12 @@ export class Storage {
 
     if(!this.db.prepare('SELECT 1 FROM schema_migrations WHERE version=11').get())this.db.transaction(()=>{this.db.exec('CREATE TABLE pack_asset_revisions(packId TEXT NOT NULL,assetId TEXT NOT NULL,revision INTEGER NOT NULL,libraryAssetId TEXT NOT NULL REFERENCES assets(id),sha256 TEXT NOT NULL,type TEXT NOT NULL,PRIMARY KEY(packId,assetId,revision));');this.db.prepare('INSERT INTO schema_migrations VALUES(11,?,?)').run('Immutable imported pack identities',new Date().toISOString())})()
 
+    if (!this.db.prepare('SELECT 1 FROM schema_migrations WHERE version=12').get()) this.db.transaction(() => {
+      this.db.exec(`ALTER TABLE assets ADD COLUMN family TEXT; ALTER TABLE assets ADD COLUMN familyMember TEXT;
+        CREATE TABLE stamp_family_revisions(id TEXT NOT NULL,packId TEXT NOT NULL,revision INTEGER NOT NULL,definition TEXT NOT NULL,PRIMARY KEY(id,revision));`)
+      this.db.prepare('INSERT INTO schema_migrations VALUES(12,?,?)').run('Stamp families and immutable variants',new Date().toISOString())
+    })()
+
   }
 
   asset(id: string) {
@@ -291,7 +298,8 @@ export class Storage {
     // Same type/hash aliases collapse safely; all object references are rewritten together.
     d.assets = [...new Map(d.assets.map(a => [a.id, a])).values()]
     d.objects=d.objects.map(o=>o.kind==='scatter'?remapScatter(o,mapping):o)
-    d.objects.forEach(o => { if(o.kind==='legend')o.entries.forEach(e=>{if(e.assetId)e.assetId=mapping.get(e.assetId)!}); if(o.kind === 'path') { if(o.stroke.kind === 'texture') o.stroke.assetId = mapping.get(o.stroke.assetId)! } else if(o.kind === 'area') { if(o.fill.kind === 'pattern') o.fill.assetId = mapping.get(o.fill.assetId)! } else if(o.assetId) o.assetId = mapping.get(o.assetId)! })
+    d.objects = d.objects.map(o => o.kind === 'stamp' ? remapFamilyObject(o, mapping) : o)
+    d.objects.forEach(o => { if(o.kind==='stamp')return; if(o.kind==='legend')o.entries.forEach(e=>{if(e.assetId)e.assetId=mapping.get(e.assetId)!}); if(o.kind === 'path') { if(o.stroke.kind === 'texture') o.stroke.assetId = mapping.get(o.stroke.assetId)! } else if(o.kind === 'area') { if(o.fill.kind === 'pattern') o.fill.assetId = mapping.get(o.fill.assetId)! } else if(o.assetId) o.assetId = mapping.get(o.assetId)! })
     if(d.map.texturePaint)d.map.texturePaint=remapTexturePaint(d.map.texturePaint,mapping)
     if (d.map.background) d.map.background.id = mapping.get(d.map.background.id)!
     if (!key || !/^[0-9a-f-]{36}$/i.test(d.id) || this.db.prepare('SELECT 1 FROM projects WHERE id=?').get(d.id)) d.id = randomUUID()

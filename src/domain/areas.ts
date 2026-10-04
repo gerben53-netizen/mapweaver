@@ -35,7 +35,7 @@ export const objectAssetId = (o: MapObject): string | undefined =>
       ? o.fill.assetId
       : undefined
     : o.assetId
-export const objectAssetIds = (o: MapObject): string[] => o.kind === 'legend' ? o.entries.flatMap(e=>e.assetId?[e.assetId]:[]) : o.kind === 'scatter' ? o.sources.map(a=>a.assetId) : objectAssetId(o) ? [objectAssetId(o)!] : []
+export const objectAssetIds = (o: MapObject): string[] => o.kind === 'stamp' && o.family ? [...new Set(o.family.family.variants.map(v => v.assetId))] : o.kind === 'legend' ? o.entries.flatMap(e=>e.assetId?[e.assetId]:[]) : o.kind === 'scatter' ? o.sources.map(a=>a.assetId) : objectAssetId(o) ? [objectAssetId(o)!] : []
 export const allRings = (g: AreaGeometry) =>
   g.polygons.flatMap((p) => [p.outer, ...p.holes])
 export const distance = (a: Point, b: Point) => Math.hypot(a.x - b.x, a.y - b.y)

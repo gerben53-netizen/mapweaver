@@ -1,3 +1,4 @@
+import { remapFamilyObject } from './stampFamilies'
 import type { ProjectSnapshot } from '../store/history'
 import type { ProjectFile } from '../projects/types'
 import type { MapObject, MapDocument } from './models'
@@ -112,6 +113,7 @@ export function remapPrefabAssets(prefab: Prefab, ids: Map<string, string>): Pre
   d.assets = [...new Map(d.assets.map(a => ({ ...a, id: get(a.id) })).map(a => [a.id, a])).values()]
   d.objects = d.objects.map(o => {
     if (o.kind === 'scatter') return remapScatter(o, ids)
+    if (o.kind === 'stamp') return remapFamilyObject(o,ids)
     if (o.kind === 'area') return { ...o, fill: o.fill.kind === 'pattern' ? { ...o.fill, assetId: get(o.fill.assetId) } : o.fill }
     if (o.kind === 'path') return { ...o, stroke: o.stroke.kind === 'texture' ? { ...o.stroke, assetId: get(o.stroke.assetId) } : o.stroke }
     if (o.kind === 'legend') return { ...o, entries: o.entries.map(e => ({ ...e, ...(e.assetId ? { assetId: get(e.assetId) } : {}) })) }

@@ -1,7 +1,8 @@
+import { validateFamily } from '../domain/stampFamilies'
 import { api, assetBlob, uploadAsset } from './api'
 import type { RemoteAsset } from './api'
 import type { AssetKind, StampAsset, StampCategory, TypedAsset } from '../domain/models'
-export const toAsset=(a:RemoteAsset):TypedAsset => ({quality:typeof a.quality==='string'?JSON.parse(a.quality):a.quality,patternScale:a.patternScale,sizing:{...(a.applicableMapTypes ? { applicableMapTypes: typeof a.applicableMapTypes === 'string' ? JSON.parse(a.applicableMapTypes) : a.applicableMapTypes } : {}),sizingMode:a.sizingMode,defaultWidth:a.defaultWidth,defaultHeight:a.defaultHeight,sizingUnit:a.sizingUnit,aspectRatioLocked:a.aspectRatioLocked,sizingScope:a.sizingScope},id:a.id,kind:a.type === 'fill-pattern' ? 'fillPattern' : 'stamp',name:a.name,mimeType:a.mimeType,naturalWidth:a.width,naturalHeight:a.height,categoryId:a.categoryId,contentHash:a.sha256,createdAt:a.createdAt})
+export const toAsset=(a:RemoteAsset):TypedAsset => ({family:a.family?validateFamily(typeof a.family==='string'?JSON.parse(a.family):a.family):undefined,quality:typeof a.quality==='string'?JSON.parse(a.quality):a.quality,patternScale:a.patternScale,sizing:{...(a.applicableMapTypes ? { applicableMapTypes: typeof a.applicableMapTypes === 'string' ? JSON.parse(a.applicableMapTypes) : a.applicableMapTypes } : {}),sizingMode:a.sizingMode,defaultWidth:a.defaultWidth,defaultHeight:a.defaultHeight,sizingUnit:a.sizingUnit,aspectRatioLocked:a.aspectRatioLocked,sizingScope:a.sizingScope},id:a.id,kind:a.type === 'fill-pattern' ? 'fillPattern' : 'stamp',name:a.name,mimeType:a.mimeType,naturalWidth:a.width,naturalHeight:a.height,categoryId:a.categoryId,contentHash:a.sha256,createdAt:a.createdAt})
 export class RemoteLibrary {
   async initialize() { await api('/categories') }
   category(name:string) { return api<StampCategory>('/categories','POST',{name}) }

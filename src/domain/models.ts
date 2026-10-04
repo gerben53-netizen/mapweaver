@@ -1,6 +1,7 @@
 export type AssetKind = 'stamp' | 'fillPattern'
 // Optional only at the legacy import boundary; repositories and pickers return TypedAsset.
 export interface StampAsset {
+  family?: import("./stampFamilies").StampFamily
   quality?: import('./assetQuality').AssetQuality | null
   patternScale?:number|null
   sizing?: import('./assetSizing').AssetSizing
@@ -27,7 +28,7 @@ export interface GridSettings { type?: import('./hexGrid').GridType; physicalSca
 export interface MapDocument { campfireRevision?: number; lighting?: import('../campfire/generated/index').MapLightingV1; texturePaint?: import('./terrainPaint').TerrainPaint; coastalContours?: import('./coastalContours').CoastalContours; waterDepth?: import('./waterDepth').WaterDepth; geographyFinish?: import('./geographyFinish').GeographyFinish; landEditing?: import('./landEditing').LandEditing; terrainPaint?: import('./terrainPaint').TerrainPaint; theme?: import('./worldThemes').WorldThemeState; effects?: import('./mapEffects').MapEffects; water?: import('./terrainStyles').WaterAppearance; generation?: import('../world/model').WorldGeneration; mapType?: import('./geography').MapType; geography?: import('./geography').Geography; width: number; height: number; background: Background | null; backgroundColor: string; grid: GridSettings }
 export interface MapLayer { id: string; name: string; visible: boolean; locked: boolean; objectIds: string[] }
 
-export interface StampObject extends ObjectBase { effects?: import('./mapEffects').StampEffects; kind: 'stamp'; rotation: number; scaleX: number; scaleY: number }
+export interface StampObject extends ObjectBase { family?: import("./stampFamilies").FamilySelection; effects?: import('./mapEffects').StampEffects; kind: 'stamp'; rotation: number; scaleX: number; scaleY: number }
 export interface PatternFillObject extends ObjectBase {
   kind: 'patternFill'; mode: 'repeat' | 'stretch'
   patternScale: number; patternRotation: number; patternOffsetX: number; patternOffsetY: number
