@@ -58,3 +58,17 @@ it('covers sharp corners and the closed seam at all widths, including outside al
 it('keeps fractional terminal remainders positive instead of reversing/collapsing a source crop',()=>{
  const wall=createWall([nodes[0],{...nodes[1],x:380.002}],false,style()),placements=generatedPlacements(wall);expect(placements.every(p=>p.width>0&&(p.sourceFraction===undefined||p.sourceFraction>0))).toBe(true)
 })
+
+it('registers production Refined Timber with unchanged footprints, defaults, crop and heading geometry',()=>{
+ const d=generatedDefinition({id:'refined-timber',revision:'production-1'}),dev=generatedDefinition({id:'timber-refined',revision:'dev-1'}),production=generatedWallStyle(SIMPLE_WALL,map,d.id,d.revision)
+ expect(d.name).toBe('Verfijnd hout');expect(d.defaults).toEqual(dev.defaults);expect(production.strokeWidth).toBe(10)
+ expect(d.components.map(({image,...c})=>{expect(image).toContain('/refined-timber-production-1/');return c})).toEqual(dev.components.map(({image,...c})=>{expect(image).toContain('/timber-dev-1/');return c}))
+ for(const geometry of [nodes,curve,tight,sCurve])for(const width of [5,10,20,30]){
+  const a=createWall(geometry,false,{...style(),strokeWidth:width}),b=createWall(geometry,false,{...production,strokeWidth:width}),parts=generatedPlacements(b)
+  const normalize=(p:typeof parts)=>p.map(({component,...v})=>({...v,component:{...component,image:''}}))
+  expect(normalize(parts)).toEqual(normalize(generatedPlacements(a)))
+  for(const p of parts){expect(p.sourceFraction??1).toBeGreaterThan(0);expect(p.sourceFraction??1).toBeLessThanOrEqual(1);const tangent=pointAtDistance(b,p.distance).tangent;expect(Math.abs(Math.cos(p.angle)*tangent.x+Math.sin(p.angle)*tangent.y)).toBeGreaterThan(.97)}
+ }
+ const closed=createWall([...nodes,{id:'c',x:380,y:180,mode:'corner'}],true,production);expect(validatePath(closed).closed).toBe(true)
+ const wall=createWall(nodes,false,production),opening=createOpening(wall,.5,'door',30);expect(generatedPlacements(wall,[opening])).not.toEqual(generatedPlacements(wall));expect(validatePath(wall).closed).toBe(false)
+})
