@@ -1,7 +1,7 @@
 import { CampaignWorkspace } from '../campaigns/CampaignWorkspace'
 import { InspectorResize } from './InspectorResize'
 import { useInspectorWidth } from './inspectorWidth'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { watchMapToolContext } from '../store/mapToolContext'
 import { confirmLibraryNavigation, refreshActiveAssetDefault } from '../library/libraryHistory'
 import { version } from '../../package.json'
@@ -22,6 +22,8 @@ import { Tabs } from './Tabs'
 import { Icon } from './Icon'
 import styles from './App.module.css'
 export function App() {
+  const [runtime, setRuntime] = useState<{profile: string; dataProfile: string; build: string | null} | null>(null)
+  useEffect(() => { if (import.meta.env.DEV) void fetch('/api/v1/health').then(r => r.json()).then(h => setRuntime(h.runtime || null)).catch(() => {}) }, [])
   const [inspectorWidth,setInspectorWidth]=useInspectorWidth()
   useEffect(watchMapToolContext, [])
   const stampBrowserOpen = useEditorStore(s => s.stampBrowserOpen)
@@ -31,7 +33,7 @@ export function App() {
   const workspace = useEditorStore((s) => s.workspace), inspector = useEditorStore((s) => s.inspector), collapsed = useEditorStore((s) => s.inspectorCollapsed)
   const map = useProjectStore((s) => s.map)
   return <div className={styles.app} data-mapweaver-editor>
-    <header className={styles.header}><div className={styles.brand}><span className={styles.brandMark} aria-hidden="true"><Icon name="compass"/></span><h1>Mapweaver <small>{version}</small></h1></div><div inert={!!busy}><Tabs label="Workspace" value={workspace} items={[["editor", 'Map editor'], ['library', 'Asset library']]} onChange={(value) => { if(workspace==='library'&&!confirmLibraryNavigation())return; finishObjectGesture(); if(value==='editor')void refreshActiveAssetDefault(); useEditorStore.setState({ workspace: value }) }} /></div><ProjectControls /></header>
+    <header className={styles.header}><div className={styles.brand}><span className={styles.brandMark} aria-hidden="true"><Icon name="compass"/></span><h1>Mapweaver <small>{runtime ? `DEV — ${runtime.build || 'unknown'} · Data: ${runtime.dataProfile}` : version}</small></h1></div><div inert={!!busy}><Tabs label="Workspace" value={workspace} items={[["editor", 'Map editor'], ['library', 'Asset library']]} onChange={(value) => { if(workspace==='library'&&!confirmLibraryNavigation())return; finishObjectGesture(); if(value==='editor')void refreshActiveAssetDefault(); useEditorStore.setState({ workspace: value }) }} /></div><ProjectControls /></header>
     <main className={`${styles.main} ${stampBrowserOpen && workspace === 'editor' ? styles.withStampBrowser : ''}`} inert={!!busy}>
       <div hidden={workspace !== 'editor'} className={`${styles.editor} ${focus ? styles.focus : ""}`}><CampaignWorkspace><div className={`${styles.editor} ${focus ? styles.focus : ""}`} key={generation} inert={revision===null}><ToolRail /><MapCanvas />
         <aside className={collapsed ? styles.collapsed : styles.panel} style={collapsed?undefined:{width:inspectorWidth}} aria-label="Inspector">

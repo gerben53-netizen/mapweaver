@@ -18,7 +18,7 @@ test('dev config propagates explicit service/client ports and isolated directory
   assert.equal(configuration({ MAPWEAVER_PORT: '49191', MAPWEAVER_DEV_PORT: '49192' }, []).servicePort, 49191)
   assert.equal(configuration({}, ['--port', '49193']).clientPort, 49193)
   assert.throws(() => configuration({ MAPWEAVER_PORT: 'bad' }, []))
-  assert.throws(() => configuration({ MAPWEAVER_PORT: '5173' }, []))
+  assert.throws(() => configuration({ MAPWEAVER_PORT: '49182' }, []))
 })
 
 test('real service without Campfire token becomes healthy before Vite; proxy agrees', async () => {
@@ -27,7 +27,7 @@ test('real service without Campfire token becomes healthy before Vite; proxy agr
   const port = await freePort(), clientPort = await freePort(), controller = new AbortController()
   let opened = false
   try {
-    await supervise({ port, env: { ...process.env, MAPWEAVER_PORT: String(port), MAPWEAVER_DATA_DIR: directory, MAPWEAVER_DEV_ORIGIN: `http://127.0.0.1:${clientPort}` }, signal: controller.signal, frontend: async () => {
+    await supervise({ port, env: { ...process.env, MAPWEAVER_PORT: String(port), MAPWEAVER_DATA_DIR: directory, MAPWEAVER_RUNTIME_PROFILE: 'test', MAPWEAVER_DEV_ORIGIN: `http://127.0.0.1:${clientPort}` }, signal: controller.signal, frontend: async () => {
       assert.equal((await health(port)).application, 'Mapweaver')
       const server = await createServer({ configFile: false, server: { host: '127.0.0.1', port: clientPort, strictPort: true, proxy: { '/api/v1': `http://127.0.0.1:${port}` } } })
       try {

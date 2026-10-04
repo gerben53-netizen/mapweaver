@@ -557,3 +557,10 @@ MapWeaver definieert bijvoorbeeld walls, doors, authored/default light state, gr
 Campfire beheert bijvoorbeeld DoorState, LightState, TokenState, Fog/Visibility en combat/runtime state.
 
 MapWeaver mag runtime-state niet als authoringstate terug het contract in trekken tenzij een toekomstige canonieke contractversie dat expliciet voorschrijft.
+
+
+## 17. Primary Development en production-contentacceptatie
+
+`npm run dev` gebruikt de persistente **Primary Development**-dataset. Lees `docs/runtime-data-roots.md` voor selectie en diagnose. QA en tests gebruiken expliciet geïsoleerde databases en asset stores; zij mogen nooit naar Primary Development terugvallen of daar testdata importeren. Controleer bestaande instances vóór starten.
+
+Een production-assetintegratiesprint is pas voltooid wanneer geaccepteerde content na normale `npm run dev` startup beschikbaar is in Primary Development. Alleen repositoryfixtures, QA-bewijs of toekomstige installercontent zijn onvoldoende. Dit geldt voor stamps, families/varianten, walls en textures/materials. Eindacceptatie controleert deze beschikbaarheid; QA blijft geïsoleerd. Behoud legacy/inactieve assets voor bestaande mapreferenties.

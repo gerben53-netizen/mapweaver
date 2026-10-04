@@ -5,6 +5,7 @@ import os from 'node:os'
 import inventory from '../docs/distribution/default-content.json'
 import { Storage } from './storage'
 import { initializeDefaultContent } from './defaultContent'
+import { primaryDirectory } from '../scripts/runtime.mjs'
 const roots: string[] = [], stores: Storage[] = []
 afterEach(() => { stores.forEach(s => { if (s.db.open) s.close() }); roots.forEach(r => rmSync(r, { recursive: true, force: true })); stores.length = roots.length = 0 })
 function fixture() {
@@ -44,4 +45,23 @@ it('resumes a partially completed first install without duplicating its imported
   await initializeDefaultContent(store, frontend, true)
   expect(store.db.prepare('SELECT id FROM assets').all()).toHaveLength(86)
   for (const row of first) expect(store.db.prepare('SELECT id FROM assets WHERE id=?').get((row as { id: string }).id)).toEqual(row)
+})
+
+it('additive Primary installation preserves legacy quality and IDs across restarts', async () => {
+  const { store, frontend } = fixture()
+  await initializeDefaultContent(store, frontend, false)
+  const before = store.db.prepare('SELECT id,sha256 FROM assets ORDER BY id').all()
+  const id = (before[0] as {id: string}).id
+  const quality = JSON.stringify({classification:'REPLACE',reason:'Retain for existing maps',semanticClass:null,softShadowDefault:null})
+  store.db.prepare('UPDATE assets SET quality=? WHERE id=?').run(quality, id)
+  const options = {manifest:path.join(frontend,'default-content.json'),contentRoot:frontend}
+  await initializeDefaultContent(store, frontend, true, options)
+  await initializeDefaultContent(store, frontend, true, options)
+  expect(store.db.prepare('SELECT id,sha256 FROM assets ORDER BY id').all()).toEqual(before)
+  expect((store.db.prepare('SELECT quality FROM assets WHERE id=?').get(id) as {quality:string}).quality).toBe(quality)
+}, 20000)
+
+it('test storage rejects Primary Development before opening its database', () => {
+  expect(() => new Storage(primaryDirectory())).toThrow('Tests require isolated storage')
+  expect(() => new Storage()).toThrow('Tests require isolated storage')
 })

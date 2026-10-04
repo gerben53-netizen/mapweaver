@@ -1,3 +1,4 @@
+import { runtimeConfiguration } from '../scripts/runtime.mjs'
 import { remapFamilyObject } from '../src/domain/stampFamilies'
 import { campfireContentSignature, nextCampfireRevision } from '../src/campfire/authoring'
 import { texturePaintAssetIds, remapTexturePaint } from '../src/domain/terrainPaint'
@@ -71,6 +72,10 @@ export class Storage {
   readonly root: string
   readonly db: Database.Database
   constructor(directory?: string, readonly failWrite?: () => void) {
+    if (process.env.NODE_ENV === 'test' || process.env.VITEST) {
+      try { runtimeConfiguration({ ...process.env, MAPWEAVER_RUNTIME_PROFILE: 'test', MAPWEAVER_DATA_DIR: directory }) }
+      catch { throw new StorageError('UNSAFE_TEST_DIRECTORY', 'Tests require isolated storage and cannot open Primary Development.') }
+    }
     this.root = dataDirectory(directory)
     for (const folder of ['assets', 'assets/originals', 'assets/previews', 'backups', 'logs']) {
       const p = path.join(this.root, folder)

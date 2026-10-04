@@ -3,17 +3,20 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { setTimeout as delay } from 'node:timers/promises'
 import { createServer } from 'vite'
+import { runtimeConfiguration } from './runtime.mjs'
+import { execFileSync } from 'node:child_process'
 
 // One environment value is passed unchanged to both listener and proxy.
 export function configuration(env = process.env, args = process.argv.slice(2)) {
   const portArg = args.indexOf('--port')
-  const servicePort = Number(env.MAPWEAVER_PORT || 47831)
-  const clientPort = Number(portArg >= 0 ? args[portArg + 1] : env.MAPWEAVER_DEV_PORT || 5173)
+  const runtime = runtimeConfiguration(env)
+  const servicePort = runtime.servicePort
+  const clientPort = Number(portArg >= 0 ? args[portArg + 1] : runtime.clientPort)
   for (const port of [servicePort, clientPort]) {
     if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error('Invalid development port.')
   }
   if (servicePort === clientPort) throw new Error('Frontend and backend require different ports.')
-  return { servicePort, clientPort, directory: path.resolve(env.MAPWEAVER_DATA_DIR || '.development.local') }
+  return { ...runtime, servicePort, clientPort }
 }
 
 export async function health(port) {
@@ -65,7 +68,7 @@ async function main() {
   const config = configuration()
   const existing = await health(config.servicePort)
   if (existing) throw new Error(`Port ${config.servicePort} already serves ${existing.application || 'another application'}${existing.pid ? ` (PID ${existing.pid})` : ''}. Reuse the running session or choose MAPWEAVER_PORT and MAPWEAVER_DEV_PORT; no duplicate backend started.`)
-  const env = { ...process.env, MAPWEAVER_PORT: String(config.servicePort), MAPWEAVER_DATA_DIR: config.directory, MAPWEAVER_DEV_ORIGIN: `http://127.0.0.1:${config.clientPort}` }
+  const env = { ...process.env, MAPWEAVER_PORT: String(config.servicePort), MAPWEAVER_DATA_DIR: config.directory, MAPWEAVER_RUNTIME_PROFILE: config.profile, MAPWEAVER_DATA_PROFILE: config.dataProfile, MAPWEAVER_DEFAULT_CONTENT: path.resolve('docs/distribution/default-content.json'), MAPWEAVER_CONTENT_ROOT: path.resolve('public'), MAPWEAVER_BUILD_ID: (() => { try { return execFileSync('git', ['rev-parse', '--abbrev-ref', 'HEAD'], { encoding: 'utf8' }).trim() + ' @ ' + execFileSync('git', ['rev-parse', '--short', 'HEAD'], { encoding: 'utf8' }).trim() } catch { return 'unknown' } })(), MAPWEAVER_DEV_ORIGIN: `http://127.0.0.1:${config.clientPort}` }
   const controller = new AbortController()
   for (const signal of ['SIGINT', 'SIGTERM']) process.once(signal, () => controller.abort())
   const build = spawn(process.execPath, [process.env.npm_execpath, 'run', 'build:service'], { env, stdio: 'inherit', windowsHide: true })
