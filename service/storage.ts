@@ -19,7 +19,7 @@ import { validateFile, validateDimensions, MAX_IMAGE_PIXELS } from '../src/impor
 import type { AssetSizing } from '../src/domain/assetSizing'
 import type { PreparedProject } from '../src/projects/types'
 
-export const SCHEMA_VERSION = 10
+export const SCHEMA_VERSION = 11
 export class StorageError extends Error {
   constructor(public code: string, message: string, public status = 400) { super(message) }
 }
@@ -191,6 +191,8 @@ export class Storage {
         this.db.prepare('INSERT INTO schema_migrations VALUES(10,?,?)').run('Non-destructive asset quality audit',new Date().toISOString())
       })()
     }
+
+    if(!this.db.prepare('SELECT 1 FROM schema_migrations WHERE version=11').get())this.db.transaction(()=>{this.db.exec('CREATE TABLE pack_asset_revisions(packId TEXT NOT NULL,assetId TEXT NOT NULL,revision INTEGER NOT NULL,libraryAssetId TEXT NOT NULL REFERENCES assets(id),sha256 TEXT NOT NULL,type TEXT NOT NULL,PRIMARY KEY(packId,assetId,revision));');this.db.prepare('INSERT INTO schema_migrations VALUES(11,?,?)').run('Immutable imported pack identities',new Date().toISOString())})()
 
   }
 

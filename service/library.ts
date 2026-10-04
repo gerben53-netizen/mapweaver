@@ -1,3 +1,4 @@
+import { normalizeStampSearch,resolveStampCategory,STAMP_CATEGORIES } from '../src/domain/stampTaxonomy'
 import { ACTIVE_ASSET_SQL, validateAssetQuality } from '../src/domain/assetQuality'
 import { validateMarkerAssetTags } from '../src/domain/illustratedMarkers'
 import { validateGeneratorMetadata } from '../src/domain/generatorAssets'
@@ -8,7 +9,7 @@ import { validatePrefab } from '../src/domain/prefabs'
 import { randomUUID } from 'node:crypto'
 import { Storage, StorageError, assetFromRow } from './storage'
 import type { AssetRow } from './storage'
-import { libraryText, mapTypes, normalizeLibraryText, normalizeTags, validateCategoryTree, validateDefaultSize } from '../src/domain/library'
+import { categoryPath,libraryText, mapTypes, normalizeLibraryText, normalizeTags, validateCategoryTree, validateDefaultSize } from '../src/domain/library'
 import type { LibraryCategory, LibraryCollection, DefaultSize } from '../src/domain/library'
 
 export interface LibraryAsset extends AssetRow { prefabMode?: 'editable'|'flattened'; prefabBoundsSummary?: string; description: string; favorite: number; author: string; source: string; license: string; applicableMapTypes: string; deletedAt: string | null }
@@ -23,16 +24,17 @@ export function libraryQuery(s: Storage, q: LibraryQuery, all = false) {
   if(q.mapType&&!['battlemap','regional-map','world-map'].includes(q.mapType))throw Error('Invalid map type filter.')
   const offset = Number(q.offset || 0), limit = Number(q.limit || 60)
   if (!Number.isSafeInteger(offset) || offset < 0 || !Number.isInteger(limit) || limit < 1 || limit > 200) throw Error('Invalid library page.')
-  const tree = categories(s)
+  const rawTree = categories(s),tree=rawTree.map(c=>({...c,name:STAMP_CATEGORIES.find(n=>n.id===resolveStampCategory(c.name).categoryId)?.name||c.name}))
   const aliasRow=s.db.prepare("SELECT value FROM settings WHERE key='assetTaxonomyAliases'").get() as {value:string}|undefined
   const aliases=aliasRow?JSON.parse(aliasRow.value) as {categories:Record<string,string[]>;tags:Record<string,string>}:{categories:{},tags:{}}
-  const rawSearch=normalizeLibraryText(q.search || ''),search=normalizeLibraryText(aliases.tags[rawSearch]||rawSearch)
+  const rawSearch=normalizeLibraryText(q.search || ''),search=normalizeLibraryText(aliases.tags[rawSearch]||normalizeStampSearch(rawSearch))
   const byId = new Map(tree.map(c=>[c.id,c])), ancestors = new Map<string,string[]>()
   for(const c of tree){const ids:string[]=[];let cursor:LibraryCategory|undefined=c;while(cursor){ids.push(cursor.id);cursor=cursor.parentId?byId.get(cursor.parentId):undefined}ancestors.set(c.id,ids)}
-  const targets=q.category?(byId.has(q.category)?[q.category]:aliases.categories[q.category]||[q.category]):[]
+  const canonicalTargets=rawTree.filter(c=>c.id!=='uncategorized'&&resolveStampCategory(categoryPath(rawTree,c.id).map(n=>n.name)).categoryId===q.category).map(c=>c.id)
+  const targets=q.category?(byId.has(q.category)?[q.category]:aliases.categories[q.category]|| (canonicalTargets.length?canonicalTargets:[q.category])):[]
   const scope = q.category ? new Set(tree.filter(c=>targets.some(id=>ancestors.get(c.id)!.includes(id))).map(c=>c.id)) : null
   const members = q.collection ? new Set((s.db.prepare('SELECT assetId FROM library_members WHERE collectionId=?').all(q.collection) as { assetId: string }[]).map(r => r.assetId)) : null
-  const filtered = (s.db.prepare(`SELECT ${metadataColumns(s)},json_extract(prefab,'$.mode') AS prefabMode,json_extract(prefab,'$.bounds') AS prefabBoundsSummary FROM assets WHERE deletedAt IS NULL AND ${ACTIVE_ASSET_SQL} AND type=?`).all(q.type === 'prefab' ? 'prefab' : q.type === 'fill-pattern' ? 'fill-pattern' : 'stamp') as LibraryAsset[]).filter(a => (!q.mapType||assetAppliesToMap(JSON.parse(a.applicableMapTypes),q.mapType as MapType)) && (!q.favorite || !!a.favorite) && (!members || members.has(a.id)) && (!search || normalizeLibraryText([a.name, a.originalName, a.description, ...JSON.parse(a.tags)].join(' ')).includes(search)))
+  const filtered = (s.db.prepare(`SELECT ${metadataColumns(s)},json_extract(prefab,'$.mode') AS prefabMode,json_extract(prefab,'$.bounds') AS prefabBoundsSummary FROM assets WHERE deletedAt IS NULL AND ${ACTIVE_ASSET_SQL} AND type=?`).all(q.type === 'prefab' ? 'prefab' : q.type === 'fill-pattern' ? 'fill-pattern' : 'stamp') as LibraryAsset[]).filter(a => (!q.mapType||assetAppliesToMap(JSON.parse(a.applicableMapTypes),q.mapType as MapType)) && (!q.favorite || !!a.favorite) && (!members || members.has(a.id)) && (!search || [rawSearch,search].some(term=>normalizeLibraryText([a.name, a.originalName, a.description, ...JSON.parse(a.tags)].join(' ')).includes(term))))
   const counts = new Map<string, number>(); filtered.forEach(a => counts.set(a.categoryId, (counts.get(a.categoryId) || 0) + 1))
   const totals = new Map<string,number>()
   for(const [id,count] of counts)for(const parent of ancestors.get(id)||[])totals.set(parent,(totals.get(parent)||0)+count)

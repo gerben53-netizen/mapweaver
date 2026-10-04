@@ -1,3 +1,5 @@
+import { categoryResolution,ensureStampTaxonomy } from './stampGovernance'
+import { normalizeStampTags } from '../src/domain/stampTaxonomy'
 import { reviveRemovedAsset } from './removedAssets'
 import { validatePrefab, remapPrefabAssets } from '../src/domain/prefabs'
 import * as yauzl from 'yauzl'
@@ -55,11 +57,12 @@ export async function previewPack(s: Storage, bytes: Buffer, type = 'stamp', pre
       prepared.warnings.push(...parsed.warnings)
     }
     if (!main) for (const name of files.keys()) if (/\.(png|jpe?g|webp)$/i.test(name) && !prepared.manifest.assets.some(a => a.file === name)) prepared.manifest.assets.push({ file: name, type: type === 'fillPattern' ? 'fillPattern' : 'stamp' })
-    if (!prepared.manifest.assets.length && !prepared.manifest.categories?.length) throw Error('No supported images or categories found.')
+    if (!prepared.manifest.assets.length) throw Error('No supported assets found; category-only packs cannot create taxonomy nodes.')
     if (prepared.manifest.assets.length > 1000) throw Error('At most 1,000 assets per import.')
     for (const entry of prepared.manifest.assets) {
       try {
         libraryText(entryTitle(entry),120,true)
+        if(entry.type==='stamp'){if(prepared.manifest.categories?.length&&!prepared.warnings.includes('INFO: stamp category declarations never create taxonomy nodes.'))prepared.warnings.push('INFO: stamp category declarations never create taxonomy nodes.');const resolved=categoryResolution(entry);const beforeTags=entry.tags||[];entry.tags=normalizeStampTags([...beforeTags,...resolved.tags]);if(JSON.stringify(beforeTags)!==JSON.stringify(entry.tags))prepared.warnings.push(`INFO: ${entry.file}: tags normalized to ${entry.tags.join(', ')}.`);if(entry.id){const rows=s.db.prepare('SELECT * FROM pack_asset_revisions WHERE packId=? AND assetId=? ORDER BY revision DESC').all(prepared.manifest.pack!.id,entry.id) as {revision:number;sha256:string;type:string}[];const pack=prepared.manifest.pack!;if(rows[0]&&rows[0].type!==entry.type)throw Error('Asset ID cannot change semantic type.');const exact=rows.find(r=>r.revision===pack.revision);if(exact&&(exact.sha256!==(entry.sha256||hash(files.get(entry.file)||Buffer.alloc(0)))||exact.type!==entry.type))throw Error('Conflicting immutable asset ID/revision.');if(rows[0]&&pack.revision<rows[0].revision&&!exact)throw Error('Stale pack revision.')}}
         const image = files.get(entry.file); if (!image) throw Error(`Missing exact path: ${entry.file}`)
         const mimeType = image.subarray(0, 8).equals(Buffer.from([137,80,78,71,13,10,26,10])) ? 'image/png' : image[0] === 255 && image[1] === 216 ? 'image/jpeg' : image.toString('ascii', 0, 4) === 'RIFF' && image.toString('ascii', 8, 12) === 'WEBP' ? 'image/webp' : ''
         const validated = await validateImage(new File([new Uint8Array(image)], entry.file.split('/').at(-1)!, { type: mimeType })), digest = hash(image)
@@ -77,7 +80,7 @@ export async function previewPack(s: Storage, bytes: Buffer, type = 'stamp', pre
   } catch (e) { prepared.errors.push((e as Error).message) }
   let map = previews.get(s); if (!map) { map = new Map(); previews.set(s, map) }; map.clear()
   const token = randomUUID(); map.set(token, prepared);setTimeout(()=>map!.delete(token),15*60_000).unref()
-  return { token, revision: prepared.revision, warnings: prepared.warnings, errors: prepared.errors, collection: prepared.manifest.collection, collections:prepared.manifest.collections, categories: prepared.manifest.categories, entries: prepared.entries.map(p => ({ ...p.entry, title: entryTitle(p.entry), width: p.width, height: p.height, existing: p.existing ? publicAsset(s.asset(p.existing) as LibraryAsset) : null })) }
+  const categoryMappings=prepared.entries.filter(p=>p.entry.type==='stamp'&&(p.entry.categoryId||p.entry.categoryPath?.length)).map(p=>categoryResolution(p.entry)); return { categoryMappings, token, revision: prepared.revision, warnings: prepared.warnings, errors: prepared.errors, collection: prepared.manifest.collection, collections:prepared.manifest.collections, categories: prepared.manifest.categories, entries: prepared.entries.map(p => ({ ...p.entry, title: entryTitle(p.entry), width: p.width, height: p.height, existing: p.existing ? publicAsset(s.asset(p.existing) as LibraryAsset) : null })) }
 }
 export function recoverLibraryImports(s: Storage) {
   for (const name of readdirSync(path.join(s.root, 'logs'))) if (/^library-import-[a-f0-9-]+\.json$/.test(name)) {
@@ -86,7 +89,7 @@ export function recoverLibraryImports(s: Storage) {
     unlinkSync(journal)
   }
 }
-export function commitPack(s: Storage, body: { token: string; revision: number; destination?: string; prefix?: string[]; createCategories?: boolean; useExistingCategories?: boolean; collectionId?: string; duplicate?: 'keep' | 'fill' | 'overwrite' }, dryRun = false) {
+export function commitPack(s: Storage, body: { token: string; revision: number; destination?: string; prefix?: string[]; createCategories?: boolean; useExistingCategories?: boolean; categoryMappings?:Record<string,string>; collectionId?: string; duplicate?: 'keep' | 'fill' | 'overwrite' }, dryRun = false) {
   const p = previews.get(s)?.get(body.token)
   if (!p || p.expires < Date.now()) throw new StorageError('PREVIEW_EXPIRED', 'Import preview expired. Preview the files again.')
   checkRevision(s, p.revision); checkRevision(s, body.revision)
@@ -99,7 +102,7 @@ export function commitPack(s: Storage, body: { token: string; revision: number; 
   try {
     const result = s.db.transaction(() => {
       const destination = body.destination || 'uncategorized'; if (!s.db.prepare('SELECT 1 FROM categories WHERE id=?').get(destination)) throw Error('Unknown import destination.')
-      const created = new Set<string>()
+      const previousCategories=new Set(categories(s).map(c=>c.id));const created = new Set<string>(); const canonical=ensureStampTaxonomy(s,p.entries.filter(e=>e.entry.type==='stamp').map(e=>categoryResolution(e.entry,body.categoryMappings).categoryId).filter((id):id is string=>!!id));for(const id of canonical.values())if(!previousCategories.has(id))created.add(id);const summaries={imported:0,updated:0,skipped:0,mappings:[] as {source:string;categoryId:string|null;label:string|null}[],warnings:[...p.warnings]}
       const categoryFor = (names?: string[], order?: number) => {
         if (names === undefined) return destination
         const chain = [...(body.prefix || []), ...names]; if (chain.length > 8) throw Error('Import category path exceeds eight levels.')
@@ -113,14 +116,15 @@ export function commitPack(s: Storage, body: { token: string; revision: number; 
         }
         return parentId || 'uncategorized'
       }
-      for (const c of p.manifest.categories || []) categoryFor(c.path, c.sortOrder)
+      if(!p.entries.some(e=>e.entry.type==='stamp'))for (const c of p.manifest.categories || []) categoryFor(c.path, c.sortOrder)
       const ids = new Map<string, string>()
       for (const prepared of p.entries) {
-        const { entry, digest } = prepared, categoryId = entry.categoryPath === undefined ? destination : categoryFor(entry.categoryPath)
-        let id = prepared.existing || (entry.type==='prefab' ? undefined : s.db.prepare('SELECT id FROM assets WHERE type=? AND sha256=?').get(entry.type==='stamp'?'stamp':'fill-pattern',digest) as {id:string}|undefined)?.id
+        const { entry, digest } = prepared;const resolved=categoryResolution(entry,body.categoryMappings);if(entry.type==='stamp'&&(entry.categoryId||entry.categoryPath?.length)&&!resolved.categoryId)throw Error('Unresolved category: '+resolved.source);const categoryId=entry.type==='stamp'?(resolved.categoryId?canonical.get(resolved.categoryId)!:destination):entry.categoryPath===undefined?destination:categoryFor(entry.categoryPath);if(entry.type==='stamp')summaries.mappings.push(resolved)
+        const binding=entry.id?s.db.prepare('SELECT libraryAssetId FROM pack_asset_revisions WHERE packId=? AND assetId=? AND revision=?').get(p.manifest.pack!.id,entry.id,p.manifest.pack!.revision) as {libraryAssetId:string}|undefined:undefined;let id = binding?.libraryAssetId || prepared.existing || (entry.type==='prefab' ? undefined : s.db.prepare('SELECT id FROM assets WHERE type=? AND sha256=?').get(entry.type==='stamp'?'stamp':'fill-pattern',digest) as {id:string}|undefined)?.id
         const removed=id?(s.asset(id) as LibraryAsset).deletedAt:null
         const existed=!!id&&!removed
         if(id&&removed)reviveRemovedAsset(s,id,entryTitle(entry),entry.originalName||entry.file.split('/').at(-1)!,categoryId)
+        if(id&&existed){summaries.skipped++;if(body.duplicate!=='keep')summaries.updated++}else summaries.imported++;
         if (!id) {
           const ext = prepared.mimeType === 'image/png' ? 'png' : prepared.mimeType === 'image/jpeg' ? 'jpg' : 'webp', originalPath = `assets/originals/${digest}.${ext}`, previewPath = `assets/previews/${digest}.png`
           for (const [relative, bytes] of [[originalPath, prepared.bytes], [previewPath, prepared.thumbnail]] as const) {
@@ -130,9 +134,11 @@ export function commitPack(s: Storage, body: { token: string; revision: number; 
           id = randomUUID(); const now = new Date().toISOString()
           s.db.prepare('INSERT INTO assets(id,type,name,originalName,mimeType,width,height,size,sha256,originalPath,previewPath,categoryId,createdAt,modifiedAt) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)').run(id, entry.type === 'prefab' ? 'prefab' : entry.type === 'stamp' ? 'stamp' : 'fill-pattern', entryTitle(entry), entry.originalName || entry.file.split('/').at(-1), prepared.mimeType, prepared.width, prepared.height, prepared.bytes.length, digest, originalPath, previewPath, categoryId, now, now)
         }
+        const currentQuality=id?(s.asset(id) as LibraryAsset).quality:null;if(body.duplicate!=='keep'&&currentQuality&&entry.quality&&!['KEEP','FIX'].includes(JSON.parse(currentQuality).classification)&&['KEEP','FIX'].includes(entry.quality.classification))throw Error('Inactive/REPLACE asset cannot be reactivated by import.');
+        if(entry.id)s.db.prepare('INSERT OR IGNORE INTO pack_asset_revisions VALUES(?,?,?,?,?,?)').run(p.manifest.pack!.id,entry.id,p.manifest.pack!.revision,id,digest,entry.type);
         if (!existed || body.duplicate !== 'keep') {
-          const metadata: Record<string, unknown> = { ...entry }; delete metadata.file; delete metadata.type; delete metadata.sha256; delete metadata.categoryPath
-          if (entry.categoryPath !== undefined || !existed) metadata.categoryId = categoryId
+          const metadata: Record<string, unknown> = { ...entry }; delete metadata.file; delete metadata.type; delete metadata.sha256; delete metadata.categoryPath;delete metadata.id;delete metadata.categoryId
+          if (entry.categoryId !== undefined || entry.categoryPath !== undefined || !existed) metadata.categoryId = categoryId
           if (!existed) metadata.title = entryTitle(entry)
           if (existed && body.duplicate === 'fill') {
             const current = publicAsset(s.asset(id) as LibraryAsset)
@@ -157,7 +163,7 @@ export function commitPack(s: Storage, body: { token: string; revision: number; 
       for (const c of collections) { const existing=(s.db.prepare('SELECT * FROM library_collections ORDER BY id').all() as {id:string;name:string;description:string}[]).find(old=>normalizeLibraryText(old.name)===normalizeLibraryText(c.title)&&old.description===c.description);const id=existing?.id||randomUUID();if(!existing)s.db.prepare('INSERT INTO library_collections VALUES(?,?,?)').run(id,c.title,c.description); for (const m of c.members) s.db.prepare('INSERT OR IGNORE INTO library_members VALUES(?,?)').run(id, ids.get(`${m.file}/${m.type}`)) }
       if(body.collectionId){if(!s.db.prepare('SELECT 1 FROM library_collections WHERE id=?').get(body.collectionId))throw Error('Unknown destination collection.');for(const id of ids.values())s.db.prepare('INSERT OR IGNORE INTO library_members VALUES(?,?)').run(body.collectionId,id)}
       if(!dryRun)s.failWrite?.()
-      const tree=categories(s),result={count:ids.size,revision:libraryRevision(s),entries:[...new Set(ids.values())].map(id=>{const a=publicAsset(s.asset(id) as LibraryAsset);return {...a,categoryPath:categoryPath(tree,a.categoryId).map(c=>c.name)}}),categories:tree.filter(c=>created.has(c.id)).map(c=>categoryPath(tree,c.id).map(n=>n.name))}
+      const tree=categories(s),result={summary:summaries,count:ids.size,revision:libraryRevision(s),entries:[...new Set(ids.values())].map(id=>{const a=publicAsset(s.asset(id) as LibraryAsset);return {...a,categoryPath:categoryPath(tree,a.categoryId).map(c=>c.name)}}),categories:tree.filter(c=>created.has(c.id)).map(c=>categoryPath(tree,c.id).map(n=>n.name))}
       if(dryRun){review={...result,revision:p.revision};throw Error('ROLLBACK_REVIEW')}
       return result
     })()

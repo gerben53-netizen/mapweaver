@@ -51,3 +51,7 @@ On a 6,000 km-wide, 3,000 px world map, this symbolic mountain footprint is 300 
 The ordinary picker defaults to the current map type, while **Show assets for all map types** deliberately removes that filter. Existing objects remain visible. Forcing an incompatible default onto another map gives a native-size fallback. Specialized browsers can have separate filtering; applicability does not alter image bytes.
 
 Complete example: [minimal stamp manifest](templates/minimal-stamp-pack/mapweaver-assets.json).
+
+## Stamp importer governance
+
+Voor actuele importregels, canonieke categorie-IDs, pack/asset-identiteiten en revisies: [Stamp-importer](../stamp-importer.md) en [pack-author quick reference](../stamp-pack-quick-reference.md). Normale stamp-import creëert geen categorieën uit een packnaam of onbekend categoryPath. Historische paths worden alleen via expliciete aliases of een gecontroleerde mapping opgelost.

@@ -356,6 +356,27 @@
               }
             },
             "additionalProperties": false
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+          },
+          "categoryId": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+          },
+          "semanticClass": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[a-z_]{1,80}$"
+          },
+          "softShadowDefault": {
+            "type": [
+              "boolean",
+              "null"
+            ]
           }
         },
         "allOf": [
@@ -492,6 +513,24 @@
               }
             }
           }
+        }
+      }
+    },
+    "pack": {
+      "type": "object",
+      "required": [
+        "id",
+        "revision"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
         }
       }
     }

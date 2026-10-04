@@ -1,0 +1,623 @@
+{
+  "schemaVersion": 1,
+  "source": "Asset Library Quality & Taxonomy Audit, 3 October 2026: 27 reviewed leaf paths; stable IDs added without rewriting historical IDs.",
+  "categories": [
+    {
+      "id": "architecture",
+      "name": "Architectonische objecten",
+      "parentId": null,
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "decoration",
+      "name": "Decoratie",
+      "parentId": null,
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "misc",
+      "name": "Diversen",
+      "parentId": null,
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "kitchen",
+      "name": "Keuken & voedsel",
+      "parentId": null,
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "furniture",
+      "name": "Meubilair",
+      "parentId": null,
+      "active": true,
+      "aliases": [
+        "furniture"
+      ]
+    },
+    {
+      "id": "nature",
+      "name": "Natuur & vegetatie",
+      "parentId": null,
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "storage",
+      "name": "Opslag",
+      "parentId": null,
+      "active": true,
+      "aliases": [
+        "storage"
+      ]
+    },
+    {
+      "id": "textiles",
+      "name": "Textiel",
+      "parentId": null,
+      "active": true,
+      "aliases": [
+        "textiles"
+      ]
+    },
+    {
+      "id": "lighting",
+      "name": "Verlichting",
+      "parentId": null,
+      "active": true,
+      "aliases": [
+        "lighting"
+      ]
+    },
+    {
+      "id": "craft",
+      "name": "Werk & ambacht",
+      "parentId": null,
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "building-parts",
+      "name": "Bouwonderdelen",
+      "parentId": "architecture",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "floor-materials",
+      "name": "Vloermaterialen",
+      "parentId": "architecture",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "floor-transitions",
+      "name": "Vloerovergangen",
+      "parentId": "architecture",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "ornaments",
+      "name": "Ornamenten",
+      "parentId": "decoration",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "floor-traces",
+      "name": "Vloersporen",
+      "parentId": "decoration",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "backgrounds",
+      "name": "Kaartachtergronden",
+      "parentId": "misc",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "kitchen-fixtures",
+      "name": "Keukenvoorzieningen",
+      "parentId": "kitchen",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "vessels",
+      "name": "Vaten & vaatwerk",
+      "parentId": "kitchen",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "food-preparation",
+      "name": "Voedsel & bereiding",
+      "parentId": "kitchen",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "beds",
+      "name": "Bedden",
+      "parentId": "furniture",
+      "active": true,
+      "aliases": [
+        "beds"
+      ]
+    },
+    {
+      "id": "tables-desks",
+      "name": "Tafels & bureaus",
+      "parentId": "furniture",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "seating",
+      "name": "Zitmeubilair",
+      "parentId": "furniture",
+      "active": true,
+      "aliases": [
+        "chairs"
+      ]
+    },
+    {
+      "id": "atlas-landmarks",
+      "name": "Atlaslandmarks",
+      "parentId": "nature",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "mountains-rocks",
+      "name": "Bergen & rotsen",
+      "parentId": "nature",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "forests",
+      "name": "Bossen",
+      "parentId": "nature",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "wood-fuel",
+      "name": "Hout & brandstof",
+      "parentId": "nature",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "swamps",
+      "name": "Moerassen",
+      "parentId": "nature",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "plants",
+      "name": "Planten",
+      "parentId": "nature",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "volcanoes",
+      "name": "Vulkanen",
+      "parentId": "nature",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "roots-rocks",
+      "name": "Wortels & rotsen",
+      "parentId": "nature",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "bookcases",
+      "name": "Boekenkasten",
+      "parentId": "storage",
+      "active": true,
+      "aliases": [
+        "bookshelves",
+        "bookshelf",
+        "bookcase"
+      ]
+    },
+    {
+      "id": "cabinets-chests",
+      "name": "Kasten & kisten",
+      "parentId": "storage",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "fabric-rope",
+      "name": "Stoffen & touw",
+      "parentId": "textiles",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "rugs",
+      "name": "Tapijten",
+      "parentId": "textiles",
+      "active": true,
+      "aliases": [
+        "rugs"
+      ]
+    },
+    {
+      "id": "lamps-candlesticks",
+      "name": "Lampen & kandelaars",
+      "parentId": "lighting",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "books-documents",
+      "name": "Boeken & documenten",
+      "parentId": "craft",
+      "active": true,
+      "aliases": []
+    },
+    {
+      "id": "study-tools",
+      "name": "Gereedschap & studie",
+      "parentId": "craft",
+      "active": true,
+      "aliases": []
+    }
+  ],
+  "tagAliases": {
+    "palace": "paleis",
+    "library": "bibliotheek",
+    "study": "studie",
+    "bedrooms": "slaapvertrekken",
+    "bedroom": "slaapvertrekken",
+    "reception": "ontvangst",
+    "royal private": "koninklijk privé",
+    "throne room": "troonzaal",
+    "general furniture": "meubilair",
+    "roots": "wortels",
+    "clues": "aanwijzingen",
+    "hidden chambers": "verborgen kamers",
+    "transitions": "overgangen",
+    "textures": "texturen",
+    "furniture": "meubilair",
+    "wood": "hout",
+    "livingwood": "levend hout",
+    "living wood": "levend hout",
+    "plants": "planten",
+    "plant": "planten",
+    "kitchen": "keuken",
+    "storage": "opslag",
+    "bookshelf": "boekenkast",
+    "bookshelves": "boekenkast",
+    "bookcase": "boekenkast",
+    "topdown": "bovenaanzicht",
+    "top-down": "bovenaanzicht",
+    "forest": "bos",
+    "mountain": "bergen",
+    "mountains": "bergen",
+    "swamp": "moeras",
+    "snow": "sneeuw",
+    "alpine": "alpien",
+    "conifer": "naaldbos",
+    "broadleaf": "loofbos",
+    "landmark": "landmark",
+    "landmarks": "landmark",
+    "valmyria": "Valmyria",
+    "eryndor": "Eryndor",
+    "koningsboom": "Koningsboom",
+    "sylvenglen": "Sylvenglen",
+    "líorna": "Líorna",
+    "eldric": "Eldric",
+    "maelyra": "Maelyra",
+    "theron": "Theron",
+    "administration": "hofbestuur",
+    "alcove": "nis",
+    "audience": "audiëntie",
+    "bed": "bed",
+    "bedframe": "bedframe",
+    "bedside-table": "nachtkastje",
+    "bench": "bank",
+    "book": "boek",
+    "book-bin": "boekenkist",
+    "book-cluster": "boekenstapel",
+    "book-rack": "boekenrek",
+    "book-stack": "boekenstapel",
+    "border": "rand",
+    "botanical": "botanisch",
+    "botanical-book": "botanisch boek",
+    "botanical-research": "botanisch onderzoek",
+    "botanical-specimens": "botanische monsters",
+    "bowl": "schaal",
+    "branches": "takken",
+    "broadleaf forest": "loofbos",
+    "ceremonial": "ceremonieel",
+    "chair": "stoel",
+    "chest": "kist",
+    "clue": "aanwijzing",
+    "composition": "compositie",
+    "conifer forest": "naaldbos",
+    "conversation-composition": "gespreksgroep",
+    "corner-bookcase": "hoekboekenkast",
+    "corner-desk": "hoekbureau",
+    "corridor": "gang",
+    "cot": "brits",
+    "court": "hof",
+    "curved-book-rack": "gebogen boekenrek",
+    "curved-bookcase": "gebogen boekenkast",
+    "dais": "podium",
+    "damaged": "beschadigd",
+    "damaged-book": "beschadigd boek",
+    "daybed": "dagbed",
+    "decoration": "decoratie",
+    "desk": "bureau",
+    "diplomacy": "diplomatie",
+    "document-cabinet": "documentenkast",
+    "documents": "documenten",
+    "door": "deur",
+    "double-bed": "tweepersoonsbed",
+    "fallen-book": "gevallen boek",
+    "fixture": "vaste inrichting",
+    "floor": "vloer",
+    "floor-ornament": "vloerornament",
+    "general": "algemeen",
+    "gift": "geschenk",
+    "grooming": "verzorging",
+    "guard-marker": "wachtmarkering",
+    "heartwood": "kernhout",
+    "hills & rocks": "heuvels & rotsen",
+    "inkwell": "inktpot",
+    "investigation": "onderzoek",
+    "keepsake": "herinneringsobject",
+    "lectern": "lessenaar",
+    "liorna": "Líorna",
+    "locked-chest": "afgesloten kist",
+    "magnifier": "vergrootglas",
+    "manuscript": "manuscript",
+    "manuscript-press": "manuscriptpers",
+    "manuscript-stack": "manuscriptstapel",
+    "manuscripts": "manuscripten",
+    "map": "kaart",
+    "map-compass": "kaartkompas",
+    "map-table": "kaarttafel",
+    "maps": "kaarten",
+    "measuring-tools": "meetgereedschap",
+    "mechanism": "mechanisme",
+    "minerals": "mineralen",
+    "mirror": "spiegel",
+    "mushrooms": "paddenstoelen",
+    "natural-specimens": "natuurmonsters",
+    "northern": "noordelijk",
+    "northwest-light": "licht uit noordwesten",
+    "notes": "notities",
+    "obstruction": "obstakel",
+    "office-prop": "kantoorvoorwerp",
+    "ornament": "ornament",
+    "overlay": "overlay",
+    "painterly": "geschilderd",
+    "planter": "plantenbak",
+    "platform": "platform",
+    "pressed-fern": "geperste varen",
+    "private": "privé",
+    "protective-case": "beschermkist",
+    "reading-lectern": "leeslessenaar",
+    "rolled-maps": "opgerolde kaarten",
+    "root": "wortel",
+    "root-specimen": "wortelmonster",
+    "royal": "koninklijk",
+    "scattered-documents": "verspreide documenten",
+    "scholar": "geleerde",
+    "scholar-desk": "geleerdenbureau",
+    "scroll": "rol",
+    "scroll-bundle": "rollenbundel",
+    "scroll-chest": "rollenkist",
+    "scroll-rack": "rollenrek",
+    "scrolls": "rollen",
+    "sealed-documents": "verzegelde documenten",
+    "seating": "zitmeubilair",
+    "secret passage": "geheime gang",
+    "secure-box": "beveiligde doos",
+    "secure-coffer": "beveiligde kist",
+    "serving": "serveren",
+    "serving-tray": "dienblad",
+    "sliding-lid-box": "schuifdekseldoos",
+    "snow & alpine": "sneeuw & alpien",
+    "specimen-box": "monsterkist",
+    "standard": "standaard",
+    "star-chart": "sterrenkaart",
+    "stool": "kruk",
+    "table": "tafel",
+    "temperate": "gematigd",
+    "texture": "textuur",
+    "throne": "troon",
+    "tome": "boekwerk",
+    "torn-pages": "gescheurde bladen",
+    "transition": "overgang",
+    "unlit": "onverlicht",
+    "unlit-candle": "onverlichte kaars",
+    "unlit-candles": "onverlichte kaarsen",
+    "unmade-bed": "beslapen bed",
+    "utility": "praktisch",
+    "vegetation": "vegetatie",
+    "volcanic": "vulkanisch",
+    "wall": "muur",
+    "wardrobe": "garderobe",
+    "washbasin": "waskom",
+    "washstand": "wasmeubel",
+    "worktable": "werktafel",
+    "writing-desk": "schrijfbureau",
+    "pqa": "PQA"
+  },
+  "contextAliases": {
+    "palace": "paleis",
+    "paleis": "paleis",
+    "library": "bibliotheek",
+    "bibliotheek": "bibliotheek",
+    "eldric": "Eldric",
+    "eryndor": "Eryndor",
+    "sylvenglen": "Sylvenglen",
+    "interieur": "interieur",
+    "interior": "interieur"
+  },
+  "pathAliases": {
+    "world map / painterly world / mountains": {
+      "categoryId": "mountains-rocks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "mountains"
+      ]
+    },
+    "world map / painterly world / snow & alpine": {
+      "categoryId": "mountains-rocks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "snow & alpine"
+      ]
+    },
+    "world map / painterly world / broadleaf forest": {
+      "categoryId": "forests",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "broadleaf forest"
+      ]
+    },
+    "world map / painterly world / conifer forest": {
+      "categoryId": "forests",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "conifer forest"
+      ]
+    },
+    "world map / painterly world / swamp": {
+      "categoryId": "swamps",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "swamp"
+      ]
+    },
+    "world map / painterly world / hills & rocks": {
+      "categoryId": "mountains-rocks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "hills & rocks"
+      ]
+    },
+    "world map / painterly world / volcanic": {
+      "categoryId": "volcanoes",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "volcanic"
+      ]
+    },
+    "world map / painterly world / landmarks": {
+      "categoryId": "atlas-landmarks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "landmarks"
+      ]
+    },
+    "world map / painterly settlements / capital": {
+      "categoryId": "atlas-landmarks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "capital"
+      ]
+    },
+    "world map / painterly settlements / city": {
+      "categoryId": "atlas-landmarks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "city"
+      ]
+    },
+    "world map / painterly settlements / town": {
+      "categoryId": "atlas-landmarks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "town"
+      ]
+    },
+    "world map / painterly settlements / village": {
+      "categoryId": "atlas-landmarks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "village"
+      ]
+    },
+    "world map / painterly settlements / fort": {
+      "categoryId": "atlas-landmarks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "fort"
+      ]
+    },
+    "world map / painterly settlements / harbor": {
+      "categoryId": "atlas-landmarks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "harbor"
+      ]
+    },
+    "world map / painterly settlements / ruin": {
+      "categoryId": "atlas-landmarks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "ruin"
+      ]
+    },
+    "world map / painterly settlements / tower": {
+      "categoryId": "atlas-landmarks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "tower"
+      ]
+    },
+    "world map / painterly settlements / temple": {
+      "categoryId": "atlas-landmarks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "temple"
+      ]
+    },
+    "world map / painterly settlements / landmark": {
+      "categoryId": "atlas-landmarks",
+      "tags": [
+        "world-map",
+        "geschilderd",
+        "landmark"
+      ]
+    }
+  }
+}

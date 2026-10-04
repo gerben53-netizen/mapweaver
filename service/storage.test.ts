@@ -33,7 +33,7 @@ describe('local storage integrity',()=>{
     // Recreate the pre-upgrade schema around real populated records and files.
     const legacy=new Database(path.join(dir,'mapweaver.sqlite3'))
     for(const t of legacy.prepare("SELECT name FROM sqlite_master WHERE type='trigger'").all() as {name:string}[])legacy.exec(`DROP TRIGGER ${t.name}`)
-    legacy.exec("DROP TABLE campaign_nodes;DROP TABLE campaigns;DROP TABLE library_members;DROP TABLE library_collections;DROP INDEX assets_generator_type;DROP INDEX assets_active;DROP INDEX categories_parent;DELETE FROM settings WHERE key='libraryRevision';")
+    legacy.exec("DROP TABLE pack_asset_revisions;DROP TABLE campaign_nodes;DROP TABLE campaigns;DROP TABLE library_members;DROP TABLE library_collections;DROP INDEX assets_generator_type;DROP INDEX assets_active;DROP INDEX categories_parent;DELETE FROM settings WHERE key='libraryRevision';")
     for(const column of ['quality','patternScale','generator','prefab','description','favorite','author','source','license','applicableMapTypes','deletedAt'])legacy.exec(`ALTER TABLE assets DROP COLUMN ${column}`)
     for(const column of ['parentId','sortOrder','modifiedAt'])legacy.exec(`ALTER TABLE categories DROP COLUMN ${column}`)
     for(const column of ['sizingMode','defaultWidth','defaultHeight','sizingUnit','aspectRatioLocked','sizingScope'])legacy.exec(`ALTER TABLE assets DROP COLUMN ${column}`)

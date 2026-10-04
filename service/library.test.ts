@@ -16,16 +16,16 @@ const roots:string[]=[],stores:Storage[]=[]
 function store(fail?:()=>void){const root=mkdtempSync(path.join(os.tmpdir(),'mw-library-'));roots.push(root);const s=new Storage(root,fail);stores.push(s);return s}
 afterEach(()=>{stores.splice(0).forEach(s=>{if(s.db.open)s.close()});roots.splice(0).forEach(root=>rmSync(root,{recursive:true,force:true}))})
 async function image(color='red'){return sharp({create:{width:20,height:10,channels:4,background:color}}).png().toBuffer()}
-async function pack(extra:object={},bytes?:Buffer){return Buffer.from(zipSync({'meubilair/06_desk.png':bytes||await image(),'mapweaver-assets.json':strToU8(JSON.stringify({schemaVersion:1,assets:[{file:'meubilair/06_desk.png',type:'stamp',title:'Desk',description:'A desk',categoryPath:['Eryndor','Sylvenglen','Paleis','Meubilair'],tags:['Study'],defaultSize:{mode:'grid',width:2,height:1,unit:'cells',lockAspectRatio:false},...extra}],categories:[{path:['Eryndor','Empty'],sortOrder:3}]}))},{level:0}))}
+async function pack(extra:object={},bytes?:Buffer){return Buffer.from(zipSync({'meubilair/06_desk.png':bytes||await image(),'mapweaver-assets.json':strToU8(JSON.stringify({schemaVersion:1,assets:[{file:'meubilair/06_desk.png',type:'stamp',title:'Desk',description:'A desk',categoryPath:['Eryndor','Sylvenglen','Paleis','Meubilair','Tafels & bureaus'],tags:['Study'],defaultSize:{mode:'grid',width:2,height:1,unit:'cells',lockAspectRatio:false},...extra}],categories:[{path:['Eryndor','Empty'],sortOrder:3}]}))},{level:0}))}
 async function imported(s:Storage,extra:object={}){const p=await previewPack(s,await pack(extra));expect(p.errors).toEqual([]);return commitPack(s,{token:p.token,revision:p.revision,duplicate:'keep',createCategories:true,useExistingCategories:true})}
 const cmd=(s:Storage,b:object)=>libraryCommand(s,{revision:libraryRevision(s),...b} as Parameters<typeof libraryCommand>[1])
 describe('advanced local library',()=>{
- it('imports nested metadata; parent search and All assets; preserves empty categories and round-trips bytes',async()=>{
-  const s=store();await imported(s);const root=categories(s).find(c=>c.name==='Eryndor')!,query=libraryQuery(s,{category:root.id,search:'STUDY'})
+ it('normalizes nested metadata; parent search and All assets; rejects arbitrary categories and round-trips bytes',async()=>{
+  const s=store();await imported(s);const root=categories(s).find(c=>c.name==='Meubilair')!,query=libraryQuery(s,{category:root.id,search:'STUDY'})
   expect(query.total).toBe(1);expect(libraryQuery(s,{search:'desk'}).total).toBe(1);expect(libraryQuery(s,{type:'fill-pattern'}).total).toBe(0)
   expect(query.assets[0].defaultSize).toMatchObject({width:2,height:1});const bytes=exportLibrary(s,[query.assets[0].id],root.id),other=store(),preview=await previewPack(other,bytes)
   expect(preview.errors).toEqual([]);commitPack(other,{token:preview.token,revision:preview.revision,duplicate:'keep',createCategories:true,useExistingCategories:true})
-  const restored=libraryQuery(other,{}).assets[0];expect(restored.name).toBe('Desk');expect(restored.tags).toEqual(['Study']);expect(restored.sha256).toBe(query.assets[0].sha256);expect(categories(other).some(c=>c.name==='Empty')).toBe(true)
+  const restored=libraryQuery(other,{}).assets[0];expect(restored.name).toBe('Desk');expect(restored.tags).toEqual(['studie','Eryndor','Sylvenglen','paleis']);expect(restored.sha256).toBe(query.assets[0].sha256);expect(categories(other).some(c=>c.name==='Empty')).toBe(false)
  })
  it('rejects cycles, depth nine and conflicting deletion without partial writes',()=>{
   const s=store();let parent:string|null=null;const chain:string[]=[]
@@ -38,7 +38,7 @@ describe('advanced local library',()=>{
   const s=store();await imported(s);const a=libraryQuery(s,{}).assets[0],revision=libraryRevision(s),change=cmd(s,{op:'metadata',ids:[a.id],patch:{title:'New title'}})
   expect(()=>libraryCommand(s,{revision,op:'metadata',ids:[a.id],patch:{title:'Stale'}})).toThrow(/another tab/)
   cmd(s,{op:'undo',token:change.token});expect(s.asset(a.id).name).toBe('Desk')
-  const c=categories(s).find(c=>c.name==='Meubilair')!;cmd(s,{op:'category',category:{id:c.id,name:'Furniture',parentId:null}});expect(s.asset(a.id).categoryId).toBe(c.id)
+  const c=categories(s).find(c=>c.id===a.categoryId)!;cmd(s,{op:'category',category:{id:c.id,name:'Furniture',parentId:null}});expect(s.asset(a.id).categoryId).toBe(c.id)
  })
  it('blocks path, hash, scale and unknown type errors before writes',async()=>{
   const s=store();for(const extra of [{file:'wrong/06_desk.png'},{sha256:'0'.repeat(64)},{type:'prefab'},{defaultSize:{mode:'grid',width:-1,height:2,unit:'cells',lockAspectRatio:false}}]){const p=await previewPack(s,await pack(extra));expect(p.errors.length).toBeGreaterThan(0);expect(()=>commitPack(s,{token:p.token,revision:p.revision,duplicate:'keep',createCategories:true})).toThrow();expect(libraryQuery(s,{}).total).toBe(0)}
@@ -59,7 +59,7 @@ describe('advanced local library',()=>{
   const reviewed=commitPack(s,options,true);expect(reviewed.entries).toHaveLength(2);expect(libraryQuery(s,{}).total).toBe(0);expect(readdirSync(path.join(s.root,'assets/originals'))).toEqual([])
   commitPack(s,options);const stamp=libraryQuery(s,{}).assets[0],pattern=libraryQuery(s,{type:'fill-pattern'}).assets[0];expect(stamp.originalName).toBe('06_original.png');expect(stamp.sha256).toBe(pattern.sha256);expect(readdirSync(path.join(s.root,'assets/originals'))).toHaveLength(1)
   const target=store(),round=await previewPack(target,exportLibrary(s,[stamp.id,pattern.id]));expect(round.errors).toEqual([]);commitPack(target,{...options,token:round.token,revision:round.revision});expect(libraryQuery(target,{}).assets[0].originalName).toBe('06_original.png')
-  const work=path.join(s.root,'test-backup'),signal=new AbortController().signal,backup=await createBackup(s,work,generation(s),signal,()=>{}),dest=path.join(s.root,'restore');await extractArchive(backup.file,dest,signal,()=>{});const restored=new Storage(dest);stores.push(restored);expect(categories(restored).find(c=>c.name==='Empty')?.sortOrder).toBe(9);expect(restored.db.prepare('SELECT * FROM library_members').all()).toHaveLength(2)
+  const work=path.join(s.root,'test-backup'),signal=new AbortController().signal,backup=await createBackup(s,work,generation(s),signal,()=>{}),dest=path.join(s.root,'restore');await extractArchive(backup.file,dest,signal,()=>{});const restored=new Storage(dest);stores.push(restored);expect(categories(restored).some(c=>c.name==='Empty')).toBe(false);expect(restored.db.prepare('SELECT * FROM library_members').all()).toHaveLength(2)
  })
  it('validates both shipped templates at runtime and a plain-image native title',async()=>{
   const s=store();for(const name of ['mapweaver-assets.json','06_manuscriptlessenaar.mapweaver.json']){const raw=JSON.parse(readFileSync(path.resolve('public/asset-templates',name),'utf8'));const bytes=readFileSync(path.resolve('public/asset-templates/06_manuscriptlessenaar.png'));const p=await previewPack(s,Buffer.from(zipSync({[name]:strToU8(JSON.stringify(raw)),[raw.assets[0].file]:bytes},{level:0})));expect(p.errors).toEqual([])}
@@ -75,7 +75,7 @@ describe('advanced local library',()=>{
  })
  it('requires an explicit source for conflicting sidecar and collection metadata',async()=>{const s=store(),entry={file:'desk.png',type:'stamp'},bytes=Buffer.from(zipSync({'desk.png':await image(),'mapweaver-assets.json':strToU8(JSON.stringify({schemaVersion:1,assets:[{...entry,title:'Collection title'}]})),'desk.mapweaver.json':strToU8(JSON.stringify({schemaVersion:1,assets:[{...entry,title:'Sidecar title'}]}))},{level:0}));expect((await previewPack(s,bytes)).errors[0]).toContain('Choose which');expect((await previewPack(s,bytes,'stamp','collection')).entries[0].title).toBe('Collection title');expect((await previewPack(s,bytes,'stamp','sidecar')).entries[0].title).toBe('Sidecar title');expect(libraryQuery(s,{}).total).toBe(0)})
  it('selects across pages and adds/removes tags without losing other tags',async()=>{
-  const s=store();await imported(s);const a=libraryQuery(s,{}).assets[0];cmd(s,{op:'tags-add',ids:[a.id],tags:['Wood']});cmd(s,{op:'tags-remove',ids:[a.id],tags:['study']});expect(publicAsset(s.asset(a.id) as LibraryAsset).tags).toEqual(['Wood']);expect(libraryQuery(s,{limit:'1'},true).ids).toEqual([a.id]);patchAsset(s,a.id,{favorite:true});expect(libraryQuery(s,{favorite:'true'}).total).toBe(1);cmd(s,{op:'collection',name:'Set',description:'Original'});const c=libraryQuery(s,{}).collections[0];cmd(s,{op:'collection-add',ids:[a.id],collectionId:c.id});cmd(s,{op:'collection',id:c.id,name:'Renamed set',description:'Updated'});const removed=cmd(s,{op:'delete-collection',id:c.id});expect(libraryQuery(s,{}).collections).toEqual([]);cmd(s,{op:'undo',token:removed.token});expect(libraryQuery(s,{collection:c.id}).total).toBe(1)
+  const s=store();await imported(s);const a=libraryQuery(s,{}).assets[0];cmd(s,{op:'tags-add',ids:[a.id],tags:['Wood']});cmd(s,{op:'tags-remove',ids:[a.id],tags:['studie']});expect(publicAsset(s.asset(a.id) as LibraryAsset).tags).toEqual(['Eryndor','Sylvenglen','paleis','Wood']);expect(libraryQuery(s,{limit:'1'},true).ids).toEqual([a.id]);patchAsset(s,a.id,{favorite:true});expect(libraryQuery(s,{favorite:'true'}).total).toBe(1);cmd(s,{op:'collection',name:'Set',description:'Original'});const c=libraryQuery(s,{}).collections[0];cmd(s,{op:'collection-add',ids:[a.id],collectionId:c.id});cmd(s,{op:'collection',id:c.id,name:'Renamed set',description:'Updated'});const removed=cmd(s,{op:'delete-collection',id:c.id});expect(libraryQuery(s,{}).collections).toEqual([]);cmd(s,{op:'undo',token:removed.token});expect(libraryQuery(s,{collection:c.id}).total).toBe(1)
  })
 })
 
@@ -111,7 +111,7 @@ describe('explicit library removal recovery',()=>{
    const p=await previewPack(s,bytes);expect(p.errors).toEqual([]);if(!i)expect(p.entries[0].existing).toBeNull()
    commitPack(s,{token:p.token,revision:p.revision,duplicate:'keep',createCategories:true,useExistingCategories:true})
    expect(libraryQuery(s,{}).assets).toHaveLength(1)
-   expect(libraryQuery(s,{}).assets[0]).toMatchObject({id:first.id,categoryId:category,favorite:false,tags:['Study']})
+   expect(libraryQuery(s,{}).assets[0]).toMatchObject({id:first.id,categoryId:category,favorite:false,tags:['studie','Eryndor','Sylvenglen','paleis']})
    expect(s.db.prepare('SELECT * FROM library_collections').all()).toHaveLength(1)
    expect(s.db.prepare('SELECT * FROM library_members').all()).toHaveLength(1)
   }
@@ -143,7 +143,7 @@ it('rolls back a failed tombstone revival with no partial metadata or collection
 })
 
 it('counts descendants with filters separately from genuine emptiness across roles and updates after removal',async()=>{
- const s=store();await imported(s);const root=categories(s).find(c=>c.name==='Eryndor')!,asset=libraryQuery(s,{}).assets[0]
+ const s=store();await imported(s);const root=categories(s).find(c=>c.name==='Meubilair')!,asset=libraryQuery(s,{}).assets[0]
  const original=categories(s)
  for(const q of [{search:'no match'},{favorite:'true'},{type:'fill-pattern'},{collection:'missing'}]){
   const result=libraryQuery(s,q),parent=result.categories.find(c=>c.id===root.id)!
