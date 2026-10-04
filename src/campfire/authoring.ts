@@ -1,6 +1,7 @@
 import { validateMapContract } from './generated/index'
 import type { MapLightingV1, MapPointLightV1 } from './generated/index'
 import type { ProjectSnapshot } from '../store/history'
+import { isCeiling } from '../domain/ceilings'
 import { projectObjects } from '../domain/projectView'
 export type { MapLightingV1, MapPointLightV1 } from './generated/index'
 export const defaultLighting = (): MapLightingV1 => ({ambient:{intensity:1},lights:[]})
@@ -14,7 +15,7 @@ export function newPointLight(x:number,y:number):MapPointLightV1{return {id:cryp
 export function campfireContentSignature(state:ProjectSnapshot,name='') {
  const {campfireRevision:_revision,lighting,grid,...map}=state.map
  void _revision
- const objects=projectObjects(state,true).map(o=>{const {locked:_locked,...rest}=o;void _locked;return o.kind==='door'?{...rest,status:'closed'}:rest})
- return JSON.stringify({name,map,grid:{type:grid.type||'square',cellSize:grid.cellSize,physicalScale:grid.physicalScale,visible:grid.visible,offsetX:grid.offsetX,offsetY:grid.offsetY},lighting:lighting||defaultLighting(),objects})
+ const objects=projectObjects(state,true).filter(o=>!isCeiling(o)).map(o=>{const {locked:_locked,...rest}=o;void _locked;return o.kind==='door'?{...rest,status:'closed'}:rest})
+ return JSON.stringify({name,map,grid:{type:grid.type||'square',cellSize:grid.cellSize,physicalScale:grid.physicalScale,visible:grid.visible,offsetX:grid.offsetX,offsetY:grid.offsetY},lighting:lighting||defaultLighting(),objects,ceilings:state.objects.filter(isCeiling).map(o=>{const {locked:_locked,visible:_visible,...ceiling}=o;void _locked;void _visible;return ceiling})})
 }
 export function nextCampfireRevision(current:number,changed:boolean){if(changed&&current===Number.MAX_SAFE_INTEGER)throw Error('Campfire revision limit reached.');return current+(changed?1:0)}

@@ -15,7 +15,7 @@ export function createSceneContentSelector() {
   return (state: ManagedContent): ManagedContent => {
     if(previous && previous.layers===state.layers && previous.layerTree===state.layerTree && previous.objectGroups===state.objectGroups && previous.objects.length===state.objects.length && state.objects.every((o,i)=>{
       const p=previous!.objects[i]
-      return p.id===o.id && p.kind===o.kind && p.name===o.name && p.visible===o.visible && p.locked===o.locked && p.assetId===o.assetId && (o.kind!=='path'||p.kind==='path'&&p.pathKind===o.pathKind)
+      return p.id===o.id && p.kind===o.kind && p.name===o.name && p.visible===o.visible && p.locked===o.locked && p.assetId===o.assetId && (o.kind!='area'||p.kind==='area'&&p.ceiling===o.ceiling) && (o.kind!=='area'||p.kind==='area'&&p.ceiling===o.ceiling) && (o.kind!=='path'||p.kind==='path'&&p.pathKind===o.pathKind)
     }))return previous
     previous={objects:state.objects,layers:state.layers,layerTree:state.layerTree,objectGroups:state.objectGroups}
     return previous
@@ -29,7 +29,7 @@ export const sceneIcon = (type: string): IconName => {
   if (['title','infoPanel'].includes(type)) return 'map'
   if (type === 'scaleBar') return 'measure'
   if (type === 'patternFill') return 'pattern'
-  return (['stamp','area','wall','path','label','place','legend','compass','scatter'].includes(type) ? type : 'map') as IconName
+  return (['ceiling','stamp','area','wall','path','label','place','legend','compass','scatter'].includes(type) ? type : 'map') as IconName
 }
 /** A projection only: layer groups retain their canonical order and inherited flags.
  * Noncontiguous object groups are anchored at their frontmost member; no IDs move. */

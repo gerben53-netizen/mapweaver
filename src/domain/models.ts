@@ -25,7 +25,7 @@ interface ObjectBase {
 }
 export interface Background { id: string; name: string; width: number; height: number }
 export interface GridSettings { type?: import('./hexGrid').GridType; physicalScale?: { distancePerCell: number; unit: 'ft' | 'm' }; visible: boolean; snapEnabled: boolean; cellSize: number; offsetX: number; offsetY: number; color: string; opacity: number; renderAboveObjects: boolean }
-export interface MapDocument { campfireRevision?: number; lighting?: import('../campfire/generated/index').MapLightingV1; texturePaint?: import('./terrainPaint').TerrainPaint; coastalContours?: import('./coastalContours').CoastalContours; waterDepth?: import('./waterDepth').WaterDepth; geographyFinish?: import('./geographyFinish').GeographyFinish; landEditing?: import('./landEditing').LandEditing; terrainPaint?: import('./terrainPaint').TerrainPaint; theme?: import('./worldThemes').WorldThemeState; effects?: import('./mapEffects').MapEffects; water?: import('./terrainStyles').WaterAppearance; generation?: import('../world/model').WorldGeneration; mapType?: import('./geography').MapType; geography?: import('./geography').Geography; width: number; height: number; background: Background | null; backgroundColor: string; grid: GridSettings }
+export interface MapDocument { ceilingExposure?: 'explicit'; campfireRevision?: number; lighting?: import('../campfire/generated/index').MapLightingV1; texturePaint?: import('./terrainPaint').TerrainPaint; coastalContours?: import('./coastalContours').CoastalContours; waterDepth?: import('./waterDepth').WaterDepth; geographyFinish?: import('./geographyFinish').GeographyFinish; landEditing?: import('./landEditing').LandEditing; terrainPaint?: import('./terrainPaint').TerrainPaint; theme?: import('./worldThemes').WorldThemeState; effects?: import('./mapEffects').MapEffects; water?: import('./terrainStyles').WaterAppearance; generation?: import('../world/model').WorldGeneration; mapType?: import('./geography').MapType; geography?: import('./geography').Geography; width: number; height: number; background: Background | null; backgroundColor: string; grid: GridSettings }
 export interface MapLayer { id: string; name: string; visible: boolean; locked: boolean; objectIds: string[] }
 
 export interface StampObject extends ObjectBase { family?: import("./stampFamilies").FamilySelection; effects?: import('./mapEffects').StampEffects; kind: 'stamp'; rotation: number; scaleX: number; scaleY: number }
@@ -38,6 +38,7 @@ export interface PatternFillObject extends ObjectBase {
 export interface AreaGeometry { polygons: { outer: { x: number; y: number }[]; holes: { x: number; y: number }[][] }[] }
 export type AreaFill = { kind: 'none' } | { kind: 'solid'; color: string } | { kind: 'pattern'; assetId: string; mode: 'repeat' | 'stretch'; scale: number; rotation: number; offsetX: number; offsetY: number }
 export interface AreaObject extends Omit<ObjectBase, 'assetId'> {
+  ceiling?: true
   land?: import('./landAreas').LandArea
   roomSource?: { wallIds: string[]; fingerprint: string; seed: { x: number; y: number } }
   patternTransform?: [number, number, number, number, number, number]

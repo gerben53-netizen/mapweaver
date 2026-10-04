@@ -1,5 +1,6 @@
+import { ceilingRegions, isCeiling } from '../domain/ceilings'
 import { validateMapContract } from './generated/index'
-import type { CampfireMapContractV2, MapWallV1 } from './generated/index'
+import type { CampfireMapContractV3, MapWallV1 } from './generated/index'
 import type { ProjectSnapshot } from '../store/history'
 import { projectObjects } from '../domain/projectView'
 import { pathGeometry, sampleSegments, pointAtDistance } from '../domain/paths'
@@ -9,10 +10,10 @@ import { normalizeOffset } from '../domain/mapSettings'
 export class CampfireExportError extends Error { constructor(public readonly errors:string[]){super(errors.join('\n'));this.name='CampfireExportError'} }
 const compareId=(a:{id:string},b:{id:string})=>a.id<b.id?-1:a.id>b.id?1:0
 export const contractPoint=(point:{x:number;y:number})=>({x:point.x,y:point.y})
-export function serializeCampfire(project:ProjectSnapshot,info:{id:string;name:string}):CampfireMapContractV2 {
- const {map}=project,g=map.grid,errors:string[]=[],objects=projectObjects(project,true),walls:MapWallV1[]=[],doors:CampfireMapContractV2['doors']=[],windows:NonNullable<CampfireMapContractV2['windows']>=[]
- if(g.type&&g.type!=='square')errors.push('Campfire v2 cannot represent a hex grid. Choose a square grid before export.')
- if(g.visible&&(normalizeOffset(g.offsetX,g.cellSize)>1e-8||normalizeOffset(g.offsetY,g.cellSize)>1e-8))errors.push('Campfire v2 has no grid origin offsets. Set both grid offsets to zero before export.')
+export function serializeCampfire(project:ProjectSnapshot,info:{id:string;name:string}):CampfireMapContractV3 {
+ const {map}=project,g=map.grid,errors:string[]=[],objects=projectObjects(project,true),walls:MapWallV1[]=[],doors:CampfireMapContractV3['doors']=[],windows:NonNullable<CampfireMapContractV3['windows']>=[]
+ if(g.type&&g.type!=='square')errors.push('Campfire v3 cannot represent a hex grid. Choose a square grid before export.')
+ if(g.visible&&(normalizeOffset(g.offsetX,g.cellSize)>1e-8||normalizeOffset(g.offsetY,g.cellSize)>1e-8))errors.push('Campfire v3 has no grid origin offsets. Set both grid offsets to zero before export.')
  if(!g.physicalScale)errors.push('Set a physical game scale in Map settings before Campfire export (for example 1 square = 5 ft).')
  for(const o of project.objects)if(isOpening(o)&&!project.objects.some(w=>w.kind==='path'&&w.pathKind==='wall'&&w.id===o.wallId))errors.push('Opening has no exported wall: '+o.id)
  const byId=new Set<string>();for(const o of objects){if(byId.has(o.id))errors.push('Duplicate object ID: '+o.id);byId.add(o.id)}
@@ -39,11 +40,11 @@ export function serializeCampfire(project:ProjectSnapshot,info:{id:string;name:s
    }
   }
  }
- const candidate={format:'CAMPFIRE_MAPWEAVER',version:2,mapId:info.id,revision:map.campfireRevision??1,name:info.name,dimensions:{pixelWidth:map.width,pixelHeight:map.height},grid:{type:g.visible?'SQUARE':'NONE',sizePx:g.cellSize,feetPerCell:g.physicalScale?g.physicalScale.distancePerCell*(g.physicalScale.unit==='m'?1/.3048:1):NaN},image:{path:'map.png',mimeType:'image/png'},walls:walls.sort((a,b)=>compareId(a,b)),doors:doors.sort((a,b)=>compareId(a,b)),windows:windows.sort((a,b)=>compareId(a,b)),lighting:{...(map.lighting||defaultLighting()),lights:[...(map.lighting||defaultLighting()).lights].sort((a,b)=>compareId(a,b))}}
+ const candidate={format:'CAMPFIRE_MAPWEAVER',version:3,mapId:info.id,revision:map.campfireRevision??1,name:info.name,...(map.ceilingExposure==='explicit'||project.objects.some(isCeiling)?{ceilingRegions:ceilingRegions(project.objects)}:{}),dimensions:{pixelWidth:map.width,pixelHeight:map.height},grid:{type:g.visible?'SQUARE':'NONE',sizePx:g.cellSize,feetPerCell:g.physicalScale?g.physicalScale.distancePerCell*(g.physicalScale.unit==='m'?1/.3048:1):NaN},image:{path:'map.png',mimeType:'image/png'},walls:walls.sort((a,b)=>compareId(a,b)),doors:doors.sort((a,b)=>compareId(a,b)),windows:windows.sort((a,b)=>compareId(a,b)),lighting:{...(map.lighting||defaultLighting()),lights:[...(map.lighting||defaultLighting()).lights].sort((a,b)=>compareId(a,b))}}
  const checked=validateMapContract(candidate)
  if(!checked.valid)errors.push(...checked.errors)
  if(errors.length)throw new CampfireExportError(errors)
  if(!checked.valid)throw Error('Unreachable validation state')
- if(checked.value.version!==2)throw Error('Expected canonical v2 contract.')
+ if(checked.value.version!==3)throw Error('Expected canonical v3 contract.')
  return checked.value
 }

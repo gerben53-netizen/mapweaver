@@ -8,6 +8,7 @@ export const toolDescriptions: Record<string, string> = {
   Measure: 'Measure distances using the map scale',
   'Place asset': 'Choose a stamp to place from the asset library',
   Scatter: 'Distribute repeated stamps with an editable brush recipe',
+  Ceiling: 'Draw a roof footprint that blocks direct sky illumination only',
   Area: 'Draw a new area with an initial color or material',
   Path: 'Draw a line; choose Generic, River, Road or Border where supported',
   Wall: 'Draw structural walls with thickness and material',

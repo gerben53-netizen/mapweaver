@@ -1,3 +1,4 @@
+import { createCeiling } from '../domain/ceilings'
 import { interactionGrid } from '../domain/mapSettings'
 import { semanticTerrain } from '../domain/terrainIntent'
 import { defaultLandArea } from '../domain/landAreas'
@@ -71,7 +72,7 @@ export function useAreaDrawing(surface: RefObject<HTMLDivElement | null>) {
       return p
     }
     const show = (shift = false) => {
-      const shape = useEditorStore.getState().areaShape
+      const shape = useEditorStore.getState().activeTool==='ceiling'?'polygon':useEditorStore.getState().areaShape
       if (!points.length) {
         setPreview([])
         return
@@ -89,12 +90,13 @@ export function useAreaDrawing(surface: RefObject<HTMLDivElement | null>) {
     }
     const finish = (shift = false) => {
       const e = useEditorStore.getState(),
+        shape = e.activeTool==='ceiling'?'polygon':e.areaShape,
         p = [...points],
         end = cursor
       try {
         const geometry = areaGeometry(
-          e.areaShape,
-          (e.areaShape === 'rectangle' || e.areaShape === 'ellipse') && end
+          shape,
+          (shape === 'rectangle' || shape === 'ellipse') && end
             ? [p[0], end]
             : p,
           map,
@@ -102,8 +104,8 @@ export function useAreaDrawing(surface: RefObject<HTMLDivElement | null>) {
         )
         if (useProjectStore.getState().map !== map || e.activeLayerId !== layer)
           throw new Error('The map or active layer changed. Draw again.')
-        const area = createArea(geometry, e.areaFill)
-        if(e.areaRole!=='area'){area.land=e.areaRole==='terrain-region'?semanticTerrain(e.areaTerrain,map.width):defaultLandArea(e.areaRole);area.name=e.areaRole==='landmass'?'Landmass':'Terrain region'}
+        const area = e.activeTool==='ceiling'?createCeiling(geometry.polygons[0].outer):createArea(geometry, e.areaFill)
+        if(!area.ceiling&&e.areaRole!=='area'){area.land=e.areaRole==='terrain-region'?semanticTerrain(e.areaTerrain,map.width):defaultLandArea(e.areaRole);area.name=e.areaRole==='landmass'?'Landmass':'Terrain region'}
         area.strokeWidth = e.areaStroke ? 2 : 0
         area.strokeStyle = e.areaStrokeStyle
         cancel()
@@ -123,7 +125,7 @@ export function useAreaDrawing(surface: RefObject<HTMLDivElement | null>) {
       if (
         e.defaultPrevented ||
         e.button !== 0 ||
-        useEditorStore.getState().activeTool !== 'area'
+        !['area','ceiling'].includes(useEditorStore.getState().activeTool)
       )
         return
       e.preventDefault()
@@ -138,7 +140,7 @@ export function useAreaDrawing(surface: RefObject<HTMLDivElement | null>) {
         }
       }
       const p = position(e),
-        shape = useEditorStore.getState().areaShape
+        shape = useEditorStore.getState().activeTool==='ceiling'?'polygon':useEditorStore.getState().areaShape
       if (p.x < 0 || p.y < 0 || p.x > map.width || p.y > map.height) {
         report(new Error('Start and draw inside the map.'))
         return
@@ -157,7 +159,7 @@ export function useAreaDrawing(surface: RefObject<HTMLDivElement | null>) {
         }
         if (distance(p, points[points.length - 1]) > AREA_LIMITS.epsilon)
           points.push(p)
-        if (points.length > AREA_LIMITS.ring) {
+        if (points.length > (useEditorStore.getState().activeTool==='ceiling'?128:AREA_LIMITS.ring)) {
           cancel()
           report(new Error('Polygon point limit reached.'))
           return
@@ -216,13 +218,13 @@ export function useAreaDrawing(surface: RefObject<HTMLDivElement | null>) {
       }
     }
     const double = (e: MouseEvent) => {
-      if (points.length && useEditorStore.getState().areaShape === 'polygon') {
+      if (points.length && (useEditorStore.getState().activeTool==='ceiling'||useEditorStore.getState().areaShape === 'polygon')) {
         e.preventDefault()
         finish()
       }
     }
     const mouse = (e: MouseEvent) => {
-      if (e.button === 0 && useEditorStore.getState().activeTool === 'area') {
+      if (e.button === 0 && ['area','ceiling'].includes(useEditorStore.getState().activeTool)) {
         e.preventDefault()
         e.stopPropagation()
       }

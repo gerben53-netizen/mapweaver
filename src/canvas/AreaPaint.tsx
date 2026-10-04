@@ -13,7 +13,7 @@ export function AreaPaint({
 }) {
   const preview = useMaterialPreview(s => s.targets.includes(object) ? s : null)
   const showing = preview?.asset
-  const painted = showing ? { ...object, fill: materialFill(object, preview!.asset!.id) } : object
+  const painted = object.ceiling ? {...object,fill:{kind:'solid' as const,color:'#739faf'},opacity:.16,strokeWidth:1.5,strokeColor:'#9bc7d6',strokeOpacity:.8} : showing ? { ...object, fill: materialFill(object, preview!.asset!.id) } : object
   const finish=useProjectStore(s=>s.map.geographyFinish)
   return (
     <Shape

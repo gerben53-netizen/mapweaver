@@ -12,7 +12,7 @@ import { acquireAssetImage } from '../images/imageCache'
 
 export function materialTargets(ids = useEditorStore.getState().selectedObjectIds) {
   const state = useProjectStore.getState(), editable = editableProjectIds(state, useEditorStore.getState().soloLayerId)
-  return state.objects.filter((o): o is AreaObject => ids.includes(o.id) && editable.has(o.id) && o.kind === 'area')
+  return state.objects.filter((o): o is AreaObject => ids.includes(o.id) && editable.has(o.id) && o.kind === 'area' && !o.ceiling)
 }
 export function materialFill(object: AreaObject, assetId: string): AreaObject['fill'] {
   return object.fill.kind === 'pattern' ? { ...object.fill, assetId } : { kind: 'pattern', assetId, mode: 'repeat', scale: 1, rotation: 0, offsetX: 0, offsetY: 0 }

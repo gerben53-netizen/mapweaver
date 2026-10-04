@@ -412,6 +412,13 @@ export function offsetObject<T extends MapObject>(
   ) as T
 }
 export function validateArea(o: AreaObject): AreaObject {
+  if (o.ceiling !== undefined) {
+    const polygon = o.geometry?.polygons?.[0]
+    if (o.ceiling !== true || o.land || o.roomSource || o.geometry?.polygons?.length !== 1 ||
+      !Array.isArray(polygon?.holes) || polygon.holes.length ||
+      !Array.isArray(polygon?.outer) || polygon.outer.length > 128 || o.fill?.kind !== 'none')
+      throw Error('Ceiling needs one simple polygon of 3–128 points without holes or material.')
+  }
   if(o.land!==undefined)validateLandArea(o.land)
   if (o.roomSource !== undefined) {
     const s=o.roomSource
@@ -524,5 +531,6 @@ export function validateArea(o: AreaObject): AreaObject {
       f.scale > MAX_PATTERN_SCALE)
   )
     throw new Error('Invalid area pattern.')
-  return area
+  // Preserve raw ceiling vertices for canonical validation; never repair invalid imported coverage.
+  return o.ceiling ? o : area
 }

@@ -49,3 +49,10 @@ export const mapContractSchemaV2={...mapContractSchemaV1,
  properties:{...mapContractSchemaV1.properties,version:{const:2},windows:{type:'array',maxItems:16,items:{type:'object',additionalProperties:false,
  required:['id','geometry','wallId','transmitsExteriorLight'],properties:{id,geometry:line,wallId:id,transmitsExteriorLight:{type:'boolean'},exteriorLightTransmission:intensity}}}}
 } as const;
+
+// v1/v2 remain unchanged. No runtime environment profile or renderer parameters.
+export const mapContractSchemaV3={...mapContractSchemaV2,
+ $id:'https://campfire.local/schemas/campfire-map-contract-v3.schema.json',title:'CAMPFIRE_MAPWEAVER v3',
+ properties:{...mapContractSchemaV2.properties,version:{const:3},ceilingRegions:{type:'array',maxItems:64,items:{type:'object',additionalProperties:false,
+ required:['id','points'],properties:{id,points:{type:'array',minItems:3,maxItems:128,items:point}}}}}
+} as const;

@@ -1,4 +1,4 @@
-# Campfire Map Contract v2 export
+# Campfire Map Contract v3 export
 
 Use **Export Campfire Map → Download Campfire package** in the editor. The ZIP contains exactly `map.json` and `map.png`, at original map resolution. Extract both files together for Campfire file ingest. JSON references the safe relative local path `map.png`; there are no external URLs or API calls. Export is a transfer and does not claim to save the editable project.
 
@@ -20,7 +20,7 @@ Revision dependencies conservatively include visible baked artwork/ordering, map
 
 Coordinates are absolute original image pixels with top-left `(0,0)`, x right, y down. There is no viewport conversion or resolution multiplier. `contractPoint` is the central mapper. Endpoints and lights must lie inside inclusive map bounds; no silent clamp/crop is applied to exported geometry.
 
-A visible square grid exports `SQUARE`; a disabled square grid exports `NONE`. Both retain positive `sizePx` and `feetPerCell`. A physical game scale must be explicitly configured in Map settings. Meter scales convert using exactly 0.3048 meters per foot. The PNG does not bake the grid. Visible grid offsets must normalize to zero. Hex grids are unsupported by canonical v1/v2 and block export rather than being misrepresented. V1/v2 have no grid-offset fields or hex enum; supporting those needs a Campfire-owned contract version/extension. Maps remain editable meanwhile.
+A visible square grid exports `SQUARE`; a disabled square grid exports `NONE`. Both retain positive `sizePx` and `feetPerCell`. A physical game scale must be explicitly configured in Map settings. Meter scales convert using exactly 0.3048 meters per foot. The PNG does not bake the grid. Visible grid offsets must normalize to zero. Hex grids are unsupported by canonical v1/v2/v3 and block export rather than being misrepresented. V1/v2/v3 have no grid-offset fields or hex enum; supporting those needs a Campfire-owned contract version/extension. Maps remain editable meanwhile.
 
 Only visible native Wall objects produce semantic blocking lines. Their canonical path geometry, not generated artwork bounds, supplies the line positions. Outside wall paths retain their native inner-boundary reference. Straight segments remain exact; curves use the existing adaptive subdivision with 0.25-map-pixel tolerance. Open/closed paths remain open/closed via their actual segment topology. The native wall ID is retained on its first line; additional lines use deterministic wall/node/opening/piece IDs. Moving the same endpoints retains IDs where subdivision topology is unchanged. Adding/removing nodes, openings or curve subdivisions may change derived piece IDs. There is no wall-rendering style in JSON. All native wall sections block vision in this v2 exporter.
 
@@ -36,7 +36,7 @@ The toggle enables an approximate editor-only illumination overlay and radius gu
 
 ## Validation and separation
 
-`src/campfire/serialize.ts` maps domain data to a validated `CampfireMapContractV2` without rendering or transport. It calls the canonical shape AND semantic validator, including IDs, bounds, resources, image paths and zero-length geometry. Errors include object IDs or canonical field paths. `src/campfire/package.ts` takes a captured snapshot, renders through the existing PNG pipeline, checks encoded image dimensions, and builds the complete ZIP before download. No half-package is written on failure. Stable ordering, static image paths and fixed ZIP entry timestamps make unchanged output deterministic.
+`src/campfire/serialize.ts` maps domain data to a validated `CampfireMapContractV3` without rendering or transport. It calls the canonical shape AND semantic validator, including IDs, bounds, resources, image paths and zero-length geometry. Errors include object IDs or canonical field paths. `src/campfire/package.ts` takes a captured snapshot, renders through the existing PNG pipeline, checks encoded image dimensions, and builds the complete ZIP before download. No half-package is written on failure. Stable ordering, static image paths and fixed ZIP entry timestamps make unchanged output deterministic.
 
 A future authenticated API client must consume this same serializer and validated payload. No API client, credentials, runtime-state import, bidirectional sync, fog or token authoring is implemented by this sprint.
 
@@ -48,6 +48,25 @@ The source of truth is the canonical package's v2 schema and README section “v
 
 **Show aperture preview** is an ephemeral editor-only toggle that resets on project load. The gold origin, two normal arrows and shaded schematic guide show the aperture and transmission. Guide depth is a display convention (1.5 × aperture width), not an authored radius or world-light range; gold is a diagnostic color, not emitted light color. Campfire chooses the exterior side, environment (daylight/twilight/moonlight/night/custom), actual color/intensity/reach and runtime renderer. No ray tracing, fog, token vision or runtime environment state is stored or baked into PNG.
 
-Current export always emits version 2. Canonical version-1 admission and packaging remain supported, using unchanged canonical v1 schema/fixture; no Campfire-to-native importer existed and none is added. Native .mapweaver save/reload/portable import retain the optional window field. Existing documents are not batch migrated or rewritten; absent lighting/window inputs remain absent. Revision remains the existing positive authoring revision; it is not contract version. Pure read/export and the preview toggle do not increment it.
+Current export emits version 3, retaining v2 window-aperture semantics. Canonical version-1 and version-2 admission and packaging remain supported, using unchanged canonical v1 schema/fixture; no Campfire-to-native importer existed and none is added. Native .mapweaver save/reload/portable import retain the optional window field. Existing documents are not batch migrated or rewritten; absent lighting/window inputs remain absent. Revision remains the existing positive authoring revision; it is not contract version. Pure read/export and the preview toggle do not increment it.
 
 Masonry and Living Root retain native centerlines, opening ownership and functional width. Their temporary stone/root artwork does not enter the contract. The existing Masonry sprint predates this update; no engine change is needed, and its aperture IDs must obey the same export mapping.
+
+
+## Ceiling / sky exposure (v3)
+
+On battlemaps choose **Ceiling** (roof icon), click polygon vertices, then Enter, double-click or click the starting vertex to close. Escape cancels. Use Alt to bypass grid snapping, Shift for angle constraints, and normal Space/middle-button pan. Select a ceiling and use Properties → Geometry → Edit points to move/add/remove vertices; Enter commits and Escape restores the original geometry. Native move, duplicate, delete and undo/redo apply. Ceilings appear as their own Scene type; material application, room generation and scatter do not apply to them.
+
+**Map actions → Ceilings** switches the translucent footprint overlay. It is an authoring aid, not a runtime darkness preview. Hide/show does not delete coverage, change the contract, or bump revisions. The exported PNG never contains this overlay. All authored ceilings export regardless of object/layer visibility; delete a ceiling to remove its coverage.
+
+Canonical v3 root `ceilingRegions` contains stable IDs and absolute original-image-pixel points. Missing means **LEGACY_UNKNOWN**, `[]` means **EXPLICIT_NO_CEILINGS**, and a nonempty array means **EXPLICIT_CEILINGS**. Existing maps keep missing semantics, without roof inference or lighting changes. New maps intentionally start with empty coverage. First ceiling creation enables explicit coverage, and deleting the last ceiling leaves it explicit. To intentionally mark an old map outdoor use the undoable **Use explicit sky exposure** action. Undoing that opt-in restores legacy unknown.
+
+Each region is one simple polygon (3–128 vertices), no holes, repeated closing vertex, self-intersection or out-of-bounds coordinates. Inclusive map bounds apply. At most 64 regions; canonical 8192-pixel map-side limits apply to ceiling authoring/export. Invalid point/transform edits preserve the last valid state. Shrinking the map beyond ceiling points is rejected; adjust the ceiling first. Concave polygons and overlaps are allowed. Courtyards and ruined roofs use multiple simple regions leaving openings; a cave roof can be concave with an exposed entrance. No new polygon boolean engine or automatic room inference exists.
+
+Format-12 native files store optional Area `ceiling: true` and optional map `ceilingExposure: 'explicit'`. Geometry/name/IDs are preserved by SQLite save/autosave and portable `.mapweaver` roundtrips. A true object duplicate receives a fresh ID. Coverage and edits participate in the existing monotonic authoring revision, including hidden ceilings. Runtime state and revision remain separate.
+
+### Campfire handoff
+
+Coverage is the **union** of all polygons and blocks only **direct sky/environment illumination**, once per point. It does not block movement, token vision, LOS, doors, windows, point lights or authored ambient light. Window exterior-light transmission remains independent. No environment/daylight profile, ceiling height, sky renderer or runtime lighting state is authored here. Campfire owns that runtime implementation and must preserve missing/empty/nonempty distinctions on ingest and re-import. The immutable canonical package was only read and copied into derived Mapweaver artifacts.
+
+Validated producer examples are in [examples/ceiling-sky](examples/ceiling-sky/): outdoor, covered-room, courtyard, ruin, covered-window and concave cave. They were captured from actual Mapweaver authoring/serialization; `map.png` is the normal clean map image, never a ceiling mask. Visual QA images and editable cave example are in local `deliverables.local/Ceiling-Sky-Exposure/` (not versioned).

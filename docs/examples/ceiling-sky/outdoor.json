@@ -1,0 +1,120 @@
+{
+  "format": "CAMPFIRE_MAPWEAVER",
+  "version": 3,
+  "mapId": "cef9c012-4ab0-4796-8184-2e8f6c0e01ae",
+  "revision": 10,
+  "name": "Ceiling QA",
+  "ceilingRegions": [],
+  "dimensions": {
+    "pixelWidth": 800,
+    "pixelHeight": 600
+  },
+  "grid": {
+    "type": "SQUARE",
+    "sizePx": 50,
+    "feetPerCell": 5
+  },
+  "image": {
+    "path": "map.png",
+    "mimeType": "image/png"
+  },
+  "walls": [
+    {
+      "id": "cafc2464-4120-4aa2-ab7c-aead7a08edeb",
+      "start": {
+        "x": 70,
+        "y": 70
+      },
+      "end": {
+        "x": 269.00000000000006,
+        "y": 70
+      },
+      "blocksVision": true
+    },
+    {
+      "id": "cafc2464-4120-4aa2-ab7c-aead7a08edeb:a:window-outdoor:1",
+      "start": {
+        "x": 319.00000000000006,
+        "y": 70.00000000000001
+      },
+      "end": {
+        "x": 730,
+        "y": 70
+      },
+      "blocksVision": true
+    },
+    {
+      "id": "cafc2464-4120-4aa2-ab7c-aead7a08edeb:b:start:1",
+      "start": {
+        "x": 730,
+        "y": 70
+      },
+      "end": {
+        "x": 730,
+        "y": 530
+      },
+      "blocksVision": true
+    },
+    {
+      "id": "cafc2464-4120-4aa2-ab7c-aead7a08edeb:c:start:1",
+      "start": {
+        "x": 730,
+        "y": 530
+      },
+      "end": {
+        "x": 70,
+        "y": 530
+      },
+      "blocksVision": true
+    },
+    {
+      "id": "cafc2464-4120-4aa2-ab7c-aead7a08edeb:d:start:1",
+      "start": {
+        "x": 70,
+        "y": 530
+      },
+      "end": {
+        "x": 70,
+        "y": 70
+      },
+      "blocksVision": true
+    },
+    {
+      "id": "cafc2464-4120-4aa2-ab7c-aead7a08edeb:window:window-outdoor",
+      "start": {
+        "x": 269.00000000000006,
+        "y": 70
+      },
+      "end": {
+        "x": 319.00000000000006,
+        "y": 70.00000000000001
+      },
+      "blocksVision": true
+    }
+  ],
+  "doors": [],
+  "windows": [
+    {
+      "id": "window-outdoor",
+      "wallId": "cafc2464-4120-4aa2-ab7c-aead7a08edeb:window:window-outdoor",
+      "geometry": {
+        "start": {
+          "x": 269.00000000000006,
+          "y": 70
+        },
+        "end": {
+          "x": 319.00000000000006,
+          "y": 70.00000000000001
+        }
+      },
+      "transmitsExteriorLight": true,
+      "exteriorLightTransmission": 0.8
+    }
+  ],
+  "lighting": {
+    "ambient": {
+      "intensity": 1
+    },
+    "lights": []
+  }
+}

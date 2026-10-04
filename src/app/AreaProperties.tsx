@@ -52,7 +52,7 @@ export function AreaProperties({ object, section='all' }: { object: AreaObject; 
   return (
     <div className={styles.content}>
       {section==='all'&&<><h3>{object.name}</h3>{!editing&&<LandAreaProperties key={JSON.stringify(object)} object={object}/>}
-      {!editing&&<><ScatterAreaAction area={object}/>{canCreateWithTool(map.mapType,'wall')&&<BoundaryWalls area={object}/>}</>}
+      {!editing&&!object.ceiling&&<><ScatterAreaAction area={object}/>{canCreateWithTool(map.mapType,'wall')&&<BoundaryWalls area={object}/>}</>}
       </>}{section!=='appearance'&&<><p>
         {object.geometry.polygons.length} polygons ·{' '}
         {rings.length - object.geometry.polygons.length} holes ·{' '}

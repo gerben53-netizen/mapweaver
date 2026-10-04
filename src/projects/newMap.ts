@@ -9,7 +9,7 @@ import type { ProjectSnapshot } from '../store/history'
 export function newMapSnapshot(width:number,height:number,backgroundColor:string,mapType:MapType,widthKm?:number,themeId=''):ProjectSnapshot {
   const content=mapType==='battlemap'?createLayeredContent():{objects:[],layers:landLayers()}
   const geography=defaultGeography(mapType);if(widthKm!==undefined)geography.widthKm=widthKm
-  const snapshot:ProjectSnapshot={map:{...normalizeMapSettings({width,height,backgroundColor,grid:{...defaultMapStyle().grid,visible:mapType==='battlemap'},mapType,geography}),background:null},...content,objectGroups:[],layerTree:flatLayerTree(content.layers)}
+  const snapshot:ProjectSnapshot={map:{...normalizeMapSettings({width,height,backgroundColor,grid:{...defaultMapStyle().grid,visible:mapType==='battlemap'},mapType,geography}),background:null,ceilingExposure:'explicit'},...content,objectGroups:[],layerTree:flatLayerTree(content.layers)}
   return themeId?applyWorldTheme(snapshot,themeId,{reset:true,elements:true,assets:false}).snapshot:snapshot
 }
 

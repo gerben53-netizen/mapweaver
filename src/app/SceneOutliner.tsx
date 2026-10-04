@@ -13,8 +13,8 @@ import { LayerTreePanel } from './LayerTreePanel'
 import { Modal } from './Modal'
 import styles from './SceneOutliner.module.css'
 const dragType='application/x-mapweaver-scene-object'
-const types=['stamp','area','wall','door','window','label','path','river','road','border','place','scatter','legend','compass','title','scaleBar','infoPanel'] as const
-const typeNames=['Stamps','Areas / Floors','Walls','Doors','Windows','Text','Paths','Rivers','Roads','Borders','Markers','Scatter','Legends','Compasses','Titles / Cartouches','Scale bars','Notes']
+const types=['stamp','area','ceiling','wall','door','window','label','path','river','road','border','place','scatter','legend','compass','title','scaleBar','infoPanel'] as const
+const typeNames=['Stamps','Areas / Floors','Ceilings','Walls','Doors','Windows','Text','Paths','Rivers','Roads','Borders','Markers','Scatter','Legends','Compasses','Titles / Cartouches','Scale bars','Notes']
 export function SceneOutliner() {
   const selector=useMemo(()=>createSceneContentSelector(),[])
   const {names}=useObjectBrowserData(),state=project(selector),active=editor(s=>s.activeLayerId),selected=editor(s=>s.selectedObjectIds),solo=editor(s=>s.soloLayerId)

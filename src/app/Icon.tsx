@@ -1,4 +1,5 @@
 const paths = {
+  ceiling: 'M3 11l9-7 9 7 M5 11v9h14v-9 M8 15h8 M8 18h8',
   map: 'M3 5l6-2 6 2 6-2v16l-6 2-6-2-6 2z M9 3v16 M15 5v16',
   folder: 'M3 6h7l2 2h9v12H3z M3 6V4h7l2 2h7v2',
   waterDepth: 'M3 6c3-3 6 3 9 0s6 3 9 0 M3 12c3-3 6 3 9 0s6 3 9 0 M5 18c3-3 5 3 8 0s4 2 6 0 M9 22h6',

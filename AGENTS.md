@@ -136,6 +136,8 @@ Gebruik in code, documentatie en interface consequent de volgende betekenis:
 
 - **Opening** — getypeerde deur of raam, gekoppeld aan één Wall via positie op de centerline; uitsnede en diepte zijn afgeleid, zie ADR-0012.
 
+- **Ceiling** — semantische native Area met één eenvoudige polygonale footprint zonder gaten; optionele expliciete sky-exposurestatus en editor-only overlay. Canoniek Campfire v3 `ceilingRegions` blokkeert uitsluitend directe sky/environment-verlichting, niet LOS, beweging, ramen of point lights; zie ADR-0061.
+
 - **Room floor** — gewoon Area met historische muurherkomst, expliciet gegenereerd of opnieuw opgebouwd; geen stil live gekoppelde kamer.
 
 - **Landmass / Terrain region** — semantische Area-rollen op een vlakke Regional/World-kaart; fysieke schaal en lokale fictieve coördinaten, zie ADR-0015.

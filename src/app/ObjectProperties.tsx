@@ -1,3 +1,4 @@
+import { history } from '../store/history'
 import { StampVariantProperties } from './StampVariantProperties'
 import { useState, useId } from 'react'
 import { useEditorStore } from '../store/editorStore'
@@ -65,7 +66,8 @@ export function ObjectProperties() {
   return <section className={inspector.inspector} aria-label="Object properties">
     <header className={inspector.summary} aria-label="Selection identity"><h2>{title}</h2><p>{floor?'Floor · Area · '+layer?.name:row?contexts.get(row.id):[...new Set(chosen.map(o=>o.kind))].join(' · ')}</p>{w&&h&&selected&&selected.kind!=='path'&&!isOpening(selected)&&<strong>{formatSize(w.value)} × {formatSize(h.value)} {w.unit}</strong>}{selected&&isOpening(selected)&&<strong>{formatSize(selected.openingWidth/selected.pixelsPerUnit)} {selected.unit} opening</strong>}{locked&&<p role="status">Selection is hidden or locked. Show and unlock it before editing.</p>}</header>
     <fieldset disabled={locked} key={ids.join('|')}>
-      {selected?.kind==='area'&&section('Appearance',<fieldset disabled={tool==='editArea'}><AreaQuick object={selected}/></fieldset>,true)}
+      {selected?.kind==='area'&&selected.ceiling&&section('Ceiling',<><p>Covered footprint: blocks direct sky/environment illumination only. Windows, point lights, movement and LOS remain independent.</p><label>Name<input aria-label="Ceiling name" maxLength={120} defaultValue={selected.name} onBlur={e=>{const name=e.currentTarget.value.trim();try{if(name&&name!==selected.name)history.run('Rename ceiling',()=>useProjectStore.getState().updateArea({...selected,name}));else e.currentTarget.value=selected.name}catch(error){e.currentTarget.value=selected.name;useEditorStore.setState({message:(error as Error).message})}}} onKeyDown={e=>{if(e.key==='Enter')e.currentTarget.blur();if(e.key==='Escape'){e.currentTarget.value=selected.name;e.currentTarget.blur()}}}/></label></>,true)}
+      {selected?.kind==='area'&&!selected.ceiling&&section('Appearance',<fieldset disabled={tool==='editArea'}><AreaQuick object={selected}/></fieldset>,true)}
       {selected?.kind==='path'&&section(selected.pathKind==='wall'?'Wall':selected.route?'Route':'Path',<fieldset disabled={tool==='editPath'}>{selected.pathKind==='wall'?<WallQuick object={selected}/>:selected.pathKind==='river'?<RiverProperties object={selected} compact/>:selected.route?<RouteQuick object={selected}/>:<PathQuick object={selected}/>}</fieldset>,true)}
       {selected?.kind==='stamp'&&section('Asset',<p>Asset: {names.get(selected.assetId)||'Stamp'}</p>,true)}
       {selected?.kind==='label'&&section('Text',<TextQuick object={selected}/>,true)}
@@ -76,8 +78,8 @@ export function ObjectProperties() {
       {!selected&&section('Transform',<SelectionTransform/>,true)}
       {selected?.kind==='area'&&section('Geometry',<AreaProperties key={JSON.stringify(selected)} object={selected} section="geometry"/>)}
       {selected?.kind==='path'&&section('Geometry',<PathProperties key={JSON.stringify(selected)} object={selected} section="geometry"/>)}
-      {selected?.kind==='area'&&(isLandMap(state.map)||selected.land)&&section('Terrain',<><AreaIntentProperties object={selected}/><LandAreaProperties key={JSON.stringify(selected)} object={selected}/></>)}
-      {selected?.kind==='area'&&section('Appearance details',<AreaProperties key={JSON.stringify(selected)} object={selected} section="appearance"/>)}
+      {selected?.kind==='area'&&!selected.ceiling&&(isLandMap(state.map)||selected.land)&&section('Terrain',<><AreaIntentProperties object={selected}/><LandAreaProperties key={JSON.stringify(selected)} object={selected}/></>)}
+      {selected?.kind==='area'&&!selected.ceiling&&section('Appearance details',<AreaProperties key={JSON.stringify(selected)} object={selected} section="appearance"/>)}
       {selected?.kind==='path'&&section('Style details',<PathProperties key={JSON.stringify(selected)} object={selected} section="appearance"/>)}
       {selected?.kind==='label'&&section('Text layout and links',<AnnotationProperties key={JSON.stringify(selected)} object={selected}/>)}
       {selected?.kind==='stamp'&&selected.family&&section('Variant',<StampVariantProperties object={selected}/>,true)}
@@ -86,8 +88,8 @@ export function ObjectProperties() {
       {chosen.length>1&&chosen.every(o=>o.kind==='label')&&section('Text style',<LabelBulkProperties objects={chosen as LabelObject[]}/>)}
       {section('Layer and arrangement',<ObjectActions/>,chosen.length>1)}
       {section('Actions',<>
-        {selected?.kind==='area'&&<><div className={inspector.actions}><button onClick={()=>startAreaEdit(selected)}>Edit shape</button>{canCreateWithTool(state.map.mapType,'wall')&&<BoundaryWalls area={selected}/>}<ScatterAreaAction area={selected}/></div>{selected.roomSource&&<button onClick={()=>useEditorStore.setState({roomDialog:true,roomFloorId:selected.id})}>Regenerate room floor</button>}</>}
-        {chosen.length>1&&<GroupControls/>}{chosen.length>1&&chosen.every(o=>o.kind==='area')&&<AreaBooleanActions/>}
+        {selected?.kind==='area'&&<><div className={inspector.actions}><button onClick={()=>startAreaEdit(selected)}>Edit shape</button>{!selected.ceiling&&canCreateWithTool(state.map.mapType,'wall')&&<BoundaryWalls area={selected}/>}{!selected.ceiling&&<ScatterAreaAction area={selected}/>}</div>{selected.roomSource&&<button onClick={()=>useEditorStore.setState({roomDialog:true,roomFloorId:selected.id})}>Regenerate room floor</button>}</>}
+        {chosen.length>1&&<GroupControls/>}{chosen.length>1&&chosen.every(o=>o.kind==='area'&&!o.ceiling)&&<AreaBooleanActions/>}
         {selected&&<><AddLinkedLabel object={selected}/><button onClick={()=>state.changeObject(selected.id,{locked:true})}>Lock object</button><button onClick={()=>state.changeObject(selected.id,{visible:false})}>Hide object</button></>}
         <div className={inspector.actions}><button onClick={state.copy}>Copy</button><button onClick={state.duplicate}>Duplicate</button><button className="destructive" onClick={()=>state.deleteSelection()}>Delete</button></div>
         {chosen.some(o=>o.kind==='stamp')&&<AssetDefaultActions/>}

@@ -36,6 +36,8 @@ export function AreaPoints() {
     window.addEventListener('keydown', key, true)
     return () => window.removeEventListener('keydown', key, true)
   }, [])
+  const ceilingsVisible=useEditorStore(s=>s.ceilingsVisible)
+  if (object?.kind==='area'&&object.ceiling&&!ceilingsVisible)return null
   if (tool !== 'editArea' || object?.kind !== 'area') return null
   const ring = allRings(object.geometry)[ringIndex]
   if (!ring) return null

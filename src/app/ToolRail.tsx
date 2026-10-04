@@ -23,7 +23,7 @@ export function ToolRail() {
     <div role="group" aria-label="Draw" className={styles.toolGroup}>
       {button('area','Area','area',()=>useEditorStore.setState({activeTool:'area',areaRole:'area',message:''}),tool==='area'&&role==='area')}
       {button('path','Path','path',()=>useEditorStore.setState({activeTool:tool==='route'?'route':'path',message:''}),tool==='path'||tool==='route')}
-      {button('wall','Wall','wall')}{button('opening','Opening','opening')}
+      {button('ceiling','Ceiling','ceiling',()=>useEditorStore.setState({activeTool:'ceiling',areaShape:'polygon',ceilingsVisible:true,message:''}))}{button('wall','Wall','wall')}{button('opening','Opening','opening')}
     </div>
     <div role="group" aria-label="Terrain and surface" className={styles.toolGroup}>
       {button('textureBrush','Texture Brush','brush')}

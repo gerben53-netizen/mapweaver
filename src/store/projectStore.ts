@@ -1,3 +1,4 @@
+import { isCeiling, validateCeilings } from '../domain/ceilings'
 import { switchVariant, remapFamilyObject } from '../domain/stampFamilies'
 import { campfireContentSignature, nextCampfireRevision, validateLighting } from '../campfire/authoring'
 import { stampMapCompatible } from '../domain/stampPlacement'
@@ -115,6 +116,7 @@ function targetLayer(state: ProjectState) {
   message(''); return layer
 }
 function canAdd(state: ProjectState, additions: PlacedObject[]) {
+  validateCeilings([...state.objects,...additions],state.map)
   annotationBudget([...state.objects,...additions]);routeBudget([...state.objects,...additions]);scatterDocumentCount([...state.objects,...additions]); landBudget([...state.objects,...additions])
   const paths=[...state.objects,...additions].filter((o):o is PathObject=>o.kind==='path')
   if(paths.reduce((n,p)=>n+p.nodes.length,0)>PATH_LIMITS.documentNodes||paths.reduce((n,p)=>n+pathGeometry(p).samples.length,0)>PATH_LIMITS.documentSamples){message('This project exceeds the path geometry budget. Simplify paths before adding more.');return false}
@@ -154,6 +156,10 @@ export const useProjectStore = create<ProjectState>((rawSet, get) => {
       next.objects=reconciled.map(o=>{const old=oldById.get(o.id),input=inputById.get(o.id);return o.kind==='label'&&o.automatic&&!o.automatic.overridden&&old?.kind==='label'&&old===input&&old.automatic?.baseline===automaticLabelFingerprint(old)&&o!==old?{...o,automatic:{...o.automatic,baseline:automaticLabelFingerprint(o)}}:o});annotationBudget(next.objects)
     }
     if(changes.objects)landBudget(next.objects)
+    if(changes.map||changes.objects){
+      validateCeilings(next.objects,next.map)
+      if(next.objects.some(isCeiling)&&next.map.ceilingExposure!=='explicit')next.map={...next.map,ceilingExposure:'explicit'}
+    }
     rawSet(next)
   }
   return {
@@ -330,7 +336,7 @@ export const useProjectStore = create<ProjectState>((rawSet, get) => {
   addArea: (input) => history.run('Draw area', () => {
     const state=get(),layer=targetLayer(state), area=validateArea(input)
     if(!layer || (area.fill.kind==='pattern' && !assetHasKind(area.fill.assetId,'fillPattern')) || !canAdd(state,[area]))return null
-    set({objects:[...state.objects,area],layers:state.layers.map(l=>l.id===layer.id?{...l,objectIds:[...l.objectIds,area.id]}:l)})
+    set({...(area.ceiling?{map:{...state.map,ceilingExposure:'explicit' as const}}:{}),objects:[...state.objects,area],layers:state.layers.map(l=>l.id===layer.id?{...l,objectIds:[...l.objectIds,area.id]}:l)})
     useEditorStore.setState({selectedObjectIds:[area.id],message:''})
     return area.id
   }),
@@ -376,6 +382,7 @@ export const useProjectStore = create<ProjectState>((rawSet, get) => {
   }),
   applyMapSettings: (settings, confirm) => history.run('Change map settings', () => {
     const normalized = normalizeMapSettings({...get().map,...settings}), state = get()
+    validateCeilings(state.objects, normalized)
     const impact = resizeImpact(state.map, state.objects, normalized)
     if (impact.needsConfirmation && !confirm(impact)) return false
     set({ map: { ...state.map, ...normalized } })
@@ -389,7 +396,7 @@ export const useProjectStore = create<ProjectState>((rawSet, get) => {
   },
   updateTransform: (id, transform) => {
     if (!validTransform(transform) || !editableProjectIds(get(), useEditorStore.getState().soloLayerId).has(id)) return
-    set((state) => ({ objects: state.objects.map((object) => {
+    try { set((state) => ({ objects: state.objects.map((object) => {
       if (object.id !== id) return object
       const bounds = { x: transform.x, y: transform.y, width: transform.width, height: transform.height }
       if (isOpening(object)) return object
@@ -402,7 +409,7 @@ export const useProjectStore = create<ProjectState>((rawSet, get) => {
         return { ...object, ...bounds }
       }
       return { ...object, ...bounds, rotation: normalizeRotation(transform.rotation), scaleX: transform.scaleX, scaleY: transform.scaleY }
-    }) }))
+    }) })) } catch(error) { message((error as Error).message) }
   },
   // Completed edits have one explicit boundary for Sprint 7 history recording.
   commitTransform: (before, after) => { if (before.id === after.id) get().updateTransform(before.id, after); history.commit() },

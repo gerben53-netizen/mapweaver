@@ -67,7 +67,7 @@ export function useCanvasNavigation(ref: RefObject<HTMLDivElement | null>) {
     const pointerUp = () => { held = null; stopDrag() }
     const wheel = (event: WheelEvent) => {
       event.preventDefault()
-      if (drag || (objectGestureActive() && useEditorStore.getState().activeTool !== 'area' && useEditorStore.getState().activeTool !== 'path' && useEditorStore.getState().activeTool !== 'wall' && useEditorStore.getState().activeTool !== 'route' && useEditorStore.getState().activeTool !== 'scatter')) return
+      if (drag || (objectGestureActive() && useEditorStore.getState().activeTool !== 'area' && useEditorStore.getState().activeTool !== 'ceiling' && useEditorStore.getState().activeTool !== 'path' && useEditorStore.getState().activeTool !== 'wall' && useEditorStore.getState().activeTool !== 'route' && useEditorStore.getState().activeTool !== 'scatter')) return
       const bounds = element.getBoundingClientRect()
       const state = useEditorStore.getState()
       state.zoomAt({ x: event.clientX - bounds.left, y: event.clientY - bounds.top }, wheelZoom(state.viewport.zoom, event.deltaY, event.deltaMode, bounds.height))

@@ -74,6 +74,7 @@ interface EditorState {
   areaStrokeStyle: 'solid' | 'dashed' | 'dotted'
   editRing: number
   editPoint: number | null
+  ceilingsVisible: boolean
   activeTool: import('../domain/mapCapabilities').EditorTool
   patternAsset: { id: string; name: string } | null
   patternReady: boolean
@@ -101,7 +102,7 @@ export const useEditorStore = create<EditorState>((set) => ({
   stampBrowserOpen: false, workspace: 'editor', inspector: 'layers', inspectorCollapsed: false, layersPinned: false, layersUsedAt: 0, libraryKind: 'stamp', picker: null, stampAsset: null, recentAssets: [],
   pathMode:'straight',pathWidth:8,pathStroke:{kind:'solid',color:'#dfbe85'},
   areaShape: 'rectangle', areaFill: {kind:'solid',color:'#769aa0'}, areaStroke:false, areaStrokeStyle:'solid', editRing:0,editPoint:null,
-  activeTool: 'select', patternAsset: null, patternReady: false, patternReplacementId: null,
+  ceilingsVisible: true, activeTool: 'select', patternAsset: null, patternReady: false, patternReplacementId: null,
   selectedObjectIds: [], activeLayerId: 'objects', clipboard: [], pasteCount: 0, message: '',
   select: (id, toggle = false) => set((state) => {
     if (id === null) return { selectedObjectIds: [] }

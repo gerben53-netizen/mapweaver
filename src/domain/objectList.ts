@@ -5,7 +5,7 @@ import type { MapLayer, PlacedObject } from './models'
 
 export interface ObjectListRow {
   id: string
-  kind: PlacedObject['kind'] | 'wall' | 'river' | 'road' | 'border' | 'group'
+  kind: PlacedObject['kind'] | 'ceiling' | 'wall' | 'river' | 'road' | 'border' | 'group'
   groupId?: string
   name: string
   assetId: string | null
@@ -14,7 +14,7 @@ export interface ObjectListRow {
   visible: boolean
   locked: boolean
 }
-export type ObjectListFilter = 'scaleBar' | 'title' | 'infoPanel' | 'place' | 'label' | 'legend' | 'compass' | 'scatter' | 'all' | 'stamp' | 'area' | 'path' | 'wall' | 'river' | 'road' | 'border' | 'door' | 'window'
+export type ObjectListFilter = 'scaleBar' | 'title' | 'infoPanel' | 'place' | 'label' | 'legend' | 'compass' | 'scatter' | 'all' | 'stamp' | 'area' | 'ceiling' | 'path' | 'wall' | 'river' | 'road' | 'border' | 'door' | 'window'
 
 /** Object transforms do not change list metadata. Reuse the previous row array
  * so a pointer preview does not cause a React render of the list. */
@@ -34,7 +34,7 @@ export function createObjectListSelector(solo: string | null = null) {
         if (!object) continue
         const group = memberships.get(object.id)
         if (group && !emitted.has(group.id)) { emitted.add(group.id); rows.push({id:group.id,kind:'group',name:group.name,assetId:null,layerId:layer.id,layerName:layer.name,visible:layer.visible && group.visible,locked:layer.locked || group.locked}) }
-        rows.push({ groupId:group?.id, id: object.id, kind: object.kind==='path'&&object.pathKind!=='generic'?object.pathKind:object.kind, name: object.name || '', assetId: object.kind === 'stamp' || object.kind === 'patternFill' ? object.assetId : null, layerId: layer.id, layerName: layer.name, visible: layer.visible && object.visible !== false && flags.get(object.id)?.visible !== false, locked: layer.locked || !!object.locked || !!flags.get(object.id)?.locked })
+        rows.push({ groupId:group?.id, id: object.id, kind: object.kind==='area'&&object.ceiling?'ceiling':object.kind==='path'&&object.pathKind!=='generic'?object.pathKind:object.kind, name: object.name || '', assetId: object.kind === 'stamp' || object.kind === 'patternFill' ? object.assetId : null, layerId: layer.id, layerName: layer.name, visible: layer.visible && object.visible !== false && flags.get(object.id)?.visible !== false, locked: layer.locked || !!object.locked || !!flags.get(object.id)?.locked })
       }
     }
     const same = rows.length === previous.length && rows.every((row, index) => {
