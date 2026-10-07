@@ -1,6 +1,8 @@
 import type { MapDocument, MapObject } from './models'
 import type { Point } from '../canvas/viewport'
 import { pathGeometry } from './paths'
+import { productionDetailPreset, PRODUCTION_DETAIL_PRESETS } from './environmentalProduction'
+import { metersPerPixel } from './mapScale'
 
 export type DetailMode = 'surface' | 'decals'
 /** Dedicated brush content; never inserted into ordinary Stamp Library cards. */
@@ -17,8 +19,9 @@ export const DETAIL_PRESETS = [
     blend: 'source-over', tier: role === 'wall-edge-debris' ? 'edge' : 'floor', variants: 4,
   })),
 ] as const
-export type DetailPresetId = typeof DETAIL_PRESETS[number]['id']
-export const detailPreset = (id: string) => DETAIL_PRESETS.find(p => p.id === id)
+export type DetailPresetId = string
+export const detailPreset = (id: string) => DETAIL_PRESETS.find(p => p.id === id) || productionDetailPreset(id)
+export const ALL_DETAIL_PRESETS = [...DETAIL_PRESETS,...PRODUCTION_DETAIL_PRESETS]
 export interface DetailBrush {
   mode: DetailMode; action: 'paint' | 'erase'; presetId: DetailPresetId;
   radius: number; density: number; sizeMin: number; sizeMax: number;
@@ -26,7 +29,7 @@ export interface DetailBrush {
 }
 export const defaultDetailBrush: DetailBrush = {mode:'surface',action:'paint',presetId:'dev.surface.dirt',radius:24,density:30,sizeMin:3,sizeMax:10,rotation:180,variation:true,opacity:.35,softness:.75,edgeBias:'off'}
 export interface DetailInstance { id: string; x: number; y: number; size: number; rotation: number; variant: number; opacity: number }
-export interface DetailStroke { id: string; revision: 'dev-1'; seed: number; brush: DetailBrush; points: Point[]; instances: DetailInstance[] }
+export interface DetailStroke { id: string; revision: 'dev-1'|'production-1'; pixelsPerFoot?:number; seed: number; brush: DetailBrush; points: Point[]; instances: DetailInstance[] }
 export interface EnvironmentalDetail { version: 1; visible: boolean; locked: boolean; opacity: number; strokes: DetailStroke[] }
 export const emptyEnvironmentalDetail = (): EnvironmentalDetail => ({version:1,visible:true,locked:false,opacity:1,strokes:[]})
 const round = (n: number) => Math.round(n * 1e6) / 1e6
@@ -41,11 +44,13 @@ export function detailSamples(points: readonly Point[], step: number): Point[] {
 export function segmentDistance(p:Point,a:Point,b:Point){const dx=b.x-a.x,dy=b.y-a.y,t=Math.max(0,Math.min(1,((p.x-a.x)*dx+(p.y-a.y)*dy)/(dx*dx+dy*dy||1)));return Math.hypot(p.x-a.x-t*dx,p.y-a.y-t*dy)}
 export function detailWallDistance(p:Point,objects:readonly MapObject[]){let best=Infinity;for(const wall of objects){if(wall.kind!=='path'||wall.pathKind!=='wall')continue;const samples=pathGeometry(wall).samples;for(let i=1;i<samples.length;i++)best=Math.min(best,Math.max(0,segmentDistance(p,samples[i-1].point,samples[i].point)-wall.strokeWidth/2))}return best}
 export function validateDetailBrush(b:DetailBrush){
-  const preset=detailPreset(b.presetId)
-  if(!preset||preset.mode!==b.mode||!['paint','erase'].includes(b.action)||!['off','walls'].includes(b.edgeBias)||typeof b.variation!=='boolean'||!Number.isFinite(b.radius)||b.radius<2||b.radius>256||!Number.isFinite(b.density)||b.density<1||b.density>200||!Number.isFinite(b.sizeMin)||!Number.isFinite(b.sizeMax)||b.sizeMin<.5||b.sizeMax>100||b.sizeMax<b.sizeMin||!Number.isFinite(b.rotation)||b.rotation<0||b.rotation>180||![b.opacity,b.softness].every(n=>Number.isFinite(n)&&n>=0&&n<=1))throw Error('Invalid environmental brush settings.')
+  const preset=detailPreset(b.presetId),production=productionDetailPreset(b.presetId)
+  if(!preset||preset.mode!==b.mode||!['paint','erase'].includes(b.action)||!['off','walls'].includes(b.edgeBias)||typeof b.variation!=='boolean'||!Number.isFinite(b.radius)||b.radius<2||b.radius>256||!Number.isFinite(b.density)||b.density<1||b.density>200||!Number.isFinite(b.sizeMin)||!Number.isFinite(b.sizeMax)||b.sizeMin<=0||!production&&(b.sizeMin<.5||b.sizeMax>100)||b.sizeMax>1e6||b.sizeMax<b.sizeMin||!Number.isFinite(b.rotation)||b.rotation<0||b.rotation>180||![b.opacity,b.softness].every(n=>Number.isFinite(n)&&n>=0&&n<=1))throw Error('Invalid environmental brush settings.')
 }
-export function makeDetailStroke(points:Point[],brush:DetailBrush,map:Pick<MapDocument,'width'|'height'>,objects:readonly MapObject[]=[],seed=crypto.getRandomValues(new Uint32Array(1))[0],id:string=crypto.randomUUID()):DetailStroke {
+export function makeDetailStroke(points:Point[],brush:DetailBrush,map:Pick<MapDocument,'width'|'height'> & Partial<Pick<MapDocument,'grid'|'mapType'|'geography'>>,objects:readonly MapObject[]=[],seed=crypto.getRandomValues(new Uint32Array(1))[0],id:string=crypto.randomUUID()):DetailStroke {
   validateDetailBrush(brush)
+  const production=productionDetailPreset(brush.presetId),meters=map.grid?metersPerPixel(map as MapDocument):null,pixelsPerFoot=meters===null?10:.3048/meters
+  if(production&&brush.mode==='decals'&&brush.action==='paint'){const c=production.components[0],min=c.widthFt*pixelsPerFoot*c.scaleRange.min,max=c.widthFt*pixelsPerFoot*c.scaleRange.max;if(brush.sizeMin<min-1e-6||brush.sizeMax>max+1e-6)throw Error('Environmental component size must stay within its approved 0.5–2× footprint range.')}
   if(points.length>DETAIL_LIMITS.points||!points.length||points.some(p=>![p.x,p.y].every(n=>Number.isFinite(n)&&Math.abs(n)<=1e6)))throw Error('Invalid environmental stroke path.')
   const random=detailRandom(seed),step=Math.max(1,brush.radius/3),samples=detailSamples(points,step),instances:DetailInstance[]=[]
   if(brush.mode==='decals'&&brush.action==='paint')for(const [index,p]of samples.entries()){
@@ -66,7 +71,7 @@ export function makeDetailStroke(points:Point[],brush:DetailBrush,map:Pick<MapDo
   if(Math.hypot(end.x-surfacePoints.at(-1)!.x,end.y-surfacePoints.at(-1)!.y)>1e-6)surfacePoints.push({...end})
   if(brush.mode==='surface'&&brush.action==='paint'&&brush.edgeBias==='walls')surfacePoints=surfacePoints.filter(p=>detailWallDistance(p,objects)<=brush.radius*.35||random()<.2)
   if(!surfacePoints.length)surfacePoints=[{...points[0]}]
-  return {id,revision:'dev-1',seed,brush:{...brush},points:surfacePoints,instances}
+  return {id,revision:production?'production-1':'dev-1',...(production?{pixelsPerFoot}:{}),seed,brush:{...brush},points:surfacePoints,instances}
 }
 export function applyDetailStroke(before:EnvironmentalDetail|undefined,stroke:DetailStroke):EnvironmentalDetail {
   const base=before||emptyEnvironmentalDetail();if(base.locked||!base.visible)throw Error('Show and unlock Environmental Detail before painting.')
@@ -82,7 +87,7 @@ export function validateEnvironmentalDetail(value:unknown):EnvironmentalDetail {
   const d=value as EnvironmentalDetail
   if(!d||d.version!==1||typeof d.visible!=='boolean'||typeof d.locked!=='boolean'||!Number.isFinite(d.opacity)||d.opacity<0||d.opacity>1||!Array.isArray(d.strokes)||d.strokes.length>DETAIL_LIMITS.strokes)throw Error('Invalid environmental detail layer.')
   const ids=new Set<string>();let total=0
-  for(const s of d.strokes){if(!s||typeof s.id!=='string'||!s.id||s.id.length>128||ids.has(s.id)||s.revision!=='dev-1'||!Number.isInteger(s.seed)||s.seed<0||s.seed>0xffffffff||!Array.isArray(s.points)||!s.points.length||s.points.length>DETAIL_LIMITS.points||!Array.isArray(s.instances))throw Error('Invalid environmental stroke.');ids.add(s.id);validateDetailBrush(s.brush);if(s.points.some(p=>!p||![p.x,p.y].every(n=>Number.isFinite(n)&&Math.abs(n)<=1e6)))throw Error('Invalid environmental points.');total+=s.instances.length
+  for(const s of d.strokes){if(!s||typeof s.id!=='string'||!s.id||s.id.length>128||ids.has(s.id)||!['dev-1','production-1'].includes(s.revision)||!Number.isInteger(s.seed)||s.seed<0||s.seed>0xffffffff||!Array.isArray(s.points)||!s.points.length||s.points.length>DETAIL_LIMITS.points||!Array.isArray(s.instances))throw Error('Invalid environmental stroke.');ids.add(s.id);validateDetailBrush(s.brush);const prod=productionDetailPreset(s.brush.presetId);if(!!prod!==(s.revision==='production-1')||prod&&(!Number.isFinite(s.pixelsPerFoot)||s.pixelsPerFoot!<=0||s.pixelsPerFoot!>10000))throw Error('Invalid environmental artwork revision or physical scale.');if(prod&&s.brush.mode==='decals'&&s.brush.action==='paint'){const c=prod.components[0];if(s.brush.sizeMin<c.widthFt*s.pixelsPerFoot!*.5-1e-6||s.brush.sizeMax>c.widthFt*s.pixelsPerFoot!*2+1e-6)throw Error('Invalid environmental component scale.')}if(s.points.some(p=>!p||![p.x,p.y].every(n=>Number.isFinite(n)&&Math.abs(n)<=1e6)))throw Error('Invalid environmental points.');total+=s.instances.length
     const instanceIds=new Set<string>();for(const v of s.instances){if(!v||typeof v.id!=='string'||v.id.length>150||instanceIds.has(v.id)||![v.x,v.y,v.size,v.rotation,v.opacity].every(Number.isFinite)||Math.abs(v.x)>1e6||Math.abs(v.y)>1e6||v.size<s.brush.sizeMin||v.size>s.brush.sizeMax||Math.abs(v.rotation)>s.brush.rotation||v.opacity<0||v.opacity>1||!Number.isInteger(v.variant)||v.variant<0||v.variant>=4)throw Error('Invalid environmental decal.');instanceIds.add(v.id)}
     if(s.brush.mode==='surface'&&s.instances.length)throw Error('Surface strokes cannot contain decals.')
   }

@@ -4,7 +4,7 @@ import type { AreaRole } from '../domain/landAreas'
 import type { RouteKind } from '../domain/routes'
 
 export const toolDescriptions: Record<string, string> = {
-  'Environmental Detail': 'Paint surface variation or discrete environmental detail (DEV components)',
+  'Environmental Detail': 'Paint surface variation or discrete environmental detail',
   Select: 'Select, move or edit existing objects (V)',
   Measure: 'Measure distances using the map scale',
   'Place asset': 'Choose a stamp to place from the asset library',

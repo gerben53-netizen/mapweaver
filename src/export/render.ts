@@ -1,4 +1,5 @@
 import { drawEnvironmentalDetail } from '../canvas/drawEnvironmentalDetail'
+import { loadEnvironmentalImages } from '../canvas/environmentalImages'
 import { loadGeneratedWall } from '../canvas/drawGeneratedWall'
 import { softShadowStyle } from '../domain/mapEffects'
 import { drawTexturePaint } from '../canvas/drawTexturePaint'
@@ -93,6 +94,7 @@ type Resolver = typeof resolveAsset
 export async function exportPng(project: ProjectSnapshot, options: ExportOptions, resolve: Resolver = resolveAsset): Promise<Blob> {
   const generation = useAssetContext.getState().generation
   await loadPaintTextures(project.map.terrainPaint)
+  await loadEnvironmentalImages(project.map.environmentalDetail)
   if(project.objects.some(isAnnotation))await loadAnnotationFonts()
   const scene = exportScene(project, options), sources = new Map<string, { blob: Blob; name: string }>(), failures: string[] = []
   await Promise.all(scene.items.flatMap(i=>i.kind==='object'&&i.object.kind==='path'&&i.object.wall?.generated?[loadGeneratedWall(i.object.wall.generated)]:[]))
@@ -116,7 +118,9 @@ export async function exportPng(project: ProjectSnapshot, options: ExportOptions
   }
   if (failures.length) throw new Error(`Export needs readable images:\n${failures.join('\n')}`)
   const materialBytes=project.objects.some(o=>o.kind==='path'&&(o.wall?.material?.set.continuous||o.wall?.generated))?192*1024*1024:0
-  const checkMemory = (pixels: number) => { if (scene.width * scene.height * 8 + pixels * 4 + materialBytes > EXPORT_LIMITS.workingBytes) throw new Error('Export image memory estimate exceeds 512 MiB. Choose 1×, hide unused layers or use smaller source images.') }
+  // Bounded decoded production artwork (56 MiB), patches (16 MiB) and tiles (32 MiB).
+  const detailBytes=project.map.environmentalDetail?.strokes.some(s=>s.revision==='production-1')?104*1024*1024:0
+  const checkMemory = (pixels: number) => { if (scene.width * scene.height * 8 + pixels * 4 + materialBytes + detailBytes > EXPORT_LIMITS.workingBytes) throw new Error('Export image memory estimate exceeds 512 MiB. Choose 1×, hide unused layers or use smaller source images.') }
   checkMemory(estimatedPixels)
   const images = new Map<string, HTMLImageElement>(), leases: ReturnType<typeof acquireImage>[] = []; let canvas: HTMLCanvasElement | undefined, decodedPixels = 0
   try {

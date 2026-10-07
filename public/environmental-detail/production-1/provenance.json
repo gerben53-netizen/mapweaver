@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "id": "premium-environmental-detail-core",
+  "revision": "production-1",
+  "status": "PASS WITH NOTE",
+  "acceptedAt": "2026-10-07",
+  "sourceArchive": "Premium-Environmental-Decals-Surface-Variation.zip",
+  "sourceSha256": "d3c519d20260dce8aba1982313966186e55b6f3c16c76ad0d6494f19804f4362",
+  "artwork": "44 original supplier PNGs copied byte-for-byte; no crop, resize, alpha correction or recompression.",
+  "license": "Supplier handoff for Mapweaver production integration. No additional restrictions or independently verified legal exclusivity are asserted.",
+  "anchor": "Approved normalized full-canvas center (0.5, 0.5); rotation and uniform scale pivot.",
+  "quality": "Supplier PQA_CANDIDATE/KEEP metadata retained. Independent production acceptance is recorded here, not inferred from KEEP.",
+  "defaults": {
+    "surfaceOpacity": 0.25,
+    "decalOpacity": 0.8,
+    "footprintScale": [
+      0.5,
+      2
+    ]
+  },
+  "presets": [
+    {
+      "id": "premium.environmental.surface.dirt",
+      "revision": "production-1",
+      "status": "PASS — PRODUCTION",
+      "note": "Accepted in real renderer at admitted rotation/scale, multiple backgrounds and practical densities."
+    },
+    {
+      "id": "premium.environmental.surface.damp",
+      "revision": "production-1",
+      "status": "PASS — PRODUCTION",
+      "note": "Accepted in real renderer at admitted rotation/scale, multiple backgrounds and practical densities."
+    },
+    {
+      "id": "premium.environmental.surface.wear",
+      "revision": "production-1",
+      "status": "PASS WITH NOTE",
+      "note": "Subtle on very pale stone; use opacity control/short repeat passes, never exaggerate source pixels."
+    },
+    {
+      "id": "premium.environmental.surface.moss",
+      "revision": "production-1",
+      "status": "PASS — PRODUCTION",
+      "note": "Accepted in real renderer at admitted rotation/scale, multiple backgrounds and practical densities."
+    },
+    {
+      "id": "premium.environmental.decals.cracks",
+      "revision": "production-1",
+      "status": "PASS — PRODUCTION",
+      "note": "Accepted in real renderer at admitted rotation/scale, multiple backgrounds and practical densities."
+    },
+    {
+      "id": "premium.environmental.decals.rubble",
+      "revision": "production-1",
+      "status": "PASS — PRODUCTION",
+      "note": "Accepted in real renderer at admitted rotation/scale, multiple backgrounds and practical densities."
+    },
+    {
+      "id": "premium.environmental.decals.gravel",
+      "revision": "production-1",
+      "status": "PASS WITH NOTE",
+      "note": "Minimum-scale microdetail reads as aggregate texture; individual grains fade at 50% play zoom."
+    },
+    {
+      "id": "premium.environmental.decals.leaves",
+      "revision": "production-1",
+      "status": "PASS WITH NOTE",
+      "note": "Minimum-scale microdetail reads as organic breakup; individual leaves fade at 50% play zoom."
+    },
+    {
+      "id": "premium.environmental.decals.roots",
+      "revision": "production-1",
+      "status": "PASS — PRODUCTION",
+      "note": "Accepted in real renderer at admitted rotation/scale, multiple backgrounds and practical densities."
+    },
+    {
+      "id": "premium.environmental.decals.moss-clumps",
+      "revision": "production-1",
+      "status": "PASS — PRODUCTION",
+      "note": "Accepted in real renderer at admitted rotation/scale, multiple backgrounds and practical densities."
+    },
+    {
+      "id": "premium.environmental.decals.wall-edge-debris",
+      "revision": "production-1",
+      "status": "PASS — PRODUCTION",
+      "note": "Accepted in real renderer at admitted rotation/scale, multiple backgrounds and practical densities."
+    }
+  ],
+  "components": [
+    {
+      "id": "premium.environmental.surface.dirt.v1",
+      "filename": "artwork/surface-dirt-v1.png",
+      "sha256": "6e27722f6b65a2d9374e44ab20e6fa3b4e38fda3a9c9d3448f98f7c939cb95b2",
+      "byteLength": 151087
+    },
+    {
+      "id": "premium.environmental.surface.dirt.v2",
+      "filename": "artwork/surface-dirt-v2.png",
+      "sha256": "74ac4baae7d164f501dbeddf187e78dab9b6d8add6f26de350c79043382cacbb",
+      "byteLength": 272843
+    },
+    {
+      "id": "premium.environmental.surface.dirt.v3",
+      "filename": "artwork/surface-dirt-v3.png",
+      "sha256": "346031c845cee029bf62353ac46fa49eccab97e3c4cde22ddb4911e4750c6650",
+      "byteLength": 265882
+    },
+    {
+      "id": "premium.environmental.surface.dirt.v4",
+      "filename": "artwork/surface-dirt-v4.png",
+      "sha256": "b749857c7327d995767d09e48d30df4cf9e48485373defcef1ac51713cb7e552",
+      "byteLength": 334273
+    },
+    {
+      "id": "premium.environmental.surface.damp.v1",
+      "filename": "artwork/surface-damp-v1.png",
+      "sha256": "95138bcf6c44e1819ac3de13f0d907c1e25dc24a3294ce14f408b62aea946a56",
+      "byteLength": 252410
+    },
+    {
+      "id": "premium.environmental.surface.damp.v2",
+      "filename": "artwork/surface-damp-v2.png",
+      "sha256": "f12960d8c152698e7707658a98afee4966877a25c0db1bc9de30696c16ef567c",
+      "byteLength": 145173
+    },
+    {
+      "id": "premium.environmental.surface.damp.v3",
+      "filename": "artwork/surface-damp-v3.png",
+      "sha256": "a3dee4ce9afd26f4f2b66ad5ee18a518231b9f7fb3de8638d42e51f1e1d1968d",
+      "byteLength": 236862
+    },
+    {
+      "id": "premium.environmental.surface.damp.v4",
+      "filename": "artwork/surface-damp-v4.png",
+      "sha256": "550f5663659655f87069510d82c17c9376f9da74c86c9b38c21c29091b4b8639",
+      "byteLength": 231890
+    },
+    {
+      "id": "premium.environmental.surface.wear.v1",
+      "filename": "artwork/surface-wear-v1.png",
+      "sha256": "64a41895e0d7091489aca1c4192daa52e411b258334113751329aa44d4c8ffe1",
+      "byteLength": 214780
+    },
+    {
+      "id": "premium.environmental.surface.wear.v2",
+      "filename": "artwork/surface-wear-v2.png",
+      "sha256": "716ccd6f4ba7dab8a2a3d5c267a566dca7ac0300499d1551b194f8c38c646906",
+      "byteLength": 203911
+    },
+    {
+      "id": "premium.environmental.surface.wear.v3",
+      "filename": "artwork/surface-wear-v3.png",
+      "sha256": "d1815c04d0dfb0377c7856fbc90a8ac93baacfa85a1ea38bf0f5dcda5e702389",
+      "byteLength": 93793
+    },
+    {
+      "id": "premium.environmental.surface.wear.v4",
+      "filename": "artwork/surface-wear-v4.png",
+      "sha256": "883a796c78ba3941c570e76d758c104a5317e576689ef7a41884a5e3b76afc74",
+      "byteLength": 188562
+    },
+    {
+      "id": "premium.environmental.surface.moss.v1",
+      "filename": "artwork/surface-moss-v1.png",
+      "sha256": "1b8eb3a85f0cd41260bb36dd6f63383899ad019f884bbd787002f5122f3d289b",
+      "byteLength": 375013
+    },
+    {
+      "id": "premium.environmental.surface.moss.v2",
+      "filename": "artwork/surface-moss-v2.png",
+      "sha256": "b741b5ea280f4e2f71297d0d243b34601025e3de34d18bb1fc2b2b21c0a0aa4b",
+      "byteLength": 295154
+    },
+    {
+      "id": "premium.environmental.surface.moss.v3",
+      "filename": "artwork/surface-moss-v3.png",
+      "sha256": "c375e662a343e67c9a9f4e055aa2dd14664eb6701c3edbc6bf110e7c254f7bbe",
+      "byteLength": 355849
+    },
+    {
+      "id": "premium.environmental.surface.moss.v4",
+      "filename": "artwork/surface-moss-v4.png",
+      "sha256": "36aa00a8aa22955ec5078c9dab2e272b97af9223abc6bee1eecfe89a9bfb1a76",
+      "byteLength": 284097
+    },
+    {
+      "id": "premium.environmental.decals.cracks.v1",
+      "filename": "artwork/decals-cracks-v1.png",
+      "sha256": "e967fd28c2329032813881fef8e5b94362676648726636b62e56c0d30b540659",
+      "byteLength": 66246
+    },
+    {
+      "id": "premium.environmental.decals.cracks.v2",
+      "filename": "artwork/decals-cracks-v2.png",
+      "sha256": "cbc711ed7c6ca9e14dad23ede754dcca1121d9e9b66e516aea41b63acd8809c5",
+      "byteLength": 88285
+    },
+    {
+      "id": "premium.environmental.decals.cracks.v3",
+      "filename": "artwork/decals-cracks-v3.png",
+      "sha256": "061767e671d2b089b9f490f7c9cf78c754f50c62172e360efef89f81c544fbf0",
+      "byteLength": 73641
+    },
+    {
+      "id": "premium.environmental.decals.cracks.v4",
+      "filename": "artwork/decals-cracks-v4.png",
+      "sha256": "ad8dd5008835ec34a9f66df0bfc9f21975e05c4709f45521dec8b99255ef4333",
+      "byteLength": 41326
+    },
+    {
+      "id": "premium.environmental.decals.rubble.v1",
+      "filename": "artwork/decals-rubble-v1.png",
+      "sha256": "72a83382d4f499e6d05576d00d7608fbb8a89283b2d86ee959f97ed0d094d59d",
+      "byteLength": 204346
+    },
+    {
+      "id": "premium.environmental.decals.rubble.v2",
+      "filename": "artwork/decals-rubble-v2.png",
+      "sha256": "2876b7bee092203ae902797469b3c3142c8c15ab01398596c7b09a72ceffb273",
+      "byteLength": 264527
+    },
+    {
+      "id": "premium.environmental.decals.rubble.v3",
+      "filename": "artwork/decals-rubble-v3.png",
+      "sha256": "395f8a24b4b5bdf596d1dc2a3731155f7407346f6440d83b936ae792bbe6a41c",
+      "byteLength": 168136
+    },
+    {
+      "id": "premium.environmental.decals.rubble.v4",
+      "filename": "artwork/decals-rubble-v4.png",
+      "sha256": "d90259eaf8fcf3112d96756378d4516c43cdf59b284e087a3c60bbcc0cf14043",
+      "byteLength": 226863
+    },
+    {
+      "id": "premium.environmental.decals.gravel.v1",
+      "filename": "artwork/decals-gravel-v1.png",
+      "sha256": "93939a07b0b7afdd1df33a17057e51bf05367f3398958b913df523a8b2dcf781",
+      "byteLength": 222887
+    },
+    {
+      "id": "premium.environmental.decals.gravel.v2",
+      "filename": "artwork/decals-gravel-v2.png",
+      "sha256": "84f787c0f8cc1bdd1163e419b631fc804a6ff327170df96b587ee0fed20b162f",
+      "byteLength": 400635
+    },
+    {
+      "id": "premium.environmental.decals.gravel.v3",
+      "filename": "artwork/decals-gravel-v3.png",
+      "sha256": "1c3289b985cf65e101001d99ef353aaddc6b74afdfb185da0b4b3c738a4e4251",
+      "byteLength": 196209
+    },
+    {
+      "id": "premium.environmental.decals.gravel.v4",
+      "filename": "artwork/decals-gravel-v4.png",
+      "sha256": "7db786704960573930df4f54a6d93705823e138e9b8b77f6a63e6ead91988cc2",
+      "byteLength": 136692
+    },
+    {
+      "id": "premium.environmental.decals.leaves.v1",
+      "filename": "artwork/decals-leaves-v1.png",
+      "sha256": "4f9ce178c29e764e29075944b4d12d782bcd86b4a6fbe52cf6309bf58abd7a00",
+      "byteLength": 150825
+    },
+    {
+      "id": "premium.environmental.decals.leaves.v2",
+      "filename": "artwork/decals-leaves-v2.png",
+      "sha256": "3235dfdc37bade0940e380dc1ec563df90d5cf6bc7cf7bb1c265f04b1019a9e8",
+      "byteLength": 130630
+    },
+    {
+      "id": "premium.environmental.decals.leaves.v3",
+      "filename": "artwork/decals-leaves-v3.png",
+      "sha256": "145ba1b5a6ef021105891df26b5a733689c4dc1599428f51efd7d2deda053f1a",
+      "byteLength": 226406
+    },
+    {
+      "id": "premium.environmental.decals.leaves.v4",
+      "filename": "artwork/decals-leaves-v4.png",
+      "sha256": "91ad051f7bafd8ec647f2846d53415b7f29a216e1c385f6fc444f15dc5e10b17",
+      "byteLength": 262744
+    },
+    {
+      "id": "premium.environmental.decals.roots.v1",
+      "filename": "artwork/decals-roots-v1.png",
+      "sha256": "5eab994bbcd383ae4100a1c1ae9ffad3d95f68c10e917d88d1a8e1acd41e6aa2",
+      "byteLength": 208399
+    },
+    {
+      "id": "premium.environmental.decals.roots.v2",
+      "filename": "artwork/decals-roots-v2.png",
+      "sha256": "4c15cf4114681936e08192e385aaab7f1b0b59c920867ca58bb93a314063c9cf",
+      "byteLength": 117371
+    },
+    {
+      "id": "premium.environmental.decals.roots.v3",
+      "filename": "artwork/decals-roots-v3.png",
+      "sha256": "807b5c26fa3571bb074860f7e69bf6cfe6dbebc26d6eb63e36961f8474984d70",
+      "byteLength": 195440
+    },
+    {
+      "id": "premium.environmental.decals.roots.v4",
+      "filename": "artwork/decals-roots-v4.png",
+      "sha256": "6b5ca8d05dd6f702699265f52faa1b7b04b9281210b380f1b3e99becd076488b",
+      "byteLength": 141321
+    },
+    {
+      "id": "premium.environmental.decals.moss-clumps.v1",
+      "filename": "artwork/decals-moss-clumps-v1.png",
+      "sha256": "969d14f2ed9a112673256edeeeda9660f367593637080515b36c24a46e214840",
+      "byteLength": 366652
+    },
+    {
+      "id": "premium.environmental.decals.moss-clumps.v2",
+      "filename": "artwork/decals-moss-clumps-v2.png",
+      "sha256": "be7964cba22e717d3ee9f2cda491c0b16a8b8e97fe7b9ce5ba126a29f2fecb37",
+      "byteLength": 285017
+    },
+    {
+      "id": "premium.environmental.decals.moss-clumps.v3",
+      "filename": "artwork/decals-moss-clumps-v3.png",
+      "sha256": "21db059acedf5766a997545ca93a0cadac644e5c3b172c4c1e2b6e1db4868ca7",
+      "byteLength": 180221
+    },
+    {
+      "id": "premium.environmental.decals.moss-clumps.v4",
+      "filename": "artwork/decals-moss-clumps-v4.png",
+      "sha256": "cee37cc06757a26ae864863e1aae8ba9f8a17fdbe26dabe9060edc4077018781",
+      "byteLength": 233884
+    },
+    {
+      "id": "premium.environmental.decals.wall-edge-debris.v1",
+      "filename": "artwork/decals-wall-edge-debris-v1.png",
+      "sha256": "06b5ea570647a69e3227ef26a47a14f42fb9e6f75330408a1f4fa78afe5c7444",
+      "byteLength": 176291
+    },
+    {
+      "id": "premium.environmental.decals.wall-edge-debris.v2",
+      "filename": "artwork/decals-wall-edge-debris-v2.png",
+      "sha256": "ff297a1c068d80199d20bea9f1dba1e2c3a3a6f4ff49993253ef253d44102b99",
+      "byteLength": 286036
+    },
+    {
+      "id": "premium.environmental.decals.wall-edge-debris.v3",
+      "filename": "artwork/decals-wall-edge-debris-v3.png",
+      "sha256": "c01a7a0542064eb0f6d29b99b619ab182f6fd7cc094470ccf1324081754bee30",
+      "byteLength": 393504
+    },
+    {
+      "id": "premium.environmental.decals.wall-edge-debris.v4",
+      "filename": "artwork/decals-wall-edge-debris-v4.png",
+      "sha256": "69d0cdd4beea413d3eff5a3db2a22d77bfeab4690c0ad0278cee164555b8a787",
+      "byteLength": 246978
+    }
+  ],
+  "limitations": [
+    "Dirt/Damp multiply accumulate; practical defaults start at 25%, avoid repeatedly repainting at high opacity.",
+    "No mossy/root-temple reference image accompanied the sprint; no fidelity comparison to an unseen reference is claimed.",
+    "QA evidence is isolated; no maps or library rows are imported into Primary Development."
+  ]
+}

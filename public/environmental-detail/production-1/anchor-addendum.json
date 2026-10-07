@@ -1,0 +1,10 @@
+{
+  "authorizedBy": "User confirmation 2026-10-07",
+  "appliesTo": "all 44 components",
+  "anchor": {
+    "x": 0.5,
+    "y": 0.5
+  },
+  "units": "normalized full canvas",
+  "rotationAndUniformScalePivot": "anchor"
+}

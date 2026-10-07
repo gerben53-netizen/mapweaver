@@ -17,7 +17,7 @@ export function toolHelp(tool:string) {
  if(['placeStamp','place','label','legend','compass'].includes(tool))return 'Click to place · Esc to return to Select · Space-drag to pan'
  if(tool==='landBrush')return 'Drag to shape land · Alt inverts Add/Remove for the stroke · Esc cancels · Space/middle-drag pans'
  if(tool==='waterDepth')return 'Drag over water to paint depth · Erase restores automatic depth · Esc cancels · Space/middle-drag pans'
- if(tool==='environmentalDetail')return 'Drag to paint detail · Esc cancels · Space/middle-drag pans · DEV components'
+ if(tool==='environmentalDetail')return 'Drag to paint detail · Esc cancels · Space/middle-drag pans'
  if(tool==='textureBrush')return 'Drag to paint materials · Esc cancels stroke · Space/middle-drag pans'
  if(tool==='terrainBrush')return 'Drag to paint terrain · Esc cancels stroke · Space/middle-drag pans · Semantic biomes stay unchanged'
  if(tool==='scatter')return 'Drag to paint · Esc cancels stroke · Space-drag to pan'
