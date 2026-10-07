@@ -1,0 +1,5 @@
+{
+ "extends":"../../tsconfig.json",
+ "include":["renderer.ts","fixtures.ts"],
+ "compilerOptions":{"composite":false}
+}

@@ -1,0 +1,17 @@
+import {test} from 'node:test'
+import assert from 'node:assert/strict'
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import {createRequire} from 'node:module'
+import {validateManifest,safePath,validateImageFile} from './contract.mjs'
+const schema=JSON.parse(await fs.readFile(new URL('./schema/replacement.schema.json',import.meta.url)))
+const fromSchema=s=>Object.hasOwn(s,'const')?structuredClone(s.const):s.enum?s.enum[0]:s.type==='object'?Object.fromEntries(Object.entries(s.properties).map(([k,v])=>[k,fromSchema(v)])):s.type==='array'?s.items.map(fromSchema):s.type==='boolean'?true:'Example'
+const example=fromSchema(schema);example.createdAt='2026-10-07T00:00:00Z';for(const d of example.materials)for(const c of d.components)c.sha256=c.sourceSHA256
+const contract={baselineSpecSHA256:example.provenance.sourceSpecSHA256,materials:example.materials.map(d=>({id:d.id,currentRevision:d.sourceRevision,nextRevision:d.revision,strategy:d.generatorType,components:d.components.map(c=>({...c,filename:path.basename(c.artworkPath)}))}))}
+const require=createRequire(import.meta.url),Ajv=require('ajv'),validate=new Ajv({allErrors:true}).compile(schema)
+test('33 explicit component contracts and full example satisfy draft-07 schema and admission',()=>{assert.equal(contract.materials.length,5);assert.equal(contract.materials.reduce((n,d)=>n+d.components.length,0),33);assert.equal(validate(example),true,JSON.stringify(validate.errors));assert.equal(validateManifest(example,contract),example)})
+test('rejects wrong revision, duplicate identity, anchor, alpha bounds, footprint, weight and traversal',()=>{for(const mutate of [m=>m.materials[0].revision='production-1',m=>m.materials[0].components[1].id=m.materials[0].components[0].id,m=>m.materials[0].components[0].anchor.normalized.x=0,m=>m.materials[0].components[0].alphaBounds.x++,m=>m.materials[0].components[0].nominalLengthFt++,m=>m.materials[0].components[0].weight++,m=>m.materials[0].components[0].artworkPath='../../secret.png']){const bad=structuredClone(example);mutate(bad);assert.equal(validate(bad),false);assert.throws(()=>validateManifest(bad,contract))}})
+test('rejects provenance omissions and unrecognized fields',()=>{for(const mutate of [m=>delete m.provenance.license,m=>m.extra=true,m=>m.materials[0].components[0].extra=true,m=>m.provenance.sourceSpecSHA256='0'.repeat(64)]){const bad=structuredClone(example);mutate(bad);assert.equal(validate(bad),false);assert.throws(()=>validateManifest(bad,contract))}})
+test('anchor object key order does not change semantics',()=>{const m=structuredClone(example);const c=m.materials[0].components[0];c.anchor={pixel:c.anchor.pixel,normalized:c.anchor.normalized,space:c.anchor.space};assert.equal(validate(m),true);validateManifest(m,contract)})
+test('safe paths reject absolute, backslash and dot segments',()=>{for(const value of ['../a.png','/a.png','a/../b.png','a\\b.png','a//b.png'])assert.throws(()=>safePath('proofs',value));assert.equal(safePath('proofs','a/b.png'),path.resolve('proofs/a/b.png'))})
+test('source byte integrity rejects wrong dimensions/hash without altering the source',async()=>{const d=contract.materials[0],c=d.components[0],filename=path.resolve(`public/generated-walls/${d.id}-production-1/${c.filename}`),first=await validateImageFile(filename,c,c.sourceSHA256);await assert.rejects(validateImageFile(filename,{...c,pixelWidth:1},c.sourceSHA256));await assert.rejects(validateImageFile(filename,c,'0'.repeat(64)));assert.deepEqual(await validateImageFile(filename,c,c.sourceSHA256),first)})

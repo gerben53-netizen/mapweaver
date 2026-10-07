@@ -1,0 +1,4154 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Premium Wall Contrast Correction Work Output v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "contractId",
+    "packageId",
+    "exampleOnly",
+    "createdAt",
+    "provenance",
+    "materials"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "contractId": {
+      "const": "mapweaver-premium-wall-contrast-replacement-v1"
+    },
+    "packageId": {
+      "const": "premium-wall-contrast-production-2"
+    },
+    "exampleOnly": {
+      "type": "boolean"
+    },
+    "createdAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$"
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "author",
+        "license",
+        "tool",
+        "sourceSpecSHA256"
+      ],
+      "properties": {
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tool": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceSpecSHA256": {
+          "const": "a1b5c4e9666449ecf6f347c1702ab869aa1cc2468a931f4d4fef6d36b8d9303c"
+        }
+      }
+    },
+    "materials": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "sourceRevision",
+            "revision",
+            "generatorType",
+            "definitionPath",
+            "qualityStatus",
+            "components"
+          ],
+          "properties": {
+            "id": {
+              "const": "pale-palace-stone"
+            },
+            "sourceRevision": {
+              "const": "production-1"
+            },
+            "revision": {
+              "const": "production-2"
+            },
+            "generatorType": {
+              "const": "masonry"
+            },
+            "definitionPath": {
+              "const": "materials/pale-palace-stone/definition.json"
+            },
+            "qualityStatus": {
+              "enum": [
+                "KEEP",
+                "FIX",
+                "REJECT"
+              ]
+            },
+            "components": {
+              "type": "array",
+              "minItems": 6,
+              "maxItems": 6,
+              "items": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-large-1"
+                    },
+                    "role": {
+                      "const": "block-large"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/pale-palace-stone-production-2/block-large-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "320da5381ac88d73140f3369ec8e7b12c810c54f7ec5eb80a56fafbf53bc46f8"
+                    },
+                    "pixelWidth": {
+                      "const": 384
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 192,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 5,
+                        "y": 3,
+                        "width": 374,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 5,
+                        "y": 3,
+                        "width": 374,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 1.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-large-2"
+                    },
+                    "role": {
+                      "const": "block-large"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/pale-palace-stone-production-2/block-large-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "c641726452968049e57417a6d83ce512acd193266b2bc53fcb03abcb17df4255"
+                    },
+                    "pixelWidth": {
+                      "const": 384
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 192,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 5,
+                        "y": 3,
+                        "width": 374,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 5,
+                        "y": 3,
+                        "width": 374,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 1.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-medium-1"
+                    },
+                    "role": {
+                      "const": "block-medium"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/pale-palace-stone-production-2/block-medium-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "c3e8cbe479d7c0b4cc16111d3165f3c20712aaa5348c471e16df1251f2118c87"
+                    },
+                    "pixelWidth": {
+                      "const": 256
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 128,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 250,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 250,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 1
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-medium-2"
+                    },
+                    "role": {
+                      "const": "block-medium"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/pale-palace-stone-production-2/block-medium-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "83289b2e46e90222d55242c3f07ac1e2e7be0e7cde56ca7d8e9ee970aab0471f"
+                    },
+                    "pixelWidth": {
+                      "const": 256
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 128,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 250,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 250,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 1
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-small-1"
+                    },
+                    "role": {
+                      "const": "block-small"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/pale-palace-stone-production-2/block-small-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "2084918dd60b5a71d098a937c7b2acf027c30c55f3af8d9f636ac2c643174d6f"
+                    },
+                    "pixelWidth": {
+                      "const": 128
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 64,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 122,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 122,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-small-2"
+                    },
+                    "role": {
+                      "const": "block-small"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/pale-palace-stone-production-2/block-small-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "d129111aff2f329c7c98d461614602e9dc7e5469edc61dc0db6ebd0794a52f6f"
+                    },
+                    "pixelWidth": {
+                      "const": 128
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 64,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 122,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 122,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "additionalItems": false
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "sourceRevision",
+            "revision",
+            "generatorType",
+            "definitionPath",
+            "qualityStatus",
+            "components"
+          ],
+          "properties": {
+            "id": {
+              "const": "marble"
+            },
+            "sourceRevision": {
+              "const": "production-1"
+            },
+            "revision": {
+              "const": "production-2"
+            },
+            "generatorType": {
+              "const": "masonry"
+            },
+            "definitionPath": {
+              "const": "materials/marble/definition.json"
+            },
+            "qualityStatus": {
+              "enum": [
+                "KEEP",
+                "FIX",
+                "REJECT"
+              ]
+            },
+            "components": {
+              "type": "array",
+              "minItems": 6,
+              "maxItems": 6,
+              "items": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-large-1"
+                    },
+                    "role": {
+                      "const": "block-large"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/marble-production-2/block-large-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "d37fa7ba2d82913add97e6ebd64b2c38cae5de944eda77bc3c88c0a832be8472"
+                    },
+                    "pixelWidth": {
+                      "const": 384
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 192,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 5,
+                        "y": 3,
+                        "width": 374,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 5,
+                        "y": 3,
+                        "width": 374,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 1.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-large-2"
+                    },
+                    "role": {
+                      "const": "block-large"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/marble-production-2/block-large-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "a9e2737c576bdee7a3c3cde6681a375a9190938d88e8159b6067404266d4e514"
+                    },
+                    "pixelWidth": {
+                      "const": 384
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 192,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 5,
+                        "y": 3,
+                        "width": 374,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 5,
+                        "y": 3,
+                        "width": 374,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 1.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-medium-1"
+                    },
+                    "role": {
+                      "const": "block-medium"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/marble-production-2/block-medium-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "e8904ef7de347f7f72a0da3d725290cc27b21f31fee2ea819fa3daba14ec02ec"
+                    },
+                    "pixelWidth": {
+                      "const": 256
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 128,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 250,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 250,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 1
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-medium-2"
+                    },
+                    "role": {
+                      "const": "block-medium"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/marble-production-2/block-medium-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "9528e5ec548892a1451f0304de71f181d27ab8087ce24a3b346c727db1b5b86c"
+                    },
+                    "pixelWidth": {
+                      "const": 256
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 128,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 250,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 250,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 1
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-small-1"
+                    },
+                    "role": {
+                      "const": "block-small"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/marble-production-2/block-small-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "ade5ff7c24ad87a956d58ddfbe466643eecf98e1096de1626d43c72aed8b3714"
+                    },
+                    "pixelWidth": {
+                      "const": 128
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 64,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 122,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 122,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "block-small-2"
+                    },
+                    "role": {
+                      "const": "block-small"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/marble-production-2/block-small-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "af7882e48207fb7af7a6dd1d21795654e839891b7ac74f7aca8cee1d2afc1663"
+                    },
+                    "pixelWidth": {
+                      "const": 128
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 64,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 122,
+                        "height": 122
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 3,
+                        "y": 3,
+                        "width": 122,
+                        "height": 122
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "additionalItems": false
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "sourceRevision",
+            "revision",
+            "generatorType",
+            "definitionPath",
+            "qualityStatus",
+            "components"
+          ],
+          "properties": {
+            "id": {
+              "const": "natural-cave-rock"
+            },
+            "sourceRevision": {
+              "const": "production-1"
+            },
+            "revision": {
+              "const": "production-2"
+            },
+            "generatorType": {
+              "const": "rock"
+            },
+            "definitionPath": {
+              "const": "materials/natural-cave-rock/definition.json"
+            },
+            "qualityStatus": {
+              "enum": [
+                "KEEP",
+                "FIX",
+                "REJECT"
+              ]
+            },
+            "components": {
+              "type": "array",
+              "minItems": 9,
+              "maxItems": 9,
+              "items": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "rock-large-1"
+                    },
+                    "role": {
+                      "const": "rock-large"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/natural-cave-rock-production-2/rock-large-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "33f262ecbb8b592a06c99867ca5bd4f3c51fab0be7bf981a79535fc3cc8be08e"
+                    },
+                    "pixelWidth": {
+                      "const": 256
+                    },
+                    "pixelHeight": {
+                      "const": 256
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 128,
+                          "y": 128
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 15,
+                        "y": 14,
+                        "width": 228,
+                        "height": 222
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 15,
+                        "y": 14,
+                        "width": 228,
+                        "height": 222
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 1
+                    },
+                    "nominalWidthFt": {
+                      "const": 1
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "rock-large-2"
+                    },
+                    "role": {
+                      "const": "rock-large"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/natural-cave-rock-production-2/rock-large-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "058b9219ebf74a1702ba61878c6c7f408677e260a9de5ccf6dad2ccc5beb5d08"
+                    },
+                    "pixelWidth": {
+                      "const": 256
+                    },
+                    "pixelHeight": {
+                      "const": 256
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 128,
+                          "y": 128
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 13,
+                        "y": 15,
+                        "width": 229,
+                        "height": 224
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 13,
+                        "y": 15,
+                        "width": 229,
+                        "height": 224
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 1
+                    },
+                    "nominalWidthFt": {
+                      "const": 1
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "rock-large-3"
+                    },
+                    "role": {
+                      "const": "rock-large"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/natural-cave-rock-production-2/rock-large-3.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "67b70eb1ad7f4febf3f45c63a79848fa1b851fdd1d2eff9b19d402d333a9c20c"
+                    },
+                    "pixelWidth": {
+                      "const": 256
+                    },
+                    "pixelHeight": {
+                      "const": 256
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 128,
+                          "y": 128
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 10,
+                        "y": 12,
+                        "width": 230,
+                        "height": 230
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 10,
+                        "y": 12,
+                        "width": 230,
+                        "height": 230
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 1
+                    },
+                    "nominalWidthFt": {
+                      "const": 1
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "rock-medium-1"
+                    },
+                    "role": {
+                      "const": "rock-medium"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/natural-cave-rock-production-2/rock-medium-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "ba05a09973bd873c9f69b7a58f1b3f7c9d6a372e68cbda32fb3dea5c99b3497e"
+                    },
+                    "pixelWidth": {
+                      "const": 192
+                    },
+                    "pixelHeight": {
+                      "const": 192
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 96,
+                          "y": 96
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 11,
+                        "y": 9,
+                        "width": 172,
+                        "height": 169
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 11,
+                        "y": 9,
+                        "width": 172,
+                        "height": 169
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.75
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.75
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "rock-medium-2"
+                    },
+                    "role": {
+                      "const": "rock-medium"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/natural-cave-rock-production-2/rock-medium-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "354771869490b3492768120dbed759aded8d13f31a408834a5834c0c1b490aa4"
+                    },
+                    "pixelWidth": {
+                      "const": 192
+                    },
+                    "pixelHeight": {
+                      "const": 192
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 96,
+                          "y": 96
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 7,
+                        "y": 9,
+                        "width": 175,
+                        "height": 173
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 7,
+                        "y": 9,
+                        "width": 175,
+                        "height": 173
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.75
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.75
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "rock-medium-3"
+                    },
+                    "role": {
+                      "const": "rock-medium"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/natural-cave-rock-production-2/rock-medium-3.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "cbfc6ccd101bf5e6105f57a9191662bb5a5d34d9523b53d1e9cfb8ee5ca245a4"
+                    },
+                    "pixelWidth": {
+                      "const": 192
+                    },
+                    "pixelHeight": {
+                      "const": 192
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 96,
+                          "y": 96
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 8,
+                        "y": 9,
+                        "width": 174,
+                        "height": 169
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 8,
+                        "y": 9,
+                        "width": 174,
+                        "height": 169
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.75
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.75
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "rock-small-1"
+                    },
+                    "role": {
+                      "const": "rock-small"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/natural-cave-rock-production-2/rock-small-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "b3bd7bccc193439b16343f2723b6e2b47c703989cbb2c543252191d123e191f9"
+                    },
+                    "pixelWidth": {
+                      "const": 128
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 64,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 7,
+                        "y": 7,
+                        "width": 114,
+                        "height": 114
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 7,
+                        "y": 7,
+                        "width": 114,
+                        "height": 114
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "rock-small-2"
+                    },
+                    "role": {
+                      "const": "rock-small"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/natural-cave-rock-production-2/rock-small-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "8fa73b8de4b1fc526c4ac6ad0f877ba4059e2043b21008c7065e89f711c0a6b1"
+                    },
+                    "pixelWidth": {
+                      "const": 128
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 64,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 4,
+                        "y": 6,
+                        "width": 118,
+                        "height": 113
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 4,
+                        "y": 6,
+                        "width": 118,
+                        "height": 113
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "rock-small-3"
+                    },
+                    "role": {
+                      "const": "rock-small"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/natural-cave-rock-production-2/rock-small-3.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "2a13c0def42f1c78b8d24f776d7fd218a3c55aa4d42874efebaa59a309fbc8e0"
+                    },
+                    "pixelWidth": {
+                      "const": 128
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 64,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 7,
+                        "y": 6,
+                        "width": 115,
+                        "height": 113
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 7,
+                        "y": 6,
+                        "width": 115,
+                        "height": 113
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "additionalItems": false
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "sourceRevision",
+            "revision",
+            "generatorType",
+            "definitionPath",
+            "qualityStatus",
+            "components"
+          ],
+          "properties": {
+            "id": {
+              "const": "refined-timber"
+            },
+            "sourceRevision": {
+              "const": "production-1"
+            },
+            "revision": {
+              "const": "production-2"
+            },
+            "generatorType": {
+              "const": "linear"
+            },
+            "definitionPath": {
+              "const": "materials/refined-timber/definition.json"
+            },
+            "qualityStatus": {
+              "enum": [
+                "KEEP",
+                "FIX",
+                "REJECT"
+              ]
+            },
+            "components": {
+              "type": "array",
+              "minItems": 6,
+              "maxItems": 6,
+              "items": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-long-1"
+                    },
+                    "role": {
+                      "const": "beam-long"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/refined-timber-production-2/beam-long-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "e6c500ad1b711571f0a3e2c67e44226513c2b2b2d910b186de6146086ffa0bf2"
+                    },
+                    "pixelWidth": {
+                      "const": 1024
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 512,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 1020,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 1020,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 4
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-long-2"
+                    },
+                    "role": {
+                      "const": "beam-long"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/refined-timber-production-2/beam-long-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "2ac4e74967dc729810a3b0cda4a76d81287b2e76c474c45397b0f22d6ce42b8f"
+                    },
+                    "pixelWidth": {
+                      "const": 1024
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 512,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 1020,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 1020,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 4
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-medium-1"
+                    },
+                    "role": {
+                      "const": "beam-medium"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/refined-timber-production-2/beam-medium-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "226677d034ef51f1b96352dda6e27417c48ef69eb2096e4c56a4b1223f80ec79"
+                    },
+                    "pixelWidth": {
+                      "const": 512
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 256,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 508,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 508,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 2
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-medium-2"
+                    },
+                    "role": {
+                      "const": "beam-medium"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/refined-timber-production-2/beam-medium-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "0c2c8fa80ef8eec172ef4725bfeb9b718b2b48bad325a448fae3efdd2099d457"
+                    },
+                    "pixelWidth": {
+                      "const": 512
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 256,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 508,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 508,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 2
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-short-1"
+                    },
+                    "role": {
+                      "const": "beam-short"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/refined-timber-production-2/beam-short-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "6278121710069cb980844fb48be2c871b9696247ab06590e9a0c9888f3642428"
+                    },
+                    "pixelWidth": {
+                      "const": 128
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 64,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 124,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 124,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-short-2"
+                    },
+                    "role": {
+                      "const": "beam-short"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/refined-timber-production-2/beam-short-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "618c8ceaf9c559970d5bff76813795bf97cab30c75840214db54aa8cf7c9fa57"
+                    },
+                    "pixelWidth": {
+                      "const": 128
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 64,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 124,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 124,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "additionalItems": false
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "sourceRevision",
+            "revision",
+            "generatorType",
+            "definitionPath",
+            "qualityStatus",
+            "components"
+          ],
+          "properties": {
+            "id": {
+              "const": "rustic-heavy-timber"
+            },
+            "sourceRevision": {
+              "const": "production-1"
+            },
+            "revision": {
+              "const": "production-2"
+            },
+            "generatorType": {
+              "const": "linear"
+            },
+            "definitionPath": {
+              "const": "materials/rustic-heavy-timber/definition.json"
+            },
+            "qualityStatus": {
+              "enum": [
+                "KEEP",
+                "FIX",
+                "REJECT"
+              ]
+            },
+            "components": {
+              "type": "array",
+              "minItems": 6,
+              "maxItems": 6,
+              "items": [
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-long-1"
+                    },
+                    "role": {
+                      "const": "beam-long"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/rustic-heavy-timber-production-2/beam-long-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "29aea536da5b21eaa50bb49591bbe74306cc2ba37ee01ac67f17d302145779c8"
+                    },
+                    "pixelWidth": {
+                      "const": 1024
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 512,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 1020,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 1020,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 4
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-long-2"
+                    },
+                    "role": {
+                      "const": "beam-long"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/rustic-heavy-timber-production-2/beam-long-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "c91100e7ac75601a754960b78df84b45a94357e035dc4f1a3500ad7344b3c5b0"
+                    },
+                    "pixelWidth": {
+                      "const": 1024
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 512,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 1020,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 1020,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 4
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-medium-1"
+                    },
+                    "role": {
+                      "const": "beam-medium"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/rustic-heavy-timber-production-2/beam-medium-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "99defa0eedfd97bff232566fa2f2ac44874d90b653755f2858d1948e7013e6a0"
+                    },
+                    "pixelWidth": {
+                      "const": 512
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 256,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 508,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 508,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 2
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-medium-2"
+                    },
+                    "role": {
+                      "const": "beam-medium"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/rustic-heavy-timber-production-2/beam-medium-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "310de56d8a45a3f693776ea643ee8f4bc16f246db9fa77b8a375d8462d51a935"
+                    },
+                    "pixelWidth": {
+                      "const": 512
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 256,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 508,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 508,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 2
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-short-1"
+                    },
+                    "role": {
+                      "const": "beam-short"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/rustic-heavy-timber-production-2/beam-short-1.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "33e15c708845c852201a096dea5b16ff0df65467ccff76ddfe6f32d0e21a82cc"
+                    },
+                    "pixelWidth": {
+                      "const": 128
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 64,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 124,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 124,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "id",
+                    "role",
+                    "artworkPath",
+                    "sha256",
+                    "sourceSHA256",
+                    "pixelWidth",
+                    "pixelHeight",
+                    "anchor",
+                    "safeBounds",
+                    "alphaBounds",
+                    "nominalLengthFt",
+                    "nominalWidthFt",
+                    "weight",
+                    "qualityStatus",
+                    "provenance"
+                  ],
+                  "properties": {
+                    "id": {
+                      "const": "beam-short-2"
+                    },
+                    "role": {
+                      "const": "beam-short"
+                    },
+                    "artworkPath": {
+                      "const": "artwork/rustic-heavy-timber-production-2/beam-short-2.png"
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    "sourceSHA256": {
+                      "const": "c47740cdabf8d25a8cee007a733cb956347820cc7278c8e461d1eb7e2498750c"
+                    },
+                    "pixelWidth": {
+                      "const": 128
+                    },
+                    "pixelHeight": {
+                      "const": 128
+                    },
+                    "anchor": {
+                      "const": {
+                        "space": "whole-png-canvas",
+                        "normalized": {
+                          "x": 0.5,
+                          "y": 0.5
+                        },
+                        "pixel": {
+                          "x": 64,
+                          "y": 64
+                        }
+                      }
+                    },
+                    "safeBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 124,
+                        "height": 124
+                      }
+                    },
+                    "alphaBounds": {
+                      "const": {
+                        "x": 2,
+                        "y": 2,
+                        "width": 124,
+                        "height": 124
+                      }
+                    },
+                    "nominalLengthFt": {
+                      "const": 0.5
+                    },
+                    "nominalWidthFt": {
+                      "const": 0.5
+                    },
+                    "weight": {
+                      "const": 1
+                    },
+                    "qualityStatus": {
+                      "enum": [
+                        "KEEP",
+                        "FIX",
+                        "REJECT"
+                      ]
+                    },
+                    "provenance": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "sourceRevision",
+                        "author",
+                        "license",
+                        "changeSummary"
+                      ],
+                      "properties": {
+                        "sourceRevision": {
+                          "const": "production-1"
+                        },
+                        "author": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "license": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "changeSummary": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "additionalItems": false
+            }
+          }
+        }
+      ],
+      "additionalItems": false
+    }
+  }
+}
