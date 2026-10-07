@@ -65,7 +65,7 @@ export const MapContent = memo(function MapContent({ map: savedMap, objects: sav
   const baseObjects = landBaseOrder(terrainPaintOrder(effectOrder([...projectObjects(content, true, solo).filter(o=>ceilingsVisible||!(o.kind==='area'&&o.ceiling)),...(landPreview?.added||[])].map(o=>annotationPreview.find(v=>v.id===o.id)|| (areaPreview?.id===o.id?areaPreview:scatterPreview?.id===o.id?scatterPreview:o)), map.effects),!!map.terrainPaint||paintPreview||!!map.landEditing||!!map.geographyFinish||!!map.waterDepth?.enabled||!!(map.coastalContours?.enabled&&map.coastalContours.count)),!!map.landEditing||!!map.geographyFinish||!!map.waterDepth?.enabled||!!(map.coastalContours?.enabled&&map.coastalContours.count))
   const visibleObjects=environmentalOrder(texturePaintOrder(baseObjects,!!map.texturePaint||texturePreview),!!map.environmentalDetail||detailPreview),textureBoundary=texturePaintBoundary(visibleObjects),restricted=textureFloors(objects).length>0
   const clip=map.landEditing?((c:Konva.Context)=>traceLandClip(c._context,visibleObjects.filter(isLandmass))):undefined
-  const detailFloor=environmentalBoundary(visibleObjects,'floor'),detailEdge=environmentalBoundary(visibleObjects,'edge')
+  const detailFloor=environmentalBoundary(visibleObjects),detailEdge=detailFloor
   const paintBoundary=terrainPaintBoundary(visibleObjects)
   const boundary = fogBoundary(visibleObjects, map.effects)
   const indexOpenings=useMemo(()=>createOpeningIndex(),[]),openingIndex=indexOpenings(openingPreview?[...visibleObjects,openingPreview]:visibleObjects),byId=new Map(objects.map(o=>[o.id,o]))

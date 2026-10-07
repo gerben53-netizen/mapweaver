@@ -25,9 +25,11 @@ Kies Paint en sleep met de primaire muisknop. Eén afgeronde sleepactie is één
 
 ## Laagvolgorde en grenzen
 
-Zodra een kaart Environmental Detail bevat, gebruikt editor én export dezelfde strata: achtergrond → normale Areas en bestaande materiaal-/terrainverf → Surface → vloerdecal → Paths/Walls/Openings → wall-edge debris → props en tekst → editoroverlays. Binnen een stratum blijft de bestaande volgorde behouden. Ceiling-overlays blijven boven de inhoud en worden zoals eerder niet geëxporteerd. Kaarten zonder detaillaag houden hun oude objectvolgorde.
+Zodra een kaart Environmental Detail bevat, gebruikt editor én export dezelfde strata: achtergrond → normale Areas en bestaande materiaal-/terrainverf → Surface en vloerdecal → wall-edge debris → Paths/Walls/Openings → props en tekst → editoroverlays. Beide decaltiers staan onder de daadwerkelijke muurweergave. Muurartwork bedekt overlappende pixels volgens zijn eigen alpha; een decal mag onder een organische rand doorlopen. De bestaande muurweergave houdt openingen en eindpunten vrij: er is geen extra decalclip of onzichtbaar masker door een doorgang. Een gesloten deur kan uiteraard detail onder het deurblad bedekken. Binnen een stratum blijft de bestaande volgorde behouden. Ceiling-overlays blijven boven de inhoud en worden zoals eerder niet geëxporteerd. Kaarten zonder detaillaag houden hun oude objectvolgorde. Gewone Stamps worden door deze verbetering niet opnieuw gerangschikt.
 
 Detail wordt aan de echte kaartgrenzen geknipt, niet aan afzonderlijke Area- of materiaalpolygonen. Daardoor kunnen roots, rubble en moss over een overgang van steen naar aarde lopen. Deze strata gelden voor de kaart als geheel; handmatig z-order tussen verschillende strata wordt dus vervangen door de beschreven volgorde zodra detail is toegevoegd.
+
+Surface is geen kamergebonden verfmasker. Een brede Dirt-, Damp-, Wear- of Moss Wash-voetafdruk kan de ondergrond aan beide kanten van een muur moduleren; de muur bedekt alleen de overlap met zijn zichtbare lichaam. Prefer walls is een plaatsingsvoorkeur en geen kamerclip. Kamerbewuste Surface-masks blijven vervolgwerk: hiervoor is een expliciete keuze van de beschilderbare regio/zijde nodig, met betekenis voor openingen, open muren en latere muurverplaatsing. In deze verbetering worden Surface-strokes, opgeslagen decalposities en gebruikerskaarten niet herschreven. Bestaande Wall-edge Debris-strokes krijgen de betere laagvolgorde bij herladen.
 
 ## Opslag en export
 

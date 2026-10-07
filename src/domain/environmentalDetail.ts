@@ -96,4 +96,7 @@ export function validateEnvironmentalDetail(value:unknown):EnvironmentalDetail {
 }
 /** Opt-in strata. No environmental field means no change to historic ordering. */
 export function environmentalOrder(objects:MapObject[],enabled:boolean){if(!enabled)return objects;const rank=(o:MapObject)=>o.kind==='area'?(o.ceiling?3:0):o.kind==='path'||o.kind==='door'?1:2;return [...objects].sort((a,b)=>rank(a)-rank(b))}
-export function environmentalBoundary(objects:MapObject[],tier:'floor'|'edge'){const index=objects.findIndex(o=>tier==='floor'?o.kind!=='area'||!!o.ceiling:!['area','path','door'].includes(o.kind)||o.kind==='area'&&!!o.ceiling);return index<0?objects.length:index}
+/** Both floor and wall-foot decals precede structural artwork. Keep the two
+ * content tiers for deterministic replay; never synthesize an occlusion mask.
+ * Actual wall alpha, openings and endpoints provide their own visual coverage. */
+export function environmentalBoundary(objects:MapObject[]){const index=objects.findIndex(o=>o.kind!=='area'||!!o.ceiling);return index<0?objects.length:index}
