@@ -27,6 +27,10 @@ For Eryndor, leaves, vines and organic carving can reinforce the setting, but ma
 2.4 Scene cohesion
 A premium asset must look credible beside other premium assets from the same environment.
 Reject assets that are individually attractive but visibly belong to a simpler, flatter, more cartoon-like or otherwise incompatible illustration style.
+2.5 Play-scale local contrast
+Structural assets, including Generated Walls, must retain internal form and material structure at 50–75% play zoom at the canonical physical scale. Fine microtexture may disappear; meaningful joints, crevices, beam boundaries and material variation must remain readable.
+Require identical 100/75/50% proofs on light, mid-tone and darker production floors, including light-on-light placement, with generic contact shadow OFF and ON. Intrinsic joint, edge and local form contrast must remain lighting-neutral; scene contact shadow or future runtime lighting cannot substitute for unreadable internal structure.
+Assess source, assembled straight/corner/curve and representative environmental context separately. Image metrics support visual review but do not define universal numeric PASS thresholds.
 3. Camera and projection
 Premium battlemap assets must be authored for true 90° top-down / orthographic use.
 Required:
