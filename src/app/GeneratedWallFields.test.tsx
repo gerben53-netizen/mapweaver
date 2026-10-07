@@ -17,7 +17,7 @@ it('hides development wall choices in normal builds while retaining a saved deve
  try{
   const map={...defaultMapStyle(),width:800,height:600,background:null},production=generatedWallStyle(SIMPLE_WALL,map),legacy=generatedWallStyle(SIMPLE_WALL,map,'living-root','dev-1'),onChange=vi.fn()
   const view=render(<WallFields value={production} onChange={onChange}/>)
-  expect(screen.queryByRole('option',{name:/development/})).toBeNull();expect(screen.getByRole('option',{name:'Bleke paleissteen'})).toHaveValue('pale-palace-stone@production-1');expect(screen.getByRole('option',{name:'Marmer'})).toHaveValue('marble@production-1');expect(screen.getByRole('option',{name:'Ruwe natuursteen'})).toHaveValue('rough-stone@production-1')
+  expect(screen.queryByRole('option',{name:/development/})).toBeNull();expect(screen.getByRole('option',{name:'Bleke paleissteen'})).toHaveValue('pale-palace-stone@production-2');expect(screen.getByRole('option',{name:'Marmer'})).toHaveValue('marble@production-1');expect(screen.getByRole('option',{name:'Ruwe natuursteen'})).toHaveValue('rough-stone@production-1')
   view.rerender(<WallFields value={legacy} onChange={onChange}/>)
   expect(screen.getByRole('option',{name:/development/})).toBeInTheDocument()
   expect(screen.getByLabelText('Wall material or generator')).toHaveValue('living-root@dev-1')
@@ -29,6 +29,16 @@ it('offers only regularity and variation for masonry and preserves the native wi
  expect(screen.getAllByRole('slider')).toHaveLength(2);expect(screen.queryByLabelText('Living Root preset')).toBeNull()
  fireEvent.change(screen.getByLabelText('Wall regularity'),{target:{value:80}});expect(onChange.mock.lastCall?.[0].wall.generated.regularity).toBe(.8)
  fireEvent.change(screen.getByLabelText('Wall variation'),{target:{value:40}});expect(onChange.mock.lastCall?.[0].wall.generated.variation).toBe(.4)
+})
+it('offers one current pale stone revision and labels an exact historical selection',()=>{
+ const map={...defaultMapStyle(),width:800,height:600,background:null},onChange=vi.fn(),view=render(<WallFields value={generatedWallStyle(SIMPLE_WALL,map)} onChange={onChange}/>)
+ expect(screen.getByRole('option',{name:'Bleke paleissteen'})).toHaveValue('pale-palace-stone@production-2')
+ expect(screen.queryByRole('option',{name:/production-1 historical/})).toBeNull()
+ view.rerender(<WallFields value={generatedWallStyle(SIMPLE_WALL,map,'pale-palace-stone','production-1')} onChange={onChange}/>)
+ expect(screen.getByLabelText('Wall material or generator')).toHaveValue('pale-palace-stone@production-1')
+ expect(screen.getByRole('option',{name:'Bleke paleissteen (production-1 historical)'})).toHaveValue('pale-palace-stone@production-1')
+ fireEvent.change(screen.getByLabelText('Wall material or generator'),{target:{value:'pale-palace-stone@production-2'}})
+ expect(onChange.mock.lastCall?.[0].wall.generated.revision).toBe('production-2')
 })
 
 it('offers only rock roughness/variation and retains an exact saved DEV cave selection',()=>{

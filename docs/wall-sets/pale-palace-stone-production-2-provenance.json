@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 1,
+  "id": "pale-palace-stone",
+  "revision": "production-2",
+  "sourceRevision": "production-1",
+  "status": "KEEP CORRECTION",
+  "sourceArchiveSHA256": "256beac27ca60db4edcbf764fdc0a7dc2a3c7ff6ef2b4a819e120fc5e3e2a13a",
+  "provenance": {
+    "author": "OpenAI assistant, in opdracht van gebruiker",
+    "license": "Afgeleide correcties van aangeleverde productieassets; oorspronkelijke gebruiksvoorwaarden blijven gelden.",
+    "tool": "User-authorized Python/Pillow/NumPy material-specific RGB editing; source alpha unchanged",
+    "sourceSpecSHA256": "a1b5c4e9666449ecf6f347c1702ab869aa1cc2468a931f4d4fef6d36b8d9303c"
+  },
+  "anchorRule": "Full PNG canvas center (0.5, 0.5); exact alpha preserved; no recentering",
+  "components": [
+    {
+      "id": "block-large-1",
+      "role": "block-large",
+      "artworkPath": "artwork/pale-palace-stone-production-2/block-large-1.png",
+      "sha256": "69aff655a8382a70cafbeed46d645c97886f21621bc299dc605c3ea7dad78212",
+      "sourceSHA256": "320da5381ac88d73140f3369ec8e7b12c810c54f7ec5eb80a56fafbf53bc46f8",
+      "pixelWidth": 384,
+      "pixelHeight": 128,
+      "anchor": {
+        "space": "whole-png-canvas",
+        "normalized": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "pixel": {
+          "x": 192,
+          "y": 64
+        }
+      },
+      "safeBounds": {
+        "x": 5,
+        "y": 3,
+        "width": 374,
+        "height": 122
+      },
+      "alphaBounds": {
+        "x": 5,
+        "y": 3,
+        "width": 374,
+        "height": 122
+      },
+      "nominalLengthFt": 1.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "qualityStatus": "KEEP",
+      "provenance": {
+        "sourceRevision": "production-1",
+        "author": "OpenAI assistant, in opdracht van gebruiker",
+        "license": "Afgeleide correcties van aangeleverde productieassets; oorspronkelijke gebruiksvoorwaarden blijven gelden.",
+        "changeSummary": "Selective structural RGB correction; original canvas and entire alpha channel unchanged. No scene/contact shadow."
+      }
+    },
+    {
+      "id": "block-large-2",
+      "role": "block-large",
+      "artworkPath": "artwork/pale-palace-stone-production-2/block-large-2.png",
+      "sha256": "005b1de50abbd65cb75c392bedf512d52e9368b6af16d3a1e795b2bc9acfe2bd",
+      "sourceSHA256": "c641726452968049e57417a6d83ce512acd193266b2bc53fcb03abcb17df4255",
+      "pixelWidth": 384,
+      "pixelHeight": 128,
+      "anchor": {
+        "space": "whole-png-canvas",
+        "normalized": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "pixel": {
+          "x": 192,
+          "y": 64
+        }
+      },
+      "safeBounds": {
+        "x": 5,
+        "y": 3,
+        "width": 374,
+        "height": 122
+      },
+      "alphaBounds": {
+        "x": 5,
+        "y": 3,
+        "width": 374,
+        "height": 122
+      },
+      "nominalLengthFt": 1.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "qualityStatus": "KEEP",
+      "provenance": {
+        "sourceRevision": "production-1",
+        "author": "OpenAI assistant, in opdracht van gebruiker",
+        "license": "Afgeleide correcties van aangeleverde productieassets; oorspronkelijke gebruiksvoorwaarden blijven gelden.",
+        "changeSummary": "Selective structural RGB correction; original canvas and entire alpha channel unchanged. No scene/contact shadow."
+      }
+    },
+    {
+      "id": "block-medium-1",
+      "role": "block-medium",
+      "artworkPath": "artwork/pale-palace-stone-production-2/block-medium-1.png",
+      "sha256": "b3f24e87710479383d6ab07533d6246e294439be3cd37f9a2e4b6757fa82f11e",
+      "sourceSHA256": "c3e8cbe479d7c0b4cc16111d3165f3c20712aaa5348c471e16df1251f2118c87",
+      "pixelWidth": 256,
+      "pixelHeight": 128,
+      "anchor": {
+        "space": "whole-png-canvas",
+        "normalized": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "pixel": {
+          "x": 128,
+          "y": 64
+        }
+      },
+      "safeBounds": {
+        "x": 3,
+        "y": 3,
+        "width": 250,
+        "height": 122
+      },
+      "alphaBounds": {
+        "x": 3,
+        "y": 3,
+        "width": 250,
+        "height": 122
+      },
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "qualityStatus": "KEEP",
+      "provenance": {
+        "sourceRevision": "production-1",
+        "author": "OpenAI assistant, in opdracht van gebruiker",
+        "license": "Afgeleide correcties van aangeleverde productieassets; oorspronkelijke gebruiksvoorwaarden blijven gelden.",
+        "changeSummary": "Selective structural RGB correction; original canvas and entire alpha channel unchanged. No scene/contact shadow."
+      }
+    },
+    {
+      "id": "block-medium-2",
+      "role": "block-medium",
+      "artworkPath": "artwork/pale-palace-stone-production-2/block-medium-2.png",
+      "sha256": "9069cbc7d7f0414dcf217b782ae52d0fecee517a0917152034a4cf7af66ba567",
+      "sourceSHA256": "83289b2e46e90222d55242c3f07ac1e2e7be0e7cde56ca7d8e9ee970aab0471f",
+      "pixelWidth": 256,
+      "pixelHeight": 128,
+      "anchor": {
+        "space": "whole-png-canvas",
+        "normalized": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "pixel": {
+          "x": 128,
+          "y": 64
+        }
+      },
+      "safeBounds": {
+        "x": 3,
+        "y": 3,
+        "width": 250,
+        "height": 122
+      },
+      "alphaBounds": {
+        "x": 3,
+        "y": 3,
+        "width": 250,
+        "height": 122
+      },
+      "nominalLengthFt": 1,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "qualityStatus": "KEEP",
+      "provenance": {
+        "sourceRevision": "production-1",
+        "author": "OpenAI assistant, in opdracht van gebruiker",
+        "license": "Afgeleide correcties van aangeleverde productieassets; oorspronkelijke gebruiksvoorwaarden blijven gelden.",
+        "changeSummary": "Selective structural RGB correction; original canvas and entire alpha channel unchanged. No scene/contact shadow."
+      }
+    },
+    {
+      "id": "block-small-1",
+      "role": "block-small",
+      "artworkPath": "artwork/pale-palace-stone-production-2/block-small-1.png",
+      "sha256": "7dbea5730ce102eea8f6ee3d024f1b94879e5b579b705e473ec6dd99e3e50020",
+      "sourceSHA256": "2084918dd60b5a71d098a937c7b2acf027c30c55f3af8d9f636ac2c643174d6f",
+      "pixelWidth": 128,
+      "pixelHeight": 128,
+      "anchor": {
+        "space": "whole-png-canvas",
+        "normalized": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "pixel": {
+          "x": 64,
+          "y": 64
+        }
+      },
+      "safeBounds": {
+        "x": 3,
+        "y": 3,
+        "width": 122,
+        "height": 122
+      },
+      "alphaBounds": {
+        "x": 3,
+        "y": 3,
+        "width": 122,
+        "height": 122
+      },
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "qualityStatus": "KEEP",
+      "provenance": {
+        "sourceRevision": "production-1",
+        "author": "OpenAI assistant, in opdracht van gebruiker",
+        "license": "Afgeleide correcties van aangeleverde productieassets; oorspronkelijke gebruiksvoorwaarden blijven gelden.",
+        "changeSummary": "Selective structural RGB correction; original canvas and entire alpha channel unchanged. No scene/contact shadow."
+      }
+    },
+    {
+      "id": "block-small-2",
+      "role": "block-small",
+      "artworkPath": "artwork/pale-palace-stone-production-2/block-small-2.png",
+      "sha256": "218f4d7c4773b54291861670cab60415240746dc05973629673a7f4424eb1347",
+      "sourceSHA256": "d129111aff2f329c7c98d461614602e9dc7e5469edc61dc0db6ebd0794a52f6f",
+      "pixelWidth": 128,
+      "pixelHeight": 128,
+      "anchor": {
+        "space": "whole-png-canvas",
+        "normalized": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "pixel": {
+          "x": 64,
+          "y": 64
+        }
+      },
+      "safeBounds": {
+        "x": 3,
+        "y": 3,
+        "width": 122,
+        "height": 122
+      },
+      "alphaBounds": {
+        "x": 3,
+        "y": 3,
+        "width": 122,
+        "height": 122
+      },
+      "nominalLengthFt": 0.5,
+      "nominalWidthFt": 0.5,
+      "weight": 1,
+      "qualityStatus": "KEEP",
+      "provenance": {
+        "sourceRevision": "production-1",
+        "author": "OpenAI assistant, in opdracht van gebruiker",
+        "license": "Afgeleide correcties van aangeleverde productieassets; oorspronkelijke gebruiksvoorwaarden blijven gelden.",
+        "changeSummary": "Selective structural RGB correction; original canvas and entire alpha channel unchanged. No scene/contact shadow."
+      }
+    }
+  ],
+  "acceptance": "Native 100/75/50 light/mid/dark OFF/ON; controlled environmental context. Only this set passed. Exact candidate bytes; previous revisions remain unchanged."
+}

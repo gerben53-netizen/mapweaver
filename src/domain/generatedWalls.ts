@@ -9,6 +9,7 @@ import caveRock from './caveRockPack.json'
 import naturalCaveRock from './naturalCaveRockPack.json'
 import marble from './marblePack.json'
 import palePalaceStone from './palePalaceStonePack.json'
+import palePalaceStoneProduction2 from './palePalaceStoneProduction2Pack.json'
 import masonryRough from './masonryRoughPack.json'
 import masonryDressed from './masonryDressedPack.json'
 import pack from './livingRootPack.json'
@@ -39,7 +40,8 @@ export function validateGeneratedDefinition(value:unknown):GeneratedDefinition {
  return d
 }
 /** Add immutable bundled packs as data, never executable generator plugins. */
-export function registerGeneratedDefinition(value:unknown){const d=structuredClone(validateGeneratedDefinition(value)),key=d.id+'@'+d.revision,old=records.get(key);if(old&&JSON.stringify(old)!==JSON.stringify(d))throw Error('Generated wall revision is immutable.');if(!old&&records.size>=16)throw Error('Generated wall pack limit exceeded.');d.components.forEach(Object.freeze);Object.freeze(d.components);Object.freeze(d.defaults);Object.freeze(d);records.set(key,d);return d}
+export const GENERATED_REGISTRY_LIMITS = { materials:16, revisionsPerMaterial:16 } as const
+export function registerGeneratedDefinition(value:unknown){const d=structuredClone(validateGeneratedDefinition(value)),key=d.id+'@'+d.revision,old=records.get(key);if(old&&JSON.stringify(old)!==JSON.stringify(d))throw Error('Generated wall revision is immutable.');if(!old){const revisions=[...records.values()].filter(v=>v.id===d.id);if(revisions.length>=GENERATED_REGISTRY_LIMITS.revisionsPerMaterial||(!revisions.length&&new Set([...records.values()].map(v=>v.id)).size>=GENERATED_REGISTRY_LIMITS.materials))throw Error('Generated wall pack limit exceeded.');}d.components.forEach(Object.freeze);Object.freeze(d.components);Object.freeze(d.defaults);Object.freeze(d);records.set(key,d);return d}
 registerGeneratedDefinition(rusticHeavyTimber)
 registerGeneratedDefinition(sungWood)
 registerGeneratedDefinition(sungWoodProduction)
@@ -51,16 +53,22 @@ registerGeneratedDefinition(caveRock)
 registerGeneratedDefinition(naturalCaveRock)
 registerGeneratedDefinition(marble)
 registerGeneratedDefinition(palePalaceStone)
+registerGeneratedDefinition(palePalaceStoneProduction2)
 registerGeneratedDefinition(productionPack)
 registerGeneratedDefinition(pack)
 registerGeneratedDefinition(masonryRough)
 registerGeneratedDefinition(masonryDressed)
 export const generatedDefinitions=()=>[...records.values()]
-/** Reference-only and DEV revisions resolve saved walls but are not offered for new authoring. */
-export const generatedWallChoices=(current?:Pick<GeneratedWall,'id'|'revision'>)=>generatedDefinitions().filter(d=>(d.revision!=='dev-1'&&d.catalogVisibility!=='reference-only')||(current?.id===d.id&&current.revision===d.revision))
+/** Highest admitted production-N per material is current; exact saved revisions remain resolvable. */
+export function currentGeneratedDefinitions(definitions:readonly GeneratedDefinition[]=generatedDefinitions()) {
+ const current=new Map<string,GeneratedDefinition>()
+ for(const d of definitions){if(d.revision==='dev-1'||d.catalogVisibility==='reference-only')continue;const old=current.get(d.id),rank=(r:string)=>Number(/^production-(\d+)$/.exec(r)?.[1]??0);if(!old||rank(d.revision)>rank(old.revision))current.set(d.id,d)}
+ return [...current.values()]
+}
+export function generatedWallChoices(current?:Pick<GeneratedWall,'id'|'revision'>){const preferred=new Set(currentGeneratedDefinitions());return generatedDefinitions().filter(d=>preferred.has(d)||(current?.id===d.id&&current.revision===d.revision))}
 export function generatedDefinition(g:Pick<GeneratedWall,'id'|'revision'>){const d=records.get(g.id+'@'+g.revision);if(!d)throw Error('Generated wall pack revision is unavailable.');return d}
 export function validateGeneratedWall(g:GeneratedWall){if(!g||!keys(g,['id','revision','seed','organic','growth','overgrowth','regularity','variation','roughness'])||!Number.isInteger(g.seed)||g.seed<0||g.seed>0xffffffff||![g.organic,g.growth,g.overgrowth].every(n=>Number.isFinite(n)&&n>=0&&n<=1))throw Error('Invalid generated wall settings.');const d=generatedDefinition(g);if(d.generatorType!=='living-root'&&[g.organic,g.growth,g.overgrowth].some(n=>n!==0))throw Error('This generated strategy does not use root growth settings.');if((d.generatorType==='masonry'||d.generatorType==='linear')&&![g.regularity,g.variation].every(n=>typeof n==='number'&&Number.isFinite(n)&&n>=0&&n<=1))throw Error('Invalid masonry settings.');if(d.generatorType==='rock'&&(![g.roughness,g.variation].every(n=>typeof n==='number'&&Number.isFinite(n)&&n>=0&&n<=1)||g.regularity!==undefined))throw Error('Invalid rock settings.');if(d.generatorType!=='rock'&&g.roughness!==undefined)throw Error('Rock roughness requires a rock generator.');if(d.generatorType==='living-root'&&(g.regularity!==undefined||g.variation!==undefined))throw Error('Masonry parameters require a masonry generator.')}
 export const ROOT_PRESETS={Clean:{organic:.35,growth:.2,overgrowth:0},Natural:{organic:.55,growth:.45,overgrowth:.15},Ancient:{organic:.7,growth:.7,overgrowth:.2},Overgrown:{organic:.65,growth:.65,overgrowth:.7}}
 export const ROOT_WIDTHS={Thin:.5,Standard:1,Heavy:2,Massive:3}
 export const generatedPixelsPerFoot=(s:WallStyle)=>s.wall.pixelsPerUnit*(s.wall.unit==='m'?.3048:s.wall.unit==='ft'?1:s.wall.unit==='cells'?.2:10)
-export function generatedWallStyle(base:WallStyle,map:MapDocument,id='living-root',revision='production-1'):WallStyle{const d=generatedDefinition({id,revision}),reference=materialMapReference(map),style={...base,stroke:{kind:'solid' as const,color:'#775238'},wall:{...base.wall,...reference,material:undefined,renderingMode:'generated' as const,generated:{id,revision,seed:1,organic:d.defaults.organic,growth:d.defaults.growth,overgrowth:d.defaults.overgrowth,...(d.generatorType==='rock'?{roughness:d.defaults.roughness,variation:d.defaults.variation}:{}),...(['masonry','linear'].includes(d.generatorType)?{regularity:d.defaults.regularity,variation:d.defaults.variation}:{})},outline:{...base.wall.outline,enabled:false}}};return {...style,strokeWidth:d.defaults.width*generatedPixelsPerFoot(style)}}
+export function generatedWallStyle(base:WallStyle,map:MapDocument,id='living-root',revision=currentGeneratedDefinitions().find(d=>d.id===id)?.revision??'production-1'):WallStyle{const d=generatedDefinition({id,revision}),reference=materialMapReference(map),style={...base,stroke:{kind:'solid' as const,color:'#775238'},wall:{...base.wall,...reference,material:undefined,renderingMode:'generated' as const,generated:{id,revision,seed:1,organic:d.defaults.organic,growth:d.defaults.growth,overgrowth:d.defaults.overgrowth,...(d.generatorType==='rock'?{roughness:d.defaults.roughness,variation:d.defaults.variation}:{}),...(['masonry','linear'].includes(d.generatorType)?{regularity:d.defaults.regularity,variation:d.defaults.variation}:{})},outline:{...base.wall.outline,enabled:false}}};return {...style,strokeWidth:d.defaults.width*generatedPixelsPerFoot(style)}}
