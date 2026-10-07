@@ -8,6 +8,8 @@ Een optionele ignored `.runtime.local/primary.json` kan `directory` (absoluut), 
 
 De launcher controleert de backendpoort vóór starten. Bij een bestaande service meldt hij de draaiende instance; er wordt geen tweede writer gestart. De bestaande kernel-lease beschermt dezelfde dataset ook over verschillende poorten. Er bestaat momenteel geen aparte one-click Dev launcher. Een eventuele toekomstige launcher moet ditzelfde npm-commando en profiel gebruiken.
 
+Vite scant dependencies vanuit uitsluitend het applicatie-entrypoint `index.html`. Lokale HTML-proofs onder QA- en deliverabledirectories zijn geen extra applicaties; zij mogen de normale startup niet vertragen door automatische entrypoint-discovery. Expliciet geopende authoring-/proofpagina's blijven bereikbaar.
+
 ## QA, tests en release
 
 QA gebruikt `MAPWEAVER_RUNTIME_PROFILE=qa` met een expliciete absolute geïsoleerde `MAPWEAVER_DATA_DIR` en aparte poorten. Tests gebruiken profiel `test` en een eigen tijdelijke root. Ontbrekende QA/test-root of een verwijzing naar Primary Development veroorzaakt een startupfout. Vitest-storage weigert bovendien de normale gebruikersroot. Bestaande QA-scripts met expliciete development origin worden als QA behandeld wanneer zij nog geen profiel leveren. Gebruik voor nieuwe QA-scripts altijd het expliciete profiel.

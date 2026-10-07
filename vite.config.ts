@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  // Local HTML proofs are not application entrypoints; keep dev startup bounded.
+  optimizeDeps: { entries: ['index.html'] },
   // Browser traces contain HTML; writing them must not reload the application under test.
   server: { proxy: { '/api/v1': { target: `http://127.0.0.1:${process.env.MAPWEAVER_PORT || 47831}`, changeOrigin: true } }, watch: { ignored: ['**/.sprint12.local/**', '**/.audit.local/**', '**/.qa.local/**', '**/.npm-cache/**'] } },
   build: { rolldownOptions: { output: { codeSplitting: {
