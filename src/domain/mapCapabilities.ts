@@ -1,6 +1,6 @@
 import type { MapType } from './geography'
-export type EditorTool = 'ceiling'|'textureBrush'|'waterDepth'|'landBrush'|'terrainBrush'|'select'|'placeStamp'|'patternFill'|'scatter'|'path'|'route'|'area'|'wall'|'opening'|'measure'|'place'|'label'|'legend'|'compass'|'scaleBar'|'title'|'infoPanel'|'editArea'|'editPath'
-const common: readonly EditorTool[] = ['select','placeStamp','scatter','path','area','place','label','legend','compass','scaleBar','title','infoPanel','editArea','editPath']
+export type EditorTool = 'environmentalDetail'|'ceiling'|'textureBrush'|'waterDepth'|'landBrush'|'terrainBrush'|'select'|'placeStamp'|'patternFill'|'scatter'|'path'|'route'|'area'|'wall'|'opening'|'measure'|'place'|'label'|'legend'|'compass'|'scaleBar'|'title'|'infoPanel'|'editArea'|'editPath'
+const common: readonly EditorTool[] = ['environmentalDetail','select','placeStamp','scatter','path','area','place','label','legend','compass','scaleBar','title','infoPanel','editArea','editPath']
 /** Creation context only. Existing artwork and property editors never depend on this matrix. */
 export const MAP_TYPE_CAPABILITIES: Record<MapType,{tools:readonly EditorTool[]; geographicAreas:boolean; rooms:boolean}> = {
  battlemap:{tools:[...common,'wall','opening','ceiling','textureBrush'],geographicAreas:false,rooms:true},

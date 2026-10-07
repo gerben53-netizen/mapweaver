@@ -1,3 +1,6 @@
+import { EnvironmentalDetailNode } from './EnvironmentalDetailNode'
+import { useEnvironmentalDetailStore } from '../store/environmentalDetailStore'
+import { environmentalOrder, environmentalBoundary } from '../domain/environmentalDetail'
 import { TexturePaintNode } from './TexturePaintNode'
 import { useTextureBrushStore } from '../store/textureBrushStore'
 import { texturePaintOrder, texturePaintBoundary } from '../domain/terrainPaint'
@@ -47,6 +50,7 @@ export const MapContent = memo(function MapContent({ map: savedMap, objects: sav
   const landPreview=useLandBrushStore(s=>s.preview)
   const map=landPreview?{...savedMap,landEditing:{version:1 as const,manual:true as const,revision:1}}:savedMap
   const objects=landPreview?savedObjects.filter(o=>!landPreview.removed.includes(o.id)).map(o=>landPreview.replacements.find(a=>a.id===o.id)||o):savedObjects
+  const detailPreview=useEnvironmentalDetailStore(s=>s.preview!==null)
   const texturePreview=useTextureBrushStore(s=>s.preview!==null)
   const paintPreview=useTerrainBrushStore(s=>s.preview!==null)
   const annotationPreview=useEditorStore(s=>s.annotationPreview)
@@ -59,8 +63,9 @@ export const MapContent = memo(function MapContent({ map: savedMap, objects: sav
   const content = { layers, objects, objectGroups, layerTree }
   const ceilingsVisible=useEditorStore(s=>s.ceilingsVisible)
   const baseObjects = landBaseOrder(terrainPaintOrder(effectOrder([...projectObjects(content, true, solo).filter(o=>ceilingsVisible||!(o.kind==='area'&&o.ceiling)),...(landPreview?.added||[])].map(o=>annotationPreview.find(v=>v.id===o.id)|| (areaPreview?.id===o.id?areaPreview:scatterPreview?.id===o.id?scatterPreview:o)), map.effects),!!map.terrainPaint||paintPreview||!!map.landEditing||!!map.geographyFinish||!!map.waterDepth?.enabled||!!(map.coastalContours?.enabled&&map.coastalContours.count)),!!map.landEditing||!!map.geographyFinish||!!map.waterDepth?.enabled||!!(map.coastalContours?.enabled&&map.coastalContours.count))
-  const visibleObjects=texturePaintOrder(baseObjects,!!map.texturePaint||texturePreview),textureBoundary=texturePaintBoundary(visibleObjects),restricted=textureFloors(objects).length>0
+  const visibleObjects=environmentalOrder(texturePaintOrder(baseObjects,!!map.texturePaint||texturePreview),!!map.environmentalDetail||detailPreview),textureBoundary=texturePaintBoundary(visibleObjects),restricted=textureFloors(objects).length>0
   const clip=map.landEditing?((c:Konva.Context)=>traceLandClip(c._context,visibleObjects.filter(isLandmass))):undefined
+  const detailFloor=environmentalBoundary(visibleObjects,'floor'),detailEdge=environmentalBoundary(visibleObjects,'edge')
   const paintBoundary=terrainPaintBoundary(visibleObjects)
   const boundary = fogBoundary(visibleObjects, map.effects)
   const indexOpenings=useMemo(()=>createOpeningIndex(),[]),openingIndex=indexOpenings(openingPreview?[...visibleObjects,openingPreview]:visibleObjects),byId=new Map(objects.map(o=>[o.id,o]))
@@ -95,13 +100,14 @@ export const MapContent = memo(function MapContent({ map: savedMap, objects: sav
     <Group name="map-art" clipX={0} clipY={0} clipWidth={map.width} clipHeight={map.height}>
       {map.background && <BackgroundImage id={map.background.id} width={map.background.width} height={map.background.height} />}
       <TexturePaintNode paint={map.texturePaint} objects={visibleObjects} restricted={false} base/>
-      {!map.background && objects.length === 0 && !scatterPreview && !map.terrainPaint && !map.texturePaint && activeTool!=='textureBrush' && activeTool!=='terrainBrush' && <Text x={0} y={map.height / 2 - 20} width={map.width} text="Choose Area, Path or Place asset to begin" align="center" fontFamily="Segoe UI, sans-serif" fontSize={28} fill="#585e59" listening={false} />}
+      {!map.background && objects.length === 0 && !scatterPreview && !map.terrainPaint && !map.texturePaint && !map.environmentalDetail && activeTool!=='environmentalDetail' && activeTool!=='textureBrush' && activeTool!=='terrainBrush' && <Text x={0} y={map.height / 2 - 20} width={map.width} text="Choose Area, Path or Place asset to begin" align="center" fontFamily="Segoe UI, sans-serif" fontSize={28} fill="#585e59" listening={false} />}
       {(!isLandMap(map)||isHexGrid(map.grid))&&gridRenderPosition(map.grid) === 'below' && <MapGrid map={map} zoom={zoom} />}
       {isLandMap(map)&&!isHexGrid(map.grid)&&mapWorkspace(map).geography.graticule&&<Shape listening={false} sceneFunc={c=>drawGeographicGrid(c._context,map,zoom)}/>}
       {visibleObjects.map((object, index) => <Fragment key={object.id}>
         {index===textureBoundary&&<TexturePaintNode paint={map.texturePaint} objects={visibleObjects} restricted={restricted}/>}
         {index === paintBoundary && <><WaterDepthNode map={map} objects={visibleObjects}/><Shape listening={false} perfectDrawEnabled={false} sceneFunc={c=>paintCoastalContours(c._context,map,visibleObjects)}/></>}
         {index === paintBoundary && <Group clipFunc={clip}><TerrainPaintNode paint={map.terrainPaint}/><Shape listening={false} perfectDrawEnabled={false} sceneFunc={c=>paintGeographyFinish(c._context,map,visibleObjects,'relief')}/></Group>}
+        {index===detailFloor&&<EnvironmentalDetailNode map={map} tier="floor"/>}{index===detailEdge&&<EnvironmentalDetailNode map={map} tier="edge"/>}
         {index === boundary && <Shape listening={false} sceneFunc={c=>paintFog(c._context,map,visibleObjects)}/>}
         {object.kind==='label'&&object.ownerId&&(object.leader||selectedIds.includes(object.id))&&byId.has(object.ownerId)&&<Shape listening={false} sceneFunc={c=>{const o=object,owner=byId.get(o.ownerId!)!,ctx=c._context;ctx.save();ctx.globalAlpha=o.opacity;ctx.strokeStyle=o.leader?o.style.color:'#579be5';ctx.lineWidth=o.leader?1:1/zoom;ctx.beginPath();ctx.moveTo(owner.x+owner.width/2,owner.y+owner.height/2);ctx.lineTo(o.x+o.width*o.anchor.x,o.y+o.height*o.anchor.y);ctx.stroke();ctx.restore()}}/>}
         <Group clipFunc={clipsToLand(object)?clip:undefined}>{isOpening(object) ? (()=>{const wall=byId.get(object.wallId);return wall?.kind==='path'?<OpeningNode object={object} wall={wall} locked={activeTool!=='select'||!editable.has(object.id)}/>:null})() : <EditableStamp viewportSize={viewportSize} openings={openingIndex.get(object.id)} object={object} connections={connections.get(object.id)} locked={activeTool !== 'select' || !editable.has(object.id)} register={register} />}</Group>
@@ -110,6 +116,7 @@ export const MapContent = memo(function MapContent({ map: savedMap, objects: sav
       {textureBoundary===visibleObjects.length&&<TexturePaintNode paint={map.texturePaint} objects={visibleObjects} restricted={restricted}/>}
       {paintBoundary===visibleObjects.length&&<><WaterDepthNode map={map} objects={visibleObjects}/><Shape listening={false} perfectDrawEnabled={false} sceneFunc={c=>paintCoastalContours(c._context,map,visibleObjects)}/></>}
       {paintBoundary===visibleObjects.length&&<Group clipFunc={clip}><TerrainPaintNode paint={map.terrainPaint}/><Shape listening={false} perfectDrawEnabled={false} sceneFunc={c=>paintGeographyFinish(c._context,map,visibleObjects,'relief')}/></Group>}
+      {detailFloor===visibleObjects.length&&<EnvironmentalDetailNode map={map} tier="floor"/>}{detailEdge===visibleObjects.length&&<EnvironmentalDetailNode map={map} tier="edge"/>}
       {boundary === -1 && <Shape listening={false} sceneFunc={c=>paintFog(c._context,map,visibleObjects)}/>}
       {gridRenderPosition(map.grid) === 'above' && <MapGrid map={map} zoom={zoom} />}
       <Shape listening={false} sceneFunc={c=>{paintVignette(c._context,map);paintFrame(c._context,map)}}/>

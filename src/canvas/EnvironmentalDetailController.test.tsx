@@ -1,0 +1,20 @@
+import {beforeEach,expect,it,vi} from 'vitest'
+import {createRef} from 'react'
+import {fireEvent,render} from '@testing-library/react'
+import {EnvironmentalDetailController} from './EnvironmentalDetailController'
+import {useEditorStore} from '../store/editorStore'
+import {useProjectStore} from '../store/projectStore'
+import {useEnvironmentalDetailStore} from '../store/environmentalDetailStore'
+import {defaultDetailBrush} from '../domain/environmentalDetail'
+import {history,useHistoryStore} from '../store/history'
+import {cancelObjectGesture} from './interaction'
+vi.mock('react-konva/lib/ReactKonvaCore',()=>({Shape:()=>null}))
+class TestPointerEvent extends MouseEvent {
+  pointerId:number
+  constructor(type:string,init:PointerEventInit={}){super(type,init);this.pointerId=init.pointerId??1}
+}
+beforeEach(()=>{vi.stubGlobal('PointerEvent',TestPointerEvent);cancelObjectGesture();useProjectStore.setState(s=>({map:{...s.map,width:600,height:400,environmentalDetail:undefined}}));useEditorStore.setState({activeTool:'environmentalDetail',viewport:{zoom:2,pan:{x:10,y:20}}});useEnvironmentalDetailStore.setState({settings:{...defaultDetailBrush},preview:null,cursor:null});history.reset()})
+function mount(){const surface=document.createElement('div');surface.setPointerCapture=vi.fn();surface.releasePointerCapture=vi.fn();surface.hasPointerCapture=()=>false;document.body.append(surface);const ref=createRef<HTMLDivElement>();ref.current=surface;const view=render(<EnvironmentalDetailController surface={ref}/>);const send=(type:string,x=100,y=100,button=0)=>fireEvent(surface,new TestPointerEvent(type,{clientX:x,clientY:y,button,pointerId:1,bubbles:true,cancelable:true}));return {surface,send,close:()=>{view.unmount();surface.remove()}}}
+it('commits a continuous pointer drag once in map coordinates and redo is exact',()=>{const m=mount();m.send('pointerdown');m.send('pointermove',220,160);expect(useHistoryStore.getState().undoCount).toBe(0);expect(useProjectStore.getState().map.environmentalDetail).toBeUndefined();m.send('pointerup',250,170);expect(useHistoryStore.getState().undoCount).toBe(1);const saved=useProjectStore.getState().map.environmentalDetail!;expect(saved.strokes[0].points[0]).toEqual({x:45,y:40});history.undo();expect(useProjectStore.getState().map.environmentalDetail).toBeUndefined();history.redo();expect(useProjectStore.getState().map.environmentalDetail).toEqual(saved);m.close()})
+it.each(['Escape','blur','pointercancel','tool-change'])('safely discards an interrupted %s gesture',reason=>{const m=mount();m.send('pointerdown');m.send('pointermove',200,150);if(reason==='Escape')fireEvent.keyDown(window,{key:'Escape'});else if(reason==='blur')fireEvent(window,new Event('blur'));else if(reason==='tool-change')useEditorStore.setState({activeTool:'select'});else m.send('pointercancel');m.send('pointerup');expect(useProjectStore.getState().map.environmentalDetail).toBeUndefined();expect(useHistoryStore.getState().undoCount).toBe(0);expect(useEnvironmentalDetailStore.getState().preview).toBeNull();m.close()})
+it('ignores middle pan, prevented Space navigation and presses outside map bounds',()=>{const m=mount();m.send('pointerdown',100,100,1);m.send('pointerup',100,100,1);m.send('pointerdown',-20,20);m.send('pointerup',-20,20);const e=new TestPointerEvent('pointerdown',{clientX:100,clientY:100,button:0,cancelable:true,pointerId:1});e.preventDefault();fireEvent(m.surface,e);m.send('pointerup');expect(useHistoryStore.getState().undoCount).toBe(0);m.close()})

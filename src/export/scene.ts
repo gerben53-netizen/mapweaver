@@ -1,3 +1,4 @@
+import { environmentalOrder, environmentalBoundary } from '../domain/environmentalDetail'
 import { texturePaintOrder, texturePaintBoundary } from '../domain/terrainPaint'
 import { textureFloors } from '../domain/textureBrush'
 import { isHexGrid, hexGridRange, MAX_HEX_CELLS } from '../domain/hexGrid'
@@ -13,7 +14,7 @@ import { projectObjects } from '../domain/projectView'
 import { normalizeOffset, cellSummary } from '../domain/mapSettings'
 export const EXPORT_LIMITS = { pixels: 32_000_000, edge: 16384, workingBytes: 512 * 1024 * 1024 } as const
 export interface ExportOptions { includeScaleBar?:boolean; scale: 1 | 2; includeGrid: boolean; transparent: boolean }
-export type ExportItem = {kind:'baseTexturePaint'|'texturePaint'|'fog'|'finish'|'terrainPaint'|'relief'|'waterDepth'|'coastalContours'} | {kind:'scaleBar'} | { kind: 'color'; color: string } | { kind: 'background'; background: NonNullable<MapDocument['background']> } | { kind: 'grid' } | { kind: 'object'; object: MapObject }
+export type ExportItem = {kind:'environmentalFloor'|'environmentalEdge'|'baseTexturePaint'|'texturePaint'|'fog'|'finish'|'terrainPaint'|'relief'|'waterDepth'|'coastalContours'} | {kind:'scaleBar'} | { kind: 'color'; color: string } | { kind: 'background'; background: NonNullable<MapDocument['background']> } | { kind: 'grid' } | { kind: 'object'; object: MapObject }
 export interface ExportScene { textureRestricted?:boolean; map: MapDocument; width: number; height: number; scale: 1 | 2; items: ExportItem[] }
 export function exportDimensions(map: Pick<MapDocument, 'width' | 'height'>, scale: 1 | 2) {
   const width = map.width * scale, height = map.height * scale
@@ -30,13 +31,16 @@ export function exportScene(project: ProjectSnapshot, options: ExportOptions): E
   if(map.texturePaint?.baseTiles)items.push({kind:'baseTexturePaint'})
   if (options.includeGrid && !map.grid.renderAboveObjects) items.push({ kind: 'grid' })
   const baseOrder = landBaseOrder(terrainPaintOrder(effectOrder(projectObjects(project, true).filter(o=>!(o.kind==='area'&&o.ceiling)), map.effects),!!map.terrainPaint||!!map.landEditing||!!map.geographyFinish||!!map.waterDepth?.enabled||!!(map.coastalContours?.enabled&&map.coastalContours.count)),!!map.landEditing||!!map.geographyFinish||!!map.waterDepth?.enabled||!!(map.coastalContours?.enabled&&map.coastalContours.count))
-  const ordered=texturePaintOrder(baseOrder,!!map.texturePaint),textureBoundary=texturePaintBoundary(ordered),paintBoundary=terrainPaintBoundary(ordered),boundary=fogBoundary(ordered,map.effects)
-  ordered.forEach((object,index)=>{if(index===textureBoundary&&map.texturePaint)items.push({kind:'texturePaint'});if(index===paintBoundary&&map.waterDepth?.enabled)items.push({kind:'waterDepth'});if(index===paintBoundary&&map.coastalContours?.enabled&&map.coastalContours.count)items.push({kind:'coastalContours'});if(index===paintBoundary&&map.terrainPaint)items.push({kind:'terrainPaint'});if(index===paintBoundary&&map.geographyFinish)items.push({kind:'relief'});if(index===boundary)items.push({kind:'fog'});items.push({kind:'object',object:structuredClone(object)})})
+  const ordered=environmentalOrder(texturePaintOrder(baseOrder,!!map.texturePaint),!!map.environmentalDetail),textureBoundary=texturePaintBoundary(ordered),paintBoundary=terrainPaintBoundary(ordered),boundary=fogBoundary(ordered,map.effects)
+  const detailFloor=environmentalBoundary(ordered,'floor'),detailEdge=environmentalBoundary(ordered,'edge')
+  ordered.forEach((object,index)=>{if(index===textureBoundary&&map.texturePaint)items.push({kind:'texturePaint'});if(index===paintBoundary&&map.waterDepth?.enabled)items.push({kind:'waterDepth'});if(index===paintBoundary&&map.coastalContours?.enabled&&map.coastalContours.count)items.push({kind:'coastalContours'});if(index===paintBoundary&&map.terrainPaint)items.push({kind:'terrainPaint'});if(index===paintBoundary&&map.geographyFinish)items.push({kind:'relief'});if(index===detailFloor&&map.environmentalDetail)items.push({kind:'environmentalFloor'});if(index===detailEdge&&map.environmentalDetail)items.push({kind:'environmentalEdge'});if(index===boundary)items.push({kind:'fog'});items.push({kind:'object',object:structuredClone(object)})})
   if(textureBoundary===ordered.length&&map.texturePaint)items.push({kind:'texturePaint'})
   if(paintBoundary===ordered.length&&map.waterDepth?.enabled)items.push({kind:'waterDepth'})
   if(paintBoundary===ordered.length&&map.coastalContours?.enabled&&map.coastalContours.count)items.push({kind:'coastalContours'})
   if(paintBoundary===ordered.length&&map.terrainPaint)items.push({kind:'terrainPaint'})
   if(paintBoundary===ordered.length&&map.geographyFinish)items.push({kind:'relief'})
+  if(detailFloor===ordered.length&&map.environmentalDetail)items.push({kind:'environmentalFloor'})
+  if(detailEdge===ordered.length&&map.environmentalDetail)items.push({kind:'environmentalEdge'})
   if(boundary===-1&&map.effects?.fog.enabled)items.push({kind:'fog'})
   if(items.some(i=>i.kind==='object'&&i.object.kind==='scaleBar')&&metersPerPixel(map)===null)throw Error('Configure physical scale in Map settings, or hide the unavailable scale bar before exporting.')
   if (options.includeGrid && map.grid.renderAboveObjects) items.push({ kind: 'grid' })

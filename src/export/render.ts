@@ -1,3 +1,4 @@
+import { drawEnvironmentalDetail } from '../canvas/drawEnvironmentalDetail'
 import { loadGeneratedWall } from '../canvas/drawGeneratedWall'
 import { softShadowStyle } from '../domain/mapEffects'
 import { drawTexturePaint } from '../canvas/drawTexturePaint'
@@ -56,6 +57,7 @@ export function buildScene(scene: ExportScene, images: Map<string, ExportImage>)
       if(item.kind==='scaleBar')root.add(new Shape({listening:false,sceneFunc:c=>drawScaleBar(c._context,scene.map)}))
       if(item.kind==='coastalContours')root.add(new Shape({listening:false,perfectDrawEnabled:false,sceneFunc:c=>paintCoastalContours(c._context,scene.map,objects)}))
       if(item.kind==='waterDepth')root.add(new Shape({listening:false,perfectDrawEnabled:false,sceneFunc:c=>paintWaterDepth(c._context,scene.map,objects)}))
+      if(item.kind==='environmentalFloor'||item.kind==='environmentalEdge')root.add(new Shape({listening:false,perfectDrawEnabled:false,sceneFunc:c=>drawEnvironmentalDetail(c._context,scene.map.environmentalDetail,scene.map.width,scene.map.height,item.kind==='environmentalFloor'?'floor':'edge',scene.scale)}))
       if(item.kind==='baseTexturePaint')root.add(new Shape({listening:false,perfectDrawEnabled:false,sceneFunc:c=>drawTexturePaint(c._context,scene.map.texturePaint,objects,false,images,true)}))
       if(item.kind==='texturePaint')root.add(new Shape({listening:false,perfectDrawEnabled:false,sceneFunc:c=>drawTexturePaint(c._context,scene.map.texturePaint,objects,!!scene.textureRestricted,images)}))
       if(item.kind==='terrainPaint')root.add(new Shape({listening:false,perfectDrawEnabled:false,sceneFunc:c=>{const ctx=c._context;ctx.save();if(scene.map.landEditing){traceLandClip(ctx,lands);ctx.clip()}paintTerrain(ctx,scene.map.terrainPaint);ctx.restore()}}))

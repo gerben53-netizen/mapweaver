@@ -26,6 +26,7 @@ export function ToolRail() {
       {button('ceiling','Ceiling','ceiling',()=>useEditorStore.setState({activeTool:'ceiling',areaShape:'polygon',ceilingsVisible:true,message:''}))}{button('wall','Wall','wall')}{button('opening','Opening','opening')}
     </div>
     <div role="group" aria-label="Terrain and surface" className={styles.toolGroup}>
+      {button('environmentalDetail','Environmental Detail','scatter')}
       {button('textureBrush','Texture Brush','brush')}
       {land&&<>
         {button('landBrush','Land / Water','landmass')}
