@@ -1,3 +1,6 @@
+import { useArlStore } from '../store/arlStore'
+import { arlBatches } from './architecturalReadability'
+import { ArchitecturalReadabilityNode } from './ArchitecturalReadabilityNode'
 import { EnvironmentalDetailNode } from './EnvironmentalDetailNode'
 import { useEnvironmentalDetailStore } from '../store/environmentalDetailStore'
 import { environmentalOrder, environmentalBoundary } from '../domain/environmentalDetail'
@@ -68,6 +71,8 @@ export const MapContent = memo(function MapContent({ map: savedMap, objects: sav
   const detailFloor=environmentalBoundary(visibleObjects),detailEdge=detailFloor
   const paintBoundary=terrainPaintBoundary(visibleObjects)
   const boundary = fogBoundary(visibleObjects, map.effects)
+  const arlMode=useArlStore(s=>s.mode),arl=arlBatches(map,visibleObjects,arlMode,[textureBoundary,paintBoundary,detailFloor,boundary]),arlByIndex=new Map(arl.map(batch=>[batch.start,batch])),arlIds=new Set(arl.flatMap(batch=>batch.walls.map(w=>w.id)))
+  const arlObjects=openingPreview?[...visibleObjects.filter(o=>o.id!==openingPreview.id),openingPreview]:visibleObjects
   const indexOpenings=useMemo(()=>createOpeningIndex(),[]),openingIndex=indexOpenings(openingPreview?[...visibleObjects,openingPreview]:visibleObjects),byId=new Map(objects.map(o=>[o.id,o]))
   const connections=new Map([...wallConnections(visibleObjects),...routeConnections(visibleObjects)])
   const editable = editableProjectIds(content, solo)
@@ -109,8 +114,9 @@ export const MapContent = memo(function MapContent({ map: savedMap, objects: sav
         {index === paintBoundary && <Group clipFunc={clip}><TerrainPaintNode paint={map.terrainPaint}/><Shape listening={false} perfectDrawEnabled={false} sceneFunc={c=>paintGeographyFinish(c._context,map,visibleObjects,'relief')}/></Group>}
         {index===detailFloor&&<EnvironmentalDetailNode map={map} tier="floor"/>}{index===detailEdge&&<EnvironmentalDetailNode map={map} tier="edge"/>}
         {index === boundary && <Shape listening={false} sceneFunc={c=>paintFog(c._context,map,visibleObjects)}/>}
+        {arlByIndex.has(index)&&<ArchitecturalReadabilityNode batch={arlByIndex.get(index)!} map={map} objects={arlObjects} mode={arlMode}/>}
         {object.kind==='label'&&object.ownerId&&(object.leader||selectedIds.includes(object.id))&&byId.has(object.ownerId)&&<Shape listening={false} sceneFunc={c=>{const o=object,owner=byId.get(o.ownerId!)!,ctx=c._context;ctx.save();ctx.globalAlpha=o.opacity;ctx.strokeStyle=o.leader?o.style.color:'#579be5';ctx.lineWidth=o.leader?1:1/zoom;ctx.beginPath();ctx.moveTo(owner.x+owner.width/2,owner.y+owner.height/2);ctx.lineTo(o.x+o.width*o.anchor.x,o.y+o.height*o.anchor.y);ctx.stroke();ctx.restore()}}/>}
-        <Group clipFunc={clipsToLand(object)?clip:undefined}>{isOpening(object) ? (()=>{const wall=byId.get(object.wallId);return wall?.kind==='path'?<OpeningNode object={object} wall={wall} locked={activeTool!=='select'||!editable.has(object.id)}/>:null})() : <EditableStamp viewportSize={viewportSize} openings={openingIndex.get(object.id)} object={object} connections={connections.get(object.id)} locked={activeTool !== 'select' || !editable.has(object.id)} register={register} />}</Group>
+        <Group clipFunc={clipsToLand(object)?clip:undefined}>{isOpening(object) ? (()=>{const wall=byId.get(object.wallId);return wall?.kind==='path'?<OpeningNode object={object} wall={wall} locked={activeTool!=='select'||!editable.has(object.id)}/>:null})() : <EditableStamp suppressArtwork={arlIds.has(object.id)} viewportSize={viewportSize} openings={openingIndex.get(object.id)} object={object} connections={connections.get(object.id)} locked={activeTool !== 'select' || !editable.has(object.id)} register={register} />}</Group>
         {object.kind==='path'&&object.route?.kind==='river'&&<WaterMouthNode map={map} objects={visibleObjects} id={object.id}/>}
       </Fragment>)}
       {textureBoundary===visibleObjects.length&&<TexturePaintNode paint={map.texturePaint} objects={visibleObjects} restricted={restricted}/>}

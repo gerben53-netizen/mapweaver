@@ -50,3 +50,16 @@ it.each(Object.entries(shapes))('grounds %s using one cached visual silhouette a
     }
   }
 })
+
+it('raw ARL artwork replaces rather than stacks baseline contact shadow', async () => {
+  const { generatedSurface } = await import('./drawGeneratedWall')
+  const p = createWall([{id:'a',x:40,y:100,mode:'corner'},{id:'b',x:350,y:100,mode:'corner'}],false,generatedWallStyle(SIMPLE_WALL,map,'natural-cave-rock','production-1'))
+  await loadGeneratedWall(p.wall!.generated!)
+  const from = contexts.length
+  const raw = generatedSurface(p, [], false, true)
+  expect(raw).toBeDefined()
+  expect(contexts.slice(from).filter(c => c.shadowColor === 'rgba(20, 23, 20, 0.16)')).toHaveLength(0)
+  expect(generatedSurface(p, [], false, true)).toBe(raw)
+  paintGeneratedWall(context(), p, [])
+  expect(contexts.slice(from).filter(c => c.shadowColor === 'rgba(20, 23, 20, 0.16)')).toHaveLength(1)
+})

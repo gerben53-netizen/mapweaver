@@ -1,3 +1,4 @@
+import type { ArlMode } from '../store/arlStore'
 import { environmentalOrder, environmentalBoundary } from '../domain/environmentalDetail'
 import { texturePaintOrder, texturePaintBoundary } from '../domain/terrainPaint'
 import { textureFloors } from '../domain/textureBrush'
@@ -13,9 +14,9 @@ import type { ProjectSnapshot } from '../store/history'
 import { projectObjects } from '../domain/projectView'
 import { normalizeOffset, cellSummary } from '../domain/mapSettings'
 export const EXPORT_LIMITS = { pixels: 32_000_000, edge: 16384, workingBytes: 512 * 1024 * 1024 } as const
-export interface ExportOptions { includeScaleBar?:boolean; scale: 1 | 2; includeGrid: boolean; transparent: boolean }
+export interface ExportOptions { arlMode?:ArlMode; includeScaleBar?:boolean; scale: 1 | 2; includeGrid: boolean; transparent: boolean }
 export type ExportItem = {kind:'environmentalFloor'|'environmentalEdge'|'baseTexturePaint'|'texturePaint'|'fog'|'finish'|'terrainPaint'|'relief'|'waterDepth'|'coastalContours'} | {kind:'scaleBar'} | { kind: 'color'; color: string } | { kind: 'background'; background: NonNullable<MapDocument['background']> } | { kind: 'grid' } | { kind: 'object'; object: MapObject }
-export interface ExportScene { textureRestricted?:boolean; map: MapDocument; width: number; height: number; scale: 1 | 2; items: ExportItem[] }
+export interface ExportScene { arlMode?:ArlMode; textureRestricted?:boolean; map: MapDocument; width: number; height: number; scale: 1 | 2; items: ExportItem[] }
 export function exportDimensions(map: Pick<MapDocument, 'width' | 'height'>, scale: 1 | 2) {
   const width = map.width * scale, height = map.height * scale
   if (![1, 2].includes(scale) || ![width, height].every((n) => Number.isInteger(n) && n > 0 && n <= EXPORT_LIMITS.edge) || width * height > EXPORT_LIMITS.pixels) throw new Error('Export exceeds 32 million pixels or 16,384 pixels per side. Choose 1× or a smaller map.')
@@ -46,7 +47,7 @@ export function exportScene(project: ProjectSnapshot, options: ExportOptions): E
   if (options.includeGrid && map.grid.renderAboveObjects) items.push({ kind: 'grid' })
   if(isLandMap(map)&&options.includeScaleBar)items.push({kind:'scaleBar'})
   if(map.effects?.vignette.enabled||map.effects?.frame.enabled)items.push({kind:'finish'})
-  return { textureRestricted:textureFloors(project.objects).length>0, map, width, height, scale: options.scale, items }
+  return { arlMode:options.arlMode??'OFF', textureRestricted:textureFloors(project.objects).length>0, map, width, height, scale: options.scale, items }
 }
 export function roll20Settings(map: MapDocument, options: ExportOptions) {
   if(isHexGrid(map.grid))return `PNG: ${map.width*options.scale} × ${map.height*options.scale} pixels. Hex ${map.grid.type==='hex-flat'?'flat':'pointy'} top: ${map.grid.cellSize*options.scale} px corner-to-corner; origin ${map.grid.offsetX*options.scale}, ${map.grid.offsetY*options.scale} px. Grid ${options.includeGrid?'included':'not included'}. Align the image manually in your VTT.`

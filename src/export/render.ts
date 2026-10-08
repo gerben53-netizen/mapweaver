@@ -1,3 +1,6 @@
+import { arlBatches } from '../canvas/architecturalReadability'
+import { paintArlBatch } from '../canvas/drawArchitecturalReadability'
+import { useArlStore } from '../store/arlStore'
 import { drawEnvironmentalDetail } from '../canvas/drawEnvironmentalDetail'
 import { loadEnvironmentalImages } from '../canvas/environmentalImages'
 import { loadGeneratedWall } from '../canvas/drawGeneratedWall'
@@ -48,6 +51,8 @@ export function buildScene(scene: ExportScene, images: Map<string, ExportImage>)
   const root = new Group({ listening: false, clipX: 0, clipY: 0, clipWidth: scene.map.width, clipHeight: scene.map.height })
   const connections=new Map([...wallConnections(scene.items.flatMap(item=>item.kind==='object'?[item.object]:[])),...routeConnections(scene.items.flatMap(item=>item.kind==='object'?[item.object]:[]))])
   const objects=scene.items.flatMap(item=>item.kind==='object'?[item.object]:[])
+  const breaks:number[]=[];let objectIndex=0,separator=false;for(const item of scene.items){if(item.kind==='object'){if(separator)breaks.push(objectIndex);objectIndex++;separator=false}else separator=true}
+  const arlMode=scene.arlMode??'OFF',arl=arlBatches(scene.map,objects,arlMode,breaks),arlById=new Map(arl.map(batch=>[batch.walls[0].id,batch])),arlIds=new Set(arl.flatMap(batch=>batch.walls.map(w=>w.id)))
   reconcileOpenings(objects)
   const lands=objects.filter(isLandmass)
   try {
@@ -66,6 +71,9 @@ export function buildScene(scene: ExportScene, images: Map<string, ExportImage>)
       if(item.kind==='fog')root.add(new Shape({listening:false,sceneFunc:c=>paintFog(c._context,scene.map,objects)}))
       if(item.kind==='finish')root.add(new Shape({listening:false,sceneFunc:c=>{paintVignette(c._context,scene.map);paintFrame(c._context,scene.map)}}))
       if (item.kind !== 'object') continue
+      const batch=arlById.get(item.object.id)
+      if(batch)root.add(new Shape({listening:false,perfectDrawEnabled:false,sceneFunc:c=>paintArlBatch(c._context,batch,scene.map,objects,arlMode)}))
+      if(arlIds.has(item.object.id))continue
       const o = item.object, image = images.get(objectAssetId(o) || "")!, group = new Group(objectNodeProps(o))
       if(o.kind==='label'&&o.ownerId&&o.leader){const owner=objects.find(v=>v.id===o.ownerId);if(owner)root.add(new Shape({sceneFunc:c=>{const ctx=c._context;ctx.save();ctx.globalAlpha=o.opacity;ctx.strokeStyle=o.style.color;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(owner.x+owner.width/2,owner.y+owner.height/2);ctx.lineTo(o.x+o.width*o.anchor.x,o.y+o.height*o.anchor.y);ctx.stroke();ctx.restore()}}))}
       if(scene.map.landEditing&&clipsToLand(o)){const clipped=new Group({clipFunc:c=>traceLandClip(c._context,lands)});clipped.add(group);root.add(clipped)}else root.add(group)
@@ -92,6 +100,7 @@ export function renderScene(scene: ExportScene, images: Map<string, ExportImage>
 
 type Resolver = typeof resolveAsset
 export async function exportPng(project: ProjectSnapshot, options: ExportOptions, resolve: Resolver = resolveAsset): Promise<Blob> {
+  options={...options,arlMode:options.arlMode??useArlStore.getState().mode}
   const generation = useAssetContext.getState().generation
   await loadPaintTextures(project.map.terrainPaint)
   await loadEnvironmentalImages(project.map.environmentalDetail)

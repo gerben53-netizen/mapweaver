@@ -14,8 +14,9 @@ import { paintPath, pathTrace } from './drawPath'
 const NO_OPENINGS:OpeningObject[]=[]
 export function PathPaint({
   object,
-  image, connections, openings = NO_OPENINGS, viewportSize,
+  image, connections, openings = NO_OPENINGS, viewportSize, suppressArtwork = false,
 }: {
+  suppressArtwork?: boolean
   object: PathObject
   viewportSize?: {width:number;height:number}
   openings?: OpeningObject[]
@@ -44,7 +45,7 @@ export function PathPaint({
       lineCap={object.cap}
       lineJoin={object.join}
       perfectDrawEnabled={false}
-      sceneFunc={(c) => paintPath(c._context, object, image, connections,openings,preview)}
+      sceneFunc={(c) => { if (!suppressArtwork) paintPath(c._context, object, image, connections,openings,preview) }}
       hitFunc={(c, s) => {
         c._context.save()
         clipWallOpenings(c._context,object,openings,10/zoom)
