@@ -7,12 +7,12 @@ import { useArlStore } from '../store/arlStore'
 import { useProjectStore } from '../store/projectStore'
 import { invalidateAssetImages } from '../images/imageCache'
 afterEach(() => { vi.restoreAllMocks(); useArlStore.getState().setMode('OFF') })
-it('temporary C Preview cannot silently change a default export; explicit B is forwarded', async () => {
+it('temporary C Preview cannot silently change the Battlemap default export; explicit B is forwarded', async () => {
   useArlStore.getState().setMode('C')
   const get = vi.spyOn(highQualityCache, 'get').mockResolvedValue(new Blob(['png']))
   const options = { scale: 1 as const, includeGrid: false, transparent: false }
   await exportPng(useProjectStore.getState(), options)
-  expect(JSON.parse(get.mock.calls[0][0])[3][0]).toBe('OFF')
+  expect(JSON.parse(get.mock.calls[0][0])[3][0]).toBe('C')
   await exportPng(currentSnapshot(), { ...options, arlMode: 'B' })
   expect(JSON.parse(get.mock.calls[1][0])[3][0]).toBe('B')
 })

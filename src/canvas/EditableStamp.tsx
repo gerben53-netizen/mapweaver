@@ -1,3 +1,4 @@
+import { effectiveRendering } from '../domain/rendering'
 import { softShadowStyle } from '../domain/mapEffects'
 import { paintStampEffects } from './drawStampEffects'
 import { isAnnotation } from '../domain/annotations'
@@ -28,7 +29,7 @@ type Edit = NonNullable<ReturnType<typeof beginObjectEdit>>
 type Session = { bypass: boolean; group: PlacedObject[]; targets: SnapTargets; bounds: SnapBox; rawDelta?: { x: number; y: number }; edit: Edit; kind: 'move' | 'rotate' | 'resize'; release: () => void }
 export const EditableStamp = memo(function EditableStamp({ object, register, connections, openings, viewportSize, suppressArtwork = false, locked = false }: { suppressArtwork?: boolean; object: PlacedObject; viewportSize?:{width:number;height:number}; openings?: OpeningObject[]; connections?: {x:number;y:number}[]; locked?: boolean; register: (id: string, node: Konva.Group | null) => void }) {
   const { image, error } = useImage(isAnnotation(object)?'':objectAssetId(object) || '', 'asset', object.kind === 'stamp' ? 'stamp' : 'fillPattern')
-  const mapEffects=useProjectStore(s=>s.map.effects)
+  const map=useProjectStore(s=>s.map), mapEffects=effectiveRendering(map).effects
   const node = useRef<Konva.Group | null>(null)
   const session = useRef<Session | null>(null)
   const shiftPress = useRef(false)

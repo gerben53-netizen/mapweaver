@@ -1,3 +1,4 @@
+import { effectiveRendering } from '../domain/rendering'
 import { currentRenderRequest } from '../export/currentRender'
 import { assertCurrent } from '../export/renderCache'
 import { ArlExportChoice } from './ArlExportChoice'
@@ -10,7 +11,7 @@ import { saveLocalProject } from '../projects/localSession'
 import { statusMessage } from '../campfire/publishing'
 import type { ConnectionView,PublishReceipt } from '../campfire/publishing'
 export function CampfirePublishingDialog({onClose}:{onClose:()=>void}){
- const [arlMode,setArlMode]=useState<ArlMode>('OFF')
+ const [arlMode,setArlMode]=useState<ArlMode>(()=>effectiveRendering(currentSnapshot().map).arl)
  const [connection,setConnection]=useState<ConnectionView|null>(null),[name,setName]=useState('Campfire'),[url,setUrl]=useState(''),[token,setToken]=useState(''),[busy,setBusy]=useState(false),[message,setMessage]=useState(''),[error,setError]=useState(''),[loaded,setLoaded]=useState(false),[replacement,setReplacement]=useState(false)
  const mapId=useProjectSession(s=>s.info.id),receipt=connection?.receipts.find(r=>r.mapId===mapId)
  useEffect(()=>{let active=true;api<ConnectionView|null>('/campfire/connection').then(c=>{if(active){setConnection(c);setName(c?.name||'Campfire');setUrl(c?.baseUrl||'');setLoaded(true)}}).catch(e=>{if(active)setError(e.message)});return()=>{active=false}},[])

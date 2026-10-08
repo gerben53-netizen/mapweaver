@@ -1,3 +1,4 @@
+import {useArlStore} from './arlStore'
 import { afterEach, expect, it, vi } from 'vitest'
 import { setRenderView, useRenderViewStore } from './renderViewStore'
 import { useEditorStore } from './editorStore'
@@ -8,7 +9,7 @@ import { handleEditorShortcut } from './shortcuts'
 import { ownObjectGesture } from '../canvas/interaction'
 afterEach(() => { useRenderViewStore.setState({ view: 'edit' }); useHistoryStore.setState({ busy: false }); history.reset(); vi.restoreAllMocks() })
 it('defaults to Edit and switching preserves canonical data, selection and camera', () => {
-  expect(useRenderViewStore.getState().view).toBe('edit')
+  expect(useRenderViewStore.getState().view).toBe('edit'); expect(useArlStore.getState().mode).toBeUndefined()
   useEditorStore.setState({ selectedObjectIds: ['selected'], viewport: { zoom: .75, pan: { x: 19, y: 21 } } })
   const data = currentSnapshot(), editor = useEditorStore.getState(), counts = useHistoryStore.getState()
   setRenderView('preview'); setRenderView('edit')
@@ -29,7 +30,7 @@ it('blocks mutation shortcuts in Preview, including undo, redo and Delete', () =
   expect(remove).not.toHaveBeenCalled(); expect(undo).not.toHaveBeenCalled(); expect(redo).not.toHaveBeenCalled(); host.remove()
 })
 it('a real map/session change returns to Edit', () => {
-  setRenderView('preview'); useProjectSession.setState(s => ({ generation: s.generation + 1 }))
+  useArlStore.getState().setMode('OFF'); setRenderView('preview'); useProjectSession.setState(s => ({ generation: s.generation + 1 }))
   expect(useRenderViewStore.getState().view).toBe('edit')
 })
 

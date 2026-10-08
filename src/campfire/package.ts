@@ -1,3 +1,4 @@
+import { effectiveRendering } from '../domain/rendering'
 import type { ArlMode } from '../store/arlStore'
 import { assertCurrent, type RenderRequest } from '../export/renderCache'
 import { zipSync,strToU8 } from 'fflate'
@@ -15,15 +16,15 @@ export async function packageCampfire(payload:CampfireMapContract,image:Blob):Pr
  const mtime=new Date('2000-01-01T00:00:00Z')
  return new Blob([new Uint8Array(zipSync({'map.json':[strToU8(JSON.stringify(payload,null,2)+'\n'),{mtime}],'map.png':[bytes,{level:0,mtime}]},{level:6}))],{type:'application/zip'})
 }
-export async function prepareCampfire(project:ProjectSnapshot,info:{id:string;name:string},version:1|2|3=3,arlMode:ArlMode='OFF',request:RenderRequest={}){
+export async function prepareCampfire(project:ProjectSnapshot,info:{id:string;name:string},version:1|2|3=3,arlMode?:ArlMode,request:RenderRequest={}){
  assertCurrent(request)
  const captured=structuredClone(project),payload=serializeCampfire(captured,info,version)
  // Runtime/default illumination is semantic only. Door artwork uses the runtime's initial closed pose.
  captured.objects=captured.objects.map(o=>o.kind==='door'?{...o,status:'closed'}:o)
  const {exportPng}=await import('../export/render')
- const image=await exportPng(captured,{scale:1,includeGrid:false,transparent:false,includeScaleBar:false,arlMode},undefined,{...request,mapId:info.id})
+ const image=await exportPng(captured,{scale:1,includeGrid:false,transparent:false,includeScaleBar:false,arlMode:arlMode??effectiveRendering(captured.map).arl},undefined,{...request,mapId:info.id})
  assertCurrent(request)
  return {payload,image}
 }
 
-export async function exportCampfire(project:ProjectSnapshot,info:{id:string;name:string},arlMode:ArlMode='OFF',request:RenderRequest={}){const {payload,image}=await prepareCampfire(project,info,3,arlMode,request);const output=await packageCampfire(payload,image);assertCurrent(request);return output}
+export async function exportCampfire(project:ProjectSnapshot,info:{id:string;name:string},arlMode?:ArlMode,request:RenderRequest={}){const {payload,image}=await prepareCampfire(project,info,3,arlMode,request);const output=await packageCampfire(payload,image);assertCurrent(request);return output}

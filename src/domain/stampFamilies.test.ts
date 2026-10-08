@@ -1,3 +1,4 @@
+import { effectiveStampShadow } from './rendering'
 import { defaultStampEffects } from './mapEffects'
 import { mapWorkspace } from './geography'
 import { useProjectStore as store } from '../store/projectStore'
@@ -25,10 +26,10 @@ it('keeps legacy single-stamp placement unchanged and rejects mismatched persist
   expect(createPlacedObject({...asset,family:undefined},{x:100,y:100},{width:1000,height:1000})).not.toHaveProperty('family');expect(()=>validateFamilySelection({family,variantId:'a'},'image-b')).toThrow()
 })
 
-it('variant edits undo/redo once, copy exact identity and survive validated document reload',()=>{
+it.each([undefined,'off','on'] as const)('variant edits, duplicate, copy/paste, history and reload preserve shadow %s',softShadow=>{
   const assets = new Map(family.variants.map((v,i)=>[v.assetId,{blob:new Blob(['fixture'+i],{type:'image/png'}),manifest:{id:v.assetId,kind:'stamp' as const,fileName:v.id,mimeType:'image/png',width:120,height:60,hash:String(i).repeat(64),path:'assets/'+v.assetId+'.png'}}]))
   installProjectAssets(assets)
-  const object = createPlacedObject(asset,{x:100,y:100},{width:1000,height:700}) as StampObject
+  const object = createPlacedObject(asset,{x:100,y:100},{width:1000,height:700}) as StampObject; if(softShadow)object.effects={...defaultStampEffects(),softShadow}
   const layers=[{id:'objects',name:'Objects',visible:true,locked:false,objectIds:[object.id]}]
   const map={width:1000,height:700,background:null,...defaultMapStyle(),...mapWorkspace({})}
   store.setState({map,objects:[object],layers,objectGroups:[],layerTree:{roots:['objects'],groups:[]}});editor.setState({activeLayerId:'objects',selectedObjectIds:[object.id],soloLayerId:null,editingGroupId:null});history.reset()
@@ -36,5 +37,5 @@ it('variant edits undo/redo once, copy exact identity and survive validated docu
   store.getState().duplicate();expect((store.getState().objects.at(-1) as StampObject).family).toEqual((after as StampObject).family)
   store.getState().copy();store.getState().paste();expect((store.getState().objects.at(-1) as StampObject).family).toEqual((after as StampObject).family)
   const state=store.getState(),document={formatVersion:12,id:'test',name:'Family test',createdAt:'2026-10-04T00:00:00.000Z',modifiedAt:'2026-10-04T00:00:00.000Z',map:state.map,objects:state.objects,layers:state.layers,objectGroups:[],layerTree:state.layerTree,assets:[...assets.values()].map(a=>a.manifest)}
-  expect(parseProject(JSON.parse(JSON.stringify(document))).objects).toEqual(state.objects)
+  expect(parseProject(JSON.parse(JSON.stringify(document))).objects).toEqual(state.objects); for(const o of state.objects){expect((o as StampObject).effects?.softShadow).toBe(softShadow);expect(effectiveStampShadow(o as StampObject,state.map).enabled).toBe(softShadow!=='off')}
 })

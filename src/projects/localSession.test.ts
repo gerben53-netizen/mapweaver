@@ -12,10 +12,11 @@ import { clientGeneration } from '../storage/api'
 import { gatherProject } from './archive'
 beforeEach(async()=>{vi.stubGlobal('fetch',async()=>Response.json({generation:'test-generation'}));await clientGeneration();newProject('Save test',600,400,'#ffffff',()=>true);useProjectSession.setState({revision:1,saveStatus:'clean',recoveryDirty:false});history.reset()})
 afterEach(async()=>{vi.unstubAllGlobals();vi.useRealTimers();await pendingDatabase.pending.clear()})
-it('saves a completed model and only then marks it clean, without a download',async()=>{
+it('saves a completed model and explicit rendering override without a render or download',async()=>{
+  useProjectStore.setState(s=>({map:{...s.map,rendering:{arl:'B'}}}))
   useProjectStore.getState().addLayer()
   const fetch=vi.fn(async(_url,options)=>{const body=JSON.parse(options.body);return Response.json({id:body.document.id,document:body.document,revision:2,modifiedAt:new Date().toISOString()})});vi.stubGlobal('fetch',fetch)
-  await saveLocalProject();expect(fetch).toHaveBeenCalledTimes(1);expect(useProjectSession.getState().saveStatus).toBe('saved');expect(useProjectSession.getState().revision).toBe(2);expect(useHistoryStore.getState().dirty).toBe(false);expect(await pendingDatabase.pending.count()).toBe(0)
+  await saveLocalProject();expect(fetch).toHaveBeenCalledTimes(1);expect(JSON.parse(fetch.mock.calls[0][1].body).document.map.rendering).toEqual({arl:'B'});expect(useProjectSession.getState().saveStatus).toBe('saved');expect(useProjectSession.getState().revision).toBe(2);expect(useHistoryStore.getState().dirty).toBe(false);expect(await pendingDatabase.pending.count()).toBe(0)
 })
 it('a successful save cannot remove another tab’s unsynced buffer for the same project',async()=>{
   const prepared=await gatherProject(currentSnapshot(),useProjectSession.getState().info)
@@ -62,9 +63,10 @@ it('does not save a recovery copy from a replaced dataset into the current datas
  expect(useProjectSession.getState().saveStatus).toBe('conflict');expect(fetch).not.toHaveBeenCalled()
 })
 
-it('autosaves completed path sessions and preserves previews outside the save stream',async()=>{
+it('autosaves completed path sessions and stored rendering overrides outside the preview stream',async()=>{
+ useProjectStore.setState(s=>({map:{...s.map,rendering:{arl:'OFF'}}}))
  const stop=startLocalAutosave(),path=createPath([{id:'a',x:50,y:50,mode:'corner'},{id:'b',x:200,y:100,mode:'corner'}])
- try{useProjectStore.getState().addPath(path);history.reset();useProjectSession.setState({saveStatus:'clean'});startPathEdit(path);changePath(reversePath);expect(useProjectSession.getState().saveStatus).toBe('clean');endPathEdit();expect(useProjectSession.getState().saveStatus).toBe('dirty');const fetch=vi.fn(async(_url,options)=>{const {document}=JSON.parse(options.body);expect(document.formatVersion).toBe(12);expect(document.objects[0].nodes[0].id).toBe('b');return Response.json({revision:3,modifiedAt:new Date().toISOString()})});vi.stubGlobal('fetch',fetch);await saveLocalProject();expect(fetch).toHaveBeenCalledTimes(1)}finally{endPathEdit(true);stop()}
+ try{useProjectStore.getState().addPath(path);history.reset();useProjectSession.setState({saveStatus:'clean'});startPathEdit(path);changePath(reversePath);expect(useProjectSession.getState().saveStatus).toBe('clean');endPathEdit();expect(useProjectSession.getState().saveStatus).toBe('dirty');const fetch=vi.fn(async(_url,options)=>{const {document}=JSON.parse(options.body);expect(document.formatVersion).toBe(12);expect(document.map.rendering).toEqual({arl:'OFF'});expect(document.objects[0].nodes[0].id).toBe('b');return Response.json({revision:3,modifiedAt:new Date().toISOString()})});vi.stubGlobal('fetch',fetch);await saveLocalProject();expect(fetch).toHaveBeenCalledTimes(1)}finally{endPathEdit(true);stop()}
 })
 
 it('defers an already scheduled autosave through a new path gesture, including cancellation',async()=>{

@@ -1,3 +1,4 @@
+import { useArlStore } from './arlStore'
 import { create } from 'zustand'
 import { finishObjectGesture, objectGestureActive } from '../canvas/interaction'
 import { useHistoryStore } from './history'
@@ -10,5 +11,5 @@ export function setRenderView(view: 'edit' | 'preview') {
 }
 let generation = useProjectSession.getState().generation
 useProjectSession.subscribe(s => {
-  if (s.generation !== generation) { generation = s.generation; useRenderViewStore.setState({ view: 'edit' }) }
+  if (s.generation !== generation) { generation = s.generation; useArlStore.getState().setMode(undefined); useRenderViewStore.setState({ view: 'edit' }) }
 })

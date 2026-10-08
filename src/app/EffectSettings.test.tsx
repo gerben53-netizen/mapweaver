@@ -45,3 +45,19 @@ it('applies global contact shadow and a per-stamp exclusion through existing App
  act(()=>{history.undo()});expect(store.getState().objects[0]).toEqual(stamp)
  act(()=>{history.undo()});expect(store.getState().map.effects).toBeUndefined()
 })
+
+it('persists ARL and shadow overrides as one undoable map edit and returns to inherited defaults',()=>{
+ setup();function View(){return <MapEffectSettings map={store(s=>s.map)}/>};render(<View/>);
+ expect(screen.getByLabelText('Map ARL override')).toHaveValue('default');
+ expect(screen.getByLabelText('Stamp Soft Shadow')).toHaveValue('default');
+ fireEvent.change(screen.getByLabelText('Map ARL override'),{target:{value:'OFF'}});
+ fireEvent.change(screen.getByLabelText('Stamp Soft Shadow'),{target:{value:'off'}});
+ fireEvent.click(screen.getByText('Apply map effects'));
+ expect(store.getState().map.rendering).toEqual({arl:'OFF'});expect(store.getState().map.effects?.stampSoftShadow?.enabled).toBe(false);
+ act(()=>{history.undo()});expect(store.getState().map.rendering).toBeUndefined();
+ act(()=>{history.redo()});expect(screen.getByLabelText('Map ARL override')).toHaveValue('OFF');
+ fireEvent.change(screen.getByLabelText('Map ARL override'),{target:{value:'default'}});
+ fireEvent.change(screen.getByLabelText('Stamp Soft Shadow'),{target:{value:'default'}});
+ fireEvent.click(screen.getByText('Apply map effects'));
+ expect(store.getState().map.rendering).toBeUndefined();expect(store.getState().map.effects?.stampSoftShadow).toBeUndefined();
+});

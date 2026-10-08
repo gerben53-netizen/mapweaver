@@ -579,3 +579,5 @@ Source, runtime resources and canonical test fixtures are tracked. Root `*.local
 On a battlemap choose **Ceiling** (roof icon), click polygon points, then Enter/double-click to close. Escape cancels. Select a ceiling to move it or edit its vertices through Properties → Geometry. Undo/redo and save/autosave preserve stable ceiling IDs. **Map actions → Ceilings** toggles the diagnostic overlay, which is never baked into PNG. Use several simple polygons to leave courtyard, ruined-roof or cave-entrance sky gaps.
 
 Campfire v3 exports their union as direct sky/environment coverage only; movement, LOS, windows and point lights remain independent. Old maps retain unknown coverage; new maps start explicitly roofless. **Use explicit sky exposure** opts an old map into intentional roofless coverage. See [Ceiling / sky exposure](docs/campfire-export.md#ceiling--sky-exposure-v3).
+
+Battlemap premiumdefaults en opgeslagen overrides: zie [Nederlandse bediening](docs/map-effects.md#battlemap-premiumdefaults) en [ADR-0066](docs/adr/0066-battlemap-premium-defaults.md).

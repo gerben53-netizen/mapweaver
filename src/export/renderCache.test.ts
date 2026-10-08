@@ -6,7 +6,7 @@ const options = { scale: 1 as const, includeGrid: false, transparent: false }
 it('keys invalidate content, identity, assets, profile, resolution and composition options', () => {
   const first = renderKey(project, options, 1, 'map-a')
   for (const next of [renderKey(project, options, 1, 'map-b'), renderKey(project, options, 2, 'map-a'), renderKey(project, { ...options, arlMode: 'B' }, 1, 'map-a'), renderKey(project, { ...options, scale: 2 }, 1, 'map-a'), renderKey(project, { ...options, transparent: true }, 1, 'map-a'), renderKey({ ...project, map: { ...project.map, backgroundColor: '#000000' } }, options, 1, 'map-a')]) expect(next).not.toBe(first)
-  expect(renderKey(project, options, 1, 'map-a')).toBe(renderKey(project, { ...options, arlMode: 'OFF' }, 1, 'map-a'))
+  expect(renderKey(project, options, 1, 'map-a')).toBe(renderKey(project, { ...options, arlMode: 'C' }, 1, 'map-a'))
 })
 it('reuses outputs but does not accept stale cache hits', async () => {
   const cache = new RenderCache(), produce = vi.fn(async () => new Blob(['current']))

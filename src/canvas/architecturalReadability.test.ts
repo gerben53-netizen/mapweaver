@@ -12,13 +12,13 @@ import { exportScene } from '../export/scene'
 const map = { ...defaultMapStyle(), width: 600, height: 400, background: null }
 const floor = () => createArea(rectangleGeometry({ x: 0, y: 0, width: 600, height: 380 }))
 const wall = (id = 'marble') => createWall([{ id: 'a', x: 40, y: 100, mode: 'corner' }, { id: 'b', x: 350, y: 100, mode: 'corner' }], false, generatedWallStyle(SIMPLE_WALL, map, id, 'production-1'))
-afterEach(() => useArlStore.getState().setMode('OFF'))
-it('defaults OFF without serializing or modifying legacy snapshots', () => {
-  expect(useArlStore.getState().mode).toBe('OFF')
+afterEach(() => useArlStore.getState().setMode(undefined))
+it('inherits the Battlemap default independently of temporary diagnostics without modifying snapshots', () => {
+  expect(useArlStore.getState().mode).toBeUndefined()
   const f = floor(), w = wall(), p = { map, objects: [f, w], layers: [{ id: 'objects', name: 'Objects', visible: true, locked: false, objectIds: [f.id, w.id] }] }, before = JSON.stringify(p)
   expect(arlBatches(map, p.objects, 'OFF')).toEqual([])
   useArlStore.getState().setMode('C')
-  expect(exportScene(p, { scale: 1, transparent: false, includeGrid: false }).arlMode).toBe('OFF')
+  expect(exportScene(p, { scale: 1, transparent: false, includeGrid: false }).arlMode).toBe('C')
   expect(exportScene(p, { scale: 2, transparent: false, includeGrid: false, arlMode: 'B' }).arlMode).toBe('B')
   expect(JSON.stringify(p)).toBe(before)
 })

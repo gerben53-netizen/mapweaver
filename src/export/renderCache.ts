@@ -1,3 +1,4 @@
+import { effectiveRendering } from '../domain/rendering'
 import type { ProjectSnapshot } from '../store/history'
 import type { ExportOptions } from './scene'
 
@@ -14,7 +15,7 @@ export function assertCurrent(request: RenderRequest) { if (request.isCurrent &&
 export function renderKey(project: ProjectSnapshot, options: ExportOptions, generation: number, mapId = '') {
   // Complete canonical snapshot deliberately favors safe invalidation over
   // clever partial keys. Camera, selection and tools are not in this snapshot.
-  return JSON.stringify([mapId, generation, project, [options.arlMode ?? 'OFF', options.scale, options.includeGrid, options.transparent, !!options.includeScaleBar]])
+  return JSON.stringify([mapId, generation, project, [options.arlMode ?? effectiveRendering(project.map).arl, options.scale, options.includeGrid, options.transparent, !!options.includeScaleBar]])
 }
 /** Encoded outputs only: no retained decoded full-map canvases. Serial work
  * bounds transient memory; shared wall/tile caches remain independently bounded. */

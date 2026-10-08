@@ -1,3 +1,4 @@
+import { validateRendering } from './rendering'
 import { validateCoastalContours } from './coastalContours'
 import { isHexGrid, hexCenter, pixelToHex } from './hexGrid'
 import { inGeometryRange } from './documentLimits'
@@ -21,7 +22,7 @@ export const MIN_CELL_SIZE = 4
 export const MAX_CELL_SIZE = 1024
 export const DEFAULT_GRID: GridSettings = { visible: true, snapEnabled: false, cellSize: 50, offsetX: 0, offsetY: 0, color: '#58645c', opacity: 0.35, renderAboveObjects: false }
 export const defaultMapStyle = () => ({ backgroundColor: '#d7d7cf', grid: { ...DEFAULT_GRID } })
-export type MapSettings = Pick<MapDocument, 'width' | 'height' | 'backgroundColor' | 'grid' | 'mapType' | 'geography' | 'generation' | 'water' | 'effects' | 'theme' | 'texturePaint' | 'terrainPaint' | 'landEditing' | 'geographyFinish' | 'waterDepth' | 'coastalContours'>
+export type MapSettings = Pick<MapDocument, 'rendering' | 'width' | 'height' | 'backgroundColor' | 'grid' | 'mapType' | 'geography' | 'generation' | 'water' | 'effects' | 'theme' | 'texturePaint' | 'terrainPaint' | 'landEditing' | 'geographyFinish' | 'waterDepth' | 'coastalContours'>
 export function normalizeColor(color: string) {
   if (!/^#[0-9a-f]{6}$/i.test(color)) throw new Error('Use a six-digit hex color, for example #d7d7cf.')
   return color.toLowerCase()
@@ -39,7 +40,7 @@ export function normalizeGrid(grid: GridSettings): GridSettings {
 }
 export function normalizeMapSettings(settings: MapSettings): MapSettings {
   if (![settings.width, settings.height].every((value) => Number.isInteger(value) && value >= MIN_MAP_EDGE && value <= MAX_MAP_EDGE) || settings.width * settings.height > MAX_MAP_PIXELS) throw new Error(`Map size must be ${MIN_MAP_EDGE}–${MAX_MAP_EDGE} whole pixels per side, at most ${MAX_MAP_PIXELS.toLocaleString('en-US')} pixels total.`)
-  return { ...(settings.texturePaint===undefined?{}:{texturePaint:validateTexturePaint(settings.texturePaint)}), ...(settings.coastalContours===undefined?{}:{coastalContours:validateCoastalContours(settings.coastalContours)}), ...(settings.waterDepth===undefined?{}:{waterDepth:validateWaterDepth(settings.waterDepth)}), geographyFinish: settings.geographyFinish === undefined ? undefined : validateGeographyFinish(settings.geographyFinish), ...(settings.landEditing===undefined?{}:{landEditing:validateLandEditing(settings.landEditing)}), ...(settings.terrainPaint===undefined?{}:{terrainPaint:validateTerrainPaint(settings.terrainPaint)}), theme: settings.theme === undefined ? undefined : validateWorldThemeState(settings.theme), effects: settings.effects === undefined ? undefined : validateMapEffects(settings.effects), water: settings.water === undefined ? undefined : validateWaterAppearance(settings.water), ...(settings.generation?{generation:validateWorldGeneration(settings.generation)}:{}), ...mapWorkspace(settings), width: settings.width, height: settings.height, backgroundColor: normalizeColor(settings.backgroundColor), grid: normalizeGrid(settings.grid) }
+  return { rendering: settings.rendering === undefined ? undefined : validateRendering(settings.rendering), ...(settings.texturePaint===undefined?{}:{texturePaint:validateTexturePaint(settings.texturePaint)}), ...(settings.coastalContours===undefined?{}:{coastalContours:validateCoastalContours(settings.coastalContours)}), ...(settings.waterDepth===undefined?{}:{waterDepth:validateWaterDepth(settings.waterDepth)}), geographyFinish: settings.geographyFinish === undefined ? undefined : validateGeographyFinish(settings.geographyFinish), ...(settings.landEditing===undefined?{}:{landEditing:validateLandEditing(settings.landEditing)}), ...(settings.terrainPaint===undefined?{}:{terrainPaint:validateTerrainPaint(settings.terrainPaint)}), theme: settings.theme === undefined ? undefined : validateWorldThemeState(settings.theme), effects: settings.effects === undefined ? undefined : validateMapEffects(settings.effects), water: settings.water === undefined ? undefined : validateWaterAppearance(settings.water), ...(settings.generation?{generation:validateWorldGeneration(settings.generation)}:{}), ...mapWorkspace(settings), width: settings.width, height: settings.height, backgroundColor: normalizeColor(settings.backgroundColor), grid: normalizeGrid(settings.grid) }
 }
 export function snapPoint(point: Point, grid: GridSettings, bypass = false): Point {
   if (!grid.snapEnabled || bypass) return point

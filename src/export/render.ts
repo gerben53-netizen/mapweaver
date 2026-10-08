@@ -1,3 +1,4 @@
+import { effectiveRendering } from '../domain/rendering'
 import { arlBatches } from '../canvas/architecturalReadability'
 import { paintArlBatch, prepareArlBatch, clearArlCache, arlReady } from '../canvas/drawArchitecturalReadability'
 import { assertCurrent, highQualityCache, renderKey, type RenderRequest } from './renderCache'
@@ -48,6 +49,7 @@ import type { ProjectSnapshot } from '../store/history'
 
 export type ExportImage = CanvasImageSource & { width: number; height: number }
 export function buildScene(scene: ExportScene, images: Map<string, ExportImage>) {
+  const mapEffects = effectiveRendering(scene.map).effects
   const root = new Group({ listening: false, clipX: 0, clipY: 0, clipWidth: scene.map.width, clipHeight: scene.map.height })
   const connections=new Map([...wallConnections(scene.items.flatMap(item=>item.kind==='object'?[item.object]:[])),...routeConnections(scene.items.flatMap(item=>item.kind==='object'?[item.object]:[]))])
   const objects=scene.items.flatMap(item=>item.kind==='object'?[item.object]:[])
@@ -77,7 +79,7 @@ export function buildScene(scene: ExportScene, images: Map<string, ExportImage>)
       const o = item.object, image = images.get(objectAssetId(o) || "")!, group = new Group(objectNodeProps(o))
       if(o.kind==='label'&&o.ownerId&&o.leader){const owner=objects.find(v=>v.id===o.ownerId);if(owner)root.add(new Shape({sceneFunc:c=>{const ctx=c._context;ctx.save();ctx.globalAlpha=o.opacity;ctx.strokeStyle=o.style.color;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(owner.x+owner.width/2,owner.y+owner.height/2);ctx.lineTo(o.x+o.width*o.anchor.x,o.y+o.height*o.anchor.y);ctx.stroke();ctx.restore()}}))}
       if(scene.map.landEditing&&clipsToLand(o)){const clipped=new Group({clipFunc:c=>traceLandClip(c._context,lands)});clipped.add(group);root.add(clipped)}else root.add(group)
-      if(o.kind==='stamp'&&(softShadowStyle(o,scene.map.effects).enabled||o.effects?.shadow.enabled||o.effects?.glow.enabled)){group.add(new Shape({width:o.width,height:o.height,perfectDrawEnabled:false,sceneFunc:c=>paintStampEffects(c._context,o,image,scene.map.effects)}))}
+      if(o.kind==='stamp'&&(softShadowStyle(o,mapEffects).enabled||o.effects?.shadow.enabled||o.effects?.glow.enabled)){group.add(new Shape({width:o.width,height:o.height,perfectDrawEnabled:false,sceneFunc:c=>paintStampEffects(c._context,o,image,mapEffects)}))}
       if(isAnnotation(o))group.add(new Shape({width:o.width,height:o.height,perfectDrawEnabled:false,sceneFunc:c=>paintAnnotation(c._context,o,images,scene.map)}))
       else if (o.kind === 'stamp') group.add(new KonvaImage({ image, width: o.width, height: o.height, x: o.scaleX < 0 ? o.width : 0, y: o.scaleY < 0 ? o.height : 0, scaleX: o.scaleX, scaleY: o.scaleY, opacity: o.opacity, perfectDrawEnabled: false }))
       else if(o.kind === 'scatter') { group.add(new Shape({width:o.width,height:o.height,perfectDrawEnabled:false,sceneFunc:c=>paintScatter(c._context,o,images)})) }
@@ -174,7 +176,7 @@ async function renderPng(project: ProjectSnapshot, options: ExportOptions, resol
 export async function exportPng(project: ProjectSnapshot, options: ExportOptions, resolve: Resolver = resolveAsset, request: RenderRequest = {}): Promise<Blob> {
   assertCurrent(request)
   const { map, objects, layers, objectGroups, layerTree } = project
-  const snapshot = structuredClone({ map, objects, layers, objectGroups, layerTree }), capturedOptions = { ...options, arlMode: options.arlMode ?? 'OFF' }, generation = useAssetContext.getState().generation
+  const snapshot = structuredClone({ map, objects, layers, objectGroups, layerTree }), capturedOptions = { ...options, arlMode: options.arlMode ?? effectiveRendering(snapshot.map).arl }, generation = useAssetContext.getState().generation
   const guarded = { ...request, isCurrent: () => generation === useAssetContext.getState().generation && (!request.isCurrent || request.isCurrent()) }
   const key = renderKey(snapshot, capturedOptions, generation, request.mapId)
   // Custom resolvers may supply arbitrary bytes for the same IDs: never cache them.

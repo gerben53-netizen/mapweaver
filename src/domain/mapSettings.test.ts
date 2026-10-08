@@ -1,3 +1,4 @@
+import { history } from '../store/history'
 import { registerTestAssets } from '../test/assets'
 import { beforeEach, expect, it, vi } from 'vitest'
 import { DEFAULT_GRID, defaultMapStyle, normalizeGrid, normalizeMapSettings, snapPoint, snapDelta, resizeImpact, cellSummary, gridRenderPosition, gridDisplayStep } from './mapSettings'
@@ -7,7 +8,7 @@ import { useEditorStore as editor } from '../store/editorStore'
 const a = { kind: 'stamp' as const, id: 'a', assetId: 'tree', x: 123, y: 67, width: 40, height: 60, rotation: 35, scaleX: -1, scaleY: 1, opacity: 0.7 }
 const b = { ...a, id: 'b', x: 186, y: 29 }
 const map = () => ({ width: 600, height: 400, background: { id: 'bg', name: 'Room', width: 600, height: 400 }, ...defaultMapStyle() })
-beforeEach(() => { registerTestAssets({ asset: 'stamp' }); project.setState({ map: map(), ...createLayeredContent([a, b]) }); editor.setState({ activeLayerId: 'objects', selectedObjectIds: [] }) })
+beforeEach(() => { registerTestAssets({ asset: 'stamp' }); project.setState({ map: map(), ...createLayeredContent([a, b]) }); editor.setState({ activeLayerId: 'objects', selectedObjectIds: [] }); history.reset() })
 it('validates settings and normalizes equivalent offsets, colors and exact/partial cell information', () => {
   expect(normalizeGrid({ ...DEFAULT_GRID, offsetX: -10, offsetY: 110, color: '#AABBCC' })).toMatchObject({ offsetX: 40, offsetY: 10, color: '#aabbcc' })
   for (const patch of [{ cellSize: 0 }, { cellSize: Infinity }, { cellSize: 1025 }, { offsetX: NaN }, { opacity: 1.1 }, { color: '#nope' }]) expect(() => normalizeGrid({ ...DEFAULT_GRID, ...patch })).toThrow()

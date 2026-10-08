@@ -1,3 +1,4 @@
+import { effectiveRendering } from '../domain/rendering'
 import { currentRenderRequest } from '../export/currentRender'
 import { ArlExportChoice } from './ArlExportChoice'
 import type { ArlMode } from '../store/arlStore'
@@ -20,7 +21,7 @@ export function ExportControls() {
 }
 function ExportDialog({ onClose }: { onClose: () => void }) {
   const map = useProjectStore((s) => s.map), name = useProjectSession((s) => s.info.name)
-  const [options, setOptions] = useState<ExportOptions>({ arlMode: 'OFF', scale: 1, includeScaleBar:mapWorkspace(map).geography.exportScaleBar, includeGrid: isLandMap(map)&&!isHexGrid(map.grid)?mapWorkspace(map).geography.graticule:map.grid.visible, transparent: false })
+  const [options, setOptions] = useState<ExportOptions>({ arlMode: effectiveRendering(map).arl, scale: 1, includeScaleBar:mapWorkspace(map).geography.exportScaleBar, includeGrid: isLandMap(map)&&!isHexGrid(map.grid)?mapWorkspace(map).geography.graticule:map.grid.visible, transparent: false })
   const [busy, setBusy] = useState(false), [error, setError] = useState(''), [status, setStatus] = useState('')
   let limit = ''; try { exportDimensions(map, options.scale) } catch (cause) { limit = (cause as Error).message }
   const info = roll20Settings(map, options), fileName = downloadName(name).replace(/\.mapweaver$/, '.png')
@@ -52,7 +53,7 @@ function ExportDialog({ onClose }: { onClose: () => void }) {
 }
 
 function CampfireDialog({onClose}:{onClose:()=>void}){
- const [arlMode,setArlMode]=useState<ArlMode>('OFF'),[busy,setBusy]=useState(false),[error,setError]=useState(''),[status,setStatus]=useState('')
+ const [arlMode,setArlMode]=useState<ArlMode>(()=>effectiveRendering(useProjectStore.getState().map).arl),[busy,setBusy]=useState(false),[error,setError]=useState(''),[status,setStatus]=useState('')
  async function download(){setBusy(true);setError('');useProjectSession.setState({busy:'Exporting Campfire Map…'});try{const {exportCampfire}=await import('../campfire/package');const info=useProjectSession.getState().info,blob=await exportCampfire(currentSnapshot(),info,arlMode,currentRenderRequest());downloadBlob(blob,downloadName(info.name).replace(/\.mapweaver$/,'-campfire.zip'));setStatus('Campfire package downloaded. Contains map.json and map.png; lighting is semantic and is not baked into the image.')}catch(cause){setError((cause as Error).message)}finally{setBusy(false);useProjectSession.setState({busy:''})}}
  return <Modal title="Export Campfire Map" busy={busy} onClose={onClose}><ArlExportChoice value={arlMode} disabled={busy} onChange={setArlMode}/><p>Canonical Campfire Map Contract v3. Original map pixels, local PNG, visible artwork and semantic walls, doors, windows and lighting.</p><p>Requires a physical game scale, a square or disabled grid and contract-compatible geometry. Validation runs before rendering; no partial package is downloaded.</p>{error&&<pre role="alert">{error}</pre>}<p role="status">{status}</p><button disabled={busy} onClick={()=>void download()}>{busy?'Exporting…':'Download Campfire package'}</button><button disabled={busy} onClick={onClose}>Close</button></Modal>
 }

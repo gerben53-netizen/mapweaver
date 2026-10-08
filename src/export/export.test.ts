@@ -54,7 +54,7 @@ it('passes stamp pivot, mirrors, alpha and repeat/stretch transforms to the actu
     const group = root.getChildren()[0]
     expect(group.getAttrs()).toMatchObject({ x: 40, y: 70, offsetX: 50, offsetY: 40, rotation: 45 })
     expect(root.find('Image')[0].getAttrs()).toMatchObject({ x: 100, scaleX: -1, scaleY: 1, opacity: .6 })
-    expect(root.find('Shape').find(n=>n.getClassName()==='Shape')!.getAttrs()).toMatchObject({width:150,height:100,sceneFunc:expect.any(Function)})
+    expect(root.find('Shape').find(n=>n.getClassName()==='Shape' && n.getAttr('width') === 150)!.getAttrs()).toMatchObject({width:150,height:100,sceneFunc:expect.any(Function)})
     root.destroy()
   }
 })

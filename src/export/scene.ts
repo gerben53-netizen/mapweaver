@@ -1,3 +1,4 @@
+import { effectiveRendering } from '../domain/rendering'
 import type { ArlMode } from '../store/arlStore'
 import { environmentalOrder, environmentalBoundary } from '../domain/environmentalDetail'
 import { texturePaintOrder, texturePaintBoundary } from '../domain/terrainPaint'
@@ -47,7 +48,7 @@ export function exportScene(project: ProjectSnapshot, options: ExportOptions): E
   if (options.includeGrid && map.grid.renderAboveObjects) items.push({ kind: 'grid' })
   if(isLandMap(map)&&options.includeScaleBar)items.push({kind:'scaleBar'})
   if(map.effects?.vignette.enabled||map.effects?.frame.enabled)items.push({kind:'finish'})
-  return { arlMode:options.arlMode??'OFF', textureRestricted:textureFloors(project.objects).length>0, map, width, height, scale: options.scale, items }
+  return { arlMode:options.arlMode??effectiveRendering(project.map).arl, textureRestricted:textureFloors(project.objects).length>0, map, width, height, scale: options.scale, items }
 }
 export function roll20Settings(map: MapDocument, options: ExportOptions) {
   if(isHexGrid(map.grid))return `PNG: ${map.width*options.scale} × ${map.height*options.scale} pixels. Hex ${map.grid.type==='hex-flat'?'flat':'pointy'} top: ${map.grid.cellSize*options.scale} px corner-to-corner; origin ${map.grid.offsetX*options.scale}, ${map.grid.offsetY*options.scale} px. Grid ${options.includeGrid?'included':'not included'}. Align the image manually in your VTT.`

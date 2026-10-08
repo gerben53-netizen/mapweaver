@@ -1,6 +1,6 @@
 # ADR-0065 — Bewerken, Voorbeeld en expliciete exportprofielen
 
-Status: geaccepteerd, 2026-10-08. B/C zijn niet voor productie geactiveerd.
+Status: geaccepteerd, 2026-10-08. De OFF-default en afwezigheid van persistente profielen zijn vervangen door [ADR-0066](0066-battlemap-premium-defaults.md); de lifecycle en renderergrens hieronder blijven gelden.
 
 ## Besluit
 

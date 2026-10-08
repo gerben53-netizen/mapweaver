@@ -13,3 +13,11 @@ Select an editable stamp and expand **Properties → Stamp shadow & glow**. Enab
 PNG export includes enabled effects/frame at 1× or 2× with the same map-relative size. Transparent export removes the base map color only; selected atmosphere and frame still paint transparent overlays. Editor handles never appear in PNG. Effects extending outside the map itself are intentionally cropped.
 
 One global or Area-masked fog field is supported. Area mask boundaries are not feathered. Large effects use bounded cached silhouettes; extreme enlarged exports can reveal their finite raster resolution. No whole-map themes, animation, external resources or source-image modifications are involved.
+
+## Battlemap premiumdefaults
+
+Bestaande en nieuwe battlemaps tonen **ARL C (standaard)** in Voorbeeld en gebruiken dit profiel bij PNG- en Campfire-export. Bewerken houdt de native muurartwork en de goedkope Stamp Soft Shadow. De tijdelijke Voorbeeld-diagnose OFF/B/C wordt niet opgeslagen en verandert export niet.
+
+In **Effects & map frame → Rendering** kies je een opgeslagen **Map ARL override** (standaard/OFF/B/C). Apply maakt één undo-stap. **Stamp Soft Shadow** volgt standaard de kaartmodus: aan op Battlemap, uit op Regional/World. Een expliciete kaartkeuze of individuele **Stamp Soft Shadow override** blijft behouden, ook bij dupliceren, variantwissel en reload. Kies Default om weer te erven. Environmental Detail en Generated Wall-componenten krijgen geen extra Stamp Soft Shadow.
+
+Geen bulkkaartmigratie: defaults worden bij renderen opgelost. Save/autosave hoeft daarvoor geen hoogwaardige bitmap te maken. Zie ADR-0066 voor het optionele renderingveld in projectformaat 12.
