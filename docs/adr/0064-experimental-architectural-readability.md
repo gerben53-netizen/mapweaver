@@ -1,5 +1,7 @@
 # ADR-0064 — Experimental Architectural Readability Layer
 
+Superseded in part by ADR-0065: Edit no longer composites full ARL; Preview and exports choose explicit independent profiles. Coverage, ownership and native fallback rules below remain applicable.
+
 Status: accepted for default-OFF integration, 2026-10-08. Production activation is not approved.
 
 ## Decision

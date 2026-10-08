@@ -1,3 +1,7 @@
+import { currentRenderRequest } from '../export/currentRender'
+import { assertCurrent } from '../export/renderCache'
+import { ArlExportChoice } from './ArlExportChoice'
+import type { ArlMode } from '../store/arlStore'
 import { useEffect,useState } from 'react'
 import { Modal } from './Modal'
 import { api } from '../storage/api'
@@ -6,6 +10,7 @@ import { saveLocalProject } from '../projects/localSession'
 import { statusMessage } from '../campfire/publishing'
 import type { ConnectionView,PublishReceipt } from '../campfire/publishing'
 export function CampfirePublishingDialog({onClose}:{onClose:()=>void}){
+ const [arlMode,setArlMode]=useState<ArlMode>('OFF')
  const [connection,setConnection]=useState<ConnectionView|null>(null),[name,setName]=useState('Campfire'),[url,setUrl]=useState(''),[token,setToken]=useState(''),[busy,setBusy]=useState(false),[message,setMessage]=useState(''),[error,setError]=useState(''),[loaded,setLoaded]=useState(false),[replacement,setReplacement]=useState(false)
  const mapId=useProjectSession(s=>s.info.id),receipt=connection?.receipts.find(r=>r.mapId===mapId)
  useEffect(()=>{let active=true;api<ConnectionView|null>('/campfire/connection').then(c=>{if(active){setConnection(c);setName(c?.name||'Campfire');setUrl(c?.baseUrl||'');setLoaded(true)}}).catch(e=>{if(active)setError(e.message)});return()=>{active=false}},[])
@@ -19,15 +24,17 @@ export function CampfirePublishingDialog({onClose}:{onClose:()=>void}){
   useProjectSession.setState({busy:'Kaart naar Campfire sturen…'})
   try{
    await saveLocalProject();if(useProjectSession.getState().saveStatus!=='saved')throw Error(useProjectSession.getState().error||'Sla de huidige kaart op en los eventuele conflicten op voordat je publiceert.')
-   const snapshot=currentSnapshot(),limits=d.constraints.image
+   const request=currentRenderRequest(),snapshot=currentSnapshot(),limits=d.constraints.image
    if(snapshot.map.width<limits.minDimension||snapshot.map.height<limits.minDimension||snapshot.map.width>limits.dimension||snapshot.map.height>limits.dimension||snapshot.map.width*snapshot.map.height>limits.pixels)throw Error('De kaart overschrijdt de geadverteerde afbeeldingslimieten. Pas de kaartafmetingen aan.')
    const {prepareCampfire}=await import('../campfire/package')
-   const {payload,image}=await prepareCampfire(snapshot,useProjectSession.getState().info,d.version),bytes=new Uint8Array(await image.arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=32768)binary+=String.fromCharCode(...bytes.subarray(i,i+32768))
+   const {payload,image}=await prepareCampfire(snapshot,useProjectSession.getState().info,d.version,arlMode,request),bytes=new Uint8Array(await image.arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=32768)binary+=String.fromCharCode(...bytes.subarray(i,i+32768))
+   assertCurrent(request)
    const r=await api<PublishReceipt>('/campfire/publish','POST',{contract:payload,imageBase64:btoa(binary),replacement});setConnection(c=>c?{...c,receipts:[r,...c.receipts.filter(r=>r.mapId!==mapId)]}:c);setReplacement(false);setMessage(statusMessage(r.status))
   }finally{useProjectSession.setState({busy:''})}
  }
  return <Modal title="Naar Campfire sturen" busy={busy} onClose={onClose}>
   <p>Een Campaign-DM maakt de verbinding in Campfire → Maps → MapWeaver verbindingen. De token bepaalt de campagne; je hoeft geen campagne-ID in te vullen.</p>
+  <ArlExportChoice value={arlMode} disabled={busy} onChange={setArlMode}/>
   <label>Naam<input disabled={busy} value={name} onChange={e=>setName(e.target.value)}/></label>
   <label>Campfire URL<input disabled={busy} type="url" placeholder="https://campfire.example" value={url} onChange={e=>setUrl(e.target.value)}/></label>
   <label>Integration token<input disabled={busy} type="password" autoComplete="off" value={token} placeholder={connection?.hasToken?'Token actief; leeg laten behoudt hem':'Eenmalige token invoeren'} onChange={e=>setToken(e.target.value)}/></label>

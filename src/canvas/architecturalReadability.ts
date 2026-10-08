@@ -50,22 +50,34 @@ export function beyondArlEnd(point: Point, ends: ReturnType<typeof arlEnds>, wid
 /** Two bounded linear scans; labels propagate from the closest composed wall pixel.
  * Equal-distance ties retain the topmost source owner. No per-neighbor closure allocations.
  */
-export function arlDistance(seeds: Uint16Array, width: number, height: number, limit: number) {
+export function* arlDistanceSteps(seeds: Uint16Array, width: number, height: number, limit: number) {
   const distance = new Float32Array(seeds.length), owner = seeds.slice()
   for (let i = 0; i < seeds.length; i++) distance[i] = seeds[i] ? 0 : limit
   const relax = (i: number, n: number, cost: number) => {
     const d = distance[n] + cost
     if (owner[n] && (d < distance[i] || d === distance[i] && owner[n] > owner[i])) { distance[i] = d; owner[i] = owner[n] }
   }
-  for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
+  for (let y = 0; y < height; y++) {
+    if (y % 32 === 0) yield
+    for (let x = 0; x < width; x++) {
     const i = y * width + x
     if (x) relax(i, i - 1, 1)
     if (y) { relax(i, i - width, 1); if (x) relax(i, i - width - 1, Math.SQRT2); if (x + 1 < width) relax(i, i - width + 1, Math.SQRT2) }
   }
-  for (let y = height - 1; y >= 0; y--) for (let x = width - 1; x >= 0; x--) {
+  }
+  for (let y = height - 1; y >= 0; y--) {
+    if (y % 32 === 0) yield
+    for (let x = width - 1; x >= 0; x--) {
     const i = y * width + x
     if (x + 1 < width) relax(i, i + 1, 1)
     if (y + 1 < height) { relax(i, i + width, 1); if (x) relax(i, i + width - 1, Math.SQRT2); if (x + 1 < width) relax(i, i + width + 1, Math.SQRT2) }
   }
+  }
   return { distance, owner }
+}
+
+export function arlDistance(seeds: Uint16Array, width: number, height: number, limit: number) {
+  const steps = arlDistanceSteps(seeds, width, height, limit)
+  let step = steps.next(); while (!step.done) step = steps.next()
+  return step.value
 }

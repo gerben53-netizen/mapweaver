@@ -1,3 +1,4 @@
+import { useRenderViewStore } from './renderViewStore'
 import { fitEditorView } from '../canvas/viewActions'
 import { undoLibrary } from '../library/libraryHistory'
 import { saveLocalProject } from '../projects/localSession'
@@ -13,6 +14,10 @@ export function handleEditorShortcut(event: KeyboardEvent) {
   if (!(event.target instanceof Element) || !event.target.closest('[data-mapweaver-editor]')) return
   const key = event.key.toLowerCase(), modifier = event.ctrlKey || event.metaKey
   if (modifier && key === 's') { event.preventDefault(); if (!event.repeat && useEditorStore.getState().workspace === 'editor') void saveLocalProject(); return }
+  if (useRenderViewStore.getState().view === 'preview') {
+    if (!modifier && key === 'f' && !isEditing(event.target)) { event.preventDefault(); fitEditorView(false) }
+    return
+  }
   if (!isEditing(event.target) && useEditorStore.getState().workspace === 'library' && modifier && ['z','y'].includes(key)) { event.preventDefault(); if (!event.repeat) void undoLibrary(key==='y'||event.shiftKey); return }
   if (key === 'escape' && useEditorStore.getState().activeTool === 'placeStamp') { event.preventDefault(); cancelObjectGesture(); useEditorStore.setState({ activeTool: 'select', message: '' }); return }
   if (event.target.closest('[data-stamp-ui], [data-scene-ui]') && !modifier) return

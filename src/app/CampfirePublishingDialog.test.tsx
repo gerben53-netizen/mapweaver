@@ -19,7 +19,7 @@ it('saves before publication, sends only contract and bitmap to the service and 
  vi.mocked(saveLocalProject).mockImplementation(async()=>{useProjectSession.setState({saveStatus:'saved',error:''})})
  vi.mocked(prepareCampfire).mockResolvedValue({payload,image:new Blob([new Uint8Array([1,2,3])],{type:'image/png'})})
  render(<CampfirePublishingDialog onClose={()=>{}}/>);await waitFor(()=>expect(screen.getByRole('button',{name:'Naar Campfire sturen'})).toBeEnabled());fireEvent.click(screen.getByRole('button',{name:'Naar Campfire sturen'}))
- await waitFor(()=>expect(screen.getAllByText(/De kaart is nog niet geïmporteerd/).length).toBeGreaterThan(0));expect(saveLocalProject).toHaveBeenCalledOnce();expect(prepareCampfire).toHaveBeenCalledWith(expect.anything(),expect.objectContaining({id}),3)
+ await waitFor(()=>expect(screen.getAllByText(/De kaart is nog niet geïmporteerd/).length).toBeGreaterThan(0));expect(saveLocalProject).toHaveBeenCalledOnce();expect(prepareCampfire).toHaveBeenCalledWith(expect.anything(),expect.objectContaining({id}),3,'OFF',expect.objectContaining({mapId:id,isCurrent:expect.any(Function)}))
  expect(vi.mocked(api).mock.calls.find(([p])=>p==='/campfire/publish')?.[2]).toEqual({contract:payload,imageBase64:'AQID',replacement:false});expect(useProjectSession.getState().busy).toBe('')
 })
 it('tests connection without uploading and clears the password input',async()=>{

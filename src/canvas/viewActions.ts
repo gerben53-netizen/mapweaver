@@ -3,7 +3,7 @@ import { selectionBounds } from '../domain/layers'
 import { useProjectStore } from '../store/projectStore'
 import { useEditorStore } from '../store/editorStore'
 export function fitEditorView(selection=false) {
- const rect=document.querySelector('[aria-label="Map canvas"]')?.getBoundingClientRect()
+ const rect=document.querySelector('[aria-label="Map canvas"], [aria-label="Voorbeeld canvas"]')?.getBoundingClientRect()
  if(!rect?.width||!rect.height)return
  const editor=useEditorStore.getState(),project=useProjectStore.getState()
  const objects=project.objects.filter(o=>editor.selectedObjectIds.includes(o.id))

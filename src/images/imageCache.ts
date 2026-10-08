@@ -53,6 +53,7 @@ export function acquireLibraryThumbnail(id: string) { return acquireImage(`libra
 export function invalidateAssetImages(ids: Set<string>) {
   // Existing consumers release their own leases; new consumers must load afresh.
   for (const key of entries.keys()) if (key.split(':').some(part => ids.has(part))) entries.delete(key)
+  if (ids.size) useAssetContext.setState(s => ({ generation: s.generation + 1 }))
 }
 
 /** Read-only profiling counters; does not retain images or URLs. */

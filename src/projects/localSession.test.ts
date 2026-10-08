@@ -20,7 +20,7 @@ it('saves a completed model and only then marks it clean, without a download',as
 it('a successful save cannot remove another tab’s unsynced buffer for the same project',async()=>{
   const prepared=await gatherProject(currentSnapshot(),useProjectSession.getState().info)
   await pendingDatabase.pending.put({id:`other-tab:${prepared.document.id}`,revision:1,prepared,updatedAt:new Date().toISOString()})
-  vi.stubGlobal('fetch',async()=>Response.json({revision:2,modifiedAt:new Date().toISOString()}))
+  vi.stubGlobal('fetch',async()=>Response.json({document:prepared.document,revision:2,modifiedAt:new Date().toISOString()}))
   await saveLocalProject();expect(await pendingDatabase.pending.count()).toBe(1);expect((await pendingDatabase.pending.toArray())[0].id).toContain('other-tab:')
 })
 it('resuming an older copy cannot delete newer recovery data from its still-open source tab',async()=>{

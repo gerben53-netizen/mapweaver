@@ -24,3 +24,5 @@
 .footer > :last-child { font-variant-numeric:tabular-nums; }
 .snapOptions > div { border-radius:var(--radius-card); box-shadow:var(--shadow-crafted),0 8px 24px #0006; }
 
+
+.viewSwitch { justify-content: flex-start; min-height: 38px; gap: 4px; padding: 4px 12px; }

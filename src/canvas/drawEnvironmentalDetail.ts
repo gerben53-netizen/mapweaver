@@ -39,7 +39,9 @@ export function drawEnvironmentalDecals(ctx:CanvasRenderingContext2D,s:DetailStr
   }
 }
 function productionDecalTile(data:EnvironmentalDetail,x:number,y:number,tier:'floor'|'edge',scale:1|2){const key=`${identity(data)}:decals:${tier}:${x}:${y}:${scale}`,old=cache.get(key);if(old)return old;const canvas=document.createElement('canvas');canvas.width=canvas.height=TILE*scale;const c=canvas.getContext('2d',{willReadFrequently:true})!;c.scale(scale,scale);c.translate(-x*TILE,-y*TILE);for(const s of data.strokes){if(s.revision!=='production-1'||s.brush.mode!=='decals'||detailPreset(s.brush.presetId)!.tier!==tier)continue;const instances=s.instances.filter(v=>v.x+v.size>=x*TILE&&v.y+v.size>=y*TILE&&v.x-v.size<=(x+1)*TILE&&v.y-v.size<=(y+1)*TILE);drawEnvironmentalDecals(c,{...s,instances},tier)}c.getImageData(0,0,canvas.width,canvas.height);cache.set(key,canvas);bytes+=canvas.width*canvas.height*4;while(bytes>MAX_CACHE_BYTES&&cache.size>1){const first=cache.keys().next().value!,value=cache.get(first)!;bytes-=value.width*value.height*4;cache.delete(first)}return canvas}
-export function drawEnvironmentalDetail(ctx:CanvasRenderingContext2D,data:EnvironmentalDetail|undefined,width:number,height:number,tier:'floor'|'edge',scale:1|2=1){
+export function drawEnvironmentalDetail(ctx:CanvasRenderingContext2D,data:EnvironmentalDetail|undefined,width:number,height:number,tier:'floor'|'edge',_scale:1|2=1){
+  // Accepted output scales share one canonical 2× world raster, including Edit.
+  void _scale; const scale = 2 as const
   if(!data?.visible||data.opacity===0)return
   ctx.save();ctx.beginPath();ctx.rect(0,0,width,height);ctx.clip();ctx.globalAlpha*=data.opacity
   if(tier==='floor'){const keys=occupiedSurfaceTiles(data,width,height);for(const preset of ALL_DETAIL_PRESETS.filter(p=>p.mode==='surface')){if(!data.strokes.some(s=>s.brush.presetId===preset.id&&s.brush.action==='paint'))continue;ctx.globalCompositeOperation=preset.blend as GlobalCompositeOperation;for(const key of keys){const [x,y]=key.split(',').map(Number);ctx.drawImage(tile(data,preset.id,x,y,scale),x*TILE,y*TILE,TILE,TILE)}}ctx.globalCompositeOperation='source-over'}

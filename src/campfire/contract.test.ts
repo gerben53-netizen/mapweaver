@@ -28,7 +28,7 @@ it('produces selected supported versions without silently discarding windows or 
 })
 it('shares the exact canonical contract and bitmap preparation between API and manual export',async()=>{
  const renderer=await import('../export/render'),image=png(),spy=vi.spyOn(renderer,'exportPng').mockResolvedValue(image),p=project();p.map.width=1;p.map.height=1;p.map.ceilingExposure='explicit'
- try{const api=await prepareCampfire(p,info,3),manual=unzipSync(new Uint8Array(await (await exportCampfire(p,info)).arrayBuffer()));expect(JSON.parse(strFromU8(manual['map.json']))).toEqual(api.payload);expect(manual['map.png']).toEqual(new Uint8Array(await api.image.arrayBuffer()));expect(api.payload).toMatchObject({version:3,ceilingRegions:[]});expect(spy).toHaveBeenCalledWith(expect.anything(),{scale:1,includeGrid:false,transparent:false,includeScaleBar:false})}finally{spy.mockRestore()}
+ try{const api=await prepareCampfire(p,info,3),manual=unzipSync(new Uint8Array(await (await exportCampfire(p,info)).arrayBuffer()));expect(JSON.parse(strFromU8(manual['map.json']))).toEqual(api.payload);expect(manual['map.png']).toEqual(new Uint8Array(await api.image.arrayBuffer()));expect(api.payload).toMatchObject({version:3,ceilingRegions:[]});expect(spy).toHaveBeenCalledWith(expect.anything(),{scale:1,includeGrid:false,transparent:false,includeScaleBar:false,arlMode:'OFF'},undefined,expect.objectContaining({mapId:info.id}))}finally{spy.mockRestore()}
 })
 function project(objects:MapObject[]=[]):ProjectSnapshot{return {map:{...defaultMapStyle(),width:800,height:600,background:null,campfireRevision:1,mapType:'battlemap',geography:defaultGeography(),grid:{...defaultMapStyle().grid,physicalScale:{unit:'ft',distancePerCell:5}}},...createLayeredContent(objects),objectGroups:[],layerTree:{roots:['objects'],groups:[]}}}
 function wall(){return createWall([{id:'a',x:100,y:100,mode:'corner'},{id:'b',x:700,y:100,mode:'corner'}],false,{...SIMPLE_WALL,strokeWidth:10})}
@@ -50,4 +50,24 @@ it('validates light positions at map corners and ignores door display pose for r
 
 it.each(['sung-wood','cave-rock','natural-cave-rock','rustic-heavy-timber','refined-timber','timber-refined','timber-rustic'])('exports %s with unchanged normal wall, door, window and lighting semantics',async id=>{
  const {generatedWallStyle}=await import('../domain/generatedWalls');const plain=wall(),p=project(),style=generatedWallStyle(SIMPLE_WALL,p.map,id,['sung-wood','natural-cave-rock','rustic-heavy-timber','refined-timber'].includes(id)?'production-1':'dev-1'),rock=createWall(plain.nodes,false,style);rock.id=plain.id;const door=createOpening(rock,.5,'door',40),window=createOpening(rock,.25,'window',40),objects=[rock,door,window];const a=project(objects),b=project([{...rock,wall:{...rock.wall!,renderingMode:undefined,generated:undefined}},door,window]);a.map.lighting={ambient:{intensity:.4},lights:[newPointLight(400,300)]};b.map.lighting=a.map.lighting;const payload=serializeCampfire(a,info);expect(payload).toEqual(serializeCampfire(b,info));expect(validateMapContract(payload).valid).toBe(true);expect(JSON.stringify(payload)).not.toMatch(/cave-rock|rustic-heavy-timber|refined-timber|timber-|roughness|regularity|variation|generated|placements/)
+})
+
+it('explicit ARL profiles preserve v3 wall, door, window and light semantics', async () => {
+ const renderer = await import('../export/render'), spy = vi.spyOn(renderer, 'exportPng').mockResolvedValue(png())
+ const w = wall(), door = {...createOpening(w, .5, 'door', 40), status: 'open-left' as const}, window = createOpening(w, .25, 'window', 40), p = project([w, door, window])
+ p.map.ceilingExposure = 'explicit'; p.map.lighting = {ambient:{intensity:.4}, lights:[newPointLight(400,300)]}
+ const before = structuredClone(p)
+ try {
+  const off = await prepareCampfire(p, info, 3, 'OFF'), enhanced = await prepareCampfire(p, info, 3, 'C')
+  expect(enhanced.payload).toEqual(off.payload); expect(validateMapContract(enhanced.payload).valid).toBe(true)
+  expect(p).toEqual(before)
+  expect(spy.mock.calls[1][1].arlMode).toBe('C')
+  expect(spy.mock.calls[1][0].objects.find(o=>o.kind==='door')).toMatchObject({status:'closed'})
+ } finally { spy.mockRestore() }
+})
+it('refuses a Campfire package when the map becomes stale while its bitmap is prepared', async () => {
+ const renderer = await import('../export/render'); let current = true
+ const spy = vi.spyOn(renderer,'exportPng').mockImplementation(async()=>{current=false;return png()})
+ try { await expect(prepareCampfire(project(),info,3,'OFF',{isCurrent:()=>current})).rejects.toThrow('gewijzigd') }
+ finally { spy.mockRestore() }
 })

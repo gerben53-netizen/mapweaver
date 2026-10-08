@@ -1,5 +1,5 @@
-import { useArlStore } from '../store/arlStore'
-import type { ArlMode } from '../store/arlStore'
+import { useRenderViewStore, setRenderView } from '../store/renderViewStore'
+import { MapPreview } from './MapPreview'
 import { EnvironmentalDetailTools } from '../app/EnvironmentalDetailTools'
 import { EnvironmentalDetailController, EnvironmentalDetailFootprint } from './EnvironmentalDetailController'
 import { history } from '../store/history'
@@ -59,11 +59,15 @@ import { PatternTools } from '../app/PatternTools'
 import { Icon } from '../app/Icon'
 import styles from './MapCanvas.module.css'
 export function MapCanvas() {
-  const arlMode=useArlStore(s=>s.mode)
+  const view = useRenderViewStore(s => s.view)
+  const fittedMapRef = useRef<string | null>(null)
+  return <section className={styles.workspace}><div className={`${styles.toolbar} ${styles.viewSwitch}`} role="group" aria-label="Kaartweergave">{(['edit','preview'] as const).map(v => <button key={v} aria-pressed={view === v} onClick={() => { try { setRenderView(v) } catch(e) { useEditorStore.setState({message: (e as Error).message}) } }}>{v === 'edit' ? 'Bewerken' : 'Voorbeeld'}</button>)}</div>{view === 'edit' ? <EditCanvas fittedMapRef={fittedMapRef}/> : <MapPreview/>}</section>
+}
+function EditCanvas({ fittedMapRef }: { fittedMapRef: React.RefObject<string | null> }) {
   const selectedCount = useEditorStore(s=>s.selectedObjectIds.length)
   const focus = useEditorStore(s=>s.focusMode)
   const guides = useEditorStore(state => state.snapGuides), objectSnap = useEditorStore(state => state.objectSnap), smartGuides = useEditorStore(state => state.smartGuides)
-  const surface = useRef<HTMLDivElement>(null), fittedMap = useRef<string | null>(null)
+  const surface = useRef<HTMLDivElement>(null)
   const [size, setSize] = useState({ width: 0, height: 0 })
   const viewport = useEditorStore((s) => s.viewport), fit = useEditorStore((s) => s.fit), tool = useEditorStore((s) => s.activeTool), message = useEditorStore((s) => s.message)
   const map = useProjectStore((s) => s.map), objects = useProjectStore((s) => s.objects)
@@ -73,12 +77,12 @@ export function MapCanvas() {
   const openingPreview=useOpeningPlacement(surface)
   const pathPreview=usePathDrawing(surface); const areaPreview=useAreaDrawing(surface); useStampPlacement(surface)
   useEffect(() => { const observer = new ResizeObserver(([entry]) => { if (entry.contentRect.width > 0 && entry.contentRect.height > 0) setSize({ width: entry.contentRect.width, height: entry.contentRect.height }) }); observer.observe(surface.current!); return () => observer.disconnect() }, [])
-  useEffect(() => { if (size.width > 0 && size.height > 0 && fittedMap.current !== `${map.width}:${map.height}`) { fit(map, size); fittedMap.current = `${map.width}:${map.height}` } }, [fit, map, size])
+  useEffect(() => { if (size.width > 0 && size.height > 0 && fittedMapRef.current !== `${map.width}:${map.height}`) { fit(map, size); fittedMapRef.current = `${map.width}:${map.height}` } }, [fit, fittedMapRef, map, size])
   const ceilingsVisible=useEditorStore(s=>s.ceilingsVisible)
   const grid = (key: 'visible' | 'snapEnabled') => { useProjectStore.getState().applyMapSettings({ ...map, grid: { ...map.grid, [key]: !map.grid[key] } }, () => true) }
   const zoom = (factor: number) => useEditorStore.getState().zoomAt({ x: size.width / 2, y: size.height / 2 }, viewport.zoom * factor)
   return <section className={styles.workspace} aria-label="Map workspace"><div className={styles.toolbar}>
-    <SelectionToolbar />{isHexGrid(map.grid)&&map.grid.visible&&(map.grid.cellSize*useEditorStore.getState().viewport.zoom<6||hexGridRange(map,map.grid).count>MAX_HEX_CELLS)&&<small>Hex grid too dense: zoom in or increase diameter.</small>}<details className={styles.snapOptions}><summary>Map actions</summary><div><LightingControls/><label>Experimental wall readability<select aria-label="Experimental wall readability" value={arlMode} onChange={e=>useArlStore.getState().setMode(e.target.value as ArlMode)}><option value="OFF">OFF — existing renderer</option><option value="B">B — contact shadow</option><option value="C">C — contact, edge and mass</option></select></label><button disabled={map.ceilingExposure==='explicit'} onClick={()=>history.run('Use explicit sky exposure',()=>useProjectStore.setState(s=>({map:{...s.map,ceilingExposure:'explicit'}})))}>Use explicit sky exposure</button><label><input type="checkbox" checked={ceilingsVisible} onChange={e=>useEditorStore.setState({ceilingsVisible:e.target.checked})}/>Ceilings</label><AutomaticLabels/><PrefabCreate /><RoomTools/><details><summary>Keyboard help</summary><p>Path type selects Generic, River, Road or Border; Trail is a Road class. Land / Water shapes geography; Terrain Region classifies biomes; Area draws generic zones.</p><p>V Select · F Fit map · Shift+F Fit selection · Backslash Focus mode</p><p>Delete/Backspace Delete · Ctrl/Cmd+D Duplicate · Ctrl/Cmd+G Group · Ctrl/Cmd+Shift+G Ungroup</p><p>Ctrl/Cmd+Z Undo · Ctrl/Cmd+Shift+Z or Ctrl+Y Redo · Ctrl/Cmd+S Save now</p><p>Wheel/Ctrl+wheel zoom over canvas · Space+drag or middle-drag pan · Esc cancel or clear selection. Text fields keep normal editing keys.</p></details></div></details><div className={styles.controls}>
+    <SelectionToolbar />{isHexGrid(map.grid)&&map.grid.visible&&(map.grid.cellSize*useEditorStore.getState().viewport.zoom<6||hexGridRange(map,map.grid).count>MAX_HEX_CELLS)&&<small>Hex grid too dense: zoom in or increase diameter.</small>}<details className={styles.snapOptions}><summary>Map actions</summary><div><LightingControls/><button disabled={map.ceilingExposure==='explicit'} onClick={()=>history.run('Use explicit sky exposure',()=>useProjectStore.setState(s=>({map:{...s.map,ceilingExposure:'explicit'}})))}>Use explicit sky exposure</button><label><input type="checkbox" checked={ceilingsVisible} onChange={e=>useEditorStore.setState({ceilingsVisible:e.target.checked})}/>Ceilings</label><AutomaticLabels/><PrefabCreate /><RoomTools/><details><summary>Keyboard help</summary><p>Path type selects Generic, River, Road or Border; Trail is a Road class. Land / Water shapes geography; Terrain Region classifies biomes; Area draws generic zones.</p><p>V Select · F Fit map · Shift+F Fit selection · Backslash Focus mode</p><p>Delete/Backspace Delete · Ctrl/Cmd+D Duplicate · Ctrl/Cmd+G Group · Ctrl/Cmd+Shift+G Ungroup</p><p>Ctrl/Cmd+Z Undo · Ctrl/Cmd+Shift+Z or Ctrl+Y Redo · Ctrl/Cmd+S Save now</p><p>Wheel/Ctrl+wheel zoom over canvas · Space+drag or middle-drag pan · Esc cancel or clear selection. Text fields keep normal editing keys.</p></details></div></details><div className={styles.controls}>
       {(!isLandMap(map)||isHexGrid(map.grid))&&<><button className="icon-button" title="Show grid" aria-label="Show grid" aria-pressed={map.grid.visible} onClick={() => grid('visible')}><Icon name="pattern" /></button>
       <button className="icon-button" title="Snap to grid" aria-label="Snap to grid" aria-pressed={map.grid.snapEnabled} onClick={() => grid('snapEnabled')}><Icon name="snap" /></button></>}
       <details className={styles.snapOptions}><summary title="Snapping options">Snap</summary><div><label><input type="checkbox" checked={objectSnap} onChange={event => useEditorStore.setState({ objectSnap: event.target.checked })} /> Objects</label><label><input type="checkbox" checked={smartGuides} onChange={event => useEditorStore.setState({ smartGuides: event.target.checked, snapGuides: [] })} /> Guides</label></div></details>

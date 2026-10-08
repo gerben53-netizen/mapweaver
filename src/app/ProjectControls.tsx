@@ -1,3 +1,4 @@
+import { useRenderViewStore } from '../store/renderViewStore'
 import { NewMapWizard } from './NewMapWizard'
 import { initialMapDraft } from '../projects/newMap'
 import { WorldWizard } from '../world/WorldWizard'
@@ -22,6 +23,7 @@ import { useProjectStore } from '../store/projectStore'
 import styles from './ProjectControls.module.css'
 const confirmReplace=()=>window.confirm('Replace unsaved changes? Keep a recovery copy or save a separate project first if needed.')
 export function ProjectControls(){
+  const preview=useRenderViewStore(s=>s.view==='preview')
   const [storageNotice,setStorageNotice]=useState('')
   const workspace=useEditorStore(s=>s.workspace)
   const clipboard=useEditorStore(s=>s.clipboard)
@@ -46,11 +48,11 @@ export function ProjectControls(){
   useEffect(()=>{const show=()=>setView('projects');window.addEventListener('mapweaver:projects',show);return()=>window.removeEventListener('mapweaver:projects',show)},[])
   useEffect(()=>useCampaignStore.subscribe(state=>{if(state.newMap){setView('new');useCampaignStore.setState({newMap:false})}}),[])
   const close=()=>{if(useCampaignStore.getState().snapshot)setView(null);else setView('projects')}
-  return <div className={styles.projects}><div className={styles.identity}><strong>{session.revision===null?'No local project open':session.info.name}</strong><SaveStatus saveStatus={session.saveStatus} recoveryDirty={session.recoveryDirty} savedAt={session.savedAt}/></div><div inert={!!session.busy}>{workspace==='editor'?<HistoryControls/>:<LibraryHistoryControls/>}</div>{storageNotice&&<div role="alert">{storageNotice}<button onClick={()=>void exportLocalProject()}>Export unsaved project</button><button onClick={()=>{if(!hasUnsavedChanges()||confirmReplace())window.location.reload()}}>Reload</button></div>}
+  return <div className={styles.projects}><div className={styles.identity}><strong>{session.revision===null?'No local project open':session.info.name}</strong><SaveStatus saveStatus={session.saveStatus} recoveryDirty={session.recoveryDirty} savedAt={session.savedAt}/></div><div inert={!!session.busy}>{workspace==='editor'?<div inert={preview}><HistoryControls/></div>:<LibraryHistoryControls/>}</div>{storageNotice&&<div role="alert">{storageNotice}<button onClick={()=>void exportLocalProject()}>Export unsaved project</button><button onClick={()=>{if(!hasUnsavedChanges()||confirmReplace())window.location.reload()}}>Reload</button></div>}
     <button disabled={checking||!!session.busy} onClick={()=>{setView('projects');void refresh()}}>Projects</button>
     {workspace==='editor'&&<><button title="Save now (Ctrl/Cmd+S). Autosave also saves completed edits." disabled={!!session.busy||session.revision===null||session.saveStatus==='conflict'} onClick={()=>{void saveLocalProject()}}>Save</button>
     <ExportControls/></>}
-    <details className={styles.edit}><summary>Project</summary><div className={styles.menu}>
+    <details inert={preview} className={styles.edit}><summary>Project</summary><div className={styles.menu}>
       <button disabled={!!session.busy||migrationRequired} onClick={()=>setView('new')}>New map</button>
       <button disabled={!!session.busy||session.revision===null} onClick={()=>{void run('Exporting project…',exportLocalProject)}}>Export map only</button>
       <button disabled={!!session.busy||migrationRequired} onClick={()=>input.current?.click()}>Import map file</button>

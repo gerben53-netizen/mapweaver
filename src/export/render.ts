@@ -1,9 +1,9 @@
 import { arlBatches } from '../canvas/architecturalReadability'
-import { paintArlBatch } from '../canvas/drawArchitecturalReadability'
-import { useArlStore } from '../store/arlStore'
+import { paintArlBatch, prepareArlBatch, clearArlCache, arlReady } from '../canvas/drawArchitecturalReadability'
+import { assertCurrent, highQualityCache, renderKey, type RenderRequest } from './renderCache'
 import { drawEnvironmentalDetail } from '../canvas/drawEnvironmentalDetail'
 import { loadEnvironmentalImages } from '../canvas/environmentalImages'
-import { loadGeneratedWall } from '../canvas/drawGeneratedWall'
+import { loadGeneratedWall, generatedSurface } from '../canvas/drawGeneratedWall'
 import { softShadowStyle } from '../domain/mapEffects'
 import { drawTexturePaint } from '../canvas/drawTexturePaint'
 import { texturePaintAssetIds } from '../domain/terrainPaint'
@@ -99,8 +99,7 @@ export function renderScene(scene: ExportScene, images: Map<string, ExportImage>
 }
 
 type Resolver = typeof resolveAsset
-export async function exportPng(project: ProjectSnapshot, options: ExportOptions, resolve: Resolver = resolveAsset): Promise<Blob> {
-  options={...options,arlMode:options.arlMode??useArlStore.getState().mode}
+async function renderPng(project: ProjectSnapshot, options: ExportOptions, resolve: Resolver, check: () => void): Promise<Blob> {
   const generation = useAssetContext.getState().generation
   await loadPaintTextures(project.map.terrainPaint)
   await loadEnvironmentalImages(project.map.environmentalDetail)
@@ -148,8 +147,42 @@ export async function exportPng(project: ProjectSnapshot, options: ExportOptions
     }
     if (failures.length) throw new Error(`Export needs readable images:\n${failures.join('\n')}`)
     if (resolve === resolveAsset && generation !== useAssetContext.getState().generation) throw Error('Project changed while preparing export. Try again.')
+    check()
+    const objects = scene.items.flatMap(i => i.kind === 'object' ? [i.object] : [])
+    const breaks: number[] = []; let index = 0, separator = false
+    for (const item of scene.items) { if (item.kind === 'object') { if (separator) breaks.push(index); index++; separator = false } else separator = true }
+    let slice = performance.now()
+    const checkpoint = async () => {
+      check()
+      if (performance.now() - slice >= 8) { await new Promise<void>(r => setTimeout(r, 0)); check(); slice = performance.now() }
+    }
+    const batches = arlBatches(scene.map, objects, scene.arlMode ?? 'OFF', breaks), composited = new Set(batches.flatMap(b => b.walls.map(w => w.id)))
+    for (const wall of objects) if (wall.kind === 'path' && wall.wall?.generated && !composited.has(wall.id)) {
+      generatedSurface(wall, objects.filter(isOpening).filter(o => o.wallId === wall.id)); await checkpoint()
+    }
+    for (const batch of batches) await prepareArlBatch(batch, scene.map, objects, scene.arlMode ?? 'OFF', checkpoint)
+    if (batches.some(batch => !arlReady(batch, scene.map, objects, scene.arlMode ?? 'OFF'))) throw Error('De ARL-compositie past niet in de begrensde cache. Kies OFF of vereenvoudig de kaart.')
+    await new Promise<void>(r => setTimeout(r, 0)); check()
     canvas = renderScene(scene, images)
     return await new Promise<Blob>((resolve, reject) => canvas!.toBlob((blob) => blob ? resolve(blob) : reject(new Error('The browser could not create the PNG. Try 1× or a smaller map.')), 'image/png'))
   } finally { leases.forEach(lease => lease.release()); if (canvas) { canvas.width = 0; canvas.height = 0 } }
 }
 
+
+/** Preview, PNG and Campfire use this single physical renderer. Caller-supplied
+ * currentness guards prevent a completed snapshot becoming a stale download. */
+export async function exportPng(project: ProjectSnapshot, options: ExportOptions, resolve: Resolver = resolveAsset, request: RenderRequest = {}): Promise<Blob> {
+  assertCurrent(request)
+  const { map, objects, layers, objectGroups, layerTree } = project
+  const snapshot = structuredClone({ map, objects, layers, objectGroups, layerTree }), capturedOptions = { ...options, arlMode: options.arlMode ?? 'OFF' }, generation = useAssetContext.getState().generation
+  const guarded = { ...request, isCurrent: () => generation === useAssetContext.getState().generation && (!request.isCurrent || request.isCurrent()) }
+  const key = renderKey(snapshot, capturedOptions, generation, request.mapId)
+  // Custom resolvers may supply arbitrary bytes for the same IDs: never cache them.
+  if (resolve !== resolveAsset) {
+    const check = () => assertCurrent(guarded)
+    const output = await renderPng(snapshot, capturedOptions, resolve, check); check(); return output
+  }
+  const output = await highQualityCache.get(key, guarded, check => renderPng(snapshot, capturedOptions, resolve, check))
+  assertCurrent(guarded); return output
+}
+useAssetContext.subscribe(() => { highQualityCache.clear(); clearArlCache() })

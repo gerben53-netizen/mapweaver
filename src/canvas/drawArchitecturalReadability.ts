@@ -1,7 +1,7 @@
 import type { MapDocument, MapObject, OpeningObject, PathObject } from '../domain/models'
 import type { ArlMode } from '../store/arlStore'
 import { generatedSurface, generatedSurfaceKey, paintGeneratedWall } from './drawGeneratedWall'
-import { arlWall, arlProfile, arlDistance, arlEnds, beyondArlEnd } from './architecturalReadability'
+import { arlWall, arlProfile, arlDistanceSteps, arlEnds, beyondArlEnd } from './architecturalReadability'
 import type { ArlBatch } from './architecturalReadability'
 import { areaPath } from './drawArea'
 import { openingCutout } from '../domain/openings'
@@ -17,6 +17,10 @@ let pixels = 0, generation = -1
 export const arlStats = { builds: 0, hits: 0, lastBuildMs: 0, fallbacks: 0 }
 export function clearArlCache() { cache.clear(); fallbacks.clear(); pixels = 0 }
 export function arlCacheStats() { return { entries: cache.size, pixels } }
+export function arlReady(batch: ArlBatch, map: MapDocument, objects: MapObject[], mode: ArlMode) {
+  const key = arlKey(batch, map, objects, mode)
+  return mode === 'OFF' || cache.has(key) || fallbacks.has(key)
+}
 const openingsFor = (objects: MapObject[], wall: PathObject) => objects.filter((o): o is OpeningObject => (o.kind === 'door' || o.kind === 'window') && o.wallId === wall.id)
 const nativeOccluder = (o: MapObject): o is PathObject => o.kind === 'path' && o.pathKind === 'wall' && !arlWall(o)
 export function arlKey(batch: ArlBatch, map: MapDocument, objects: MapObject[], mode: ArlMode) {
@@ -45,7 +49,7 @@ function fallback(c: CanvasRenderingContext2D, batch: ArlBatch, objects: MapObje
  * Surrounding wall coverage prevents effects inside another wall; a nearest-owner
  * field assigns each floor pixel once even across separate scene batches.
  */
-export function paintArlBatch(c: CanvasRenderingContext2D, batch: ArlBatch, map: MapDocument, objects: MapObject[], mode: ArlMode) {
+function* paintArlSteps(c: CanvasRenderingContext2D, batch: ArlBatch, map: MapDocument, objects: MapObject[], mode: ArlMode) {
   if (mode === 'OFF') { baseline(c, batch, objects); return }
   const currentGeneration = useAssetContext.getState().generation
   if (generation !== currentGeneration) { clearArlCache(); generation = currentGeneration }
@@ -63,12 +67,13 @@ export function paintArlBatch(c: CanvasRenderingContext2D, batch: ArlBatch, map:
     sourcePixels += surface.canvas.width * surface.canvas.height
     if (sourcePixels > CACHE_PIXELS) { surfaces.length = 0; fallback(c, batch, objects, key); return }
     surfaces.push(surface)
+    yield
   }
   const own = surfaces.filter((_, i) => ownIds.has(walls[i].id))
   const x = Math.max(0, Math.floor(Math.min(...own.map(s => s.x)))), y = Math.max(0, Math.floor(Math.min(...own.map(s => s.y))))
   const right = Math.min(map.width, Math.ceil(Math.max(...own.map(s => s.x + s.width)))), bottom = Math.min(map.height, Math.ceil(Math.max(...own.map(s => s.y + s.height))))
   const width = right - x, height = bottom - y
-  if (width <= 0 || height <= 0) return
+  if (width <= 0 || height <= 0) { fallback(c, batch, objects, key); return }
   const ratio = Math.min(2, 4096 / Math.max(width, height), Math.sqrt(MAX_PIXELS / (width * height)))
   if (ratio < .5) { fallback(c, batch, objects, key); return }
   const rw = Math.max(1, Math.floor(width * ratio)), rh = Math.max(1, Math.floor(height * ratio)), count = rw * rh
@@ -96,17 +101,21 @@ export function paintArlBatch(c: CanvasRenderingContext2D, batch: ArlBatch, map:
     if (left >= r || top >= b) continue
     // Native pixels are immutable. Sample their alpha once per build, including source foliage.
     const data = s.canvas.getContext('2d')!.getImageData(0, 0, s.canvas.width, s.canvas.height).data
-    for (let py = top; py < b; py++) for (let px = left; px < r; px++) {
+    for (let py = top; py < b; py++) {
+      if (py % 32 === 0) yield
+      for (let px = left; px < r; px++) {
       const sx = Math.floor((x + (px + .5) / ratio - s.x) / s.width * s.canvas.width), sy = Math.floor((y + (py + .5) / ratio - s.y) / s.height * s.canvas.height)
       if (sx >= 0 && sy >= 0 && sx < s.canvas.width && sy < s.canvas.height && data[(sy * s.canvas.width + sx) * 4 + 3] >= 32) coverage[py * rw + px] = wi + 1
+    }
     }
     if (ownIds.has(walls[wi].id)) art.context.drawImage(s.canvas, s.x, s.y, s.width, s.height)
   }
   for (let i = 0; i < count; i++) if (!coverage[i] && floorBytes[i * 4 + 3] >= 128) floorSeeds[i] = 1
-  const outside = arlDistance(coverage, rw, rh, 4 * ratio + 1), inside = mode === 'C' ? arlDistance(floorSeeds, rw, rh, 2 * ratio + 1) : null
+  const outside = yield* arlDistanceSteps(coverage, rw, rh, 4 * ratio + 1), inside = mode === 'C' ? yield* arlDistanceSteps(floorSeeds, rw, rh, 2 * ratio + 1) : null
   const fx = scratch(rw, rh), edge = mode === 'C' ? scratch(rw, rh) : null, sd = fx.context.createImageData(rw, rh), ed = edge?.context.createImageData(rw, rh)
   const ends = walls.map(arlEnds), profiles = walls.map(arlProfile)
   for (let i = 0; i < count; i++) {
+    if (i % (rw * 32) === 0) yield
     const owner = (coverage[i] || outside.owner[i]) - 1
     if (owner < 0 || !ownIds.has(walls[owner].id)) continue
     const p = profiles[owner], offset = i * 4
@@ -127,4 +136,15 @@ export function paintArlBatch(c: CanvasRenderingContext2D, batch: ArlBatch, map:
   while (cache.size && (cache.size >= 32 || pixels + size > CACHE_PIXELS)) { const [old, value] = cache.entries().next().value!; pixels -= value.canvas.width * value.canvas.height; cache.delete(old) }
   cache.set(key, result); pixels += size; arlStats.builds++; arlStats.lastBuildMs = performance.now() - start
   c.drawImage(result.canvas, result.x, result.y, result.width, result.height)
+}
+
+/** Sync entry is retained for native drawing and tests. HQ preparation drives
+ * exactly the same generator cooperatively before the final scene draw. */
+export function paintArlBatch(...args: Parameters<typeof paintArlSteps>) {
+  const steps = paintArlSteps(...args); while (!steps.next().done) { /* sync native draw */ }
+}
+export async function prepareArlBatch(batch: ArlBatch, map: MapDocument, objects: MapObject[], mode: ArlMode, checkpoint: () => Promise<void>) {
+  const scratchCanvas = scratch(1, 1)
+  const steps = paintArlSteps(scratchCanvas.context, batch, map, objects, mode)
+  try { while (!steps.next().done) await checkpoint() } finally { steps.return(); scratchCanvas.canvas.width = scratchCanvas.canvas.height = 0 }
 }
