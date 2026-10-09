@@ -1,18 +1,40 @@
-import type { AreaObject, MapDocument, MapObject, PathObject } from '../domain/models'
+import type { AreaObject, MapDocument, MapObject, OpeningObject, PathObject } from '../domain/models'
+import { openingCutout } from '../domain/openings'
 import type { ArlMode } from '../store/arlStore'
 import { pointAtPosition } from '../domain/paths'
 import type { Point } from './viewport'
-const SUPPORTED_MATERIALS = new Set(['pale-palace-stone', 'marble', 'natural-cave-rock', 'refined-timber', 'rustic-heavy-timber', 'living-root', 'rough-stone'])
+const SUPPORTED_MATERIALS = new Set(['pale-palace-stone', 'marble', 'natural-cave-rock', 'refined-timber', 'rustic-heavy-timber', 'living-root', 'rough-stone', 'sung-wood'])
 
 export const ARL_PROFILES = {
-  refinedStone: { shadowWidth: 3, shadowOpacity: .48, edgeWidth: .5, edgeOpacity: .22, massWidth: 1.2, massOpacity: .1 },
-  roughStone: { shadowWidth: 2.5, shadowOpacity: .4, edgeWidth: 0, edgeOpacity: 0, massWidth: 0, massOpacity: 0 },
-  timber: { shadowWidth: 2.5, shadowOpacity: .42, edgeWidth: .4, edgeOpacity: .12, massWidth: 1, massOpacity: .08 },
-  organic: { shadowWidth: 2, shadowOpacity: .32, edgeWidth: 0, edgeOpacity: 0, massWidth: 0, massOpacity: 0 },
+  refinedStone: { shadowWidth: 4, shadowOpacity: .46, edgeWidth: .5, edgeOpacity: .24, massWidth: 1.5, massOpacity: .12 },
+  roughStone: { shadowWidth: 4, shadowOpacity: .42, edgeWidth: 0, edgeOpacity: 0, massWidth: 0, massOpacity: 0 },
+  timber: { shadowWidth: 4, shadowOpacity: .46, edgeWidth: .5, edgeOpacity: .2, massWidth: 1.5, massOpacity: .1 },
+  organic: { shadowWidth: 4, shadowOpacity: .42, edgeWidth: 0, edgeOpacity: 0, massWidth: 0, massOpacity: 0 },
 } as const
+/** Map-pixel distance, independent of camera and final output resolution.
+ * A continuous smooth gradient with a bounded soft tail; no directional light or wide halo. */
+export function arlContactOpacity(distance: number, profile: { shadowWidth: number; shadowOpacity: number }) {
+  if (!Number.isFinite(distance) || distance < 0 || profile.shadowWidth <= 0) return 0
+  const t = Math.min(1, distance / profile.shadowWidth)
+  return profile.shadowOpacity * (1 - t * t) ** 2
+}
+/** Opening exclusions belong only to their parent wall, never to shared floors. */
+export function arlOpeningCuts(wall: PathObject, openings: OpeningObject[]) {
+  return openings.filter(o => o.wallId === wall.id).map(o => openingCutout(o, wall, wall.strokeWidth * 4))
+}
+export function inArlOpening(point: Point, cuts: Point[][]) {
+  return cuts.some(points => {
+    let inside = false
+    for (let i = 0, j = points.length - 1; i < points.length; j = i++) {
+      const a = points[i], b = points[j]
+      if ((a.y > point.y) !== (b.y > point.y) && point.x < (b.x - a.x) * (point.y - a.y) / (b.y - a.y) + a.x) inside = !inside
+    }
+    return inside
+  })
+}
 export function arlProfile(wall: PathObject) {
   const id = wall.wall?.generated?.id
-  return ARL_PROFILES[id === 'living-root' ? 'organic' : id === 'natural-cave-rock' || id === 'rough-stone' ? 'roughStone' : id === 'marble' || id === 'pale-palace-stone' ? 'refinedStone' : 'timber']
+  return ARL_PROFILES[id === 'living-root' || id === 'sung-wood' ? 'organic' : id === 'natural-cave-rock' || id === 'rough-stone' ? 'roughStone' : id === 'marble' || id === 'pale-palace-stone' ? 'refinedStone' : 'timber']
 }
 export function arlWall(o: MapObject): o is PathObject {
   // Unknown/translucent/rotated scopes retain the native baseline. No guessed alpha semantics.

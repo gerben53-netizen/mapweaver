@@ -11,14 +11,16 @@ Het voorbeeld wordt indien nodig opgebouwd. Ongewijzigde kaarten hergebruiken hu
 Voorbeeld heeft een tijdelijke ARL-keuze:
 
 - **OFF:** normale production-weergave met bestaande contactschaduw.
-- **B:** experimentele architecturale contactschaduw.
+- **B:** architecturale contactschaduw op daadwerkelijke vloeren.
 - **C:** B plus structurele rand en muurmassaversterking waar het materiaal dit ondersteunt.
 
-OFF blijft standaard. B/C zijn geen dynamische belichting en zijn niet automatisch geactiveerd voor productie. Je kunt het voorbeeld op 1× of 2× controleren. Een koud B/C-voorbeeld van een zware kaart kan enkele seconden kosten; dit blokkeert opslaan niet.
+Battlemaps gebruiken standaard C, tenzij de kaart een expliciete OFF/B/C-override heeft. Regional/World blijven standaard OFF. B/C zijn geen dynamische belichting. Je kunt het voorbeeld op 1× of 2× controleren. Een koud B/C-voorbeeld van een zware kaart kan enkele seconden kosten; dit blokkeert opslaan niet.
+
+Contactschaduw volgt de zichtbare muurartwork met een continu afnemend zacht verloop tot nul op vier kaartpixels. Openingen onderdrukken alleen de schaduw van hun eigen muur, zodat aangrenzende muren hun contact behouden. Alleen gevulde, zichtbare vloer-Areas onder de muur bepalen de vloerzijden. Een achtergrondkleur of afbeelding telt op zichzelf niet als vloer. Living Root, Gezongen Hout en ruwe steen gebruiken geen extra structurele contour of massaversterking; B en C zijn voor deze muren gelijk. Gezongen Hout gebruikt nu ook dit organische profiel. Scherpe bochten begrenzen lange root-componenten met een kleine overlap voor de bestaande knoop, zonder vrije uiteinden of decoratieve groei weg te snijden.
 
 ## PNG en Campfire
 
-PNG-export, Export Campfire Map en Naar Campfire sturen kiezen **elk expliciet hun eigen ARL-profiel**, standaard OFF. De tijdelijke keuze in Voorbeeld wordt niet ongemerkt overgenomen. Gebruik dezelfde schaal, raster-/schaalbalkopties, transparantie en ARL-keuze om Preview en PNG rechtstreeks te vergelijken. Campfire gebruikt zijn bestaande 1× fysieke bitmap zonder ingebakken raster/schaalbalk en canonieke v3-semantiek; deurartwork gebruikt de initiële gesloten pose. Dit kan bewust afwijken van een authoring-preview van een geopende deur.
+PNG-export, Export Campfire Map en Naar Campfire sturen kiezen **elk expliciet hun eigen ARL-profiel**, aanvankelijk de effectieve kaartinstelling. De tijdelijke keuze in Voorbeeld wordt niet ongemerkt overgenomen. Gebruik dezelfde schaal, raster-/schaalbalkopties, transparantie en ARL-keuze om Preview en PNG rechtstreeks te vergelijken. Campfire gebruikt zijn bestaande 1× fysieke bitmap zonder ingebakken raster/schaalbalk en canonieke v3-semantiek; deurartwork gebruikt de initiële gesloten pose. Dit kan bewust afwijken van een authoring-preview van een geopende deur.
 
 Voorbeeld en export delen de fysieke renderpipeline. Export bevat geen editoroverlays of gesimuleerde runtime-belichting. Walls, doors, windows, Ceiling en authored light defaults blijven afzonderlijke Campfire-gegevens. Campfire bepaalt runtime-belichting en vereist nog steeds DM-review.
 

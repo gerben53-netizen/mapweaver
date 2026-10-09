@@ -21,3 +21,11 @@ Voorbeelddiagnose is tijdelijk en wordt bij sessiewissel gereset. De defaultopti
 De bestaande ARL-profielen blijven ongewijzigd: native contactschaduw bij OFF, één ARL-contactschaduw bij ondersteunde B/C-batches. C voegt alleen de reeds geaccepteerde materiaalbewuste edge/mass toe. Living Root/Natural Cave Rock behouden de beschermde organische profielen zonder nieuwe edge/mass. Native fallback blijft voor niet-ondersteunde scopes gelden. Canonieke Campfire v3-semantiek en contractbestanden wijzigen niet.
 
 Bewijs en meetresultaten: ignored `deliverables.local/Battlemap-Premium-Rendering-Defaults/`.
+
+## Contrastkalibratie en joins — 2026-10-09
+
+De bestaande vier profielen zijn gekalibreerd met native Preview/PNG-proeven op 100/75/50%. Contact gebruikt een continu kwadratisch afnemend verloop tot nul op vier map pixels, zonder harde kern. De maximale dekking is 0.46 voor timber/verfijnde steen en 0.42 voor organische/ruwe materialen. Openinguitsluitingen horen uitsluitend bij hun eigen muur: een deur mag contact van een aangrenzende gangmuur niet uit het gezamenlijke vloermasker verwijderen. Parameters blijven camera- en exportresolutie-onafhankelijk. Gezongen Hout is aan de bestaande ARL-admission toegevoegd met het organische profiel; dit materiaal gebruikt de Living Root-assemblage, niet de linear/timber-strategie. Organische/ruwe profielen behouden nul edge/mass. B/C vervangen de native contactschaduw en stapelen deze niet.
+
+Lange root-stock die een scherpe richtingsovergang zou kruisen wordt lokaal begrensd en vanuit het oorspronkelijke PNG gecropt; een kleine overlap en de bestaande knoop blijven behouden. Echte root-end-componenten en organische decoratie blijven intact. Dit verandert alleen afgeleide plaatsingen, niet de opgeslagen centerline, breedte, opening of immutable PNG. Geen formaat- of contractwijziging. Afzonderlijke QA-effectisolatie en rendertrace zijn geen normale gebruikersmodi en worden niet opgeslagen.
+
+Bewijs: ignored `deliverables.local/ARL-Visual-Contrast-Timber-Joins/`.

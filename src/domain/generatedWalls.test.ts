@@ -1,7 +1,7 @@
 import { generatedSurfaceKey } from '../canvas/drawGeneratedWall'
 import { expect,it,beforeEach } from 'vitest'
 import { generatedDefinition,validateGeneratedDefinition,registerGeneratedDefinition,generatedWallStyle,ROOT_PRESETS } from './generatedWalls'
-import { generatedPlacements,generatedVisualBounds,rootRunCount } from './generatedWallGeometry'
+import { generatedPlacements,generatedVisualBounds,rootRunCount,rootMemberLength } from './generatedWallGeometry'
 import { createWall,SIMPLE_WALL,wallStyle } from './walls'
 import { createOpening,openingPlacement } from './openings'
 import { validatePath,withPathGeometry } from './paths'
@@ -22,6 +22,22 @@ it('admits immutable data definitions and rejects unsafe or incomplete component
 it('uses deterministic weighted nonrepeating components and preserves one native wall after reload',()=>{
  const p=wall(),a=generatedPlacements(p);expect(a).toEqual(generatedPlacements(validatePath(JSON.parse(JSON.stringify(p)))));expect(a).toEqual(generatedPlacements({...p,name:'Unrelated name'}));expect(a).not.toEqual(generatedPlacements({...p,wall:{...p.wall!,generated:{...p.wall!.generated!,seed:987}}}));expect(a.filter(v=>v.run===0).slice(2,8).map(v=>v.component.id).some((v,i,ids)=>i>0&&v!==ids[i-1])).toBe(true)
  expect(p.kind).toBe('path');expect(p.wall?.renderingMode).toBe('generated');expect(JSON.stringify(p)).not.toContain('placements')
+})
+it('bounds straight root stock at sharp joins, including the closed seam, without trimming free ends',()=>{
+ expect(rootMemberLength(99,30,[100],10,200,false)).toBe(8)
+ expect(rootMemberLength(1,30,[0],10,200,true)).toBe(8)
+ expect(rootMemberLength(199,30,[0],10,200,true)).toBe(8)
+ expect(rootMemberLength(1,30,[],10,200,false)).toBe(30)
+ for(const width of [5,10,20,30]){
+  const s={...generatedWallStyle(SIMPLE_WALL,map,'sung-wood','production-1'),strokeWidth:width}
+  const path=createWall([{id:'a',x:100,y:100,mode:'corner'},{id:'b',x:200,y:100,mode:'corner'},{id:'c',x:240,y:160,mode:'corner'}],false,s)
+  const before=JSON.stringify(path),parts=generatedPlacements(path),bodies=parts.filter(p=>p.component.role==='root-long'||p.component.role==='root-medium')
+  expect(bodies.some(p=>p.sourceFraction!==undefined)).toBe(true)
+  for(const p of bodies){expect(p.width/2).toBeLessThanOrEqual(Math.abs(p.distance-100)+width*.3+.0001);expect(p.sourceFraction??1).toBeGreaterThan(0);expect(p.sourceFraction??1).toBeLessThanOrEqual(1)}
+  expect(parts.filter(p=>p.component.role==='root-end').every(p=>p.sourceFraction===undefined)).toBe(true)
+  expect(generatedPlacements(validatePath(JSON.parse(before)))).toEqual(parts)
+  expect(JSON.stringify(path)).toBe(before)
+ }
 })
 it('width controls run count and organic/growth/overgrowth remain visual-only',()=>{
  expect([.5,1,2,3].map(rootRunCount)).toEqual([2,3,5,7]);const p=wall(),clean={...p,wall:{...p.wall!,generated:{...p.wall!.generated!,...ROOT_PRESETS.Clean}}},overgrown={...p,wall:{...p.wall!,generated:{...p.wall!.generated!,...ROOT_PRESETS.Overgrown}}};expect(generatedPlacements(overgrown).length).toBeGreaterThan(generatedPlacements(clean).length);expect(generatedPlacements(clean).some(v=>['moss','leaves'].includes(v.component.role))).toBe(false);expect(clean.nodes).toBe(p.nodes)

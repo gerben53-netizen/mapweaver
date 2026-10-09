@@ -1,18 +1,22 @@
 import type { MapDocument, MapObject, OpeningObject, PathObject } from '../domain/models'
 import type { ArlMode } from '../store/arlStore'
 import { generatedSurface, generatedSurfaceKey, paintGeneratedWall } from './drawGeneratedWall'
-import { arlWall, arlProfile, arlDistanceSteps, arlEnds, beyondArlEnd } from './architecturalReadability'
+import { arlWall, arlProfile, arlContactOpacity, arlDistanceSteps, arlEnds, beyondArlEnd, arlOpeningCuts, inArlOpening } from './architecturalReadability'
 import type { ArlBatch } from './architecturalReadability'
 import { areaPath } from './drawArea'
-import { openingCutout } from '../domain/openings'
 import { wallRibbon } from '../domain/wallGeometry'
 import { wallPaintPath } from '../domain/wallAlignment'
 import { useAssetContext } from '../projects/assets'
 
 const MAX_PIXELS = 4_194_304, CACHE_PIXELS = 16_777_216
-interface Surface { canvas: HTMLCanvasElement; x: number; y: number; width: number; height: number }
+interface Surface { canvas: HTMLCanvasElement; x: number; y: number; width: number; height: number; diagnostics?: Record<string, unknown> }
 const cache = new Map<string, Surface>()
 const fallbacks = new Set<string>()
+export type ArlDiagnosticEffect = 'contact' | 'edge' | 'mass'
+let diagnosticEffect: ArlDiagnosticEffect | undefined
+/** Isolated QA diagnostics only; not a user rendering mode. Reset after each proof. */
+export function setArlEffectDiagnostic(effect?: ArlDiagnosticEffect) { diagnosticEffect = effect; clearArlCache() }
+export const arlTrace: { last?: Record<string, unknown> } = {}
 let pixels = 0, generation = -1
 export const arlStats = { builds: 0, hits: 0, lastBuildMs: 0, fallbacks: 0 }
 export function clearArlCache() { cache.clear(); fallbacks.clear(); pixels = 0 }
@@ -24,7 +28,7 @@ export function arlReady(batch: ArlBatch, map: MapDocument, objects: MapObject[]
 const openingsFor = (objects: MapObject[], wall: PathObject) => objects.filter((o): o is OpeningObject => (o.kind === 'door' || o.kind === 'window') && o.wallId === wall.id)
 const nativeOccluder = (o: MapObject): o is PathObject => o.kind === 'path' && o.pathKind === 'wall' && !arlWall(o)
 export function arlKey(batch: ArlBatch, map: MapDocument, objects: MapObject[], mode: ArlMode) {
-  return JSON.stringify([mode, map.width, map.height, batch.walls.map(w => w.id),
+  return JSON.stringify([diagnosticEffect, mode, map.width, map.height, batch.walls.map(w => w.id),
     batch.floors.map(f => [f.id, f.geometry]),
     objects.filter((o):o is PathObject => o.kind === 'path' && o.pathKind === 'wall').map(w => [w.id, w.x, w.y, w.rotation, w.opacity, w.cap, w.join, generatedSurfaceKey(w, openingsFor(objects, w))])])
 }
@@ -54,7 +58,8 @@ function* paintArlSteps(c: CanvasRenderingContext2D, batch: ArlBatch, map: MapDo
   const currentGeneration = useAssetContext.getState().generation
   if (generation !== currentGeneration) { clearArlCache(); generation = currentGeneration }
   const key = arlKey(batch, map, objects, mode), existing = cache.get(key)
-  if (existing) { cache.delete(key); cache.set(key, existing); arlStats.hits++; c.drawImage(existing.canvas, existing.x, existing.y, existing.width, existing.height); return }
+  arlTrace.last = { mode, diagnosticEffect: diagnosticEffect ?? 'full', cache: existing ? 'hit' : 'miss', walls: batch.walls.map(w=>({id:w.id,material:w.wall!.generated!.id,profile:arlProfile(w)})), floors: batch.floors.map(f=>f.id), footprint:'opening-clipped native alpha >= 32', floorMask:'opaque filled Areas below wall, excluding wall coverage; contact openings scoped to owner', order:['contact','raw artwork','separation edge / mass'], nativeContactShadow:false }
+  if (existing) { Object.assign(arlTrace.last, existing.diagnostics); cache.delete(key); cache.set(key, existing); arlStats.hits++; c.drawImage(existing.canvas, existing.x, existing.y, existing.width, existing.height); return }
   if (fallbacks.has(key)) { baseline(c, batch, objects); return }
   const start = performance.now(), ownIds = new Set(batch.walls.map(w => w.id))
   const walls = objects.filter(arlWall), surfaces: NonNullable<ReturnType<typeof generatedSurface>>[] = []
@@ -83,9 +88,9 @@ function* paintArlSteps(c: CanvasRenderingContext2D, batch: ArlBatch, map: MapDo
   floor.context.scale(ratio, ratio); floor.context.translate(-x, -y)
   floor.context.fillStyle = '#fff'
   for (const f of batch.floors) { floor.context.save(); floor.context.translate(f.x, f.y); areaPath(floor.context, f); floor.context.fill(); floor.context.restore() }
-  // Genuine cuts stay clear after distance-field expansion, independent of door state.
+  // Keep genuine cuts clear for their own wall without erasing neighboring floors.
   floor.context.globalCompositeOperation = 'destination-out'
-  for (const w of walls) for (const o of openingsFor(objects, w)) { floor.context.beginPath(); ring(floor.context, openingCutout(o, w, w.strokeWidth * 4)); floor.context.fill() }
+  const openingCuts = walls.map(w => arlOpeningCuts(w, openingsFor(objects, w)))
   // Unsupported wall strategies retain native appearance and act as conservative occluders.
   for (const o of objects.filter(nativeOccluder)) {
     if (o.rotation) { fallback(c, batch, objects, key); return }
@@ -110,7 +115,11 @@ function* paintArlSteps(c: CanvasRenderingContext2D, batch: ArlBatch, map: MapDo
     }
     if (ownIds.has(walls[wi].id)) art.context.drawImage(s.canvas, s.x, s.y, s.width, s.height)
   }
-  for (let i = 0; i < count; i++) if (!coverage[i] && floorBytes[i * 4 + 3] >= 128) floorSeeds[i] = 1
+  let footprintPixels = 0, floorPixels = 0, contactPixels = 0, edgePixels = 0, massPixels = 0
+  for (let i = 0; i < count; i++) {
+    if (coverage[i]) footprintPixels++
+    else if (floorBytes[i * 4 + 3] >= 128) { floorSeeds[i] = 1; floorPixels++ }
+  }
   const outside = yield* arlDistanceSteps(coverage, rw, rh, 4 * ratio + 1), inside = mode === 'C' ? yield* arlDistanceSteps(floorSeeds, rw, rh, 2 * ratio + 1) : null
   const fx = scratch(rw, rh), edge = mode === 'C' ? scratch(rw, rh) : null, sd = fx.context.createImageData(rw, rh), ed = edge?.context.createImageData(rw, rh)
   const ends = walls.map(arlEnds), profiles = walls.map(arlProfile)
@@ -119,22 +128,26 @@ function* paintArlSteps(c: CanvasRenderingContext2D, batch: ArlBatch, map: MapDo
     const owner = (coverage[i] || outside.owner[i]) - 1
     if (owner < 0 || !ownIds.has(walls[owner].id)) continue
     const p = profiles[owner], offset = i * 4
-    if (!coverage[i] && floorSeeds[i] && outside.distance[i] < p.shadowWidth * ratio) {
+    if ((!diagnosticEffect || diagnosticEffect === 'contact') && !coverage[i] && floorSeeds[i] && outside.distance[i] < p.shadowWidth * ratio) {
       const point = { x: x + (i % rw + .5) / ratio, y: y + (Math.floor(i / rw) + .5) / ratio }
-      if (!beyondArlEnd(point, ends[owner], walls[owner].strokeWidth)) {
+      if (!beyondArlEnd(point, ends[owner], walls[owner].strokeWidth) && !inArlOpening(point, openingCuts[owner])) {
         sd.data[offset] = sd.data[offset + 1] = sd.data[offset + 2] = 20
-        sd.data[offset + 3] = Math.round(255 * p.shadowOpacity * Math.max(0, 1 - outside.distance[i] / (p.shadowWidth * ratio)) ** 2)
+        sd.data[offset + 3] = Math.round(255 * arlContactOpacity(outside.distance[i] / ratio, p))
+        if (sd.data[offset + 3]) contactPixels++
       }
     } else if (coverage[i] && ed && inside && p.edgeWidth) {
-      const d = inside.distance[i] / ratio, alpha = d <= p.edgeWidth ? p.edgeOpacity : p.massOpacity * Math.max(0, 1 - d / p.massWidth)
+      const d = inside.distance[i] / ratio, alpha = d <= p.edgeWidth ? (!diagnosticEffect || diagnosticEffect === 'edge' ? p.edgeOpacity : 0) : (!diagnosticEffect || diagnosticEffect === 'mass' ? p.massOpacity * Math.max(0, 1 - d / p.massWidth) : 0)
       ed.data[offset] = ed.data[offset + 1] = ed.data[offset + 2] = 20; ed.data[offset + 3] = Math.round(alpha * 255)
+      if (ed.data[offset + 3]) { if (d <= p.edgeWidth) edgePixels++; else massPixels++ }
     }
   }
   fx.context.putImageData(sd, 0, 0); fx.context.drawImage(art.canvas, 0, 0)
   if (edge && ed) { edge.context.putImageData(ed, 0, 0); edge.context.globalCompositeOperation = 'destination-in'; edge.context.drawImage(art.canvas, 0, 0); fx.context.drawImage(edge.canvas, 0, 0) }
-  const result = { canvas: fx.canvas, x, y, width: rw / ratio, height: rh / ratio }, size = rw * rh
+  const diagnostics = { ratio, bounds: { x, y, width, height }, footprintPixels, floorPixels, contactPixels, edgePixels, massPixels, buildMs: performance.now() - start }
+  const result = { canvas: fx.canvas, x, y, width: rw / ratio, height: rh / ratio, diagnostics }, size = rw * rh
   while (cache.size && (cache.size >= 32 || pixels + size > CACHE_PIXELS)) { const [old, value] = cache.entries().next().value!; pixels -= value.canvas.width * value.canvas.height; cache.delete(old) }
   cache.set(key, result); pixels += size; arlStats.builds++; arlStats.lastBuildMs = performance.now() - start
+  Object.assign(arlTrace.last!, diagnostics)
   c.drawImage(result.canvas, result.x, result.y, result.width, result.height)
 }
 

@@ -12,12 +12,22 @@ export const GENERATED_LIMITS={placements:12000,pixels:4194304,cachedPixels:1677
 function random(seed:number,n:number){let x=(seed^Math.imul(n+1,0x9e3779b1))>>>0;x=Math.imul(x^(x>>>16),0x21f0aaad);x=Math.imul(x^(x>>>15),0x735a2d97);return ((x^(x>>>15))>>>0)/4294967296}
 function noise(seed:number,d:number){const i=Math.floor(d),t=d-i,u=t*t*(3-2*t);return (random(seed,i)*(1-u)+random(seed,i+1)*u)*2-1}
 export function rootRunCount(widthFt:number){return Math.max(2,Math.min(9,Math.round(1.5+widthFt*1.8)))}
+/** Long straight root stock must not continue along its old tangent through a
+ * sharp construction join. Keep a small overlap for the existing knot, and
+ * leave organic details and genuine free endpoints untouched. */
+export function rootMemberLength(distance:number,length:number,breaks:readonly number[],width:number,total:number,closed:boolean){
+ let nearest=Infinity
+ for(const join of breaks){const delta=Math.abs(distance-join);nearest=Math.min(nearest,closed?Math.min(delta,total-delta):delta)}
+ return Math.min(length,nearest*2+width*.6)
+}
 export function generatedPlacements(path:PathObject,openings:OpeningObject[]=[]){
  if(generatedDefinition(path.wall!.generated!).generatorType==='linear')return linearPlacements(path,openings)
  if(generatedDefinition(path.wall!.generated!).generatorType==='rock')return rockPlacements(path,openings)
  if(generatedDefinition(path.wall!.generated!).generatorType==='masonry')return masonryPlacements(path,openings)
  const g=path.wall!.generated!,definition=generatedDefinition(g),geometry=pathGeometry(path),width=path.strokeWidth,runs=rootRunCount(width/generatedPixelsPerFoot(wallStyle(path))),result:GeneratedPlacement[]=[]
  const cuts=openings.map(o=>openingPlacement(o,path)).sort((a,b)=>a.start-b.start),intervals:{start:number;end:number}[]=[];let start=0
+ const sharp=geometry.segments.slice(1).filter(s=>{const a=pointAtDistance(path,s.start-.01).tangent,b=pointAtDistance(path,s.start+.01).tangent;return a.x*b.x+a.y*b.y<.8}).map(s=>s.start)
+ if(path.closed){const a=pointAtDistance(path,geometry.length-.01).tangent,b=pointAtDistance(path,.01).tangent;if(a.x*b.x+a.y*b.y<.8)sharp.push(0)}
  for(const cut of cuts){if(cut.start>start)intervals.push({start,end:cut.start});start=cut.end}if(start<geometry.length)intervals.push({start,end:geometry.length})
  const flow=(seed:number,d:number,wavelength:number)=>path.closed&&!cuts.length?Math.sin(d/geometry.length*Math.PI*2*Math.max(1,Math.round(geometry.length/wavelength))+random(seed,0)*Math.PI*2):noise(seed,d/wavelength)
  const choose=(roles:GeneratedComponent['role'][],index:number,previous?:string)=>{let candidates=definition.components.filter(c=>roles.includes(c.role));if(candidates.length>1)candidates=candidates.filter(c=>c.id!==previous);if(!candidates.length)return undefined;let roll=random(g.seed,index)*candidates.reduce((n,c)=>n+c.weight,0);return candidates.find(c=>(roll-=c.weight)<=0)||candidates.at(-1)!}
@@ -25,8 +35,8 @@ export function generatedPlacements(path:PathObject,openings:OpeningObject[]=[])
   const at=pointAtDistance(path,distance),smooth=flow(g.seed+run*197,distance,Math.max(1,width*3)),spread=(run-(runs-1)/2)*width*.65/runs+smooth*g.organic*width*.14
   const offset=spread-(outsideWall(path)?width*.5*wallWinding(path):0),angle=Math.atan2(at.tangent.y,at.tangent.x)+flow(g.seed+run*31,distance,Math.max(1,width*4))*g.organic*.09
   const length=Math.min(width*2.8,height*component.nominalLengthFt/component.nominalWidthFt)*(1+flow(g.seed+run*17, distance,Math.max(1,width*5))*g.organic*.12)
-  const available=path.closed&&!cuts.length?Infinity:2*Math.min(distance-interval.start,interval.end-distance),w=Math.max(.01,Math.min(length,available))
-  result.push({component,x:at.point.x-at.tangent.y*offset,y:at.point.y+at.tangent.x*offset,width:w,height,angle:angle+(end?Math.PI:0),distance,run})
+  const available=path.closed&&!cuts.length?Infinity:2*Math.min(distance-interval.start,interval.end-distance),body=component.role==='root-long'||component.role==='root-medium',joined=body?rootMemberLength(distance,length,sharp,width,geometry.length,path.closed):length,w=Math.max(.01,Math.min(joined,available))
+  result.push({component,x:at.point.x-at.tangent.y*offset,y:at.point.y+at.tangent.x*offset,width:w,height,angle:angle+(end?Math.PI:0),distance,run,...(joined<length?{sourceFraction:w/length}:{})})
   if(result.length>GENERATED_LIMITS.placements)throw Error('Generated wall exceeds 12,000 components. Shorten the wall or increase its width.')
  }
  for(let run=0;run<runs;run++)for(const interval of intervals){
