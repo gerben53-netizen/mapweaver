@@ -1,3 +1,4 @@
+import {defaultStampEffects,defaultMapEffects} from '../domain/mapEffects'
 import { afterEach, expect, it } from 'vitest'
 import { cleanup, fireEvent, render, screen, act } from '@testing-library/react'
 import { MapEffectSettings, StampEffectSettings } from './EffectSettings'
@@ -24,7 +25,7 @@ it('shows compact optional map controls and applies several settings in one undo
 })
 it('changes selective stamp shadow/glow with undo and keeps source geometry unchanged', () => {
   setup(); function View() { const o = store(s => s.objects[0]); return o.kind === 'stamp' ? <StampEffectSettings object={o}/> : null } render(<View/>); fireEvent.click(screen.getByText('Stamp shadow & glow'))
-  expect(screen.queryByLabelText('Shadow blur (px)')).toBeNull(); fireEvent.click(screen.getByLabelText('Stamp shadow')); fireEvent.click(screen.getByLabelText('Stamp glow'))
+  expect(screen.queryByLabelText('Shadow blur (px)')).toBeNull(); fireEvent.click(screen.getByLabelText('Custom directional shadow')); fireEvent.click(screen.getByLabelText('Stamp glow'))
   fireEvent.change(screen.getByLabelText('Shadow X (px)'), { target: { value: '-8' } }); fireEvent.change(screen.getByLabelText('Glow radius (px)'), { target: { value: '18' } }); fireEvent.click(screen.getByText('Apply stamp effects'))
   expect(store.getState().objects[0]).toMatchObject({ ...stamp, effects: { shadow: { enabled: true, x: -8 }, glow: { enabled: true, radius: 18 } } }); expect(useHistoryStore.getState().undoCount).toBe(1)
   act(() => { history.undo() }); expect(store.getState().objects[0]).toEqual(stamp)
@@ -39,7 +40,7 @@ it('applies global contact shadow and a per-stamp exclusion through existing App
  fireEvent.change(screen.getByLabelText('Soft shadow intensity'),{target:{value:'30'}})
  fireEvent.click(screen.getByText('Apply map effects'))
  expect(store.getState().map.effects?.stampSoftShadow).toEqual({enabled:true,intensity:.3})
- fireEvent.change(screen.getByLabelText('Stamp Soft Shadow override'),{target:{value:'off'}});fireEvent.click(screen.getByText('Apply stamp effects'))
+ fireEvent.change(screen.getByLabelText('Stamp Soft Shadow override'),{target:{value:'off'}})
  expect(store.getState().objects[0]).toMatchObject({effects:{softShadow:'off'}})
  expect(useHistoryStore.getState().undoCount).toBe(2)
  act(()=>{history.undo()});expect(store.getState().objects[0]).toEqual(stamp)
@@ -60,4 +61,27 @@ it('persists ARL and shadow overrides as one undoable map edit and returns to in
  fireEvent.change(screen.getByLabelText('Stamp Soft Shadow'),{target:{value:'default'}});
  fireEvent.click(screen.getByText('Apply map effects'));
  expect(store.getState().map.rendering).toBeUndefined();expect(store.getState().map.effects?.stampSoftShadow).toBeUndefined();
+});
+
+
+it('renders the battlemap default in the inspector without Apply and commits overrides immediately',()=>{
+ setup();function View(){const o=store(s=>s.objects[0]);return o.kind==='stamp'?<StampEffectSettings object={o}/>:null}render(<View/>);
+ expect(screen.getByLabelText('Soft Shadow')).toBeChecked();expect(screen.getByLabelText('Custom directional shadow')).not.toBeChecked();
+ expect(store.getState().objects[0]).toEqual(stamp);expect(useHistoryStore.getState().undoCount).toBe(0);
+ fireEvent.click(screen.getByLabelText('Soft Shadow'));expect(screen.getByLabelText('Soft Shadow')).not.toBeChecked();expect(store.getState().objects[0]).toMatchObject({effects:{softShadow:'off'}});
+ act(()=>history.undo());expect(screen.getByLabelText('Soft Shadow')).toBeChecked();act(()=>history.redo());expect(screen.getByLabelText('Soft Shadow')).not.toBeChecked();
+ fireEvent.change(screen.getByLabelText('Stamp Soft Shadow override'),{target:{value:'default'}});expect(screen.getByLabelText('Soft Shadow')).toBeChecked();expect(store.getState().objects[0]).toMatchObject({effects:{softShadow:'default'}});
+});
+it('reflects saved disabled overrides and effective zero intensity',()=>{
+ setup();const off={...stamp,effects:{...defaultStampEffects(),softShadow:'off' as const}};store.setState({objects:[off]});function View(){const o=store(s=>s.objects[0]);return o.kind==='stamp'?<StampEffectSettings object={o}/>:null}render(<View/>);
+ expect(screen.getByLabelText('Soft Shadow')).not.toBeChecked();expect(screen.getByLabelText('Stamp Soft Shadow override')).toHaveValue('off');
+ act(()=>store.setState(s=>({map:{...s.map,effects:{...defaultMapEffects(),stampSoftShadow:{enabled:true,intensity:0}}}})));
+ fireEvent.change(screen.getByLabelText('Stamp Soft Shadow override'),{target:{value:'default'}});expect(screen.getByLabelText('Soft Shadow')).not.toBeChecked();expect(screen.getByRole('option',{name:'Soft Shadow uit (standaard)'})).toBeInTheDocument();
+});
+
+it('keeps pending custom effects separate from immediate Soft Shadow changes',()=>{
+ setup();function View(){const o=store(s=>s.objects[0]);return o.kind==='stamp'?<StampEffectSettings object={o}/>:null}render(<View/>);
+ fireEvent.click(screen.getByLabelText('Stamp glow'));fireEvent.change(screen.getByLabelText('Glow radius (px)'),{target:{value:'19'}});
+ fireEvent.change(screen.getByLabelText('Stamp Soft Shadow override'),{target:{value:'off'}});expect(screen.getByLabelText('Glow radius (px)')).toHaveValue(19);expect(store.getState().objects[0]).toMatchObject({effects:{softShadow:'off',glow:{enabled:false}}});
+ fireEvent.click(screen.getByText('Apply stamp effects'));expect(store.getState().objects[0]).toMatchObject({effects:{softShadow:'off',glow:{enabled:true,radius:19}}});expect(screen.getByLabelText('Soft Shadow')).not.toBeChecked();
 });
