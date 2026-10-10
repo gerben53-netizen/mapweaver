@@ -8,6 +8,7 @@
 .editor { display: flex; height: 100%; }
 .editor[hidden], .library[hidden] { display: none; }
 .library { height: 100%; }
+.library > div, .stampBrowser > div { height: 100%; min-height: 0; }
 .rail { overflow-y:auto; min-height:0; width: 72px; flex-shrink: 0; border-right: 1px solid var(--color-border); background: var(--color-panel); display: flex; align-items: center; flex-direction: column; padding: 12px 6px; gap: 8px; }
 .panel { width: 284px; flex-shrink: 0; background: var(--color-panel); border-left: 1px solid var(--color-border); display: flex; flex-direction: column; min-height: 0; }
 .collapsed { width: 44px; flex-shrink: 0; border-left: 1px solid var(--color-border); background: var(--color-panel); }

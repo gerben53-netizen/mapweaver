@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { normalizeLibraryText } from '../domain/library'
 import type { LibraryCategory } from '../domain/library'
+import { readMapTypePreference, rememberMapType, type LibraryMapType } from './mapTypeFilter'
 
 /** An index per response, shared by tree, breadcrumbs and category search. */
 export function categoryIndex(categories: LibraryCategory[]) {
@@ -38,6 +39,16 @@ export function searchCategories(index: CategoryIndex, query: string, showEmpty:
 // Session-only navigation; never stored in a map or library metadata. Keeps context
 // across workspace switches/remounts without carrying IDs into another service.
 export const useLibraryNavigation = create(() => ({
-  category: '', collection: '', favorite: false, query: '',
+  category: '', favorite: false, query: '', mapType: readMapTypePreference(), context: '',
   expanded: [] as string[], showEmpty: false, recent: [] as string[],
 }))
+/** A new map context wins over preferences; navigating the same context keeps choices. */
+export function initializeLibraryContext(context: string, mapType?: LibraryMapType) {
+  if (useLibraryNavigation.getState().context === context) return false
+  useLibraryNavigation.setState({ context, mapType: mapType ?? readMapTypePreference() })
+  return true
+}
+export function chooseLibraryMapType(mapType: LibraryMapType) {
+  rememberMapType(mapType)
+  useLibraryNavigation.setState({ mapType })
+}

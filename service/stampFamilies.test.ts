@@ -53,3 +53,8 @@ it('keeps exact family reimports idempotent and rejects duplicate family or vari
     expect(libraryQuery(s,{})).toEqual(before)
   }
 })
+it('filters shared family applicability once without exposing variants or changing stable references',async()=>{
+ const s=storage();await imported(s,await pack(6,1,{applicableMapTypes:['battlemap','world-map']}));const original=libraryQuery(s,{}).assets[0];
+ for(const mapType of ['battlemap','world-map']){const q=libraryQuery(s,{mapType});expect(q.total).toBe(1);expect(q.assets[0].id).toBe(original.id);expect(q.assets[0].family).toEqual(original.family)}
+ expect(libraryQuery(s,{mapType:'regional-map'}).total).toBe(0);expect(original.family!.variants.every(v=>s.bytes(s.asset(v.assetId)).length>0)).toBe(true)
+})

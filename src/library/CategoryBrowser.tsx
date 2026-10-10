@@ -5,7 +5,7 @@ import styles from './CategoryBrowser.module.css'
 interface Props {
   index: CategoryIndex; category: string; scopeName: string; total: number;
   query: string; showEmpty: boolean; recent: string[];
-  onSelect: (id: string, jump?: boolean) => void
+  onSelect: (id: string, jump?: boolean) => void; compact?: boolean
 }
 export function CategoryBrowser(p: Props) {
   const path = p.index.paths.get(p.category) || []
@@ -24,6 +24,6 @@ export function CategoryBrowser(p: Props) {
       {p.category==='uncategorized' && <span aria-current="location">› Uncategorized</span>}
     </nav>
     {!!matches.length && <div className={styles.matches} role="region" aria-label="Matching categories"><strong>Categories · {matches.length}</strong><div>{matches.map(c => <button key={c.id} onClick={() => p.onSelect(c.id,true)} title={p.index.paths.get(c.id)?.map(v => v.name).join(' › ')}><b>{c.name}</b>{' '}<small>{p.index.paths.get(c.id)?.slice(0,-1).map(v=>v.name).join(' › ') || 'Root category'}</small></button>)}</div></div>}
-    {!!children.length && <div className={styles.children} role="region" aria-label="Subcategories">{children.map(c => <button key={c.id} title={`${c.name} · ${c.total ?? 0} assets including subcategories, with current filters`} onClick={() => p.onSelect(c.id)}><span aria-hidden="true">▱ </span>{c.name} <span className={styles.count}>{c.total ?? 0}</span></button>)}</div>}
+    {!p.compact && !!children.length && <div className={styles.children} role="region" aria-label="Subcategories">{children.map(c => <button key={c.id} title={`${c.name} · ${c.total ?? 0} assets including subcategories, with current filters`} onClick={() => p.onSelect(c.id)}><span aria-hidden="true">▱ </span>{c.name} <span className={styles.count}>{c.total ?? 0}</span></button>)}</div>}
   </section>
 }

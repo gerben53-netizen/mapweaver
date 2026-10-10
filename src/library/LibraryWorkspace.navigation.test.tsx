@@ -28,11 +28,11 @@ it('search jump clears obstructing filters and reveals only ancestors; ordinary 
  render(<LibraryWorkspace/>);await screen.findByText('0 selected / 1 results')
  fireEvent.click(screen.getByRole('button',{name:'Favorites'}));fireEvent.change(screen.getByRole('searchbox',{name:'Search library'}),{target:{value:'bedrooms'}})
  fireEvent.click(within(screen.getByRole('region',{name:'Matching categories'})).getByRole('button',{name:'Bedrooms Realm › Palace'}))
- expect(useLibraryNavigation.getState()).toMatchObject({category:'b',query:'',favorite:false,collection:'',expanded:['r','p','b']})
+ expect(useLibraryNavigation.getState()).toMatchObject({category:'b',query:'',favorite:false,expanded:['r','p','b']})
  await waitFor(()=>expect(mock.api.mock.calls.at(-1)?.[0]).toContain('category=b'))
  fireEvent.change(screen.getByRole('searchbox',{name:'Search library'}),{target:{value:'bed'}});fireEvent.click(screen.getByRole('treeitem',{name:/^Palace,/}));expect(screen.getByRole('searchbox')).toHaveValue('bed')
- fireEvent.click(screen.getByRole('button',{name:'Collection'}));expect(useLibraryNavigation.getState()).toMatchObject({collection:'set',category:'',query:'bed'})
- fireEvent.click(screen.getByRole('button',{name:'Favorites'}));expect(useLibraryNavigation.getState()).toMatchObject({collection:'set',favorite:true})
+ expect(screen.queryByRole('button',{name:'Collection'})).toBeNull()
+ fireEvent.click(screen.getByRole('button',{name:'Favorites'}));expect(useLibraryNavigation.getState()).toMatchObject({favorite:true})
 })
 
 

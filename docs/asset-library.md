@@ -1,14 +1,26 @@
 # Asset library — user and technical guide
 
+## Maptype en categorieën
+
+De permanente **Maptype**-filter boven de resultaten biedt **Alle**, **Battlemap**, **Regional map** en **World map**. Mapweaver heeft geen afzonderlijk City map-domeintype; gebruik de ondersteunde kaartmodus. De filter blijft staan wanneer je door de resultaten scrolt, zoekt of een categorie/familie selecteert. De linker categorieboom is de primaire navigatie, met de huidige locatie als breadcrumb boven de lijst. Als je de boom verbergt, worden subcategorieën boven de resultaten beschikbaar.
+
+Een nieuw geopende kaartcontext kiest automatisch het kaarttype. Binnen diezelfde context blijft je expliciete filterkeuze staan, ook bij wisselen van tab of heropenen van de bibliotheek. Zonder kaartcontext gebruikt de bibliotheek je laatst expliciet gekozen filter, of **Alle**. Die voorkeur staat alleen in lokale UI-opslag; een kaartcontext overschrijft de beginweergave maar verandert de voorkeur niet. Wanneer lokale browseropslag geblokkeerd is, blijft de keuze tijdens de sessie beschikbaar.
+
+Maptype, categorie inclusief subcategorieën, zoeken/tags, favorieten en assetrol werken samen met AND-semantiek. Categorieaantallen volgen de actieve filters. Een asset met meerdere kaarttypen verschijnt eenmaal in iedere passende weergave. Ontbrekende/lege toepassingsmetadata betekent **alle kaarttypen**, zodat historische generieke assets zichtbaar blijven. **Alle** is geen assettype en wijzigt geen metadata. Een stampfamilie blijft één item met haar bestaande varianten en revisions.
+
+Filterwissels wissen de bulkselectie en melden dit. Een nog onderweg zijnde oude Select all-respons kan verborgen assets niet opnieuw selecteren. Sorteren wijzigt de scope eveneens; Grid/List/Compact verandert alleen de presentatie. **Clear filters** herstelt Alle en wist zoeken, categorie en favorieten.
+
+**Collections zijn niet meer beschikbaar als organisatiemethode in de Asset Library**, ook niet in bulkacties, de docked browser of de importbestemming. Gebruik categorieën, tags en favorieten. Historische collectiegegevens en packmetadata blijven niet-destructief behouden voor import/export en library-undo. Er is geen databasemigratie, geen verwijdering van assets en geen wijziging van bestaande kaartverwijzingen. Canonieke taxonomie, expliciete mapping van onbekende importcategorieën en identity/revisionchecks blijven gelden.
+
 Open **Asset library**. Stamps and Fill patterns have separate tabs and a shared category tree. Projects remains global; project Save and Export PNG appear in the Map editor. Library metadata saves itself; its undo/redo never changes editor history.
 
 ## Find and organize
 
-A category always includes every descendant, even while collapsed. All assets searches the entire active type. Search matches title, original filename, description and tags using case-insensitive NFKC-normalized text. Sorting uses the same normalized title and stable ID ties. Category changes retain search text. Direct / total counts use the current type, search, favorite and collection filters. Clear filters explains and removes an empty search scope.
+A category always includes every descendant, even while collapsed. All assets searches the entire active type. Search matches title, original filename, description and tags using case-insensitive NFKC-normalized text. Sorting uses the same normalized title and stable ID ties. Category changes retain search text. Direct / total counts use the current type, maptype, search and favorite filters. Clear filters explains and removes an empty search scope.
 
 Manage categories in the left panel: create root, select a parent and create a subcategory, rename, drag a category onto its new parent, or use **Move category** with the keyboard. The Move dialog also offers Root. Eight levels are supported. Deleting a category previews its direct assets/children and destination: they move to its parent, or root/Uncategorized. Sibling-name conflicts block the whole operation. No image files are deleted by tree operations.
 
-Use checkboxes, Ctrl/Cmd-click and Shift-click for selection. Shift selects the contiguous range on the displayed page. **Select all results** explicitly selects the full matching set across pages and shows its count. Changing the scope clears selection with feedback. Actions include move, add/remove tags, favorite/unfavorite, collection membership, also use in the other role, View usage, ZIP/JSON export and retained removal. Tags are merged/removed individually. Mixed selection does not replace unedited fields.
+Use checkboxes, Ctrl/Cmd-click and Shift-click for selection. Shift selects the contiguous range on the displayed page. **Select all results** explicitly selects the full matching set across pages and shows its count. Changing the scope clears selection with feedback. Actions include move, add/remove tags, favorite/unfavorite, also use in the other role, View usage, ZIP/JSON export and retained removal. Tags are merged/removed individually. Mixed selection does not replace unedited fields.
 
 **Also use as fill pattern/stamp** creates a separate logical role sharing the original bytes. It does not change the other role's metadata. View usage includes saved projects, material registrations and prefab definitions, plus separately identified active editor/clipboard/history references. **Remove assets…** preflights the entire selection and shows named persistent blockers. Assets used on saved maps (including trashed maps), the current unsaved map, wall sets or retained prefab definitions remain protected: Mapweaver does not introduce missing-asset placeholders through deletion. No selected asset is removed when any persistent dependency blocks the batch.
 
@@ -38,7 +50,7 @@ Use current selection size accepts exactly one instance of this stamp. It captur
 
 ## Import and transfer
 
-Choose **Import assets** and an optional destination/collection. Select PNG/JPEG/WebP files with sidecars or `mapweaver-assets.json`, or one ZIP. Images without a manifest use native sizing. Nested image paths belong in a ZIP; loose browser-selected files are addressed by their exact chosen filenames.
+Choose **Import assets** and an optional destination. Select PNG/JPEG/WebP files with sidecars or `mapweaver-assets.json`, or one ZIP. Images without a manifest use native sizing. Nested image paths belong in a ZIP; loose browser-selected files are addressed by their exact chosen filenames.
 
 1. Validate the files; inspect all entries, paths, warnings and errors.
 2. Explicitly allow missing category creation and/or mapping matching existing category paths. Manifest paths are root-relative. An optional visible root prefix creates a separate namespace without hidden nesting.
@@ -46,7 +58,7 @@ Choose **Import assets** and an optional destination/collection. Select PNG/JPEG
 4. **Review resolved changes** shows the actual resulting metadata and categories without saving files or rows. Resolve errors before proceeding.
 5. **Confirm import** commits the entire reviewed batch. One error blocks the batch. Other-tab changes require a new preview.
 
-Missing fields never clear existing data. Overwrite applies explicit empty descriptions/tags/provenance or an empty categoryPath; Fill only supplies fields that are currently absent (including native size or Uncategorized). Keep retains the existing item while permitting collection membership. Asset IDs and project references survive all policies. A matching item in a different role does not silently donate its title/category.
+Missing fields never clear existing data. Overwrite applies explicit empty descriptions/tags/provenance or an empty categoryPath; Fill only supplies fields that are currently absent (including native size or Uncategorized). Keep retains the existing item while preserving historical pack memberships. Asset IDs and project references survive all policies. A matching item in a different role does not silently donate its title/category.
 
 A sidecar is `basename.mapweaver.json`, using the same envelope and exactly one asset entry. Collection manifests and ZIPs use `mapweaver-assets.json` at the root. Entries match exact relative paths, never an ambiguous basename or hash. SHA-256, when provided, must match bytes. ZIPs reject traversal, absolute/drive paths, Windows-normalized collisions, device names, symlinks, encrypted/unsupported entries and expansion bombs. Image headers and decoded content must agree.
 

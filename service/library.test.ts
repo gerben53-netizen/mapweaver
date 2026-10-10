@@ -87,6 +87,16 @@ it('filters map applicability before pagination and keeps universal assets and e
  expect(libraryQuery(s,{}).total).toBe(2);expect(()=>libraryQuery(s,{mapType:'unknown'})).toThrow(/map type/)
 })
 
+it('ANDs multi-map applicability, category, tags/search and favorites without changing retained collection or asset rows',async()=>{
+ const s=store();await imported(s,{title:'Multi shelf',applicableMapTypes:['battlemap','world-map'],tags:['archive']})
+ const a=libraryQuery(s,{}).assets[0];patchAsset(s,a.id,{favorite:true});cmd(s,{op:'collection',name:'Historical collection'});const c=libraryQuery(s,{}).collections[0];cmd(s,{op:'collection-add',ids:[a.id],collectionId:c.id})
+ const snapshot=()=>JSON.stringify(['assets','categories','library_collections','library_members'].map(t=>s.db.prepare(`SELECT * FROM ${t} ORDER BY rowid`).all())),before=snapshot()
+ for(const mapType of ['battlemap','world-map']){const result=libraryQuery(s,{mapType,category:a.categoryId,search:'archive',favorite:'true'});expect(result.assets.map(a=>a.id)).toEqual([a.id]);expect(result.categories.find(c=>c.id===a.categoryId)?.total).toBe(1)}
+ expect(libraryQuery(s,{mapType:'regional-map',search:'archive'}).total).toBe(0);expect(libraryQuery(s,{mapType:'world-map',search:'absent'}).total).toBe(0);expect(libraryQuery(s,{category:'nonexistent'}).total).toBe(0)
+ expect(snapshot()).toBe(before);expect(libraryQuery(s,{collection:c.id}).total).toBe(1)
+ expect((await previewPack(s,await pack({applicableMapTypes:['city-map']}))).errors.length).toBeGreaterThan(0)
+})
+
 describe('explicit library removal recovery',()=>{
  it('preflights a batch, cleans metadata, then cleanly reimports exactly once with categories and collections',async()=>{
   const s=store();await imported(s);const first=libraryQuery(s,{}).assets[0]
