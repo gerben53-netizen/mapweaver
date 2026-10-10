@@ -1,4 +1,4 @@
-import { effectiveRendering, effectiveStampShadow, type ArlMode } from '../domain/rendering'
+import { effectiveRendering, effectiveStampShadow, effectiveContactShadow, type ArchitecturalShadowSettings, type ArlMode } from '../domain/rendering'
 import { useState } from 'react'
 import { defaultMapEffects, defaultStampEffects, FOG_PRESETS, VIGNETTE_PRESETS, FRAME_PRESETS, framePreset, STAMP_EFFECT_PRESETS } from '../domain/mapEffects'
 import type { MapDocument, StampObject } from '../domain/models'
@@ -14,7 +14,23 @@ function ColorField({ label, value, change }: { label: string; value: string; ch
 function Check({ label, value, change }: { label: string; value: boolean; change: (v: boolean) => void }) { return <label className={styles.check}><input type="checkbox" checked={value} onChange={e => change(e.target.checked)}/>{label}</label> }
 
 export function MapEffectSettings({ map }: { map: MapDocument }) {
-  return <details className={styles.panel}><summary>Effects &amp; map frame</summary><MapEffectsForm key={JSON.stringify([map.effects,map.rendering,map.mapType])} map={map}/></details>
+  return <>{map.mapType!=="world-map" && map.mapType!=="regional-map" && <details className={styles.panel}><summary>Battlemap Rendering</summary><ArchitecturalShadows map={map}/></details>}<details className={styles.panel}><summary>Effects &amp; map frame</summary><MapEffectsForm key={JSON.stringify([map.effects,map.rendering?.arl,map.mapType])} map={map}/></details></>
+}
+export function ArchitecturalShadows({ map }: { map: MapDocument }) {
+  const shadow = effectiveContactShadow(map), busy = useHistoryStore(s => s.busy)
+  if (map.mapType === 'world-map' || map.mapType === 'regional-map') return null
+  const update = (patch?: Partial<ArchitecturalShadowSettings>) => {
+    const current = useProjectStore.getState().map
+    useProjectStore.getState().applyMapSettings({ ...current, rendering: { ...current.rendering, contactShadow: patch ? { ...effectiveContactShadow(current), ...patch } : undefined } }, () => true)
+  }
+  return <fieldset className={styles.form} disabled={busy}><legend>Architectural Shadows</legend>
+    <Check label="Contact Shadow ingeschakeld" value={shadow.enabled} change={enabled => update({ enabled })}/>
+    <label>Donkere kern (px)<input aria-label="Contact shadow core" type="number" min={0} max={8} step={.5} value={shadow.core} onChange={e => { const core = e.target.valueAsNumber; if (Number.isFinite(core) && core >= 0 && core <= 8) update({ core }) }}/></label>
+    <label>Zachte uitloop (px)<input aria-label="Contact shadow falloff" type="number" min={0} max={20} step={.5} value={shadow.falloff} onChange={e => { const falloff = e.target.valueAsNumber; if (Number.isFinite(falloff) && falloff >= 0 && falloff <= 20) update({ falloff }) }}/></label>
+    <label>Schaduwsterkte (%)<input aria-label="Contact shadow opacity" type="number" min={0} max={80} value={Math.round(shadow.opacity * 100)} onChange={e => { const v = e.target.valueAsNumber; if (Number.isFinite(v) && v >= 0 && v <= 80) update({ opacity: v / 100 }) }}/></label>
+    <button type="button" onClick={() => update()}>Herstel standaard</button>
+    <p>Direct toegepast en undoable. ARL OFF verbergt de schaduw; B/C volgen deze instellingen. Pixels zijn kaartpixels op 1×, onafhankelijk van zoom.</p>
+  </fieldset>
 }
 function MapEffectsForm({ map }: { map: MapDocument }) {
   const [draft, set] = useState(() => structuredClone(map.effects || defaultMapEffects())), [error, setError] = useState('')
@@ -25,7 +41,7 @@ function MapEffectsForm({ map }: { map: MapDocument }) {
   const f = (patch: Partial<typeof fog>) => set(d => ({ ...d, fog: { ...d.fog, ...patch } }))
   const v = (patch: Partial<typeof vignette>) => set(d => ({ ...d, vignette: { ...d.vignette, ...patch } }))
   const b = (patch: Partial<typeof frame>) => set(d => ({ ...d, frame: { ...d.frame, ...patch } }))
-  return <form className={styles.form} onSubmit={e => { e.preventDefault(); try { useProjectStore.getState().applyMapSettings({ ...useProjectStore.getState().map, rendering: arl===undefined?undefined:{arl}, effects: draft }, () => true); setError('') } catch (err) { setError((err as Error).message) } }}>
+  return <form className={styles.form} onSubmit={e => { e.preventDefault(); try { useProjectStore.getState().applyMapSettings({ ...useProjectStore.getState().map, rendering: arl===undefined && !useProjectStore.getState().map.rendering?.contactShadow ? undefined : {...useProjectStore.getState().map.rendering,arl}, effects: draft }, () => true); setError('') } catch (err) { setError((err as Error).message) } }}>
     <fieldset disabled={busy}><legend>Rendering</legend><label>ARL<select aria-label="Map ARL override" value={arl??'default'} onChange={e=>setArl(e.target.value==='default'?undefined:e.target.value as ArlMode)}><option value="default">{map.mapType==='regional-map'||map.mapType==='world-map'?'ARL uit':'ARL C'} (standaard)</option><option value="OFF">ARL uit (aangepast)</option><option value="B">ARL B (aangepast)</option><option value="C">ARL C (aangepast)</option></select></label><p>Opgeslagen kaartprofiel voor Voorbeeld, PNG en Campfire. Bewerken blijft snel.</p></fieldset>
     <fieldset disabled={busy}><legend>Stamp Soft Shadow</legend>
       <label>Stamp Soft Shadow<select aria-label="Stamp Soft Shadow" value={draft.stampSoftShadow===undefined?'default':soft.enabled?'on':'off'} onChange={e=>set(d=>({...d,stampSoftShadow:e.target.value==='default'?undefined:{...soft,enabled:e.target.value==='on'}}))}><option value="default">{effectiveRendering({...map,effects:undefined}).effects.stampSoftShadow.enabled?'Aan':'Uit'} (standaard)</option><option value="off">Uit (aangepast)</option><option value="on">Aan (aangepast)</option></select></label>

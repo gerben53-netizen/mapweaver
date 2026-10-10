@@ -85,3 +85,14 @@ it('keeps pending custom effects separate from immediate Soft Shadow changes',()
  fireEvent.change(screen.getByLabelText('Stamp Soft Shadow override'),{target:{value:'off'}});expect(screen.getByLabelText('Glow radius (px)')).toHaveValue(19);expect(store.getState().objects[0]).toMatchObject({effects:{softShadow:'off',glow:{enabled:false}}});
  fireEvent.click(screen.getByText('Apply stamp effects'));expect(store.getState().objects[0]).toMatchObject({effects:{softShadow:'off',glow:{enabled:true,radius:19}}});expect(screen.getByLabelText('Soft Shadow')).not.toBeChecked();
 });
+it('architectural controls apply directly, preserve ARL and survive history/reset', () => {
+  setup(); function View() { return <MapEffectSettings map={store(s => s.map)}/> } render(<View/>);fireEvent.click(screen.getByText('Effects & map frame'))
+  fireEvent.change(screen.getByLabelText('Contact shadow core'), {target:{value:'6'}})
+  expect(store.getState().map.rendering?.contactShadow?.core).toBe(6)
+  fireEvent.click(screen.getByLabelText('Contact Shadow ingeschakeld'))
+  expect(store.getState().map.rendering?.contactShadow?.enabled).toBe(false)
+  act(()=>{history.undo()});expect(store.getState().map.rendering?.contactShadow?.enabled).toBe(true)
+  act(()=>{history.redo()});expect(store.getState().map.rendering?.contactShadow?.enabled).toBe(false)
+  fireEvent.click(screen.getByText('Herstel standaard'));expect(store.getState().map.rendering?.contactShadow).toBeUndefined()
+  expect(screen.getByLabelText('Contact shadow core')).toHaveValue(3)
+})

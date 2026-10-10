@@ -53,8 +53,8 @@ export function arlBatches(map: MapDocument, objects: MapObject[], mode: ArlMode
     const start = i, walls: PathObject[] = []
     while (i < objects.length && (i === start || !breakBefore.includes(i)) && arlWall(objects[i])) walls.push(objects[i++] as PathObject)
     const floors = objects.slice(0, start).filter(arlFloor)
-    // Safe fallback: backgrounds, colored canvas and empty/transparent Areas do not imply a floor.
-    if (floors.length) batches.push({ start, walls, floors })
+    // Floor metadata is diagnostic only; every supported wall has a paintable boundary.
+    batches.push({ start, walls, floors })
   }
   return batches
 }
@@ -102,4 +102,12 @@ export function arlDistance(seeds: Uint16Array, width: number, height: number, l
   const steps = arlDistanceSteps(seeds, width, height, limit)
   let step = steps.next(); while (!step.done) step = steps.next()
   return step.value
+}
+
+/** Canonical 1x map pixels: opaque core followed by a bounded smooth tail. */
+export function contactShadowOpacity(distance: number, settings: { enabled: boolean; core: number; falloff: number; opacity: number }) {
+  if (!settings.enabled || !Number.isFinite(distance) || distance < 0 || distance >= settings.core + settings.falloff) return 0
+  if (distance <= settings.core) return settings.opacity
+  const t = (distance - settings.core) / settings.falloff
+  return settings.opacity * (1 - t * t) ** 2
 }

@@ -21,3 +21,17 @@ Bestaande en nieuwe battlemaps tonen **ARL C (standaard)** in Voorbeeld en gebru
 In **Effects & map frame → Rendering** kies je een opgeslagen **Map ARL override** (standaard/OFF/B/C). Apply maakt één undo-stap. **Stamp Soft Shadow** volgt standaard de kaartmodus: aan op Battlemap, uit op Regional/World. Een expliciete kaartkeuze of individuele **Stamp Soft Shadow override** blijft behouden, ook bij dupliceren, variantwissel en reload. Kies Default om weer te erven. Environmental Detail en Generated Wall-componenten krijgen geen extra Stamp Soft Shadow.
 
 Geen bulkkaartmigratie: defaults worden bij renderen opgelost. Save/autosave hoeft daarvoor geen hoogwaardige bitmap te maken. Zie ADR-0066 voor het optionele renderingveld in projectformaat 12.
+
+## Architectural Shadows op kaartniveau
+
+Onder **Map → Battlemap Rendering → Architectural Shadows** staan de effectieve instellingen. **Contact Shadow ingeschakeld**, **Donkere kern**, **Zachte uitloop** en **Schaduwsterkte** werken direct, zonder Apply. Iedere wijziging is via undo/redo herstelbaar. **Herstel standaard** verwijdert de override.
+
+De standaard voor nieuwe en bestaande battlemaps zonder opgeslagen override is aan, kern **3 px**, extra uitloop **7 px**, sterkte **55%**. Bereiken: kern 0–8 px, uitloop 0–20 px en sterkte 0–80%. Expliciet uit en nul blijven uit/nul na bewaren en herladen. De kern heeft constante maximale sterkte; de uitloop neemt soepel af tot nul. Kies een smalle kern/uitloop voor subtiel contrast, een grotere kern voor sterker architecturaal contrast. Meer sterkte verandert de breedte niet.
+
+Pixels zijn canonieke kaartpixels op 1× export; bij de gebruikelijke 10 px/ft is een kern van 3 px 0,3 ft. 2× verdubbelt de uitvoerpixels, niet de fysieke breedte. Zoomen verandert de effectbreedte op de kaart niet.
+
+De contactschaduw volgt de **samengestelde zichtbare muurfootprint**, inclusief organische alpha-randen. Een vloerpolygon of Material Brush is niet nodig: schaduw verschijnt aan beide zichtbare zijden, ook op een lege achtergrond. Overlap en T-aansluitingen hebben geen interne schaduwnaad; deuren onderbreken uitsluitend de eigen muur. De uitloop blijft begrensd rond echte uiteinden. Dit is een niet-directioneel leesbaarheidseffect en geen dynamische verlichting.
+
+ARL OFF verbergt de ARL-effecten. B toont de ingestelde contactschaduw; C voegt de materiaalgebonden Structural Separation Edge en interne Wall Mass Reinforcement toe. Contact Shadow uit schakelt uitsluitend contact uit, niet de overige C-componenten. Ongeschikte/ongeregistreerde muurmaterialen behouden hun native weergave.
+
+Bewerken blijft snel en toont geen dure ARL-herberekening. Voorbeeld herberekent na een kaartwijziging; PNG en de Campfire-bitmap gebruiken dezelfde actuele renderer. Opslaan/autosave bewaart de instellingen, niet een verplichte render. De render wijzigt geen muurgeometrie, brushpixels, deuren, LOS of Campfire-contract.

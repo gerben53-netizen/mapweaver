@@ -29,14 +29,14 @@ it('inherits the Battlemap default independently of temporary diagnostics withou
   expect(exportScene(p, { scale: 2, transparent: false, includeGrid: false, arlMode: 'B' }).arlMode).toBe('B')
   expect(JSON.stringify(p)).toBe(before)
 })
-it('only visible filled opaque floor polygons below walls qualify; unknown backgrounds safely retain baseline', () => {
+it('wall batches are independent of floor polygons, visibility and background', () => {
   const f = floor(), w = wall()
   expect(arlBatches(map, [f, w], 'B')[0].floors).toEqual([f])
-  expect(arlBatches(map, [w, f], 'B')).toEqual([])
-  expect(arlBatches({ ...map, background: { id: 'unknown', name: 'background', width: 600, height: 400 } }, [w], 'C')).toEqual([])
+  expect(arlBatches(map, [w, f], 'B')).toHaveLength(1)
+  expect(arlBatches({ ...map, background: { id: 'unknown', name: 'background', width: 600, height: 400 } }, [w], 'C')).toHaveLength(1)
   for (const a of [{ ...f, fill: { kind: 'none' as const } }, { ...f, opacity: .5 }, { ...f, ceiling: true as const }]) expect(arlFloor(a)).toBe(false)
   const p = { objects: [f, w], layers: [{ id: 'floor', name: 'Floor', visible: false, locked: false, objectIds: [f.id] }, { id: 'walls', name: 'Walls', visible: true, locked: false, objectIds: [w.id] }] }
-  expect(arlBatches(map, projectObjects(p, true), 'B')).toEqual([])
+  expect(arlBatches(map, projectObjects(p, true), 'B')).toHaveLength(1)
 })
 it('keeps stamps, openings, render-strata and alpha scopes in original z order', () => {
   const f = floor(), a = wall(), b = wall('refined-timber'), door = createOpening(a, .5, 'door', 30)
@@ -78,10 +78,10 @@ it('isolates diagnostic cache entries without changing the wall or normal render
   setArlEffectDiagnostic(); expect(arlKey(batch, map, objects, 'C')).toBe(normal)
   expect(JSON.stringify(objects)).toBe(before)
 })
-it('cache keys invalidate geometry, curve, movement, width, material, revision, floors, opening width and mode; not zoom/name/door state', () => {
+it('cache keys invalidate geometry, curve, movement, width, material, revision, opening width and mode; not zoom/name/door state', () => {
   const f = floor(), w = wall(), door = createOpening(w, .5, 'door', 30), batch = { start: 1, walls: [w], floors: [f] }, all = [f, w, door], key = arlKey(batch, map, all, 'B')
   for (const next of [offsetObject(w, 10, 0), { ...w, strokeWidth: w.strokeWidth + 1 }, { ...w, nodes: [{ ...w.nodes[0], out: { x: 20, y: -40 } }, w.nodes[1]] }, wall('living-root'), { ...w, wall: { ...w.wall!, generated: { ...w.wall!.generated!, revision: 'test', seed: 13 } } }]) expect(arlKey({ ...batch, walls: [next] }, map, [f, next, door], 'B')).not.toBe(key)
-  expect(arlKey({ ...batch, floors: [offsetObject(f, 0, 1)] }, map, all, 'B')).not.toBe(key)
+  expect(arlKey({ ...batch, floors: [offsetObject(f, 0, 1)] }, map, all, 'B')).toBe(key)
   expect(arlKey(batch, map, [f, w, { ...door, openingWidth: 40 }], 'B')).not.toBe(key)
   expect(arlKey(batch, map, all, 'C')).not.toBe(key)
   expect(arlKey(batch, map, [f, { ...w, name: 'Renamed' }, door.kind === 'door' ? { ...door, status: 'open-left' } : door], 'B')).toBe(key)
