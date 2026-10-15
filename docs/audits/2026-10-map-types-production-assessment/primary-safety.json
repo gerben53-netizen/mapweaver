@@ -1,0 +1,59 @@
+{
+  "unchanged": true,
+  "before": {
+    "projects": {
+      "count": 27,
+      "sha256": "8ab44230ed582664407e3eacf7e4fd217a7931d035e25fe2a6aa5dcecce71c70"
+    },
+    "assets": {
+      "count": 727,
+      "sha256": "7eab0e78af0bf610b62199da1850a9063af4fcfa34cdc80b33e340959e86c018"
+    },
+    "categories": {
+      "count": 43,
+      "sha256": "1c50f0d66dffacd3e28666030851f0f8dfb42336ef3bbdc786b6e8181d71ce88"
+    },
+    "campaigns": {
+      "count": 12,
+      "sha256": "14bd6387e1dd0d83462e55edc74359e2b3da90a23047e3c7621d7a768e18a426"
+    },
+    "library_collections": {
+      "count": 33,
+      "sha256": "d956d36bfb9038352b57354ff05e24b49de464b65cefc1ae69b7ee77e397e658"
+    },
+    "library_members": {
+      "count": 614,
+      "sha256": "67e58d05d1874012caa04c99d6a5f1d5701b846f961c58be961613604f79ca78"
+    }
+  },
+  "after": {
+    "projects": {
+      "count": 27,
+      "sha256": "8ab44230ed582664407e3eacf7e4fd217a7931d035e25fe2a6aa5dcecce71c70"
+    },
+    "assets": {
+      "count": 727,
+      "sha256": "7eab0e78af0bf610b62199da1850a9063af4fcfa34cdc80b33e340959e86c018"
+    },
+    "categories": {
+      "count": 43,
+      "sha256": "1c50f0d66dffacd3e28666030851f0f8dfb42336ef3bbdc786b6e8181d71ce88"
+    },
+    "campaigns": {
+      "count": 12,
+      "sha256": "14bd6387e1dd0d83462e55edc74359e2b3da90a23047e3c7621d7a768e18a426"
+    },
+    "library_collections": {
+      "count": 33,
+      "sha256": "d956d36bfb9038352b57354ff05e24b49de464b65cefc1ae69b7ee77e397e658"
+    },
+    "library_members": {
+      "count": 614,
+      "sha256": "67e58d05d1874012caa04c99d6a5f1d5701b846f961c58be961613604f79ca78"
+    }
+  },
+  "primaryWrites": false,
+  "qaProfile": true,
+  "servicePort": 49521,
+  "clientPort": 49522
+}

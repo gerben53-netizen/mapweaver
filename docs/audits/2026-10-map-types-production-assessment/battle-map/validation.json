@@ -1,0 +1,16 @@
+{
+  "source": "existing exportPng and archive encode/decode",
+  "options": {
+    "scale": 1,
+    "includeGrid": false,
+    "includeScaleBar": false,
+    "transparent": false
+  },
+  "mapId": "eb3ad5c4-7d94-4772-81f9-3e62feabc733",
+  "objects": 42,
+  "bytes": 1340318,
+  "ms": 6545,
+  "first": "10b063537a7586c3468d10f2ea55ef68667d7d836e2be49cdc0a5c524778ff3d",
+  "reloaded": "10b063537a7586c3468d10f2ea55ef68667d7d836e2be49cdc0a5c524778ff3d",
+  "savedReloadIdentical": true
+}

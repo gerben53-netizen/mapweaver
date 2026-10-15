@@ -1,0 +1,3432 @@
+{
+  "formatVersion": 12,
+  "id": "eb3ad5c4-7d94-4772-81f9-3e62feabc733",
+  "name": "The Amber Archive — Night Watch",
+  "createdAt": "2026-10-15T10:00:00.000Z",
+  "modifiedAt": "2026-10-15T10:00:00.000Z",
+  "map": {
+    "rendering": {
+      "arl": "C",
+      "contactShadow": {
+        "enabled": true,
+        "core": 2,
+        "falloff": 10,
+        "opacity": 0.55
+      }
+    },
+    "campfireRevision": 1,
+    "mapType": "battlemap",
+    "geography": {
+      "widthKm": 1000,
+      "unit": "km",
+      "northDegrees": 0,
+      "projection": "none",
+      "origin": null,
+      "ruler": true,
+      "scaleBar": true,
+      "exportScaleBar": false,
+      "graticule": false
+    },
+    "width": 1400,
+    "height": 1000,
+    "backgroundColor": "#272b27",
+    "grid": {
+      "visible": false,
+      "snapEnabled": false,
+      "cellSize": 100,
+      "offsetX": 0,
+      "offsetY": 0,
+      "color": "#58645c",
+      "opacity": 0.35,
+      "renderAboveObjects": false,
+      "physicalScale": {
+        "distancePerCell": 5,
+        "unit": "ft"
+      }
+    },
+    "background": null
+  },
+  "layers": [
+    {
+      "id": "43acf48e-9bab-4361-9c76-5ae3adb99531",
+      "name": "Books and tabletop props",
+      "visible": true,
+      "locked": false,
+      "objectIds": [
+        "ec114df5-d55d-42ed-8b2f-9d76daf15f24",
+        "10c717fe-609d-4582-bdac-2e21334806bb",
+        "48f4c89f-99b4-4517-90bd-1dfbb2c79fb5"
+      ]
+    },
+    {
+      "id": "09e87427-8c8d-4446-95da-9e45d92cc5a2",
+      "name": "Furniture — immutable Premium family variants",
+      "visible": true,
+      "locked": false,
+      "objectIds": [
+        "18abaf00-8a97-4d85-8320-19ca4b23dd81",
+        "91ecb7ab-a211-44a7-a1b6-0fac7c3c252c",
+        "bd2ca5ac-a38f-4fd5-9547-dd9c5a707a9f",
+        "3e6dd689-1ae0-4280-a7e4-df386d65d309",
+        "abbd90a6-5ecf-4d38-9873-2ea8238d5394",
+        "513d07fb-2af8-4101-8603-5c0ff8a6ab3b",
+        "ed20c983-b5a7-4838-b31e-d614ed5effd1",
+        "f86dc173-34a6-4d80-81cc-519a7edddbfa",
+        "f236685b-5be4-4501-a0a5-6aaf91bfe3ff",
+        "edeb651d-11c4-4ca5-94aa-f218a951fe5f",
+        "164245ef-a2e8-4666-b243-14974423afea",
+        "495374d5-36bc-4cfd-9504-44037c9a5479",
+        "976b73d3-479a-4ad0-bbcd-994a052174b1",
+        "1482a584-25d4-4d13-8907-4ce4a9904f36",
+        "0fa90ab7-c7c2-436d-8d64-7a3377f3dd15",
+        "9f19d4ef-eadd-400b-83d1-a2e527e7a457",
+        "370b4f85-1ce1-4922-b885-79f06adcb6e7",
+        "a0ade7ad-535a-4f8f-98d6-4030f1fd618e",
+        "a6448051-b8ae-4b32-9609-4282af91ba94",
+        "041e979e-4ed7-42ff-b2de-2196ed23da13",
+        "d7441ed0-4c4a-4adf-8a60-fcf325fb0bd5",
+        "660eb3f0-0618-40f8-b323-cd6eb09fa2ee",
+        "5504093e-919d-460b-8422-b6988b16b875",
+        "0da5a436-fa3d-42fb-ad96-977c188ee16d",
+        "8d5ad5bc-2659-4546-8709-52941b7de8e0",
+        "143b20b2-b7b3-4950-8235-779f2e2a9087",
+        "51f72921-e861-4b22-b0cf-8accbd8ed649"
+      ]
+    },
+    {
+      "id": "d0f5e666-f268-4989-b1df-33c0fa1ac14c",
+      "name": "Walls and doors",
+      "visible": true,
+      "locked": false,
+      "objectIds": [
+        "6f6ad6dd-fd13-4a86-946d-f3dd24625bf4",
+        "644cbd0a-a9d9-4806-b7ba-ccddf2c516fc",
+        "7cb290db-9c0d-4794-8e37-791940341ee8",
+        "59811941-65fb-4b03-bb29-e5edab7fa729",
+        "8ee031f0-cf02-4f72-ad39-e14c008aad85",
+        "01d37e2d-09bb-4d91-8013-b0de030f8aec",
+        "f2a039f1-3ef0-4098-99ad-19d8750143c2"
+      ]
+    },
+    {
+      "id": "e3a1e082-f6eb-460d-9c74-8b6b43898b6c",
+      "name": "Floors",
+      "visible": true,
+      "locked": false,
+      "objectIds": [
+        "bd8779d9-b277-49f3-a167-49a265fb6cad",
+        "04cd3af7-b5f7-4a5c-aa08-dae5e751f722",
+        "82f2449d-6670-4304-8d6d-60d26ba69aff",
+        "1ca8c7d3-4159-48ce-a662-e40961377dd9",
+        "0238e01d-8ed4-41b2-9e1d-23fa9dd51453"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "kind": "area",
+      "id": "bd8779d9-b277-49f3-a167-49a265fb6cad",
+      "name": "Paleisparket",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 100,
+                "y": 100
+              },
+              {
+                "x": 920,
+                "y": 100
+              },
+              {
+                "x": 920,
+                "y": 800
+              },
+              {
+                "x": 100,
+                "y": 800
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 100,
+      "y": 100,
+      "width": 820,
+      "height": 700,
+      "fill": {
+        "kind": "pattern",
+        "assetId": "87299f39-5a5e-4a92-a0c4-424dbced7679",
+        "mode": "repeat",
+        "scale": 0.1594896331738437,
+        "rotation": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 100,
+        "y": 100,
+        "width": 820,
+        "height": 700
+      }
+    },
+    {
+      "kind": "area",
+      "id": "04cd3af7-b5f7-4a5c-aa08-dae5e751f722",
+      "name": "Paleisstenen vloer",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 920,
+                "y": 100
+              },
+              {
+                "x": 1270,
+                "y": 100
+              },
+              {
+                "x": 1270,
+                "y": 550
+              },
+              {
+                "x": 920,
+                "y": 550
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 920,
+      "y": 100,
+      "width": 350,
+      "height": 450,
+      "fill": {
+        "kind": "pattern",
+        "assetId": "05557836-1174-465b-b4e4-72269375e674",
+        "mode": "repeat",
+        "scale": 0.1594896331738437,
+        "rotation": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 920,
+        "y": 100,
+        "width": 350,
+        "height": 450
+      }
+    },
+    {
+      "kind": "area",
+      "id": "82f2449d-6670-4304-8d6d-60d26ba69aff",
+      "name": "Natuurlijke houten vloer",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 920,
+                "y": 550
+              },
+              {
+                "x": 1270,
+                "y": 550
+              },
+              {
+                "x": 1270,
+                "y": 800
+              },
+              {
+                "x": 920,
+                "y": 800
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 920,
+      "y": 550,
+      "width": 350,
+      "height": 250,
+      "fill": {
+        "kind": "pattern",
+        "assetId": "310e7f7d-1da4-4054-bc4f-3a429787c30c",
+        "mode": "repeat",
+        "scale": 0.1594896331738437,
+        "rotation": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 920,
+        "y": 550,
+        "width": 350,
+        "height": 250
+      }
+    },
+    {
+      "kind": "area",
+      "id": "1ca8c7d3-4159-48ce-a662-e40961377dd9",
+      "name": "Paleisstenen vloer",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 600,
+                "y": 800
+              },
+              {
+                "x": 820,
+                "y": 800
+              },
+              {
+                "x": 820,
+                "y": 950
+              },
+              {
+                "x": 600,
+                "y": 950
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 600,
+      "y": 800,
+      "width": 220,
+      "height": 150,
+      "fill": {
+        "kind": "pattern",
+        "assetId": "05557836-1174-465b-b4e4-72269375e674",
+        "mode": "repeat",
+        "scale": 0.1594896331738437,
+        "rotation": 0,
+        "offsetX": 0,
+        "offsetY": 0
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 600,
+        "y": 800,
+        "width": 220,
+        "height": 150
+      }
+    },
+    {
+      "name": "Wall",
+      "opacity": 1,
+      "cap": "butt",
+      "join": "miter",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "wall",
+      "id": "6f6ad6dd-fd13-4a86-946d-f3dd24625bf4",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 600,
+          "y": 800,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 100,
+          "y": 800,
+          "mode": "corner"
+        },
+        {
+          "id": "node-2",
+          "x": 100,
+          "y": 100,
+          "mode": "corner"
+        },
+        {
+          "id": "node-3",
+          "x": 1270,
+          "y": 100,
+          "mode": "corner"
+        },
+        {
+          "id": "node-4",
+          "x": 1270,
+          "y": 800,
+          "mode": "corner"
+        },
+        {
+          "id": "node-5",
+          "x": 820,
+          "y": 800,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 18,
+      "stroke": {
+        "kind": "solid",
+        "color": "#775238"
+      },
+      "wall": {
+        "unit": "ft",
+        "pixelsPerUnit": 20,
+        "flip": false,
+        "outline": {
+          "enabled": false,
+          "color": "#343632",
+          "width": 2,
+          "opacity": 1
+        },
+        "renderingMode": "generated",
+        "generated": {
+          "id": "pale-palace-stone",
+          "revision": "production-2",
+          "seed": 1,
+          "organic": 0,
+          "growth": 0,
+          "overgrowth": 0,
+          "regularity": 0.9,
+          "variation": 0.2
+        }
+      },
+      "x": 82,
+      "y": 82,
+      "width": 1206,
+      "height": 736
+    },
+    {
+      "name": "Wall",
+      "opacity": 1,
+      "cap": "butt",
+      "join": "miter",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "wall",
+      "id": "644cbd0a-a9d9-4806-b7ba-ccddf2c516fc",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 920,
+          "y": 100,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 920,
+          "y": 800,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 18,
+      "stroke": {
+        "kind": "solid",
+        "color": "#775238"
+      },
+      "wall": {
+        "unit": "ft",
+        "pixelsPerUnit": 20,
+        "flip": false,
+        "outline": {
+          "enabled": false,
+          "color": "#343632",
+          "width": 2,
+          "opacity": 1
+        },
+        "renderingMode": "generated",
+        "generated": {
+          "id": "pale-palace-stone",
+          "revision": "production-2",
+          "seed": 1,
+          "organic": 0,
+          "growth": 0,
+          "overgrowth": 0,
+          "regularity": 0.9,
+          "variation": 0.2
+        }
+      },
+      "x": 902,
+      "y": 82,
+      "width": 36,
+      "height": 736
+    },
+    {
+      "id": "7cb290db-9c0d-4794-8e37-791940341ee8",
+      "wallId": "644cbd0a-a9d9-4806-b7ba-ccddf2c516fc",
+      "position": 0.4,
+      "openingWidth": 65,
+      "unit": "ft",
+      "pixelsPerUnit": 10,
+      "side": 1,
+      "flip": false,
+      "x": 835,
+      "y": 295.00000000000006,
+      "width": 170,
+      "height": 170,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "opacity": 1,
+      "kind": "door",
+      "name": "Door",
+      "doorType": "single",
+      "status": "closed"
+    },
+    {
+      "name": "Wall",
+      "opacity": 1,
+      "cap": "butt",
+      "join": "miter",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "wall",
+      "id": "59811941-65fb-4b03-bb29-e5edab7fa729",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 920,
+          "y": 550,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1270,
+          "y": 550,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 18,
+      "stroke": {
+        "kind": "solid",
+        "color": "#775238"
+      },
+      "wall": {
+        "unit": "ft",
+        "pixelsPerUnit": 20,
+        "flip": false,
+        "outline": {
+          "enabled": false,
+          "color": "#343632",
+          "width": 2,
+          "opacity": 1
+        },
+        "renderingMode": "generated",
+        "generated": {
+          "id": "pale-palace-stone",
+          "revision": "production-2",
+          "seed": 1,
+          "organic": 0,
+          "growth": 0,
+          "overgrowth": 0,
+          "regularity": 0.9,
+          "variation": 0.2
+        }
+      },
+      "x": 902,
+      "y": 532,
+      "width": 386,
+      "height": 36
+    },
+    {
+      "id": "8ee031f0-cf02-4f72-ad39-e14c008aad85",
+      "wallId": "59811941-65fb-4b03-bb29-e5edab7fa729",
+      "position": 0.5,
+      "openingWidth": 60,
+      "unit": "ft",
+      "pixelsPerUnit": 10,
+      "side": 1,
+      "flip": false,
+      "x": 1015,
+      "y": 470,
+      "width": 160,
+      "height": 160,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "opacity": 1,
+      "kind": "door",
+      "name": "Door",
+      "doorType": "single",
+      "status": "closed"
+    },
+    {
+      "name": "Wall",
+      "opacity": 1,
+      "cap": "butt",
+      "join": "miter",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "wall",
+      "id": "01d37e2d-09bb-4d91-8013-b0de030f8aec",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 600,
+          "y": 800,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 600,
+          "y": 950,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 18,
+      "stroke": {
+        "kind": "solid",
+        "color": "#775238"
+      },
+      "wall": {
+        "unit": "ft",
+        "pixelsPerUnit": 20,
+        "flip": false,
+        "outline": {
+          "enabled": false,
+          "color": "#343632",
+          "width": 2,
+          "opacity": 1
+        },
+        "renderingMode": "generated",
+        "generated": {
+          "id": "pale-palace-stone",
+          "revision": "production-2",
+          "seed": 1,
+          "organic": 0,
+          "growth": 0,
+          "overgrowth": 0,
+          "regularity": 0.9,
+          "variation": 0.2
+        }
+      },
+      "x": 582,
+      "y": 782,
+      "width": 36,
+      "height": 186
+    },
+    {
+      "name": "Wall",
+      "opacity": 1,
+      "cap": "butt",
+      "join": "miter",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "wall",
+      "id": "f2a039f1-3ef0-4098-99ad-19d8750143c2",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 820,
+          "y": 800,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 820,
+          "y": 950,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 18,
+      "stroke": {
+        "kind": "solid",
+        "color": "#775238"
+      },
+      "wall": {
+        "unit": "ft",
+        "pixelsPerUnit": 20,
+        "flip": false,
+        "outline": {
+          "enabled": false,
+          "color": "#343632",
+          "width": 2,
+          "opacity": 1
+        },
+        "renderingMode": "generated",
+        "generated": {
+          "id": "pale-palace-stone",
+          "revision": "production-2",
+          "seed": 1,
+          "organic": 0,
+          "growth": 0,
+          "overgrowth": 0,
+          "regularity": 0.9,
+          "variation": 0.2
+        }
+      },
+      "x": 802,
+      "y": 782,
+      "width": 36,
+      "height": 186
+    },
+    {
+      "id": "18abaf00-8a97-4d85-8320-19ca4b23dd81",
+      "assetId": "e6920637-bfca-4b36-af46-0fc2cd89d3b2",
+      "x": 150,
+      "y": 130,
+      "width": 110,
+      "height": 27.5,
+      "opacity": 1,
+      "name": "Rechte boekenkast",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 6,
+              "height": 1.5
+            },
+            "tags": [
+              "battlemap",
+              "bibliotheek",
+              "boekenkast",
+              "Eldric",
+              "Eryndor",
+              "geleerde",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "paleis",
+              "studie",
+              "study & library"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "storage",
+            "softShadowDefault": true
+          },
+          "id": "bookshelf-straight-6",
+          "revision": 1,
+          "displayName": "Rechte boekenkast",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "e6920637-bfca-4b36-af46-0fc2cd89d3b2",
+              "weight": 1,
+              "label": "Volle vakken met boeken"
+            },
+            {
+              "id": "v02",
+              "assetId": "15e0599f-850c-4854-885e-9d054eb61a87",
+              "weight": 1,
+              "label": "Boeken en gesloten rollen"
+            },
+            {
+              "id": "v03",
+              "assetId": "c2f7a40e-279d-434c-837e-4f2a70c37516",
+              "weight": 1,
+              "label": "Gemengde bandkleuren"
+            },
+            {
+              "id": "v04",
+              "assetId": "18629598-b1cd-4466-ba72-7462f9beba09",
+              "weight": 1,
+              "label": "Deels lege vakken met verspreide boeken"
+            },
+            {
+              "id": "v05",
+              "assetId": "cc9fc67d-94c1-4441-98bb-7bbc02e55845",
+              "weight": 1,
+              "label": "Boeken en gesloten archiefdozen"
+            }
+          ]
+        },
+        "variantId": "v01"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "91ecb7ab-a211-44a7-a1b6-0fac7c3c252c",
+      "assetId": "15e0599f-850c-4854-885e-9d054eb61a87",
+      "x": 295,
+      "y": 130,
+      "width": 110,
+      "height": 27.5,
+      "opacity": 1,
+      "name": "Rechte boekenkast",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 6,
+              "height": 1.5
+            },
+            "tags": [
+              "battlemap",
+              "bibliotheek",
+              "boekenkast",
+              "Eldric",
+              "Eryndor",
+              "geleerde",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "paleis",
+              "studie",
+              "study & library"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "storage",
+            "softShadowDefault": true
+          },
+          "id": "bookshelf-straight-6",
+          "revision": 1,
+          "displayName": "Rechte boekenkast",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "e6920637-bfca-4b36-af46-0fc2cd89d3b2",
+              "weight": 1,
+              "label": "Volle vakken met boeken"
+            },
+            {
+              "id": "v02",
+              "assetId": "15e0599f-850c-4854-885e-9d054eb61a87",
+              "weight": 1,
+              "label": "Boeken en gesloten rollen"
+            },
+            {
+              "id": "v03",
+              "assetId": "c2f7a40e-279d-434c-837e-4f2a70c37516",
+              "weight": 1,
+              "label": "Gemengde bandkleuren"
+            },
+            {
+              "id": "v04",
+              "assetId": "18629598-b1cd-4466-ba72-7462f9beba09",
+              "weight": 1,
+              "label": "Deels lege vakken met verspreide boeken"
+            },
+            {
+              "id": "v05",
+              "assetId": "cc9fc67d-94c1-4441-98bb-7bbc02e55845",
+              "weight": 1,
+              "label": "Boeken en gesloten archiefdozen"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "bd2ca5ac-a38f-4fd5-9547-dd9c5a707a9f",
+      "assetId": "c2f7a40e-279d-434c-837e-4f2a70c37516",
+      "x": 440,
+      "y": 130,
+      "width": 110,
+      "height": 27.5,
+      "opacity": 1,
+      "name": "Rechte boekenkast",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 6,
+              "height": 1.5
+            },
+            "tags": [
+              "battlemap",
+              "bibliotheek",
+              "boekenkast",
+              "Eldric",
+              "Eryndor",
+              "geleerde",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "paleis",
+              "studie",
+              "study & library"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "storage",
+            "softShadowDefault": true
+          },
+          "id": "bookshelf-straight-6",
+          "revision": 1,
+          "displayName": "Rechte boekenkast",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "e6920637-bfca-4b36-af46-0fc2cd89d3b2",
+              "weight": 1,
+              "label": "Volle vakken met boeken"
+            },
+            {
+              "id": "v02",
+              "assetId": "15e0599f-850c-4854-885e-9d054eb61a87",
+              "weight": 1,
+              "label": "Boeken en gesloten rollen"
+            },
+            {
+              "id": "v03",
+              "assetId": "c2f7a40e-279d-434c-837e-4f2a70c37516",
+              "weight": 1,
+              "label": "Gemengde bandkleuren"
+            },
+            {
+              "id": "v04",
+              "assetId": "18629598-b1cd-4466-ba72-7462f9beba09",
+              "weight": 1,
+              "label": "Deels lege vakken met verspreide boeken"
+            },
+            {
+              "id": "v05",
+              "assetId": "cc9fc67d-94c1-4441-98bb-7bbc02e55845",
+              "weight": 1,
+              "label": "Boeken en gesloten archiefdozen"
+            }
+          ]
+        },
+        "variantId": "v03"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "3e6dd689-1ae0-4280-a7e4-df386d65d309",
+      "assetId": "18629598-b1cd-4466-ba72-7462f9beba09",
+      "x": 585,
+      "y": 130,
+      "width": 110,
+      "height": 27.5,
+      "opacity": 1,
+      "name": "Rechte boekenkast",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 6,
+              "height": 1.5
+            },
+            "tags": [
+              "battlemap",
+              "bibliotheek",
+              "boekenkast",
+              "Eldric",
+              "Eryndor",
+              "geleerde",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "paleis",
+              "studie",
+              "study & library"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "storage",
+            "softShadowDefault": true
+          },
+          "id": "bookshelf-straight-6",
+          "revision": 1,
+          "displayName": "Rechte boekenkast",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "e6920637-bfca-4b36-af46-0fc2cd89d3b2",
+              "weight": 1,
+              "label": "Volle vakken met boeken"
+            },
+            {
+              "id": "v02",
+              "assetId": "15e0599f-850c-4854-885e-9d054eb61a87",
+              "weight": 1,
+              "label": "Boeken en gesloten rollen"
+            },
+            {
+              "id": "v03",
+              "assetId": "c2f7a40e-279d-434c-837e-4f2a70c37516",
+              "weight": 1,
+              "label": "Gemengde bandkleuren"
+            },
+            {
+              "id": "v04",
+              "assetId": "18629598-b1cd-4466-ba72-7462f9beba09",
+              "weight": 1,
+              "label": "Deels lege vakken met verspreide boeken"
+            },
+            {
+              "id": "v05",
+              "assetId": "cc9fc67d-94c1-4441-98bb-7bbc02e55845",
+              "weight": 1,
+              "label": "Boeken en gesloten archiefdozen"
+            }
+          ]
+        },
+        "variantId": "v04"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "abbd90a6-5ecf-4d38-9873-2ea8238d5394",
+      "assetId": "cc9fc67d-94c1-4441-98bb-7bbc02e55845",
+      "x": 730,
+      "y": 130,
+      "width": 110,
+      "height": 27.5,
+      "opacity": 1,
+      "name": "Rechte boekenkast",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 6,
+              "height": 1.5
+            },
+            "tags": [
+              "battlemap",
+              "bibliotheek",
+              "boekenkast",
+              "Eldric",
+              "Eryndor",
+              "geleerde",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "paleis",
+              "studie",
+              "study & library"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "storage",
+            "softShadowDefault": true
+          },
+          "id": "bookshelf-straight-6",
+          "revision": 1,
+          "displayName": "Rechte boekenkast",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "e6920637-bfca-4b36-af46-0fc2cd89d3b2",
+              "weight": 1,
+              "label": "Volle vakken met boeken"
+            },
+            {
+              "id": "v02",
+              "assetId": "15e0599f-850c-4854-885e-9d054eb61a87",
+              "weight": 1,
+              "label": "Boeken en gesloten rollen"
+            },
+            {
+              "id": "v03",
+              "assetId": "c2f7a40e-279d-434c-837e-4f2a70c37516",
+              "weight": 1,
+              "label": "Gemengde bandkleuren"
+            },
+            {
+              "id": "v04",
+              "assetId": "18629598-b1cd-4466-ba72-7462f9beba09",
+              "weight": 1,
+              "label": "Deels lege vakken met verspreide boeken"
+            },
+            {
+              "id": "v05",
+              "assetId": "cc9fc67d-94c1-4441-98bb-7bbc02e55845",
+              "weight": 1,
+              "label": "Boeken en gesloten archiefdozen"
+            }
+          ]
+        },
+        "variantId": "v05"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "513d07fb-2af8-4101-8603-5c0ff8a6ab3b",
+      "assetId": "e6920637-bfca-4b36-af46-0fc2cd89d3b2",
+      "x": 150,
+      "y": 300,
+      "width": 110,
+      "height": 27.5,
+      "opacity": 1,
+      "name": "Rechte boekenkast",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 6,
+              "height": 1.5
+            },
+            "tags": [
+              "battlemap",
+              "bibliotheek",
+              "boekenkast",
+              "Eldric",
+              "Eryndor",
+              "geleerde",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "paleis",
+              "studie",
+              "study & library"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "storage",
+            "softShadowDefault": true
+          },
+          "id": "bookshelf-straight-6",
+          "revision": 1,
+          "displayName": "Rechte boekenkast",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "e6920637-bfca-4b36-af46-0fc2cd89d3b2",
+              "weight": 1,
+              "label": "Volle vakken met boeken"
+            },
+            {
+              "id": "v02",
+              "assetId": "15e0599f-850c-4854-885e-9d054eb61a87",
+              "weight": 1,
+              "label": "Boeken en gesloten rollen"
+            },
+            {
+              "id": "v03",
+              "assetId": "c2f7a40e-279d-434c-837e-4f2a70c37516",
+              "weight": 1,
+              "label": "Gemengde bandkleuren"
+            },
+            {
+              "id": "v04",
+              "assetId": "18629598-b1cd-4466-ba72-7462f9beba09",
+              "weight": 1,
+              "label": "Deels lege vakken met verspreide boeken"
+            },
+            {
+              "id": "v05",
+              "assetId": "cc9fc67d-94c1-4441-98bb-7bbc02e55845",
+              "weight": 1,
+              "label": "Boeken en gesloten archiefdozen"
+            }
+          ]
+        },
+        "variantId": "v01"
+      },
+      "kind": "stamp",
+      "rotation": 90,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "ed20c983-b5a7-4838-b31e-d614ed5effd1",
+      "assetId": "15e0599f-850c-4854-885e-9d054eb61a87",
+      "x": 150,
+      "y": 445,
+      "width": 110,
+      "height": 27.5,
+      "opacity": 1,
+      "name": "Rechte boekenkast",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 6,
+              "height": 1.5
+            },
+            "tags": [
+              "battlemap",
+              "bibliotheek",
+              "boekenkast",
+              "Eldric",
+              "Eryndor",
+              "geleerde",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "paleis",
+              "studie",
+              "study & library"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "storage",
+            "softShadowDefault": true
+          },
+          "id": "bookshelf-straight-6",
+          "revision": 1,
+          "displayName": "Rechte boekenkast",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "e6920637-bfca-4b36-af46-0fc2cd89d3b2",
+              "weight": 1,
+              "label": "Volle vakken met boeken"
+            },
+            {
+              "id": "v02",
+              "assetId": "15e0599f-850c-4854-885e-9d054eb61a87",
+              "weight": 1,
+              "label": "Boeken en gesloten rollen"
+            },
+            {
+              "id": "v03",
+              "assetId": "c2f7a40e-279d-434c-837e-4f2a70c37516",
+              "weight": 1,
+              "label": "Gemengde bandkleuren"
+            },
+            {
+              "id": "v04",
+              "assetId": "18629598-b1cd-4466-ba72-7462f9beba09",
+              "weight": 1,
+              "label": "Deels lege vakken met verspreide boeken"
+            },
+            {
+              "id": "v05",
+              "assetId": "cc9fc67d-94c1-4441-98bb-7bbc02e55845",
+              "weight": 1,
+              "label": "Boeken en gesloten archiefdozen"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 90,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "f86dc173-34a6-4d80-81cc-519a7edddbfa",
+      "assetId": "c2f7a40e-279d-434c-837e-4f2a70c37516",
+      "x": 150,
+      "y": 590,
+      "width": 110,
+      "height": 27.5,
+      "opacity": 1,
+      "name": "Rechte boekenkast",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 6,
+              "height": 1.5
+            },
+            "tags": [
+              "battlemap",
+              "bibliotheek",
+              "boekenkast",
+              "Eldric",
+              "Eryndor",
+              "geleerde",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "paleis",
+              "studie",
+              "study & library"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "storage",
+            "softShadowDefault": true
+          },
+          "id": "bookshelf-straight-6",
+          "revision": 1,
+          "displayName": "Rechte boekenkast",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "e6920637-bfca-4b36-af46-0fc2cd89d3b2",
+              "weight": 1,
+              "label": "Volle vakken met boeken"
+            },
+            {
+              "id": "v02",
+              "assetId": "15e0599f-850c-4854-885e-9d054eb61a87",
+              "weight": 1,
+              "label": "Boeken en gesloten rollen"
+            },
+            {
+              "id": "v03",
+              "assetId": "c2f7a40e-279d-434c-837e-4f2a70c37516",
+              "weight": 1,
+              "label": "Gemengde bandkleuren"
+            },
+            {
+              "id": "v04",
+              "assetId": "18629598-b1cd-4466-ba72-7462f9beba09",
+              "weight": 1,
+              "label": "Deels lege vakken met verspreide boeken"
+            },
+            {
+              "id": "v05",
+              "assetId": "cc9fc67d-94c1-4441-98bb-7bbc02e55845",
+              "weight": 1,
+              "label": "Boeken en gesloten archiefdozen"
+            }
+          ]
+        },
+        "variantId": "v03"
+      },
+      "kind": "stamp",
+      "rotation": 90,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "f236685b-5be4-4501-a0a5-6aaf91bfe3ff",
+      "assetId": "0667993e-ade2-4b2c-96a8-c7068fdf6e07",
+      "x": 470,
+      "y": 390,
+      "width": 185,
+      "height": 92.5,
+      "opacity": 1,
+      "name": "Groot schrijfbureau",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 6,
+              "height": 3
+            },
+            "tags": [
+              "battlemap",
+              "Eryndor",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "paleis"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "writing-desk-6",
+          "revision": 1,
+          "displayName": "Groot schrijfbureau",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "35efd73a-315c-456d-aeb4-4f05d579dda8",
+              "weight": 1,
+              "label": "Leeg blad"
+            },
+            {
+              "id": "v02",
+              "assetId": "0667993e-ade2-4b2c-96a8-c7068fdf6e07",
+              "weight": 1,
+              "label": "Geordende papieren en pen binnen het blad"
+            },
+            {
+              "id": "v03",
+              "assetId": "1ef47712-845a-4f80-9cb7-d1421f41e1dc",
+              "weight": 1,
+              "label": "Gesloten registers binnen het blad"
+            },
+            {
+              "id": "v04",
+              "assetId": "c3f7f4e2-3d8a-4c72-bf6f-aa6b295126d3",
+              "weight": 1,
+              "label": "Rollen en geordende papieren binnen het blad"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "edeb651d-11c4-4ca5-94aa-f218a951fe5f",
+      "assetId": "1ee8d87c-11f2-4a07-8870-d3f51a38d2a6",
+      "x": 525,
+      "y": 315,
+      "width": 55,
+      "height": 55,
+      "opacity": 1,
+      "name": "Houten bureaustoel",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 2.5,
+              "height": 2.5
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "Eryndor",
+              "interieur",
+              "meubilair",
+              "paleis",
+              "stoel",
+              "zitmeubilair"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "chair-office-25",
+          "revision": 1,
+          "displayName": "Houten bureaustoel",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "ef127b77-3ba6-436f-994a-ca946f1ff08a",
+              "weight": 1,
+              "label": "Houten zitting met lichte nerf"
+            },
+            {
+              "id": "v02",
+              "assetId": "1ee8d87c-11f2-4a07-8870-d3f51a38d2a6",
+              "weight": 1,
+              "label": "Zelfde frame met dun neutraal zitkussen"
+            },
+            {
+              "id": "v03",
+              "assetId": "d81d99f6-8582-4913-8524-81179fbdf5f3",
+              "weight": 1,
+              "label": "Zelfde zitting met lichte gebruikssporen"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "164245ef-a2e8-4666-b243-14974423afea",
+      "assetId": "48b17f4c-47d9-458c-b8c2-bfe7190ef232",
+      "x": 760,
+      "y": 650,
+      "width": 65,
+      "height": 62.95918367346939,
+      "opacity": 1,
+      "name": "Ronde bijzettafel",
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "495374d5-36bc-4cfd-9504-44037c9a5479",
+      "assetId": "8f33e406-8582-4040-92f8-44d4f0ec5234",
+      "x": 750,
+      "y": 535,
+      "width": 75,
+      "height": 75,
+      "opacity": 1,
+      "name": "Brede fauteuil",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 3,
+              "height": 3
+            },
+            "tags": [
+              "audiëntie",
+              "battlemap",
+              "diplomatie",
+              "Eryndor",
+              "interieur",
+              "meubilair",
+              "ontvangst",
+              "paleis",
+              "Theron",
+              "zitmeubilair"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "armchair-square-3",
+          "revision": 1,
+          "displayName": "Brede fauteuil",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "1938005c-9947-4350-b7d5-c81312d85892",
+              "weight": 1,
+              "label": "Neutrale groene bekleding"
+            },
+            {
+              "id": "v02",
+              "assetId": "8f33e406-8582-4040-92f8-44d4f0ec5234",
+              "weight": 1,
+              "label": "Gedempte bruine bekleding op hetzelfde frame"
+            },
+            {
+              "id": "v03",
+              "assetId": "a3d3afbf-493d-4bd6-9da2-f6fc4bfa3e12",
+              "weight": 1,
+              "label": "Gedempte blauwe bekleding op hetzelfde frame"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "976b73d3-479a-4ad0-bbcd-994a052174b1",
+      "assetId": "e20ac689-3132-4192-a214-ed9346c0c4c7",
+      "x": 1000,
+      "y": 200,
+      "width": 150,
+      "height": 75,
+      "opacity": 1,
+      "name": "Schrijftafel",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 4,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "bureau",
+              "Eryndor",
+              "hout",
+              "interieur",
+              "koninklijk",
+              "Líorna",
+              "meubilair",
+              "paleis",
+              "privé"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "writing-desk-4",
+          "revision": 1,
+          "displayName": "Schrijftafel",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "346ae21b-a159-4e06-84c4-a53ae6172ec6",
+              "weight": 1,
+              "label": "Leeg schrijfoppervlak"
+            },
+            {
+              "id": "v02",
+              "assetId": "e20ac689-3132-4192-a214-ed9346c0c4c7",
+              "weight": 1,
+              "label": "Eén los vel en schrijfpen binnen het blad"
+            },
+            {
+              "id": "v03",
+              "assetId": "370d1d1e-cc93-4b22-8a6b-67209d860c41",
+              "weight": 1,
+              "label": "Gesloten folio en één vel binnen het blad"
+            },
+            {
+              "id": "v04",
+              "assetId": "4070ad74-e06d-46e3-8d55-bea3258246f5",
+              "weight": 1,
+              "label": "Kleine stapel papieren met inktpot binnen het blad"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "1482a584-25d4-4d13-8907-4ce4a9904f36",
+      "assetId": "42688a1e-b977-472a-982a-acb397124197",
+      "x": 1050,
+      "y": 330,
+      "width": 52,
+      "height": 52,
+      "opacity": 1,
+      "name": "Houten stoel",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 2,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "Eryndor",
+              "interieur",
+              "meubilair",
+              "paleis",
+              "stoel",
+              "zitmeubilair"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "chair-square-2",
+          "revision": 1,
+          "displayName": "Houten stoel",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "f51dff7b-b490-40fe-b2eb-49a307a26983",
+              "weight": 1,
+              "label": "Houten zitting, heldere nerf"
+            },
+            {
+              "id": "v02",
+              "assetId": "42688a1e-b977-472a-982a-acb397124197",
+              "weight": 1,
+              "label": "Dezelfde zitting met subtiele slijtage"
+            },
+            {
+              "id": "v03",
+              "assetId": "2fccc0db-602a-4a0c-886d-909ef4be9504",
+              "weight": 1,
+              "label": "Hetzelfde frame met sober vast zitkussen"
+            },
+            {
+              "id": "v04",
+              "assetId": "ef441f3a-5ace-43f0-af9d-0ea90e727fa0",
+              "weight": 1,
+              "label": "Hetzelfde frame met gevouwen doek op de zitting"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "0fa90ab7-c7c2-436d-8d64-7a3377f3dd15",
+      "assetId": "742ca2fa-20c4-42c5-94e1-d239ac69c8d0",
+      "x": 1000,
+      "y": 610,
+      "width": 100,
+      "height": 50,
+      "opacity": 1,
+      "name": "Garderobekast",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 3,
+              "height": 1.5
+            },
+            "tags": [
+              "battlemap",
+              "Eryndor",
+              "garderobe",
+              "interieur",
+              "koninklijk",
+              "Líorna",
+              "paleis",
+              "privé"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "storage",
+            "softShadowDefault": true
+          },
+          "id": "wardrobe-3",
+          "revision": 1,
+          "displayName": "Garderobekast",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "742ca2fa-20c4-42c5-94e1-d239ac69c8d0",
+              "weight": 1,
+              "label": "Gesloten kast met lichte nerf"
+            },
+            {
+              "id": "v02",
+              "assetId": "22b97565-4c49-49ca-bc29-a4b998790b62",
+              "weight": 1,
+              "label": "Dezelfde gesloten kast met donkere nerf"
+            },
+            {
+              "id": "v03",
+              "assetId": "4266c55d-71c5-49f2-9fc2-16c8430b19b6",
+              "weight": 1,
+              "label": "Dezelfde gesloten kast met bescheiden slijtage"
+            }
+          ]
+        },
+        "variantId": "v01"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "9f19d4ef-eadd-400b-83d1-a2e527e7a457",
+      "assetId": "568a9870-acae-4c8a-85d3-a391359c907a",
+      "x": 1130,
+      "y": 600,
+      "width": 85,
+      "height": 170,
+      "opacity": 1,
+      "name": "Eenpersoonsbed",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 3.5,
+              "height": 7
+            },
+            "tags": [
+              "battlemap",
+              "bed",
+              "beslapen bed",
+              "Eryndor",
+              "interieur",
+              "paleis",
+              "slaapvertrekken"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "bed-single-35",
+          "revision": 1,
+          "displayName": "Eenpersoonsbed",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "568a9870-acae-4c8a-85d3-a391359c907a",
+              "weight": 1,
+              "label": "Net opgemaakt neutraal linnengoed"
+            },
+            {
+              "id": "v02",
+              "assetId": "c40b01de-04e3-4db1-839d-180f7bdb0667",
+              "weight": 1,
+              "label": "Hetzelfde bed met teruggeslagen deken"
+            },
+            {
+              "id": "v03",
+              "assetId": "d39b0a20-8086-47d8-a552-948e4a896c27",
+              "weight": 1,
+              "label": "Hetzelfde bed met zacht verfrommelde deken"
+            }
+          ]
+        },
+        "variantId": "v01"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "370b4f85-1ce1-4922-b885-79f06adcb6e7",
+      "assetId": "1516b384-a90d-43a0-889a-b12bbd7fd7af",
+      "x": 120,
+      "y": 680,
+      "width": 55,
+      "height": 55,
+      "opacity": 1,
+      "name": "Ronde plantenbak",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 2,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "diplomatie",
+              "Eryndor",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "ontvangst",
+              "paleis",
+              "planten",
+              "Theron"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "vegetation",
+            "softShadowDefault": true
+          },
+          "id": "planter-round-2",
+          "revision": 1,
+          "displayName": "Ronde plantenbak",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "1516b384-a90d-43a0-889a-b12bbd7fd7af",
+              "weight": 1,
+              "label": "Dichte brede bladeren binnen vaste plantbounds"
+            },
+            {
+              "id": "v02",
+              "assetId": "c5b0ac1c-0756-4a3f-98d9-95a702fcb1ab",
+              "weight": 1,
+              "label": "Fijn blad binnen dezelfde bounds"
+            },
+            {
+              "id": "v03",
+              "assetId": "d5b33b1d-b312-427a-a370-1578f8191d7c",
+              "weight": 1,
+              "label": "Lage gemengde begroeiing binnen dezelfde bounds"
+            },
+            {
+              "id": "v04",
+              "assetId": "40c847aa-0ef8-482b-9daf-febdfd041968",
+              "weight": 1,
+              "label": "Jonge begroeiing zonder grotere bladuitlopers"
+            }
+          ]
+        },
+        "variantId": "v01"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "a0ade7ad-535a-4f8f-98d6-4030f1fd618e",
+      "assetId": "1516b384-a90d-43a0-889a-b12bbd7fd7af",
+      "x": 800,
+      "y": 180,
+      "width": 55,
+      "height": 55,
+      "opacity": 1,
+      "name": "Ronde plantenbak",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 2,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "diplomatie",
+              "Eryndor",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "ontvangst",
+              "paleis",
+              "planten",
+              "Theron"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "vegetation",
+            "softShadowDefault": true
+          },
+          "id": "planter-round-2",
+          "revision": 1,
+          "displayName": "Ronde plantenbak",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "1516b384-a90d-43a0-889a-b12bbd7fd7af",
+              "weight": 1,
+              "label": "Dichte brede bladeren binnen vaste plantbounds"
+            },
+            {
+              "id": "v02",
+              "assetId": "c5b0ac1c-0756-4a3f-98d9-95a702fcb1ab",
+              "weight": 1,
+              "label": "Fijn blad binnen dezelfde bounds"
+            },
+            {
+              "id": "v03",
+              "assetId": "d5b33b1d-b312-427a-a370-1578f8191d7c",
+              "weight": 1,
+              "label": "Lage gemengde begroeiing binnen dezelfde bounds"
+            },
+            {
+              "id": "v04",
+              "assetId": "40c847aa-0ef8-482b-9daf-febdfd041968",
+              "weight": 1,
+              "label": "Jonge begroeiing zonder grotere bladuitlopers"
+            }
+          ]
+        },
+        "variantId": "v01"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "a6448051-b8ae-4b32-9609-4282af91ba94",
+      "assetId": "1516b384-a90d-43a0-889a-b12bbd7fd7af",
+      "x": 1180,
+      "y": 430,
+      "width": 55,
+      "height": 55,
+      "opacity": 1,
+      "name": "Ronde plantenbak",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 2,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "diplomatie",
+              "Eryndor",
+              "hof",
+              "hofbestuur",
+              "hout",
+              "interieur",
+              "Maelyra",
+              "meubilair",
+              "ontvangst",
+              "paleis",
+              "planten",
+              "Theron"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "vegetation",
+            "softShadowDefault": true
+          },
+          "id": "planter-round-2",
+          "revision": 1,
+          "displayName": "Ronde plantenbak",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "1516b384-a90d-43a0-889a-b12bbd7fd7af",
+              "weight": 1,
+              "label": "Dichte brede bladeren binnen vaste plantbounds"
+            },
+            {
+              "id": "v02",
+              "assetId": "c5b0ac1c-0756-4a3f-98d9-95a702fcb1ab",
+              "weight": 1,
+              "label": "Fijn blad binnen dezelfde bounds"
+            },
+            {
+              "id": "v03",
+              "assetId": "d5b33b1d-b312-427a-a370-1578f8191d7c",
+              "weight": 1,
+              "label": "Lage gemengde begroeiing binnen dezelfde bounds"
+            },
+            {
+              "id": "v04",
+              "assetId": "40c847aa-0ef8-482b-9daf-febdfd041968",
+              "weight": 1,
+              "label": "Jonge begroeiing zonder grotere bladuitlopers"
+            }
+          ]
+        },
+        "variantId": "v01"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "ec114df5-d55d-42ed-8b2f-9d76daf15f24",
+      "assetId": "4d7f4277-ef56-46e1-b407-530c6916a8a1",
+      "x": 520,
+      "y": 430,
+      "width": 25,
+      "height": 16.666666666666668,
+      "opacity": 1,
+      "name": "Open boek",
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "10c717fe-609d-4582-bdac-2e21334806bb",
+      "assetId": "64ed2828-0479-4a9d-bb92-fca1557249f5",
+      "x": 580,
+      "y": 450,
+      "width": 22,
+      "height": 16.5,
+      "opacity": 1,
+      "name": "Gesloten folio",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 1,
+              "height": 0.75
+            },
+            "tags": [
+              "battlemap",
+              "diplomatie",
+              "document",
+              "documenten",
+              "Eryndor",
+              "hof",
+              "hofbestuur",
+              "interieur",
+              "kaart",
+              "kantoorvoorwerp",
+              "Maelyra",
+              "ontvangst",
+              "paleis",
+              "Theron"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "tabletop_prop",
+            "softShadowDefault": true
+          },
+          "id": "folio-closed-1",
+          "revision": 1,
+          "displayName": "Gesloten folio",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "64ed2828-0479-4a9d-bb92-fca1557249f5",
+              "weight": 1,
+              "label": "Sobere bruine band met dezelfde sluiting"
+            },
+            {
+              "id": "v02",
+              "assetId": "61283729-800c-4ee4-95c2-17170b48e235",
+              "weight": 1,
+              "label": "Gedempte groene band met dezelfde sluiting"
+            },
+            {
+              "id": "v03",
+              "assetId": "581085e6-4d7f-4f46-89eb-ed5cadee4e02",
+              "weight": 1,
+              "label": "Gedempte blauwe band met gebruikssporen"
+            }
+          ]
+        },
+        "variantId": "v01"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "48f4c89f-99b4-4517-90bd-1dfbb2c79fb5",
+      "assetId": "a7628247-9dda-49bd-bf25-51e5fb184681",
+      "x": 1035,
+      "y": 240,
+      "width": 22,
+      "height": 14.666666666666666,
+      "opacity": 1,
+      "name": "Verzegelde brieven",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 1.5,
+              "height": 1
+            },
+            "tags": [
+              "battlemap",
+              "diplomatie",
+              "document",
+              "documenten",
+              "Eryndor",
+              "hof",
+              "hofbestuur",
+              "interieur",
+              "kaart",
+              "kantoorvoorwerp",
+              "Maelyra",
+              "ontvangst",
+              "paleis",
+              "Theron"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "tabletop_prop",
+            "softShadowDefault": true
+          },
+          "id": "letters-sealed-15",
+          "revision": 1,
+          "displayName": "Verzegelde brieven",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "a7628247-9dda-49bd-bf25-51e5fb184681",
+              "weight": 1,
+              "label": "Twee dunne verzegelde brieven binnen vaste bounds"
+            },
+            {
+              "id": "v02",
+              "assetId": "0c87e585-4621-4e1f-aaa4-3bb959f84e57",
+              "weight": 1,
+              "label": "Drie dunne verzegelde brieven binnen dezelfde bounds"
+            },
+            {
+              "id": "v03",
+              "assetId": "76e78350-d9fc-491c-9594-409f7ad2ff59",
+              "weight": 1,
+              "label": "Twee dunne brieven met afwijkende neutrale lakzegels"
+            }
+          ]
+        },
+        "variantId": "v01"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "kind": "area",
+      "id": "0238e01d-8ed4-41b2-9e1d-23fa9dd51453",
+      "name": "Woven archive carpet — native Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 410,
+                "y": 345
+              },
+              {
+                "x": 710,
+                "y": 345
+              },
+              {
+                "x": 710,
+                "y": 555
+              },
+              {
+                "x": 410,
+                "y": 555
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 410,
+      "y": 345,
+      "width": 300,
+      "height": 210,
+      "fill": {
+        "kind": "solid",
+        "color": "#3d5147"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#b79a5f",
+      "strokeOpacity": 1,
+      "strokeWidth": 5,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 410,
+        "y": 345,
+        "width": 300,
+        "height": 210
+      }
+    },
+    {
+      "id": "041e979e-4ed7-42ff-b2de-2196ed23da13",
+      "assetId": "e20ac689-3132-4192-a214-ed9346c0c4c7",
+      "x": 300,
+      "y": 240,
+      "width": 110,
+      "height": 55,
+      "opacity": 1,
+      "name": "Schrijftafel",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 4,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "bureau",
+              "Eryndor",
+              "hout",
+              "interieur",
+              "koninklijk",
+              "Líorna",
+              "meubilair",
+              "paleis",
+              "privé"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "writing-desk-4",
+          "revision": 1,
+          "displayName": "Schrijftafel",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "346ae21b-a159-4e06-84c4-a53ae6172ec6",
+              "weight": 1,
+              "label": "Leeg schrijfoppervlak"
+            },
+            {
+              "id": "v02",
+              "assetId": "e20ac689-3132-4192-a214-ed9346c0c4c7",
+              "weight": 1,
+              "label": "Eén los vel en schrijfpen binnen het blad"
+            },
+            {
+              "id": "v03",
+              "assetId": "370d1d1e-cc93-4b22-8a6b-67209d860c41",
+              "weight": 1,
+              "label": "Gesloten folio en één vel binnen het blad"
+            },
+            {
+              "id": "v04",
+              "assetId": "4070ad74-e06d-46e3-8d55-bea3258246f5",
+              "weight": 1,
+              "label": "Kleine stapel papieren met inktpot binnen het blad"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "d7441ed0-4c4a-4adf-8a60-fcf325fb0bd5",
+      "assetId": "42688a1e-b977-472a-982a-acb397124197",
+      "x": 335,
+      "y": 198,
+      "width": 40,
+      "height": 40,
+      "opacity": 1,
+      "name": "Houten stoel",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 2,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "Eryndor",
+              "interieur",
+              "meubilair",
+              "paleis",
+              "stoel",
+              "zitmeubilair"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "chair-square-2",
+          "revision": 1,
+          "displayName": "Houten stoel",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "f51dff7b-b490-40fe-b2eb-49a307a26983",
+              "weight": 1,
+              "label": "Houten zitting, heldere nerf"
+            },
+            {
+              "id": "v02",
+              "assetId": "42688a1e-b977-472a-982a-acb397124197",
+              "weight": 1,
+              "label": "Dezelfde zitting met subtiele slijtage"
+            },
+            {
+              "id": "v03",
+              "assetId": "2fccc0db-602a-4a0c-886d-909ef4be9504",
+              "weight": 1,
+              "label": "Hetzelfde frame met sober vast zitkussen"
+            },
+            {
+              "id": "v04",
+              "assetId": "ef441f3a-5ace-43f0-af9d-0ea90e727fa0",
+              "weight": 1,
+              "label": "Hetzelfde frame met gevouwen doek op de zitting"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "660eb3f0-0618-40f8-b323-cd6eb09fa2ee",
+      "assetId": "e20ac689-3132-4192-a214-ed9346c0c4c7",
+      "x": 650,
+      "y": 240,
+      "width": 110,
+      "height": 55,
+      "opacity": 1,
+      "name": "Schrijftafel",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 4,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "bureau",
+              "Eryndor",
+              "hout",
+              "interieur",
+              "koninklijk",
+              "Líorna",
+              "meubilair",
+              "paleis",
+              "privé"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "writing-desk-4",
+          "revision": 1,
+          "displayName": "Schrijftafel",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "346ae21b-a159-4e06-84c4-a53ae6172ec6",
+              "weight": 1,
+              "label": "Leeg schrijfoppervlak"
+            },
+            {
+              "id": "v02",
+              "assetId": "e20ac689-3132-4192-a214-ed9346c0c4c7",
+              "weight": 1,
+              "label": "Eén los vel en schrijfpen binnen het blad"
+            },
+            {
+              "id": "v03",
+              "assetId": "370d1d1e-cc93-4b22-8a6b-67209d860c41",
+              "weight": 1,
+              "label": "Gesloten folio en één vel binnen het blad"
+            },
+            {
+              "id": "v04",
+              "assetId": "4070ad74-e06d-46e3-8d55-bea3258246f5",
+              "weight": 1,
+              "label": "Kleine stapel papieren met inktpot binnen het blad"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "5504093e-919d-460b-8422-b6988b16b875",
+      "assetId": "42688a1e-b977-472a-982a-acb397124197",
+      "x": 685,
+      "y": 198,
+      "width": 40,
+      "height": 40,
+      "opacity": 1,
+      "name": "Houten stoel",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 2,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "Eryndor",
+              "interieur",
+              "meubilair",
+              "paleis",
+              "stoel",
+              "zitmeubilair"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "chair-square-2",
+          "revision": 1,
+          "displayName": "Houten stoel",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "f51dff7b-b490-40fe-b2eb-49a307a26983",
+              "weight": 1,
+              "label": "Houten zitting, heldere nerf"
+            },
+            {
+              "id": "v02",
+              "assetId": "42688a1e-b977-472a-982a-acb397124197",
+              "weight": 1,
+              "label": "Dezelfde zitting met subtiele slijtage"
+            },
+            {
+              "id": "v03",
+              "assetId": "2fccc0db-602a-4a0c-886d-909ef4be9504",
+              "weight": 1,
+              "label": "Hetzelfde frame met sober vast zitkussen"
+            },
+            {
+              "id": "v04",
+              "assetId": "ef441f3a-5ace-43f0-af9d-0ea90e727fa0",
+              "weight": 1,
+              "label": "Hetzelfde frame met gevouwen doek op de zitting"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "0da5a436-fa3d-42fb-ad96-977c188ee16d",
+      "assetId": "e20ac689-3132-4192-a214-ed9346c0c4c7",
+      "x": 310,
+      "y": 620,
+      "width": 110,
+      "height": 55,
+      "opacity": 1,
+      "name": "Schrijftafel",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 4,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "bureau",
+              "Eryndor",
+              "hout",
+              "interieur",
+              "koninklijk",
+              "Líorna",
+              "meubilair",
+              "paleis",
+              "privé"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "writing-desk-4",
+          "revision": 1,
+          "displayName": "Schrijftafel",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "346ae21b-a159-4e06-84c4-a53ae6172ec6",
+              "weight": 1,
+              "label": "Leeg schrijfoppervlak"
+            },
+            {
+              "id": "v02",
+              "assetId": "e20ac689-3132-4192-a214-ed9346c0c4c7",
+              "weight": 1,
+              "label": "Eén los vel en schrijfpen binnen het blad"
+            },
+            {
+              "id": "v03",
+              "assetId": "370d1d1e-cc93-4b22-8a6b-67209d860c41",
+              "weight": 1,
+              "label": "Gesloten folio en één vel binnen het blad"
+            },
+            {
+              "id": "v04",
+              "assetId": "4070ad74-e06d-46e3-8d55-bea3258246f5",
+              "weight": 1,
+              "label": "Kleine stapel papieren met inktpot binnen het blad"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "8d5ad5bc-2659-4546-8709-52941b7de8e0",
+      "assetId": "42688a1e-b977-472a-982a-acb397124197",
+      "x": 345,
+      "y": 578,
+      "width": 40,
+      "height": 40,
+      "opacity": 1,
+      "name": "Houten stoel",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 2,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "Eryndor",
+              "interieur",
+              "meubilair",
+              "paleis",
+              "stoel",
+              "zitmeubilair"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "chair-square-2",
+          "revision": 1,
+          "displayName": "Houten stoel",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "f51dff7b-b490-40fe-b2eb-49a307a26983",
+              "weight": 1,
+              "label": "Houten zitting, heldere nerf"
+            },
+            {
+              "id": "v02",
+              "assetId": "42688a1e-b977-472a-982a-acb397124197",
+              "weight": 1,
+              "label": "Dezelfde zitting met subtiele slijtage"
+            },
+            {
+              "id": "v03",
+              "assetId": "2fccc0db-602a-4a0c-886d-909ef4be9504",
+              "weight": 1,
+              "label": "Hetzelfde frame met sober vast zitkussen"
+            },
+            {
+              "id": "v04",
+              "assetId": "ef441f3a-5ace-43f0-af9d-0ea90e727fa0",
+              "weight": 1,
+              "label": "Hetzelfde frame met gevouwen doek op de zitting"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "143b20b2-b7b3-4950-8235-779f2e2a9087",
+      "assetId": "e20ac689-3132-4192-a214-ed9346c0c4c7",
+      "x": 550,
+      "y": 620,
+      "width": 110,
+      "height": 55,
+      "opacity": 1,
+      "name": "Schrijftafel",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 4,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "bureau",
+              "Eryndor",
+              "hout",
+              "interieur",
+              "koninklijk",
+              "Líorna",
+              "meubilair",
+              "paleis",
+              "privé"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "writing-desk-4",
+          "revision": 1,
+          "displayName": "Schrijftafel",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "346ae21b-a159-4e06-84c4-a53ae6172ec6",
+              "weight": 1,
+              "label": "Leeg schrijfoppervlak"
+            },
+            {
+              "id": "v02",
+              "assetId": "e20ac689-3132-4192-a214-ed9346c0c4c7",
+              "weight": 1,
+              "label": "Eén los vel en schrijfpen binnen het blad"
+            },
+            {
+              "id": "v03",
+              "assetId": "370d1d1e-cc93-4b22-8a6b-67209d860c41",
+              "weight": 1,
+              "label": "Gesloten folio en één vel binnen het blad"
+            },
+            {
+              "id": "v04",
+              "assetId": "4070ad74-e06d-46e3-8d55-bea3258246f5",
+              "weight": 1,
+              "label": "Kleine stapel papieren met inktpot binnen het blad"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    {
+      "id": "51f72921-e861-4b22-b0cf-8accbd8ed649",
+      "assetId": "42688a1e-b977-472a-982a-acb397124197",
+      "x": 585,
+      "y": 578,
+      "width": 40,
+      "height": 40,
+      "opacity": 1,
+      "name": "Houten stoel",
+      "family": {
+        "family": {
+          "metadata": {
+            "defaultSize": {
+              "mode": "world",
+              "unit": "ft",
+              "lockAspectRatio": true,
+              "width": 2,
+              "height": 2
+            },
+            "tags": [
+              "algemeen",
+              "battlemap",
+              "Eryndor",
+              "interieur",
+              "meubilair",
+              "paleis",
+              "stoel",
+              "zitmeubilair"
+            ],
+            "applicableMapTypes": [
+              "battlemap"
+            ],
+            "semanticClass": "furniture",
+            "softShadowDefault": true
+          },
+          "id": "chair-square-2",
+          "revision": 1,
+          "displayName": "Houten stoel",
+          "coverVariantId": "v01",
+          "anchor": "center",
+          "variants": [
+            {
+              "id": "v01",
+              "assetId": "f51dff7b-b490-40fe-b2eb-49a307a26983",
+              "weight": 1,
+              "label": "Houten zitting, heldere nerf"
+            },
+            {
+              "id": "v02",
+              "assetId": "42688a1e-b977-472a-982a-acb397124197",
+              "weight": 1,
+              "label": "Dezelfde zitting met subtiele slijtage"
+            },
+            {
+              "id": "v03",
+              "assetId": "2fccc0db-602a-4a0c-886d-909ef4be9504",
+              "weight": 1,
+              "label": "Hetzelfde frame met sober vast zitkussen"
+            },
+            {
+              "id": "v04",
+              "assetId": "ef441f3a-5ace-43f0-af9d-0ea90e727fa0",
+              "weight": 1,
+              "label": "Hetzelfde frame met gevouwen doek op de zitting"
+            }
+          ]
+        },
+        "variantId": "v02"
+      },
+      "kind": "stamp",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1
+    }
+  ],
+  "assets": [
+    {
+      "kind": "fillPattern",
+      "id": "87299f39-5a5e-4a92-a0c4-424dbced7679",
+      "fileName": "Paleisparket",
+      "mimeType": "image/png",
+      "width": 1254,
+      "height": 1254,
+      "hash": "f738010d35e7cb56acf0d4e5107c38c8663da3f3063e83f31c05233eee3fe30a",
+      "path": "assets/f738010d35e7cb56acf0d4e5107c38c8663da3f3063e83f31c05233eee3fe30a.png"
+    },
+    {
+      "kind": "fillPattern",
+      "id": "05557836-1174-465b-b4e4-72269375e674",
+      "fileName": "Paleisstenen vloer",
+      "mimeType": "image/png",
+      "width": 1254,
+      "height": 1254,
+      "hash": "68786e100a6a64c6f0b301c242e8f9d0d4658944ff067525f614c08edeb5f776",
+      "path": "assets/68786e100a6a64c6f0b301c242e8f9d0d4658944ff067525f614c08edeb5f776.png"
+    },
+    {
+      "kind": "fillPattern",
+      "id": "310e7f7d-1da4-4054-bc4f-3a429787c30c",
+      "fileName": "Natuurlijke houten vloer",
+      "mimeType": "image/png",
+      "width": 1254,
+      "height": 1254,
+      "hash": "7f14c0b801387ec68adb1b6cdeec6d8a0c6a63bc04160671f2b7e91249321776",
+      "path": "assets/7f14c0b801387ec68adb1b6cdeec6d8a0c6a63bc04160671f2b7e91249321776.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "e6920637-bfca-4b36-af46-0fc2cd89d3b2",
+      "fileName": "Rechte boekenkast",
+      "mimeType": "image/png",
+      "width": 960,
+      "height": 240,
+      "hash": "8a2b142d1de3d49f931ad3d0011d711ac2a292828ef939292ff378ddd2f32418",
+      "path": "assets/8a2b142d1de3d49f931ad3d0011d711ac2a292828ef939292ff378ddd2f32418.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "15e0599f-850c-4854-885e-9d054eb61a87",
+      "fileName": "Rechte boekenkast",
+      "mimeType": "image/png",
+      "width": 960,
+      "height": 240,
+      "hash": "c2e84ba09be2ec2a30873219187e07e36802db9a35909b7d32bbfdf6524196d7",
+      "path": "assets/c2e84ba09be2ec2a30873219187e07e36802db9a35909b7d32bbfdf6524196d7.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "c2f7a40e-279d-434c-837e-4f2a70c37516",
+      "fileName": "Rechte boekenkast",
+      "mimeType": "image/png",
+      "width": 960,
+      "height": 240,
+      "hash": "5c26a947588cc7ae805f8d8a1f6a886418d0a58c528ba06ca66e5f297002515f",
+      "path": "assets/5c26a947588cc7ae805f8d8a1f6a886418d0a58c528ba06ca66e5f297002515f.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "18629598-b1cd-4466-ba72-7462f9beba09",
+      "fileName": "Rechte boekenkast",
+      "mimeType": "image/png",
+      "width": 960,
+      "height": 240,
+      "hash": "3936ffbdbdf673e9f33ffd484b422e68d6db8bd90bc796e6fab67cc0cc02db9a",
+      "path": "assets/3936ffbdbdf673e9f33ffd484b422e68d6db8bd90bc796e6fab67cc0cc02db9a.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "cc9fc67d-94c1-4441-98bb-7bbc02e55845",
+      "fileName": "Rechte boekenkast",
+      "mimeType": "image/png",
+      "width": 960,
+      "height": 240,
+      "hash": "dae29e5ea6a8b0e6efddfc5ca12dc395e89ef8ac9480824381abacb1b8755ba7",
+      "path": "assets/dae29e5ea6a8b0e6efddfc5ca12dc395e89ef8ac9480824381abacb1b8755ba7.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "35efd73a-315c-456d-aeb4-4f05d579dda8",
+      "fileName": "Groot schrijfbureau",
+      "mimeType": "image/png",
+      "width": 960,
+      "height": 480,
+      "hash": "a482c38f19e037d0c97a5ee82649f3acfb13d24008b1e3f5ecfcc3ebeaa31ecf",
+      "path": "assets/a482c38f19e037d0c97a5ee82649f3acfb13d24008b1e3f5ecfcc3ebeaa31ecf.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "0667993e-ade2-4b2c-96a8-c7068fdf6e07",
+      "fileName": "Groot schrijfbureau",
+      "mimeType": "image/png",
+      "width": 960,
+      "height": 480,
+      "hash": "6540d4d370b45901e500f401dfe7b702d2385757984369d7e92c49814854bb7e",
+      "path": "assets/6540d4d370b45901e500f401dfe7b702d2385757984369d7e92c49814854bb7e.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "1ef47712-845a-4f80-9cb7-d1421f41e1dc",
+      "fileName": "Groot schrijfbureau",
+      "mimeType": "image/png",
+      "width": 960,
+      "height": 480,
+      "hash": "1eeb2a9ec7cb3892d01361a6ada41b8e58b3695997a5e862f871dd91d58ae676",
+      "path": "assets/1eeb2a9ec7cb3892d01361a6ada41b8e58b3695997a5e862f871dd91d58ae676.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "c3f7f4e2-3d8a-4c72-bf6f-aa6b295126d3",
+      "fileName": "Groot schrijfbureau",
+      "mimeType": "image/png",
+      "width": 960,
+      "height": 480,
+      "hash": "d442dc277777e399071178b1404e7b82f48ed450117db7bf5fd26ea271c3bca8",
+      "path": "assets/d442dc277777e399071178b1404e7b82f48ed450117db7bf5fd26ea271c3bca8.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "ef127b77-3ba6-436f-994a-ca946f1ff08a",
+      "fileName": "Houten bureaustoel",
+      "mimeType": "image/png",
+      "width": 400,
+      "height": 400,
+      "hash": "ef70e6a0e28b55563f6aca166b3acf4ba12a0db025f9f22d290286ec8bf0a918",
+      "path": "assets/ef70e6a0e28b55563f6aca166b3acf4ba12a0db025f9f22d290286ec8bf0a918.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "1ee8d87c-11f2-4a07-8870-d3f51a38d2a6",
+      "fileName": "Houten bureaustoel",
+      "mimeType": "image/png",
+      "width": 400,
+      "height": 400,
+      "hash": "efa41444005c344dfcafa9567486eef00b608c254bc9047f14f35f1cef3a0383",
+      "path": "assets/efa41444005c344dfcafa9567486eef00b608c254bc9047f14f35f1cef3a0383.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "d81d99f6-8582-4913-8524-81179fbdf5f3",
+      "fileName": "Houten bureaustoel",
+      "mimeType": "image/png",
+      "width": 400,
+      "height": 400,
+      "hash": "64c5bdf9cfdfc2eda2b52be30db70ed5e3646c2ead5b253359a523fac9bf6e32",
+      "path": "assets/64c5bdf9cfdfc2eda2b52be30db70ed5e3646c2ead5b253359a523fac9bf6e32.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "48b17f4c-47d9-458c-b8c2-bfe7190ef232",
+      "fileName": "Ronde bijzettafel",
+      "mimeType": "image/png",
+      "width": 1274,
+      "height": 1234,
+      "hash": "3868e57a79c54561ecc300879e5d338278875f6ac7325fbede8ee4a7700488e9",
+      "path": "assets/3868e57a79c54561ecc300879e5d338278875f6ac7325fbede8ee4a7700488e9.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "1938005c-9947-4350-b7d5-c81312d85892",
+      "fileName": "Brede fauteuil",
+      "mimeType": "image/png",
+      "width": 480,
+      "height": 480,
+      "hash": "714db32d3f23da48a34aa77a1303d896b3116a12b1ff14ac4033858ca28a6041",
+      "path": "assets/714db32d3f23da48a34aa77a1303d896b3116a12b1ff14ac4033858ca28a6041.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "8f33e406-8582-4040-92f8-44d4f0ec5234",
+      "fileName": "Brede fauteuil",
+      "mimeType": "image/png",
+      "width": 480,
+      "height": 480,
+      "hash": "4720ecf83bb9e635e3c5993ff069c637d3165798e7fa5e7ef575e571565574ef",
+      "path": "assets/4720ecf83bb9e635e3c5993ff069c637d3165798e7fa5e7ef575e571565574ef.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "a3d3afbf-493d-4bd6-9da2-f6fc4bfa3e12",
+      "fileName": "Brede fauteuil",
+      "mimeType": "image/png",
+      "width": 480,
+      "height": 480,
+      "hash": "84a6b7cf517abf4f12d290fd6b2515682309a9719258f8aa8455ec8825db7dc0",
+      "path": "assets/84a6b7cf517abf4f12d290fd6b2515682309a9719258f8aa8455ec8825db7dc0.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "346ae21b-a159-4e06-84c4-a53ae6172ec6",
+      "fileName": "Schrijftafel",
+      "mimeType": "image/png",
+      "width": 640,
+      "height": 320,
+      "hash": "3da87e87beed4834ffb97dc80ca2e54f3186ec50492ee320f5ac01bbbd340bc3",
+      "path": "assets/3da87e87beed4834ffb97dc80ca2e54f3186ec50492ee320f5ac01bbbd340bc3.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "e20ac689-3132-4192-a214-ed9346c0c4c7",
+      "fileName": "Schrijftafel",
+      "mimeType": "image/png",
+      "width": 640,
+      "height": 320,
+      "hash": "86764983dc7df8983839f02e997e19a7cc43faa706cdfd6c055b86b222a9934e",
+      "path": "assets/86764983dc7df8983839f02e997e19a7cc43faa706cdfd6c055b86b222a9934e.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "370d1d1e-cc93-4b22-8a6b-67209d860c41",
+      "fileName": "Schrijftafel",
+      "mimeType": "image/png",
+      "width": 640,
+      "height": 320,
+      "hash": "f3cfbf8ffc2e6106e3fadaa7a6570e9750b184c761ccd30b06c1e7edb20aed0f",
+      "path": "assets/f3cfbf8ffc2e6106e3fadaa7a6570e9750b184c761ccd30b06c1e7edb20aed0f.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "4070ad74-e06d-46e3-8d55-bea3258246f5",
+      "fileName": "Schrijftafel",
+      "mimeType": "image/png",
+      "width": 640,
+      "height": 320,
+      "hash": "911443bf095abcecaecb60d888a9b5d7fd2bce30f90ff460124d7452c573f192",
+      "path": "assets/911443bf095abcecaecb60d888a9b5d7fd2bce30f90ff460124d7452c573f192.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "f51dff7b-b490-40fe-b2eb-49a307a26983",
+      "fileName": "Houten stoel",
+      "mimeType": "image/png",
+      "width": 320,
+      "height": 320,
+      "hash": "517ae1881a391c258f6ad2b988e6bbe244b552a9c1517a44d3b00e0ba8ead8ac",
+      "path": "assets/517ae1881a391c258f6ad2b988e6bbe244b552a9c1517a44d3b00e0ba8ead8ac.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "42688a1e-b977-472a-982a-acb397124197",
+      "fileName": "Houten stoel",
+      "mimeType": "image/png",
+      "width": 320,
+      "height": 320,
+      "hash": "11e251be7db147ff33f2c98916f508b29de57a7eb7d37166dbc5f0f9881acc28",
+      "path": "assets/11e251be7db147ff33f2c98916f508b29de57a7eb7d37166dbc5f0f9881acc28.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "2fccc0db-602a-4a0c-886d-909ef4be9504",
+      "fileName": "Houten stoel",
+      "mimeType": "image/png",
+      "width": 320,
+      "height": 320,
+      "hash": "8bc4f54948ed9dd711b62956bba824f470f91816b3ee364d6decdb5c1e6f2f05",
+      "path": "assets/8bc4f54948ed9dd711b62956bba824f470f91816b3ee364d6decdb5c1e6f2f05.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "ef441f3a-5ace-43f0-af9d-0ea90e727fa0",
+      "fileName": "Houten stoel",
+      "mimeType": "image/png",
+      "width": 320,
+      "height": 320,
+      "hash": "acaff223e6e800d1312d2a51fdf3c31c8ef5e64b0035353310f03e6a58e89e51",
+      "path": "assets/acaff223e6e800d1312d2a51fdf3c31c8ef5e64b0035353310f03e6a58e89e51.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "742ca2fa-20c4-42c5-94e1-d239ac69c8d0",
+      "fileName": "Garderobekast",
+      "mimeType": "image/png",
+      "width": 480,
+      "height": 240,
+      "hash": "425d2bbe432c5f63dedd802fd411efb0ff5870d9ff311adace5dd8aa9965d627",
+      "path": "assets/425d2bbe432c5f63dedd802fd411efb0ff5870d9ff311adace5dd8aa9965d627.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "22b97565-4c49-49ca-bc29-a4b998790b62",
+      "fileName": "Garderobekast",
+      "mimeType": "image/png",
+      "width": 480,
+      "height": 240,
+      "hash": "54bc706cf3fa409d9750e4802af69a88ccdd27b96c3725d7add12382719abeca",
+      "path": "assets/54bc706cf3fa409d9750e4802af69a88ccdd27b96c3725d7add12382719abeca.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "4266c55d-71c5-49f2-9fc2-16c8430b19b6",
+      "fileName": "Garderobekast",
+      "mimeType": "image/png",
+      "width": 480,
+      "height": 240,
+      "hash": "dd6f75a89f244e4fea85e8c888876bb8063760540a54e276400d86e7cf667be0",
+      "path": "assets/dd6f75a89f244e4fea85e8c888876bb8063760540a54e276400d86e7cf667be0.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "568a9870-acae-4c8a-85d3-a391359c907a",
+      "fileName": "Eenpersoonsbed",
+      "mimeType": "image/png",
+      "width": 560,
+      "height": 1120,
+      "hash": "641a1eb493208462aa218760724739ea76a4070e16f473ae5ee8788cd0b2bc39",
+      "path": "assets/641a1eb493208462aa218760724739ea76a4070e16f473ae5ee8788cd0b2bc39.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "c40b01de-04e3-4db1-839d-180f7bdb0667",
+      "fileName": "Eenpersoonsbed",
+      "mimeType": "image/png",
+      "width": 560,
+      "height": 1120,
+      "hash": "7926ad2736bd496790e1cb28298cc750e64896e9333f99d654e83cdbef07e125",
+      "path": "assets/7926ad2736bd496790e1cb28298cc750e64896e9333f99d654e83cdbef07e125.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "d39b0a20-8086-47d8-a552-948e4a896c27",
+      "fileName": "Eenpersoonsbed",
+      "mimeType": "image/png",
+      "width": 560,
+      "height": 1120,
+      "hash": "43a11756fe3e8c8834e1991e86a804db08480143767f8524c1fbea4ec5a3bce0",
+      "path": "assets/43a11756fe3e8c8834e1991e86a804db08480143767f8524c1fbea4ec5a3bce0.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "1516b384-a90d-43a0-889a-b12bbd7fd7af",
+      "fileName": "Ronde plantenbak",
+      "mimeType": "image/png",
+      "width": 320,
+      "height": 320,
+      "hash": "a6111a3d2f6b260de3b4131c290c0b923f76a68bb430500840bb0e5f012fff2b",
+      "path": "assets/a6111a3d2f6b260de3b4131c290c0b923f76a68bb430500840bb0e5f012fff2b.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "c5b0ac1c-0756-4a3f-98d9-95a702fcb1ab",
+      "fileName": "Ronde plantenbak",
+      "mimeType": "image/png",
+      "width": 320,
+      "height": 320,
+      "hash": "be86f6b1e7f6517acc9e4997960871c3a6dd0e7105f93240ac55431d063365d0",
+      "path": "assets/be86f6b1e7f6517acc9e4997960871c3a6dd0e7105f93240ac55431d063365d0.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "d5b33b1d-b312-427a-a370-1578f8191d7c",
+      "fileName": "Ronde plantenbak",
+      "mimeType": "image/png",
+      "width": 320,
+      "height": 320,
+      "hash": "d7bedcab8fb8e0a4f0da6e8e34af7af94baf779faecaaf275a7241e7dc57229b",
+      "path": "assets/d7bedcab8fb8e0a4f0da6e8e34af7af94baf779faecaaf275a7241e7dc57229b.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "40c847aa-0ef8-482b-9daf-febdfd041968",
+      "fileName": "Ronde plantenbak",
+      "mimeType": "image/png",
+      "width": 320,
+      "height": 320,
+      "hash": "be8512bc901febec0f216a7a69deac3af2154c30b779af1ab9c98c04881d7ee7",
+      "path": "assets/be8512bc901febec0f216a7a69deac3af2154c30b779af1ab9c98c04881d7ee7.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "4d7f4277-ef56-46e1-b407-530c6916a8a1",
+      "fileName": "Open boek",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "hash": "92a924f826d77f42e1478ec30dd9bf4c3378ff5be385f5d6633b6caaa2b3bb09",
+      "path": "assets/92a924f826d77f42e1478ec30dd9bf4c3378ff5be385f5d6633b6caaa2b3bb09.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "64ed2828-0479-4a9d-bb92-fca1557249f5",
+      "fileName": "Gesloten folio",
+      "mimeType": "image/png",
+      "width": 160,
+      "height": 120,
+      "hash": "89bd7e3ad05c8664496a55e6c9f7835efbcd0906dafbb04fa51fb5b04e837f0e",
+      "path": "assets/89bd7e3ad05c8664496a55e6c9f7835efbcd0906dafbb04fa51fb5b04e837f0e.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "61283729-800c-4ee4-95c2-17170b48e235",
+      "fileName": "Gesloten folio",
+      "mimeType": "image/png",
+      "width": 160,
+      "height": 120,
+      "hash": "cbbe7c827f6c49ff72fdb04ce56ef443931fdcd8eb7b26f927d20e8c8c2d5b2f",
+      "path": "assets/cbbe7c827f6c49ff72fdb04ce56ef443931fdcd8eb7b26f927d20e8c8c2d5b2f.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "581085e6-4d7f-4f46-89eb-ed5cadee4e02",
+      "fileName": "Gesloten folio",
+      "mimeType": "image/png",
+      "width": 160,
+      "height": 120,
+      "hash": "20955f732f324b1a1bfadc1c6f9f3664bebdab7ef99018faf45156d0f1488310",
+      "path": "assets/20955f732f324b1a1bfadc1c6f9f3664bebdab7ef99018faf45156d0f1488310.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "a7628247-9dda-49bd-bf25-51e5fb184681",
+      "fileName": "Verzegelde brieven",
+      "mimeType": "image/png",
+      "width": 240,
+      "height": 160,
+      "hash": "f4a9da6b30c8308ccfcd059bc31edc45bdb30f34c125a34473dff28875c9cc1a",
+      "path": "assets/f4a9da6b30c8308ccfcd059bc31edc45bdb30f34c125a34473dff28875c9cc1a.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "0c87e585-4621-4e1f-aaa4-3bb959f84e57",
+      "fileName": "Verzegelde brieven",
+      "mimeType": "image/png",
+      "width": 240,
+      "height": 160,
+      "hash": "69ed51ee7e415c48443d20d886497e530035816fa2150f09d1f5788c0c50509f",
+      "path": "assets/69ed51ee7e415c48443d20d886497e530035816fa2150f09d1f5788c0c50509f.png"
+    },
+    {
+      "kind": "stamp",
+      "id": "76e78350-d9fc-491c-9594-409f7ad2ff59",
+      "fileName": "Verzegelde brieven",
+      "mimeType": "image/png",
+      "width": 240,
+      "height": 160,
+      "hash": "f5ac44bb24e9a710ef0b1315245fc9cd7b2b61919668501b0ed1093d363cc644",
+      "path": "assets/f5ac44bb24e9a710ef0b1315245fc9cd7b2b61919668501b0ed1093d363cc644.png"
+    }
+  ],
+  "objectGroups": [],
+  "layerTree": {
+    "roots": [
+      "43acf48e-9bab-4361-9c76-5ae3adb99531",
+      "09e87427-8c8d-4446-95da-9e45d92cc5a2",
+      "d0f5e666-f268-4989-b1df-33c0fa1ac14c",
+      "e3a1e082-f6eb-460d-9c74-8b6b43898b6c"
+    ],
+    "groups": []
+  }
+}

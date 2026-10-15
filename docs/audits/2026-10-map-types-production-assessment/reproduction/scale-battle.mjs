@@ -1,0 +1,5 @@
+import fs from 'node:fs/promises';import {unzipSync,zipSync,strToU8,strFromU8} from 'fflate';import {createServer} from 'vite';
+const root='docs/audits/2026-10-map-types-production-assessment/battle-map',files=unzipSync(await fs.readFile(root+'/example.mapweaver')),d=JSON.parse(strFromU8(files['project.json']));
+// Author the game scale to fit this scene: 100px = 5ft, so room/door/furniture proportions remain plausible.
+d.map.grid.cellSize=100;for(const o of d.objects)if(o.wall)o.wall.pixelsPerUnit=20;
+const s=await createServer({configFile:false,optimizeDeps:{noDiscovery:true,include:[]},server:{middlewareMode:true,watch:null},appType:'custom'});try{const {parseProject}=await s.ssrLoadModule('/src/projects/format.ts');const p=parseProject(d);files['project.json']=strToU8(JSON.stringify(p));await fs.writeFile(root+'/example.mapweaver',zipSync(files,{level:6}));await fs.writeFile(root+'/project.json',JSON.stringify(p,null,2));console.log('Battle map: 70×50ft, 100px/5ft, two 3–3.25ft doorways')}finally{await s.close()}

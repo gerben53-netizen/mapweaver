@@ -1,0 +1,58 @@
+[
+  {
+    "key": "world-map",
+    "id": "c1b1b3e3-9876-4937-ac47-4348b8bd7d8d",
+    "name": "Elyra — The Sundering Seas",
+    "mapType": "world-map",
+    "width": 1800,
+    "height": 1200,
+    "objects": 277,
+    "layers": 11,
+    "assets": 12,
+    "stamps": 208,
+    "areas": 39,
+    "paths": 20
+  },
+  {
+    "key": "regional-map",
+    "id": "94d737cc-93b5-437f-ac41-9c5b113438aa",
+    "name": "Varen Coast — Roads of the Amber March",
+    "mapType": "regional-map",
+    "width": 1800,
+    "height": 1200,
+    "objects": 197,
+    "layers": 9,
+    "assets": 6,
+    "stamps": 99,
+    "areas": 65,
+    "paths": 23
+  },
+  {
+    "key": "city-map",
+    "id": "91e2222c-7d8b-4a2a-a9c4-47fafb57da38",
+    "name": "Brackenford — Walled River Town",
+    "mapType": "regional-map",
+    "width": 1600,
+    "height": 1100,
+    "objects": 103,
+    "layers": 5,
+    "assets": 0,
+    "stamps": 0,
+    "areas": 48,
+    "paths": 47
+  },
+  {
+    "key": "battle-map",
+    "id": "eb3ad5c4-7d94-4772-81f9-3e62feabc733",
+    "name": "The Amber Archive — Night Watch",
+    "mapType": "battlemap",
+    "width": 1400,
+    "height": 1000,
+    "objects": 42,
+    "layers": 4,
+    "assets": 44,
+    "stamps": 30,
+    "areas": 5,
+    "paths": 5
+  }
+]

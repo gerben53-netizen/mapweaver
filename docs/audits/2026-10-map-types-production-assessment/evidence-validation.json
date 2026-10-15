@@ -1,0 +1,73 @@
+{
+  "rows": [
+    {
+      "key": "world-map",
+      "mapId": "c1b1b3e3-9876-4937-ac47-4348b8bd7d8d",
+      "objects": 277,
+      "stamps": 208,
+      "width": 1800,
+      "height": 1200,
+      "nativeUiEqualsPipeline": true,
+      "archiveRoundtripIdentical": true,
+      "sha256": "2f072769cea807d7851e0952f0a77f0c850d0877445bc89b25b8d8657b784752",
+      "options": {
+        "scale": 1,
+        "includeGrid": false,
+        "includeScaleBar": true,
+        "transparent": false
+      }
+    },
+    {
+      "key": "regional-map",
+      "mapId": "94d737cc-93b5-437f-ac41-9c5b113438aa",
+      "objects": 197,
+      "stamps": 99,
+      "width": 1800,
+      "height": 1200,
+      "nativeUiEqualsPipeline": true,
+      "archiveRoundtripIdentical": true,
+      "sha256": "be25bf768a275f48b2749d67c2ff2bd1249d7eb3f50a889892f2052e2797ba24",
+      "options": {
+        "scale": 1,
+        "includeGrid": false,
+        "includeScaleBar": true,
+        "transparent": false
+      }
+    },
+    {
+      "key": "city-map",
+      "mapId": "91e2222c-7d8b-4a2a-a9c4-47fafb57da38",
+      "objects": 103,
+      "stamps": 0,
+      "width": 1600,
+      "height": 1100,
+      "nativeUiEqualsPipeline": true,
+      "archiveRoundtripIdentical": true,
+      "sha256": "55d9a24df21196a681812873b49043ac26bb0f7a73663f22d8510f69e72c38fe",
+      "options": {
+        "scale": 1,
+        "includeGrid": false,
+        "includeScaleBar": true,
+        "transparent": false
+      }
+    },
+    {
+      "key": "battle-map",
+      "mapId": "eb3ad5c4-7d94-4772-81f9-3e62feabc733",
+      "objects": 42,
+      "stamps": 30,
+      "width": 1400,
+      "height": 1000,
+      "nativeUiEqualsPipeline": false,
+      "archiveRoundtripIdentical": true,
+      "sha256": "c47d673572ba42b042c9f6320fa1b848e5015fa696dc2b2dfbaae898decf2438",
+      "options": {
+        "scale": 1,
+        "includeGrid": false,
+        "includeScaleBar": false,
+        "transparent": false
+      }
+    }
+  ],
+  "primaryUnchanged": true
+}

@@ -1,0 +1,4963 @@
+{
+  "formatVersion": 12,
+  "id": "91e2222c-7d8b-4a2a-a9c4-47fafb57da38",
+  "name": "Brackenford — Walled River Town",
+  "createdAt": "2026-10-15T10:00:00.000Z",
+  "modifiedAt": "2026-10-15T10:00:00.000Z",
+  "map": {
+    "campfireRevision": 1,
+    "mapType": "regional-map",
+    "geography": {
+      "widthKm": 2.4,
+      "unit": "km",
+      "northDegrees": 0,
+      "projection": "none",
+      "origin": null,
+      "ruler": true,
+      "scaleBar": true,
+      "exportScaleBar": true,
+      "graticule": false
+    },
+    "width": 1600,
+    "height": 1100,
+    "backgroundColor": "#798761",
+    "grid": {
+      "visible": false,
+      "snapEnabled": false,
+      "cellSize": 50,
+      "offsetX": 0,
+      "offsetY": 0,
+      "color": "#58645c",
+      "opacity": 0.35,
+      "renderAboveObjects": false,
+      "physicalScale": {
+        "distancePerCell": 5,
+        "unit": "ft"
+      }
+    },
+    "background": null
+  },
+  "layers": [
+    {
+      "id": "ebe2f5d6-c61e-49e4-97e2-53665d894f82",
+      "name": "Names and orientation",
+      "visible": true,
+      "locked": false,
+      "objectIds": [
+        "b4d143c5-4d72-4c18-8536-d36c8b1684d7",
+        "5eec2164-ced6-4d84-b751-d4c72cf9f131",
+        "4a321923-cb30-42dc-a212-e3042f90b6a5",
+        "3b188c01-bc95-4445-b868-d8dcbbd4c436",
+        "b2566cd4-ec8b-4c2d-807f-09cbc3b685a6",
+        "6b010485-8a5c-4c37-b9a1-b8e1a28a0e8e",
+        "89aea6cc-1310-4c42-b744-9febf459b16a",
+        "90d9f881-04b9-4fc2-843a-7e041a144795"
+      ]
+    },
+    {
+      "id": "1379adcf-5c3e-49a2-bb2c-950dbe7a0e40",
+      "name": "Fortifications",
+      "visible": true,
+      "locked": false,
+      "objectIds": [
+        "20f55840-9b06-48b8-b66e-1c744649ba99",
+        "ea934eb9-c0b0-4a4c-b53a-787cf23a678b",
+        "81431af4-3c37-4e37-a93a-b5bf1e453f18",
+        "43bc9817-5646-45c7-9ec5-df44e25d2b83",
+        "a93c1c47-482a-4511-aec5-3365cff9eba2",
+        "7d59e1d7-7710-4c4a-91b0-365bcd798469",
+        "ae5dd1b7-2d88-465a-8dc4-d7c65bc23a6c"
+      ]
+    },
+    {
+      "id": "d8859b72-54de-4bf0-9925-377d420c4ef7",
+      "name": "Buildings — manually authored footprints",
+      "visible": true,
+      "locked": false,
+      "objectIds": [
+        "645ee37d-c190-444f-b611-add99f70d120",
+        "c588262a-c50e-490c-9963-841d5181abfe",
+        "c8065ac0-e22e-4bef-b8af-92bac7ba58eb",
+        "2266c59e-d473-4959-9fcb-d546e9d3998a",
+        "31b2552d-9c26-4d89-b906-3b4a8b05c1c2",
+        "e93d1eaa-f28c-484f-b953-26e04be59909",
+        "d6b108f6-39eb-489b-8427-2c5676bd2ec0",
+        "e1e1430a-4f6c-4c93-9426-e32ba7e5e045",
+        "0586dcc7-ec1f-4c7d-b70f-4dd920959bef",
+        "22f611b7-7939-42ad-b452-67d247805c59",
+        "5abae112-83a1-47df-bce1-3ac0e5066c1a",
+        "2aa90689-c8ab-4260-a91c-6a199099162c",
+        "50416bef-2262-4186-a1ed-f5724cd9f25d",
+        "9af42fc1-caca-4bc9-b5f8-545f490660f8",
+        "6408ca8d-b3ec-4b68-aefa-367a3aeb3a2f",
+        "3ee6f11a-94a3-47d0-bcea-cc317ed3618f",
+        "41be1ebf-aaed-42df-8bad-7daca8bde627",
+        "bddcb155-8353-47a1-8544-5ee09e6af39e",
+        "b9de365a-bcc0-4760-96a5-fa975ce2480c",
+        "79334ac2-033b-4838-a58b-42ea6fe49391",
+        "8cf46341-d9d7-41ff-a72c-237f39e17e0b",
+        "69f86629-8c6a-4280-9ba8-3fbef7f446f4",
+        "e9beaee6-10fe-4be5-b484-02ec7b9bb35c",
+        "62463d34-4652-458f-9f6d-f435ea7d4e2d",
+        "e8af71fc-5d0c-4685-af54-e6c15b610d8a",
+        "27d93474-0172-4f12-8fda-ed3e394f5be5",
+        "622bbf4d-e517-4812-aece-8c4115ea0449",
+        "16689817-9d49-4884-8b9f-45223b55a38f",
+        "3748dacf-c88e-44e0-8c36-800ea172fac3",
+        "2aa4df2d-91f9-42b2-bc41-5009e0a4c051",
+        "61174923-e2ec-422a-a190-a55f5d2c7771",
+        "0cc1e8b3-69ab-4ed6-9a9d-c893d06a9be8",
+        "2197fa5d-f7ac-40be-95c6-cee168ad55a2",
+        "eb4b43fe-8606-45ea-899f-432cd5b5439f",
+        "7234d080-6a38-4946-ae43-d08d2d26fb72",
+        "6d561b77-9e90-4a87-926c-3f71bb5665ae",
+        "04390a17-ee7f-44d1-b078-64cecec6620c",
+        "ba6e59a2-a463-4b05-9d16-fca47c356055",
+        "398eb470-a40f-432e-b2f4-a862973ab9a0",
+        "576215b8-68b9-4c59-a3a1-039d48efc9e2",
+        "484411d1-2f9d-4126-b27c-f9fd17e29e62",
+        "1cb04bdc-9d6a-4c09-8cf6-eb12419034cb",
+        "5590c5bf-b797-4b1a-bcef-6657b947fc29",
+        "71d280ac-5d7e-4750-84b8-4b8c27ec83b9",
+        "ec7bbbaf-c588-4e40-8c7b-3f6ae007a3a4",
+        "d35523a7-ebf4-46eb-a48f-b5c891886e30",
+        "83511286-b142-409b-96d6-d49997d5c532",
+        "dc2b3cd3-00f8-464a-be4e-1444d1d9b4a2",
+        "05363640-3209-4b9e-baea-fd3a75da1b07",
+        "e3c98702-95f9-4732-a5eb-22f2a7391f39",
+        "dfd0d749-bd9e-485c-891c-a9b5bbc27ecd",
+        "ca035743-3ce9-4b13-a0d6-8fab53839b2d",
+        "2aa64a4a-9241-4ef6-94e0-53850ef6c07f",
+        "00ad6b1a-a4e3-4577-a448-78ea8452d89c",
+        "99b72758-9103-46e1-bfac-fae2bd6d6a36",
+        "1a7f1222-0e66-486c-8b6f-2724b9626d60",
+        "293bf60b-0ba9-4a12-9521-fb8fa5ce5a29",
+        "fe01450d-c0c0-48da-91ab-e601a75b404f",
+        "7ad55ba1-301e-4c20-8bda-4b0455fe53e4",
+        "ce1255e5-4a50-4acc-b261-ba98f28f4381",
+        "85447819-2c97-4312-84b4-78b01e1cfde5",
+        "cb1c907d-44d9-46ac-8eff-6249abc6d877",
+        "a9be83fc-27ec-46f1-985c-bd06745de755",
+        "abb984f7-35f0-46dc-86df-284a8349cce3",
+        "0d574e6f-6639-4572-b7dd-14edff8ae873",
+        "62a27885-940c-4d6a-ab73-22111301446f",
+        "72560f58-1fd2-40b0-9ce9-eb942c0cc1a7",
+        "aa94d9a4-e47b-4719-9f83-d34af21f241f",
+        "d68f13d2-49a9-4c9b-a821-c9634fe0c7aa",
+        "1729c255-0bfb-4773-b6e9-bd2441e03ddf",
+        "ff2448c0-2874-4d28-8073-4dc799ea3bed",
+        "25757fc1-0ace-49eb-be5e-209a3949a9a9",
+        "09412fb7-98f9-48cb-8cc7-27c98ca0fd73",
+        "9997aee9-8c7b-4718-994e-331e4a80d776",
+        "e0b12fd2-8edf-4935-933b-ba8a326c6912"
+      ]
+    },
+    {
+      "id": "e8aacd64-b1e8-4950-9452-14195c0e972b",
+      "name": "Streets and plazas",
+      "visible": true,
+      "locked": false,
+      "objectIds": [
+        "1ffaca42-993a-414b-a860-8db5d4e6813c",
+        "2383ce5d-6638-4063-9cd0-9daafe08d7f2",
+        "a4be98b7-b3c0-4be5-afbc-6d0af60d8b9e",
+        "5e55fa3e-6e24-46ef-8793-fd42bc9aa640",
+        "d15eada6-5a82-41a4-8563-eb7f2ea5e039",
+        "0bf51a34-27e8-4c14-bf41-0d69be9c8da3",
+        "f79fb64a-0894-40f0-b376-5d4fbc9c80e2",
+        "5cd74577-97c7-4643-a566-2cd8c4b510c2",
+        "4c3de0be-f5ee-4deb-9533-812c5bbca88e",
+        "cf83155d-aaf1-4162-9205-4132a07876e8"
+      ]
+    },
+    {
+      "id": "2fb1cbdc-5285-41ae-aaf9-720d599ea615",
+      "name": "Landscape",
+      "visible": true,
+      "locked": false,
+      "objectIds": [
+        "cc2a7470-7f40-4c6b-bba5-a692cdce4711",
+        "0479b38b-df31-456b-9155-c99487632c32",
+        "cab996db-6fea-47a8-99bb-1758d5de530d"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "kind": "area",
+      "id": "cc2a7470-7f40-4c6b-bba5-a692cdce4711",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 100,
+                "y": 50
+              },
+              {
+                "x": 1450,
+                "y": 50
+              },
+              {
+                "x": 1520,
+                "y": 950
+              },
+              {
+                "x": 100,
+                "y": 1020
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 100,
+      "y": 50,
+      "width": 1420,
+      "height": 970,
+      "fill": {
+        "kind": "solid",
+        "color": "#8d956d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 100,
+        "y": 50,
+        "width": 1420,
+        "height": 970
+      }
+    },
+    {
+      "kind": "area",
+      "id": "0479b38b-df31-456b-9155-c99487632c32",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 200,
+                "y": 0
+              },
+              {
+                "x": 350,
+                "y": 0
+              },
+              {
+                "x": 500,
+                "y": 290
+              },
+              {
+                "x": 650,
+                "y": 470
+              },
+              {
+                "x": 830,
+                "y": 660
+              },
+              {
+                "x": 920,
+                "y": 1100
+              },
+              {
+                "x": 730,
+                "y": 1100
+              },
+              {
+                "x": 690,
+                "y": 820
+              },
+              {
+                "x": 510,
+                "y": 600
+              },
+              {
+                "x": 350,
+                "y": 390
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 200,
+      "y": 0,
+      "width": 720,
+      "height": 1100,
+      "fill": {
+        "kind": "solid",
+        "color": "#587e89"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 200,
+        "y": 0,
+        "width": 720,
+        "height": 1100
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "cab996db-6fea-47a8-99bb-1758d5de530d",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 260,
+          "y": 0,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 410,
+          "y": 330,
+          "mode": "corner"
+        },
+        {
+          "id": "node-2",
+          "x": 570,
+          "y": 530,
+          "mode": "corner"
+        },
+        {
+          "id": "node-3",
+          "x": 755,
+          "y": 730,
+          "mode": "corner"
+        },
+        {
+          "id": "node-4",
+          "x": 825,
+          "y": 1100,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 7,
+      "stroke": {
+        "kind": "solid",
+        "color": "#9dbbb1"
+      },
+      "x": 255.05025253169416,
+      "y": -4.949747468305833,
+      "width": 574.8994949366116,
+      "height": 1109.8994949366117
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "1ffaca42-993a-414b-a860-8db5d4e6813c",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 330,
+          "y": 260,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 650,
+          "y": 300,
+          "mode": "corner"
+        },
+        {
+          "id": "node-2",
+          "x": 920,
+          "y": 320,
+          "mode": "corner"
+        },
+        {
+          "id": "node-3",
+          "x": 1300,
+          "y": 270,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 26,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c7b78b"
+      },
+      "x": 311.6152236891498,
+      "y": 241.61522368914976,
+      "width": 1006.7695526217004,
+      "height": 96.76955262170048
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "2383ce5d-6638-4063-9cd0-9daafe08d7f2",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 400,
+          "y": 490,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 700,
+          "y": 510,
+          "mode": "corner"
+        },
+        {
+          "id": "node-2",
+          "x": 1050,
+          "y": 510,
+          "mode": "corner"
+        },
+        {
+          "id": "node-3",
+          "x": 1310,
+          "y": 540,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 26,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c7b78b"
+      },
+      "x": 381.6152236891498,
+      "y": 471.6152236891498,
+      "width": 946.7695526217004,
+      "height": 86.76955262170048
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "a4be98b7-b3c0-4be5-afbc-6d0af60d8b9e",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 760,
+          "y": 800,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1050,
+          "y": 820,
+          "mode": "corner"
+        },
+        {
+          "id": "node-2",
+          "x": 1340,
+          "y": 820,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 26,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c7b78b"
+      },
+      "x": 741.6152236891497,
+      "y": 781.6152236891497,
+      "width": 616.7695526217004,
+      "height": 56.76955262170048
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "5e55fa3e-6e24-46ef-8793-fd42bc9aa640",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 700,
+          "y": 170,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 750,
+          "y": 420,
+          "mode": "corner"
+        },
+        {
+          "id": "node-2",
+          "x": 850,
+          "y": 700,
+          "mode": "corner"
+        },
+        {
+          "id": "node-3",
+          "x": 950,
+          "y": 930,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 26,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c7b78b"
+      },
+      "x": 681.6152236891497,
+      "y": 151.61522368914976,
+      "width": 286.7695526217005,
+      "height": 796.7695526217004
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "d15eada6-5a82-41a4-8563-eb7f2ea5e039",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1120,
+          "y": 180,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1110,
+          "y": 490,
+          "mode": "corner"
+        },
+        {
+          "id": "node-2",
+          "x": 1170,
+          "y": 810,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 26,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c7b78b"
+      },
+      "x": 1091.6152236891498,
+      "y": 161.61522368914976,
+      "width": 96.76955262170048,
+      "height": 666.7695526217004
+    },
+    {
+      "kind": "area",
+      "id": "0bf51a34-27e8-4c14-bf41-0d69be9c8da3",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 875,
+                "y": 405
+              },
+              {
+                "x": 1085,
+                "y": 405
+              },
+              {
+                "x": 1085,
+                "y": 605
+              },
+              {
+                "x": 875,
+                "y": 605
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 875,
+      "y": 405,
+      "width": 210,
+      "height": 200,
+      "fill": {
+        "kind": "solid",
+        "color": "#cbbb95"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 875,
+        "y": 405,
+        "width": 210,
+        "height": 200
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "f79fb64a-0894-40f0-b376-5d4fbc9c80e2",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 510,
+          "y": 440,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 640,
+          "y": 550,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 43,
+      "stroke": {
+        "kind": "solid",
+        "color": "#776b53"
+      },
+      "x": 479.59440840897844,
+      "y": 409.59440840897844,
+      "width": 190.8111831820431,
+      "height": 170.8111831820431
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "5cd74577-97c7-4643-a566-2cd8c4b510c2",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 510,
+          "y": 440,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 640,
+          "y": 550,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 31,
+      "stroke": {
+        "kind": "solid",
+        "color": "#d0c09c"
+      },
+      "x": 488.079689783217,
+      "y": 418.079689783217,
+      "width": 173.84062043356596,
+      "height": 153.84062043356596
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "4c3de0be-f5ee-4deb-9533-812c5bbca88e",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 690,
+          "y": 700,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 850,
+          "y": 810,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 43,
+      "stroke": {
+        "kind": "solid",
+        "color": "#776b53"
+      },
+      "x": 659.5944084089784,
+      "y": 669.5944084089784,
+      "width": 220.8111831820431,
+      "height": 170.8111831820431
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "cf83155d-aaf1-4162-9205-4132a07876e8",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 690,
+          "y": 700,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 850,
+          "y": 810,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 31,
+      "stroke": {
+        "kind": "solid",
+        "color": "#d0c09c"
+      },
+      "x": 668.0796897832171,
+      "y": 678.0796897832171,
+      "width": 203.84062043356596,
+      "height": 153.84062043356596
+    },
+    {
+      "kind": "area",
+      "id": "645ee37d-c190-444f-b611-add99f70d120",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 620,
+                "y": 185
+              },
+              {
+                "x": 666,
+                "y": 185
+              },
+              {
+                "x": 666,
+                "y": 227
+              },
+              {
+                "x": 620,
+                "y": 227
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 620,
+      "y": 185,
+      "width": 46,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#927051"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 620,
+        "y": 185,
+        "width": 46,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "c588262a-c50e-490c-9963-841d5181abfe",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 624,
+          "y": 207,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 662,
+          "y": 207,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 622.5857864376269,
+      "y": 205.5857864376269,
+      "width": 40.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "c8065ac0-e22e-4bef-b8af-92bac7ba58eb",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 694,
+                "y": 185
+              },
+              {
+                "x": 746,
+                "y": 185
+              },
+              {
+                "x": 746,
+                "y": 227
+              },
+              {
+                "x": 694,
+                "y": 227
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 694,
+      "y": 185,
+      "width": 52,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 694,
+        "y": 185,
+        "width": 52,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "2266c59e-d473-4959-9fcb-d546e9d3998a",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 698,
+          "y": 207,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 742,
+          "y": 207,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 696.5857864376269,
+      "y": 205.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "31b2552d-9c26-4d89-b906-3b4a8b05c1c2",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 768,
+                "y": 185
+              },
+              {
+                "x": 826,
+                "y": 185
+              },
+              {
+                "x": 826,
+                "y": 227
+              },
+              {
+                "x": 768,
+                "y": 227
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 768,
+      "y": 185,
+      "width": 58,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 768,
+        "y": 185,
+        "width": 58,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "e93d1eaa-f28c-484f-b953-26e04be59909",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 772,
+          "y": 207,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 822,
+          "y": 207,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 770.5857864376269,
+      "y": 205.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "d6b108f6-39eb-489b-8427-2c5676bd2ec0",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 842,
+                "y": 185
+              },
+              {
+                "x": 888,
+                "y": 185
+              },
+              {
+                "x": 888,
+                "y": 227
+              },
+              {
+                "x": 842,
+                "y": 227
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 842,
+      "y": 185,
+      "width": 46,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#927051"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 842,
+        "y": 185,
+        "width": 46,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "e1e1430a-4f6c-4c93-9426-e32ba7e5e045",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 846,
+          "y": 207,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 884,
+          "y": 207,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 844.5857864376269,
+      "y": 205.5857864376269,
+      "width": 40.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "0586dcc7-ec1f-4c7d-b70f-4dd920959bef",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 916,
+                "y": 185
+              },
+              {
+                "x": 968,
+                "y": 185
+              },
+              {
+                "x": 968,
+                "y": 227
+              },
+              {
+                "x": 916,
+                "y": 227
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 916,
+      "y": 185,
+      "width": 52,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 916,
+        "y": 185,
+        "width": 52,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "22f611b7-7939-42ad-b452-67d247805c59",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 920,
+          "y": 207,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 964,
+          "y": 207,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 918.5857864376269,
+      "y": 205.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "5abae112-83a1-47df-bce1-3ac0e5066c1a",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 990,
+                "y": 185
+              },
+              {
+                "x": 1048,
+                "y": 185
+              },
+              {
+                "x": 1048,
+                "y": 227
+              },
+              {
+                "x": 990,
+                "y": 227
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 990,
+      "y": 185,
+      "width": 58,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 990,
+        "y": 185,
+        "width": 58,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "2aa90689-c8ab-4260-a91c-6a199099162c",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 994,
+          "y": 207,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1044,
+          "y": 207,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 992.5857864376269,
+      "y": 205.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "50416bef-2262-4186-a1ed-f5724cd9f25d",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1064,
+                "y": 185
+              },
+              {
+                "x": 1110,
+                "y": 185
+              },
+              {
+                "x": 1110,
+                "y": 227
+              },
+              {
+                "x": 1064,
+                "y": 227
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1064,
+      "y": 185,
+      "width": 46,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#927051"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1064,
+        "y": 185,
+        "width": 46,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "9af42fc1-caca-4bc9-b5f8-545f490660f8",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1068,
+          "y": 207,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1106,
+          "y": 207,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1066.585786437627,
+      "y": 205.5857864376269,
+      "width": 40.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "6408ca8d-b3ec-4b68-aefa-367a3aeb3a2f",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1138,
+                "y": 185
+              },
+              {
+                "x": 1190,
+                "y": 185
+              },
+              {
+                "x": 1190,
+                "y": 227
+              },
+              {
+                "x": 1138,
+                "y": 227
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1138,
+      "y": 185,
+      "width": 52,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1138,
+        "y": 185,
+        "width": 52,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "3ee6f11a-94a3-47d0-bcea-cc317ed3618f",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1142,
+          "y": 207,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1186,
+          "y": 207,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1140.585786437627,
+      "y": 205.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "41be1ebf-aaed-42df-8bad-7daca8bde627",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1212,
+                "y": 185
+              },
+              {
+                "x": 1270,
+                "y": 185
+              },
+              {
+                "x": 1270,
+                "y": 227
+              },
+              {
+                "x": 1212,
+                "y": 227
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1212,
+      "y": 185,
+      "width": 58,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1212,
+        "y": 185,
+        "width": 58,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "bddcb155-8353-47a1-8544-5ee09e6af39e",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1216,
+          "y": 207,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1266,
+          "y": 207,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1214.585786437627,
+      "y": 205.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "b9de365a-bcc0-4760-96a5-fa975ce2480c",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 634,
+                "y": 321
+              },
+              {
+                "x": 680,
+                "y": 321
+              },
+              {
+                "x": 680,
+                "y": 376
+              },
+              {
+                "x": 634,
+                "y": 376
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 634,
+      "y": 321,
+      "width": 46,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#927051"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 634,
+        "y": 321,
+        "width": 46,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "79334ac2-033b-4838-a58b-42ea6fe49391",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 638,
+          "y": 343,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 676,
+          "y": 343,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 636.5857864376269,
+      "y": 341.5857864376269,
+      "width": 40.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "8cf46341-d9d7-41ff-a72c-237f39e17e0b",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 708,
+                "y": 321
+              },
+              {
+                "x": 760,
+                "y": 321
+              },
+              {
+                "x": 760,
+                "y": 376
+              },
+              {
+                "x": 708,
+                "y": 376
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 708,
+      "y": 321,
+      "width": 52,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 708,
+        "y": 321,
+        "width": 52,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "69f86629-8c6a-4280-9ba8-3fbef7f446f4",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 712,
+          "y": 343,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 756,
+          "y": 343,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 710.5857864376269,
+      "y": 341.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "e9beaee6-10fe-4be5-b484-02ec7b9bb35c",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 856,
+                "y": 321
+              },
+              {
+                "x": 902,
+                "y": 321
+              },
+              {
+                "x": 902,
+                "y": 376
+              },
+              {
+                "x": 856,
+                "y": 376
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 856,
+      "y": 321,
+      "width": 46,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#927051"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 856,
+        "y": 321,
+        "width": 46,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "62463d34-4652-458f-9f6d-f435ea7d4e2d",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 860,
+          "y": 343,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 898,
+          "y": 343,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 858.5857864376269,
+      "y": 341.5857864376269,
+      "width": 40.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "e8af71fc-5d0c-4685-af54-e6c15b610d8a",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 930,
+                "y": 321
+              },
+              {
+                "x": 982,
+                "y": 321
+              },
+              {
+                "x": 982,
+                "y": 376
+              },
+              {
+                "x": 930,
+                "y": 376
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 930,
+      "y": 321,
+      "width": 52,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 930,
+        "y": 321,
+        "width": 52,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "27d93474-0172-4f12-8fda-ed3e394f5be5",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 934,
+          "y": 343,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 978,
+          "y": 343,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 932.5857864376269,
+      "y": 341.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "622bbf4d-e517-4812-aece-8c4115ea0449",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1004,
+                "y": 321
+              },
+              {
+                "x": 1062,
+                "y": 321
+              },
+              {
+                "x": 1062,
+                "y": 376
+              },
+              {
+                "x": 1004,
+                "y": 376
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1004,
+      "y": 321,
+      "width": 58,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1004,
+        "y": 321,
+        "width": 58,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "16689817-9d49-4884-8b9f-45223b55a38f",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1008,
+          "y": 343,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1058,
+          "y": 343,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1006.5857864376269,
+      "y": 341.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "3748dacf-c88e-44e0-8c36-800ea172fac3",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1078,
+                "y": 321
+              },
+              {
+                "x": 1124,
+                "y": 321
+              },
+              {
+                "x": 1124,
+                "y": 376
+              },
+              {
+                "x": 1078,
+                "y": 376
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1078,
+      "y": 321,
+      "width": 46,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#927051"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1078,
+        "y": 321,
+        "width": 46,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "2aa4df2d-91f9-42b2-bc41-5009e0a4c051",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1082,
+          "y": 343,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1120,
+          "y": 343,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1080.585786437627,
+      "y": 341.5857864376269,
+      "width": 40.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "61174923-e2ec-422a-a190-a55f5d2c7771",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1152,
+                "y": 321
+              },
+              {
+                "x": 1204,
+                "y": 321
+              },
+              {
+                "x": 1204,
+                "y": 376
+              },
+              {
+                "x": 1152,
+                "y": 376
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1152,
+      "y": 321,
+      "width": 52,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1152,
+        "y": 321,
+        "width": 52,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "0cc1e8b3-69ab-4ed6-9a9d-c893d06a9be8",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1156,
+          "y": 343,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1200,
+          "y": 343,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1154.585786437627,
+      "y": 341.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "2197fa5d-f7ac-40be-95c6-cee168ad55a2",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1226,
+                "y": 321
+              },
+              {
+                "x": 1284,
+                "y": 321
+              },
+              {
+                "x": 1284,
+                "y": 376
+              },
+              {
+                "x": 1226,
+                "y": 376
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1226,
+      "y": 321,
+      "width": 58,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1226,
+        "y": 321,
+        "width": 58,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "eb4b43fe-8606-45ea-899f-432cd5b5439f",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1230,
+          "y": 343,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1280,
+          "y": 343,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1228.585786437627,
+      "y": 341.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "7234d080-6a38-4946-ae43-d08d2d26fb72",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 620,
+                "y": 457
+              },
+              {
+                "x": 666,
+                "y": 457
+              },
+              {
+                "x": 666,
+                "y": 499
+              },
+              {
+                "x": 620,
+                "y": 499
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 620,
+      "y": 457,
+      "width": 46,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#927051"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 620,
+        "y": 457,
+        "width": 46,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "6d561b77-9e90-4a87-926c-3f71bb5665ae",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 624,
+          "y": 479,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 662,
+          "y": 479,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 622.5857864376269,
+      "y": 477.5857864376269,
+      "width": 40.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "04390a17-ee7f-44d1-b078-64cecec6620c",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 694,
+                "y": 457
+              },
+              {
+                "x": 746,
+                "y": 457
+              },
+              {
+                "x": 746,
+                "y": 499
+              },
+              {
+                "x": 694,
+                "y": 499
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 694,
+      "y": 457,
+      "width": 52,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 694,
+        "y": 457,
+        "width": 52,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "ba6e59a2-a463-4b05-9d16-fca47c356055",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 698,
+          "y": 479,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 742,
+          "y": 479,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 696.5857864376269,
+      "y": 477.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "398eb470-a40f-432e-b2f4-a862973ab9a0",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 768,
+                "y": 457
+              },
+              {
+                "x": 826,
+                "y": 457
+              },
+              {
+                "x": 826,
+                "y": 499
+              },
+              {
+                "x": 768,
+                "y": 499
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 768,
+      "y": 457,
+      "width": 58,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 768,
+        "y": 457,
+        "width": 58,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "576215b8-68b9-4c59-a3a1-039d48efc9e2",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 772,
+          "y": 479,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 822,
+          "y": 479,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 770.5857864376269,
+      "y": 477.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "484411d1-2f9d-4126-b27c-f9fd17e29e62",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1138,
+                "y": 457
+              },
+              {
+                "x": 1190,
+                "y": 457
+              },
+              {
+                "x": 1190,
+                "y": 499
+              },
+              {
+                "x": 1138,
+                "y": 499
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1138,
+      "y": 457,
+      "width": 52,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1138,
+        "y": 457,
+        "width": 52,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "1cb04bdc-9d6a-4c09-8cf6-eb12419034cb",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1142,
+          "y": 479,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1186,
+          "y": 479,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1140.585786437627,
+      "y": 477.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "5590c5bf-b797-4b1a-bcef-6657b947fc29",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1212,
+                "y": 457
+              },
+              {
+                "x": 1270,
+                "y": 457
+              },
+              {
+                "x": 1270,
+                "y": 499
+              },
+              {
+                "x": 1212,
+                "y": 499
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1212,
+      "y": 457,
+      "width": 58,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1212,
+        "y": 457,
+        "width": 58,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "71d280ac-5d7e-4750-84b8-4b8c27ec83b9",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1216,
+          "y": 479,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1266,
+          "y": 479,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1214.585786437627,
+      "y": 477.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "ec7bbbaf-c588-4e40-8c7b-3f6ae007a3a4",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 634,
+                "y": 593
+              },
+              {
+                "x": 680,
+                "y": 593
+              },
+              {
+                "x": 680,
+                "y": 648
+              },
+              {
+                "x": 634,
+                "y": 648
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 634,
+      "y": 593,
+      "width": 46,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#927051"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 634,
+        "y": 593,
+        "width": 46,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "d35523a7-ebf4-46eb-a48f-b5c891886e30",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 638,
+          "y": 615,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 676,
+          "y": 615,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 636.5857864376269,
+      "y": 613.5857864376269,
+      "width": 40.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "83511286-b142-409b-96d6-d49997d5c532",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 708,
+                "y": 593
+              },
+              {
+                "x": 760,
+                "y": 593
+              },
+              {
+                "x": 760,
+                "y": 648
+              },
+              {
+                "x": 708,
+                "y": 648
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 708,
+      "y": 593,
+      "width": 52,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 708,
+        "y": 593,
+        "width": 52,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "dc2b3cd3-00f8-464a-be4e-1444d1d9b4a2",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 712,
+          "y": 615,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 756,
+          "y": 615,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 710.5857864376269,
+      "y": 613.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "05363640-3209-4b9e-baea-fd3a75da1b07",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 782,
+                "y": 593
+              },
+              {
+                "x": 840,
+                "y": 593
+              },
+              {
+                "x": 840,
+                "y": 648
+              },
+              {
+                "x": 782,
+                "y": 648
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 782,
+      "y": 593,
+      "width": 58,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 782,
+        "y": 593,
+        "width": 58,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "e3c98702-95f9-4732-a5eb-22f2a7391f39",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 786,
+          "y": 615,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 836,
+          "y": 615,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 784.5857864376269,
+      "y": 613.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "dfd0d749-bd9e-485c-891c-a9b5bbc27ecd",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1152,
+                "y": 593
+              },
+              {
+                "x": 1204,
+                "y": 593
+              },
+              {
+                "x": 1204,
+                "y": 648
+              },
+              {
+                "x": 1152,
+                "y": 648
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1152,
+      "y": 593,
+      "width": 52,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1152,
+        "y": 593,
+        "width": 52,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "ca035743-3ce9-4b13-a0d6-8fab53839b2d",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1156,
+          "y": 615,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1200,
+          "y": 615,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1154.585786437627,
+      "y": 613.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "2aa64a4a-9241-4ef6-94e0-53850ef6c07f",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1226,
+                "y": 593
+              },
+              {
+                "x": 1284,
+                "y": 593
+              },
+              {
+                "x": 1284,
+                "y": 648
+              },
+              {
+                "x": 1226,
+                "y": 648
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1226,
+      "y": 593,
+      "width": 58,
+      "height": 55,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1226,
+        "y": 593,
+        "width": 58,
+        "height": 55
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "00ad6b1a-a4e3-4577-a448-78ea8452d89c",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1230,
+          "y": 615,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1280,
+          "y": 615,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1228.585786437627,
+      "y": 613.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "99b72758-9103-46e1-bfac-fae2bd6d6a36",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 620,
+                "y": 729
+              },
+              {
+                "x": 666,
+                "y": 729
+              },
+              {
+                "x": 666,
+                "y": 771
+              },
+              {
+                "x": 620,
+                "y": 771
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 620,
+      "y": 729,
+      "width": 46,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#927051"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 620,
+        "y": 729,
+        "width": 46,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "1a7f1222-0e66-486c-8b6f-2724b9626d60",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 624,
+          "y": 751,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 662,
+          "y": 751,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 622.5857864376269,
+      "y": 749.5857864376269,
+      "width": 40.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "293bf60b-0ba9-4a12-9521-fb8fa5ce5a29",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 694,
+                "y": 729
+              },
+              {
+                "x": 746,
+                "y": 729
+              },
+              {
+                "x": 746,
+                "y": 771
+              },
+              {
+                "x": 694,
+                "y": 771
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 694,
+      "y": 729,
+      "width": 52,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 694,
+        "y": 729,
+        "width": 52,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "fe01450d-c0c0-48da-91ab-e601a75b404f",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 698,
+          "y": 751,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 742,
+          "y": 751,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 696.5857864376269,
+      "y": 749.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "7ad55ba1-301e-4c20-8bda-4b0455fe53e4",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 768,
+                "y": 729
+              },
+              {
+                "x": 826,
+                "y": 729
+              },
+              {
+                "x": 826,
+                "y": 771
+              },
+              {
+                "x": 768,
+                "y": 771
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 768,
+      "y": 729,
+      "width": 58,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 768,
+        "y": 729,
+        "width": 58,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "ce1255e5-4a50-4acc-b261-ba98f28f4381",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 772,
+          "y": 751,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 822,
+          "y": 751,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 770.5857864376269,
+      "y": 749.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "85447819-2c97-4312-84b4-78b01e1cfde5",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 842,
+                "y": 729
+              },
+              {
+                "x": 888,
+                "y": 729
+              },
+              {
+                "x": 888,
+                "y": 771
+              },
+              {
+                "x": 842,
+                "y": 771
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 842,
+      "y": 729,
+      "width": 46,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#927051"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 842,
+        "y": 729,
+        "width": 46,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "cb1c907d-44d9-46ac-8eff-6249abc6d877",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 846,
+          "y": 751,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 884,
+          "y": 751,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 844.5857864376269,
+      "y": 749.5857864376269,
+      "width": 40.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "a9be83fc-27ec-46f1-985c-bd06745de755",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 990,
+                "y": 729
+              },
+              {
+                "x": 1048,
+                "y": 729
+              },
+              {
+                "x": 1048,
+                "y": 771
+              },
+              {
+                "x": 990,
+                "y": 771
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 990,
+      "y": 729,
+      "width": 58,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 990,
+        "y": 729,
+        "width": 58,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "abb984f7-35f0-46dc-86df-284a8349cce3",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 994,
+          "y": 751,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1044,
+          "y": 751,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 992.5857864376269,
+      "y": 749.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "0d574e6f-6639-4572-b7dd-14edff8ae873",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1064,
+                "y": 729
+              },
+              {
+                "x": 1110,
+                "y": 729
+              },
+              {
+                "x": 1110,
+                "y": 771
+              },
+              {
+                "x": 1064,
+                "y": 771
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1064,
+      "y": 729,
+      "width": 46,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#927051"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1064,
+        "y": 729,
+        "width": 46,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "62a27885-940c-4d6a-ab73-22111301446f",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1068,
+          "y": 751,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1106,
+          "y": 751,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1066.585786437627,
+      "y": 749.5857864376269,
+      "width": 40.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "72560f58-1fd2-40b0-9ce9-eb942c0cc1a7",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1138,
+                "y": 729
+              },
+              {
+                "x": 1190,
+                "y": 729
+              },
+              {
+                "x": 1190,
+                "y": 771
+              },
+              {
+                "x": 1138,
+                "y": 771
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1138,
+      "y": 729,
+      "width": 52,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#a67d5b"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1138,
+        "y": 729,
+        "width": 52,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "aa94d9a4-e47b-4719-9f83-d34af21f241f",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1142,
+          "y": 751,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1186,
+          "y": 751,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1140.585786437627,
+      "y": 749.5857864376269,
+      "width": 46.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "d68f13d2-49a9-4c9b-a821-c9634fe0c7aa",
+      "name": "Building footprint",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1212,
+                "y": 729
+              },
+              {
+                "x": 1270,
+                "y": 729
+              },
+              {
+                "x": 1270,
+                "y": 771
+              },
+              {
+                "x": 1212,
+                "y": 771
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1212,
+      "y": 729,
+      "width": 58,
+      "height": 42,
+      "fill": {
+        "kind": "solid",
+        "color": "#786752"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#4b4c38",
+      "strokeOpacity": 1,
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1212,
+        "y": 729,
+        "width": 58,
+        "height": 42
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "1729c255-0bfb-4773-b6e9-bd2441e03ddf",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 1216,
+          "y": 751,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1266,
+          "y": 751,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 2,
+      "stroke": {
+        "kind": "solid",
+        "color": "#c9a27a"
+      },
+      "x": 1214.585786437627,
+      "y": 749.5857864376269,
+      "width": 52.82842712474619,
+      "height": 2.8284271247461903
+    },
+    {
+      "kind": "area",
+      "id": "ff2448c0-2874-4d28-8073-4dc799ea3bed",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1200,
+                "y": 620
+              },
+              {
+                "x": 1360,
+                "y": 620
+              },
+              {
+                "x": 1360,
+                "y": 730
+              },
+              {
+                "x": 1200,
+                "y": 730
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1200,
+      "y": 620,
+      "width": 160,
+      "height": 110,
+      "fill": {
+        "kind": "solid",
+        "color": "#a59b80"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1200,
+        "y": 620,
+        "width": 160,
+        "height": 110
+      }
+    },
+    {
+      "kind": "area",
+      "id": "25757fc1-0ace-49eb-be5e-209a3949a9a9",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1200,
+                "y": 620
+              },
+              {
+                "x": 1360,
+                "y": 620
+              },
+              {
+                "x": 1360,
+                "y": 638
+              },
+              {
+                "x": 1200,
+                "y": 638
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1200,
+      "y": 620,
+      "width": 160,
+      "height": 18,
+      "fill": {
+        "kind": "solid",
+        "color": "#d0c8a9"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1200,
+        "y": 620,
+        "width": 160,
+        "height": 18
+      }
+    },
+    {
+      "kind": "area",
+      "id": "09412fb7-98f9-48cb-8cc7-27c98ca0fd73",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1230,
+                "y": 652
+              },
+              {
+                "x": 1330,
+                "y": 652
+              },
+              {
+                "x": 1330,
+                "y": 702
+              },
+              {
+                "x": 1230,
+                "y": 702
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1230,
+      "y": 652,
+      "width": 100,
+      "height": 50,
+      "fill": {
+        "kind": "solid",
+        "color": "#6b7657"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1230,
+        "y": 652,
+        "width": 100,
+        "height": 50
+      }
+    },
+    {
+      "kind": "area",
+      "id": "9997aee9-8c7b-4718-994e-331e4a80d776",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 900,
+                "y": 420
+              },
+              {
+                "x": 1030,
+                "y": 420
+              },
+              {
+                "x": 1030,
+                "y": 510
+              },
+              {
+                "x": 900,
+                "y": 510
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 900,
+      "y": 420,
+      "width": 130,
+      "height": 90,
+      "fill": {
+        "kind": "solid",
+        "color": "#bba880"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 900,
+        "y": 420,
+        "width": 130,
+        "height": 90
+      }
+    },
+    {
+      "kind": "area",
+      "id": "e0b12fd2-8edf-4935-933b-ba8a326c6912",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 940,
+                "y": 445
+              },
+              {
+                "x": 990,
+                "y": 445
+              },
+              {
+                "x": 990,
+                "y": 485
+              },
+              {
+                "x": 940,
+                "y": 485
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 940,
+      "y": 445,
+      "width": 50,
+      "height": 40,
+      "fill": {
+        "kind": "solid",
+        "color": "#618a91"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 940,
+        "y": 445,
+        "width": 50,
+        "height": 40
+      }
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "20f55840-9b06-48b8-b66e-1c744649ba99",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 540,
+          "y": 140,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 1360,
+          "y": 140,
+          "mode": "corner"
+        },
+        {
+          "id": "node-2",
+          "x": 1430,
+          "y": 360,
+          "mode": "corner"
+        },
+        {
+          "id": "node-3",
+          "x": 1430,
+          "y": 900,
+          "mode": "corner"
+        },
+        {
+          "id": "node-4",
+          "x": 1030,
+          "y": 980,
+          "mode": "corner"
+        },
+        {
+          "id": "node-5",
+          "x": 840,
+          "y": 920,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 22,
+      "stroke": {
+        "kind": "solid",
+        "color": "#d6c9a7"
+      },
+      "x": 524.4436508138959,
+      "y": 124.44365081389596,
+      "width": 921.1126983722081,
+      "height": 871.1126983722081
+    },
+    {
+      "name": "Path",
+      "opacity": 1,
+      "cap": "round",
+      "join": "round",
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "kind": "path",
+      "pathKind": "generic",
+      "id": "ea934eb9-c0b0-4a4c-b53a-787cf23a678b",
+      "nodes": [
+        {
+          "id": "node-0",
+          "x": 540,
+          "y": 140,
+          "mode": "corner"
+        },
+        {
+          "id": "node-1",
+          "x": 500,
+          "y": 250,
+          "mode": "corner"
+        }
+      ],
+      "closed": false,
+      "strokeWidth": 22,
+      "stroke": {
+        "kind": "solid",
+        "color": "#d6c9a7"
+      },
+      "x": 484.44365081389594,
+      "y": 124.44365081389596,
+      "width": 71.11269837220809,
+      "height": 141.1126983722081
+    },
+    {
+      "kind": "area",
+      "id": "81431af4-3c37-4e37-a93a-b5bf1e453f18",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 566,
+                "y": 140
+              },
+              {
+                "x": 562.5166604983954,
+                "y": 153
+              },
+              {
+                "x": 553,
+                "y": 162.5166604983954
+              },
+              {
+                "x": 540,
+                "y": 166
+              },
+              {
+                "x": 527,
+                "y": 162.5166604983954
+              },
+              {
+                "x": 517.4833395016046,
+                "y": 153
+              },
+              {
+                "x": 514,
+                "y": 140
+              },
+              {
+                "x": 517.4833395016046,
+                "y": 127
+              },
+              {
+                "x": 527,
+                "y": 117.4833395016046
+              },
+              {
+                "x": 540,
+                "y": 114
+              },
+              {
+                "x": 553,
+                "y": 117.4833395016046
+              },
+              {
+                "x": 562.5166604983954,
+                "y": 126.99999999999999
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 514,
+      "y": 114,
+      "width": 52,
+      "height": 52,
+      "fill": {
+        "kind": "solid",
+        "color": "#c6b996"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 514,
+        "y": 114,
+        "width": 52,
+        "height": 52
+      }
+    },
+    {
+      "kind": "area",
+      "id": "43bc9817-5646-45c7-9ec5-df44e25d2b83",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1386,
+                "y": 140
+              },
+              {
+                "x": 1382.5166604983954,
+                "y": 153
+              },
+              {
+                "x": 1373,
+                "y": 162.5166604983954
+              },
+              {
+                "x": 1360,
+                "y": 166
+              },
+              {
+                "x": 1347,
+                "y": 162.5166604983954
+              },
+              {
+                "x": 1337.4833395016046,
+                "y": 153
+              },
+              {
+                "x": 1334,
+                "y": 140
+              },
+              {
+                "x": 1337.4833395016046,
+                "y": 127
+              },
+              {
+                "x": 1347,
+                "y": 117.4833395016046
+              },
+              {
+                "x": 1360,
+                "y": 114
+              },
+              {
+                "x": 1373,
+                "y": 117.4833395016046
+              },
+              {
+                "x": 1382.5166604983954,
+                "y": 126.99999999999999
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1334,
+      "y": 114,
+      "width": 52,
+      "height": 52,
+      "fill": {
+        "kind": "solid",
+        "color": "#c6b996"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1334,
+        "y": 114,
+        "width": 52,
+        "height": 52
+      }
+    },
+    {
+      "kind": "area",
+      "id": "a93c1c47-482a-4511-aec5-3365cff9eba2",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1456,
+                "y": 360
+              },
+              {
+                "x": 1452.5166604983954,
+                "y": 373
+              },
+              {
+                "x": 1443,
+                "y": 382.5166604983954
+              },
+              {
+                "x": 1430,
+                "y": 386
+              },
+              {
+                "x": 1417,
+                "y": 382.5166604983954
+              },
+              {
+                "x": 1407.4833395016046,
+                "y": 373
+              },
+              {
+                "x": 1404,
+                "y": 360
+              },
+              {
+                "x": 1407.4833395016046,
+                "y": 347
+              },
+              {
+                "x": 1417,
+                "y": 337.4833395016046
+              },
+              {
+                "x": 1430,
+                "y": 334
+              },
+              {
+                "x": 1443,
+                "y": 337.4833395016046
+              },
+              {
+                "x": 1452.5166604983954,
+                "y": 347
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1404,
+      "y": 334,
+      "width": 52,
+      "height": 52,
+      "fill": {
+        "kind": "solid",
+        "color": "#c6b996"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1404,
+        "y": 334,
+        "width": 52,
+        "height": 52
+      }
+    },
+    {
+      "kind": "area",
+      "id": "7d59e1d7-7710-4c4a-91b0-365bcd798469",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1456,
+                "y": 900
+              },
+              {
+                "x": 1452.5166604983954,
+                "y": 913
+              },
+              {
+                "x": 1443,
+                "y": 922.5166604983954
+              },
+              {
+                "x": 1430,
+                "y": 926
+              },
+              {
+                "x": 1417,
+                "y": 922.5166604983954
+              },
+              {
+                "x": 1407.4833395016046,
+                "y": 913
+              },
+              {
+                "x": 1404,
+                "y": 900
+              },
+              {
+                "x": 1407.4833395016046,
+                "y": 887
+              },
+              {
+                "x": 1417,
+                "y": 877.4833395016046
+              },
+              {
+                "x": 1430,
+                "y": 874
+              },
+              {
+                "x": 1443,
+                "y": 877.4833395016046
+              },
+              {
+                "x": 1452.5166604983954,
+                "y": 887
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1404,
+      "y": 874,
+      "width": 52,
+      "height": 52,
+      "fill": {
+        "kind": "solid",
+        "color": "#c6b996"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1404,
+        "y": 874,
+        "width": 52,
+        "height": 52
+      }
+    },
+    {
+      "kind": "area",
+      "id": "ae5dd1b7-2d88-465a-8dc4-d7c65bc23a6c",
+      "name": "Area",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1056,
+                "y": 980
+              },
+              {
+                "x": 1052.5166604983954,
+                "y": 993
+              },
+              {
+                "x": 1043,
+                "y": 1002.5166604983954
+              },
+              {
+                "x": 1030,
+                "y": 1006
+              },
+              {
+                "x": 1017,
+                "y": 1002.5166604983954
+              },
+              {
+                "x": 1007.4833395016046,
+                "y": 993
+              },
+              {
+                "x": 1004,
+                "y": 980
+              },
+              {
+                "x": 1007.4833395016046,
+                "y": 967
+              },
+              {
+                "x": 1017,
+                "y": 957.4833395016046
+              },
+              {
+                "x": 1030,
+                "y": 954
+              },
+              {
+                "x": 1043,
+                "y": 957.4833395016046
+              },
+              {
+                "x": 1052.5166604983954,
+                "y": 967
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1004,
+      "y": 954,
+      "width": 52,
+      "height": 52,
+      "fill": {
+        "kind": "solid",
+        "color": "#c6b996"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1004,
+        "y": 954,
+        "width": 52,
+        "height": 52
+      }
+    },
+    {
+      "id": "b4d143c5-4d72-4c18-8536-d36c8b1684d7",
+      "name": "BRACKENFORD",
+      "x": 65,
+      "y": 45,
+      "width": 608.2,
+      "height": 56.2,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "opacity": 1,
+      "kind": "label",
+      "text": "BRACKENFORD",
+      "style": {
+        "font": "cinzel",
+        "size": 40,
+        "bold": false,
+        "italic": false,
+        "letterSpacing": 2,
+        "lineHeight": 1.2,
+        "align": "center",
+        "color": "#f1e7c9",
+        "strokeColor": "#263a32",
+        "strokeWidth": 1.1,
+        "background": "#f4f0dd",
+        "backgroundOpacity": 0,
+        "padding": 3,
+        "maxWidth": 600
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preset": "below",
+      "leader": false,
+      "layoutScale": 1
+    },
+    {
+      "id": "5eec2164-ced6-4d84-b751-d4c72cf9f131",
+      "name": "River trade · Old town · Eastgate",
+      "x": 70,
+      "y": 99,
+      "width": 608.2,
+      "height": 29.799999999999997,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "opacity": 1,
+      "kind": "label",
+      "text": "River trade · Old town · Eastgate",
+      "style": {
+        "font": "cinzel",
+        "size": 18,
+        "bold": false,
+        "italic": false,
+        "letterSpacing": 0.4,
+        "lineHeight": 1.2,
+        "align": "center",
+        "color": "#f1e7c9",
+        "strokeColor": "#263a32",
+        "strokeWidth": 1.1,
+        "background": "#f4f0dd",
+        "backgroundOpacity": 0,
+        "padding": 3,
+        "maxWidth": 600
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preset": "below",
+      "leader": false,
+      "layoutScale": 1
+    },
+    {
+      "id": "4a321923-cb30-42dc-a212-e3042f90b6a5",
+      "name": "OLD QUARTER",
+      "x": 600,
+      "y": 120,
+      "width": 608.2,
+      "height": 29.799999999999997,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "opacity": 1,
+      "kind": "label",
+      "text": "OLD QUARTER",
+      "style": {
+        "font": "cinzel",
+        "size": 18,
+        "bold": false,
+        "italic": false,
+        "letterSpacing": 0.4,
+        "lineHeight": 1.2,
+        "align": "center",
+        "color": "#f1e7c9",
+        "strokeColor": "#263a32",
+        "strokeWidth": 1.1,
+        "background": "#f4f0dd",
+        "backgroundOpacity": 0,
+        "padding": 3,
+        "maxWidth": 600
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preset": "below",
+      "leader": false,
+      "layoutScale": 1
+    },
+    {
+      "id": "3b188c01-bc95-4445-b868-d8dcbbd4c436",
+      "name": "MARKET",
+      "x": 882,
+      "y": 610,
+      "width": 608.2,
+      "height": 29.799999999999997,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "opacity": 1,
+      "kind": "label",
+      "text": "MARKET",
+      "style": {
+        "font": "cinzel",
+        "size": 18,
+        "bold": false,
+        "italic": false,
+        "letterSpacing": 0.4,
+        "lineHeight": 1.2,
+        "align": "center",
+        "color": "#f1e7c9",
+        "strokeColor": "#263a32",
+        "strokeWidth": 1.1,
+        "background": "#f4f0dd",
+        "backgroundOpacity": 0,
+        "padding": 3,
+        "maxWidth": 600
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preset": "below",
+      "leader": false,
+      "layoutScale": 1
+    },
+    {
+      "id": "b2566cd4-ec8b-4c2d-807f-09cbc3b685a6",
+      "name": "TEMPLE CLOSE",
+      "x": 1160,
+      "y": 750,
+      "width": 608.2,
+      "height": 29.799999999999997,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "opacity": 1,
+      "kind": "label",
+      "text": "TEMPLE CLOSE",
+      "style": {
+        "font": "cinzel",
+        "size": 18,
+        "bold": false,
+        "italic": false,
+        "letterSpacing": 0.4,
+        "lineHeight": 1.2,
+        "align": "center",
+        "color": "#f1e7c9",
+        "strokeColor": "#263a32",
+        "strokeWidth": 1.1,
+        "background": "#f4f0dd",
+        "backgroundOpacity": 0,
+        "padding": 3,
+        "maxWidth": 600
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preset": "below",
+      "leader": false,
+      "layoutScale": 1
+    },
+    {
+      "id": "6b010485-8a5c-4c37-b9a1-b8e1a28a0e8e",
+      "name": "RIVERGATE",
+      "x": 430,
+      "y": 600,
+      "width": 608.2,
+      "height": 29.799999999999997,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "opacity": 1,
+      "kind": "label",
+      "text": "RIVERGATE",
+      "style": {
+        "font": "cinzel",
+        "size": 18,
+        "bold": false,
+        "italic": false,
+        "letterSpacing": 0.4,
+        "lineHeight": 1.2,
+        "align": "center",
+        "color": "#f1e7c9",
+        "strokeColor": "#263a32",
+        "strokeWidth": 1.1,
+        "background": "#f4f0dd",
+        "backgroundOpacity": 0,
+        "padding": 3,
+        "maxWidth": 600
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preset": "below",
+      "leader": false,
+      "layoutScale": 1
+    },
+    {
+      "id": "89aea6cc-1310-4c42-b744-9febf459b16a",
+      "name": "EASTGATE",
+      "x": 1300,
+      "y": 980,
+      "width": 608.2,
+      "height": 29.799999999999997,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "opacity": 1,
+      "kind": "label",
+      "text": "EASTGATE",
+      "style": {
+        "font": "cinzel",
+        "size": 18,
+        "bold": false,
+        "italic": false,
+        "letterSpacing": 0.4,
+        "lineHeight": 1.2,
+        "align": "center",
+        "color": "#f1e7c9",
+        "strokeColor": "#263a32",
+        "strokeWidth": 1.1,
+        "background": "#f4f0dd",
+        "backgroundOpacity": 0,
+        "padding": 3,
+        "maxWidth": 600
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "preset": "below",
+      "leader": false,
+      "layoutScale": 1
+    },
+    {
+      "id": "90d9f881-04b9-4fc2-843a-7e041a144795",
+      "name": "Compass",
+      "x": 40,
+      "y": 810,
+      "width": 80,
+      "height": 80,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "opacity": 1,
+      "kind": "compass",
+      "compassStyle": "rose",
+      "color": "#343e36"
+    }
+  ],
+  "assets": [],
+  "objectGroups": [],
+  "layerTree": {
+    "roots": [
+      "ebe2f5d6-c61e-49e4-97e2-53665d894f82",
+      "1379adcf-5c3e-49a2-bb2c-950dbe7a0e40",
+      "d8859b72-54de-4bf0-9925-377d420c4ef7",
+      "e8aacd64-b1e8-4950-9452-14195c0e972b",
+      "2fb1cbdc-5285-41ae-aaf9-720d599ea615"
+    ],
+    "groups": []
+  }
+}

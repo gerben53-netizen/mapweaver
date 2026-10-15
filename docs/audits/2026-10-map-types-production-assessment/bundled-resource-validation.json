@@ -1,0 +1,422 @@
+{
+  "terrain": [
+    {
+      "id": "painterly.v1.grass-lush",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.grass-dry",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.rock-light",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.rock-dark",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.foothill",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.alpine",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.forest-temperate",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.forest-moss",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.swamp-wet",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.swamp-bog",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.arid",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.shore",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.volcanic",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.neutral",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.sand-soft",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.dunes",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.desert-stone",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.dry-basin",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.cave-damp",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.cave-moss",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.cave-wet-stone",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.cave-mud",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.cave-broken",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.cave-rubble",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.cave-jagged",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.cave-uneven",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.salt-flats",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.leaf-litter",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.rooty-floor",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.clay-earth",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.gravel-ground",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "id": "painterly.v1.cavern-lichen",
+      "decodable": true,
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "environmentalDetail": {
+    "status": "PASS WITH NOTE",
+    "presets": 11,
+    "components": [
+      {
+        "id": "premium.environmental.surface.dirt.v1",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.dirt.v2",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.dirt.v3",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.dirt.v4",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.damp.v1",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.damp.v2",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.damp.v3",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.damp.v4",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.wear.v1",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.wear.v2",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.wear.v3",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.wear.v4",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.moss.v1",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.moss.v2",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.moss.v3",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.surface.moss.v4",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.cracks.v1",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.cracks.v2",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.cracks.v3",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.cracks.v4",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.rubble.v1",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.rubble.v2",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.rubble.v3",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.rubble.v4",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.gravel.v1",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.gravel.v2",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.gravel.v3",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.gravel.v4",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.leaves.v1",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.leaves.v2",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.leaves.v3",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.leaves.v4",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.roots.v1",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.roots.v2",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.roots.v3",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.roots.v4",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.moss-clumps.v1",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.moss-clumps.v2",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.moss-clumps.v3",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.moss-clumps.v4",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.wall-edge-debris.v1",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.wall-edge-debris.v2",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.wall-edge-debris.v3",
+        "sha256": true,
+        "decodable": true
+      },
+      {
+        "id": "premium.environmental.decals.wall-edge-debris.v4",
+        "sha256": true,
+        "decodable": true
+      }
+    ]
+  }
+}

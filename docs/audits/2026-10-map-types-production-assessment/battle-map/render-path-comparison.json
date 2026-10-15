@@ -1,0 +1,15 @@
+{
+  "nativeUiRepeatIdentical": true,
+  "nativeUiSha256": "c47d673572ba42b042c9f6320fa1b848e5015fa696dc2b2dfbaae898decf2438",
+  "pipelineSha256": "10b063537a7586c3468d10f2ea55ef68667d7d836e2be49cdc0a5c524778ff3d",
+  "changedPixels": 118760,
+  "maxChannelDelta": 149,
+  "meanAbsoluteChannelDelta": 0.40056375,
+  "bounds": {
+    "minX": 120,
+    "minY": 130,
+    "maxX": 1234,
+    "maxY": 769
+  },
+  "observation": "Differences occur in stamp bounds; native UI repeated twice and stable, technical archive roundtrip also stable. Cause not isolated. No product correction. Not a proven native Preview/UI mismatch."
+}

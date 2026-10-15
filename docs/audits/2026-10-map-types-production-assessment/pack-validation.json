@@ -1,0 +1,8 @@
+{
+  "command": "npm run validate-asset-pack -- public/pqa-premium-stamps/mapweaver-pqa-wave-two.zip",
+  "exitCode": 0,
+  "valid": true,
+  "assets": 69,
+  "warnings": "Informative tag normalization; no rejection",
+  "sha256": "5b343cb8ef5523a6efbe257d3e43df2fe545cfbb5edab409e999fedd893b1676"
+}

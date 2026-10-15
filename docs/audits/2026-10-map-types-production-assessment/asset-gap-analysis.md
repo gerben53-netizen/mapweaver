@@ -1,0 +1,12 @@
+# Assethiaten
+
+| ID | Type / klasse | Prioriteit | Concrete bevinding en bewijs | Impact / afhankelijkheid / oplossingsrichting |
+|---|---|---|---|---|
+| A1 | World/Regional — ASSET GAP | P1 | 44 atlasitems FIX, 33 onbeoordeeld; 41 generatorassets zonder expliciete hierarchy. Export toont herhaalde berg-/bosclusters. | Curatie en consistente families/tiers nodig, met speel-/atlaszoomacceptatie; geen nieuw rendererfilter dat onvoldoende artwork verbergt. Blocker voor referentieniveau, niet voor openen/export. |
+| A2 | Regional — WORKFLOW GAP + ASSET GAP | P1 | 420 km-schaal: scatter placements leeg; waarschuwing defaults too large/small. 99 native stamps handmatig geschaald als zichtbare omweg. | Regioschaalprofielen en passende defaultSize/assetvarianten; afhankelijk van canonieke sizing, geen duplicatie van records als workaround. Blocker voor automatische regionale aankleding. |
+| A3 | City — ASSET GAP | P1 | Geen aangetoonde geaccepteerde, coherente losse daken/gebouwen/straten/bruggen/fortificatieset; de kaart gebruikt 103 generieke objecten. | Productiegebouwfamilies, kruispunten en landmarkfootprints plus City-workflow. Alleen stadsmarkers vergroten levert een illustratie van een stad, geen bouwbare stad. Voorbeeld blijft schematisch. |
+| A4 | Battle — ASSET GAP | P2 | 32 KEEP pickeritems tegenover 198 FIX. De gebruikte subset heeft goede top-down families, maar tafeldressing herhaalt en tapijt is native vlakke Area. | Brede productieacceptatie, vloerkleden/boekprops/lampen en contextuele schoon/aangekleed-varianten; bestaande packs eerst verifiëren. Niet beweren dat een niet gekozen legacytapijt ontbreekt. |
+| A5 | Alle — WORKFLOW GAP | P2 | Fysiek727 versus307 pickeritems; packs/varianten/built-ins zijn verschillende aantallen. FIX blijft plaatsbaar. | Productiestatus en geschikte schaal zichtbaar maken; bestaande Asset Library-filter is aanwezig en werkt, geen nieuwe taxonomy verzinnen. |
+| A6 | Atlas — QUALITY/RENDER GAP | P2 | Bruikbare losse painterly assets blijven op kaart als aparte eilandjes/clusters zichtbaar. | Plaatsing, overlap, schaal en kleurharmonie samen beoordelen; niet alleen artwork vervangen. |
+
+Afwezig, onvoldoende kwaliteit, rendererbeperking en vindbaarheid zijn dus verschillende oorzaken. Bundled terrein/Environmental Detail is aanwezig, maar volledige runtime-paintacceptatie van die resources is in deze opdracht niet bewezen. Geen assets aangepast of opnieuw geïmporteerd.
