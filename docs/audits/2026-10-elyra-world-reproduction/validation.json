@@ -1,0 +1,328 @@
+{
+  "sourceRevision": "7df6cea1565efe8897f6771cf7090bd24528cb04",
+  "branch": "codex/elyra-world-reproduction",
+  "mapId": "6626967e-5541-4f11-9926-bb9e880cd8e0",
+  "formatVersion": 12,
+  "dimensions": {
+    "width": 2400,
+    "height": 1600
+  },
+  "archive": {
+    "sha256": "078dd98d7a30219b89f3ce589afebf7797afeba7b414201699fe29e577d6905a",
+    "embeddedProjectMatches": true,
+    "objects": 700,
+    "assets": 20,
+    "decodeEncodeReopen": {
+      "mapId": "6626967e-5541-4f11-9926-bb9e880cd8e0",
+      "objects": 700,
+      "assets": 20,
+      "options": {
+        "scale": 1,
+        "includeGrid": false,
+        "includeScaleBar": false,
+        "transparent": false
+      },
+      "first": "9caff01893dbc9c8e8abf302dffdd8aaf8bbb9010f0a6355ce67ccfcb3a138ad",
+      "reopened": "9caff01893dbc9c8e8abf302dffdd8aaf8bbb9010f0a6355ce67ccfcb3a138ad",
+      "identical": true
+    }
+  },
+  "export": {
+    "method": "Real App: Export PNG > Download PNG; browser download copied without modification",
+    "downloadedFile": "C:/Users/gerbe/Downloads/Elyra — A World of Many Horizons.png",
+    "sha256": "9caff01893dbc9c8e8abf302dffdd8aaf8bbb9010f0a6355ce67ccfcb3a138ad",
+    "nativeRoundtripHashesMatchUiDownload": true,
+    "browserDownloadCallElapsedSeconds": 4567.302,
+    "renderOnlyDuration": null,
+    "elapsedCaveat": "Includes browser/download connector waiting. Not an instrumented render duration."
+  },
+  "reference": {
+    "sha256": "bdff92911f2bad5ead965a3ec8d5d3f4f3ed61df6e3ea03c65c188aeb4bc61fd",
+    "unchanged": true,
+    "embedded": false,
+    "background": null,
+    "referenceHashAbsentFromAssets": true
+  },
+  "assetChecks": [
+    {
+      "id": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e",
+      "name": "Painterly Broadleaf Interior 01",
+      "sha256": "745ac3c51410fdd424b4f2f253fcfb942d7574a274cee37c2b005f2e8826ed25",
+      "embeddedHash": "745ac3c51410fdd424b4f2f253fcfb942d7574a274cee37c2b005f2e8826ed25",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2",
+      "name": "Painterly Broadleaf Interior 02",
+      "sha256": "796654d14661aefed63ef7aa431410385751099d9715802c554b4a10df2a8ca8",
+      "embeddedHash": "796654d14661aefed63ef7aa431410385751099d9715802c554b4a10df2a8ca8",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "fc152095-b889-4a87-a74b-42b0526ce428",
+      "name": "Painterly Broadleaf Edge 01",
+      "sha256": "c8bf14e39f5f4dc3d58024643decbb132521485dab5fb5cbcfe6839938b1f796",
+      "embeddedHash": "c8bf14e39f5f4dc3d58024643decbb132521485dab5fb5cbcfe6839938b1f796",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "56c1a4c8-e351-45f2-b95a-662c50740ddc",
+      "name": "Painterly Broadleaf Interior 03",
+      "sha256": "592830cd9a8a0c7f19aa9bb445eda769ba0323e2dae908517097767349d25104",
+      "embeddedHash": "592830cd9a8a0c7f19aa9bb445eda769ba0323e2dae908517097767349d25104",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "85b3a6e3-febf-4837-aa96-cacf0fc461b5",
+      "name": "Painterly Broadleaf Tree 01",
+      "sha256": "c6b89215ab018c6492b7afc16bd04e3d4f6e9d58a692bed7c9ec1a19b06be765",
+      "embeddedHash": "c6b89215ab018c6492b7afc16bd04e3d4f6e9d58a692bed7c9ec1a19b06be765",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "275de62f-b418-4bb3-a228-dc00d095fc5c",
+      "name": "Painterly Swamp Interior 01",
+      "sha256": "599eb2433c048bd2fd1516d31c81572d14b2714c6581da279c68d9f4f2ecfdb1",
+      "embeddedHash": "599eb2433c048bd2fd1516d31c81572d14b2714c6581da279c68d9f4f2ecfdb1",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "bf0df9de-3a06-4563-a4bf-933e2b30ae84"
+    },
+    {
+      "id": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80",
+      "name": "Painterly Broadleaf Sparse 01",
+      "sha256": "f3b6503f1378ea5e2cdd2b25419f649fb6f0faa4992e0a338faaac07b9843bd1",
+      "embeddedHash": "f3b6503f1378ea5e2cdd2b25419f649fb6f0faa4992e0a338faaac07b9843bd1",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "11b6d4a3-9fce-4fba-92cd-264e1648e23f",
+      "name": "Painterly Peak 01",
+      "sha256": "6b9a53d3015b5ff750d3299bd2cde126ada6074762862676597ec00861896fa1",
+      "embeddedHash": "6b9a53d3015b5ff750d3299bd2cde126ada6074762862676597ec00861896fa1",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "59f765c9-11cb-480a-b24d-4950b5d69b94",
+      "name": "Painterly Ridge 01",
+      "sha256": "0fb3524ab0ca3d463fa8a257a6cf8b008563c288136baed39d348886706918b0",
+      "embeddedHash": "0fb3524ab0ca3d463fa8a257a6cf8b008563c288136baed39d348886706918b0",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d",
+      "name": "Painterly Ridge 02",
+      "sha256": "8dacb103bebe3768b8a3fbbaf22eca99fd9ef7594507e42570d2f0345c92e21d",
+      "embeddedHash": "8dacb103bebe3768b8a3fbbaf22eca99fd9ef7594507e42570d2f0345c92e21d",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "8d200574-62d7-4b14-8f09-026aa13f1c88",
+      "name": "Painterly Snow Peak 01",
+      "sha256": "aa81029d2b987875867f9de679d54a12f0733ae2276fd27f3b91805f58a25c45",
+      "embeddedHash": "aa81029d2b987875867f9de679d54a12f0733ae2276fd27f3b91805f58a25c45",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "cbe0d2ce-d8d1-4e0f-bed4-077a2126bff4",
+      "name": "Painterly Snow Ridge 01",
+      "sha256": "36fb634f60590ac9ad2e3cab336280df94d001adc1aebb138a39edeb42a648e0",
+      "embeddedHash": "36fb634f60590ac9ad2e3cab336280df94d001adc1aebb138a39edeb42a648e0",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "e3dffdcd-3162-4f64-8c7e-bb5aefe0844f",
+      "name": "Painterly Snow Cluster 01",
+      "sha256": "68f733427be120b409e69d16f5e8e5c6343dc2c84cc22e49d517146b771b91cd",
+      "embeddedHash": "68f733427be120b409e69d16f5e8e5c6343dc2c84cc22e49d517146b771b91cd",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "d3de5c3d-a985-4928-aa67-8951516d5887"
+    },
+    {
+      "id": "8cd605f5-cbc5-4994-b61c-2d9584ef9eb0",
+      "name": "Painterly Peak 02",
+      "sha256": "2500da44b1402467f7bea201e15214a8175bd7f2b84b4dd7d12d82ea0358fc92",
+      "embeddedHash": "2500da44b1402467f7bea201e15214a8175bd7f2b84b4dd7d12d82ea0358fc92",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "f9e1291b-a30d-4ff7-b895-7c3f6fc99722",
+      "name": "Painterly Ridge 03",
+      "sha256": "ae3af282327d57fd0cf12dedd4d8f025be1b99b4be6d1fd20c0e3c482d05d0ba",
+      "embeddedHash": "ae3af282327d57fd0cf12dedd4d8f025be1b99b4be6d1fd20c0e3c482d05d0ba",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "1d372590-15ca-4d96-8588-368f7036f881",
+      "name": "Painterly Hill Arid 01",
+      "sha256": "335146335659b14f61b1dd2511fbefa06b623b1261706c98877b1a2c1d869238",
+      "embeddedHash": "335146335659b14f61b1dd2511fbefa06b623b1261706c98877b1a2c1d869238",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "32037fcd-551c-47fe-bdbf-f3179e341267",
+      "name": "Painterly Volcanic Mountain 01",
+      "sha256": "aa0403aaedfb3b827b9df5b817900a528a1c4f0254c82b66c4c677b08bf13d7d",
+      "embeddedHash": "aa0403aaedfb3b827b9df5b817900a528a1c4f0254c82b66c4c677b08bf13d7d",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "d7381114-cf57-4b2b-a465-c04fbdbc2a87",
+      "name": "Painterly Volcanic Rocks 01",
+      "sha256": "72139e5824e3001b1d1ba9240c82f909e354dea1cefe23d9cd32b96eac5e333d",
+      "embeddedHash": "72139e5824e3001b1d1ba9240c82f909e354dea1cefe23d9cd32b96eac5e333d",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "dad3f978-42ce-440b-becd-182ebbe61205",
+      "name": "Painterly Volcano Dormant 01",
+      "sha256": "135200cbd4860bbc40001baa9c0dd82af871d5ba639e0c3cd2925651d3960efe",
+      "embeddedHash": "135200cbd4860bbc40001baa9c0dd82af871d5ba639e0c3cd2925651d3960efe",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5d46df1f-8abb-43dd-8c37-646e14bf80eb"
+    },
+    {
+      "id": "ab8c6a8d-1f52-4e26-a376-00e53ba96715",
+      "name": "Painterly Volcano Active 01",
+      "sha256": "e87cb3c36156e94d51601fe6fe88baf1aa3f5b49c991b928709fb9064cfcb8d3",
+      "embeddedHash": "e87cb3c36156e94d51601fe6fe88baf1aa3f5b49c991b928709fb9064cfcb8d3",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5d46df1f-8abb-43dd-8c37-646e14bf80eb"
+    }
+  ],
+  "ui": {
+    "unmodifiedApp": true,
+    "viewport": "1280x720",
+    "nativeSelections": [
+      "Northreach and Westmere: Area",
+      "Westmere river: River",
+      "Painterly Broadleaf Interior 01: Stamp",
+      "WESTMERE: Label"
+    ],
+    "edit": "Label changed to WESTMERE — EDIT PROOF in actual Properties UI",
+    "undoObserved": "WESTMERE — EDIT PROOF",
+    "redoObserved": "WESTMERE",
+    "qaDatabaseSave": "Save as separate project, then native edits/undo/redo/Save; header confirmed Saved",
+    "initialConflict": "Audit harness used temporary revision for an unregistered archive. Resolved via native Save as separate project in isolated QA, not Primary.",
+    "finalProject": "Original archive identity retained; QA copy not delivered",
+    "paint": "5 authored TerrainStroke gestures persisted as 49 mask tiles; not individually selectable stroke objects",
+    "screenshots": "Actual native editor and 4 regional details; no image compositing",
+    "pixelViewportComparison": false
+  },
+  "tests": {
+    "command": "npx vitest run src/projects/archive.test.ts src/domain/routes.test.ts src/domain/annotations.test.ts src/domain/terrainPaint.test.ts src/domain/landBrush.test.ts src/domain/terrainStyles.test.ts",
+    "filesPassed": 6,
+    "testsPassed": 79,
+    "failed": 0,
+    "durationSeconds": 10.6,
+    "typecheck": "not run; no product code changes",
+    "lint": "not run; no product code changes",
+    "build": "not run; existing build used",
+    "broadSuite": "not run"
+  },
+  "primary": {
+    "before": {
+      "projects": {
+        "count": 27,
+        "sha256": "8ab44230ed582664407e3eacf7e4fd217a7931d035e25fe2a6aa5dcecce71c70"
+      },
+      "assets": {
+        "count": 727,
+        "sha256": "7eab0e78af0bf610b62199da1850a9063af4fcfa34cdc80b33e340959e86c018"
+      },
+      "categories": {
+        "count": 43,
+        "sha256": "1c50f0d66dffacd3e28666030851f0f8dfb42336ef3bbdc786b6e8181d71ce88"
+      },
+      "campaigns": {
+        "count": 12,
+        "sha256": "14bd6387e1dd0d83462e55edc74359e2b3da90a23047e3c7621d7a768e18a426"
+      },
+      "library_collections": {
+        "count": 33,
+        "sha256": "d956d36bfb9038352b57354ff05e24b49de464b65cefc1ae69b7ee77e397e658"
+      },
+      "library_members": {
+        "count": 614,
+        "sha256": "67e58d05d1874012caa04c99d6a5f1d5701b846f961c58be961613604f79ca78"
+      }
+    },
+    "after": {
+      "projects": {
+        "count": 27,
+        "sha256": "8ab44230ed582664407e3eacf7e4fd217a7931d035e25fe2a6aa5dcecce71c70"
+      },
+      "assets": {
+        "count": 727,
+        "sha256": "7eab0e78af0bf610b62199da1850a9063af4fcfa34cdc80b33e340959e86c018"
+      },
+      "categories": {
+        "count": 43,
+        "sha256": "1c50f0d66dffacd3e28666030851f0f8dfb42336ef3bbdc786b6e8181d71ce88"
+      },
+      "campaigns": {
+        "count": 12,
+        "sha256": "14bd6387e1dd0d83462e55edc74359e2b3da90a23047e3c7621d7a768e18a426"
+      },
+      "library_collections": {
+        "count": 33,
+        "sha256": "d956d36bfb9038352b57354ff05e24b49de464b65cefc1ae69b7ee77e397e658"
+      },
+      "library_members": {
+        "count": 614,
+        "sha256": "67e58d05d1874012caa04c99d6a5f1d5701b846f961c58be961613604f79ca78"
+      }
+    },
+    "unchanged": true,
+    "scope": "Row counts/hashes of six listed tables, not all user filesystem files"
+  },
+  "contractModified": false,
+  "productCodeModified": false,
+  "newArtwork": false,
+  "push": false,
+  "windowsPackage": false,
+  "visualAcceptance": "NOT achieved at reference premium quality; simplified native reconstruction and honest gap analysis delivered",
+  "knownDeviations": [
+    "Coarse geographic silhouettes and island topology",
+    "Repeated stamp clusters; incomplete terrain/relief cohesion",
+    "Incomplete hydrology and missing microdetails",
+    "Generic legend dots and symbols",
+    "Label overlaps and clipped eastern sea name",
+    "Long browser/download call of undiagnosed origin"
+  ]
+}

@@ -1,0 +1,4493 @@
+{
+  "mapId": "6626967e-5541-4f11-9926-bb9e880cd8e0",
+  "mapName": "Elyra — A World of Many Horizons",
+  "width": 2400,
+  "height": 1600,
+  "authoring": "Native domain functions; manually traced silhouette coordinates, seeded native stamp placements; no reference pixels in project",
+  "areas": 75,
+  "paths": 14,
+  "stamps": 538,
+  "labels": 49,
+  "places": 20,
+  "brushStrokes": 5,
+  "paintTiles": 49,
+  "families": 0,
+  "assets": [
+    {
+      "id": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e",
+      "kind": "stamp",
+      "fileName": "Painterly Broadleaf Interior 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "745ac3c51410fdd424b4f2f253fcfb942d7574a274cee37c2b005f2e8826ed25",
+      "path": "assets/745ac3c51410fdd424b4f2f253fcfb942d7574a274cee37c2b005f2e8826ed25.png"
+    },
+    {
+      "id": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2",
+      "kind": "stamp",
+      "fileName": "Painterly Broadleaf Interior 02",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "796654d14661aefed63ef7aa431410385751099d9715802c554b4a10df2a8ca8",
+      "path": "assets/796654d14661aefed63ef7aa431410385751099d9715802c554b4a10df2a8ca8.png"
+    },
+    {
+      "id": "fc152095-b889-4a87-a74b-42b0526ce428",
+      "kind": "stamp",
+      "fileName": "Painterly Broadleaf Edge 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "c8bf14e39f5f4dc3d58024643decbb132521485dab5fb5cbcfe6839938b1f796",
+      "path": "assets/c8bf14e39f5f4dc3d58024643decbb132521485dab5fb5cbcfe6839938b1f796.png"
+    },
+    {
+      "id": "56c1a4c8-e351-45f2-b95a-662c50740ddc",
+      "kind": "stamp",
+      "fileName": "Painterly Broadleaf Interior 03",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "592830cd9a8a0c7f19aa9bb445eda769ba0323e2dae908517097767349d25104",
+      "path": "assets/592830cd9a8a0c7f19aa9bb445eda769ba0323e2dae908517097767349d25104.png"
+    },
+    {
+      "id": "85b3a6e3-febf-4837-aa96-cacf0fc461b5",
+      "kind": "stamp",
+      "fileName": "Painterly Broadleaf Tree 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "c6b89215ab018c6492b7afc16bd04e3d4f6e9d58a692bed7c9ec1a19b06be765",
+      "path": "assets/c6b89215ab018c6492b7afc16bd04e3d4f6e9d58a692bed7c9ec1a19b06be765.png"
+    },
+    {
+      "id": "275de62f-b418-4bb3-a228-dc00d095fc5c",
+      "kind": "stamp",
+      "fileName": "Painterly Swamp Interior 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "599eb2433c048bd2fd1516d31c81572d14b2714c6581da279c68d9f4f2ecfdb1",
+      "path": "assets/599eb2433c048bd2fd1516d31c81572d14b2714c6581da279c68d9f4f2ecfdb1.png"
+    },
+    {
+      "id": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80",
+      "kind": "stamp",
+      "fileName": "Painterly Broadleaf Sparse 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "f3b6503f1378ea5e2cdd2b25419f649fb6f0faa4992e0a338faaac07b9843bd1",
+      "path": "assets/f3b6503f1378ea5e2cdd2b25419f649fb6f0faa4992e0a338faaac07b9843bd1.png"
+    },
+    {
+      "id": "11b6d4a3-9fce-4fba-92cd-264e1648e23f",
+      "kind": "stamp",
+      "fileName": "Painterly Peak 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "6b9a53d3015b5ff750d3299bd2cde126ada6074762862676597ec00861896fa1",
+      "path": "assets/6b9a53d3015b5ff750d3299bd2cde126ada6074762862676597ec00861896fa1.png"
+    },
+    {
+      "id": "59f765c9-11cb-480a-b24d-4950b5d69b94",
+      "kind": "stamp",
+      "fileName": "Painterly Ridge 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "0fb3524ab0ca3d463fa8a257a6cf8b008563c288136baed39d348886706918b0",
+      "path": "assets/0fb3524ab0ca3d463fa8a257a6cf8b008563c288136baed39d348886706918b0.png"
+    },
+    {
+      "id": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d",
+      "kind": "stamp",
+      "fileName": "Painterly Ridge 02",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "8dacb103bebe3768b8a3fbbaf22eca99fd9ef7594507e42570d2f0345c92e21d",
+      "path": "assets/8dacb103bebe3768b8a3fbbaf22eca99fd9ef7594507e42570d2f0345c92e21d.png"
+    },
+    {
+      "id": "8d200574-62d7-4b14-8f09-026aa13f1c88",
+      "kind": "stamp",
+      "fileName": "Painterly Snow Peak 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "aa81029d2b987875867f9de679d54a12f0733ae2276fd27f3b91805f58a25c45",
+      "path": "assets/aa81029d2b987875867f9de679d54a12f0733ae2276fd27f3b91805f58a25c45.png"
+    },
+    {
+      "id": "cbe0d2ce-d8d1-4e0f-bed4-077a2126bff4",
+      "kind": "stamp",
+      "fileName": "Painterly Snow Ridge 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "36fb634f60590ac9ad2e3cab336280df94d001adc1aebb138a39edeb42a648e0",
+      "path": "assets/36fb634f60590ac9ad2e3cab336280df94d001adc1aebb138a39edeb42a648e0.png"
+    },
+    {
+      "id": "e3dffdcd-3162-4f64-8c7e-bb5aefe0844f",
+      "kind": "stamp",
+      "fileName": "Painterly Snow Cluster 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "68f733427be120b409e69d16f5e8e5c6343dc2c84cc22e49d517146b771b91cd",
+      "path": "assets/68f733427be120b409e69d16f5e8e5c6343dc2c84cc22e49d517146b771b91cd.png"
+    },
+    {
+      "id": "8cd605f5-cbc5-4994-b61c-2d9584ef9eb0",
+      "kind": "stamp",
+      "fileName": "Painterly Peak 02",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "2500da44b1402467f7bea201e15214a8175bd7f2b84b4dd7d12d82ea0358fc92",
+      "path": "assets/2500da44b1402467f7bea201e15214a8175bd7f2b84b4dd7d12d82ea0358fc92.png"
+    },
+    {
+      "id": "f9e1291b-a30d-4ff7-b895-7c3f6fc99722",
+      "kind": "stamp",
+      "fileName": "Painterly Ridge 03",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "ae3af282327d57fd0cf12dedd4d8f025be1b99b4be6d1fd20c0e3c482d05d0ba",
+      "path": "assets/ae3af282327d57fd0cf12dedd4d8f025be1b99b4be6d1fd20c0e3c482d05d0ba.png"
+    },
+    {
+      "id": "1d372590-15ca-4d96-8588-368f7036f881",
+      "kind": "stamp",
+      "fileName": "Painterly Hill Arid 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "335146335659b14f61b1dd2511fbefa06b623b1261706c98877b1a2c1d869238",
+      "path": "assets/335146335659b14f61b1dd2511fbefa06b623b1261706c98877b1a2c1d869238.png"
+    },
+    {
+      "id": "32037fcd-551c-47fe-bdbf-f3179e341267",
+      "kind": "stamp",
+      "fileName": "Painterly Volcanic Mountain 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "aa0403aaedfb3b827b9df5b817900a528a1c4f0254c82b66c4c677b08bf13d7d",
+      "path": "assets/aa0403aaedfb3b827b9df5b817900a528a1c4f0254c82b66c4c677b08bf13d7d.png"
+    },
+    {
+      "id": "d7381114-cf57-4b2b-a465-c04fbdbc2a87",
+      "kind": "stamp",
+      "fileName": "Painterly Volcanic Rocks 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "72139e5824e3001b1d1ba9240c82f909e354dea1cefe23d9cd32b96eac5e333d",
+      "path": "assets/72139e5824e3001b1d1ba9240c82f909e354dea1cefe23d9cd32b96eac5e333d.png"
+    },
+    {
+      "id": "dad3f978-42ce-440b-becd-182ebbe61205",
+      "kind": "stamp",
+      "fileName": "Painterly Volcano Dormant 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "135200cbd4860bbc40001baa9c0dd82af871d5ba639e0c3cd2925651d3960efe",
+      "path": "assets/135200cbd4860bbc40001baa9c0dd82af871d5ba639e0c3cd2925651d3960efe.png"
+    },
+    {
+      "id": "ab8c6a8d-1f52-4e26-a376-00e53ba96715",
+      "kind": "stamp",
+      "fileName": "Painterly Volcano Active 01",
+      "mimeType": "image/png",
+      "width": 512,
+      "height": 384,
+      "hash": "e87cb3c36156e94d51601fe6fe88baf1aa3f5b49c991b928709fb9064cfcb8d3",
+      "path": "assets/e87cb3c36156e94d51601fe6fe88baf1aa3f5b49c991b928709fb9064cfcb8d3.png"
+    }
+  ],
+  "layers": [
+    {
+      "id": "79465cf7-19da-4ade-b560-731eb5585eea",
+      "name": "07 — Cartouche, compass and legend",
+      "count": 5
+    },
+    {
+      "id": "425ebd07-7af6-4e09-811e-88bd9350485c",
+      "name": "06 — Region, city and sea labels",
+      "count": 48
+    },
+    {
+      "id": "a6bb76f3-2410-437c-bf03-5498376c5e14",
+      "name": "05 — Settlements",
+      "count": 20
+    },
+    {
+      "id": "aa25c7ce-4439-462f-b334-c623dafe1311",
+      "name": "04 — Rivers, roads, borders and lava paths",
+      "count": 14
+    },
+    {
+      "id": "0a677952-66d7-4e6b-a337-7387ce290006",
+      "name": "03 — Painted forests and relief stamps",
+      "count": 538
+    },
+    {
+      "id": "4b63a99c-379d-4413-aa33-4dafbb84f515",
+      "name": "02 — Climate, biome and mountain terrain",
+      "count": 16
+    },
+    {
+      "id": "38f65b64-005f-4dea-be11-9d7159b4e394",
+      "name": "01 — Continents and island silhouettes",
+      "count": 59
+    }
+  ],
+  "objects": [
+    {
+      "id": "b0c278e1-f61b-4542-82bc-3d22c2210efe",
+      "name": "Northreach and Westmere",
+      "kind": "area"
+    },
+    {
+      "id": "62606e87-8f47-48c8-9d63-e462c97351bd",
+      "name": "Frosthelm, Mistwood and Thornwild",
+      "kind": "area"
+    },
+    {
+      "id": "118e06bf-cc29-4d3f-a19b-cca3eeecf32c",
+      "name": "Aramoor",
+      "kind": "area"
+    },
+    {
+      "id": "1720c4c0-6ad1-4a32-a936-8e895c31fd9e",
+      "name": "Sunveil",
+      "kind": "area"
+    },
+    {
+      "id": "a7c28cf7-8514-4005-99e9-418480cba656",
+      "name": "Khazrul",
+      "kind": "area"
+    },
+    {
+      "id": "af48836f-3c6a-46ef-803d-4f3c894b16b6",
+      "name": "Talonara",
+      "kind": "area"
+    },
+    {
+      "id": "f792f17f-4962-489b-af24-1657c066fb92",
+      "name": "Vaelrun",
+      "kind": "area"
+    },
+    {
+      "id": "ba1f9f8b-54ea-4ecc-9b88-273ce45c72ea",
+      "name": "Skjold",
+      "kind": "area"
+    },
+    {
+      "id": "0c7c38af-d34d-43dc-a937-462f3d2a1f33",
+      "name": "Skjold north",
+      "kind": "area"
+    },
+    {
+      "id": "d8643947-c130-4a96-bc69-a6533d5eae59",
+      "name": "Skjold east",
+      "kind": "area"
+    },
+    {
+      "id": "9c2c0798-d762-453d-9919-39fc814b2b79",
+      "name": "Skjold west",
+      "kind": "area"
+    },
+    {
+      "id": "c39a5718-5a2e-4000-8dbb-47d726ae4541",
+      "name": "Skjold south",
+      "kind": "area"
+    },
+    {
+      "id": "3bd31133-33df-46cd-8331-ec6f76242349",
+      "name": "Western reach",
+      "kind": "area"
+    },
+    {
+      "id": "48303617-d5e8-471a-8ece-dd5a4e38ebd1",
+      "name": "Myral",
+      "kind": "area"
+    },
+    {
+      "id": "11104f8a-bf78-4375-a945-cb6ccba4924a",
+      "name": "Cerulean",
+      "kind": "area"
+    },
+    {
+      "id": "42bded35-2984-4083-9fd8-97a601e7097d",
+      "name": "Cerulean south",
+      "kind": "area"
+    },
+    {
+      "id": "d280458c-b2ed-4f34-8d0b-e7a85c740561",
+      "name": "Cerulean east",
+      "kind": "area"
+    },
+    {
+      "id": "ed11683c-7608-4ace-8866-b70a7b5265e1",
+      "name": "North ice isle",
+      "kind": "area"
+    },
+    {
+      "id": "dbef28b4-ee86-46e2-8f35-9e05e657ea58",
+      "name": "Ice gate",
+      "kind": "area"
+    },
+    {
+      "id": "cf29442f-6f7d-4c46-9742-ff799d8e6973",
+      "name": "South passage",
+      "kind": "area"
+    },
+    {
+      "id": "e9333c72-bc5d-4f05-8dd9-deafd0aa7f2a",
+      "name": "Whispering north",
+      "kind": "area"
+    },
+    {
+      "id": "f5c2e6a4-c53c-4251-b5dd-5f6c6bd78dd6",
+      "name": "Whispering west",
+      "kind": "area"
+    },
+    {
+      "id": "72ee3ebf-28f1-4c9e-818d-6df6ddfe4538",
+      "name": "Whispering central",
+      "kind": "area"
+    },
+    {
+      "id": "ccea8082-cd90-42f8-a5eb-9219f4ee23af",
+      "name": "Whispering east",
+      "kind": "area"
+    },
+    {
+      "id": "9e04eb1c-457b-4785-a6e6-274c970710bb",
+      "name": "Whispering south",
+      "kind": "area"
+    },
+    {
+      "id": "f5b33a9c-6ec5-4b4e-a141-3b62a4e12e8d",
+      "name": "Islet 1",
+      "kind": "area"
+    },
+    {
+      "id": "88323467-aa7d-400a-a80c-1ae21793670b",
+      "name": "Islet 2",
+      "kind": "area"
+    },
+    {
+      "id": "ff40a2de-eb7d-46f0-ac94-ceec9e62aba5",
+      "name": "Islet 3",
+      "kind": "area"
+    },
+    {
+      "id": "ea2a6605-9c63-461d-a5a5-1284d39db0ee",
+      "name": "Islet 4",
+      "kind": "area"
+    },
+    {
+      "id": "8477e8ce-be54-4814-beb8-6813766a5391",
+      "name": "Islet 5",
+      "kind": "area"
+    },
+    {
+      "id": "3fa47f0b-8e28-4303-a511-2b2cfd15951d",
+      "name": "Islet 6",
+      "kind": "area"
+    },
+    {
+      "id": "d55b5295-e18e-49c6-b7e8-93f415a9973d",
+      "name": "Islet 7",
+      "kind": "area"
+    },
+    {
+      "id": "8c118d79-45f9-44f1-bb03-170bf6845ec2",
+      "name": "Islet 8",
+      "kind": "area"
+    },
+    {
+      "id": "68a8321f-9e57-4615-b51f-ab8e934d1516",
+      "name": "Islet 9",
+      "kind": "area"
+    },
+    {
+      "id": "2d5b8fce-c4ef-4378-ac69-42ae7f0f0969",
+      "name": "Islet 10",
+      "kind": "area"
+    },
+    {
+      "id": "15d88276-776e-4506-b71f-d3a9f95c1d9e",
+      "name": "Islet 11",
+      "kind": "area"
+    },
+    {
+      "id": "6e8674db-13dd-43dd-aba9-d3cae757eeca",
+      "name": "Islet 12",
+      "kind": "area"
+    },
+    {
+      "id": "a9cc17d2-d72e-4235-a0c1-bb99daa653d5",
+      "name": "Islet 13",
+      "kind": "area"
+    },
+    {
+      "id": "b8e14e53-497e-4cba-895c-166ea6f9b8ed",
+      "name": "Islet 14",
+      "kind": "area"
+    },
+    {
+      "id": "c46fc126-189b-4c7d-a4b7-a9322385a024",
+      "name": "Islet 15",
+      "kind": "area"
+    },
+    {
+      "id": "1393331f-d21e-4753-ab0f-f5b46e9b85d2",
+      "name": "Islet 16",
+      "kind": "area"
+    },
+    {
+      "id": "848c47a6-1dd9-46aa-b047-7fd938a19d54",
+      "name": "Islet 17",
+      "kind": "area"
+    },
+    {
+      "id": "05e65f19-1757-4f69-9134-a8e451c510cd",
+      "name": "Islet 18",
+      "kind": "area"
+    },
+    {
+      "id": "60489e5b-62ae-4563-b434-25fcf3b19cfb",
+      "name": "Islet 19",
+      "kind": "area"
+    },
+    {
+      "id": "e344d193-50bd-4dd1-a294-f6f734bf08e2",
+      "name": "Islet 20",
+      "kind": "area"
+    },
+    {
+      "id": "0522f665-cafc-4d7b-8992-a2aa490e68f9",
+      "name": "Islet 21",
+      "kind": "area"
+    },
+    {
+      "id": "383fab82-a88e-4c5d-93bb-b3914c726cf5",
+      "name": "Islet 22",
+      "kind": "area"
+    },
+    {
+      "id": "a8c8e529-76bf-4103-b46b-dca1becbda60",
+      "name": "Islet 23",
+      "kind": "area"
+    },
+    {
+      "id": "6be877cd-f4bc-4ad5-883f-ccf2b3bb5b32",
+      "name": "Islet 24",
+      "kind": "area"
+    },
+    {
+      "id": "292a5c7c-a0a7-42d4-9871-fd0b7790db35",
+      "name": "Islet 25",
+      "kind": "area"
+    },
+    {
+      "id": "a28676ae-502a-4d52-92b7-555cb3a43c5f",
+      "name": "Islet 26",
+      "kind": "area"
+    },
+    {
+      "id": "610fa32f-fcba-45bd-a620-9e659bef59ac",
+      "name": "Islet 27",
+      "kind": "area"
+    },
+    {
+      "id": "2c1d5d77-2144-431b-b3ac-822786d39da0",
+      "name": "Islet 28",
+      "kind": "area"
+    },
+    {
+      "id": "805af593-3ea4-4350-95ff-39a56917d1e1",
+      "name": "Islet 29",
+      "kind": "area"
+    },
+    {
+      "id": "7dd5fcd8-a3e7-47d5-8e72-b91e2d55fccc",
+      "name": "Islet 30",
+      "kind": "area"
+    },
+    {
+      "id": "5d0bcb6d-2b50-43d9-9fae-43ff62f004ea",
+      "name": "Islet 31",
+      "kind": "area"
+    },
+    {
+      "id": "db19c969-44a2-407d-b1f8-7276145c913f",
+      "name": "Islet 32",
+      "kind": "area"
+    },
+    {
+      "id": "9f7805d1-7498-48e7-a52b-8dfc9d85c577",
+      "name": "Islet 33",
+      "kind": "area"
+    },
+    {
+      "id": "dc8ee047-dcab-4912-873a-5e00457acfb8",
+      "name": "Islet 34",
+      "kind": "area"
+    },
+    {
+      "id": "c310097c-508f-4f16-9898-a4714f66deb3",
+      "name": "The northern snows",
+      "kind": "area"
+    },
+    {
+      "id": "e35f4102-8107-4449-b166-30fd25de1735",
+      "name": "Spine of Kaidar",
+      "kind": "area"
+    },
+    {
+      "id": "e874ce86-71e4-46dd-9125-0385c7567245",
+      "name": "Northreach forests",
+      "kind": "area"
+    },
+    {
+      "id": "9ab9f7b1-db3d-4ca1-ae06-20f7320b4952",
+      "name": "Northreach meadow",
+      "kind": "area"
+    },
+    {
+      "id": "4d30b904-54bd-4b81-9fa4-c5ae78209f27",
+      "name": "Westmere green marches",
+      "kind": "area"
+    },
+    {
+      "id": "5d3bec73-6aaa-4e91-b9e0-d9ecbdf36d11",
+      "name": "Eldergrove",
+      "kind": "area"
+    },
+    {
+      "id": "1bb79e21-cecf-4377-94b5-6a6f98a176d1",
+      "name": "The Golden Marches",
+      "kind": "area"
+    },
+    {
+      "id": "d5b29921-5b39-4602-8df6-9defa7f4c38d",
+      "name": "Frosthelm and White Wastes",
+      "kind": "area"
+    },
+    {
+      "id": "0171770c-67ee-4a19-8053-1afd968077f8",
+      "name": "Frosthelm mountain rim",
+      "kind": "area"
+    },
+    {
+      "id": "8160eeff-f4ef-4626-a0f8-304d4352f142",
+      "name": "Mistwood",
+      "kind": "area"
+    },
+    {
+      "id": "68309943-e454-41dc-9cfb-5a6a0b3b355b",
+      "name": "Thornwild",
+      "kind": "area"
+    },
+    {
+      "id": "fd763e08-43c0-4d4f-ae95-bda4c33088da",
+      "name": "Dragonspine",
+      "kind": "area"
+    },
+    {
+      "id": "90c4707e-160c-40e6-9f9b-63e38ade4057",
+      "name": "Valemere",
+      "kind": "area"
+    },
+    {
+      "id": "e9032e24-53f8-415b-af34-f179813d285d",
+      "name": "Sunveil interior",
+      "kind": "area"
+    },
+    {
+      "id": "a347d148-6c32-46fe-8c76-2f82b17e576c",
+      "name": "Khazrul lava uplands",
+      "kind": "area"
+    },
+    {
+      "id": "bf06759f-99ea-4901-9dfa-406213f6e35c",
+      "name": "Talonara rainforest",
+      "kind": "area"
+    },
+    {
+      "id": "bd9b7328-59da-48d4-81de-b348c469f3e9",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "f9d38e38-f2d8-4450-957d-3f5bc9dff2dd",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "8c06b0c1-d23c-48e6-b7f7-1adc1808a2db",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "568ebda9-de3a-46d9-84cf-26924a33fedf",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "55b77041-5693-41dd-8902-2cf47c30deb1",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "3765067f-664d-40cc-afc6-24938635e53d",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "0247622c-0ad6-4e10-b889-f763ae7d9caf",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "50485941-ad35-49df-9018-05b86f55612e",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "3faec8cf-0f8a-4aeb-a868-404655b99ab6",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "e4de947d-d899-4a3e-a346-699f172828d5",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "1bc71ec6-78e2-4298-961e-0db7201b2718",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "3a0266de-d038-473e-855f-ebc190bf84d1",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "ec061b20-34c4-4cac-abae-f96e4d274b54",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "02bf66e6-220a-4ed0-8834-56296dfff1d2",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "7333bba1-4d4b-4750-ac21-b43f8b45ba3c",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "2815369f-78f3-4f0e-91aa-3151ce244606",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "ae013989-dfe8-4764-9109-90202f701692",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "a7f23aea-cb89-4716-9769-b62acccfb202",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "ffdcaf52-9c7c-43e8-8cfc-e3ab4183180d",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "de998ed9-1822-47f5-938a-ef539070d8c2",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "543e9d43-37df-4b4f-b4b1-a7ae2c17366a",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "59564ee2-a285-4c85-9629-7ad52d389bb6",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "3a307d6b-b9d6-497c-bf53-64dc6933bb39",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "4e674db9-8857-46cc-a7c5-6679cb197b61",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "16c0dcec-a56d-445b-a7f6-0830e1ba0af1",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "9ec136eb-9a5c-492c-8197-5c82e3b3fd42",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "52a22103-3af1-48d5-9cbb-990bad0ee593",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "f82df5c3-fecd-43d2-9a91-fedabafab12e",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "ebe46b89-38a5-4b65-aa8d-f3792e7f31de",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "97098074-90f0-4a8b-8ca9-74d2e6d12da0",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "fd761470-1052-49d6-94c3-205394a89f7d",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "fc5e8311-cf0f-43c0-848d-48c9e32ca80a",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "55affd7e-81c2-48f7-824e-d430d207affe",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "93cb1768-ff88-4427-a845-4c2a4d469aaa",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "c4fa5dce-ab26-43a1-96ff-86baae79dd31",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "6a8993c2-a74b-4dad-9005-ba8935245a6d",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "4efe6bb2-e4e2-4b9b-9ea2-b0462581e69b",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "993e2143-f453-4067-8ccb-bd900ebe7c84",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "374915fc-c015-408f-a015-46651054236a",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "051005dd-9cfe-406f-926f-24010a32abfc",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "79cf7f70-fd6f-49f2-b020-20ba04b34494",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "9321ed49-19f8-47eb-b95c-3d9fa4436af1",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "2d8e75b7-23a4-41a4-b7df-8b07bcb02e85",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "02259568-39b3-4f25-af0e-83d2db1104a2",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "638e3244-a198-4356-9a48-a90ba0fb150a",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "8404b895-6b2a-4aff-a349-01ac0278b405",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "9312970a-f4e5-40f9-a2f3-b8f27bd94e68",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "0cfd74f2-685f-482c-9ad1-561b9c92c3ac",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "a3f0831d-6db5-40dd-b2ae-1640bce06a3c",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "b079d8c1-4d66-497b-90a5-06fb3cb8e9d2",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "4a47e622-5bcb-48ed-9329-8bb62ace2687",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "6a6b1344-4072-400d-bf2c-78d41e01b31d",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "94bef126-9526-456a-bd3c-c7bb4f507300",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "fe16979e-6e01-4395-b859-dcb2fea1acb5",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "870bff48-b552-4d4c-88b9-801cee06d490",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "58608e00-6e82-482d-b750-9ac72084639f",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "71234cd7-9a3b-44a6-9a34-65b0732ea5ba",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "35154d0f-2398-478f-99aa-51dd74f9edb5",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "ef3bf60a-3244-40ec-b839-5f606a5746b0",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "2cb4eaf6-239e-49f4-ad8d-2699de60d944",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "5a80476f-526f-433a-8061-ea671f4f84d8",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "fd660600-a281-44e9-b8fd-b1fc73b0e6f8",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "1dd2a61d-51b7-4965-8c84-d8c7d1ccc2ac",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "7e364699-a154-43ad-85b9-991998f25370",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "4ae16d22-9827-4fa3-9148-2f43dfdd7fe9",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "ca0ce529-9853-4dd8-a3da-b31070c61162",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "1a044c89-a35a-4da1-a720-b7e00738e287",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "cc6d299e-b22d-4f65-99f2-8395d24ff6ee",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "f25cc6ad-72ec-4793-85bd-3e509d1e6f19",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "5a7c12aa-2521-44fb-b8ac-7e1bdd1abf94",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "fa97e954-36a9-4695-bc7c-6bf3e4b62be3",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "6b3f2bfc-6dac-4104-a247-438e769f3f87",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "b11298a7-0c81-4885-a2f3-29b28697d6bf",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "b9930231-660f-41a2-a8fb-1e97739b513f",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "37022ba2-1bca-4ed8-b8b1-47ace9fca178",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "b54d6271-4d61-4684-8f18-2ef2d24348f1",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "28f034a4-5b3f-47b7-8e4b-52aa708b451e",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "456e2015-3e9b-480b-842f-a94452ead458",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "b8cfb4a1-62b2-4fb5-9aad-9a8b69ba7a72",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "72fae4a5-f21d-47e7-b87c-0818be5f31ce",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "0610a7cb-e996-4abc-a9d5-f6f904c8b330",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "266ffd16-e64c-4815-8672-ed4fdbb3e6ad",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "4b143481-f288-4d31-8281-2e29b1f9fb3e",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "1b587e5f-15a3-448a-b5a2-b217fa473e32",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "517e6e38-b6f8-446a-9a19-1e6a31364406",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "11775cba-057c-419e-a833-ee0eeb42ac20",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "9ddfa6e6-1b5c-441a-b2e3-3eff18140786",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "269146df-f8d5-4a77-85a5-e3abe83be100",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "8ca38c2b-c827-41b1-82b7-4b30cef4f283",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "19ade41b-482d-4b37-b008-b2254f249db0",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "e0949131-385b-4b06-8a03-12f0cb96c8c5",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "c3caf7d8-688a-49a6-8033-16e4e868c9e6",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "59b7fd25-310e-4cf5-8bdd-6c694fc6edd0",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "0473a195-97a1-4e6b-94b8-f6fb458d0026",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "a9fc25b5-fe35-4625-b234-5417213e615b",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "1dcd1b49-6d3f-4ba1-9fc9-c4592549810c",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "bdb3cfdc-c03b-40f6-a46c-8bcf914d3e1f",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "9c775016-e439-4ee2-8e0d-d9cce9934d10",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "2f4a361b-f9ce-46e9-bbb8-d4c8ef68aa03",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "e7c41a76-6449-4f79-b58b-69e349918b69",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "661a3efb-d88d-43c1-9d74-eaaf14bed996",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "99e976cd-7a3b-4544-9116-8bb7c77bca7b",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "fe0f5ba2-284f-4e1b-b25b-d5ccaafd956d",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "ef8ae638-8eab-48b9-8dad-5ce35ef15cb0",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "0aacd535-37d6-4ec9-92ba-6eddb03979d0",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "fb75555d-5f6a-4a7f-80e2-2cd71f895753",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "65ae182a-97b4-4db7-9e8b-3915c0a516ab",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "865915b8-83f7-4cfd-a9d8-da4b27a8b01f",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "22c1bc4e-1b94-42e6-a426-435951a25837",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "a807a485-f04d-4341-8993-84d294f81d46",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "b1a41f45-112d-4659-b98e-1a4d7bf9af95",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "7118660f-2da7-4dc9-bdd2-864f7e43fb37",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "3ca06f6f-7030-4a7a-95d1-3eef5b9ddcce",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "186d6506-d5ec-4bb5-ac11-ca19b172fb9e",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "eb213c3a-1a97-475f-85c1-a36778211668",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "2e478044-f0a3-4897-b20f-6b133291cf0f",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "117efa7c-d205-4abb-af93-eaa7394865a1",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "2c4342d4-519e-44e7-bb65-4278f1005a71",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "89dbd00d-f8f3-4224-a85b-7a91a0fc9322",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "7b76826a-8661-42ff-89c8-779854adbec3",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "c7fbeef2-3874-43f7-b193-e25e8174cb0e",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "5d40f540-1af8-495d-9c67-f384d578242b",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "601362ed-14e2-4436-b511-3918d7ea1f57",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "ca955de9-93af-4e62-8119-29eff4908f6f",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "d86bb80c-2c3e-4c7a-b8b9-eb23e5957059",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "b840a227-232a-4f23-b110-f1cccbb140b3",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "f6cf93d5-6dca-40d1-95ad-c0e347d0ca65",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "9e8a98e2-04ad-48d6-ae0a-b3d73f4a49f4",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "1e969bbe-5080-45c9-8514-208a64004ec8",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "94e1fa10-8663-4b61-9503-0a62b2f532ef",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "195656ac-c96d-4089-aedc-164aebe3713b",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "6765d30c-a0ae-4a7e-b604-f1fd34d04866",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "fccf5ac6-f30c-4750-985c-f327c45eb379",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "cd1a34a8-2648-4b3b-b2d7-6ba832564ea5",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "96167924-7549-48b1-8552-3be29cf298b9",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "481b79c1-49ab-47b6-a5d1-e40f1a1feb56",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "289f7542-2b76-4101-92c8-4233d205aebe",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "a5413ba4-6802-4f7e-907f-8627774e2429",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "9d91118f-b8be-4164-ae26-ecfdaa0d6ed5",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "0638a8ae-a66d-4f0c-af8e-3f5ecddb718a",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "716105f6-bc56-4f67-b1e3-bc7b73e29e1a",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "59e0a3da-2e94-4898-91ee-e9f839669fa5",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "d344b232-b550-4ecc-b619-ee9bc774ea70",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "de16f65f-e6c4-442d-8233-e23614448823",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "1eb707ee-5d39-4e98-93a2-04aadf3c4d1e",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "fe0f5304-51f5-4a35-80e4-870ba9e3bf05",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "61103411-2302-4059-a978-22ce2b352a7d",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "800f7f27-5cc1-4e1f-930c-0dce558d1f2e",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "2b2039b2-4ab9-4960-adfb-e5e46277643d",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "734a4eea-b9fa-4938-99bc-085f5b9edc68",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "0378e675-dd64-44b3-9ca6-8dc81dd5e224",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "393ab6f7-7084-4258-bc9c-b0aa5ad88180",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "c10040f6-50fe-4288-ad86-ae4a9c67bdd7",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "4d9c2df4-ce54-4ad3-8b1a-400fce1ea3ef",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "b3fcc0df-eaf5-4131-bd30-d48f6380e1d8",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "efbb696f-51c2-4f37-aa3a-612adca15292",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "69423bb3-3743-4498-bafd-71935b6741fa",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "49609ece-c0ed-41ad-aa10-74966379d715",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "ec37be09-ef8f-48eb-837b-c2b6cdb2d8c7",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "b695ce4a-652e-47b4-a4e0-faddba46691a",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "c4949cf8-e517-4f97-9a46-5df80838a38e",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "7a63d5b6-8cad-4ac2-9b67-1f80bf9e1042",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "f0beda44-0ba1-4467-b407-2ab866c1996d",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "f2f30537-df21-4e92-b985-a57ad8ffa701",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "da1abc00-f924-4ca8-8c6e-c742f353bec1",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "8b6f7141-1c39-4099-ae7b-c5e81b6ee1de",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "53ac01df-b05a-403e-9ba5-3c509d19c345",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "493e848e-f260-49fc-9633-aa47dbc61d0d",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "e19cda85-a18f-4fc3-a6ab-5f6cc999cec8",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "ca1809ec-2298-4086-b0e2-3c8504d564cc",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "afc6d117-779c-4be7-9d22-721b91a4c075",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "36ecbd34-03b9-4d88-b4c7-de97586d8b0b",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "de1b113c-32e1-4f7c-b399-59601f9b0af3",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "ded3154d-2020-4381-ad4f-9b6f0f8a2485",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "f4333f74-1e7f-49e8-ba8d-348225e3c188",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "bd415401-c4ed-45a0-8817-221474396f52",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "3fd8eefa-a7e5-4297-8ce1-31d1ba662c05",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "7faa4aae-5494-4eca-9b48-256d47679a3a",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "f0842392-d0c0-45e8-95d9-2413a3dfd6fe",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "7e268b14-6d5d-4891-8cf3-bada38f3aa66",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "a61a61c8-fd82-4e01-b6a3-314fe0afa28a",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "4cd2ea6a-96b4-46fd-8e6b-5795d99b441d",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "52226414-eb86-4850-9514-c0f01bf04d8f",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "ea693780-cac7-4288-b3fc-1f7eb3818bc5",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "fc24c6df-935c-4983-9221-cb77d3b6e7c5",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "1e69a603-5cc2-4497-ae2a-9570f9a4ac49",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "1439ac69-ff43-4c26-91d3-2a0b58d1933f",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "22323ff5-78bd-4170-9df8-04c38300a23d",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "955e4cb0-5592-4760-b409-c580c295f251",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "9667c5b7-54fd-4615-8274-e9e478ac801f",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "f8e74e1d-aa0d-4d74-ac44-02f9947b51c7",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "d98e38e2-9578-4f4a-9312-ef961c23d8c6",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "69b0f893-dacd-4f81-8ad1-e33904702c81",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "b61edb0b-c9b3-4aab-a1f5-176849f4d4a7",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "742c5323-7f1a-408b-ac00-567228ca7877",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "fff7705e-0725-479e-adb1-991ba8513e3a",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "e32263c3-9b3a-403a-b324-fc19905895e7",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "3f3e5dd2-959f-44b3-abc8-597540d0c3d6",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "3216c57a-4d1f-4616-909f-1824fb3c15ef",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "0ffc9d38-82b5-455a-a770-023421155aa8",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "4f690c4f-be34-4396-9564-c25f81ce3067",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "a99aaf77-16b7-4be3-929f-b04cbab63af9",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "1271fcfa-0dd8-4f42-9b58-af7ca679d3d5",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "bfba9a93-63e4-45b0-acc9-e104298a9e27",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "eb482a6e-866a-42dc-89f7-9bc8befca19e",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "dfb91f2f-238e-4ea9-a1e6-3ad4fe25e612",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "76454e47-c6d5-4e0d-838e-576d0f608e21",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "0555ceff-4797-406e-92e4-aca43f0388a5",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "4a79e7bf-d30a-49e2-823d-ea22ea93ef8d",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "1f4e4a55-134b-43db-8f40-29cf73c1481c",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "a23eb6b2-5276-4e1b-adfa-ccac0112eae9",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "f8df0c56-50a7-4ee2-b027-cfc60136c613",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "63605029-077a-4996-8f59-a1a45031b0c6",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "1041e056-c4ae-4f56-b5a0-40c2b42b3df0",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "a1fb9735-7d10-4701-9e02-a18849cdbf87",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "790ad5d2-ca65-40e1-8b45-ca87b1dad53d",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "72cfe609-4da7-4cdb-aca2-8dc79971350a",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "9bc99546-7691-4a16-84e3-65fbc7bb6e31",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "deda485d-7470-4523-9a6a-0275931c5d79",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "a2f3a5f8-4cc8-4af8-a87b-76612a275f32",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "b4645a57-570f-4028-80c9-850ee1e23aa7",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "642e8d37-4f2c-4921-a180-b9cd551c0a7b",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "b1616cf2-d138-4d14-9d99-f07a94ddebe6",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "806cf0ac-95c3-42f6-8eac-65d04e3b24c7",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "6cf73f6b-46d6-4a41-9202-656aa5c9384a",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "c0487ae0-7679-4dfb-adb6-f40d9f9d5eb9",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "e9a63584-335e-4f87-a6f6-e210b4c8e642",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "281df3c6-bae5-4a58-8a72-503c0dc6123b",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "9b7cf8b2-78eb-48e5-9787-0e3eb0909c7b",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "d8d17279-47f1-48c4-9176-30af55171c26",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "13ff4fb5-1ead-483e-b899-0f38b2729d91",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "a9f157b1-ae1f-41c9-be4c-39e2dd05c6a4",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "5e18d58b-560f-4f84-8fad-a814acbf841c",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "10b4df13-aa81-4d88-a58c-96a97def880f",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "bbf0a5e1-65a8-4d45-90e7-8778efbfb00a",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "24ad307a-6bcc-418b-a5af-ca0e73dbfbb0",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "255a2dae-e2d4-4a1c-8c2e-8b0cc6a23ee5",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "fc1003bb-819c-4ba7-8654-05babc285bd0",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "59418614-8dcf-4815-ab0a-a5dff5230755",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "40ee175b-bc19-48c7-941c-bd82330baa67",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "b727d7d2-56e9-4aa7-82f7-92862b2de0fd",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "6fe77ce7-631f-49a8-9632-c484a7edb72f",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "fc2eb11e-f59d-4b1d-a5da-316fd357a927",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "bb63c8c0-311e-43d0-beb0-54cf1c1af1e3",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "4ecb7b64-a1c0-402d-a678-ce498f914f09",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "35a584f4-7599-472f-88c5-6f90e47d6914",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "4b3379a4-8062-4e18-856f-b4697ce37e7b",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "d39def57-ccf6-474e-8df2-14e1572c3a0a",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "9a4aeb94-d24b-4ba3-b5be-f97ac0df4a69",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "b0027d51-a754-473c-a297-130c147dded5",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "aa58d949-a472-4b0b-88f5-53c8c071811c",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "89711940-f836-4563-9c79-6d9c7b0021aa",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "b018cee2-5824-47aa-938f-8503988d2c78",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "4ffe56b2-bdcc-4e16-af2b-c00f7d241055",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "734a03fb-1d07-4813-b34f-c00cf66561dc",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "90c547d9-0f2e-4382-9688-799eb6f6e985",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "80147d02-eefe-4896-aa50-0f20c0612a41",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "7088cfd9-ab43-43b5-b4d7-194f26474788",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "ff957f45-6ef5-4d39-9fb6-399adb7fe166",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "2e0d8d86-3700-4a46-9fbf-18df5946bb74",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "895548ef-6d1e-457a-8252-9ff1492269c8",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "5e805340-2fa8-4cb8-a518-021a32fee77f",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "008759d7-dcea-40ee-85aa-12c89cfe75e0",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "63a34c1c-06ed-4c50-9725-d7fb291bdc4c",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "41609c42-7acd-4cd9-b996-8cf97414a400",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "0c6b473c-297b-4a5b-b049-1ce2c8422d53",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "8da818a8-35bb-4d37-87e7-0033f152020b",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "88319b4e-46cf-44d6-8f8f-f6fe4b577585",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "db297e12-882a-4575-9469-8c2797bb7f73",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "c5e4659e-b8bf-45e1-8746-c4b162963c83",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "286c3ba7-b42f-4735-938d-ac6d5b8e8d04",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "0753e96c-3a32-430b-a0d0-ec60771a4425",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "356ff285-a7e6-42f9-8406-3650e436041c",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "1bbe8bcf-dd77-4e96-b008-c0290b49d8ec",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "d1ef887f-e292-4718-a118-f23847071eb5",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "ceb14775-443b-4cbb-9e12-9075f082efc0",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "e88aa5a2-bbd3-4cbb-8fc6-52984f832efc",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "684ac2c5-a8bd-4bac-8c51-d2f516fdd491",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "6164482d-c8c1-4f08-9dd3-1615cca749fa",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "eed8bac4-6fbf-455a-9dde-51f08e01e86a",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "75a0d755-0b5d-4585-b324-505ab77e2c11",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "5f948c69-cc76-44f5-b54c-631cd02db1a3",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "3cdcddbf-fc5d-4ec4-9799-2fb7ae66289a",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "9d947cc4-14e4-4af0-a8ea-379dee5bebe5",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "88320d5d-4442-4740-ae59-cbf17590bf73",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "254b8edb-6e30-437c-bea8-789be1bf1b0e",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "abf457db-07cb-4e98-a8c2-b1b425f4a837",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "6b9c7221-432d-42b4-9bf7-1743508c02f8",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "5ea1d299-9298-470d-8a00-7edc7b485404",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "59a78432-4363-4a61-969a-7ac485849a73",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "9d1c47ae-2fe4-4c73-ab74-7ffd94b19286",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "aa640cf6-3c44-483e-aa29-fd680644bd5d",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "1feafbd4-152f-49b8-b2ba-1ceb59491fd5",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "e299269c-648f-4e05-ae48-80662abfa672",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "2197fb1b-2bbb-479f-a177-3885b4f496de",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "68546bdd-22fa-4ae0-b873-895677136e26",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "12ee6665-c529-4369-8b3f-a443b09790d6",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "c3657ba3-22c3-40c7-a017-53360a2b97e5",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "ed3de77c-2f88-43ba-b711-068ae368a3e9",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "f0118465-7874-4eb3-a75e-78f4d7719901",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "f5090679-5420-47e2-b504-f17aaec24b2a",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "00de567f-3292-48a9-b1c1-9b1ac51ee378",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "5ef3e0a2-04e5-4eea-bb89-8b23b6db8fa2",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "3dc7e434-50bd-4b7b-9072-2a2a1573a575",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "6b40072c-6f38-4901-af27-cd20fc0e1c29",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "1f218e90-bacd-4573-b97d-26832acca16c",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "e0f80643-54db-4eed-9b86-4ec12e7ffb81",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "dfba9084-83c0-4262-98b3-c4c5e3c89b8d",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "8d74e7e7-c8df-47f1-8cc6-ec56d097be00",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "7bf78396-7dd1-4624-b25b-3e07f9e3fed9",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "56128467-8320-49f8-8179-b22cff44bc02",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "4954957c-d45a-400d-899d-a7c77d707ad0",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "d165a453-bd39-414d-8977-13f1c341bbf2",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "c35789be-86de-4069-b810-fcb0ac9d89f3",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "ef5cfe96-5708-4e6b-8622-5aaa0bbd731a",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "911fe986-226f-4c1e-91f3-ff1bbcf650b3",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "f7c027da-c2f6-42e5-87f4-29083957114d",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "e5850d5a-4319-429b-8b90-6c88139f5172",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "38990d7f-d5ee-4ea6-a275-69420bddb0fd",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "91b25a98-e68c-4856-b217-fc86b6f6964d",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "6b40b554-97b7-42c1-965c-7aa62f0e9242",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "e7809f1d-7a61-463b-b116-208983e52cd4",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "0cfcff8d-03e8-464c-a6ea-f455f9bd0146",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "806a7874-91b4-4533-b13b-21b0ce36aa41",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "06bd1104-b835-444b-a95c-8856bf683ed1",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "b523780a-abb3-4996-8822-7c8a0e0e6e94",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "3caca949-200e-44ae-99b0-fe720276fe76",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "63efd2f7-73aa-4e5f-89b1-45adf7ee8d9d",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "18cafc54-d72c-4b14-b470-9e1d84a302fd",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "3c4d6cb0-9f9b-49f0-b63f-2e45ff8f2714",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "b87579d3-7875-4218-8bcd-3e1adb4da44d",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "b1d98f5c-0aff-4e47-8c28-a0fe21efbad5",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "f2da4b44-c936-483a-b6c7-7f2f7a8bbb8b",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "091e03bc-0d39-46ba-a645-e176adb3c157",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "b9d974e1-a160-40ca-8aa6-4fe17e049c0c",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "052bc30a-c453-4f16-aa64-ae5fb417cf8f",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "067e3e1c-29b0-429a-88a7-0e0a4fc16536",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "6c9ef025-cc75-4e4b-82fc-267f03ae2c2d",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "b5d779d7-6e9b-4e3a-9fe8-f6f570c37158",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "7ec84009-c774-4e41-965a-4c26778999f7",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "2b6a5325-88cb-4570-9ba4-c9a657fb2bb8",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "3f8e0d21-d6ee-4327-9204-c6fc71083ce3",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "89cd4855-30ce-40c1-8dbb-d87e5bd08bff",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "b006c599-40ec-41b6-802b-87def46e4c6f",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "8819bfad-3f77-4605-bba1-04c2b523dadc",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "cd1d93e5-7596-4084-a7a3-d2571f3767af",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "6f94067a-3b4e-408e-9de1-e46435268d8f",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "34077d87-8211-4dea-8ffd-7f8530da9547",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "7e7db5f5-72b9-4429-bcad-1153097c7bac",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "ecbc5650-3c5a-4b1f-8cc3-8b9834d7499e",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "1097e5df-8065-415a-8759-3a3410834b4f",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "8189788c-2139-41f4-8c8a-3a99102d3fc9",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "acbf0fc5-5868-43b2-aadc-b29f11bd640f",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "9cb01e8f-d3ee-4e46-904d-26c1e5e4311a",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "5d7af2f9-63a8-4c33-adc8-353907e2d3df",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "690052d1-d031-4f1c-aa00-8df108ac0aad",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "886c5162-2382-4ce0-bab0-7b16a60fe8b8",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "7d217869-8d2e-4cc6-9d84-061f80e3124f",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "bcf2570c-e68f-4796-b764-91283d596a88",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "6951b2ed-e8fa-4056-add9-a50f40970b32",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "670608cd-9721-4280-a22d-c874ade2df8f",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "8b91091d-0999-4ae8-85ee-3d5d092d1aa9",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "1957db5f-f098-4ced-8bf2-e58df4877086",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "97f70f71-b9eb-4229-9f4a-77199a37996f",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "41990506-84a8-470a-bfd8-2bc9cd768343",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "83379bb9-5637-4572-9fa1-8c2c326253d6",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "f9399cf1-a4c1-4955-8560-f3e7149231de",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "43cb6dc1-6838-4364-a693-32378df532c5",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "b93778f2-43c5-435b-a8b0-0dafc9753697",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "fc6b8c31-84c0-4a55-88e0-8d529410c755",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "95bd48a8-3cc1-4ef0-848c-6df6dfe7f326",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "705d2700-df22-46bb-8123-a97f013619d7",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "fca44650-7267-459f-8ff8-1fda32f398f9",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "e6ad7caa-f51d-46b6-9d1d-fda3c346e1a5",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "9a7f0ff2-990d-476e-af63-009e8bd22a4e",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "61d60e09-b740-47d9-979f-0fda78cd8e91",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "d2a5d0f7-c0a2-4f32-9d18-918401ee9b8d",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "722d1cd6-d6e9-4840-928b-07668707341f",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "aae1cdcd-8e6f-4710-813b-025c6c01cc53",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "e639198c-076f-4a44-919b-192e280df185",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "cf5add65-d080-4610-8cb5-23418c63170b",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "298e4e93-4f78-43a9-8f97-034007925a87",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "bf2fab3b-8855-4b51-86b3-a50ac3873b7d",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "4ad68ef8-9765-4e4f-8195-ba5a3aab44c1",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "9c061013-1ac1-46fb-ada6-d374816fe58b",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "9b49e592-9706-4355-b554-163da81f91d8",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "a8c85924-6e89-4164-abd1-aed671a21269",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "56b2ffb9-3cbb-4014-b5ea-fe992fe03eae",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "3796fb5d-c739-45f2-87d5-0f9251d25403",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "b50e226b-3d00-4b16-a421-e909ad54b78e",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "7adc7f30-6982-4cd3-b2b4-16d6d0329c79",
+      "name": "Painterly Broadleaf Interior 01",
+      "kind": "stamp",
+      "assetId": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e"
+    },
+    {
+      "id": "feb0a914-e02c-4090-a4e0-90eea62e0e73",
+      "name": "Painterly Broadleaf Edge 01",
+      "kind": "stamp",
+      "assetId": "fc152095-b889-4a87-a74b-42b0526ce428"
+    },
+    {
+      "id": "eafe974e-b8ee-4479-9690-ca79c8f75dcd",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "fe865b3d-d819-4cb1-ae4b-bb6d262a4201",
+      "name": "Painterly Broadleaf Interior 03",
+      "kind": "stamp",
+      "assetId": "56c1a4c8-e351-45f2-b95a-662c50740ddc"
+    },
+    {
+      "id": "21e13ad2-84b6-4d5a-b19f-3ac8bc2d9429",
+      "name": "Painterly Broadleaf Interior 02",
+      "kind": "stamp",
+      "assetId": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2"
+    },
+    {
+      "id": "ea61faa0-9543-4c09-8f46-1317741b9dc2",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "7881fff3-6397-4459-bd4f-8a47edd65d67",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "d4f5883f-fdaa-4482-a307-9deb6a656440",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "8c8c38dd-e47c-46c6-8a70-6178ec16686c",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "ab2807a3-b803-4725-b657-26c85ed74772",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "8434c96c-9168-4e32-91d0-7f54fbbe3860",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "b060d6f7-27a8-4e67-be88-8890c4cff13e",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "a7ea93c0-3709-4cb3-bae6-bdc3a6f1fa20",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "7a5ed3f0-b111-4f81-b056-21444992753f",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "8518ac35-6719-420c-916e-b7886633c742",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "c0a5cea0-4c52-45f7-9968-ec408c397cb5",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "85f576f7-0992-4aac-a92c-343ff80749b7",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "c8d82a09-fc7c-4c6a-8412-4722f52c0d88",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "35fb1fe3-cf53-4887-83ab-3bd54b4425d9",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "227018e2-5a5d-46ae-9892-67379461b5dc",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "ad510312-440e-4b05-8313-0061e0d2e55d",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "2e1e1892-4412-4cd1-a963-b315d5bbf103",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "567fba34-7b1e-40b2-94c0-3510701d1302",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "fa3a0940-40d9-4615-92e9-be7d896356b1",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "fd3d99d0-0b16-4202-a0f5-116669a843bb",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "b16cf224-dbd9-4087-a3d0-6573785e648b",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "cff8bccd-977b-4272-8636-f44dd0af5eee",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "8b0fa7b9-3973-4692-a952-c9d1763b9698",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "042b84fe-c7ca-4cf2-b255-e303119893ee",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "3663fc9f-7030-4149-a364-e0428ae392cc",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "d021eb06-c0c6-4a2e-bbe0-9bacb454803e",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "e9ce8b32-acbc-4fb7-bf7d-78aa53af56b3",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "e17b4dd2-dcc5-4f8a-9303-e6614db05ae9",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "2f2248ad-18ef-42fb-9f47-3ad41346891e",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "43d5ca8c-1787-4404-aa72-590239150726",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "80c85681-5d8c-4449-84d9-935d87848d1c",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "3b033f3a-c7c2-48e3-8c0c-03b76e1c02a2",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "6783c2f8-658e-41de-95a9-e4e404543594",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "c9f030c0-575a-406e-84ae-858ab89e0a4c",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "90e0592b-e2eb-4819-9103-38e7b808c02f",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "5a2b4aa8-db54-4fcc-af21-4bfd47b95ce7",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "18897b8e-91e3-48fa-ba8a-b73e45df6470",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "4e58052a-7521-46d6-9793-327838c80e25",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "6b57ff04-4bbe-485c-84d4-410d4c7d7911",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "d53b7aff-3ea5-45c3-9102-3cc932521e48",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "5bec8e05-61ba-4175-9a54-148b9b73ae5c",
+      "name": "Painterly Swamp Interior 01",
+      "kind": "stamp",
+      "assetId": "275de62f-b418-4bb3-a228-dc00d095fc5c"
+    },
+    {
+      "id": "523c42cd-b0aa-47f8-852f-aebd5f9ecd4e",
+      "name": "Painterly Broadleaf Sparse 01",
+      "kind": "stamp",
+      "assetId": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80"
+    },
+    {
+      "id": "5c8d537d-1b30-4519-97cb-5d92be7620aa",
+      "name": "Painterly Peak 01",
+      "kind": "stamp",
+      "assetId": "11b6d4a3-9fce-4fba-92cd-264e1648e23f"
+    },
+    {
+      "id": "649581a1-135f-45c0-9318-e0f1095ff338",
+      "name": "Painterly Peak 01",
+      "kind": "stamp",
+      "assetId": "11b6d4a3-9fce-4fba-92cd-264e1648e23f"
+    },
+    {
+      "id": "f35d9cec-b05c-4dff-9b05-4708830b807b",
+      "name": "Painterly Ridge 01",
+      "kind": "stamp",
+      "assetId": "59f765c9-11cb-480a-b24d-4950b5d69b94"
+    },
+    {
+      "id": "460a638b-58de-4c43-8b8a-b62e9e021ff7",
+      "name": "Painterly Peak 01",
+      "kind": "stamp",
+      "assetId": "11b6d4a3-9fce-4fba-92cd-264e1648e23f"
+    },
+    {
+      "id": "dc5711e6-14e3-4bc3-81a7-fc212185dec4",
+      "name": "Painterly Peak 01",
+      "kind": "stamp",
+      "assetId": "11b6d4a3-9fce-4fba-92cd-264e1648e23f"
+    },
+    {
+      "id": "a1f233fd-d189-4d27-9119-8265f93df918",
+      "name": "Painterly Ridge 01",
+      "kind": "stamp",
+      "assetId": "59f765c9-11cb-480a-b24d-4950b5d69b94"
+    },
+    {
+      "id": "12f30974-32ef-4af7-bc2c-3c04d6da74ab",
+      "name": "Painterly Peak 01",
+      "kind": "stamp",
+      "assetId": "11b6d4a3-9fce-4fba-92cd-264e1648e23f"
+    },
+    {
+      "id": "41bdc4e6-434e-4fd7-bfbe-01911e6163b0",
+      "name": "Painterly Peak 01",
+      "kind": "stamp",
+      "assetId": "11b6d4a3-9fce-4fba-92cd-264e1648e23f"
+    },
+    {
+      "id": "63769e68-b5c1-4e18-8261-221a61ef9103",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "99ca7b4a-a397-4946-a8b7-e1e44903bc7f",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "930f1bd5-9621-43f6-9011-a490bdc65d9e",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "5ad2134a-95ed-43ef-a5b0-87bc192e4107",
+      "name": "Painterly Peak 01",
+      "kind": "stamp",
+      "assetId": "11b6d4a3-9fce-4fba-92cd-264e1648e23f"
+    },
+    {
+      "id": "f473f775-4a69-433a-a89c-46326dd825b6",
+      "name": "Painterly Ridge 01",
+      "kind": "stamp",
+      "assetId": "59f765c9-11cb-480a-b24d-4950b5d69b94"
+    },
+    {
+      "id": "a6763836-d8e3-46fa-a636-36516c3174c0",
+      "name": "Painterly Snow Peak 01",
+      "kind": "stamp",
+      "assetId": "8d200574-62d7-4b14-8f09-026aa13f1c88"
+    },
+    {
+      "id": "bb4588f0-648d-43b3-9929-0d5831baf918",
+      "name": "Painterly Snow Ridge 01",
+      "kind": "stamp",
+      "assetId": "cbe0d2ce-d8d1-4e0f-bed4-077a2126bff4"
+    },
+    {
+      "id": "f57b59cd-0599-4c5c-921f-4e73214489ea",
+      "name": "Painterly Snow Ridge 01",
+      "kind": "stamp",
+      "assetId": "cbe0d2ce-d8d1-4e0f-bed4-077a2126bff4"
+    },
+    {
+      "id": "aca6c2a6-f983-47b8-b7e6-cd643a07bcc7",
+      "name": "Painterly Snow Peak 01",
+      "kind": "stamp",
+      "assetId": "8d200574-62d7-4b14-8f09-026aa13f1c88"
+    },
+    {
+      "id": "cd91f0fa-e0e8-4693-b24e-29909924a254",
+      "name": "Painterly Snow Cluster 01",
+      "kind": "stamp",
+      "assetId": "e3dffdcd-3162-4f64-8c7e-bb5aefe0844f"
+    },
+    {
+      "id": "33c08830-c79e-4f62-9eb2-12e71b3b53e4",
+      "name": "Painterly Snow Cluster 01",
+      "kind": "stamp",
+      "assetId": "e3dffdcd-3162-4f64-8c7e-bb5aefe0844f"
+    },
+    {
+      "id": "bce829c2-8c8d-479c-b61c-eb2b93669ed2",
+      "name": "Painterly Snow Peak 01",
+      "kind": "stamp",
+      "assetId": "8d200574-62d7-4b14-8f09-026aa13f1c88"
+    },
+    {
+      "id": "d9fdfc98-0012-49db-a8bd-7c845d038d79",
+      "name": "Painterly Snow Cluster 01",
+      "kind": "stamp",
+      "assetId": "e3dffdcd-3162-4f64-8c7e-bb5aefe0844f"
+    },
+    {
+      "id": "4cbb8cb2-fca6-4174-85aa-595ffb83d837",
+      "name": "Painterly Snow Peak 01",
+      "kind": "stamp",
+      "assetId": "8d200574-62d7-4b14-8f09-026aa13f1c88"
+    },
+    {
+      "id": "72be4100-c579-4c86-844a-6130474df012",
+      "name": "Painterly Snow Cluster 01",
+      "kind": "stamp",
+      "assetId": "e3dffdcd-3162-4f64-8c7e-bb5aefe0844f"
+    },
+    {
+      "id": "8b8c5554-9176-43b9-8bec-4db70df151b6",
+      "name": "Painterly Snow Cluster 01",
+      "kind": "stamp",
+      "assetId": "e3dffdcd-3162-4f64-8c7e-bb5aefe0844f"
+    },
+    {
+      "id": "e304c47e-610a-4844-87d5-9bf3095089a5",
+      "name": "Painterly Snow Peak 01",
+      "kind": "stamp",
+      "assetId": "8d200574-62d7-4b14-8f09-026aa13f1c88"
+    },
+    {
+      "id": "c220a371-41e5-4156-bcde-ac5d57c08443",
+      "name": "Painterly Snow Peak 01",
+      "kind": "stamp",
+      "assetId": "8d200574-62d7-4b14-8f09-026aa13f1c88"
+    },
+    {
+      "id": "9d4e472f-086c-4457-8b2e-f5a8d27504b8",
+      "name": "Painterly Snow Peak 01",
+      "kind": "stamp",
+      "assetId": "8d200574-62d7-4b14-8f09-026aa13f1c88"
+    },
+    {
+      "id": "0371afba-b47b-4051-b6a0-65abee30ec25",
+      "name": "Painterly Snow Ridge 01",
+      "kind": "stamp",
+      "assetId": "cbe0d2ce-d8d1-4e0f-bed4-077a2126bff4"
+    },
+    {
+      "id": "784ab590-4ba0-486b-b9ef-10c6a838571f",
+      "name": "Painterly Snow Cluster 01",
+      "kind": "stamp",
+      "assetId": "e3dffdcd-3162-4f64-8c7e-bb5aefe0844f"
+    },
+    {
+      "id": "de3eb2fd-ab27-4131-8fcd-3de5d50e418b",
+      "name": "Painterly Snow Peak 01",
+      "kind": "stamp",
+      "assetId": "8d200574-62d7-4b14-8f09-026aa13f1c88"
+    },
+    {
+      "id": "93165f30-7b1d-42b7-928d-80f088f17b47",
+      "name": "Painterly Snow Ridge 01",
+      "kind": "stamp",
+      "assetId": "cbe0d2ce-d8d1-4e0f-bed4-077a2126bff4"
+    },
+    {
+      "id": "0e5c6805-7283-4ae0-a561-da62a826f544",
+      "name": "Painterly Snow Peak 01",
+      "kind": "stamp",
+      "assetId": "8d200574-62d7-4b14-8f09-026aa13f1c88"
+    },
+    {
+      "id": "83acd1ff-0679-480c-80d2-5afb65e1bbe5",
+      "name": "Painterly Snow Ridge 01",
+      "kind": "stamp",
+      "assetId": "cbe0d2ce-d8d1-4e0f-bed4-077a2126bff4"
+    },
+    {
+      "id": "979834d9-b9c4-4296-821a-863b62a93759",
+      "name": "Painterly Peak 02",
+      "kind": "stamp",
+      "assetId": "8cd605f5-cbc5-4994-b61c-2d9584ef9eb0"
+    },
+    {
+      "id": "729e2b95-f2fa-4a4d-8302-2a0b7732e724",
+      "name": "Painterly Ridge 01",
+      "kind": "stamp",
+      "assetId": "59f765c9-11cb-480a-b24d-4950b5d69b94"
+    },
+    {
+      "id": "f5bae6f9-0cb7-4aca-962e-c9a51f45ecdb",
+      "name": "Painterly Ridge 01",
+      "kind": "stamp",
+      "assetId": "59f765c9-11cb-480a-b24d-4950b5d69b94"
+    },
+    {
+      "id": "60e64825-1b07-4522-a5e8-d06e4cb1aa28",
+      "name": "Painterly Ridge 01",
+      "kind": "stamp",
+      "assetId": "59f765c9-11cb-480a-b24d-4950b5d69b94"
+    },
+    {
+      "id": "acbf54e2-7efb-4d07-9bdb-7dcfbb508f02",
+      "name": "Painterly Ridge 03",
+      "kind": "stamp",
+      "assetId": "f9e1291b-a30d-4ff7-b895-7c3f6fc99722"
+    },
+    {
+      "id": "9c79822d-9e93-4084-87d6-8d16aca378ee",
+      "name": "Painterly Ridge 01",
+      "kind": "stamp",
+      "assetId": "59f765c9-11cb-480a-b24d-4950b5d69b94"
+    },
+    {
+      "id": "0383dbd3-6913-4cc0-927b-aef2b637fd29",
+      "name": "Painterly Peak 02",
+      "kind": "stamp",
+      "assetId": "8cd605f5-cbc5-4994-b61c-2d9584ef9eb0"
+    },
+    {
+      "id": "e2b4ac93-da33-45ca-a9da-dece123c831d",
+      "name": "Painterly Hill Arid 01",
+      "kind": "stamp",
+      "assetId": "1d372590-15ca-4d96-8588-368f7036f881"
+    },
+    {
+      "id": "50eb2cdf-2ebe-497e-9e0d-625ed3fa81fd",
+      "name": "Painterly Hill Arid 01",
+      "kind": "stamp",
+      "assetId": "1d372590-15ca-4d96-8588-368f7036f881"
+    },
+    {
+      "id": "c4a503ad-af88-4afc-9e78-75c502531a54",
+      "name": "Painterly Hill Arid 01",
+      "kind": "stamp",
+      "assetId": "1d372590-15ca-4d96-8588-368f7036f881"
+    },
+    {
+      "id": "e3ed75b3-e7de-461b-9e8d-6e867ddc35ae",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "ac385916-2b2e-4ef5-b3bb-03a3e8f3dfa8",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "16bde0a2-8887-49ff-aa4c-887aea2dd8f4",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "9a57590e-e233-4ad2-951b-4946a119e790",
+      "name": "Painterly Hill Arid 01",
+      "kind": "stamp",
+      "assetId": "1d372590-15ca-4d96-8588-368f7036f881"
+    },
+    {
+      "id": "010d8857-dfc1-4a2e-add2-3f9cf7e23195",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "5b49712f-e626-416d-9b1c-4590741c9239",
+      "name": "Painterly Hill Arid 01",
+      "kind": "stamp",
+      "assetId": "1d372590-15ca-4d96-8588-368f7036f881"
+    },
+    {
+      "id": "15a3b432-50d8-4fb3-b1e3-86b129da328b",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "a429fa15-98ff-4d87-981e-23509d74be02",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "124fef45-dadd-4f28-9faa-93146d65dcab",
+      "name": "Painterly Hill Arid 01",
+      "kind": "stamp",
+      "assetId": "1d372590-15ca-4d96-8588-368f7036f881"
+    },
+    {
+      "id": "6826aa0f-d2a9-4f0c-8c07-1c421e122b3a",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "f8955637-6b10-4d9d-a38b-be5a55ae1dcb",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "16c2fa5a-eff4-444d-985f-f0a854761d32",
+      "name": "Painterly Ridge 02",
+      "kind": "stamp",
+      "assetId": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d"
+    },
+    {
+      "id": "394c1225-9eff-4fbd-a366-f22f6c551506",
+      "name": "Painterly Hill Arid 01",
+      "kind": "stamp",
+      "assetId": "1d372590-15ca-4d96-8588-368f7036f881"
+    },
+    {
+      "id": "c9fc6d9a-7a18-447d-86af-0d9f673662ad",
+      "name": "Painterly Hill Arid 01",
+      "kind": "stamp",
+      "assetId": "1d372590-15ca-4d96-8588-368f7036f881"
+    },
+    {
+      "id": "e08f2a63-c685-4152-b896-7a4455033f03",
+      "name": "Painterly Volcanic Mountain 01",
+      "kind": "stamp",
+      "assetId": "32037fcd-551c-47fe-bdbf-f3179e341267"
+    },
+    {
+      "id": "f63f92bd-f3ee-4595-935f-d2bc6cb08d8a",
+      "name": "Painterly Volcanic Rocks 01",
+      "kind": "stamp",
+      "assetId": "d7381114-cf57-4b2b-a465-c04fbdbc2a87"
+    },
+    {
+      "id": "4c02aa23-f64e-4c65-b99c-d7ec2efeb02a",
+      "name": "Painterly Volcanic Rocks 01",
+      "kind": "stamp",
+      "assetId": "d7381114-cf57-4b2b-a465-c04fbdbc2a87"
+    },
+    {
+      "id": "47cb0335-9845-46c8-b63f-500ba85edcfa",
+      "name": "Painterly Volcanic Mountain 01",
+      "kind": "stamp",
+      "assetId": "32037fcd-551c-47fe-bdbf-f3179e341267"
+    },
+    {
+      "id": "8e4ba79a-be4f-485b-829d-6dba825212da",
+      "name": "Painterly Volcanic Mountain 01",
+      "kind": "stamp",
+      "assetId": "32037fcd-551c-47fe-bdbf-f3179e341267"
+    },
+    {
+      "id": "64318179-df24-429b-aaa5-5d822b466c76",
+      "name": "Painterly Volcano Dormant 01",
+      "kind": "stamp",
+      "assetId": "dad3f978-42ce-440b-becd-182ebbe61205"
+    },
+    {
+      "id": "d386e0e0-2b3d-412d-8ad4-8445434fd108",
+      "name": "Painterly Volcanic Rocks 01",
+      "kind": "stamp",
+      "assetId": "d7381114-cf57-4b2b-a465-c04fbdbc2a87"
+    },
+    {
+      "id": "c6a18cba-c996-4762-bda2-76a7a3afccfd",
+      "name": "Painterly Volcano Dormant 01",
+      "kind": "stamp",
+      "assetId": "dad3f978-42ce-440b-becd-182ebbe61205"
+    },
+    {
+      "id": "f523bba3-7cca-4a06-9285-c73fabf04f07",
+      "name": "Painterly Volcano Dormant 01",
+      "kind": "stamp",
+      "assetId": "dad3f978-42ce-440b-becd-182ebbe61205"
+    },
+    {
+      "id": "3b6628d9-72f2-4215-adfd-26db65d80b14",
+      "name": "Painterly Volcanic Mountain 01",
+      "kind": "stamp",
+      "assetId": "32037fcd-551c-47fe-bdbf-f3179e341267"
+    },
+    {
+      "id": "ef67942b-3f65-4cc1-99e7-6a933be10b10",
+      "name": "Painterly Volcanic Mountain 01",
+      "kind": "stamp",
+      "assetId": "32037fcd-551c-47fe-bdbf-f3179e341267"
+    },
+    {
+      "id": "e5962816-508f-430c-9820-08edcf97ae37",
+      "name": "Painterly Volcanic Rocks 01",
+      "kind": "stamp",
+      "assetId": "d7381114-cf57-4b2b-a465-c04fbdbc2a87"
+    },
+    {
+      "id": "b45a3da4-4db8-4e43-b580-47f4abc915a4",
+      "name": "Painterly Volcano Active 01",
+      "kind": "stamp",
+      "assetId": "ab8c6a8d-1f52-4e26-a376-00e53ba96715"
+    },
+    {
+      "id": "704d3107-0c14-4fd7-9ade-45d3105bbf3b",
+      "name": "Painterly Volcano Dormant 01",
+      "kind": "stamp",
+      "assetId": "dad3f978-42ce-440b-becd-182ebbe61205"
+    },
+    {
+      "id": "7080231c-b53a-4495-ba7a-648c2a6d1b01",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "f259218b-3a73-4e8b-adaf-60efa31039b6",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "bd58be92-80e2-4e8c-b62a-4e2c0146b952",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "dc8beaf4-815c-475c-83fa-f3f77dbd9c39",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "11561ec3-6e81-48aa-84a2-308330a75a91",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "4f21e3a5-7e71-4b3f-97bb-75c8b508b82e",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "1ae087c8-0179-457c-97e3-168bbc60a2e7",
+      "name": "Painterly Snow Peak 01",
+      "kind": "stamp",
+      "assetId": "8d200574-62d7-4b14-8f09-026aa13f1c88"
+    },
+    {
+      "id": "5bd5d005-c145-4149-9a78-bcc5b4dcc8b4",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "1bfa2a45-1a2e-491f-ba17-504e42196be7",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "0902fdd4-1446-4ab1-be49-6e8afe24a02c",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "5f096b11-58f5-44b4-9964-e72f2c45d5e8",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "8c26c4c3-0884-4245-ba68-6ac64f1537d1",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "cc4a0fa1-74a5-46c5-857d-fd0eb9e0cfc3",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "8581ab4e-3991-4a0b-856c-dfbbe34d8349",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "4ede9e38-eccc-49bb-ac97-0850f4a08562",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "1a486ee3-255f-442f-9508-e2c2c6b34c7a",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "81289b12-71e5-4814-a700-1f1dc7d8c5a8",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "4303559d-4b5a-4741-9ae1-4fe096ff0551",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "af4a9e30-297e-4921-92fb-84c067c093cd",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "ea6d5307-d02e-45c7-acef-313c1554bd59",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "856e81ea-74a0-4646-ab59-1e5a323b0b6a",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "60f89da3-5ae4-4081-a439-e006892774f7",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "6bfdeef4-6bcf-42c7-a1a5-69cbdb1e8d89",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "7f19bb21-4cef-4440-9a40-1b9c9fa5b284",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "5a8c700a-660a-4b7b-96f7-965e16f23253",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "4ea03248-d1fa-4160-9a10-13cfa611f2a2",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "89ec5531-8ace-4f55-90bd-d708a2e9e4ba",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "97cd2c3d-d80e-4c25-9662-0d1d6d5b534a",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "257e0f9b-98e0-4c88-84dd-33be53372d41",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "00e43dac-c920-495b-a09d-124fd83020c8",
+      "name": "Painterly Broadleaf Tree 01",
+      "kind": "stamp",
+      "assetId": "85b3a6e3-febf-4837-aa96-cacf0fc461b5"
+    },
+    {
+      "id": "883041c7-57fb-4c92-baa5-de2df512fe73",
+      "name": "Westmere river",
+      "kind": "path"
+    },
+    {
+      "id": "7b48a87f-df0d-4a1e-8e0f-abebbdaad978",
+      "name": "Northreach tributary",
+      "kind": "path"
+    },
+    {
+      "id": "8b512c4a-ef12-4901-9253-671d99a6f3a4",
+      "name": "Eldergrove river",
+      "kind": "path"
+    },
+    {
+      "id": "340a84d4-720d-409b-913f-ce8b97b0308f",
+      "name": "Frosthelm runoff",
+      "kind": "path"
+    },
+    {
+      "id": "86ae7aa1-f267-43d1-963d-b8d35f993f67",
+      "name": "Mistwood waterway",
+      "kind": "path"
+    },
+    {
+      "id": "957d9a3d-86de-4ce8-966c-a0675a8ce22b",
+      "name": "Sunveil oasis river",
+      "kind": "path"
+    },
+    {
+      "id": "18aea9b1-a8a8-4eaf-be1b-3d7dd44dfebc",
+      "name": "Khazrul channel",
+      "kind": "path"
+    },
+    {
+      "id": "7441fe18-c119-475e-bf70-05b1411aeb23",
+      "name": "Road",
+      "kind": "path"
+    },
+    {
+      "id": "f30386ab-efa9-426d-99fc-2a52237b6746",
+      "name": "Road",
+      "kind": "path"
+    },
+    {
+      "id": "78842dc3-c3c0-48fc-a14f-fa0a1b16fb0a",
+      "name": "Road",
+      "kind": "path"
+    },
+    {
+      "id": "5be279ab-0757-4bfc-a219-bd290dce9e31",
+      "name": "Border",
+      "kind": "path"
+    },
+    {
+      "id": "269d6619-7e5d-477a-84c8-3ef3bf46adc0",
+      "name": "Lava fissure — native Path",
+      "kind": "path"
+    },
+    {
+      "id": "022c9c82-e9f2-48d3-9882-d34143cd36e6",
+      "name": "Lava fissure — native Path",
+      "kind": "path"
+    },
+    {
+      "id": "94710d78-7bc6-421f-8b8b-e2821122acf1",
+      "name": "Lava fissure — native Path",
+      "kind": "path"
+    },
+    {
+      "id": "a938784d-9feb-4b1d-b04a-cc255964ef0b",
+      "name": "Hjellvik",
+      "kind": "place"
+    },
+    {
+      "id": "ea20a860-ab57-4656-8992-b0b97b10abaa",
+      "name": "Stormwatch",
+      "kind": "place"
+    },
+    {
+      "id": "fe231430-327c-4b84-b524-af6061a33bf3",
+      "name": "Caerwyn",
+      "kind": "place"
+    },
+    {
+      "id": "8ee6a1cd-8886-4b29-996c-623bac46298c",
+      "name": "Mournstead",
+      "kind": "place"
+    },
+    {
+      "id": "1531aa3d-7fc2-4813-91ce-e0faa7072274",
+      "name": "Ithalion",
+      "kind": "place"
+    },
+    {
+      "id": "aca38033-3691-4ee0-bd8c-cc9eb3852d42",
+      "name": "Vaelrún",
+      "kind": "place"
+    },
+    {
+      "id": "fd14e07f-be6a-44a1-a35f-7a19d4700af0",
+      "name": "Glacierhold",
+      "kind": "place"
+    },
+    {
+      "id": "8688b964-6c3f-4702-90cc-a5b58ccc2c60",
+      "name": "Dunthar",
+      "kind": "place"
+    },
+    {
+      "id": "93d7708d-0ee4-4a04-8aa7-0218ed4996c1",
+      "name": "Icespire",
+      "kind": "place"
+    },
+    {
+      "id": "ca5c1588-3b3a-440e-acb7-0b28a8ebd086",
+      "name": "Ravenford",
+      "kind": "place"
+    },
+    {
+      "id": "aa5d6e96-4d4c-4deb-abb6-9cdeddd5eb85",
+      "name": "Greymere",
+      "kind": "place"
+    },
+    {
+      "id": "d59ecebb-854b-4d2f-ab90-abb10b1ec00e",
+      "name": "Silverbark",
+      "kind": "place"
+    },
+    {
+      "id": "aa1192be-0e14-4581-8c18-9151e197e72d",
+      "name": "Starfall",
+      "kind": "place"
+    },
+    {
+      "id": "69fc8962-fd14-47cf-925a-0e96405298ba",
+      "name": "Duskport",
+      "kind": "place"
+    },
+    {
+      "id": "87f3b78e-6555-4227-9c06-40f19e374291",
+      "name": "Aurelion",
+      "kind": "place"
+    },
+    {
+      "id": "3f7966a5-db00-4bcf-a5f9-c4247f58ccb4",
+      "name": "Nyala",
+      "kind": "place"
+    },
+    {
+      "id": "c6f3e417-bfea-4620-95af-7a62d64772db",
+      "name": "Zahari",
+      "kind": "place"
+    },
+    {
+      "id": "3b2434bc-d2f0-45ff-bf72-6bdf3123de03",
+      "name": "Myral",
+      "kind": "place"
+    },
+    {
+      "id": "dbc68eed-1332-4d79-ab79-ccd87a5a54ba",
+      "name": "Jadepeak",
+      "kind": "place"
+    },
+    {
+      "id": "f73b8c8c-17c8-4ad7-bd83-cd5c20c773d5",
+      "name": "Bladspire",
+      "kind": "place"
+    },
+    {
+      "id": "8dc7b4ef-5d50-4966-88d5-8aaa754609d4",
+      "name": "NORTHREACH",
+      "kind": "label"
+    },
+    {
+      "id": "5368fef3-d7cb-4a23-b813-58b4518e5573",
+      "name": "WESTMERE",
+      "kind": "label"
+    },
+    {
+      "id": "134ddf0d-49c1-4314-a53f-6291bc0ee80d",
+      "name": "ELDERGROVE",
+      "kind": "label"
+    },
+    {
+      "id": "9df8d711-fc15-493a-9ba4-2d468dd828dd",
+      "name": "FROSTHELM",
+      "kind": "label"
+    },
+    {
+      "id": "17dd87dd-3009-452e-b999-94c7090d5792",
+      "name": "MISTWOOD",
+      "kind": "label"
+    },
+    {
+      "id": "776c3307-29f6-4552-9cd8-b4313bb69267",
+      "name": "THORNWILD",
+      "kind": "label"
+    },
+    {
+      "id": "9c9152b3-fce3-4695-868b-c5e5d4a09462",
+      "name": "ARAMOOR",
+      "kind": "label"
+    },
+    {
+      "id": "101db399-e326-49b2-9f49-2a3be754b6b7",
+      "name": "VALEMERE",
+      "kind": "label"
+    },
+    {
+      "id": "692b4b57-9f68-4899-a475-21dd8fb2c009",
+      "name": "SUNVEIL",
+      "kind": "label"
+    },
+    {
+      "id": "fa423731-508e-4cab-b362-8a5b72662ea1",
+      "name": "TALONARA",
+      "kind": "label"
+    },
+    {
+      "id": "10c8f07f-449d-4a77-9c00-8d01e9e971c9",
+      "name": "KHAZRUL",
+      "kind": "label"
+    },
+    {
+      "id": "9a2560f0-8245-4b1d-8cf5-c1100c051609",
+      "name": "The Spine of Kaidar",
+      "kind": "label"
+    },
+    {
+      "id": "2e35eded-5e30-475d-b6e5-453cf6a2e495",
+      "name": "The Golden Marches",
+      "kind": "label"
+    },
+    {
+      "id": "45606bc5-0275-452b-a1c9-15dd5d95267d",
+      "name": "The White Wastes",
+      "kind": "label"
+    },
+    {
+      "id": "34f363e6-06b4-4443-acd5-f9588df73b0f",
+      "name": "The Dragonspine",
+      "kind": "label"
+    },
+    {
+      "id": "a4078282-f92b-450e-96ac-8223a2b4663a",
+      "name": "The Amber Dunes",
+      "kind": "label"
+    },
+    {
+      "id": "2a8b4acf-6e2d-4fe4-9bfa-6c4fba1e791b",
+      "name": "The Shifting Sands",
+      "kind": "label"
+    },
+    {
+      "id": "6f2642f3-6a04-42a3-a70b-ac29ead4c118",
+      "name": "The Ashen Wastes",
+      "kind": "label"
+    },
+    {
+      "id": "be72f5dc-752f-466b-874d-7c7e88430588",
+      "name": "Hjellvik",
+      "kind": "label"
+    },
+    {
+      "id": "1e0b588b-2f90-4fd8-8a9a-737416a7f14f",
+      "name": "Stormwatch",
+      "kind": "label"
+    },
+    {
+      "id": "bcc61615-a77b-43a9-87c8-caa31501a6e1",
+      "name": "Caerwyn",
+      "kind": "label"
+    },
+    {
+      "id": "2315291e-35bb-417f-bf16-0b985161a989",
+      "name": "Mournstead",
+      "kind": "label"
+    },
+    {
+      "id": "48f22d9c-0a36-4202-a683-28f811458fe1",
+      "name": "Ithalion",
+      "kind": "label"
+    },
+    {
+      "id": "6d6dbd09-9288-43b4-8c96-846d72810fac",
+      "name": "Vaelrún",
+      "kind": "label"
+    },
+    {
+      "id": "798a8fb7-2f3f-4554-a8a6-ed654eaf469f",
+      "name": "Glacierhold",
+      "kind": "label"
+    },
+    {
+      "id": "92c287c4-eb6c-4749-aa2a-6797b589e97f",
+      "name": "Dunthar",
+      "kind": "label"
+    },
+    {
+      "id": "f1c61eab-1a3c-44fe-9928-bdbb1ca85863",
+      "name": "Icespire",
+      "kind": "label"
+    },
+    {
+      "id": "3dba97b2-43b2-4287-9c29-8a19b2bfd03c",
+      "name": "Ravenford",
+      "kind": "label"
+    },
+    {
+      "id": "0c376335-0a6b-4666-8fb8-dbccb5d797e4",
+      "name": "Greymere",
+      "kind": "label"
+    },
+    {
+      "id": "2bb0428f-41da-4aa3-a81c-bce2a89fe9c0",
+      "name": "Silverbark",
+      "kind": "label"
+    },
+    {
+      "id": "25fec9a9-c366-4576-9b0b-60143157bf1c",
+      "name": "Starfall",
+      "kind": "label"
+    },
+    {
+      "id": "702c4fb6-3924-4b64-84ae-1ab777d02c79",
+      "name": "Duskport",
+      "kind": "label"
+    },
+    {
+      "id": "b33d5984-7e63-4a1b-b3b6-c99059ec853d",
+      "name": "Aurelion",
+      "kind": "label"
+    },
+    {
+      "id": "68e602c5-909f-4e3f-97b3-1223aac646d9",
+      "name": "Nyala",
+      "kind": "label"
+    },
+    {
+      "id": "ef5f0b35-3ad5-4988-a707-a9352a6a4cbb",
+      "name": "Zahari",
+      "kind": "label"
+    },
+    {
+      "id": "2b0990bf-7687-4193-b837-97c628f516e5",
+      "name": "Myral",
+      "kind": "label"
+    },
+    {
+      "id": "0c21b4b4-1a9d-48d6-b253-dc68892a7657",
+      "name": "Jadepeak",
+      "kind": "label"
+    },
+    {
+      "id": "19b0a321-e1b1-4c6f-af4d-d0fd9cf481be",
+      "name": "Bladspire",
+      "kind": "label"
+    },
+    {
+      "id": "0e29f875-63bf-4a74-ac5b-90dfdaa9c7d6",
+      "name": "THE SHATTERED SEA",
+      "kind": "label"
+    },
+    {
+      "id": "b8b6fbf0-042f-4883-b89c-7b4515f9b31e",
+      "name": "THE AZURE EXPANSE",
+      "kind": "label"
+    },
+    {
+      "id": "9621022e-a1f6-461f-9aa4-d15fa93d87a5",
+      "name": "THE EMERALD DEEP",
+      "kind": "label"
+    },
+    {
+      "id": "1315756e-032f-4116-b034-ea12cb033cb8",
+      "name": "THE SILENT OCEAN",
+      "kind": "label"
+    },
+    {
+      "id": "f0a92544-3e80-4286-ac2e-8f477cd4a3b8",
+      "name": "THE SOUTHERN PASSAGE",
+      "kind": "label"
+    },
+    {
+      "id": "d1d6527c-8aad-4e7f-9e70-99bd89eb25b1",
+      "name": "The Verdant Sea",
+      "kind": "label"
+    },
+    {
+      "id": "318b7de4-5815-4756-963a-030753dea9ea",
+      "name": "Skjold Islands",
+      "kind": "label"
+    },
+    {
+      "id": "2feed354-8f42-4e2a-ab90-48be554b1f2c",
+      "name": "The Cerulean Isles",
+      "kind": "label"
+    },
+    {
+      "id": "c3a4fad8-746e-47a9-bd97-d065d377bbe6",
+      "name": "The Whispering Isles",
+      "kind": "label"
+    },
+    {
+      "id": "63d2519a-54b4-4ddc-b2f6-47fe6b89f215",
+      "name": "Ashen Isles",
+      "kind": "label"
+    },
+    {
+      "id": "4242973f-e60b-4538-a16d-e9ad203db84c",
+      "name": "Map title",
+      "kind": "title"
+    },
+    {
+      "id": "a2c17b52-f254-4232-83a2-79427a0e071b",
+      "name": "Compass",
+      "kind": "compass"
+    },
+    {
+      "id": "c73128e9-abaa-4e26-9706-c887a0ae4d0c",
+      "name": "Legend",
+      "kind": "legend"
+    },
+    {
+      "id": "520e5304-97d1-4a60-9383-81e239bc2ffb",
+      "name": "Scale bar",
+      "kind": "scaleBar"
+    },
+    {
+      "id": "8b2e6169-41de-40a7-baa7-a6f309220298",
+      "name": "Across storm and summit, forest and flame, many peoples call Elyra home. A world of magic, enduring kingdoms and untold ",
+      "kind": "label"
+    }
+  ],
+  "usedAssetQuality": [
+    {
+      "id": "ce337bc9-1196-44cc-92b4-4f4df2d7ca6e",
+      "name": "Painterly Broadleaf Interior 01",
+      "sha256": "745ac3c51410fdd424b4f2f253fcfb942d7574a274cee37c2b005f2e8826ed25",
+      "embeddedHash": "745ac3c51410fdd424b4f2f253fcfb942d7574a274cee37c2b005f2e8826ed25",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "53a17e77-a7d4-4541-bd3d-cb3e90a8dac2",
+      "name": "Painterly Broadleaf Interior 02",
+      "sha256": "796654d14661aefed63ef7aa431410385751099d9715802c554b4a10df2a8ca8",
+      "embeddedHash": "796654d14661aefed63ef7aa431410385751099d9715802c554b4a10df2a8ca8",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "fc152095-b889-4a87-a74b-42b0526ce428",
+      "name": "Painterly Broadleaf Edge 01",
+      "sha256": "c8bf14e39f5f4dc3d58024643decbb132521485dab5fb5cbcfe6839938b1f796",
+      "embeddedHash": "c8bf14e39f5f4dc3d58024643decbb132521485dab5fb5cbcfe6839938b1f796",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "56c1a4c8-e351-45f2-b95a-662c50740ddc",
+      "name": "Painterly Broadleaf Interior 03",
+      "sha256": "592830cd9a8a0c7f19aa9bb445eda769ba0323e2dae908517097767349d25104",
+      "embeddedHash": "592830cd9a8a0c7f19aa9bb445eda769ba0323e2dae908517097767349d25104",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "85b3a6e3-febf-4837-aa96-cacf0fc461b5",
+      "name": "Painterly Broadleaf Tree 01",
+      "sha256": "c6b89215ab018c6492b7afc16bd04e3d4f6e9d58a692bed7c9ec1a19b06be765",
+      "embeddedHash": "c6b89215ab018c6492b7afc16bd04e3d4f6e9d58a692bed7c9ec1a19b06be765",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "275de62f-b418-4bb3-a228-dc00d095fc5c",
+      "name": "Painterly Swamp Interior 01",
+      "sha256": "599eb2433c048bd2fd1516d31c81572d14b2714c6581da279c68d9f4f2ecfdb1",
+      "embeddedHash": "599eb2433c048bd2fd1516d31c81572d14b2714c6581da279c68d9f4f2ecfdb1",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "bf0df9de-3a06-4563-a4bf-933e2b30ae84"
+    },
+    {
+      "id": "09b9cb4a-4e48-44bb-82b4-74aa9a889e80",
+      "name": "Painterly Broadleaf Sparse 01",
+      "sha256": "f3b6503f1378ea5e2cdd2b25419f649fb6f0faa4992e0a338faaac07b9843bd1",
+      "embeddedHash": "f3b6503f1378ea5e2cdd2b25419f649fb6f0faa4992e0a338faaac07b9843bd1",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "6ad5b65c-081e-4165-aa21-a2621a2d9c20"
+    },
+    {
+      "id": "11b6d4a3-9fce-4fba-92cd-264e1648e23f",
+      "name": "Painterly Peak 01",
+      "sha256": "6b9a53d3015b5ff750d3299bd2cde126ada6074762862676597ec00861896fa1",
+      "embeddedHash": "6b9a53d3015b5ff750d3299bd2cde126ada6074762862676597ec00861896fa1",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "59f765c9-11cb-480a-b24d-4950b5d69b94",
+      "name": "Painterly Ridge 01",
+      "sha256": "0fb3524ab0ca3d463fa8a257a6cf8b008563c288136baed39d348886706918b0",
+      "embeddedHash": "0fb3524ab0ca3d463fa8a257a6cf8b008563c288136baed39d348886706918b0",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "86d37f4b-4ffc-45a0-bc39-bff3c9e0d29d",
+      "name": "Painterly Ridge 02",
+      "sha256": "8dacb103bebe3768b8a3fbbaf22eca99fd9ef7594507e42570d2f0345c92e21d",
+      "embeddedHash": "8dacb103bebe3768b8a3fbbaf22eca99fd9ef7594507e42570d2f0345c92e21d",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "8d200574-62d7-4b14-8f09-026aa13f1c88",
+      "name": "Painterly Snow Peak 01",
+      "sha256": "aa81029d2b987875867f9de679d54a12f0733ae2276fd27f3b91805f58a25c45",
+      "embeddedHash": "aa81029d2b987875867f9de679d54a12f0733ae2276fd27f3b91805f58a25c45",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "cbe0d2ce-d8d1-4e0f-bed4-077a2126bff4",
+      "name": "Painterly Snow Ridge 01",
+      "sha256": "36fb634f60590ac9ad2e3cab336280df94d001adc1aebb138a39edeb42a648e0",
+      "embeddedHash": "36fb634f60590ac9ad2e3cab336280df94d001adc1aebb138a39edeb42a648e0",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "e3dffdcd-3162-4f64-8c7e-bb5aefe0844f",
+      "name": "Painterly Snow Cluster 01",
+      "sha256": "68f733427be120b409e69d16f5e8e5c6343dc2c84cc22e49d517146b771b91cd",
+      "embeddedHash": "68f733427be120b409e69d16f5e8e5c6343dc2c84cc22e49d517146b771b91cd",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "d3de5c3d-a985-4928-aa67-8951516d5887"
+    },
+    {
+      "id": "8cd605f5-cbc5-4994-b61c-2d9584ef9eb0",
+      "name": "Painterly Peak 02",
+      "sha256": "2500da44b1402467f7bea201e15214a8175bd7f2b84b4dd7d12d82ea0358fc92",
+      "embeddedHash": "2500da44b1402467f7bea201e15214a8175bd7f2b84b4dd7d12d82ea0358fc92",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "f9e1291b-a30d-4ff7-b895-7c3f6fc99722",
+      "name": "Painterly Ridge 03",
+      "sha256": "ae3af282327d57fd0cf12dedd4d8f025be1b99b4be6d1fd20c0e3c482d05d0ba",
+      "embeddedHash": "ae3af282327d57fd0cf12dedd4d8f025be1b99b4be6d1fd20c0e3c482d05d0ba",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "1d372590-15ca-4d96-8588-368f7036f881",
+      "name": "Painterly Hill Arid 01",
+      "sha256": "335146335659b14f61b1dd2511fbefa06b623b1261706c98877b1a2c1d869238",
+      "embeddedHash": "335146335659b14f61b1dd2511fbefa06b623b1261706c98877b1a2c1d869238",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "32037fcd-551c-47fe-bdbf-f3179e341267",
+      "name": "Painterly Volcanic Mountain 01",
+      "sha256": "aa0403aaedfb3b827b9df5b817900a528a1c4f0254c82b66c4c677b08bf13d7d",
+      "embeddedHash": "aa0403aaedfb3b827b9df5b817900a528a1c4f0254c82b66c4c677b08bf13d7d",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "d7381114-cf57-4b2b-a465-c04fbdbc2a87",
+      "name": "Painterly Volcanic Rocks 01",
+      "sha256": "72139e5824e3001b1d1ba9240c82f909e354dea1cefe23d9cd32b96eac5e333d",
+      "embeddedHash": "72139e5824e3001b1d1ba9240c82f909e354dea1cefe23d9cd32b96eac5e333d",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5f7b9c6c-6ad2-4058-9ee1-fdfe39779b6b"
+    },
+    {
+      "id": "dad3f978-42ce-440b-becd-182ebbe61205",
+      "name": "Painterly Volcano Dormant 01",
+      "sha256": "135200cbd4860bbc40001baa9c0dd82af871d5ba639e0c3cd2925651d3960efe",
+      "embeddedHash": "135200cbd4860bbc40001baa9c0dd82af871d5ba639e0c3cd2925651d3960efe",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5d46df1f-8abb-43dd-8c37-646e14bf80eb"
+    },
+    {
+      "id": "ab8c6a8d-1f52-4e26-a376-00e53ba96715",
+      "name": "Painterly Volcano Active 01",
+      "sha256": "e87cb3c36156e94d51601fe6fe88baf1aa3f5b49c991b928709fb9064cfcb8d3",
+      "embeddedHash": "e87cb3c36156e94d51601fe6fe88baf1aa3f5b49c991b928709fb9064cfcb8d3",
+      "sourceIdentical": true,
+      "qualityStatus": "FIX",
+      "categoryId": "5d46df1f-8abb-43dd-8c37-646e14bf80eb"
+    }
+  ],
+  "kindCounts": {
+    "area": 75,
+    "stamp": 538,
+    "path": 14,
+    "place": 20,
+    "label": 49,
+    "title": 1,
+    "compass": 1,
+    "legend": 1,
+    "scaleBar": 1
+  },
+  "pathKinds": {
+    "river": 7,
+    "road": 3,
+    "border": 1,
+    "generic": 3
+  }
+}
