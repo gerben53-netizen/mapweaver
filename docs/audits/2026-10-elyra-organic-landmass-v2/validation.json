@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-16",
+  "branch": "codex/elyra-organic-landmass-v2",
+  "sourceRevision": "50b1d2e45b17457c03502e92ea1f7f7597b0da04",
+  "mapId": "elyra-organic-elyra-landmass-v2",
+  "formatVersion": 12,
+  "stats": {
+    "stage1": {
+      "objects": 53,
+      "nodes": 1779,
+      "landFraction": 0.40246250469511413,
+      "perimeter": 17398.62990151642
+    },
+    "final": {
+      "objects": 144,
+      "nodes": 3349,
+      "holes": 0,
+      "landFraction": 0.4086754121623053,
+      "perimeter": 24667.715598459457,
+      "maxRingNodes": 281
+    },
+    "tools": {
+      "freehand": 8,
+      "landAccepted": 303,
+      "landChanged": 301,
+      "effective": {
+        "add": 180,
+        "remove": 88,
+        "smooth": 16,
+        "roughen": 17
+      },
+      "rejected": [
+        {
+          "stage": "quality-correction",
+          "action": "roughen",
+          "shape": "organic",
+          "size": 155,
+          "tag": "QC fine canonical coast variation Eldergrove",
+          "error": "This coast exceeds safe geometry limits. Use shorter strokes or a smoother shape."
+        }
+      ]
+    },
+    "style": {
+      "strokeWidth": 0,
+      "strokeRoughness": 0,
+      "appearance": false,
+      "landColor": "#c7bb8d",
+      "seaColor": "#214e5a"
+    }
+  },
+  "exports": {
+    "method": "Unmodified App > Export PNG > Download PNG; audit captures original download anchor Blob URL without image processing",
+    "width": 2400,
+    "height": 1600,
+    "finalSha256": "e55249b05170d2898084df00753d047d79afdd521de43c6be470b2de0b233f6a",
+    "stage1Sha256": "9620a52007bdca36c4f2f1fbaedbf3d74f9a7118284bb44f428ce1ef8ac6b5c5",
+    "stage2Sha256": "e55249b05170d2898084df00753d047d79afdd521de43c6be470b2de0b233f6a",
+    "stage2IdenticalToFinal": true,
+    "options": {
+      "scale": 1,
+      "arlMode": "OFF",
+      "includeGrid": false,
+      "includeScaleBar": false,
+      "transparent": false
+    }
+  },
+  "archive": {
+    "sha256": "c739777981da8107c64b256e4e9ebda9f44ddbbeb33b6d113fbfb7bc3f0aacad",
+    "embeddedJsonMatches": true,
+    "roundtrip": {
+      "mapId": "elyra-organic-elyra-landmass-v2",
+      "objects": 144,
+      "assets": 0,
+      "geometryIdentical": true,
+      "mapIdentical": true,
+      "firstHash": "e55249b05170d2898084df00753d047d79afdd521de43c6be470b2de0b233f6a",
+      "reopenedHash": "e55249b05170d2898084df00753d047d79afdd521de43c6be470b2de0b233f6a",
+      "pngIdentical": true
+    }
+  },
+  "ui": {
+    "actualApp": true,
+    "previewChecked": true,
+    "selected": "Sunveil Area",
+    "editablePoints": 160,
+    "pointEditModeEntered": true,
+    "coordinateMutationMade": false,
+    "persistenceProof": "Existing archive encode/gather/decode plus identical native render, not a claim of Primary database save"
+  },
+  "tests": {
+    "command": "npx vitest run src/domain/landBrush.test.ts src/projects/archive.test.ts",
+    "files": 2,
+    "passed": 27,
+    "failed": 0,
+    "durationSeconds": 15.57,
+    "notRun": [
+      "typecheck",
+      "lint",
+      "build",
+      "broad test suite"
+    ],
+    "reason": "No product-code changes; existing build and current Vite source used",
+    "knownPriorIssue": "Three store landBrushActions snapshot assertions differ in campfireRevision; not rerun or fixed in this production audit"
+  },
+  "scope": {
+    "onlyLandmassAreas": true,
+    "assets": 0,
+    "stamps": 0,
+    "labels": 0,
+    "terrainPaint": false,
+    "bitmapBackground": false,
+    "coastlineStyling": false,
+    "referencePixelsEmbedded": false
+  },
+  "isolation": {
+    "dataRoot": ".qa.local/organic-v2/data",
+    "runtime": "qa",
+    "servicePort": 49551,
+    "clientPort": 49552,
+    "seedSource": "Consistent backup of preceding isolated QA campaign database, not Primary",
+    "primaryOpened": false,
+    "primaryWritten": false,
+    "priorElyraChanged": false,
+    "productCodeChanged": false,
+    "contractChanged": false,
+    "push": false,
+    "windowsPackage": false
+  },
+  "qualityAcceptance": "Improved native land-only production proof; reference/premium quality NOT certified. Remaining limitations classified in quality-assessment.md."
+}

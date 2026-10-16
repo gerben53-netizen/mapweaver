@@ -1,0 +1,44 @@
+{
+  "stage1": {
+    "objects": 53,
+    "nodes": 1779,
+    "landFraction": 0.40246250469511413,
+    "perimeter": 17398.62990151642
+  },
+  "final": {
+    "objects": 144,
+    "nodes": 3349,
+    "holes": 0,
+    "landFraction": 0.4086754121623053,
+    "perimeter": 24667.715598459457,
+    "maxRingNodes": 281
+  },
+  "tools": {
+    "freehand": 8,
+    "landAccepted": 303,
+    "landChanged": 301,
+    "effective": {
+      "add": 180,
+      "remove": 88,
+      "smooth": 16,
+      "roughen": 17
+    },
+    "rejected": [
+      {
+        "stage": "quality-correction",
+        "action": "roughen",
+        "shape": "organic",
+        "size": 155,
+        "tag": "QC fine canonical coast variation Eldergrove",
+        "error": "This coast exceeds safe geometry limits. Use shorter strokes or a smoother shape."
+      }
+    ]
+  },
+  "style": {
+    "strokeWidth": 0,
+    "strokeRoughness": 0,
+    "appearance": false,
+    "landColor": "#c7bb8d",
+    "seaColor": "#214e5a"
+  }
+}
