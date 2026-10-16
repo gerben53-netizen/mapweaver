@@ -1,0 +1,233 @@
+{
+  "date": "2026-10-16",
+  "sourceRevision": "a23b5a84a5b632810dc7e1ee5b1ad5fd439c9088",
+  "branch": "codex/elyra-world-reproduction",
+  "exports": [
+    {
+      "key": "00-original",
+      "method": "Actual unmodified App > Export PNG > Download PNG",
+      "transport": "Capture of original Blob URL emitted by native download anchor; no export renderer call in harness",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 669643,
+      "sha256": "86b86c2902597be85671a7e5abb28a66afbf20bd0ae3b0733bcfa607bcd86241",
+      "archiveSha256": "2b2804257826df18852584fdd0963fa929552627dee13953f1ef0b8b3b9e6071",
+      "assets": 0,
+      "objects": 1,
+      "mapId": "db4244c9-6d2c-4330-8768-32a7f8582a09"
+    },
+    {
+      "key": "01-freehand",
+      "method": "Actual unmodified App > Export PNG > Download PNG",
+      "transport": "Capture of original Blob URL emitted by native download anchor; no export renderer call in harness",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 669604,
+      "sha256": "0ab0a2c7372adcdeae9273a4c3811e78bbc31b63acce6d1a1cb37d1e5caf41a5",
+      "archiveSha256": "46e56225b6406e7273561166b1a36d4927f1e4d1cd2935ac41d37a76e5ac53b4",
+      "assets": 0,
+      "objects": 1,
+      "mapId": "3f8de33f-9b54-41a5-ac67-6801aae7e4b9"
+    },
+    {
+      "key": "02-coastline-roughness",
+      "method": "Actual unmodified App > Export PNG > Download PNG",
+      "transport": "Capture of original Blob URL emitted by native download anchor; no export renderer call in harness",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 703273,
+      "sha256": "7d3db849f96c87ddd3f45494c3bb81d0ac119c0679d05413aebde484e16e73f5",
+      "archiveSha256": "d445e1fed8320ff51969ae1b7c89cce611b918ae3d3ce67e92b7804ec52c3c3b",
+      "assets": 0,
+      "objects": 1,
+      "mapId": "f730ea72-b0c8-4b35-a597-abf2dcebb20d"
+    },
+    {
+      "key": "03-contour-smooth",
+      "method": "Actual unmodified App > Export PNG > Download PNG",
+      "transport": "Capture of original Blob URL emitted by native download anchor; no export renderer call in harness",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 649429,
+      "sha256": "8f6c57a11d43b3ec53eb0f32f50d855f1ce99e51dfe6c372ec68395aae3b962e",
+      "archiveSha256": "d711556e72da6e294b3c6e3be5511cc439fc6521f1a5d06c5a5c9d9a657ecdaf",
+      "assets": 0,
+      "objects": 1,
+      "mapId": "ba25f92a-68a0-4396-be9f-726b6b1336b6"
+    },
+    {
+      "key": "04-land-roughen",
+      "method": "Actual unmodified App > Export PNG > Download PNG",
+      "transport": "Capture of original Blob URL emitted by native download anchor; no export renderer call in harness",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 669814,
+      "sha256": "4a28df4e380a2525893adccd64304a66db5ce9f1e5a7825cb2d54dba490f4e40",
+      "archiveSha256": "f3335372cd89a22fab09d18816a977152c6acdab9614e32a93e29f63112f488f",
+      "assets": 0,
+      "objects": 1,
+      "mapId": "c1faeb0d-c13a-4782-88c1-a9494867ca38"
+    },
+    {
+      "key": "05-land-smooth",
+      "method": "Actual unmodified App > Export PNG > Download PNG",
+      "transport": "Capture of original Blob URL emitted by native download anchor; no export renderer call in harness",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 668861,
+      "sha256": "fc2bf0bad4c0d57333902b8973668724a823fac2ff0feca6fa72319e5e5a7c6e",
+      "archiveSha256": "002ab4786cbd8d5028036f5ad97bc5406081317837e43be633e2863d77f03c38",
+      "assets": 0,
+      "objects": 1,
+      "mapId": "ef4e7aa9-102f-4234-91e1-eb72d0c79729"
+    },
+    {
+      "key": "06-land-organic",
+      "method": "Actual unmodified App > Export PNG > Download PNG",
+      "transport": "Capture of original Blob URL emitted by native download anchor; no export renderer call in harness",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 622778,
+      "sha256": "b1a2d50eff8bda5119ccbb5692611c7282f11621b053038df46a061d01cf2580",
+      "archiveSha256": "cf46d518daf35be5b0dae38a5a6fd43df6b25d59f014e3b584b0645213911adc",
+      "assets": 0,
+      "objects": 1,
+      "mapId": "ea5d57a4-522c-4c6f-9155-74b42bee9836"
+    },
+    {
+      "key": "07-terrain-brush",
+      "method": "Actual unmodified App > Export PNG > Download PNG",
+      "transport": "Capture of original Blob URL emitted by native download anchor; no export renderer call in harness",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 695422,
+      "sha256": "b1a766dfeacbead6401645f651debb74904fcff3173e582a40435bd4c19e6ceb",
+      "archiveSha256": "38941a2256281e24714d55e1c75134d3ae4535dcb78ee5866181469e64f698e6",
+      "assets": 0,
+      "objects": 1,
+      "mapId": "3bc24577-fc19-4b61-a8da-c43961f8471a"
+    },
+    {
+      "key": "08-world-smooth",
+      "method": "Actual unmodified App > Export PNG > Download PNG",
+      "transport": "Capture of original Blob URL emitted by native download anchor; no export renderer call in harness",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 602429,
+      "sha256": "cfc441efc9282b5db3a9f553abfe36cba579285d114ea0ff4b8cd0722adb97e0",
+      "archiveSha256": "66382debc28aa913cc9307b3c6b6a01f637d7958c31a919b54201e1b08e291ec",
+      "assets": 0,
+      "objects": 1,
+      "mapId": "46735a1d-5d63-45dd-8f89-eda14fbd7366"
+    },
+    {
+      "key": "09-world-rough",
+      "method": "Actual unmodified App > Export PNG > Download PNG",
+      "transport": "Capture of original Blob URL emitted by native download anchor; no export renderer call in harness",
+      "width": 1000,
+      "height": 1000,
+      "bytes": 626160,
+      "sha256": "e1345eb9db29e753ada29f1dcbdbb5fd94f7c5ed66355bec208bbf28ef63244d",
+      "archiveSha256": "c415a0d6b20de87822f286cc486ce37f335fd530be4738b2820a9351367dd568",
+      "assets": 0,
+      "objects": 2,
+      "mapId": "fd7bb080-5afa-458b-aff6-18372bc6b3c2"
+    }
+  ],
+  "options": {
+    "scale": 1,
+    "arlMode": "OFF",
+    "includeGrid": false,
+    "includeScaleBar": false,
+    "transparent": false
+  },
+  "downloadTransportProof": {
+    "browserDownloadedBaseline": "elyra-land-00-original.png",
+    "sha256": "86b86c2902597be85671a7e5abb28a66afbf20bd0ae3b0733bcfa607bcd86241",
+    "capturedBaselineIdentical": true,
+    "browserPathRetrievalCallSeconds": 282.8673,
+    "notRenderDuration": true
+  },
+  "domainAssertions": {
+    "passed": 5,
+    "checks": [
+      "Roughness keeps canonical geometry",
+      "Roughness changes derived stroke",
+      "Land Roughen changes canonical geometry",
+      "Local smoothing changes area by less than 3%",
+      "Terrain stroke produces stored tiles"
+    ]
+  },
+  "tests": {
+    "command": "npx vitest run src/domain/landBrush.test.ts src/store/landBrushActions.test.ts src/canvas/landBrushClient.test.ts src/app/LandBrushTools.test.tsx src/domain/terrainPaint.test.ts",
+    "passed": 50,
+    "failed": 3,
+    "total": 53,
+    "passedFiles": 4,
+    "failedFiles": 1,
+    "durationSeconds": 8.98,
+    "failures": [
+      {
+        "file": "src/store/landBrushActions.test.ts",
+        "test": "commits once, restores exact geometry/metadata on undo/redo and rejects stale results",
+        "observed": "campfireRevision 3 added to expected snapshot"
+      },
+      {
+        "file": "src/store/landBrushActions.test.ts",
+        "test": "keeps linked label positions and cleans memberships when land is removed",
+        "observed": "campfireRevision expected 2, received 4"
+      },
+      {
+        "file": "src/store/landBrushActions.test.ts",
+        "test": "restores hex land, water and clipping exactly and round-trips portable geometry",
+        "observed": "campfireRevision 3 added to expected snapshot"
+      }
+    ],
+    "interpretation": "Snapshot metadata assertions; no demonstrated land geometry mismatch in failure output. Not fixed.",
+    "typecheck": "not run: no product code changes",
+    "lint": "not run: no product code changes",
+    "build": "not run: no product code changes"
+  },
+  "ui": {
+    "allTenArchivesDecoded": true,
+    "baselineObjectSelected": true,
+    "roughnessPreview": {
+      "from": 1.3,
+      "to": 16,
+      "nodesBefore": 65,
+      "nodesAfter": 65,
+      "applied": false
+    },
+    "landActionsObserved": [
+      "add",
+      "remove",
+      "smooth",
+      "roughen"
+    ],
+    "geometriesAuthored": "Existing domain functions; not claimed as ten physical mouse drawings"
+  },
+  "isolation": {
+    "runtimeProfile": "qa",
+    "dataDirectory": ".qa.local/land-comparison/data",
+    "servicePort": 49541,
+    "clientPort": 49542,
+    "primaryOpened": false,
+    "primaryWritten": false,
+    "priorElyraModified": false,
+    "productCodeModified": false,
+    "contractModified": false
+  },
+  "conclusion": {
+    "primary": "Tool choice and insufficient native authoring in the previous reproduction",
+    "missingBasicLandFunction": false,
+    "defectExplainingPolygonalityDemonstrated": false,
+    "qualityLimits": [
+      "Broad organic footprints leave lobes",
+      "Render-only roughness leaves sawtooth stroke detached from fill",
+      "Global smoothing can erase geographic detail"
+    ],
+    "generatorLimitation": "No existing input for target silhouette"
+  },
+  "push": false,
+  "windowsPackage": false
+}

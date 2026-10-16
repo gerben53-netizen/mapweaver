@@ -1,0 +1,893 @@
+{
+  "sourceRevision": "a23b5a84a5b632810dc7e1ee5b1ad5fd439c9088",
+  "baselineSource": {
+    "projectId": "6626967e-5541-4f11-9926-bb9e880cd8e0",
+    "objectId": "b0c278e1-f61b-4542-82bc-3d22c2210efe",
+    "nodes": 65,
+    "roughness": 1.3
+  },
+  "mapSize": {
+    "width": 1000,
+    "height": 1000
+  },
+  "control": "Same style, scale, canvas, camera; no relief/stamps/water-depth/finish. Geometry varies only by recorded method. World-generator controls explicitly are not same land shape.",
+  "cases": [
+    {
+      "key": "00-original",
+      "title": "Elyra polygon baseline",
+      "mapId": "db4244c9-6d2c-4330-8768-32a7f8582a09",
+      "objects": 1,
+      "nodes": 65,
+      "landArea": 380378.41796875,
+      "areaDeltaPercent": 0,
+      "iou": 1,
+      "geometryHash": "ff97d5b8b3d2324e8c8e8248b630374ffe74a28b50a7ca3c667555a67b7e2e40",
+      "canonicalEqualToBaseline": true,
+      "recipe": {
+        "source": "6626967e-5541-4f11-9926-bb9e880cd8e0",
+        "sourceObject": "b0c278e1-f61b-4542-82bc-3d22c2210efe",
+        "translationOnly": true,
+        "roughness": 1.3
+      }
+    },
+    {
+      "key": "01-freehand",
+      "title": "Freehand: identical sampled contour",
+      "mapId": "3f8de33f-9b54-41a5-ac67-6801aae7e4b9",
+      "objects": 1,
+      "nodes": 64,
+      "landArea": 380356.4453125,
+      "areaDeltaPercent": -0.005776525484102457,
+      "iou": 0.999942234745159,
+      "geometryHash": "ebe9964e58c4ce664c5d67a0196207cd63cf45d0d35184abe3f476f097541bae",
+      "canonicalEqualToBaseline": false,
+      "recipe": {
+        "function": "areaGeometry(freehand)",
+        "samples": 1454,
+        "tolerance": 1.5,
+        "input": "Same straight edges densely sampled; tests whether Freehand invents curvature."
+      }
+    },
+    {
+      "key": "02-coastline-roughness",
+      "title": "Area Coastline Roughness: 16 px",
+      "mapId": "f730ea72-b0c8-4b35-a597-abf2dcebb20d",
+      "objects": 1,
+      "nodes": 65,
+      "landArea": 380378.41796875,
+      "areaDeltaPercent": 0,
+      "iou": 1,
+      "geometryHash": "ff97d5b8b3d2324e8c8e8248b630374ffe74a28b50a7ca3c667555a67b7e2e40",
+      "canonicalEqualToBaseline": true,
+      "recipe": {
+        "canonicalGeometryUnchanged": true,
+        "renderCoastChanged": true,
+        "seed": 8508495,
+        "step": 8
+      }
+    },
+    {
+      "key": "03-contour-smooth",
+      "title": "Area contour Smooth: 3 passes at 25",
+      "mapId": "ba25f92a-68a0-4396-be9f-726b6b1336b6",
+      "objects": 1,
+      "nodes": 65,
+      "landArea": 373489.93986845016,
+      "areaDeltaPercent": -1.8109539802717567,
+      "iou": 0.9503824747991793,
+      "geometryHash": "3a34f32433372093a1dde414afa5bb58ccaf72819c94b8b377fb7bf474e74e1b",
+      "canonicalEqualToBaseline": false,
+      "recipe": {
+        "function": "editContour(smooth,25)",
+        "passes": 3,
+        "defaultUiAmount": 2
+      }
+    },
+    {
+      "key": "04-land-roughen",
+      "title": "Land Tool: Roughen Coast on original",
+      "mapId": "c1faeb0d-c13a-4782-88c1-a9494867ca38",
+      "objects": 1,
+      "nodes": 116,
+      "landArea": 380649.81507835793,
+      "areaDeltaPercent": 0.07134923980629537,
+      "iou": 0.9786271787554579,
+      "geometryHash": "afa2c125ad7dc416280cbb22ad9c10b8b11b3fa81554272f712b4c6e290deedf",
+      "canonicalEqualToBaseline": false,
+      "recipe": {
+        "brush": {
+          "action": "roughen",
+          "shape": "jagged",
+          "size": 220,
+          "softness": 0.25,
+          "roughness": 0.85,
+          "smoothing": "low"
+        },
+        "stroke": [
+          {
+            "x": 342.8125,
+            "y": 206.25
+          },
+          {
+            "x": 377.1875,
+            "y": 167.1875
+          },
+          {
+            "x": 436.5625,
+            "y": 168.75
+          },
+          {
+            "x": 475.625,
+            "y": 128.125
+          },
+          {
+            "x": 519.375,
+            "y": 100
+          },
+          {
+            "x": 558.4375,
+            "y": 125
+          },
+          {
+            "x": 577.1875,
+            "y": 184.375
+          },
+          {
+            "x": 616.25,
+            "y": 198.4375
+          },
+          {
+            "x": 642.8125,
+            "y": 237.5
+          },
+          {
+            "x": 697.5,
+            "y": 234.375
+          },
+          {
+            "x": 727.1875,
+            "y": 279.6875
+          },
+          {
+            "x": 758.4375,
+            "y": 270.3125
+          },
+          {
+            "x": 778.75,
+            "y": 315.625
+          },
+          {
+            "x": 810,
+            "y": 331.25
+          },
+          {
+            "x": 806.875,
+            "y": 379.6875
+          },
+          {
+            "x": 831.875,
+            "y": 403.125
+          },
+          {
+            "x": 856.875,
+            "y": 450
+          },
+          {
+            "x": 852.1875,
+            "y": 503.125
+          },
+          {
+            "x": 833.4375,
+            "y": 523.4375
+          },
+          {
+            "x": 852.1875,
+            "y": 556.25
+          },
+          {
+            "x": 824.0625,
+            "y": 592.1875
+          },
+          {
+            "x": 849.0625,
+            "y": 632.8125
+          },
+          {
+            "x": 833.4375,
+            "y": 667.1875
+          },
+          {
+            "x": 849.0625,
+            "y": 703.125
+          },
+          {
+            "x": 820.9375,
+            "y": 720.3125
+          },
+          {
+            "x": 833.4375,
+            "y": 760.9375
+          },
+          {
+            "x": 805.3125,
+            "y": 798.4375
+          },
+          {
+            "x": 781.875,
+            "y": 828.125
+          },
+          {
+            "x": 727.1875,
+            "y": 826.5625
+          },
+          {
+            "x": 700.625,
+            "y": 876.5625
+          },
+          {
+            "x": 656.875,
+            "y": 887.5
+          },
+          {
+            "x": 631.875,
+            "y": 870.3125
+          },
+          {
+            "x": 597.5,
+            "y": 900
+          },
+          {
+            "x": 560,
+            "y": 873.4375
+          },
+          {
+            "x": 527.1875,
+            "y": 882.8125
+          },
+          {
+            "x": 497.5,
+            "y": 854.6875
+          },
+          {
+            "x": 458.4375,
+            "y": 876.5625
+          },
+          {
+            "x": 419.375,
+            "y": 840.625
+          },
+          {
+            "x": 374.0625,
+            "y": 853.125
+          },
+          {
+            "x": 342.8125,
+            "y": 812.5
+          },
+          {
+            "x": 303.75,
+            "y": 821.875
+          },
+          {
+            "x": 266.25,
+            "y": 795.3125
+          },
+          {
+            "x": 217.8125,
+            "y": 784.375
+          },
+          {
+            "x": 228.75,
+            "y": 751.5625
+          },
+          {
+            "x": 275.625,
+            "y": 729.6875
+          },
+          {
+            "x": 252.1875,
+            "y": 692.1875
+          },
+          {
+            "x": 289.6875,
+            "y": 670.3125
+          },
+          {
+            "x": 269.375,
+            "y": 639.0625
+          },
+          {
+            "x": 305.3125,
+            "y": 623.4375
+          },
+          {
+            "x": 278.75,
+            "y": 592.1875
+          },
+          {
+            "x": 241.25,
+            "y": 578.125
+          },
+          {
+            "x": 222.5,
+            "y": 539.0625
+          },
+          {
+            "x": 183.4375,
+            "y": 517.1875
+          },
+          {
+            "x": 186.5625,
+            "y": 475
+          },
+          {
+            "x": 160,
+            "y": 464.0625
+          },
+          {
+            "x": 177.1875,
+            "y": 423.4375
+          },
+          {
+            "x": 208.4375,
+            "y": 420.3125
+          },
+          {
+            "x": 217.8125,
+            "y": 384.375
+          },
+          {
+            "x": 186.5625,
+            "y": 382.8125
+          },
+          {
+            "x": 203.75,
+            "y": 342.1875
+          },
+          {
+            "x": 249.0625,
+            "y": 331.25
+          },
+          {
+            "x": 238.125,
+            "y": 306.25
+          },
+          {
+            "x": 275.625,
+            "y": 284.375
+          },
+          {
+            "x": 292.8125,
+            "y": 254.6875
+          },
+          {
+            "x": 324.0625,
+            "y": 264.0625
+          },
+          {
+            "x": 342.8125,
+            "y": 206.25
+          }
+        ]
+      }
+    },
+    {
+      "key": "05-land-smooth",
+      "title": "Land Tool: Smooth Coast after Roughen",
+      "mapId": "ef4e7aa9-102f-4234-91e1-eb72d0c79729",
+      "objects": 1,
+      "nodes": 127,
+      "landArea": 380575.8149808855,
+      "areaDeltaPercent": 0.051894903288562944,
+      "iou": 0.9783531244881002,
+      "geometryHash": "4701091797cbd13802dbd87400ee3de13172cce5d34a73622fed2d33eb71bc76",
+      "canonicalEqualToBaseline": false,
+      "recipe": {
+        "brush": {
+          "action": "smooth",
+          "shape": "round",
+          "size": 220,
+          "softness": 0.25,
+          "roughness": 0,
+          "smoothing": "high"
+        },
+        "stroke": [
+          {
+            "x": 342.8125,
+            "y": 206.25
+          },
+          {
+            "x": 377.1875,
+            "y": 167.1875
+          },
+          {
+            "x": 436.5625,
+            "y": 168.75
+          },
+          {
+            "x": 475.625,
+            "y": 128.125
+          },
+          {
+            "x": 519.375,
+            "y": 100
+          },
+          {
+            "x": 558.4375,
+            "y": 125
+          },
+          {
+            "x": 577.1875,
+            "y": 184.375
+          },
+          {
+            "x": 616.25,
+            "y": 198.4375
+          },
+          {
+            "x": 642.8125,
+            "y": 237.5
+          },
+          {
+            "x": 697.5,
+            "y": 234.375
+          },
+          {
+            "x": 727.1875,
+            "y": 279.6875
+          },
+          {
+            "x": 758.4375,
+            "y": 270.3125
+          },
+          {
+            "x": 778.75,
+            "y": 315.625
+          },
+          {
+            "x": 810,
+            "y": 331.25
+          },
+          {
+            "x": 806.875,
+            "y": 379.6875
+          },
+          {
+            "x": 831.875,
+            "y": 403.125
+          },
+          {
+            "x": 856.875,
+            "y": 450
+          },
+          {
+            "x": 852.1875,
+            "y": 503.125
+          },
+          {
+            "x": 833.4375,
+            "y": 523.4375
+          },
+          {
+            "x": 852.1875,
+            "y": 556.25
+          },
+          {
+            "x": 824.0625,
+            "y": 592.1875
+          },
+          {
+            "x": 849.0625,
+            "y": 632.8125
+          },
+          {
+            "x": 833.4375,
+            "y": 667.1875
+          },
+          {
+            "x": 849.0625,
+            "y": 703.125
+          },
+          {
+            "x": 820.9375,
+            "y": 720.3125
+          },
+          {
+            "x": 833.4375,
+            "y": 760.9375
+          },
+          {
+            "x": 805.3125,
+            "y": 798.4375
+          },
+          {
+            "x": 781.875,
+            "y": 828.125
+          },
+          {
+            "x": 727.1875,
+            "y": 826.5625
+          },
+          {
+            "x": 700.625,
+            "y": 876.5625
+          },
+          {
+            "x": 656.875,
+            "y": 887.5
+          },
+          {
+            "x": 631.875,
+            "y": 870.3125
+          },
+          {
+            "x": 597.5,
+            "y": 900
+          },
+          {
+            "x": 560,
+            "y": 873.4375
+          },
+          {
+            "x": 527.1875,
+            "y": 882.8125
+          },
+          {
+            "x": 497.5,
+            "y": 854.6875
+          },
+          {
+            "x": 458.4375,
+            "y": 876.5625
+          },
+          {
+            "x": 419.375,
+            "y": 840.625
+          },
+          {
+            "x": 374.0625,
+            "y": 853.125
+          },
+          {
+            "x": 342.8125,
+            "y": 812.5
+          },
+          {
+            "x": 303.75,
+            "y": 821.875
+          },
+          {
+            "x": 266.25,
+            "y": 795.3125
+          },
+          {
+            "x": 217.8125,
+            "y": 784.375
+          },
+          {
+            "x": 228.75,
+            "y": 751.5625
+          },
+          {
+            "x": 275.625,
+            "y": 729.6875
+          },
+          {
+            "x": 252.1875,
+            "y": 692.1875
+          },
+          {
+            "x": 289.6875,
+            "y": 670.3125
+          },
+          {
+            "x": 269.375,
+            "y": 639.0625
+          },
+          {
+            "x": 305.3125,
+            "y": 623.4375
+          },
+          {
+            "x": 278.75,
+            "y": 592.1875
+          },
+          {
+            "x": 241.25,
+            "y": 578.125
+          },
+          {
+            "x": 222.5,
+            "y": 539.0625
+          },
+          {
+            "x": 183.4375,
+            "y": 517.1875
+          },
+          {
+            "x": 186.5625,
+            "y": 475
+          },
+          {
+            "x": 160,
+            "y": 464.0625
+          },
+          {
+            "x": 177.1875,
+            "y": 423.4375
+          },
+          {
+            "x": 208.4375,
+            "y": 420.3125
+          },
+          {
+            "x": 217.8125,
+            "y": 384.375
+          },
+          {
+            "x": 186.5625,
+            "y": 382.8125
+          },
+          {
+            "x": 203.75,
+            "y": 342.1875
+          },
+          {
+            "x": 249.0625,
+            "y": 331.25
+          },
+          {
+            "x": 238.125,
+            "y": 306.25
+          },
+          {
+            "x": 275.625,
+            "y": 284.375
+          },
+          {
+            "x": 292.8125,
+            "y": 254.6875
+          },
+          {
+            "x": 324.0625,
+            "y": 264.0625
+          },
+          {
+            "x": 342.8125,
+            "y": 206.25
+          }
+        ],
+        "startingCase": "04-land-roughen"
+      }
+    },
+    {
+      "key": "06-land-organic",
+      "title": "Land Tool: Organic Add from empty",
+      "mapId": "ea5d57a4-522c-4c6f-9155-74b42bee9836",
+      "objects": 1,
+      "nodes": 120,
+      "landArea": 361287.42487971706,
+      "areaDeltaPercent": -5.0189474973318156,
+      "iou": 0.9032831576199828,
+      "geometryHash": "3624c701350da60ac9b2c74bb03f19b37513f38b46f9d4e3f18f037fe1776f3c",
+      "canonicalEqualToBaseline": false,
+      "recipe": {
+        "strokes": [
+          {
+            "brush": {
+              "action": "add",
+              "shape": "organic",
+              "size": 190,
+              "softness": 0.15,
+              "roughness": 0.7,
+              "smoothing": "medium"
+            },
+            "points": [
+              {
+                "x": 475,
+                "y": 225
+              },
+              {
+                "x": 520,
+                "y": 220
+              }
+            ]
+          },
+          {
+            "brush": {
+              "action": "add",
+              "shape": "organic",
+              "size": 250,
+              "softness": 0.15,
+              "roughness": 0.7,
+              "smoothing": "medium"
+            },
+            "points": [
+              {
+                "x": 380,
+                "y": 330
+              },
+              {
+                "x": 650,
+                "y": 330
+              }
+            ]
+          },
+          {
+            "brush": {
+              "action": "add",
+              "shape": "organic",
+              "size": 250,
+              "softness": 0.15,
+              "roughness": 0.7,
+              "smoothing": "medium"
+            },
+            "points": [
+              {
+                "x": 290,
+                "y": 465
+              },
+              {
+                "x": 745,
+                "y": 465
+              }
+            ]
+          },
+          {
+            "brush": {
+              "action": "add",
+              "shape": "organic",
+              "size": 240,
+              "softness": 0.15,
+              "roughness": 0.7,
+              "smoothing": "medium"
+            },
+            "points": [
+              {
+                "x": 350,
+                "y": 585
+              },
+              {
+                "x": 755,
+                "y": 585
+              }
+            ]
+          },
+          {
+            "brush": {
+              "action": "add",
+              "shape": "organic",
+              "size": 230,
+              "softness": 0.15,
+              "roughness": 0.7,
+              "smoothing": "medium"
+            },
+            "points": [
+              {
+                "x": 350,
+                "y": 710
+              },
+              {
+                "x": 740,
+                "y": 710
+              }
+            ]
+          },
+          {
+            "brush": {
+              "action": "add",
+              "shape": "organic",
+              "size": 190,
+              "softness": 0.15,
+              "roughness": 0.7,
+              "smoothing": "medium"
+            },
+            "points": [
+              {
+                "x": 400,
+                "y": 790
+              },
+              {
+                "x": 710,
+                "y": 790
+              }
+            ]
+          }
+        ],
+        "appearance": "Normalized to baseline for fair geometry comparison",
+        "target": "Same macro silhouette, hand-authored six strokes. Not exact tracing."
+      }
+    },
+    {
+      "key": "07-terrain-brush",
+      "title": "Terrain Brush on the original coast",
+      "mapId": "3bc24577-fc19-4b61-a8da-c43961f8471a",
+      "objects": 1,
+      "nodes": 65,
+      "landArea": 380378.41796875,
+      "areaDeltaPercent": 0,
+      "iou": 1,
+      "geometryHash": "ff97d5b8b3d2324e8c8e8248b630374ffe74a28b50a7ca3c667555a67b7e2e40",
+      "canonicalEqualToBaseline": true,
+      "recipe": {
+        "brush": "forest, 150 px, softness .8, strength .85; along same coast",
+        "canonicalGeometryUnchanged": true,
+        "paintTiles": 32
+      }
+    },
+    {
+      "key": "08-world-smooth",
+      "title": "World Generator 0% roughness",
+      "mapId": "46735a1d-5d63-45dd-8f89-eda14fbd7366",
+      "objects": 1,
+      "nodes": 44,
+      "landArea": 345225.97097432194,
+      "areaDeltaPercent": -9.241440979260817,
+      "iou": 0.36707832469391577,
+      "geometryHash": "9973c65e9dade9b6bb18f41bdc6439d969f68bdddf3ac16c527c470310970493",
+      "canonicalEqualToBaseline": false,
+      "recipe": {
+        "parameters": {
+          "seed": "Elyra coast comparison",
+          "continents": 1,
+          "water": 0.35,
+          "roughness": 0,
+          "mountains": 0,
+          "forests": 0,
+          "rivers": 0,
+          "islands": 0,
+          "climate": "balanced",
+          "width": 1000,
+          "height": 1000,
+          "widthKm": 7500
+        },
+        "generatorVersion": 2,
+        "sourceGeography": "Generated independently; generator has no target-contour input. Land-only extraction, biome rendering suppressed for comparison.",
+        "stats": {
+          "points": 524,
+          "landFraction": 0.33892641308211874,
+          "riverCount": 0,
+          "discarded": 5
+        }
+      }
+    },
+    {
+      "key": "09-world-rough",
+      "title": "World Generator 85% roughness",
+      "mapId": "fd7bb080-5afa-458b-aff6-18372bc6b3c2",
+      "objects": 2,
+      "nodes": 140,
+      "landArea": 355414.7819955642,
+      "areaDeltaPercent": -6.562842368001198,
+      "iou": 0.38079204419148316,
+      "geometryHash": "313e7372117e546a0632683fd3e84be94292d021a8b9c6d1ff94ecc81e2c54a3",
+      "canonicalEqualToBaseline": false,
+      "recipe": {
+        "parameters": {
+          "seed": "Elyra coast comparison",
+          "continents": 1,
+          "water": 0.35,
+          "roughness": 0.85,
+          "mountains": 0,
+          "forests": 0,
+          "rivers": 0,
+          "islands": 0,
+          "climate": "balanced",
+          "width": 1000,
+          "height": 1000,
+          "widthKm": 7500
+        },
+        "generatorVersion": 2,
+        "sourceGeography": "Generated independently; generator has no target-contour input. Land-only extraction, biome rendering suppressed for comparison.",
+        "stats": {
+          "points": 888,
+          "landFraction": 0.3498044792036971,
+          "riverCount": 0,
+          "discarded": 11
+        }
+      }
+    }
+  ],
+  "assertionsPassed": 5,
+  "errors": []
+}
