@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-16",
+  "branch": "codex/northreach-premium-coastline-proof",
+  "sourceRevision": "0f74c1af805d73221f329868f2a414ac93c6b300",
+  "productBasis": "No source/config/package differences versus develop at task start; inherited audit commits retained",
+  "scopeConfirmedByUser": "Northreach, Westmere, Golden Marches; not Eldergrove",
+  "referenceSha256": "bdff92911f2bad5ead965a3ec8d5d3f4f3ed61df6e3ea03c65c188aeb4bc61fd",
+  "crop": {
+    "referenceX": 90,
+    "referenceY": 20,
+    "width": 650,
+    "height": 570,
+    "scale": 2.5,
+    "northUp": true
+  },
+  "archive": {
+    "sha256": "4f3915d07a0d3790343cebd250e20c91e066666bc4ef979a82fe17eea88e8166",
+    "onlyProjectJson": true,
+    "embeddedMatches": true,
+    "roundtrip": {
+      "mapId": "northreach-premium-proof-2026-10",
+      "objects": 36,
+      "assets": 0,
+      "geometryIdentical": true,
+      "mapIdentical": true,
+      "firstHash": "67cf19b04f5b7f183d7368f378278f597fb67dbff4ea46eedae14cfc07a59de6",
+      "reopenedHash": "67cf19b04f5b7f183d7368f378278f597fb67dbff4ea46eedae14cfc07a59de6",
+      "pngIdentical": true
+    }
+  },
+  "exports": {
+    "macro": {
+      "path": "stages/macro-native-export.png",
+      "width": 1625,
+      "height": 1425,
+      "sha256": "b67bbeacd8aec0d9abb264d9aef0091c638fddca0f364a14fc982a5fcd8434ce"
+    },
+    "meso": {
+      "path": "stages/meso-native-export.png",
+      "width": 1625,
+      "height": 1425,
+      "sha256": "cdf0a9bda7c3ad306f0ba6a9fbb2ca9db784213804b2fa54c18513ab9722ec01"
+    },
+    "final": {
+      "path": "stages/final-native-export.png",
+      "width": 1625,
+      "height": 1425,
+      "sha256": "67cf19b04f5b7f183d7368f378278f597fb67dbff4ea46eedae14cfc07a59de6"
+    }
+  },
+  "exportMethod": "Real unmodified App Export PNG > Download PNG; exact Blob URL copied to local receiver; no image processing",
+  "options": {
+    "scale": 1,
+    "arlMode": "OFF",
+    "includeGrid": false,
+    "includeScaleBar": false,
+    "transparent": false
+  },
+  "geometry": {
+    "mapId": "northreach-premium-proof-2026-10",
+    "areas": 36,
+    "nodes": 622,
+    "maxRing": 267,
+    "holes": 0,
+    "pairwiseOverlaps": 0,
+    "assets": 0,
+    "strokeRoughness": 0,
+    "premiumAccepted": false
+  },
+  "ui": {
+    "actualApp": true,
+    "pointEditOpened": true,
+    "mainlandPoints": 267,
+    "coordinateMutatedInUi": false,
+    "previewChecked": true
+  },
+  "assertions": {
+    "archive": true,
+    "noEmbeddedArtwork": true,
+    "noReferenceInProject": true,
+    "zeroOverlappingLandAreas": true,
+    "allThreeNativeExportDimensions": true,
+    "finalPngMatchesArchiveRoundtrip": true,
+    "comparisonFilesPresent": true
+  },
+  "tests": {
+    "command": "npx vitest run src/domain/landBrush.test.ts src/projects/archive.test.ts",
+    "files": 2,
+    "passed": 27,
+    "failed": 0,
+    "durationSeconds": 5.26,
+    "notRun": [
+      "typecheck",
+      "lint",
+      "build",
+      "broad suite"
+    ],
+    "reason": "No product code or application configuration changed"
+  },
+  "isolation": {
+    "profile": "qa",
+    "root": ".qa.local/northreach/data",
+    "backend": 49561,
+    "frontend": 49562,
+    "primaryOpened": false,
+    "primaryWritten": false,
+    "existingElyraProjectsOverwritten": false,
+    "contractChanged": false
+  },
+  "visualAcceptance": {
+    "technicalProof": true,
+    "premium": false,
+    "reason": "Remaining straight facets, simplified micro-islands and interpreted eastern boundary"
+  },
+  "git": {
+    "scope": "Only this new audit directory",
+    "push": false,
+    "windowsPackage": false
+  }
+}

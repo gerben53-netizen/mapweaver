@@ -1,0 +1,186 @@
+{
+  "phase": "meso",
+  "began": "2026-10-16T20:05:37.917Z",
+  "finished": "2026-10-16T20:05:39.021Z",
+  "automationMs": 1104,
+  "areas": 8,
+  "nodes": 374,
+  "maxRing": 286,
+  "holes": 0,
+  "operations": [
+    {
+      "phase": "meso",
+      "tool": "Land",
+      "action": "remove",
+      "shape": "organic",
+      "sizeReferencePx": 7,
+      "points": [
+        {
+          "x": 1132.5,
+          "y": 232.5
+        },
+        {
+          "x": 1135,
+          "y": 240
+        }
+      ],
+      "seed": 19234,
+      "tag": "Northern inlet lip",
+      "changed": true,
+      "ms": 30.960000000000036
+    },
+    {
+      "phase": "meso",
+      "tool": "Land",
+      "action": "remove",
+      "shape": "peninsula",
+      "sizeReferencePx": 8,
+      "points": [
+        {
+          "x": 1292.5,
+          "y": 257.5
+        },
+        {
+          "x": 1285,
+          "y": 282.5
+        }
+      ],
+      "seed": 19235,
+      "tag": "Northeast branching inlet",
+      "changed": false,
+      "ms": 16.287599999999884
+    },
+    {
+      "phase": "meso",
+      "tool": "Land",
+      "action": "remove",
+      "shape": "organic",
+      "sizeReferencePx": 6,
+      "points": [
+        {
+          "x": 570,
+          "y": 790
+        },
+        {
+          "x": 585,
+          "y": 787.5
+        }
+      ],
+      "seed": 19236,
+      "tag": "Westmere western inlet",
+      "changed": true,
+      "ms": 25.467099999999846
+    },
+    {
+      "phase": "meso",
+      "tool": "Land",
+      "action": "add",
+      "shape": "peninsula",
+      "sizeReferencePx": 8,
+      "points": [
+        {
+          "x": 645,
+          "y": 877.5
+        },
+        {
+          "x": 650,
+          "y": 887.5
+        }
+      ],
+      "seed": 19237,
+      "tag": "Westmere southern finger",
+      "changed": true,
+      "ms": 14.1567
+    },
+    {
+      "phase": "meso",
+      "tool": "Land",
+      "action": "remove",
+      "shape": "organic",
+      "sizeReferencePx": 7,
+      "points": [
+        {
+          "x": 842.5,
+          "y": 962.5
+        },
+        {
+          "x": 850,
+          "y": 952.5
+        }
+      ],
+      "seed": 19238,
+      "tag": "Golden Marches bay head",
+      "changed": true,
+      "ms": 14.045799999999872
+    },
+    {
+      "phase": "meso",
+      "tool": "Land",
+      "action": "remove",
+      "shape": "peninsula",
+      "sizeReferencePx": 6,
+      "points": [
+        {
+          "x": 1225,
+          "y": 1312.5
+        },
+        {
+          "x": 1225,
+          "y": 1302.5
+        }
+      ],
+      "seed": 19239,
+      "tag": "South coast sheltered inlet",
+      "changed": true,
+      "ms": 15.429799999999886
+    },
+    {
+      "phase": "meso",
+      "tool": "Area contour Smooth",
+      "amount": 17,
+      "name": "Northwest long island"
+    },
+    {
+      "phase": "meso",
+      "tool": "Area contour Smooth",
+      "amount": 17,
+      "name": "Skjold north"
+    },
+    {
+      "phase": "meso",
+      "tool": "Area contour Smooth",
+      "amount": 17,
+      "name": "Skjold central"
+    },
+    {
+      "phase": "meso",
+      "tool": "Area contour Smooth",
+      "amount": 17,
+      "name": "Skjold west"
+    },
+    {
+      "phase": "meso",
+      "tool": "Area contour Smooth",
+      "amount": 17,
+      "name": "Skjold east"
+    },
+    {
+      "phase": "meso",
+      "tool": "Area contour Smooth",
+      "amount": 17,
+      "name": "Skjold south"
+    },
+    {
+      "phase": "meso",
+      "tool": "Area contour Smooth",
+      "amount": 17,
+      "name": "South island"
+    },
+    {
+      "phase": "meso",
+      "tool": "Area contour Smooth",
+      "amount": 17,
+      "name": "Northreach / Westmere / Golden Marches"
+    }
+  ]
+}

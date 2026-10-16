@@ -1,0 +1,68 @@
+{
+  "phase": "macro",
+  "began": "2026-10-16T20:12:20.312Z",
+  "finished": "2026-10-16T20:12:21.359Z",
+  "automationMs": 1047,
+  "areas": 8,
+  "nodes": 325,
+  "maxRing": 237,
+  "holes": 0,
+  "operations": [
+    {
+      "phase": "macro",
+      "tool": "Area Freehand",
+      "name": "Northreach / Westmere / Golden Marches",
+      "samples": 239,
+      "nodes": 237
+    },
+    {
+      "phase": "macro",
+      "tool": "Area Freehand",
+      "name": "Northwest long island",
+      "samples": 18,
+      "nodes": 18
+    },
+    {
+      "phase": "macro",
+      "tool": "Area Freehand",
+      "name": "Skjold north",
+      "samples": 12,
+      "nodes": 12
+    },
+    {
+      "phase": "macro",
+      "tool": "Area Freehand",
+      "name": "Skjold central",
+      "samples": 9,
+      "nodes": 9
+    },
+    {
+      "phase": "macro",
+      "tool": "Area Freehand",
+      "name": "Skjold west",
+      "samples": 8,
+      "nodes": 8
+    },
+    {
+      "phase": "macro",
+      "tool": "Area Freehand",
+      "name": "Skjold east",
+      "samples": 10,
+      "nodes": 10
+    },
+    {
+      "phase": "macro",
+      "tool": "Area Freehand",
+      "name": "Skjold south",
+      "samples": 14,
+      "nodes": 14
+    },
+    {
+      "phase": "macro",
+      "tool": "Area Freehand",
+      "name": "South island",
+      "samples": 19,
+      "nodes": 17
+    }
+  ]
+}

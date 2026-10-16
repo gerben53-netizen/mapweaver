@@ -1,0 +1,551 @@
+{
+  "phase": "final",
+  "began": "2026-10-16T20:06:06.196Z",
+  "finished": "2026-10-16T20:06:07.453Z",
+  "automationMs": 1257,
+  "areas": 37,
+  "nodes": 628,
+  "maxRing": 355,
+  "holes": 0,
+  "operations": [
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Northern shelf west",
+      "samples": 10,
+      "nodes": 10
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Northern shelf middle",
+      "samples": 8,
+      "nodes": 8
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Northern skerry 1",
+      "samples": 6,
+      "nodes": 6
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Northern skerry 2",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Northern skerry 3",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Northern skerry 4",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Northern skerry 5",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Northern skerry 6",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "NW offshore small",
+      "samples": 6,
+      "nodes": 6
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "NW offshore west",
+      "samples": 6,
+      "nodes": 6
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Skjold outer west",
+      "samples": 6,
+      "nodes": 6
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Skjold upper east",
+      "samples": 6,
+      "nodes": 6
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Skjold middle west",
+      "samples": 6,
+      "nodes": 6
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Skjold east rock",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Skjold southern east",
+      "samples": 6,
+      "nodes": 6
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Skjold southern west",
+      "samples": 6,
+      "nodes": 6
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Skjold southern rock",
+      "samples": 6,
+      "nodes": 6
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Skjold tail rock",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Skjold outer south",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Golden bay north island",
+      "samples": 6,
+      "nodes": 6
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Golden bay main island",
+      "samples": 9,
+      "nodes": 9
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Golden bay west island",
+      "samples": 8,
+      "nodes": 8
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Golden bay east island",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Golden bay east rock",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Southwest cape offshore",
+      "samples": 10,
+      "nodes": 10
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Southwestern skerry",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "South island west skerry",
+      "samples": 7,
+      "nodes": 7
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "Eastern offshore cape island",
+      "samples": 13,
+      "nodes": 13
+    },
+    {
+      "phase": "final",
+      "tool": "Area Freehand",
+      "name": "East small rock",
+      "samples": 5,
+      "nodes": 5
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "smooth",
+      "shape": "round",
+      "sizeReferencePx": 27,
+      "points": [
+        {
+          "x": 707.5,
+          "y": 225
+        },
+        {
+          "x": 810,
+          "y": 177.5
+        }
+      ],
+      "seed": 19234,
+      "tag": "NW shelf",
+      "changed": false,
+      "ms": 36.57230000000004
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "smooth",
+      "shape": "round",
+      "sizeReferencePx": 27,
+      "points": [
+        {
+          "x": 875,
+          "y": 145
+        },
+        {
+          "x": 975,
+          "y": 117.5
+        }
+      ],
+      "seed": 19235,
+      "tag": "Northern rocky shelf",
+      "changed": false,
+      "ms": 15.248100000000022
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "smooth",
+      "shape": "round",
+      "sizeReferencePx": 27,
+      "points": [
+        {
+          "x": 1042.5,
+          "y": 102.5
+        },
+        {
+          "x": 1117.5,
+          "y": 185
+        }
+      ],
+      "seed": 19236,
+      "tag": "Northern cape",
+      "changed": false,
+      "ms": 18.819299999999885
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "smooth",
+      "shape": "round",
+      "sizeReferencePx": 27,
+      "points": [
+        {
+          "x": 445,
+          "y": 617.5
+        },
+        {
+          "x": 480,
+          "y": 717.5
+        }
+      ],
+      "seed": 19237,
+      "tag": "Western cliff",
+      "changed": false,
+      "ms": 11.227200000000039
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "smooth",
+      "shape": "round",
+      "sizeReferencePx": 27,
+      "points": [
+        {
+          "x": 602.5,
+          "y": 815
+        },
+        {
+          "x": 687.5,
+          "y": 882.5
+        }
+      ],
+      "seed": 19238,
+      "tag": "Westmere fingers",
+      "changed": false,
+      "ms": 10.247299999999996
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "smooth",
+      "shape": "round",
+      "sizeReferencePx": 27,
+      "points": [
+        {
+          "x": 555,
+          "y": 1147.5
+        },
+        {
+          "x": 650,
+          "y": 1200
+        }
+      ],
+      "seed": 19239,
+      "tag": "Southwest cape",
+      "changed": false,
+      "ms": 9.830799999999954
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "smooth",
+      "shape": "round",
+      "sizeReferencePx": 27,
+      "points": [
+        {
+          "x": 767.5,
+          "y": 1230
+        },
+        {
+          "x": 877.5,
+          "y": 1217.5
+        }
+      ],
+      "seed": 19240,
+      "tag": "Southwestern bays",
+      "changed": false,
+      "ms": 10.672900000000027
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "smooth",
+      "shape": "round",
+      "sizeReferencePx": 27,
+      "points": [
+        {
+          "x": 960,
+          "y": 1255
+        },
+        {
+          "x": 1072.5,
+          "y": 1250
+        }
+      ],
+      "seed": 19241,
+      "tag": "South coast quiet arc",
+      "changed": false,
+      "ms": 11.475200000000086
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "smooth",
+      "shape": "round",
+      "sizeReferencePx": 27,
+      "points": [
+        {
+          "x": 1210,
+          "y": 1302.5
+        },
+        {
+          "x": 1312.5,
+          "y": 1325
+        }
+      ],
+      "seed": 19242,
+      "tag": "South cape",
+      "changed": false,
+      "ms": 10.86830000000009
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "smooth",
+      "shape": "round",
+      "sizeReferencePx": 27,
+      "points": [
+        {
+          "x": 1472.5,
+          "y": 900
+        },
+        {
+          "x": 1495,
+          "y": 997.5
+        }
+      ],
+      "seed": 19243,
+      "tag": "Eastern estuary",
+      "changed": false,
+      "ms": 11.986799999999903
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "remove",
+      "shape": "detail",
+      "sizeReferencePx": 5,
+      "points": [
+        {
+          "x": 905,
+          "y": 135
+        },
+        {
+          "x": 907.5,
+          "y": 142.5
+        }
+      ],
+      "seed": 19244,
+      "tag": "Northern rocky notch",
+      "changed": true,
+      "ms": 16.88779999999997
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "remove",
+      "shape": "detail",
+      "sizeReferencePx": 5,
+      "points": [
+        {
+          "x": 1002.5,
+          "y": 105
+        },
+        {
+          "x": 1000,
+          "y": 115
+        }
+      ],
+      "seed": 19245,
+      "tag": "Northern saddle notch",
+      "changed": true,
+      "ms": 17.900800000000118
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "remove",
+      "shape": "detail",
+      "sizeReferencePx": 5,
+      "points": [
+        {
+          "x": 480,
+          "y": 692.5
+        },
+        {
+          "x": 490,
+          "y": 692.5
+        }
+      ],
+      "seed": 19246,
+      "tag": "Western cliff notch",
+      "changed": true,
+      "ms": 13.646299999999883
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "remove",
+      "shape": "detail",
+      "sizeReferencePx": 5,
+      "points": [
+        {
+          "x": 727.5,
+          "y": 1250
+        },
+        {
+          "x": 730,
+          "y": 1242.5
+        }
+      ],
+      "seed": 19247,
+      "tag": "Southwest cape notch",
+      "changed": true,
+      "ms": 14.751500000000078
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "remove",
+      "shape": "detail",
+      "sizeReferencePx": 5,
+      "points": [
+        {
+          "x": 1310,
+          "y": 1325
+        },
+        {
+          "x": 1312.5,
+          "y": 1317.5
+        }
+      ],
+      "seed": 19248,
+      "tag": "South cliff notch",
+      "changed": true,
+      "ms": 14.895199999999932
+    },
+    {
+      "phase": "final",
+      "tool": "Land",
+      "action": "add",
+      "shape": "detail",
+      "sizeReferencePx": 5,
+      "points": [
+        {
+          "x": 1417.5,
+          "y": 1077.5
+        },
+        {
+          "x": 1430,
+          "y": 1075
+        }
+      ],
+      "seed": 19249,
+      "tag": "East estuary spit",
+      "changed": true,
+      "ms": 17.825700000000097
+    }
+  ]
+}

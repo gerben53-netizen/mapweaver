@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-16",
+  "units": "seconds unless labeled",
+  "timeMeasurement": {
+    "method": "UTC clock observations bounding active agent work; includes scripts, browser operation and tool wait; not human stopwatch time",
+    "humanActiveSeconds": null,
+    "notHumanTimeClaim": true,
+    "windows": [
+      {
+        "phase": "A reference analysis",
+        "from": "2026-10-16T19:57:52Z",
+        "to": "2026-10-16T20:00:47Z",
+        "elapsedSeconds": 175
+      },
+      {
+        "phase": "B initial macro authoring and native review",
+        "from": "2026-10-16T20:00:47Z",
+        "to": "2026-10-16T20:03:31Z",
+        "elapsedSeconds": 164
+      },
+      {
+        "phase": "C meso and rejected/revised recipe",
+        "from": "2026-10-16T20:03:31Z",
+        "to": "2026-10-16T20:06:06Z",
+        "elapsedSeconds": 155
+      },
+      {
+        "phase": "D micro plus iterative macro/meso corrections, UI exports and validation",
+        "from": "2026-10-16T20:06:06Z",
+        "to": "2026-10-16T20:16:06Z",
+        "elapsedSeconds": 600
+      }
+    ],
+    "observedAgentWorkWindowSeconds": 1094,
+    "reportingAfterWindow": true,
+    "manualHumanPerformanceNotMeasured": true
+  },
+  "phases": [
+    {
+      "phase": "macro",
+      "areas": 8,
+      "nodes": 325,
+      "maxRing": 237,
+      "holes": 0,
+      "recipeCounts": {
+        "freehand": 8,
+        "outlinePointEdits": 0,
+        "contourSmooth": 0,
+        "add": 0,
+        "remove": 0,
+        "smooth": 0,
+        "roughen": 0,
+        "effectiveLand": 0,
+        "noOpLand": 0,
+        "rejected": 0
+      },
+      "lastRun": {
+        "began": "2026-10-16T20:12:20.312Z",
+        "finished": "2026-10-16T20:12:21.359Z",
+        "automationMs": 1047
+      },
+      "log": "macro-operations.json"
+    },
+    {
+      "phase": "meso",
+      "areas": 8,
+      "nodes": 374,
+      "maxRing": 286,
+      "holes": 0,
+      "recipeCounts": {
+        "freehand": 0,
+        "outlinePointEdits": 0,
+        "contourSmooth": 8,
+        "add": 1,
+        "remove": 5,
+        "smooth": 0,
+        "roughen": 0,
+        "effectiveLand": 5,
+        "noOpLand": 1,
+        "rejected": 0
+      },
+      "lastRun": {
+        "began": "2026-10-16T20:12:58.602Z",
+        "finished": "2026-10-16T20:12:59.751Z",
+        "automationMs": 1149
+      },
+      "log": "meso-operations.json"
+    },
+    {
+      "phase": "final",
+      "areas": 36,
+      "nodes": 622,
+      "maxRing": 267,
+      "holes": 0,
+      "recipeCounts": {
+        "freehand": 28,
+        "outlinePointEdits": 5,
+        "contourSmooth": 0,
+        "add": 0,
+        "remove": 0,
+        "smooth": 10,
+        "roughen": 0,
+        "effectiveLand": 10,
+        "noOpLand": 0,
+        "rejected": 0
+      },
+      "lastRun": {
+        "began": "2026-10-16T20:14:51.762Z",
+        "finished": "2026-10-16T20:14:53.198Z",
+        "automationMs": 1436
+      },
+      "log": "final-operations.json"
+    }
+  ],
+  "correctionRounds": [
+    {
+      "kind": "audit timestamp",
+      "description": "ISO milliseconds corrected; no product change"
+    },
+    {
+      "kind": "meso artistic rejection",
+      "evidence": "stages/rejected-meso-native-export.png",
+      "log": "rejected-meso-operations.json"
+    },
+    {
+      "kind": "macro bay correction",
+      "description": "Golden Marches bay too shallow; replayed downstream phases"
+    },
+    {
+      "kind": "audit preset",
+      "description": "Smoothing Off yielded 10 no-ops; corrected to Low",
+      "log": "noop-smooth-operations.json"
+    },
+    {
+      "kind": "geographic separation",
+      "description": "Two pairwise land overlaps corrected; final zero"
+    },
+    {
+      "kind": "micro island point refinement",
+      "description": "Five different Skjold silhouettes detailed; retained IDs"
+    }
+  ],
+  "automatedReplayNote": "Counts describe the final artistic recipe, not sums of deterministic reruns. Earlier preserved operation logs describe discarded attempts. Scripts were rerun after upstream corrections; those are not additional manual gestures.",
+  "final": {
+    "mapId": "northreach-premium-proof-2026-10",
+    "areas": 36,
+    "nodes": 622,
+    "maxRing": 267,
+    "holes": 0,
+    "pairwiseOverlaps": 0,
+    "assets": 0,
+    "strokeRoughness": 0,
+    "premiumAccepted": false
+  }
+}
