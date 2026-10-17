@@ -35,6 +35,8 @@ beforeEach(() => {
   useProjectStore.setState({
     map: { width: 600, height: 400, ...defaultMapStyle(), background: null },
     objects: [],
+    objectGroups: [],
+    layerTree: { roots: ['objects'], groups: [] },
     layers: [
       {
         id: 'objects',

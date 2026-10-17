@@ -1,0 +1,8 @@
+.panel { flex-shrink:0; min-width:0; max-width:38vw; display:flex; flex-direction:column; background:var(--color-panel); border-right:1px solid var(--color-border); padding:8px; gap:8px; }
+.head,.controls { display:flex; flex-wrap:wrap; align-items:center; gap:4px; }
+.head strong { flex:1; }
+.panel label { font-size:12px; }
+.panel p { font-size:12px; margin:0; }
+.surface { position:relative; overflow:hidden; flex:1; min-height:100px; background:#15232b; touch-action:none; cursor:grab; }
+.surface img { position:absolute; top:0; left:0; max-width:none; transform-origin:0 0; user-select:none; pointer-events:none; }
+.panel[hidden] { display:none; }

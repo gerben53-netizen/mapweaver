@@ -8,6 +8,7 @@ import { toolDescriptions } from './toolIntent'
 import { Icon } from './Icon'
 import type { IconName } from './Icon'
 import styles from './App.module.css'
+import { useReferenceViewStore } from '../store/referenceViewStore'
 type Tool = ReturnType<typeof useEditorStore.getState>['activeTool']
 export function ToolRail() {
   const capabilities = mapCapabilities(useProjectStore(s => s.map.mapType)), land=capabilities.geographicAreas, tool = useEditorStore(s => s.activeTool), role = useEditorStore(s => s.areaRole)
@@ -38,5 +39,6 @@ export function ToolRail() {
     <div role="group" aria-label="Map elements" className={styles.toolGroup}>
       {button('place','Place Marker','place',()=>useEditorStore.setState({markerWizard:true}))}<MapElementsMenu/>
     </div>
+    {land&&<button aria-label="Show reference view" title="Reference view" onClick={()=>useReferenceViewStore.setState(s=>({open:!s.open}))}>Ref</button>}
   </nav>
 }

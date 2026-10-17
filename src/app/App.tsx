@@ -22,6 +22,7 @@ import { ToolRail } from './ToolRail'
 import { Tabs } from './Tabs'
 import { Icon } from './Icon'
 import styles from './App.module.css'
+import { ReferenceView } from './ReferenceView'
 export function App() {
   const preview = useRenderViewStore(s=>s.view==='preview')
   const [runtime, setRuntime] = useState<{profile: string; dataProfile: string; build: string | null} | null>(null)
@@ -38,7 +39,7 @@ export function App() {
     <header className={styles.header}><div className={styles.brand}><span className={styles.brandMark} aria-hidden="true"><Icon name="compass"/></span><h1>Mapweaver <small>{runtime ? `DEV — ${runtime.build || 'unknown'} · Data: ${runtime.dataProfile}` : version}</small></h1></div><div inert={!!busy||preview}><Tabs label="Workspace" value={workspace} items={[["editor", 'Map editor'], ['library', 'Asset library']]} onChange={(value) => { if(workspace==='library'&&!confirmLibraryNavigation())return; finishObjectGesture(); if(value==='editor')void refreshActiveAssetDefault(); useEditorStore.setState({ workspace: value }) }} /></div><ProjectControls /></header>
     <main className={`${styles.main} ${stampBrowserOpen && workspace === 'editor' ? styles.withStampBrowser : ''}`} inert={!!busy}>
       <div hidden={workspace !== 'editor'} className={`${styles.editor} ${focus ? styles.focus : ""}`}><CampaignWorkspace><div className={`${styles.editor} ${focus ? styles.focus : ""}`} key={generation} inert={revision===null}><div inert={preview} style={{display:"contents"}}><ToolRail /></div><MapCanvas />
-        <aside inert={preview} className={collapsed ? styles.collapsed : styles.panel} style={collapsed?undefined:{width:inspectorWidth}} aria-label="Inspector">
+        <ReferenceView/><aside inert={preview} className={collapsed ? styles.collapsed : styles.panel} style={collapsed?undefined:{width:inspectorWidth}} aria-label="Inspector">
           {!collapsed&&<InspectorResize width={inspectorWidth} onChange={setInspectorWidth}/>}
           <div className={styles.inspectorHead}>{!collapsed && <Tabs label="Inspector" value={inspector==='objects'?'layers':inspector} items={[["layers", 'Scene'], ['properties', 'Properties'], ['map', 'Map']]} onChange={(value) => useEditorStore.setState({ inspector: value, ...(value === 'layers' ? { layersUsedAt: Date.now() } : {}) })} />}<button className="icon-button" title={collapsed ? 'Expand inspector' : 'Collapse inspector'} aria-label={collapsed ? 'Expand inspector' : 'Collapse inspector'} onClick={() => useEditorStore.setState({ inspectorCollapsed: !collapsed })}><Icon name={collapsed ? 'layers' : 'close'} /></button></div>
           <div hidden={collapsed} className={styles.inspectorBody}>

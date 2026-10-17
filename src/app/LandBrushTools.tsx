@@ -38,6 +38,7 @@ export function LandBrushTools(){
   <NumberControl label="Roughness (%)" value={b.roughness*100} min={0} max={100} change={n=>update({roughness:n/100})}/>
   <label>Smoothing<select aria-label="Coast smoothing" value={b.smoothing} onChange={e=>update({smoothing:e.target.value as LandBrush['smoothing']})}>{['off','low','medium','high'].map(v=><option key={v} value={v}>{v[0].toUpperCase()+v.slice(1)}</option>)}</select></label></>}
   <button onClick={()=>{finishObjectGesture();useEditorStore.setState({activeTool:'select'})}}>Done</button>
+  {b.action==='smooth'&&b.smoothing==='off'&&<p role="status">Smoothing is Off. Choose Low, Medium or High before using Smooth Coast; strokes will not change the coast.</p>}
   {busy&&<span role="status">Updating coastline… Escape cancels.</span>}
  </fieldset>
 }

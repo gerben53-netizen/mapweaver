@@ -10,6 +10,8 @@ import { defaultGeography } from '../domain/geography'
 import { gatherProject, encodeProject, decodeProject } from '../projects/archive'
 import { currentSnapshot } from '../projects/session'
 import { parseProject } from '../projects/format'
+// Campfire revision increases on history transitions; compare authored content, as history.test.ts does.
+const content=(s:ReturnType<typeof currentSnapshot>)=>{const {campfireRevision:revision,...map}=s.map;void revision;return {...s,map}}
 beforeEach(()=>{
  useProjectStore.setState({map:{...defaultMapStyle(),width:1024,height:768,mapType:'world-map',geography:defaultGeography('world-map'),background:null},objects:[],layers:[{id:'layer',name:'Land',visible:true,locked:false,objectIds:[]}],objectGroups:[],layerTree:{roots:['layer'],groups:[]}})
  useEditorStore.setState({activeLayerId:'layer',soloLayerId:null,selectedObjectIds:[]});history.reset()
@@ -19,13 +21,13 @@ it('commits once, restores exact geometry/metadata on undo/redo and rejects stal
  const before=currentSnapshot(),result=island(),after=currentSnapshot()
  expect(useHistoryStore.getState().undoCount).toBe(1);expect(after.map.landEditing?.revision).toBe(1)
  expect(after.layers[0].objectIds).toEqual(['island']);expect(after.objects).toEqual(result.added)
- history.undo();expect(currentSnapshot()).toEqual(before);history.redo();expect(currentSnapshot()).toEqual(after)
+ history.undo();expect(content(currentSnapshot())).toEqual(content(before));history.redo();expect(content(currentSnapshot())).toEqual(content(after))
  expect(()=>commitLandStroke(before,result,'add')).toThrow('changed')
- const brush={...defaultLandBrush,action:'remove' as const,size:400}
- const removed=applyLandStroke(landBrushInput(after,brush,[{x:400,y:350}],1,'unused'))
- useEditorStore.setState({selectedObjectIds:['island']});commitLandStroke(after,removed,'remove')
+ const redo=currentSnapshot(),brush={...defaultLandBrush,action:'remove' as const,size:400}
+ const removed=applyLandStroke(landBrushInput(redo,brush,[{x:400,y:350}],1,'unused'))
+ useEditorStore.setState({selectedObjectIds:['island']});commitLandStroke(redo,removed,'remove')
  expect(currentSnapshot().objects).toEqual([]);expect(currentSnapshot().layers[0].objectIds).toEqual([]);expect(useEditorStore.getState().selectedObjectIds).toEqual([])
- history.undo();expect(currentSnapshot()).toEqual(after)
+ history.undo();expect(content(currentSnapshot())).toEqual(content(after))
 })
 it('refuses hidden/locked layers and ignores no-op strokes',()=>{
  const before=currentSnapshot();commitLandStroke(before,{added:[],removed:[],replacements:[]},'add');expect(useHistoryStore.getState().undoCount).toBe(0)
@@ -49,15 +51,15 @@ it('keeps linked label positions and cleans memberships when land is removed',()
  const before=currentSnapshot(),brush={...defaultLandBrush,action:'remove' as const,size:400},result=applyLandStroke(landBrushInput(before,brush,[{x:400,y:350}],1,'unused'))
  commitLandStroke(before,result,'remove');const after=currentSnapshot(),remaining=after.objects[0]
  expect(remaining).toMatchObject({id:'label',x:label.x,y:label.y});expect('ownerId' in remaining).toBe(false);expect(after.objectGroups?.flatMap(g=>g.objectIds)).not.toContain('island')
- history.undo();expect(currentSnapshot()).toEqual(before)
+ history.undo();expect(content(currentSnapshot())).toEqual(content(before))
 })
 
 it('restores hex land, water and clipping exactly and round-trips portable geometry',async()=>{
  const before=currentSnapshot(),brush={...defaultLandBrush,shape:'hexagon' as const},result=applyLandStroke(landBrushInput(before,brush,[{x:400,y:350}],1,'hex'))
  commitLandStroke(before,result,'add');const after=currentSnapshot()
  expect(after.objects[0].kind==='area'&&after.objects[0].geometry.polygons[0].outer).toHaveLength(6)
- expect(history.undo()).toBe(true);expect(currentSnapshot()).toEqual(before)
- expect(history.redo()).toBe(true);expect(currentSnapshot()).toEqual(after)
+ expect(history.undo()).toBe(true);expect(content(currentSnapshot())).toEqual(content(before))
+ expect(history.redo()).toBe(true);expect(content(currentSnapshot())).toEqual(content(after))
  const now='2026-09-26T00:00:00.000Z',prepared=await gatherProject(after,{id:'hex-map',name:'Hex map',createdAt:now,modifiedAt:now})
  const loaded=await decodeProject(await encodeProject(prepared));expect(loaded.document.objects).toEqual(after.objects);expect(loaded.document.map).toEqual(after.map)
 })

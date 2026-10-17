@@ -7,6 +7,10 @@ import { useProjectStore } from '../store/projectStore'
 import { defaultLandBrush } from '../domain/landBrush'
 import { defaultGeography } from '../domain/geography'
 afterEach(cleanup)
+it('explains why Smooth Coast cannot paint with Smoothing Off',()=>{
+ useEditorStore.setState({activeTool:'landBrush'});useLandBrushStore.setState({settings:{...defaultLandBrush,action:'smooth',smoothing:'off'},busy:false})
+ render(<LandBrushTools/>);expect(screen.getByText(/Smoothing is Off/)).toBeInTheDocument()
+})
 it('offers working presets, action/shape controls and world-space fractional size',()=>{
  useProjectStore.setState(s=>({map:{...s.map,width:1000,mapType:'world-map',geography:{...defaultGeography('world-map'),widthKm:1000,unit:'km'}}}))
  useEditorStore.setState({activeTool:'landBrush'});useLandBrushStore.setState({settings:defaultLandBrush,busy:false})

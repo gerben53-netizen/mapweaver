@@ -20,8 +20,12 @@ export function landBudget(objects:MapObject[]) {
 }
 export function editContour(g:AreaGeometry,mode:'simplify'|'smooth',amount:number):AreaGeometry {
   if(!Number.isFinite(amount)||amount<=0||amount>50)throw Error('Contour amount must be greater than 0 and at most 50.')
-  const ring=(r:AreaGeometry['polygons'][number]['outer'])=>mode==='simplify'?simplify([...r,r[0]],amount).slice(0,-1):r.map((p,i)=>{const a=r[(i+r.length-1)%r.length],b=r[(i+1)%r.length],w=amount/100;return {x:p.x*(1-2*w)+(a.x+b.x)*w,y:p.y*(1-2*w)+(a.y+b.y)*w}})
+  const ring=(r:AreaGeometry['polygons'][number]['outer'])=>mode==='simplify'?simplify([...r,r[0]],amount).slice(0,-1):smoothContourPoints(r,r.map(()=>amount/100))
   return normalizeGeometry({polygons:g.polygons.map(p=>({outer:ring(p.outer),holes:p.holes.map(ring)}))})
+}
+/** Shared Laplacian step; weights can pin individual vertices or limit an edit to a segment. */
+export function smoothContourPoints(r:AreaGeometry['polygons'][number]['outer'],weights:number[]) {
+  return r.map((p,i)=>{const a=r[(i+r.length-1)%r.length],b=r[(i+1)%r.length],w=weights[i]??0;return w===0?p:{x:p.x*(1-2*w)+(a.x+b.x)*w,y:p.y*(1-2*w)+(a.y+b.y)*w}})
 }
 const cache=new WeakMap<AreaObject,AreaGeometry>()
 // Render-only displacement. Canonical topology, fill, selection and clipping are unchanged.

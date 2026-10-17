@@ -5,9 +5,10 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default tseslint.config(
-  { ignores: ['dist/**', 'dist-service/**', 'node_modules/**', '**/*.local/**', '.npm-cache/**', 'test-results/**', 'playwright-report/**'] },
+  // Historical audit recipes are frozen evidence, not maintained application/CLI sources.
+  { ignores: ['dist/**', 'dist-service/**', 'node_modules/**', '**/*.local/**', '.npm-cache/**', 'test-results/**', 'playwright-report/**', 'docs/audits/**/reproduction/*.mjs'] },
   js.configs.recommended,
-  { files: ['scripts/**/*.mjs', 'tests/**/*.mjs', 'playwright.config.mjs'], languageOptions: { globals: { ...globals.node, ...globals.browser } } },
+  { files: ['scripts/**/*.mjs', 'tests/**/*.mjs', 'docs/sprints/**/reproduction/*.mjs', 'playwright.config.mjs'], languageOptions: { globals: { ...globals.node, ...globals.browser } } },
   tseslint.configs.recommended,
   {
     files: ['**/*.{ts,tsx}'],

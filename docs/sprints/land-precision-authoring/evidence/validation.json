@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-17",
+  "branch": "codex/land-precision-authoring",
+  "primaryDataWritten": false,
+  "contractModified": false,
+  "qa": {
+    "profile": "qa",
+    "root": ".qa.local/land-precision/data",
+    "servicePort": 49571,
+    "frontendPort": 49572
+  },
+  "northreach": {
+    "mapId": "9e7b860f-9d86-45ba-8392-f0eff9b4f127",
+    "range": {
+      "ring": 0,
+      "start": 31,
+      "end": 61,
+      "protected": [
+        46
+      ],
+      "amount": 50
+    },
+    "changedIndices": [
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "unchangedOtherAreas": 35,
+    "allOutsideVerticesExact": true,
+    "landmarkExact": true,
+    "endTangentsExact": true,
+    "nodeCountUnchanged": true,
+    "sourceAuditExportUnchanged": true,
+    "pngBefore": "67cf19b04f5b7f183d7368f378278f597fb67dbff4ea46eedae14cfc07a59de6",
+    "pngAfter": "7a9f0642bbb6e02ad3d4c9888bfef301c9bad33aac09bcdef4e76e5e30507c19",
+    "referenceVisibleHash": "7a9f0642bbb6e02ad3d4c9888bfef301c9bad33aac09bcdef4e76e5e30507c19",
+    "referenceExcludedFromExport": true,
+    "roundtrip": {
+      "mapId": "9e7b860f-9d86-45ba-8392-f0eff9b4f127",
+      "objectsEqual": true,
+      "databaseObjectsEqual": true,
+      "pngBefore": "7a9f0642bbb6e02ad3d4c9888bfef301c9bad33aac09bcdef4e76e5e30507c19",
+      "pngAfter": "7a9f0642bbb6e02ad3d4c9888bfef301c9bad33aac09bcdef4e76e5e30507c19",
+      "pngIdentical": true,
+      "assets": 0
+    }
+  },
+  "bridge": {
+    "protected": [
+      5,
+      14
+    ],
+    "amount": 15,
+    "highStrengthRejected": "50: >3% area change",
+    "landmarkCoordinatesExact": true,
+    "stillOnePolygon": true,
+    "roundtrip": {
+      "mapId": "1a8209a5-5dcf-4015-9a4e-02a5ef05fced",
+      "objectsEqual": true,
+      "databaseObjectsEqual": true,
+      "pngBefore": "6fbf0574d27267a19553e25a76837880d278e906a8d3cd797e55abbbe3ff5bdd",
+      "pngAfter": "6fbf0574d27267a19553e25a76837880d278e906a8d3cd797e55abbbe3ff5bdd",
+      "pngIdentical": true,
+      "assets": 0
+    }
+  },
+  "tests": {
+    "targeted": {
+      "files": 9,
+      "passed": 58,
+      "failed": 0,
+      "seconds": 11.38
+    },
+    "reused": {
+      "files": 3,
+      "passed": 30,
+      "failed": 0,
+      "seconds": 5.88
+    }
+  },
+  "checks": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "clientBuild": "passed",
+    "fullBuild": "BLOCKED: canonical Campfire package.json fingerprint drift",
+    "expectedContractPackageSha256": "c8dbe7eaf9df8368d93eecf13caad5053e5eff432f04c2e2ade79358d2b1bf5b",
+    "actualContractPackageSha256": "2af57b2b3685b9525040b1b820fe3209fe806818250f853da362449f44c73177"
+  },
+  "ui": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "nativePreviewChecked": true,
+    "mouseReferenceDrag": true,
+    "referenceWheelZoom": true,
+    "referenceArrowPan": true,
+    "referenceHide": true
+  },
+  "scopeLimitations": [
+    "Landmarks are ephemeral to unchanged contour session; no persistent schema change",
+    "Reference zoom/pan is independent; calibrated navigation deferred",
+    "No premium map quality claim; full build remains blocked by external contract drift"
+  ]
+}

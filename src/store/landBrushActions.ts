@@ -12,6 +12,7 @@ import { terrainAppearance } from '../domain/terrainStyles'
 import { worldTheme } from '../domain/worldThemes'
 
 export function landBrushInput(snapshot:ProjectSnapshot,brush:LandBrush,points:Point[],seed:number,newId:string):LandBrushInput{
+ if(brush.action==='smooth'&&brush.smoothing==='off')throw Error('Smoothing is Off. Choose Low, Medium or High before using Smooth Coast.')
  if(!isLandMap(snapshot.map))throw Error('Land / Water is available on World and Regional maps.')
  const solo=useEditorStore.getState().soloLayerId,theme=worldTheme(snapshot.map.theme?.id),appearance={...terrainAppearance('land',snapshot.map.width),feather:0,coast:theme?.coast||'fantasy' as const,...(theme?{color:theme.terrain.land.color,textureOpacity:theme.texture}:{})}
  return{lands:projectObjects(snapshot,true,solo).filter(isLandmass),editable:[...editableProjectIds(snapshot,solo)],map:{width:snapshot.map.width,height:snapshot.map.height},brush,points,seed,newId,appearance}
