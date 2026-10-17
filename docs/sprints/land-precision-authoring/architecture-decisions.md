@@ -32,6 +32,8 @@ Existing Land history tests assumed Campfire revision equality after undo. They 
 
 Full lint initially included frozen historical audit .mjs recipes without their Node environment and with archived unused variables (54 errors). Those historical recipe snapshots are now explicitly outside maintained source lint; application sources and new sprint recipes remain checked. New sprint .mjs recipes receive Node/browser globals. Existing audit files are not edited.
 
-## External build blocker
+## Accepted provenance refresh and closure
 
-npm run build stops in the existing read-only provenance guard: ../Campfire/packages/map-contract/package.json differs from the pinned fingerprint. Expected c8dbe7eaf9df8368d93eecf13caad5053e5eff432f04c2e2ade79358d2b1bf5b; observed 2af57b2b3685b9525040b1b820fe3209fe806818250f853da362449f44c73177. Contract source, derived files, checker and fingerprints are untouched. Owner review / deliberate canonical synchronization is required separately. Independent client build and typecheck can be validated, but this is not a successful full build.
+Campfire's only package.json change adds --import ../../scripts/test-isolation-preload.mjs to its test command. Removing that exact substring in memory reproduces the old pinned hash. All other 21 canonical fingerprints match. The user accepted this tooling-only change; only Mapweaver's package.json fingerprint was refreshed from c8dbe7eaf9df8368d93eecf13caad5053e5eff432f04c2e2ade79358d2b1bf5b to 2af57b2b3685b9525040b1b820fe3209fe806818250f853da362449f44c73177. No regeneration, contract edits or guard changes. Full build now passes.
+
+Vitest recovery uses process-scoped TEMP/TMP under ignored .qa.local, with serial isolation first and normal parallel execution second. No permanent concurrency setting or isolation relaxation was necessary. See test-results.md.

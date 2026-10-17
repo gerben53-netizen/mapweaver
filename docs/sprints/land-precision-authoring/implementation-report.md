@@ -19,4 +19,4 @@ The first strong preview exposed excessive oscillation from weighting neighbour 
 
 Reference view is absent from the export: native north-after.png and reference-visible.png have exactly the same SHA-256. No reference bytes/assets enter either portable archive.
 
-Remaining scope: session-only landmarks and independent, uncalibrated reference navigation. Full production build is blocked by external canonical contract drift; see architecture-decisions.md and test-results.md. The sprint cannot claim every Definition-of-Done check is green while that guard fails.
+Remaining scope: session-only landmarks and independent, uncalibrated reference navigation. Full production build, typecheck, lint and contract verification now pass. Both isolated serial and parallel runs pass all 88 relevant tests. See test-results.md for the accepted fingerprint refresh and environment diagnosis. No product code, test expectations or test configuration changed during closure.

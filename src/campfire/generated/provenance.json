@@ -3,7 +3,7 @@
   "generatedNotice": "Read-only derived copy; Campfire owns the contract. Never edit these artifacts manually.",
   "sha256": {
     "generate-schema.mjs": "8d0eeff0c56947f2f2dc27d24c96bbf20f71bfa4ac0025461ff748bb52c5b987",
-    "package.json": "c8dbe7eaf9df8368d93eecf13caad5053e5eff432f04c2e2ade79358d2b1bf5b",
+    "package.json": "2af57b2b3685b9525040b1b820fe3209fe806818250f853da362449f44c73177",
     "README.md": "43dae11c1c9bd3dcee42f75e9f1db532532e66c70c5284c314075e34150e0859",
     "tsconfig.json": "d0c4f68471959f2b027677a86f872f621402a28f1ee27f09870c67358ea73bb1",
     "dist/index.d.ts": "7e64309b15dd9d525cd407df78ebcd23929503ffbaa30aacfd98eb82586c56cd",

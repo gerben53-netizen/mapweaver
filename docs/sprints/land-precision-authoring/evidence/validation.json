@@ -103,8 +103,25 @@
     "typecheck": "passed",
     "lint": "passed",
     "clientBuild": "passed",
-    "fullBuild": "BLOCKED: canonical Campfire package.json fingerprint drift",
-    "expectedContractPackageSha256": "c8dbe7eaf9df8368d93eecf13caad5053e5eff432f04c2e2ade79358d2b1bf5b",
+    "fullBuild": "passed",
+    "contractCheck": "passed",
+    "closureTests": {
+      "serial": {
+        "passed": 88,
+        "failed": 0,
+        "nonLoadedSuites": 0,
+        "files": 12,
+        "seconds": 45.33
+      },
+      "parallel": {
+        "passed": 88,
+        "failed": 0,
+        "nonLoadedSuites": 0,
+        "files": 12,
+        "seconds": 13.45
+      }
+    },
+    "expectedContractPackageSha256": "2af57b2b3685b9525040b1b820fe3209fe806818250f853da362449f44c73177",
     "actualContractPackageSha256": "2af57b2b3685b9525040b1b820fe3209fe806818250f853da362449f44c73177"
   },
   "ui": {
@@ -121,6 +138,6 @@
   "scopeLimitations": [
     "Landmarks are ephemeral to unchanged contour session; no persistent schema change",
     "Reference zoom/pan is independent; calibrated navigation deferred",
-    "No premium map quality claim; full build remains blocked by external contract drift"
+    "No premium map quality claim"
   ]
 }

@@ -2,9 +2,9 @@
 
 Implemented: **local contour smoothing, preview, protected session landmarks, optional editor-only Reference View, and Smoothing Off feedback**. Existing Area/Land geometry, history, serialization and PNG rendering are reused.
 
-**88/88 targeted tests, typecheck, lint and client build pass. Full build remains blocked by canonical Campfire contract fingerprint drift**, independently of these land changes. This sprint therefore does not claim a fully green Definition of Done. Contract/guard/derived artifacts were not changed.
+**Sprint closed: 88/88 targeted tests pass in both isolated serial and parallel runs; contract verification, full build, typecheck and lint pass.** The accepted Campfire test-script change required only its package.json provenance fingerprint to be refreshed; contract definitions and the guard remain unchanged.
 
-[Evidence gallery](index.html) · [Implementation](implementation-report.md) · [Architecture/scope decisions](architecture-decisions.md) · [Tests and build blocker](test-results.md) · [UX/final evaluation](ux-assessment.md) · [Before/after](before-after-comparison.md) · [Validation JSON](evidence/validation.json).
+[Evidence gallery](index.html) · [Implementation](implementation-report.md) · [Architecture/scope decisions](architecture-decisions.md) · [Tests and closure](test-results.md) · [UX/final evaluation](ux-assessment.md) · [Before/after](before-after-comparison.md) · [Validation JSON](evidence/validation.json).
 
 ## Use
 
@@ -40,4 +40,4 @@ Load a QA copy with the harness, perform the ordinary UI actions above and use E
 
 Run node docs/sprints/land-precision-authoring/reproduction/verify.mjs to recheck delivered archive geometry and hashes. The input audit path is preserved in the script. No Windows executable, push, merge, Campfire publication or external action was performed.
 
-Branch: codex/land-precision-authoring. Base: 363a347619108825d25e347c551294ef11e3216d. One local sprint commit contains only this implementation and its documentation/validation; pre-existing unrelated untracked audit ZIP remains excluded.
+Branch: codex/land-precision-authoring. Base: 363a347619108825d25e347c551294ef11e3216d. The implementation commit is followed by one minimal local closure commit for the accepted fingerprint and sprint documentation; pre-existing unrelated untracked audit ZIP remains excluded.
