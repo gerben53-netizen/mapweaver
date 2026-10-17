@@ -1,0 +1,153 @@
+[
+  {
+    "event": "focus",
+    "region": "bay",
+    "at": "2026-10-17T19:43:47.370Z",
+    "range": {
+      "start": 198,
+      "end": 224,
+      "protect": 215
+    }
+  },
+  {
+    "event": "native-export",
+    "region": "bay",
+    "phase": "before",
+    "sha256": "67cf19b04f5b7f183d7368f378278f597fb67dbff4ea46eedae14cfc07a59de6",
+    "at": "2026-10-17T19:43:57.211Z"
+  },
+  {
+    "event": "Preview local smoothing",
+    "region": "bay",
+    "at": "2026-10-17T19:44:26.929Z",
+    "start": "198",
+    "end": "224",
+    "strength": "50",
+    "protectedVisible": "Start 198 · End 224 · 27 points · Protected: 215"
+  },
+  {
+    "event": "Apply local smoothing",
+    "region": "bay",
+    "at": "2026-10-17T19:44:38.725Z",
+    "start": "198",
+    "end": "224",
+    "strength": "50",
+    "protectedVisible": "Start 198 · End 224 · 27 points · Protected: 215"
+  },
+  {
+    "event": "native-export",
+    "region": "bay",
+    "phase": "after",
+    "sha256": "33931740975f02034f7cf243262f439a196f96c4ace003d155dac916b972385e",
+    "at": "2026-10-17T19:44:39.081Z"
+  },
+  {
+    "event": "focus",
+    "region": "cape",
+    "at": "2026-10-17T19:54:01.633Z",
+    "range": {
+      "start": 31,
+      "end": 61,
+      "protect": 46
+    }
+  },
+  {
+    "event": "native-export",
+    "region": "cape",
+    "phase": "before",
+    "sha256": "33931740975f02034f7cf243262f439a196f96c4ace003d155dac916b972385e",
+    "at": "2026-10-17T19:54:02.011Z"
+  },
+  {
+    "event": "Preview local smoothing",
+    "region": "cape",
+    "at": "2026-10-17T19:54:38.090Z",
+    "start": "31",
+    "end": "61",
+    "strength": "50",
+    "protectedVisible": "Start 31 · End 61 · 31 points · Protected: 46"
+  },
+  {
+    "event": "Apply local smoothing",
+    "region": "cape",
+    "at": "2026-10-17T19:54:50.294Z",
+    "start": "31",
+    "end": "61",
+    "strength": "50",
+    "protectedVisible": "Start 31 · End 61 · 31 points · Protected: 46"
+  },
+  {
+    "event": "native-export",
+    "region": "cape",
+    "phase": "after",
+    "sha256": "8f0c884b65f4872f8645bbd1d3a9de796db233ae1c9d2fc165421338cca28b3b",
+    "at": "2026-10-17T19:54:51.290Z"
+  },
+  {
+    "event": "focus",
+    "region": "straight",
+    "at": "2026-10-17T19:54:52.536Z",
+    "range": {
+      "start": 163,
+      "end": 180,
+      "protect": null
+    }
+  },
+  {
+    "event": "native-export",
+    "region": "straight",
+    "phase": "before",
+    "sha256": "8f0c884b65f4872f8645bbd1d3a9de796db233ae1c9d2fc165421338cca28b3b",
+    "at": "2026-10-17T19:54:53.044Z"
+  },
+  {
+    "event": "Preview local smoothing",
+    "region": "straight",
+    "at": "2026-10-17T19:55:17.957Z",
+    "start": "163",
+    "end": "180",
+    "strength": "50",
+    "protectedVisible": "Start 163 · End 180 · 18 points · Protected: none"
+  },
+  {
+    "event": "Cancel",
+    "region": "straight",
+    "at": "2026-10-17T19:55:34.585Z",
+    "start": "163",
+    "end": "180",
+    "strength": "50",
+    "protectedVisible": "Start 163 · End 180 · 18 points · Protected: none"
+  },
+  {
+    "event": "native-export",
+    "region": "straight",
+    "phase": "before",
+    "sha256": "8f0c884b65f4872f8645bbd1d3a9de796db233ae1c9d2fc165421338cca28b3b",
+    "at": "2026-10-17T19:55:35.219Z"
+  },
+  {
+    "event": "Preview local smoothing",
+    "region": "straight",
+    "at": "2026-10-17T19:55:45.997Z",
+    "start": "163",
+    "end": "180",
+    "strength": "50",
+    "protectedVisible": "Start 163 · End 180 · 18 points · Protected: none"
+  },
+  {
+    "event": "Apply local smoothing",
+    "region": "straight",
+    "at": "2026-10-17T19:55:46.463Z",
+    "start": "163",
+    "end": "180",
+    "strength": "50",
+    "protectedVisible": "Start 163 · End 180 · 18 points · Protected: none"
+  },
+  {
+    "event": "native-export",
+    "region": "straight",
+    "phase": "after",
+    "sha256": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+    "at": "2026-10-17T19:55:47.455Z"
+  }
+]

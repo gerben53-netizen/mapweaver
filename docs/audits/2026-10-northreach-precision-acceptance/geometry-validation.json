@@ -1,0 +1,202 @@
+{
+  "sourceGeometryExactOnImport": true,
+  "sourceIdentity": "new QA map and new imported object IDs; names/geometry preserved",
+  "checks": {
+    "bay": {
+      "range": [
+        198,
+        224
+      ],
+      "protected": [
+        215
+      ],
+      "changedIndices": [
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222
+      ],
+      "maxDisplacementMapPx": 7.224525244987661,
+      "meanDisplacementMapPx": 1.6567639984856128,
+      "outsideExact": true,
+      "endpointTangentsExact": true,
+      "protectedAndNeighboursExact": true,
+      "otherAreasExact": 35,
+      "areaCount": 36,
+      "pointCount": 267,
+      "selfIntersections": false,
+      "pairwiseOverlaps": 0,
+      "history": {
+        "undone": true,
+        "undoEqual": true,
+        "redone": true,
+        "redoEqual": true
+      },
+      "landConnectionsAndIslands": "same valid polygon topology; all 35 other Areas exact",
+      "nativeBeforeSha256": "67cf19b04f5b7f183d7368f378278f597fb67dbff4ea46eedae14cfc07a59de6",
+      "nativeAfterSha256": "33931740975f02034f7cf243262f439a196f96c4ace003d155dac916b972385e",
+      "crop": {
+        "left": 625,
+        "top": 850,
+        "width": 300,
+        "height": 300
+      },
+      "archiveRoundtrip": {
+        "objectsEqual": true,
+        "pngExpected": "33931740975f02034f7cf243262f439a196f96c4ace003d155dac916b972385e",
+        "pngReopened": "33931740975f02034f7cf243262f439a196f96c4ace003d155dac916b972385e",
+        "pngIdentical": true
+      }
+    },
+    "cape": {
+      "range": [
+        31,
+        61
+      ],
+      "protected": [
+        46
+      ],
+      "changedIndices": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "maxDisplacementMapPx": 2.710598039008733,
+      "meanDisplacementMapPx": 1.3525333742458157,
+      "outsideExact": true,
+      "endpointTangentsExact": true,
+      "protectedAndNeighboursExact": true,
+      "otherAreasExact": 35,
+      "areaCount": 36,
+      "pointCount": 267,
+      "selfIntersections": false,
+      "pairwiseOverlaps": 0,
+      "history": {
+        "undone": true,
+        "undoEqual": true,
+        "redone": true,
+        "redoEqual": true
+      },
+      "landConnectionsAndIslands": "same valid polygon topology; all 35 other Areas exact",
+      "nativeBeforeSha256": "33931740975f02034f7cf243262f439a196f96c4ace003d155dac916b972385e",
+      "nativeAfterSha256": "8f0c884b65f4872f8645bbd1d3a9de796db233ae1c9d2fc165421338cca28b3b",
+      "crop": {
+        "left": 700,
+        "top": 63,
+        "width": 500,
+        "height": 250
+      },
+      "archiveRoundtrip": {
+        "objectsEqual": true,
+        "pngExpected": "8f0c884b65f4872f8645bbd1d3a9de796db233ae1c9d2fc165421338cca28b3b",
+        "pngReopened": "8f0c884b65f4872f8645bbd1d3a9de796db233ae1c9d2fc165421338cca28b3b",
+        "pngIdentical": true
+      }
+    },
+    "straight": {
+      "range": [
+        163,
+        180
+      ],
+      "protected": [],
+      "changedIndices": [
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178
+      ],
+      "maxDisplacementMapPx": 6.309307723786883,
+      "meanDisplacementMapPx": 2.5475821370579568,
+      "outsideExact": true,
+      "endpointTangentsExact": true,
+      "protectedAndNeighboursExact": true,
+      "otherAreasExact": 35,
+      "areaCount": 36,
+      "pointCount": 267,
+      "selfIntersections": false,
+      "pairwiseOverlaps": 0,
+      "history": {
+        "undone": true,
+        "undoEqual": true,
+        "redone": true,
+        "redoEqual": true
+      },
+      "landConnectionsAndIslands": "same valid polygon topology; all 35 other Areas exact",
+      "nativeBeforeSha256": "8f0c884b65f4872f8645bbd1d3a9de796db233ae1c9d2fc165421338cca28b3b",
+      "nativeAfterSha256": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+      "crop": {
+        "left": 740,
+        "top": 1190,
+        "width": 450,
+        "height": 170
+      },
+      "archiveRoundtrip": {
+        "objectsEqual": true,
+        "pngExpected": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+        "pngReopened": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+        "pngIdentical": true
+      }
+    }
+  },
+  "cancelPngIdentical": true,
+  "roundtrip": {
+    "mapId": "e19dc804-720f-476e-a85c-06ffe38bd442",
+    "databaseObjectsEqual": true,
+    "archiveObjectsEqual": true,
+    "pngBefore": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+    "pngDatabase": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+    "pngArchive": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+    "pngIdentical": true,
+    "assets": 0,
+    "referenceExcluded": true
+  },
+  "referenceAssets": 0,
+  "allPassed": true
+}

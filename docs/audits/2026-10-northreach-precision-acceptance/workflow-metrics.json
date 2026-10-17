@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-17",
+  "integratedCommit": "e7e25e0d32bf39c7039671ea5efb5cf58efd1734",
+  "integratedBranch": "develop",
+  "auditBranch": "codex/northreach-precision-acceptance",
+  "method": "Real App inspector controls operated by agent browser automation; harness selects object/viewport, captures native export and invokes supported history/storage/codec functions. No automated contour generation or off-UI geometry edits.",
+  "humanOperation": false,
+  "humanActiveSeconds": null,
+  "humanTimeSavingMeasured": false,
+  "regions": {
+    "bay": {
+      "selectedSegments": 1,
+      "protectedPoints": 1,
+      "smoothingAttempts": 1,
+      "previews": 1,
+      "acceptedOperations": 1,
+      "canceledOperations": 0,
+      "manualContourCorrections": 0,
+      "geometryRepairRounds": 0,
+      "undoRedoVerificationCycles": 1,
+      "strength": 50,
+      "from": "2026-10-17T19:43:47.370Z",
+      "to": "2026-10-17T19:44:39.081Z",
+      "agentWallSeconds": 51.711,
+      "interpretation": "Includes analysis, screenshots, automation and wait; not measured human drawing time."
+    },
+    "cape": {
+      "selectedSegments": 1,
+      "protectedPoints": 1,
+      "smoothingAttempts": 1,
+      "previews": 1,
+      "acceptedOperations": 1,
+      "canceledOperations": 0,
+      "manualContourCorrections": 0,
+      "geometryRepairRounds": 0,
+      "undoRedoVerificationCycles": 1,
+      "strength": 50,
+      "from": "2026-10-17T19:54:01.633Z",
+      "to": "2026-10-17T19:54:51.290Z",
+      "agentWallSeconds": 49.657,
+      "interpretation": "Includes analysis, screenshots, automation and wait; not measured human drawing time."
+    },
+    "straight": {
+      "selectedSegments": 1,
+      "protectedPoints": 0,
+      "smoothingAttempts": 2,
+      "previews": 2,
+      "acceptedOperations": 1,
+      "canceledOperations": 1,
+      "manualContourCorrections": 0,
+      "geometryRepairRounds": 0,
+      "undoRedoVerificationCycles": 1,
+      "strength": 50,
+      "from": "2026-10-17T19:54:52.536Z",
+      "to": "2026-10-17T19:55:47.455Z",
+      "agentWallSeconds": 54.919,
+      "interpretation": "Includes analysis, screenshots, automation and wait; not measured human drawing time."
+    }
+  },
+  "timing": {
+    "clock": "UTC ISO events; wall-clock windows include model analysis, UI automation and waits",
+    "preparationObservedFrom": "2026-10-17T19:38:44Z",
+    "authoringFrom": "2026-10-17T19:43:47.370Z",
+    "authoringThrough": "2026-10-17T19:55:47.455Z",
+    "authoringWallSeconds": 720.085,
+    "knownFileChooserToolWaitSeconds": 525.4339,
+    "otherWaitAndAnalysisNotSeparatelyInstrumented": true,
+    "domainAlgorithmTimingNotInstrumented": true,
+    "validationAndReportingThrough": "2026-10-17T20:06:08Z",
+    "observedTotalThroughReportingSeconds": 1644
+  },
+  "globalExceptions": [
+    {
+      "kind": "audit harness identity assumption",
+      "description": "Initial focus used source object ID; ordinary import assigns new IDs. Fixed only the new audit harness to locate copied landmass by name before measured region work. No product change."
+    },
+    {
+      "kind": "navigation",
+      "description": "One semantic-locator timeout on Geographic role & contour; fresh AX node activated successfully; no geometry retry."
+    },
+    {
+      "kind": "save-proof timing",
+      "description": "First proof button immediately after history cycle observed saveStatus other than saved and stopped proof capture. UI subsequently confirmed Saved. Reinvoking after autosave completed passed database/archive/PNG checks. No product fix; ordering issue or race not isolated.",
+      "proofAttempts": 2,
+      "successfulProofs": 1
+    }
+  ],
+  "postAuthoring": {
+    "stageArchiveProofs": 3,
+    "stageArchiveProofMethod": "supported codec and native export calls via audit button; no geometry edits",
+    "geometryCorrectionRounds": 0,
+    "auditFrontendRestarts": 1,
+    "reason": "Disabled watcher retained cached module before new stage proof handler; no backend restart",
+    "auditLintCorrection": "Typed new audit TSX harness; no product or ESLint configuration changes"
+  }
+}

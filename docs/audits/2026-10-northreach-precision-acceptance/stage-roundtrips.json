@@ -1,0 +1,20 @@
+{
+  "bay": {
+    "objectsEqual": true,
+    "pngExpected": "33931740975f02034f7cf243262f439a196f96c4ace003d155dac916b972385e",
+    "pngReopened": "33931740975f02034f7cf243262f439a196f96c4ace003d155dac916b972385e",
+    "pngIdentical": true
+  },
+  "cape": {
+    "objectsEqual": true,
+    "pngExpected": "8f0c884b65f4872f8645bbd1d3a9de796db233ae1c9d2fc165421338cca28b3b",
+    "pngReopened": "8f0c884b65f4872f8645bbd1d3a9de796db233ae1c9d2fc165421338cca28b3b",
+    "pngIdentical": true
+  },
+  "straight": {
+    "objectsEqual": true,
+    "pngExpected": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+    "pngReopened": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+    "pngIdentical": true
+  }
+}
