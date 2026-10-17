@@ -6,3 +6,11 @@
 .surface { position:relative; overflow:hidden; flex:1; min-height:100px; background:#15232b; touch-action:none; cursor:grab; }
 .surface img { position:absolute; top:0; left:0; max-width:none; transform-origin:0 0; user-select:none; pointer-events:none; }
 .panel[hidden] { display:none; }
+.settings { max-height:60%; flex-shrink:1; overflow:auto; display:flex; flex-direction:column; gap:7px; }
+.calibration { max-height:34vh; overflow:auto; display:flex; flex-direction:column; gap:5px; }
+.calibration ol { margin:0; padding-left:22px; }
+.calibration li { display:flex; flex-wrap:wrap; align-items:center; gap:4px; padding:4px 0; border-bottom:1px solid var(--color-border); font-size:12px; }
+.calibration li strong,.calibration li span { flex-basis:100%; }
+.mapOverlay { position:absolute; inset:0; overflow:hidden; z-index:12; }
+.marker { position:absolute; transform:translate(-50%,-50%); min-width:19px; height:19px; border-radius:50%; border:2px solid #fff; background:#713a65; color:white; font:bold 11px/15px system-ui; text-align:center; pointer-events:none; box-shadow:0 0 0 1px #15232b; }
+.pickHint { position:absolute; top:8px; left:8px; padding:6px; background:#15232b; color:white; pointer-events:none; }

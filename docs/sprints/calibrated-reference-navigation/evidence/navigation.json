@@ -1,0 +1,110 @@
+[
+  {
+    "event": "reference-map-initial",
+    "views": {
+      "map": {
+        "zoom": 0.18119991381248945,
+        "pan": {
+          "x": 155.67726289299353,
+          "y": 282.00415101863285
+        }
+      },
+      "reference": {
+        "zoom": 0.45,
+        "pan": {
+          "x": -130,
+          "y": 147.5
+        }
+      },
+      "mapSize": {
+        "width": 776,
+        "height": 885
+      },
+      "referenceSize": {
+        "width": 283,
+        "height": 632
+      }
+    }
+  },
+  {
+    "event": "reference-map-pan-zoom",
+    "views": {
+      "map": {
+        "zoom": 0.28312486533201475,
+        "pan": {
+          "x": -37.50419690621112,
+          "y": 191.62534638044292
+        }
+      },
+      "reference": {
+        "zoom": 0.703125,
+        "pan": {
+          "x": -345.21874999999994,
+          "y": 52.71875
+        }
+      },
+      "mapSize": {
+        "width": 776,
+        "height": 885
+      },
+      "referenceSize": {
+        "width": 283,
+        "height": 632
+      }
+    }
+  },
+  {
+    "event": "map-reference-zoom-fit",
+    "views": {
+      "map": {
+        "zoom": 0.41846153846153844,
+        "pan": {
+          "x": 48,
+          "y": 144.34615384615387
+        }
+      },
+      "reference": {
+        "zoom": 1.0392261692936464,
+        "pan": {
+          "x": -288.8600262447265,
+          "y": -0.9527484254214187
+        }
+      },
+      "mapSize": {
+        "width": 776,
+        "height": 885
+      },
+      "referenceSize": {
+        "width": 283,
+        "height": 632
+      }
+    }
+  },
+  {
+    "event": "align-views",
+    "views": {
+      "map": {
+        "zoom": 0.41846153846153844,
+        "pan": {
+          "x": 48,
+          "y": 144.34615384615387
+        }
+      },
+      "reference": {
+        "zoom": 1.0392261692936464,
+        "pan": {
+          "x": -288.8600262447265,
+          "y": -0.9527484254214187
+        }
+      },
+      "mapSize": {
+        "width": 776,
+        "height": 885
+      },
+      "referenceSize": {
+        "width": 283,
+        "height": 632
+      }
+    }
+  }
+]

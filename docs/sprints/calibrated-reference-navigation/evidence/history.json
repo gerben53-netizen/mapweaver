@@ -1,0 +1,8 @@
+{
+  "before": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+  "afterApply": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+  "afterUndo": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+  "afterRedo": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+  "undoPngExact": true,
+  "redoPngExact": true
+}

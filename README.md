@@ -581,3 +581,11 @@ On a battlemap choose **Ceiling** (roof icon), click polygon points, then Enter/
 Campfire v3 exports their union as direct sky/environment coverage only; movement, LOS, windows and point lights remain independent. Old maps retain unknown coverage; new maps start explicitly roofless. **Use explicit sky exposure** opts an old map into intentional roofless coverage. See [Ceiling / sky exposure](docs/campfire-export.md#ceiling--sky-exposure-v3).
 
 Battlemap premiumdefaults en opgeslagen overrides: zie [Nederlandse bediening](docs/map-effects.md#battlemap-premiumdefaults) en [ADR-0066](docs/adr/0066-battlemap-premium-defaults.md).
+
+## Calibrated Reference View (World / Regional)
+
+Open **Ref**, load an editor-only image and choose **Calibrate**. Add at least two numbered pairs by choosing the same landmark in the image and map, then **Recalculate**. A third or later pair displays fitting residuals; two pairs fit exactly and do not independently establish accuracy. Re-pick or remove individual points, or **Clear calibration**. Invalid, near-coincident and out-of-bounds points are rejected.
+
+Choose **Independent**, **Reference → Map**, or **Map → Reference**. **Align Views** matches geographical centre and calibrated scale in the selected direction (Reference → Map when Independent). Different pane sizes have different extents; both views stay unrotated. Follower zoom limits are reported. Normal contour editing and undo/redo remain available.
+
+Image, points and calibration are **session-only**, outside project data, archives and PNG. Hide retains the session and pauses linking; Preview also pauses linking. Replacing/clearing the image, switching projects or reloading clears it. Changing map dimensions requires recalculation. See [sprint guide](docs/sprints/calibrated-reference-navigation/README.md) and [ADR-0067](docs/adr/0067-calibrated-reference-navigation.md).

@@ -1,0 +1,19 @@
+{
+  "mapId": "02b5f714-d02c-47ce-a438-9003fd191d72",
+  "historyProof": {
+    "before": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+    "afterApply": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+    "afterUndo": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+    "afterRedo": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+    "undoPngExact": true,
+    "redoPngExact": true
+  },
+  "archiveObjectsEqual": true,
+  "databaseObjectsEqual": true,
+  "png": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+  "database": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+  "archive": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+  "pngIdentical": true,
+  "archiveAssets": 0,
+  "referenceReset": true
+}

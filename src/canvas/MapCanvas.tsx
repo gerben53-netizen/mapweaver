@@ -58,6 +58,7 @@ import { MapContent } from './MapContent'
 import { PatternTools } from '../app/PatternTools'
 import { Icon } from '../app/Icon'
 import styles from './MapCanvas.module.css'
+import { ReferenceMapOverlay } from './ReferenceMapOverlay'
 export function MapCanvas() {
   const view = useRenderViewStore(s => s.view)
   const fittedMapRef = useRef<string | null>(null)
@@ -101,6 +102,6 @@ function EditCanvas({ fittedMapRef }: { fittedMapRef: React.RefObject<string | n
         <Layer><LightingPreview/><WindowLightPreview/></Layer>
         <Layer listening={false}><EnvironmentalDetailFootprint/><LandBrushFootprint/><TerrainBrushFootprint/><TerrainBrushFootprint texture/><WaterDepthFootprint/><MeasureLines points={measure}/>{guides.map(guide => <Line key={guide.axis} points={guide.axis === 'x' ? [guide.position, guide.start, guide.position, guide.end] : [guide.start, guide.position, guide.end, guide.position]} stroke="#edbb74" strokeWidth={1 / viewport.zoom} dash={[5 / viewport.zoom, 3 / viewport.zoom]} listening={false} />)}{guides.filter(guide=>guide.label).map(guide=><Text key={'label-'+guide.axis} x={guide.axis==='x'?guide.position:guide.start} y={guide.axis==='y'?guide.position:guide.start} text={guide.label} fontSize={12/viewport.zoom} fill="#edbb74" listening={false}/>)}</Layer>
       </Stage>}
-      <PrefabPlacementOverlay/><GeographicReadout points={measure}/>{message && <div className={styles.message} role="status">{message}<button title="Dismiss message" aria-label="Dismiss message" onClick={() => useEditorStore.setState({ message: '' })}><Icon name="close" /></button></div>}
+      <ReferenceMapOverlay size={size}/><PrefabPlacementOverlay/><GeographicReadout points={measure}/>{message && <div className={styles.message} role="status">{message}<button title="Dismiss message" aria-label="Dismiss message" onClick={() => useEditorStore.setState({ message: '' })}><Icon name="close" /></button></div>}
     </div><StampPalette/><footer className={styles.footer}><span id="canvas-help">{toolHelp(tool)}</span><span>{Math.round(viewport.zoom * 100)}% · {mapSizeText(map)}</span></footer></section>
 }

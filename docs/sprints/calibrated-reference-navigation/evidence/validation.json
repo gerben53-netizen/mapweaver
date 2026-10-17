@@ -1,0 +1,100 @@
+{
+  "allPassed": true,
+  "calibration": {
+    "pairs": 3,
+    "scale": 2.4834448898561403,
+    "rotationDegrees": 0.09157206626301319,
+    "meanErrorMapPx": 1.2691181549480766,
+    "maxErrorMapPx": 1.7806202106033098
+  },
+  "navigation": [
+    {
+      "event": "reference-map-initial",
+      "centreErrorMapPx": 0,
+      "mapZoom": 0.18119991381248945,
+      "referenceZoom": 0.45
+    },
+    {
+      "event": "reference-map-pan-zoom",
+      "centreErrorMapPx": 0,
+      "mapZoom": 0.28312486533201475,
+      "referenceZoom": 0.703125
+    },
+    {
+      "event": "map-reference-zoom-fit",
+      "centreErrorMapPx": 2.5421149729252077e-13,
+      "mapZoom": 0.41846153846153844,
+      "referenceZoom": 1.0392261692936464
+    },
+    {
+      "event": "align-views",
+      "centreErrorMapPx": 2.5421149729252077e-13,
+      "mapZoom": 0.41846153846153844,
+      "referenceZoom": 1.0392261692936464
+    }
+  ],
+  "geometry": {
+    "changedIndices": [
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222
+    ],
+    "maxDisplacementMapPx": 1.8123576269496053,
+    "protected215Exact": true,
+    "endpointsAndTangentsExact": true,
+    "outsideExact": true,
+    "otherAreasExact": 35,
+    "areaCount": 36
+  },
+  "isolation": {
+    "unchangedSnapshot": true,
+    "shown": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+    "noMarkers": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+    "hidden": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+    "identical": true
+  },
+  "history": {
+    "before": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+    "afterApply": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+    "afterUndo": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+    "afterRedo": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+    "undoPngExact": true,
+    "redoPngExact": true
+  },
+  "roundtrip": {
+    "mapId": "02b5f714-d02c-47ce-a438-9003fd191d72",
+    "historyProof": {
+      "before": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+      "afterApply": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+      "afterUndo": "a85158eaba13008ec0da0f33b6cb3624a83422a819a655380ac18ec7ea737120",
+      "afterRedo": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+      "undoPngExact": true,
+      "redoPngExact": true
+    },
+    "archiveObjectsEqual": true,
+    "databaseObjectsEqual": true,
+    "png": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+    "database": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+    "archive": "a1c0e092fef350c700729426e5db705cd0c06704fb826cc373bffd1b42090c57",
+    "pngIdentical": true,
+    "archiveAssets": 0,
+    "referenceReset": true
+  }
+}

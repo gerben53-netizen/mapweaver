@@ -1,0 +1,13 @@
+# ADR-0067 — Session-only calibrated reference navigation
+
+Status: accepted for this sprint, 2026-10-17.
+
+Reference View needs geographic correspondence without becoming map content. Use a centred least-squares similarity from image pixels to map pixels: uniform scale, orientation-preserving rotation and translation. Two complete, sufficiently separated pairs determine the transform; additional pairs produce visible residuals. They do not constitute independent accuracy validation. Reject incomplete, duplicate/near-coincident, out-of-bounds, non-finite and unsafe-scale input. Maximum 16 pairs, minimum pairwise separation 2 pixels in each coordinate system, scale range 0.0001–10000.
+
+Pure calculations live in canvas/referenceCalibration.ts. Reference state is editor-only in referenceViewStore, distinct from projectStore, history, serializers and render requests. The validated image's blob URL remains owned/disposed by ReferenceView. Replacing/clearing the image, switching project or reloading clears calibration. Hide retains the session but returns navigation to Independent and cancels pending picking. Resizing map dimensions invalidates the transform; ordinary geometry edits and history do not.
+
+The three modes are Independent, Reference → Map and Map → Reference. One directional source drives the follower through guarded subscriptions. Convert the source viewport centre through the calibrated transform (or its inverse); convert zoom by the scalar scale and clamp using the existing viewport limits. Report clamping. Align Views is a one-shot operation in the selected direction; Independent uses Reference → Map. Both cameras stay unrotated. Equal geographical centre and equal world units per screen pixel are guaranteed away from zoom limits; different pane sizes/aspect ratios show different extents. This sprint does not claim identical rectangles or rotate the image viewport.
+
+Map calibration markers use a DOM overlay outside Konva scene content and native export. Only while explicitly choosing a map point does the overlay intercept the primary pointer in capture phase, before drawing/navigation handlers. All other interaction passes through. Image picking uses the existing reference viewport transform. Both use CSS-pixel coordinates, independent of display pixel ratio. Keyboard Enter chooses viewport centre and Escape cancels picking. Pair controls re-pick or remove a pair; changes disable the stale transform until recalculation.
+
+No project-format, contract, artwork, renderer or smoothing-algorithm changes. No persistence or calibration import/fork. These constraints keep the feature reversible and protect native exports from editor reference data.
