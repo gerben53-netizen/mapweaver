@@ -6,11 +6,16 @@ export function isOrganicLandShape(shape: string): shape is OrganicLandShape {
   return shape === 'organicSoft' || shape === 'organicRugged' || shape === 'organicFine'
 }
 
-/** Broad asymmetry, layered rocky shoulders, or restrained fine deviations. */
+/**
+ * Broad asymmetry, layered rocky shoulders, or local fine deviations.
+ * Mid-frequency shoulders interrupt circular terminal caps. Fine deliberately
+ * keeps these bands visible at small diameters rather than adding tiny noise
+ * that the existing contour simplifier would discard.
+ */
 const profiles = {
-  organicSoft: { bands: [[2, .13], [3, .09], [5, .018]], drift: .32 },
-  organicRugged: { bands: [[2, .09], [3, .08], [5, .055], [8, .032], [13, .018]], drift: .48 },
-  organicFine: { bands: [[2, .025], [5, .025], [9, .012]], drift: .25 },
+  organicSoft: { bands: [[1, .10], [2, .24], [3, .16], [5, .035]], drift: .32 },
+  organicRugged: { bands: [[1, .08], [2, .17], [3, .15], [5, .095], [8, .045], [13, .018]], drift: .48 },
+  organicFine: { bands: [[2, .055], [3, .10], [5, .075], [8, .035]], drift: .25 },
 } as const
 
 /** Session seed sequence; geometry, rather than the recipe, is persisted. */

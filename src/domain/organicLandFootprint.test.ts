@@ -11,6 +11,22 @@ const land=()=>({...createArea(rectangleGeometry({x:50,y:50,width:900,height:900
 const input=(shape:LandBrush['shape'],size=120,action:LandBrush['action']='add'):LandBrushInput=>({lands:[land()],editable:['land'],map:{width:1600,height:1400},brush:{...defaultLandBrush,shape,size,action,softness:0,roughness:.65,smoothing:'off'},points:[{x:950,y:450},{x:1000,y:500}],seed:713,newId:'new'})
 
 describe('organic land prototype',()=>{
+ it('Fine has visible shoulders at its 24px correction diameter, rather than a near-circle',()=>{
+  const p={x:700,y:900},ring=landFootprint(p,input('organicFine',24).brush,713)
+  const radii=ring.map(v=>Math.hypot(v.x-p.x,v.y-p.y))
+  expect((Math.max(...radii)-Math.min(...radii))/12).toBeGreaterThan(.15)
+  const turns=ring.map((p,i)=>{const a=ring[(i+71)%72],b=ring[(i+1)%72];return(p.x-a.x)*(b.y-p.y)-(p.y-a.y)*(b.x-p.x)})
+  expect(Math.min(...turns)).toBeLessThan(0)
+  expect(Math.max(...turns)).toBeGreaterThan(0)
+ })
+ it.each(shapes)('%s retains valid continuous multi-turn coverage across seeds',shape=>{
+  for(const seed of[1,17,713,714,715,9301,0xffffffff]){
+   const i={...input(shape,80),lands:[],editable:[],seed,points:[{x:250,y:250},{x:400,y:260},{x:480,y:350},{x:360,y:450},{x:300,y:550}]}
+   const result=applyLandStroke(i)
+   expect(result.added).toHaveLength(1);expect(result.added[0].geometry.polygons).toHaveLength(1)
+   result.added.forEach(validateArea)
+  }
+ })
  it.each(shapes)('%s is deterministic, bounded, closed and valid across sizes and seeds',shape=>{
   for(const size of[12,120,1200])for(const seed of[0,1,713,0xffffffff]){
    const b={...input(shape,size).brush},p={x:1000,y:1000},ring=landFootprint(p,b,seed)
