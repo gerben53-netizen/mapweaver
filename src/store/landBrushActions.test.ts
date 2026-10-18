@@ -67,7 +67,7 @@ it('restores hex land, water and clipping exactly and round-trips portable geome
 it.each(['organicSoft','organicRugged','organicFine'] as const)('round-trips %s Add/Remove with one history entry per gesture',async shape=>{
  const before=currentSnapshot(),brush={...defaultLandBrush,shape,softness:0,roughness:.65,smoothing:'off' as const},result=applyLandStroke(landBrushInput(before,brush,[{x:400,y:350},{x:500,y:370}],713,'organic'))
  commitLandStroke(before,result,'add');const added=currentSnapshot();expect(useHistoryStore.getState().undoCount).toBe(1)
- const cut={...brush,action:'remove' as const,size:60};commitLandStroke(added,applyLandStroke(landBrushInput(added,cut,[{x:500,y:370}],714,'unused')),'remove');const after=currentSnapshot()
+ const cut={...brush,action:'remove' as const,size:60};commitLandStroke(added,applyLandStroke(landBrushInput(added,cut,[{x:500,y:370},{x:510,y:375}],714,'unused')),'remove');const after=currentSnapshot()
  expect(useHistoryStore.getState().undoCount).toBe(2);history.undo();expect(content(currentSnapshot())).toEqual(content(added));history.redo();expect(content(currentSnapshot())).toEqual(content(after))
  const now='2026-10-18T00:00:00.000Z',prepared=await gatherProject(currentSnapshot(),{id:'organic-map',name:'Organic map',createdAt:now,modifiedAt:now}),loaded=await decodeProject(await encodeProject(prepared));expect(loaded.document.objects).toEqual(after.objects);expect(loaded.assets.size).toBe(0)
 })
