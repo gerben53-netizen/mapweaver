@@ -8,6 +8,7 @@ import { closestPoint, createArea, distance, geometryBounds, normalizeGeometry, 
 import { defaultLandArea } from './landAreas'
 import { terrainAppearance, type TerrainAppearance } from './terrainStyles'
 import { isOrganicLandShape, organicLandFootprint } from './organicLandFootprint'
+import { organicCapScales, shapeOrganicCap } from './organicStrokeCaps'
 
 export const LAND_SHAPES={round:'Round',organicSoft:'Organic Soft',organicRugged:'Organic Rugged',organicFine:'Organic Fine',organic:'Organic',jagged:'Jagged',island:'Island',peninsula:'Peninsula',detail:'Coastline Detail',hexagon:'Hexagon'} as const
 export interface LandBrush { snapHex?:boolean;matchHex?:boolean;hexGrid?:import('./models').GridSettings; hex?:HexSettings; action:'add'|'remove'|'smooth'|'roughen'; shape:keyof typeof LAND_SHAPES; size:number; softness:number; roughness:number; smoothing:'off'|'low'|'medium'|'high' }
@@ -69,9 +70,12 @@ export interface LandBrushInput { lands:AreaObject[]; editable:string[]; map:Siz
 export interface LandBrushResult { replacements:AreaObject[]; removed:string[]; added:AreaObject[] }
 export function applyLandStroke(input:LandBrushInput):LandBrushResult{
  const {lands,map,brush:b,seed}=input;validateLandBrush(b)
- const points=resampleLandStroke(input.points,b.size).map(p=>landGridPoint(p,b)).filter((p,i,a)=>!i||distance(p,a[i-1])>.001),coverage:MultiPolygon[]=points.map((p,i)=>{
+ const points=resampleLandStroke(input.points,b.size).map(p=>landGridPoint(p,b)).filter((p,i,a)=>!i||distance(p,a[i-1])>.001)
+ const caps=isOrganicLandShape(b.shape)&&(b.action==='add'||b.action==='remove')?organicCapScales(points,b.size):null
+ const coverage:MultiPolygon[]=points.map((p,i)=>{
   const previous=points[Math.max(0,i-1)],next=points[Math.min(points.length-1,i+1)],angle=Math.atan2(next.y-previous.y,next.x-previous.x)
-  return [[landFootprint(p,b,seed,angle).map(p=>[p.x,p.y])]]
+  const ring=landFootprint(p,b,seed,angle)
+  return [[(caps?shapeOrganicCap(ring,p,angle,caps[i]):ring).map(p=>[p.x,p.y])]]
  })
  let mask:MultiPolygon=[]
  // Small batches avoid feeding an unbounded segment queue to the boolean engine.
