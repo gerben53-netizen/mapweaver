@@ -7,11 +7,15 @@ import type { AreaGeometry, AreaObject } from './models'
 import { closestPoint, createArea, distance, geometryBounds, normalizeGeometry, rectangleGeometry, signedArea, simplify, withGeometry } from './areas'
 import { defaultLandArea } from './landAreas'
 import { terrainAppearance, type TerrainAppearance } from './terrainStyles'
+import { isOrganicLandShape, organicLandFootprint } from './organicLandFootprint'
 
-export const LAND_SHAPES={round:'Round',organic:'Organic',jagged:'Jagged',island:'Island',peninsula:'Peninsula',detail:'Coastline Detail',hexagon:'Hexagon'} as const
+export const LAND_SHAPES={round:'Round',organicSoft:'Organic Soft',organicRugged:'Organic Rugged',organicFine:'Organic Fine',organic:'Organic',jagged:'Jagged',island:'Island',peninsula:'Peninsula',detail:'Coastline Detail',hexagon:'Hexagon'} as const
 export interface LandBrush { snapHex?:boolean;matchHex?:boolean;hexGrid?:import('./models').GridSettings; hex?:HexSettings; action:'add'|'remove'|'smooth'|'roughen'; shape:keyof typeof LAND_SHAPES; size:number; softness:number; roughness:number; smoothing:'off'|'low'|'medium'|'high' }
 export const defaultLandBrush:LandBrush={action:'add',shape:'organic',size:180,softness:.25,roughness:.4,smoothing:'medium'}
 export const LAND_PRESETS:Record<string,LandBrush>={
+ 'Organic Soft':{...defaultLandBrush,shape:'organicSoft',softness:0,roughness:.65,smoothing:'off'},
+ 'Organic Rugged':{...defaultLandBrush,shape:'organicRugged',softness:0,roughness:.65,smoothing:'off'},
+ 'Organic Fine':{...defaultLandBrush,shape:'organicFine',size:60,softness:0,roughness:.65,smoothing:'off'},
  'Continental Mass':{...defaultLandBrush,size:600,roughness:.25,smoothing:'high'},
  'Regional Coast':{...defaultLandBrush},
  'Island':{...defaultLandBrush,shape:'island',size:100,roughness:.5},
@@ -28,6 +32,7 @@ const smoothAmount={off:0,low:.12,medium:.25,high:.4}
 const noise=(x:number,y:number,seed:number)=>Math.sin(x*.91+y*.37+seed)*.5+Math.sin(x*.43-y*.83+seed*1.3)*.3+Math.sin(x*1.71+y*1.27+seed*.7)*.2
 /** Shared bounded polar shape; size is its maximum longitudinal diameter. */
 export function landFootprint(p:Point,b:LandBrush,seed=1,angle=0):Point[]{
+ if(isOrganicLandShape(b.shape))return organicLandFootprint(p,b.shape,b.size,b.roughness,b.softness,seed)
  if(b.shape==='hexagon')return hexFootprint(p,b.size,b.hex,b.roughness,b.softness,b.smoothing,seed,b.hexGrid&&b.matchHex?hexCellCorners(pixelToHex(p,b.hexGrid),b.hexGrid):undefined)
  const profile={round:[0,1,1],organic:[.22,1,1],jagged:[.32,2.5,1],island:[.3,1.4,.8],peninsula:[.16,1,.35],detail:[.13,3,.85]}[b.shape]
  return Array.from({length:48},(_,i)=>{const t=i*Math.PI/24,irregular=profile[0]*b.roughness,frequency=profile[1],wave=noise(Math.cos(t)*frequency*2,Math.sin(t)*frequency*2,seed)

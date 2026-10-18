@@ -7,6 +7,17 @@ import { useProjectStore } from '../store/projectStore'
 import { defaultLandBrush } from '../domain/landBrush'
 import { defaultGeography } from '../domain/geography'
 afterEach(cleanup)
+it('offers three simple organic profiles with useful defaults and preserves Round settings',()=>{
+ useEditorStore.setState({activeTool:'landBrush'});useLandBrushStore.setState({settings:{...defaultLandBrush,action:'remove'},busy:false})
+ render(<LandBrushTools/>);
+ for(const shape of ['organicSoft','organicRugged','organicFine']){
+  fireEvent.change(screen.getByLabelText('Land brush shape'),{target:{value:shape}})
+  expect(useLandBrushStore.getState().settings).toMatchObject({shape,action:'remove',roughness:.65,softness:0,smoothing:'off'})
+  expect(screen.queryByLabelText('Roughness (%)')).not.toBeInTheDocument();expect(screen.getByText(/Prototype/)).toBeInTheDocument()
+ }
+ const before=useLandBrushStore.getState().settings;fireEvent.change(screen.getByLabelText('Land brush shape'),{target:{value:'round'}})
+ expect(useLandBrushStore.getState().settings).toEqual({...before,shape:'round'});expect(screen.getByLabelText('Roughness (%)')).toBeInTheDocument()
+})
 it('explains why Smooth Coast cannot paint with Smoothing Off',()=>{
  useEditorStore.setState({activeTool:'landBrush'});useLandBrushStore.setState({settings:{...defaultLandBrush,action:'smooth',smoothing:'off'},busy:false})
  render(<LandBrushTools/>);expect(screen.getByText(/Smoothing is Off/)).toBeInTheDocument()

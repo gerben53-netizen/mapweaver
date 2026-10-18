@@ -11,6 +11,7 @@ import { screenToMap, type Point } from './viewport'
 import type { ProjectSnapshot } from '../store/history'
 import { LAND_BRUSH_LIMITS, type LandBrush } from '../domain/landBrush'
 import { isEditing } from '../store/shortcuts'
+import { isOrganicLandShape, nextOrganicLandSeed } from '../domain/organicLandFootprint'
 
 export function LandBrushController({surface}:{surface:RefObject<HTMLDivElement|null>}){
  useEffect(()=>{
@@ -31,7 +32,7 @@ export function LandBrushController({surface}:{surface:RefObject<HTMLDivElement|
    useLandBrushStore.setState({busy:true})
    const signal=controller.signal
    void Promise.resolve().then(()=>calculateLandStroke(landBrushInput(before,settings,path,seed,newId),signal)).then(result=>{
-    if(current!==epoch)return;reset();try{commitLandStroke(before,result,settings.action)}catch(error){report(error)}
+    if(current!==epoch)return;reset();try{commitLandStroke(before,result,settings.action);if(isOrganicLandShape(settings.shape))useLandBrushStore.setState({organicSeed:nextOrganicLandSeed(seed)})}catch(error){report(error)}
    }).catch(error=>{if(current===epoch){reset();report(error)}})
   }
   const position=(e:PointerEvent)=>{const r=el.getBoundingClientRect(),p=screenToMap({x:e.clientX-r.x,y:e.clientY-r.y},useEditorStore.getState().viewport),map=useProjectStore.getState().map;return{...landGridPoint({x:Math.max(0,Math.min(map.width,p.x)),y:Math.max(0,Math.min(map.height,p.y))},brush??resolvedLandBrush(useLandBrushStore.getState().settings,map.grid,e.altKey)),inside:p.x>=0&&p.y>=0&&p.x<=map.width&&p.y<=map.height}}
@@ -39,7 +40,7 @@ export function LandBrushController({surface}:{surface:RefObject<HTMLDivElement|
    if(e.defaultPrevented||e.button!==0||useEditorStore.getState().activeTool!=='landBrush'||snapshot)return
    if(!position(e).inside)return
    e.preventDefault()
-   try{snapshot=currentSnapshot();const settings=resolvedLandBrush(useLandBrushStore.getState().settings,snapshot.map.grid,e.altKey);brush={...settings,action:e.altKey&&['add','remove'].includes(settings.action)?settings.action==='add'?'remove':'add':settings.action};points=[position(e)];seed=1;newId=crypto.randomUUID();pointer=e.pointerId;release=ownObjectGesture(finish,cancel);el.setPointerCapture(pointer);useEditorStore.setState({message:''});void runPreview()}catch(error){cancel();report(error)}
+   try{snapshot=currentSnapshot();const settings=resolvedLandBrush(useLandBrushStore.getState().settings,snapshot.map.grid,e.altKey);brush={...settings,action:e.altKey&&['add','remove'].includes(settings.action)?settings.action==='add'?'remove':'add':settings.action};points=[position(e)];seed=isOrganicLandShape(settings.shape)?useLandBrushStore.getState().organicSeed:1;newId=crypto.randomUUID();pointer=e.pointerId;release=ownObjectGesture(finish,cancel);el.setPointerCapture(pointer);useEditorStore.setState({message:''});void runPreview()}catch(error){cancel();report(error)}
   }
   const move=(e:PointerEvent)=>{
    if(e.defaultPrevented||useEditorStore.getState().activeTool!=='landBrush')return

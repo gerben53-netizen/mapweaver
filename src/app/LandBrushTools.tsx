@@ -8,6 +8,7 @@ import { LAND_PRESETS, LAND_SHAPES, type LandBrush } from '../domain/landBrush'
 import { pixelsToDistance, distanceToPixels, mapWorkspace } from '../domain/geography'
 import { finishObjectGesture } from '../canvas/interaction'
 import styles from './TerrainBrushTools.module.css'
+import { isOrganicLandShape } from '../domain/organicLandFootprint'
 
 function NumberControl({label,value,min,max,change}:{label:string;value:number;min:number;max:number;change:(n:number)=>void}){
  const [draft,setDraft]=useState<string|null>(null)
@@ -17,13 +18,14 @@ export function LandBrushTools(){
  const tool=useEditorStore(s=>s.activeTool),{settings:b,busy}=useLandBrushStore(),map=useProjectStore(s=>s.map)
  if(tool!=='landBrush')return null
  const gridHex=isHexGrid(map.grid),aligned=gridHex&&b.shape==='hexagon'&&(b.action==='add'||b.action==='remove')&&b.snapHex,matched=aligned&&b.matchHex
- const hex=aligned?{...(b.hex??DEFAULT_HEX),orientation:hexOrientation(map.grid),rotation:0}:b.hex??DEFAULT_HEX,shaping=b.action==='add'||b.action==='remove',exact=b.shape==='hexagon'&&hex.edge==='exact'&&shaping
+ const hex=aligned?{...(b.hex??DEFAULT_HEX),orientation:hexOrientation(map.grid),rotation:0}:b.hex??DEFAULT_HEX,shaping=b.action==='add'||b.action==='remove',exact=b.shape==='hexagon'&&hex.edge==='exact'&&shaping,organic=isOrganicLandShape(b.shape)&&shaping
  const unit=mapWorkspace(map).geography.unit,update=(patch:Partial<LandBrush>)=>{finishObjectGesture();useLandBrushStore.setState({settings:{...b,...patch}})}
  return <fieldset disabled={busy} className={styles.tools} aria-label="Land / Water controls" style={{margin:0,borderTop:0,borderLeft:0,borderRight:0,minWidth:0}}>
   <strong>Land / Water</strong>
   <label>Preset<select aria-label="Land brush preset" value="" onChange={e=>update(LAND_PRESETS[e.target.value])}><option value="" disabled>Choose preset</option>{Object.keys(LAND_PRESETS).map(name=><option key={name}>{name}</option>)}</select></label>
   <label>Action<select aria-label="Land action" value={b.action} onChange={e=>update({action:e.target.value as LandBrush['action']})}>{Object.entries({add:'Add Land',remove:'Remove Land',smooth:'Smooth Coast',roughen:'Roughen Coast'}).map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label>
-  <label>Shape<select aria-label="Land brush shape" value={b.shape} onChange={e=>update({shape:e.target.value as LandBrush['shape'],...(e.target.value==='hexagon'&&gridHex?{hex:{...(b.hex??DEFAULT_HEX),orientation:hexOrientation(map.grid)}}:{})})}>{Object.entries(LAND_SHAPES).map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label>
+  <label>Shape<select aria-label="Land brush shape" value={b.shape} onChange={e=>update({shape:e.target.value as LandBrush['shape'],...(isOrganicLandShape(e.target.value)?{softness:0,roughness:.65,smoothing:'off'}:{}),...(e.target.value==='hexagon'&&gridHex?{hex:{...(b.hex??DEFAULT_HEX),orientation:hexOrientation(map.grid)}}:{})})}>{Object.entries(LAND_SHAPES).map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label>
+  {organic&&<small>Prototype · {b.shape==='organicSoft'?'Broad, soft coastal arcs.':b.shape==='organicRugged'?'Layered rocky shoulders.':'Restrained local detail.'} Each completed stroke varies; saved land stays editable.</small>}
   {b.shape==='hexagon'&&shaping&&<>
    {gridHex&&<><label><input type="checkbox" checked={!!b.snapHex} onChange={e=>update({snapHex:e.target.checked,...(!e.target.checked?{matchHex:false}:{})})}/>Snap to hex grid</label><label><input type="checkbox" checked={!!matched} onChange={e=>update({matchHex:e.target.checked,...(e.target.checked?{snapHex:true}:{})})}/>Match one hex cell</label><small>Snap aligns the center and orientation. Alt bypasses center snap and temporarily switches Add/Remove.</small></>}
    <label>Orientation<select disabled={!!aligned} aria-label="Hex orientation" value={hex.orientation} onChange={e=>update({hex:{...hex,orientation:e.target.value as typeof hex.orientation}})}><option value="flat">Flat top</option><option value="pointy">Pointy top</option></select></label>
@@ -34,7 +36,7 @@ export function LandBrushTools(){
   {b.shape==='hexagon'&&!shaping&&<small>Smooth/Roughen adjusts existing coast with circular falloff. Choose Add/Remove Land to draw hex shapes.</small>}
   {matched?<span>One cell: {pixelsToDistance(map.grid.cellSize,map).toFixed(3)} {unit} corner to corner</span>:<><NumberControl key={unit} label={`Size (${unit})`} value={pixelsToDistance(b.size,map)} min={pixelsToDistance(12,map)} max={pixelsToDistance(1200,map)} change={n=>update({size:Math.max(12,Math.min(1200,distanceToPixels(n,unit,map)))})}/>
   <label>Size<input aria-label="Land brush size slider" title="Diameter in logical map pixels" type="range" min={12} max={1200} value={b.size} onChange={e=>update({size:Number(e.target.value)})}/></label></>}
-  {!exact&&<><NumberControl label="Softness (%)" value={b.softness*100} min={0} max={100} change={n=>update({softness:n/100})}/>
+  {!exact&&!organic&&<><NumberControl label="Softness (%)" value={b.softness*100} min={0} max={100} change={n=>update({softness:n/100})}/>
   <NumberControl label="Roughness (%)" value={b.roughness*100} min={0} max={100} change={n=>update({roughness:n/100})}/>
   <label>Smoothing<select aria-label="Coast smoothing" value={b.smoothing} onChange={e=>update({smoothing:e.target.value as LandBrush['smoothing']})}>{['off','low','medium','high'].map(v=><option key={v} value={v}>{v[0].toUpperCase()+v.slice(1)}</option>)}</select></label></>}
   <button onClick={()=>{finishObjectGesture();useEditorStore.setState({activeTool:'select'})}}>Done</button>
