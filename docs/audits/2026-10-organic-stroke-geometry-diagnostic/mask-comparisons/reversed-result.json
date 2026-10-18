@@ -1,0 +1,20 @@
+{
+  "name": "reversed",
+  "status": "ok",
+  "symmetricDifferencePx2": 1105.9421757834207,
+  "operations": [
+    {
+      "direction": "reference-minus-candidate",
+      "status": "ok",
+      "areaPx2": 480.10346759145614
+    },
+    {
+      "direction": "candidate-minus-reference",
+      "status": "ok",
+      "areaPx2": 625.8387081919645
+    }
+  ],
+  "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+  "candidateHash": "dcfc525ede4887943135ce1161575eb2eee100d756e74f728c01c69042a5e175",
+  "exactMasks": "mask-comparisons/reversed.json"
+}

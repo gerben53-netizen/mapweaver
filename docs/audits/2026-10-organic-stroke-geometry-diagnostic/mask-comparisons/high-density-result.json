@@ -1,0 +1,22 @@
+{
+  "name": "high-density",
+  "status": "failed",
+  "symmetricDifferencePx2": null,
+  "operations": [
+    {
+      "direction": "reference-minus-candidate",
+      "status": "failed",
+      "error": "Unable to complete output ring starting at [654.5825023682681, 607.7083049447209]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].",
+      "stack": "Error: Unable to complete output ring starting at [654.5825023682681, 607.7083049447209]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].\n    at RingOut.factory (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1348:19)\n    at Operation.run (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1763:30)\n    at Object.difference (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1794:20)\n    at compareMasks (file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:60:72)\n    at async file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:147:22"
+    },
+    {
+      "direction": "candidate-minus-reference",
+      "status": "failed",
+      "error": "Unable to complete output ring starting at [655.3112927095705, 605.3628207774493]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].",
+      "stack": "Error: Unable to complete output ring starting at [655.3112927095705, 605.3628207774493]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].\n    at RingOut.factory (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1348:19)\n    at Operation.run (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1763:30)\n    at Object.difference (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1794:20)\n    at compareMasks (file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:60:72)\n    at async file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:147:22"
+    }
+  ],
+  "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+  "candidateHash": "baf8c2b26f615c83eab898b324893caa850c921a0c65c8deec302544ea52641d",
+  "exactMasks": "mask-comparisons/high-density.json"
+}

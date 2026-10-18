@@ -1,0 +1,20 @@
+{
+  "name": "drop-1",
+  "status": "ok",
+  "symmetricDifferencePx2": 2080.0911923052045,
+  "operations": [
+    {
+      "direction": "reference-minus-candidate",
+      "status": "ok",
+      "areaPx2": 2080.0911923052045
+    },
+    {
+      "direction": "candidate-minus-reference",
+      "status": "ok",
+      "areaPx2": 0
+    }
+  ],
+  "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+  "candidateHash": "2b416453f35b8c0f92ed090e381a85fb192d9559b897be0169cae75c836963c6",
+  "exactMasks": "mask-comparisons/drop-1.json"
+}

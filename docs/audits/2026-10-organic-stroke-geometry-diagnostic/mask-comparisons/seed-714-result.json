@@ -1,0 +1,20 @@
+{
+  "name": "seed-714",
+  "status": "ok",
+  "symmetricDifferencePx2": 13786.141340850609,
+  "operations": [
+    {
+      "direction": "reference-minus-candidate",
+      "status": "ok",
+      "areaPx2": 11823.390548713782
+    },
+    {
+      "direction": "candidate-minus-reference",
+      "status": "ok",
+      "areaPx2": 1962.750792136827
+    }
+  ],
+  "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+  "candidateHash": "608ac0307fb915f6191f1709e9864a48b79a6ab85acfe30067af2866a0d68067",
+  "exactMasks": "mask-comparisons/seed-714.json"
+}

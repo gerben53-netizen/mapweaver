@@ -1,0 +1,20 @@
+{
+  "name": "low-density",
+  "status": "ok",
+  "symmetricDifferencePx2": 3766.9894463427554,
+  "operations": [
+    {
+      "direction": "reference-minus-candidate",
+      "status": "ok",
+      "areaPx2": 3606.695191304774
+    },
+    {
+      "direction": "candidate-minus-reference",
+      "status": "ok",
+      "areaPx2": 160.2942550379812
+    }
+  ],
+  "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+  "candidateHash": "325d2725c58f0775d7722a008cd6ed8e3d9f8c9ec677b39a275624ea013dc5d7",
+  "exactMasks": "mask-comparisons/low-density.json"
+}

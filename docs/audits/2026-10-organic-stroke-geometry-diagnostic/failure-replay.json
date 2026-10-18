@@ -1,0 +1,44 @@
+{
+  "status": "Known geometry failure reproduced, not repaired",
+  "variant": "high-density",
+  "coordinatesUnchanged": true,
+  "operations": [
+    {
+      "direction": "reference-minus-candidate",
+      "status": "failed",
+      "error": "Unable to complete output ring starting at [654.5825023682681, 607.7083049447209]. Last matching segment found ends at [655.3112927095705, 605.3628207774497]."
+    },
+    {
+      "direction": "candidate-minus-reference",
+      "status": "failed",
+      "error": "Unable to complete output ring starting at [655.3112927095705, 605.3628207774493]. Last matching segment found ends at [655.3112927095705, 605.3628207774497]."
+    }
+  ],
+  "landOperations": [
+    {
+      "name": "reference",
+      "operation": "add-union",
+      "status": "ok",
+      "polygons": 1
+    },
+    {
+      "name": "reference",
+      "operation": "remove-subtract",
+      "status": "ok",
+      "polygons": 1
+    },
+    {
+      "name": "high-density",
+      "operation": "add-union",
+      "status": "ok",
+      "polygons": 1
+    },
+    {
+      "name": "high-density",
+      "operation": "remove-subtract",
+      "status": "ok",
+      "polygons": 1
+    }
+  ],
+  "scope": "Mask-versus-mask differences fail. Both masks independently pass the raw land union and subtract operations on the exact diagnostic rectangle. This is not proof that every production use of these masks is safe."
+}

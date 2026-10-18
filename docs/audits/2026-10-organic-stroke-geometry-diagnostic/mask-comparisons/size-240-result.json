@@ -1,0 +1,20 @@
+{
+  "name": "size-240",
+  "status": "ok",
+  "symmetricDifferencePx2": 95315.14821074269,
+  "operations": [
+    {
+      "direction": "reference-minus-candidate",
+      "status": "ok",
+      "areaPx2": 0
+    },
+    {
+      "direction": "candidate-minus-reference",
+      "status": "ok",
+      "areaPx2": 95315.14821074269
+    }
+  ],
+  "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+  "candidateHash": "7da15f9d8c5d93977c9cb3da2161188d97b4b7b0c3f2df0b76947b32d5cf5b2b",
+  "exactMasks": "mask-comparisons/size-240.json"
+}

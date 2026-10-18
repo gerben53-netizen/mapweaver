@@ -1,0 +1,1902 @@
+{
+  "status": "Completed with explicitly unavailable difference measurements",
+  "comparisonFailures": [
+    {
+      "name": "high-density",
+      "status": "failed",
+      "symmetricDifferencePx2": null,
+      "operations": [
+        {
+          "direction": "reference-minus-candidate",
+          "status": "failed",
+          "error": "Unable to complete output ring starting at [654.5825023682681, 607.7083049447209]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].",
+          "stack": "Error: Unable to complete output ring starting at [654.5825023682681, 607.7083049447209]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].\n    at RingOut.factory (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1348:19)\n    at Operation.run (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1763:30)\n    at Object.difference (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1794:20)\n    at compareMasks (file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:60:72)\n    at async file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:147:22"
+        },
+        {
+          "direction": "candidate-minus-reference",
+          "status": "failed",
+          "error": "Unable to complete output ring starting at [655.3112927095705, 605.3628207774493]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].",
+          "stack": "Error: Unable to complete output ring starting at [655.3112927095705, 605.3628207774493]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].\n    at RingOut.factory (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1348:19)\n    at Operation.run (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1763:30)\n    at Object.difference (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1794:20)\n    at compareMasks (file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:60:72)\n    at async file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:147:22"
+        }
+      ],
+      "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+      "candidateHash": "baf8c2b26f615c83eab898b324893caa850c921a0c65c8deec302544ea52641d",
+      "exactMasks": "mask-comparisons/high-density.json"
+    }
+  ],
+  "sourceSha256": "5790cd7a8e7f21086cbd4757601cb6da597671be3ef4cf127ffaba0dc2cf09f0",
+  "transformHits": 1,
+  "defaultSamplingObservedResultEqualsUnmodified": true,
+  "diagnosticOverrides": "Low/high density intentionally override sample positions in memory; these two results are not asserted equal to default production sampling. All captured footprints and saved Areas are validated.",
+  "deterministic": true,
+  "orientationArgumentIgnoredForRugged": true,
+  "nativeReplayExact": true,
+  "measurements": [
+    {
+      "name": "native-first-remove",
+      "shape": "organicRugged",
+      "action": "remove",
+      "seed": 713,
+      "size": 60,
+      "spacing": 7.199999999999999,
+      "samples": 6,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 110
+      },
+      "rawLand": {
+        "polygons": 37,
+        "holes": 0,
+        "vertices": 703
+      },
+      "finalLand": {
+        "polygons": 37,
+        "holes": 0,
+        "vertices": 682
+      },
+      "savedAreas": 37,
+      "savedNodes": 683,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.06515922175578413,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.06515922175578413,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.24,
+          "factor": 1,
+          "minimum": 1
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.22309473237948002,
+      "cToDCapVertexDistancePx": 0.22309473237948002,
+      "cToDSymmetricDifferencePx2": 7.412501266691834,
+      "cToDAreaDifferencePercent": 0.0007841199126593762,
+      "rawExposedBoundaryLengthPx": {
+        "start": 86.86788786747843,
+        "end": 86.89171345865039,
+        "body": 56.802923109461965,
+        "unattributed": 0
+      },
+      "geometryMs": 21.620900000000347,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "fd836be2c3f46d5056c66c5128af9f07591f838fde803f05a9c5de3ee8715c13",
+      "rawMaskHash": "8938bbf36d96dd793a07105d9fbe6d143e016d08fd6163faeb36a4d21011bfab",
+      "finalGeometryHash": "f6507f25b661e4064fc5b6890ce3d2c08040b8b6ecee3db8e5a4046ad9b5af4e"
+    },
+    {
+      "name": "native-first-remove-round",
+      "shape": "round",
+      "action": "remove",
+      "seed": 713,
+      "size": 60,
+      "spacing": 7.199999999999999,
+      "samples": 6,
+      "footprintVertices": 48,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 72
+      },
+      "rawLand": {
+        "polygons": 37,
+        "holes": 0,
+        "vertices": 693
+      },
+      "finalLand": {
+        "polygons": 37,
+        "holes": 0,
+        "vertices": 676
+      },
+      "savedAreas": 37,
+      "savedNodes": 677,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.08540553312470027,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.08540553312470027,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.24,
+          "factor": 1,
+          "minimum": 1
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.1952842387464486,
+      "cToDCapVertexDistancePx": 0.18516954491081056,
+      "cToDSymmetricDifferencePx2": 6.391555616806727,
+      "cToDAreaDifferencePercent": 0.0006763001367481054,
+      "rawExposedBoundaryLengthPx": {
+        "start": 101.39595492121857,
+        "end": 96.19620976069912,
+        "body": 52.4344178226207,
+        "unattributed": 0
+      },
+      "geometryMs": 15.346399999999903,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "337e36b609ed074497cc5e148a4e3f32b4b2c282b63504cd1665e29abf40353c",
+      "rawMaskHash": "e657e476e7e7fa726c876ddcf5fb5467aad51e33f58b8e14d8654b4d18f7eff0",
+      "finalGeometryHash": "a1b156d9cb724c6cdbc1ac1087217d6b5455a3d5510074f6b986a849f08721f2"
+    },
+    {
+      "name": "native-add-cape",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 714,
+      "size": 60,
+      "spacing": 7.199999999999999,
+      "samples": 6,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 108
+      },
+      "rawLand": {
+        "polygons": 36,
+        "holes": 0,
+        "vertices": 723
+      },
+      "finalLand": {
+        "polygons": 36,
+        "holes": 0,
+        "vertices": 702
+      },
+      "savedAreas": 36,
+      "savedNodes": 703,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.18642607957043583,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.5704840308942205,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.24,
+          "factor": 1,
+          "minimum": 1
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.22950616401559545,
+      "cToDCapVertexDistancePx": 0.22950616401559545,
+      "cToDSymmetricDifferencePx2": 6.08524294703966,
+      "cToDAreaDifferencePercent": 0.0006422751381504789,
+      "rawExposedBoundaryLengthPx": {
+        "start": 95.30983477042655,
+        "end": 84.82479440771169,
+        "body": 56.220398540855655,
+        "unattributed": 0
+      },
+      "geometryMs": 18.80699999999979,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "83668d1711cf5050cd3ae1c02d957ef489e952fde4f35fb98c5c6da4f8bd097b",
+      "rawMaskHash": "af936c1b7d56ef8dbc6c4dad42169964ad4e976019acbcf96162eab5c3867ddc",
+      "finalGeometryHash": "ce3a1dd69d0c58a70c246b82d8ed0a6bf8ae22b089dd9afc1f93c69e5104fc6c"
+    },
+    {
+      "name": "native-add-cape-round",
+      "shape": "round",
+      "action": "add",
+      "seed": 714,
+      "size": 60,
+      "spacing": 7.199999999999999,
+      "samples": 6,
+      "footprintVertices": 48,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 72
+      },
+      "rawLand": {
+        "polygons": 36,
+        "holes": 0,
+        "vertices": 706
+      },
+      "finalLand": {
+        "polygons": 36,
+        "holes": 0,
+        "vertices": 696
+      },
+      "savedAreas": 36,
+      "savedNodes": 697,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.041325989005920064,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 1.3185851905176487,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.24,
+          "factor": 1,
+          "minimum": 1
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.23836217718075672,
+      "cToDCapVertexDistancePx": 0.23836217718075672,
+      "cToDSymmetricDifferencePx2": 4.848881418060046,
+      "cToDAreaDifferencePercent": 0.0005116051951278184,
+      "rawExposedBoundaryLengthPx": {
+        "start": 101.39595474196622,
+        "end": 95.02835628265953,
+        "body": 51.13839582171042,
+        "unattributed": 0
+      },
+      "geometryMs": 11.72400000000016,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "0e803b80b0abf88d129471a8dd2923517f5e1c1a1f1d43de988e5740c4ea93f8",
+      "rawMaskHash": "8bc67b7437fd3d44c2af14035195d017f7fe798db88b3e3851cb766888c72b11",
+      "finalGeometryHash": "17d9685b71ee12408b90417025ca3b7e4ba0f6ac7f6e78fd00881a12d12073f6"
+    },
+    {
+      "name": "native-remove-bay",
+      "shape": "organicRugged",
+      "action": "remove",
+      "seed": 715,
+      "size": 60,
+      "spacing": 7.199999999999999,
+      "samples": 3,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 90
+      },
+      "rawLand": {
+        "polygons": 36,
+        "holes": 0,
+        "vertices": 747
+      },
+      "finalLand": {
+        "polygons": 36,
+        "holes": 0,
+        "vertices": 719
+      },
+      "savedAreas": 36,
+      "savedNodes": 720,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.004185301123368362,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.004185301123368362,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.24,
+          "factor": 1,
+          "minimum": 1
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.2226308772615393,
+      "cToDCapVertexDistancePx": 0.2226308772615393,
+      "cToDSymmetricDifferencePx2": 3.5849971538991667,
+      "cToDAreaDifferencePercent": 0.00037867849317723724,
+      "rawExposedBoundaryLengthPx": {
+        "start": 75.77740149021965,
+        "end": 91.24525038785971,
+        "body": 16.589710224802968,
+        "unattributed": 0
+      },
+      "geometryMs": 13.856799999999566,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "2dd361f34d1c0f5c8403743a07d3736611d8a60d9f8e7f5702b2cf7b42f89807",
+      "rawMaskHash": "9bd643c656b2a0c1aa378958fbae038c3f48a3e84c9781e2724da2b39751f848",
+      "finalGeometryHash": "eca0242493e2fb58b48ea24b8ce3c6301425f9cff883cc8625390d6c9ab39f1b"
+    },
+    {
+      "name": "native-remove-bay-round",
+      "shape": "round",
+      "action": "remove",
+      "seed": 715,
+      "size": 60,
+      "spacing": 7.199999999999999,
+      "samples": 3,
+      "footprintVertices": 48,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 56
+      },
+      "rawLand": {
+        "polygons": 36,
+        "holes": 0,
+        "vertices": 731
+      },
+      "finalLand": {
+        "polygons": 36,
+        "holes": 0,
+        "vertices": 724
+      },
+      "savedAreas": 36,
+      "savedNodes": 725,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 1.5572118986419912,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.21464548658747762,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.24,
+          "factor": 1,
+          "minimum": 1
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.18596575288660575,
+      "cToDCapVertexDistancePx": 0.18596575288660575,
+      "cToDSymmetricDifferencePx2": 2.8091227366239764,
+      "cToDAreaDifferencePercent": 0.00029690967700704687,
+      "rawExposedBoundaryLengthPx": {
+        "start": 101.39595504166239,
+        "end": 97.294938273627,
+        "body": 10.329881132492599,
+        "unattributed": 0
+      },
+      "geometryMs": 11.473399999999856,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "3975e80b649f588cac5211d005f82000e5d6390e116e26050731cdb5d43f0829",
+      "rawMaskHash": "d97298f60a44673634784039ca9361bf0b6024bb17586ed7cc2a4fa1652cfc04",
+      "finalGeometryHash": "f11e7e98de361807682876572ef6f3d995e84e52532842fa2ac38fa51657f3e2"
+    },
+    {
+      "name": "long-multiturn",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 713,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 59,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 527
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 387
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 189
+      },
+      "savedAreas": 1,
+      "savedNodes": 189,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.011376120619730562,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.011376120619730562,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.4796235732826165,
+      "cToDCapVertexDistancePx": 0.4775450285999657,
+      "cToDSymmetricDifferencePx2": 132.82548907431192,
+      "cToDAreaDifferencePercent": 0.03183677860051955,
+      "rawExposedBoundaryLengthPx": {
+        "start": 191.03505682828518,
+        "end": 149.83179918468568,
+        "body": 1626.7218204359374,
+        "unattributed": 0
+      },
+      "geometryMs": 58.38180000000011,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "15dd290acf6a6d7a41f01811a0c068511a80983521069aebfa13d7ef3d242568",
+      "rawMaskHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+      "finalGeometryHash": "1bd2a8b8107b8eb3217db08b1b70a5edff4ada180d14ef2ae4527ac6327030f6"
+    },
+    {
+      "name": "long-multiturn-round",
+      "shape": "round",
+      "action": "add",
+      "seed": 713,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 59,
+      "footprintVertices": 48,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 279
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 198
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 71
+      },
+      "savedAreas": 1,
+      "savedNodes": 71,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.4002568129482833,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.8882245331585499,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.4710597183878167,
+      "cToDCapVertexDistancePx": 0.4584894704590164,
+      "cToDSymmetricDifferencePx2": 133.72993090788805,
+      "cToDAreaDifferencePercent": 0.03139584499473152,
+      "rawExposedBoundaryLengthPx": {
+        "start": 202.7919102638871,
+        "end": 194.2632750699297,
+        "body": 1563.7276328613925,
+        "unattributed": 0
+      },
+      "geometryMs": 27.66230000000087,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "e126767c9587a0ef58c9061327fd38f70b814612c13e6b4c4091673dbf28b381",
+      "rawMaskHash": "e6ebf600f3f92e0512b847d611f03b1891013968a331814d9a2044f57d0bcb82",
+      "finalGeometryHash": "52ea90c6e6eed2f61970b0ce32259dea737ec3d528f53df56e44ee81438e7299"
+    },
+    {
+      "name": "sharp-turn",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 713,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 43,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 256
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 206
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 119
+      },
+      "savedAreas": 1,
+      "savedNodes": 119,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.14517429592646552,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.14517429592646552,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.472416911650507,
+      "cToDCapVertexDistancePx": 0.43698016638495546,
+      "cToDSymmetricDifferencePx2": 71.2077557057637,
+      "cToDAreaDifferencePercent": 0.018180531761182145,
+      "rawExposedBoundaryLengthPx": {
+        "start": 193.5189521875473,
+        "end": 14.848957434027842,
+        "body": 799.3145143588484,
+        "unattributed": 0
+      },
+      "geometryMs": 28.731299999999464,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "e68aadbef3d5fa54dc63d850298d02b6c6a814ef32f659e6d319d57caf73fc77",
+      "rawMaskHash": "2851e547170b0094686205ffdadcbe70b42c40d560d8d7588977b833c5c08959",
+      "finalGeometryHash": "7c28a54aff04893e33b52a1c09a784ca93770aab48e36dbb686783352696b318"
+    },
+    {
+      "name": "sharp-turn-round",
+      "shape": "round",
+      "action": "add",
+      "seed": 713,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 43,
+      "footprintVertices": 48,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 143
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 114
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 40
+      },
+      "savedAreas": 1,
+      "savedNodes": 40,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.12941507677842143,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.12941507677842143,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.47565337034496263,
+      "cToDCapVertexDistancePx": 0.34097658801656855,
+      "cToDSymmetricDifferencePx2": 91.71575878332078,
+      "cToDAreaDifferencePercent": 0.023214792333486747,
+      "rawExposedBoundaryLengthPx": {
+        "start": 193.98940207432423,
+        "end": 8.540802104961285,
+        "body": 826.2440389003777,
+        "unattributed": 0
+      },
+      "geometryMs": 15.20259999999962,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "5b4734090ef145f2d860f5eaa50526fb082eb7e834600a1e00fc0a317f2e11ec",
+      "rawMaskHash": "8c9c9781215e0f18d894e205b55de6fab5f94985c0c93ea73acee69fc104a527",
+      "finalGeometryHash": "a2c7d0a9da3e172b2b9629c4961cca051297f5e8b1352a62b2e3e12104c4b5d3"
+    },
+    {
+      "name": "repeated-same-seed",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 713,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 59,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 527
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 374
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 189
+      },
+      "savedAreas": 1,
+      "savedNodes": 189,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.011376120619730562,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.011376120619730562,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.4796235732826165,
+      "cToDCapVertexDistancePx": 0.4775450285999657,
+      "cToDSymmetricDifferencePx2": 109.86012695959653,
+      "cToDAreaDifferencePercent": 0.026330789727533006,
+      "rawExposedBoundaryLengthPx": {
+        "start": 191.03505682828518,
+        "end": 149.83179918468568,
+        "body": 1626.7218204359374,
+        "unattributed": 0
+      },
+      "geometryMs": 51.96660000000065,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "15dd290acf6a6d7a41f01811a0c068511a80983521069aebfa13d7ef3d242568",
+      "rawMaskHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+      "finalGeometryHash": "1bd2a8b8107b8eb3217db08b1b70a5edff4ada180d14ef2ae4527ac6327030f6"
+    },
+    {
+      "name": "repeated-same-seed-round",
+      "shape": "round",
+      "action": "add",
+      "seed": 713,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 59,
+      "footprintVertices": 48,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 279
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 204
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 71
+      },
+      "savedAreas": 1,
+      "savedNodes": 71,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.4002568129482833,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.8882245331585499,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.4710597183878167,
+      "cToDCapVertexDistancePx": 0.4584894704590164,
+      "cToDSymmetricDifferencePx2": 133.3982482038482,
+      "cToDAreaDifferencePercent": 0.03131795128780523,
+      "rawExposedBoundaryLengthPx": {
+        "start": 202.7919102638871,
+        "end": 194.2632750699297,
+        "body": 1563.7276328613925,
+        "unattributed": 0
+      },
+      "geometryMs": 52.96389999999974,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "e126767c9587a0ef58c9061327fd38f70b814612c13e6b4c4091673dbf28b381",
+      "rawMaskHash": "e6ebf600f3f92e0512b847d611f03b1891013968a331814d9a2044f57d0bcb82",
+      "finalGeometryHash": "52ea90c6e6eed2f61970b0ce32259dea737ec3d528f53df56e44ee81438e7299"
+    },
+    {
+      "name": "overlap-next-seed",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 714,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 59,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 550
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 255
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 208
+      },
+      "savedAreas": 1,
+      "savedNodes": 208,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.0230112653504854,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.0230112653504854,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.4694900425710441,
+      "cToDCapVertexDistancePx": 0.4184164107261045,
+      "cToDSymmetricDifferencePx2": 42.22700258849363,
+      "cToDAreaDifferencePercent": 0.01008720757088699,
+      "rawExposedBoundaryLengthPx": {
+        "start": 176.8258654769239,
+        "end": 152.88795524995174,
+        "body": 1635.7994800573078,
+        "unattributed": 0
+      },
+      "geometryMs": 51.81739999999991,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "543fe0cb9ea5e0958cb478d581f8089b07ae0b605103e6346921b4850c4b7668",
+      "rawMaskHash": "608ac0307fb915f6191f1709e9864a48b79a6ab85acfe30067af2866a0d68067",
+      "finalGeometryHash": "7539a9984cc36fa1b77f30c420a1920ef14d7da3c357d5e0496d7b2f0e720043"
+    },
+    {
+      "name": "overlap-next-seed-round",
+      "shape": "round",
+      "action": "add",
+      "seed": 714,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 59,
+      "footprintVertices": 48,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 279
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 204
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 71
+      },
+      "savedAreas": 1,
+      "savedNodes": 71,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.4002568129482833,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.8882245331585499,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.4710597183878167,
+      "cToDCapVertexDistancePx": 0.4584894704590164,
+      "cToDSymmetricDifferencePx2": 133.3982482038482,
+      "cToDAreaDifferencePercent": 0.03131795128780523,
+      "rawExposedBoundaryLengthPx": {
+        "start": 202.7919102638871,
+        "end": 194.2632750699297,
+        "body": 1563.7276328613925,
+        "unattributed": 0
+      },
+      "geometryMs": 43.30540000000019,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "e126767c9587a0ef58c9061327fd38f70b814612c13e6b4c4091673dbf28b381",
+      "rawMaskHash": "e6ebf600f3f92e0512b847d611f03b1891013968a331814d9a2044f57d0bcb82",
+      "finalGeometryHash": "52ea90c6e6eed2f61970b0ce32259dea737ec3d528f53df56e44ee81438e7299"
+    },
+    {
+      "name": "low-density",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 713,
+      "size": 120,
+      "spacing": "diagnostic override",
+      "samples": 21,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 463
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 343
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 175
+      },
+      "savedAreas": 1,
+      "savedNodes": 175,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.01849847276052076,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.01849847276052076,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.46921995691211754,
+      "cToDCapVertexDistancePx": 0.468511219169823,
+      "cToDSymmetricDifferencePx2": 128.58194180242572,
+      "cToDAreaDifferencePercent": 0.031032187547818797,
+      "rawExposedBoundaryLengthPx": {
+        "start": 216.32056035699932,
+        "end": 186.05252806453663,
+        "body": 1668.9352684823236,
+        "unattributed": 0
+      },
+      "geometryMs": 20.19750000000022,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "9baf5c923a9af3ea9015ab2295850356c7bdfc691eed4098ce0e1d04c20a8029",
+      "rawMaskHash": "325d2725c58f0775d7722a008cd6ed8e3d9f8c9ec677b39a275624ea013dc5d7",
+      "finalGeometryHash": "b610ee5a45bf765304b526d33ab8fe82bd8a62a873a58e3a6c16da7f25d55c12"
+    },
+    {
+      "name": "high-density",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 713,
+      "size": 120,
+      "spacing": "diagnostic override",
+      "samples": 174,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 743
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 528
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 50
+      },
+      "savedAreas": 1,
+      "savedNodes": 50,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.007304523270716247,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.03449277532315549,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.43904910080867915,
+      "cToDCapVertexDistancePx": 0.3981579536132944,
+      "cToDSymmetricDifferencePx2": 186.2629590591314,
+      "cToDAreaDifferencePercent": 0.04457960140182865,
+      "rawExposedBoundaryLengthPx": {
+        "start": 174.72557668731474,
+        "end": 144.89013411453027,
+        "body": 1639.0002508790203,
+        "unattributed": 0
+      },
+      "geometryMs": 233.24109999999928,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "493985915fcc68835cb5b385075c00f3c69c746920ed3e0349f0358b41778546",
+      "rawMaskHash": "baf8c2b26f615c83eab898b324893caa850c921a0c65c8deec302544ea52641d",
+      "finalGeometryHash": "70e449b6e7c484a909dc5b991d57d1785d68d8d7081f4a302dcb541e1566ff1a"
+    },
+    {
+      "name": "reversed",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 713,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 59,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 533
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 386
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 190
+      },
+      "savedAreas": 1,
+      "savedNodes": 190,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.01566627694439614,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.022448750795777274,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.46627694182031354,
+      "cToDCapVertexDistancePx": 0.4580283478854463,
+      "cToDSymmetricDifferencePx2": 127.33960747796664,
+      "cToDAreaDifferencePercent": 0.030506570572893334,
+      "rawExposedBoundaryLengthPx": {
+        "start": 161.02776573684153,
+        "end": 180.2662142728283,
+        "body": 1633.462758475669,
+        "unattributed": 0
+      },
+      "geometryMs": 58.36670000000049,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "aa79085c0c3ea160617c985b634b4c898be361a6628aa92d1537dd342389e717",
+      "rawMaskHash": "dcfc525ede4887943135ce1161575eb2eee100d756e74f728c01c69042a5e175",
+      "finalGeometryHash": "a48d8c508ab940acca44b990ca2f717ad17c672a599c2860c6737e0d13b32f57"
+    },
+    {
+      "name": "seed-714",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 714,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 59,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 550
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 410
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 216
+      },
+      "savedAreas": 1,
+      "savedNodes": 216,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.0230112653504854,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.0230112653504854,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.4738529311673466,
+      "cToDCapVertexDistancePx": 0.469225843701533,
+      "cToDSymmetricDifferencePx2": 125.51928016111924,
+      "cToDAreaDifferencePercent": 0.030651085865170194,
+      "rawExposedBoundaryLengthPx": {
+        "start": 176.8258654769239,
+        "end": 152.88795524995174,
+        "body": 1635.7994800573078,
+        "unattributed": 0
+      },
+      "geometryMs": 49.86789999999928,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "2cd9847d149b790666c868b042f28f503c7bb5fae5a3968a584bc2efd7de6522",
+      "rawMaskHash": "608ac0307fb915f6191f1709e9864a48b79a6ab85acfe30067af2866a0d68067",
+      "finalGeometryHash": "855a7c4fa639a338f4cf2b3d64f2380528ff30c2633f41a2834ba576c0c6639b"
+    },
+    {
+      "name": "size-60",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 713,
+      "size": 60,
+      "spacing": 7.199999999999999,
+      "samples": 116,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 1056
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 906
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 466
+      },
+      "savedAreas": 1,
+      "savedNodes": 466,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.02477106409841218,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.02477106409841218,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.24,
+          "factor": 1,
+          "minimum": 1
+        }
+      ],
+      "normalization": [
+        {
+          "valid": false,
+          "reason": "A ring supports at most 512 points."
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.23904797285069254,
+      "cToDCapVertexDistancePx": 0.23741034878131148,
+      "cToDSymmetricDifferencePx2": 70.37430277621752,
+      "cToDAreaDifferencePercent": 0.018679942508481203,
+      "rawExposedBoundaryLengthPx": {
+        "start": 87.01632879817231,
+        "end": 84.53121023275706,
+        "body": 1651.2301443533763,
+        "unattributed": 0
+      },
+      "geometryMs": 121.54880000000048,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "3a26b0196fc71bd586be9f780a39365cbb34ae5ff25fabea5a6e4c11090a2864",
+      "rawMaskHash": "ec30bd4baf56fa09b230678bd858c0861c6ecc8bb7c63b973025a5836bb84349",
+      "finalGeometryHash": "0684360a39396e847ab890b0dc981e734de4a3995b7ec42e3097a4166be0efd2"
+    },
+    {
+      "name": "size-240",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 713,
+      "size": 240,
+      "spacing": 28.799999999999997,
+      "samples": 30,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 279
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 161
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 84
+      },
+      "savedAreas": 1,
+      "savedNodes": 84,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.0732004618768023,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.23926901084437618,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.96,
+          "factor": 1,
+          "minimum": 8.2944
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.9522156975978585,
+      "cToDCapVertexDistancePx": 0.9522156975978585,
+      "cToDSymmetricDifferencePx2": 265.56832209532513,
+      "cToDAreaDifferencePercent": 0.05533575918627863,
+      "rawExposedBoundaryLengthPx": {
+        "start": 355.26966345398597,
+        "end": 375.11731723528084,
+        "body": 1491.3485467811956,
+        "unattributed": 0
+      },
+      "geometryMs": 25.64520000000084,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "f70de6e0460e0d490031eef349c35ebc56631ccda39617181196a84b4133c034",
+      "rawMaskHash": "7da15f9d8c5d93977c9cb3da2161188d97b4b7b0c3f2df0b76947b32d5cf5b2b",
+      "finalGeometryHash": "a0d44b5a0842662a599cf85fb9658db96099f7013263a2a8722abc4fae1e62f3"
+    },
+    {
+      "name": "smoothing-high",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 713,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 59,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 527
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 387
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 156
+      },
+      "savedAreas": 1,
+      "savedNodes": 156,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.011376120619730562,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.011376120619730562,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.6719999999999999,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.6524697624927497,
+      "cToDCapVertexDistancePx": 0.5496481517580555,
+      "cToDSymmetricDifferencePx2": 203.99395597659895,
+      "cToDAreaDifferencePercent": 0.04889506116282867,
+      "rawExposedBoundaryLengthPx": {
+        "start": 191.03505682828518,
+        "end": 149.83179918468568,
+        "body": 1626.7218204359374,
+        "unattributed": 0
+      },
+      "geometryMs": 43.90390000000116,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "dfd074d626ba24061df9d98a7bf8e474739df648822d2fa59f96ea44a88c0372",
+      "rawMaskHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+      "finalGeometryHash": "513fc8273783eff47cf1fa908c9b6906c717bca8448320b54c167aced0fbf053"
+    },
+    {
+      "name": "dense-pointer-events",
+      "shape": "organicRugged",
+      "action": "add",
+      "seed": 713,
+      "size": 120,
+      "spacing": 14.399999999999999,
+      "samples": 59,
+      "footprintVertices": 72,
+      "rawMask": {
+        "polygons": 1,
+        "holes": 0,
+        "vertices": 527
+      },
+      "rawLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 387
+      },
+      "finalLand": {
+        "polygons": 1,
+        "holes": 1,
+        "vertices": 189
+      },
+      "savedAreas": 1,
+      "savedNodes": 189,
+      "rawMaskChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.011376120619730562,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "rawLandChecks": {
+        "finite": true,
+        "properCrossings": 0,
+        "zeroLengthEdges": 0,
+        "minimumEdge": 0.011376120619730562,
+        "method": "Strict proper same-ring crossings; excludes collinear/touching cases. Saved Areas separately undergo full native validation."
+      },
+      "simplificationAttempts": [
+        {
+          "tolerance": 0.48,
+          "factor": 1,
+          "minimum": 2.0736
+        }
+      ],
+      "normalization": [
+        {
+          "valid": true,
+          "boundaryChange": 0,
+          "areaChange": 0
+        }
+      ],
+      "cToDBoundaryVertexDistancePx": 0.4796235732826165,
+      "cToDCapVertexDistancePx": 0.4775450285999657,
+      "cToDSymmetricDifferencePx2": 132.82548907431192,
+      "cToDAreaDifferencePercent": 0.03183677860051955,
+      "rawExposedBoundaryLengthPx": {
+        "start": 191.03505682828518,
+        "end": 149.83179918468568,
+        "body": 1626.7218204359374,
+        "unattributed": 0
+      },
+      "geometryMs": 46.297200000000885,
+      "validFootprints": true,
+      "validSavedAreas": true,
+      "sourceResultHash": "15dd290acf6a6d7a41f01811a0c068511a80983521069aebfa13d7ef3d242568",
+      "rawMaskHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+      "finalGeometryHash": "1bd2a8b8107b8eb3217db08b1b70a5edff4ada180d14ef2ae4527ac6327030f6"
+    }
+  ],
+  "sensitivities": [
+    {
+      "name": "low-density",
+      "comparison": {
+        "name": "low-density",
+        "status": "ok",
+        "symmetricDifferencePx2": 3766.9894463427554,
+        "operations": [
+          {
+            "direction": "reference-minus-candidate",
+            "status": "ok",
+            "areaPx2": 3606.695191304774
+          },
+          {
+            "direction": "candidate-minus-reference",
+            "status": "ok",
+            "areaPx2": 160.2942550379812
+          }
+        ],
+        "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "candidateHash": "325d2725c58f0775d7722a008cd6ed8e3d9f8c9ec677b39a275624ea013dc5d7",
+        "exactMasks": "mask-comparisons/low-density.json"
+      },
+      "maskSymmetricDifferencePx2": 3766.9894463427554,
+      "maskBoundaryVertexDistancePx": 13.78956252752612,
+      "samples": 21
+    },
+    {
+      "name": "high-density",
+      "comparison": {
+        "name": "high-density",
+        "status": "failed",
+        "symmetricDifferencePx2": null,
+        "operations": [
+          {
+            "direction": "reference-minus-candidate",
+            "status": "failed",
+            "error": "Unable to complete output ring starting at [654.5825023682681, 607.7083049447209]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].",
+            "stack": "Error: Unable to complete output ring starting at [654.5825023682681, 607.7083049447209]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].\n    at RingOut.factory (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1348:19)\n    at Operation.run (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1763:30)\n    at Object.difference (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1794:20)\n    at compareMasks (file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:60:72)\n    at async file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:147:22"
+          },
+          {
+            "direction": "candidate-minus-reference",
+            "status": "failed",
+            "error": "Unable to complete output ring starting at [655.3112927095705, 605.3628207774493]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].",
+            "stack": "Error: Unable to complete output ring starting at [655.3112927095705, 605.3628207774493]. Last matching segment found ends at [655.3112927095705, 605.3628207774497].\n    at RingOut.factory (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1348:19)\n    at Operation.run (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1763:30)\n    at Object.difference (C:\\Users\\gerbe\\Documents\\ChatGPT\\Mapweaver\\node_modules\\polygon-clipping\\dist\\polygon-clipping.cjs.js:1794:20)\n    at compareMasks (file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:60:72)\n    at async file:///C:/Users/gerbe/Documents/ChatGPT/Mapweaver/docs/audits/2026-10-organic-stroke-geometry-diagnostic/analyze.mjs:147:22"
+          }
+        ],
+        "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "candidateHash": "baf8c2b26f615c83eab898b324893caa850c921a0c65c8deec302544ea52641d",
+        "exactMasks": "mask-comparisons/high-density.json"
+      },
+      "maskSymmetricDifferencePx2": null,
+      "maskBoundaryVertexDistancePx": 4.023472693582012,
+      "samples": 174
+    },
+    {
+      "name": "reversed",
+      "comparison": {
+        "name": "reversed",
+        "status": "ok",
+        "symmetricDifferencePx2": 1105.9421757834207,
+        "operations": [
+          {
+            "direction": "reference-minus-candidate",
+            "status": "ok",
+            "areaPx2": 480.10346759145614
+          },
+          {
+            "direction": "candidate-minus-reference",
+            "status": "ok",
+            "areaPx2": 625.8387081919645
+          }
+        ],
+        "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "candidateHash": "dcfc525ede4887943135ce1161575eb2eee100d756e74f728c01c69042a5e175",
+        "exactMasks": "mask-comparisons/reversed.json"
+      },
+      "maskSymmetricDifferencePx2": 1105.9421757834207,
+      "maskBoundaryVertexDistancePx": 4.540557963842496,
+      "samples": 59
+    },
+    {
+      "name": "seed-714",
+      "comparison": {
+        "name": "seed-714",
+        "status": "ok",
+        "symmetricDifferencePx2": 13786.141340850609,
+        "operations": [
+          {
+            "direction": "reference-minus-candidate",
+            "status": "ok",
+            "areaPx2": 11823.390548713782
+          },
+          {
+            "direction": "candidate-minus-reference",
+            "status": "ok",
+            "areaPx2": 1962.750792136827
+          }
+        ],
+        "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "candidateHash": "608ac0307fb915f6191f1709e9864a48b79a6ab85acfe30067af2866a0d68067",
+        "exactMasks": "mask-comparisons/seed-714.json"
+      },
+      "maskSymmetricDifferencePx2": 13786.141340850609,
+      "maskBoundaryVertexDistancePx": 20.56252708385217,
+      "samples": 59
+    },
+    {
+      "name": "size-60",
+      "comparison": {
+        "name": "size-60",
+        "status": "ok",
+        "symmetricDifferencePx2": 50708.034654479234,
+        "operations": [
+          {
+            "direction": "reference-minus-candidate",
+            "status": "ok",
+            "areaPx2": 50708.034654479234
+          },
+          {
+            "direction": "candidate-minus-reference",
+            "status": "ok",
+            "areaPx2": 0
+          }
+        ],
+        "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "candidateHash": "ec30bd4baf56fa09b230678bd858c0861c6ecc8bb7c63b973025a5836bb84349",
+        "exactMasks": "mask-comparisons/size-60.json"
+      },
+      "maskSymmetricDifferencePx2": 50708.034654479234,
+      "maskBoundaryVertexDistancePx": 40.61983705420597,
+      "samples": 116
+    },
+    {
+      "name": "size-240",
+      "comparison": {
+        "name": "size-240",
+        "status": "ok",
+        "symmetricDifferencePx2": 95315.14821074269,
+        "operations": [
+          {
+            "direction": "reference-minus-candidate",
+            "status": "ok",
+            "areaPx2": 0
+          },
+          {
+            "direction": "candidate-minus-reference",
+            "status": "ok",
+            "areaPx2": 95315.14821074269
+          }
+        ],
+        "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "candidateHash": "7da15f9d8c5d93977c9cb3da2161188d97b4b7b0c3f2df0b76947b32d5cf5b2b",
+        "exactMasks": "mask-comparisons/size-240.json"
+      },
+      "maskSymmetricDifferencePx2": 95315.14821074269,
+      "maskBoundaryVertexDistancePx": 73.70230563212961,
+      "samples": 30
+    },
+    {
+      "name": "smoothing-high",
+      "comparison": {
+        "name": "smoothing-high",
+        "status": "ok",
+        "symmetricDifferencePx2": 0,
+        "operations": [
+          {
+            "direction": "reference-minus-candidate",
+            "status": "ok",
+            "areaPx2": 0
+          },
+          {
+            "direction": "candidate-minus-reference",
+            "status": "ok",
+            "areaPx2": 0
+          }
+        ],
+        "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "candidateHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "exactMasks": "mask-comparisons/smoothing-high.json"
+      },
+      "maskSymmetricDifferencePx2": 0,
+      "maskBoundaryVertexDistancePx": 0,
+      "samples": 59
+    },
+    {
+      "name": "dense-pointer-events",
+      "comparison": {
+        "name": "dense-pointer-events",
+        "status": "ok",
+        "symmetricDifferencePx2": 0,
+        "operations": [
+          {
+            "direction": "reference-minus-candidate",
+            "status": "ok",
+            "areaPx2": 0
+          },
+          {
+            "direction": "candidate-minus-reference",
+            "status": "ok",
+            "areaPx2": 0
+          }
+        ],
+        "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "candidateHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "exactMasks": "mask-comparisons/dense-pointer-events.json"
+      },
+      "maskSymmetricDifferencePx2": 0,
+      "maskBoundaryVertexDistancePx": 0,
+      "samples": 59
+    }
+  ],
+  "endpointAblations": [
+    {
+      "droppedAtEachEnd": 1,
+      "remainingSamples": 57,
+      "newEndCenter": {
+        "x": 613.67922,
+        "y": 835.400975
+      },
+      "comparison": {
+        "name": "drop-1",
+        "status": "ok",
+        "symmetricDifferencePx2": 2080.0911923052045,
+        "operations": [
+          {
+            "direction": "reference-minus-candidate",
+            "status": "ok",
+            "areaPx2": 2080.0911923052045
+          },
+          {
+            "direction": "candidate-minus-reference",
+            "status": "ok",
+            "areaPx2": 0
+          }
+        ],
+        "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "candidateHash": "2b416453f35b8c0f92ed090e381a85fb192d9559b897be0169cae75c836963c6",
+        "exactMasks": "mask-comparisons/drop-1.json"
+      },
+      "maskSymmetricDifferencePx2": 2080.0911923052045,
+      "description": "Diagnostic removal of endpoint footprints only; adjacent footprint becomes the new cap. Not a proposed product fix."
+    },
+    {
+      "droppedAtEachEnd": 2,
+      "remainingSamples": 55,
+      "newEndCenter": {
+        "x": 622.674828,
+        "y": 824.156464
+      },
+      "comparison": {
+        "name": "drop-2",
+        "status": "ok",
+        "symmetricDifferencePx2": 5053.229581535976,
+        "operations": [
+          {
+            "direction": "reference-minus-candidate",
+            "status": "ok",
+            "areaPx2": 5053.229581535976
+          },
+          {
+            "direction": "candidate-minus-reference",
+            "status": "ok",
+            "areaPx2": 0
+          }
+        ],
+        "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "candidateHash": "e693e30bd3194779ea790c913b3e3c11733850550dd9988f4659a33e305efc5b",
+        "exactMasks": "mask-comparisons/drop-2.json"
+      },
+      "maskSymmetricDifferencePx2": 5053.229581535976,
+      "description": "Diagnostic removal of endpoint footprints only; adjacent footprint becomes the new cap. Not a proposed product fix."
+    },
+    {
+      "droppedAtEachEnd": 3,
+      "remainingSamples": 53,
+      "newEndCenter": {
+        "x": 631.670437,
+        "y": 812.911954
+      },
+      "comparison": {
+        "name": "drop-3",
+        "status": "ok",
+        "symmetricDifferencePx2": 8013.086300043076,
+        "operations": [
+          {
+            "direction": "reference-minus-candidate",
+            "status": "ok",
+            "areaPx2": 8013.086300043076
+          },
+          {
+            "direction": "candidate-minus-reference",
+            "status": "ok",
+            "areaPx2": 0
+          }
+        ],
+        "referenceHash": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+        "candidateHash": "5d067efb4af93f21595943bc6be020c48c07002d2398e7f4866f40361eada219",
+        "exactMasks": "mask-comparisons/drop-3.json"
+      },
+      "maskSymmetricDifferencePx2": 8013.086300043076,
+      "description": "Diagnostic removal of endpoint footprints only; adjacent footprint becomes the new cap. Not a proposed product fix."
+    }
+  ],
+  "metricCaveat": "Boundary distance uses symmetric vertex-to-segment distances, not exact continuous Hausdorff distance. Area differences use the existing polygon-clipping library; failed results are null and retain original errors and masks. Timings include instrumentation and are not production latency benchmarks."
+}
