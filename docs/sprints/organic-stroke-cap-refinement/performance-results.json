@@ -1,0 +1,1537 @@
+{
+  "status": "Five actual native UI downloads verified; archive/database/native PNG parity exact; Round byte-identical",
+  "baselineCommit": "95db985",
+  "baseArchiveSha256": "06a0cad4010647f75f278d9c7adf35f291b34f95796b3c9923574eca0d20c1f9",
+  "method": "Two warmups, seven alternating-order runs; medians on identical baseline preceding geometry. Vite SSR includes read-only mask observation overhead. Native exports measured separately.",
+  "memoryDeltaBytes": null,
+  "memoryReason": "Shared Node process/JIT/GC makes attributable per-stroke memory unreliable; no allocation claim.",
+  "bodyChecks": [
+    {
+      "index": 0,
+      "scale": 0.44999999999999996,
+      "exact": null
+    },
+    {
+      "index": 1,
+      "scale": 0.5072000030840143,
+      "exact": null
+    },
+    {
+      "index": 2,
+      "scale": 0.6436000002404907,
+      "exact": null
+    },
+    {
+      "index": 3,
+      "scale": 0.8063999985584265,
+      "exact": null
+    },
+    {
+      "index": 4,
+      "scale": 0.9428000021229647,
+      "exact": null
+    },
+    {
+      "index": 5,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 6,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 7,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 8,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 9,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 10,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 11,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 12,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 13,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 14,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 15,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 16,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 17,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 18,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 19,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 20,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 21,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 22,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 23,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 24,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 25,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 26,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 27,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 28,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 29,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 30,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 31,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 32,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 33,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 34,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 35,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 36,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 37,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 38,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 39,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 40,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 41,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 42,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 43,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 44,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 45,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 46,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 47,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 48,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 49,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 50,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 51,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 52,
+      "scale": 1,
+      "exact": true
+    },
+    {
+      "index": 53,
+      "scale": 0.9787641165430339,
+      "exact": null
+    },
+    {
+      "index": 54,
+      "scale": 0.8683756637176118,
+      "exact": null
+    },
+    {
+      "index": 55,
+      "scale": 0.7099919163867228,
+      "exact": null
+    },
+    {
+      "index": 56,
+      "scale": 0.5564128851969559,
+      "exact": null
+    },
+    {
+      "index": 57,
+      "scale": 0.46043855665969813,
+      "exact": null
+    },
+    {
+      "index": 58,
+      "scale": 0.44999999999999996,
+      "exact": null
+    }
+  ],
+  "records": [
+    {
+      "variant": "round",
+      "start": {
+        "areas": 37,
+        "polygons": 37,
+        "nodes": 674
+      },
+      "end": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 713
+      },
+      "before": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 713
+      },
+      "rejected": 0,
+      "invalid": 0,
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "round",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 6,
+          "geometryMs": 40.48030000000017,
+          "changed": true,
+          "beforeMs": 8.837999999999738,
+          "afterMs": 9.745900000000347,
+          "beforeRunsMs": [
+            10.116799999999785,
+            8.829299999999876,
+            8.837999999999738,
+            9.406500000000051,
+            10.812800000000152,
+            8.711299999999937,
+            8.796200000000226
+          ],
+          "afterRunsMs": [
+            9.416099999999915,
+            9.565500000000156,
+            12.600600000000213,
+            9.745900000000347,
+            11.784599999999955,
+            11.685799999999745,
+            8.934099999999944
+          ],
+          "result": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 677
+          },
+          "samples": 6,
+          "baselineGeometryBefore": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "baselineGeometryAfter": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 677,
+            "maxRing": 313
+          },
+          "changedBefore": true
+        },
+        {
+          "action": "add",
+          "shape": "round",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 6,
+          "geometryMs": 19.294000000000096,
+          "changed": true,
+          "beforeMs": 10.350800000000163,
+          "afterMs": 10.117600000000039,
+          "beforeRunsMs": [
+            11.03189999999995,
+            10.205800000000181,
+            10.607400000000325,
+            9.948199999999815,
+            10.080799999999726,
+            10.653699999999844,
+            10.350800000000163
+          ],
+          "afterRunsMs": [
+            11.154399999999896,
+            10.002899999999954,
+            10.213799999999992,
+            9.859500000000025,
+            9.959299999999985,
+            10.117600000000039,
+            10.781799999999748
+          ],
+          "result": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 691
+          },
+          "samples": 6,
+          "baselineGeometryBefore": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 677,
+            "maxRing": 313
+          },
+          "baselineGeometryAfter": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 691,
+            "maxRing": 336
+          },
+          "changedBefore": true
+        },
+        {
+          "action": "remove",
+          "shape": "round",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 3,
+          "geometryMs": 19.509700000000066,
+          "changed": true,
+          "beforeMs": 9.77099999999973,
+          "afterMs": 9.680299999999988,
+          "beforeRunsMs": [
+            10.343000000000302,
+            9.836299999999937,
+            10.143800000000283,
+            9.510800000000017,
+            9.685500000000047,
+            9.77099999999973,
+            9.4058
+          ],
+          "afterRunsMs": [
+            10.051400000000285,
+            9.432400000000143,
+            9.496900000000096,
+            9.680299999999988,
+            9.579099999999926,
+            9.755499999999756,
+            10.510999999999967
+          ],
+          "result": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 713
+          },
+          "samples": 3,
+          "baselineGeometryBefore": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 691,
+            "maxRing": 336
+          },
+          "baselineGeometryAfter": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 713,
+            "maxRing": 358
+          },
+          "changedBefore": true
+        }
+      ],
+      "native": {
+        "variant": "round",
+        "mapId": "64fe9a60-1625-41b8-bc8f-ec38763d926a",
+        "exportMs": 73.69999998807907,
+        "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+        "png": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+        "archive": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+        "database": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+        "pngExact": true,
+        "objectsExact": true,
+        "assets": 0
+      },
+      "uiDownloadHash": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+      "previousNativeHash": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+      "uiDownloadExact": true,
+      "changedPixels": 0,
+      "changedPixelFraction": 0
+    },
+    {
+      "variant": "organic-soft",
+      "start": {
+        "areas": 37,
+        "polygons": 37,
+        "nodes": 674
+      },
+      "end": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 712
+      },
+      "before": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 703
+      },
+      "rejected": 0,
+      "invalid": 0,
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "organicSoft",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 6,
+          "geometryMs": 12.164600000000064,
+          "changed": true,
+          "beforeMs": 9.173899999999776,
+          "afterMs": 9.522500000000036,
+          "beforeRunsMs": [
+            9.035499999999956,
+            9.791699999999764,
+            9.078799999999774,
+            9.583999999999833,
+            9.315999999999804,
+            8.94320000000016,
+            9.173899999999776
+          ],
+          "afterRunsMs": [
+            9.556800000000294,
+            9.522500000000036,
+            9.409599999999955,
+            9.319200000000365,
+            9.911599999999908,
+            9.305299999999988,
+            9.55789999999979
+          ],
+          "result": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 676
+          },
+          "samples": 6,
+          "baselineGeometryBefore": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "baselineGeometryAfter": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 672,
+            "maxRing": 308
+          },
+          "changedBefore": true
+        },
+        {
+          "action": "add",
+          "shape": "organicSoft",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 6,
+          "geometryMs": 12.706699999999955,
+          "changed": true,
+          "beforeMs": 10.765300000000025,
+          "afterMs": 11.278199999999742,
+          "beforeRunsMs": [
+            10.765300000000025,
+            10.853599999999915,
+            10.646299999999883,
+            11.808700000000044,
+            12.130099999999857,
+            10.679700000000139,
+            10.53670000000011
+          ],
+          "afterRunsMs": [
+            11.278199999999742,
+            11.218999999999596,
+            11.417300000000068,
+            11.488000000000284,
+            11.845400000000154,
+            11.052900000000136,
+            11.040600000000268
+          ],
+          "result": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 699
+          },
+          "samples": 6,
+          "baselineGeometryBefore": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 672,
+            "maxRing": 308
+          },
+          "baselineGeometryAfter": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 688,
+            "maxRing": 333
+          },
+          "changedBefore": true
+        },
+        {
+          "action": "remove",
+          "shape": "organicSoft",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 3,
+          "geometryMs": 11.053699999999935,
+          "changed": true,
+          "beforeMs": 9.524400000000242,
+          "afterMs": 9.485900000000129,
+          "beforeRunsMs": [
+            9.647800000000188,
+            9.516200000000026,
+            9.858900000000176,
+            9.499300000000403,
+            9.843499999999949,
+            9.524400000000242,
+            9.42619999999988
+          ],
+          "afterRunsMs": [
+            9.786299999999756,
+            9.485900000000129,
+            9.409000000000106,
+            9.605599999999868,
+            10.172199999999975,
+            9.342800000000352,
+            9.363100000000031
+          ],
+          "result": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 712
+          },
+          "samples": 3,
+          "baselineGeometryBefore": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 688,
+            "maxRing": 333
+          },
+          "baselineGeometryAfter": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 703,
+            "maxRing": 348
+          },
+          "changedBefore": true
+        }
+      ],
+      "native": {
+        "variant": "organic-soft",
+        "mapId": "903c3862-afc5-43d2-a401-66e0dab79fef",
+        "exportMs": 66,
+        "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+        "png": "810cf7db9c7aed15359e58b3a47a39efea5268ec082e4b25435355a24033e8b3",
+        "archive": "810cf7db9c7aed15359e58b3a47a39efea5268ec082e4b25435355a24033e8b3",
+        "database": "810cf7db9c7aed15359e58b3a47a39efea5268ec082e4b25435355a24033e8b3",
+        "pngExact": true,
+        "objectsExact": true,
+        "assets": 0
+      },
+      "uiDownloadHash": "810cf7db9c7aed15359e58b3a47a39efea5268ec082e4b25435355a24033e8b3",
+      "previousNativeHash": "a65b5c86c412c976bfb219ffd569431c2d966ae825f2b498014e0f949d5b72ae",
+      "uiDownloadExact": true,
+      "changedPixels": 1524,
+      "changedPixelFraction": 0.0006581376518218624
+    },
+    {
+      "variant": "organic-rugged",
+      "start": {
+        "areas": 37,
+        "polygons": 37,
+        "nodes": 674
+      },
+      "end": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 725
+      },
+      "before": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 720
+      },
+      "rejected": 0,
+      "invalid": 0,
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "organicRugged",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 6,
+          "geometryMs": 11.833100000000286,
+          "changed": true,
+          "beforeMs": 9.480199999999968,
+          "afterMs": 9.565599999999904,
+          "beforeRunsMs": [
+            9.509999999999764,
+            9.37940000000026,
+            9.489900000000034,
+            9.480199999999968,
+            9.46140000000014,
+            9.378999999999905,
+            10.566299999999956
+          ],
+          "afterRunsMs": [
+            10.38169999999991,
+            9.660399999999754,
+            9.644000000000233,
+            9.560099999999693,
+            9.565599999999904,
+            9.460399999999936,
+            9.531199999999899
+          ],
+          "result": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 684
+          },
+          "samples": 6,
+          "baselineGeometryBefore": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "baselineGeometryAfter": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 683,
+            "maxRing": 319
+          },
+          "changedBefore": true
+        },
+        {
+          "action": "add",
+          "shape": "organicRugged",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 6,
+          "geometryMs": 20.41939999999977,
+          "changed": true,
+          "beforeMs": 11.647199999999884,
+          "afterMs": 11.911800000000312,
+          "beforeRunsMs": [
+            11.306100000000242,
+            12.02539999999999,
+            12.126299999999901,
+            11.84439999999995,
+            11.647199999999884,
+            11.373800000000301,
+            11.34940000000006
+          ],
+          "afterRunsMs": [
+            12.912699999999859,
+            12.445200000000114,
+            11.911800000000312,
+            11.821100000000115,
+            12.619199999999637,
+            11.74350000000004,
+            11.610799999999927
+          ],
+          "result": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 710
+          },
+          "samples": 6,
+          "baselineGeometryBefore": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 683,
+            "maxRing": 319
+          },
+          "baselineGeometryAfter": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 703,
+            "maxRing": 348
+          },
+          "changedBefore": true
+        },
+        {
+          "action": "remove",
+          "shape": "organicRugged",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 3,
+          "geometryMs": 15.692800000000261,
+          "changed": true,
+          "beforeMs": 10.315399999999954,
+          "afterMs": 10.216400000000249,
+          "beforeRunsMs": [
+            10.168100000000322,
+            10.284700000000157,
+            10.434900000000198,
+            10.315399999999954,
+            10.214300000000094,
+            11.59270000000015,
+            10.420000000000073
+          ],
+          "afterRunsMs": [
+            10.164800000000014,
+            10.120600000000195,
+            10.191699999999855,
+            10.230199999999968,
+            10.216400000000249,
+            10.298899999999776,
+            10.278800000000047
+          ],
+          "result": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 725
+          },
+          "samples": 3,
+          "baselineGeometryBefore": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 703,
+            "maxRing": 348
+          },
+          "baselineGeometryAfter": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 720,
+            "maxRing": 365
+          },
+          "changedBefore": true
+        }
+      ],
+      "native": {
+        "variant": "organic-rugged",
+        "mapId": "135e3e01-c47f-4003-a55c-b1bd5f11fc58",
+        "exportMs": 59.79999999701977,
+        "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+        "png": "d9fa49a4a508886f23601cea0ff2d49ad119698c9ffb4fd9d89df172a4de9fb8",
+        "archive": "d9fa49a4a508886f23601cea0ff2d49ad119698c9ffb4fd9d89df172a4de9fb8",
+        "database": "d9fa49a4a508886f23601cea0ff2d49ad119698c9ffb4fd9d89df172a4de9fb8",
+        "pngExact": true,
+        "objectsExact": true,
+        "assets": 0
+      },
+      "uiDownloadHash": "d9fa49a4a508886f23601cea0ff2d49ad119698c9ffb4fd9d89df172a4de9fb8",
+      "previousNativeHash": "392b91a8120eaa9654ad22c94204c7976e3d1dd146dbf4bcd43c385427c8bf3d",
+      "uiDownloadExact": true,
+      "changedPixels": 1730,
+      "changedPixelFraction": 0.0007470985155195682
+    },
+    {
+      "variant": "organic-fine",
+      "start": {
+        "areas": 37,
+        "polygons": 37,
+        "nodes": 674
+      },
+      "end": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 729
+      },
+      "before": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 719
+      },
+      "rejected": 0,
+      "invalid": 0,
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "organicFine",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 6,
+          "geometryMs": 14.186400000000049,
+          "changed": true,
+          "beforeMs": 9.358899999999267,
+          "afterMs": 9.558800000000701,
+          "beforeRunsMs": [
+            9.34479999999985,
+            10.22609999999986,
+            9.274400000000242,
+            9.223299999999654,
+            9.382700000000114,
+            9.39470000000074,
+            9.358899999999267
+          ],
+          "afterRunsMs": [
+            9.672299999999268,
+            9.48490000000038,
+            9.521700000000237,
+            9.558800000000701,
+            9.716099999999642,
+            9.457699999999932,
+            9.666700000000674
+          ],
+          "result": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 687
+          },
+          "samples": 6,
+          "baselineGeometryBefore": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "baselineGeometryAfter": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 681,
+            "maxRing": 317
+          },
+          "changedBefore": true
+        },
+        {
+          "action": "add",
+          "shape": "organicFine",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 6,
+          "geometryMs": 19.618600000000242,
+          "changed": true,
+          "beforeMs": 11.061499999999796,
+          "afterMs": 11.550099999999475,
+          "beforeRunsMs": [
+            11.760400000000118,
+            11.027600000000348,
+            11.061499999999796,
+            11.092800000000352,
+            11.023799999999937,
+            11.472700000000259,
+            10.905899999999747
+          ],
+          "afterRunsMs": [
+            12.093199999999342,
+            11.985200000000077,
+            11.350599999999758,
+            11.617799999999988,
+            11.513699999999517,
+            11.550099999999475,
+            11.399999999999636
+          ],
+          "result": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 713
+          },
+          "samples": 6,
+          "baselineGeometryBefore": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 681,
+            "maxRing": 317
+          },
+          "baselineGeometryAfter": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 700,
+            "maxRing": 345
+          },
+          "changedBefore": true
+        },
+        {
+          "action": "remove",
+          "shape": "organicFine",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 3,
+          "geometryMs": 15.476599999999962,
+          "changed": true,
+          "beforeMs": 10.104500000000371,
+          "afterMs": 10.067299999999705,
+          "beforeRunsMs": [
+            10.034299999999348,
+            10.029599999999846,
+            10.104500000000371,
+            10.030699999999342,
+            10.1212000000005,
+            10.751299999999901,
+            10.752999999999702
+          ],
+          "afterRunsMs": [
+            10.62369999999919,
+            10.067299999999705,
+            10.00800000000072,
+            10.031399999999849,
+            9.9962000000005,
+            10.203400000000329,
+            10.569800000000214
+          ],
+          "result": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 729
+          },
+          "samples": 3,
+          "baselineGeometryBefore": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 700,
+            "maxRing": 345
+          },
+          "baselineGeometryAfter": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 719,
+            "maxRing": 364
+          },
+          "changedBefore": true
+        }
+      ],
+      "native": {
+        "variant": "organic-fine",
+        "mapId": "d15130f7-2af8-48f2-904e-a041e062cfbe",
+        "exportMs": 53,
+        "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+        "png": "6f9c83082f93333828ad9c75c78eb990a9450ab499d661e202a3f629b1466587",
+        "archive": "6f9c83082f93333828ad9c75c78eb990a9450ab499d661e202a3f629b1466587",
+        "database": "6f9c83082f93333828ad9c75c78eb990a9450ab499d661e202a3f629b1466587",
+        "pngExact": true,
+        "objectsExact": true,
+        "assets": 0
+      },
+      "uiDownloadHash": "6f9c83082f93333828ad9c75c78eb990a9450ab499d661e202a3f629b1466587",
+      "previousNativeHash": "84e9351eb540e5decc7065c2d7f3b06fc21cb6322ee931dfd7eb7f2dad2e9672",
+      "uiDownloadExact": true,
+      "changedPixels": 1893,
+      "changedPixelFraction": 0.0008174898785425101
+    },
+    {
+      "variant": "combined",
+      "start": {
+        "areas": 37,
+        "polygons": 37,
+        "nodes": 674
+      },
+      "end": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 743
+      },
+      "before": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 725
+      },
+      "rejected": 0,
+      "invalid": 0,
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "organicSoft",
+          "size": 85,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 5,
+          "geometryMs": 9.647399999999834,
+          "changed": true,
+          "beforeMs": 8.746699999999691,
+          "afterMs": 9.060699999999997,
+          "beforeRunsMs": [
+            8.805299999999988,
+            9.77979999999934,
+            8.652100000000246,
+            8.855800000000272,
+            8.718299999999545,
+            8.746699999999691,
+            8.726000000000568
+          ],
+          "afterRunsMs": [
+            9.060699999999997,
+            9.054000000000087,
+            9.25,
+            10.08140000000003,
+            8.949499999999716,
+            9.268799999999828,
+            8.987900000000081
+          ],
+          "result": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 680
+          },
+          "samples": 5,
+          "baselineGeometryBefore": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "baselineGeometryAfter": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "changedBefore": true
+        },
+        {
+          "action": "add",
+          "shape": "organicRugged",
+          "size": 45,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 7,
+          "geometryMs": 13.322500000000218,
+          "changed": true,
+          "beforeMs": 12.729400000000169,
+          "afterMs": 12.543400000000474,
+          "beforeRunsMs": [
+            12.784599999999955,
+            11.796500000000378,
+            12.752300000000105,
+            11.904900000000453,
+            12.156800000000658,
+            12.729400000000169,
+            14.247299999999996
+          ],
+          "afterRunsMs": [
+            12.392399999999725,
+            13.160399999999754,
+            13.100000000000364,
+            12.13839999999982,
+            12.620899999999892,
+            12.543400000000474,
+            12.53650000000016
+          ],
+          "result": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 718
+          },
+          "samples": 7,
+          "baselineGeometryBefore": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "baselineGeometryAfter": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 708,
+            "maxRing": 353
+          },
+          "changedBefore": true
+        },
+        {
+          "action": "remove",
+          "shape": "organicFine",
+          "size": 24,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 5,
+          "geometryMs": 11.679200000000037,
+          "changed": false,
+          "beforeMs": 11.744800000000396,
+          "afterMs": 2.621299999999792,
+          "beforeRunsMs": [
+            13.692200000000412,
+            11.74499999999989,
+            11.744800000000396,
+            11.954999999999927,
+            11.452499999999418,
+            10.461999999999534,
+            10.402900000000045
+          ],
+          "afterRunsMs": [
+            2.621299999999792,
+            2.652299999999741,
+            2.6387000000004264,
+            2.494699999999284,
+            2.717399999999543,
+            2.3269000000000233,
+            2.4007000000001426
+          ],
+          "result": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 718
+          },
+          "samples": 5,
+          "baselineGeometryBefore": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 708,
+            "maxRing": 353
+          },
+          "baselineGeometryAfter": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 710,
+            "maxRing": 355
+          },
+          "changedBefore": true
+        },
+        {
+          "action": "remove",
+          "shape": "organicFine",
+          "size": 24,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 716,
+          "points": [
+            {
+              "x": 782.5,
+              "y": 897.5
+            },
+            {
+              "x": 795,
+              "y": 905
+            }
+          ],
+          "mapSampling": 7,
+          "geometryMs": 14.158399999999801,
+          "changed": true,
+          "beforeMs": 11.608799999999974,
+          "afterMs": 11.86620000000039,
+          "beforeRunsMs": [
+            11.608799999999974,
+            11.769200000000637,
+            11.59649999999965,
+            11.536599999999453,
+            11.63720000000012,
+            11.66609999999946,
+            11.509100000000217
+          ],
+          "afterRunsMs": [
+            11.868000000000393,
+            11.63169999999991,
+            11.702299999999923,
+            12.508300000000418,
+            11.86620000000039,
+            11.713700000000244,
+            11.900400000000445
+          ],
+          "result": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 743
+          },
+          "samples": 7,
+          "baselineGeometryBefore": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 710,
+            "maxRing": 355
+          },
+          "baselineGeometryAfter": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 725,
+            "maxRing": 370
+          },
+          "changedBefore": true
+        }
+      ],
+      "native": {
+        "variant": "combined",
+        "mapId": "111bf2a3-173a-4b5e-a901-4d30c208217f",
+        "exportMs": 66.40000000596046,
+        "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+        "png": "8b3a610491b18fce8075ad85b6bf9c39806fa5e9d4009040e513c9f8c373f3f2",
+        "archive": "8b3a610491b18fce8075ad85b6bf9c39806fa5e9d4009040e513c9f8c373f3f2",
+        "database": "8b3a610491b18fce8075ad85b6bf9c39806fa5e9d4009040e513c9f8c373f3f2",
+        "pngExact": true,
+        "objectsExact": true,
+        "assets": 0
+      },
+      "uiDownloadHash": "8b3a610491b18fce8075ad85b6bf9c39806fa5e9d4009040e513c9f8c373f3f2",
+      "previousNativeHash": "ebfab062ab13cdec134cda3b2a4baea45c66437c1ad6ff623aaefc8ec9e47e8c",
+      "uiDownloadExact": true,
+      "changedPixels": 1392,
+      "changedPixelFraction": 0.0006011336032388664
+    }
+  ],
+  "diagnosticMaskHashes": {
+    "before": "9fb426a258d1c82bb94b8086c38c466cbb0f1ff112b46a55d68ce7e1dd7d2a77",
+    "after": "f3e58f911529ad7343b5545d6f78c1d78ef8b4ba9da3103a8c455d3b40784022"
+  },
+  "knownDifferenceMetric": {
+    "value": null,
+    "reason": "Known high-density polygon-clipping difference failure retained in prior audit; this sprint uses contours and native raster comparisons, no precision workaround."
+  },
+  "crop": {
+    "left": 550,
+    "top": 800,
+    "width": 400,
+    "height": 430
+  },
+  "uiHistory": {
+    "gesture": "Actual Rugged Add drag; undo, redo, final undo and Save",
+    "restoredNativeSha256": "8b3a610491b18fce8075ad85b6bf9c39806fa5e9d4009040e513c9f8c373f3f2",
+    "exact": true
+  }
+}

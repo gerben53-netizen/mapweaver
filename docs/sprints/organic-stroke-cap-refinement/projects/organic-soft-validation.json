@@ -1,0 +1,12 @@
+{
+  "variant": "organic-soft",
+  "mapId": "903c3862-afc5-43d2-a401-66e0dab79fef",
+  "exportMs": 66,
+  "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+  "png": "810cf7db9c7aed15359e58b3a47a39efea5268ec082e4b25435355a24033e8b3",
+  "archive": "810cf7db9c7aed15359e58b3a47a39efea5268ec082e4b25435355a24033e8b3",
+  "database": "810cf7db9c7aed15359e58b3a47a39efea5268ec082e4b25435355a24033e8b3",
+  "pngExact": true,
+  "objectsExact": true,
+  "assets": 0
+}

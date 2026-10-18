@@ -1,0 +1,12 @@
+{
+  "variant": "organic-rugged",
+  "mapId": "135e3e01-c47f-4003-a55c-b1bd5f11fc58",
+  "exportMs": 59.79999999701977,
+  "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+  "png": "d9fa49a4a508886f23601cea0ff2d49ad119698c9ffb4fd9d89df172a4de9fb8",
+  "archive": "d9fa49a4a508886f23601cea0ff2d49ad119698c9ffb4fd9d89df172a4de9fb8",
+  "database": "d9fa49a4a508886f23601cea0ff2d49ad119698c9ffb4fd9d89df172a4de9fb8",
+  "pngExact": true,
+  "objectsExact": true,
+  "assets": 0
+}

@@ -1,0 +1,12 @@
+{
+  "variant": "combined",
+  "mapId": "111bf2a3-173a-4b5e-a901-4d30c208217f",
+  "exportMs": 66.40000000596046,
+  "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+  "png": "8b3a610491b18fce8075ad85b6bf9c39806fa5e9d4009040e513c9f8c373f3f2",
+  "archive": "8b3a610491b18fce8075ad85b6bf9c39806fa5e9d4009040e513c9f8c373f3f2",
+  "database": "8b3a610491b18fce8075ad85b6bf9c39806fa5e9d4009040e513c9f8c373f3f2",
+  "pngExact": true,
+  "objectsExact": true,
+  "assets": 0
+}
