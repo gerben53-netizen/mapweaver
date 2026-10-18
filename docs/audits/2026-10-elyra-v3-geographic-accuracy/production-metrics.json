@@ -1,0 +1,41 @@
+{
+  "status": "technical production proof complete; premium rejected",
+  "startedAt": "2026-10-18T04:05:39.406Z",
+  "method": "Preserved script-prepared native macro; resumed Land Add/Remove and Local Contour Precision through actual editor UI",
+  "freehandActions": 1,
+  "landAddRemoveActions": 2,
+  "localSmoothingActions": 1,
+  "protectedLandmarks": 1,
+  "acceptedPreviews": 2,
+  "cancelledPreviews": 1,
+  "manualOutlineSamples": 74,
+  "sourceRange": [
+    194,
+    242
+  ],
+  "mainNodes": 310,
+  "humanActions": 1,
+  "humanTimeSavingsClaimed": false,
+  "preparedContourConstructions": 1,
+  "previewDisplays": 3,
+  "manualPointCorrections": 0,
+  "geometryRecoveryRounds": 0,
+  "totalGeometryPoints": 674,
+  "lastCandidateValidationAt": "2026-10-18T04:22:51Z",
+  "measuredEvidenceWindowSeconds": 1031.594,
+  "evidenceWindowMeaning": "Prepared macro timestamp to verification timestamp across two turns; includes interaction, analysis, tool waits and interruption. Not active authoring time.",
+  "automaticCalculationTimeSeconds": null,
+  "browserInteractionTimeSeconds": null,
+  "knownLongBrowserToolCallsSeconds": [
+    25.5281,
+    33.7666
+  ],
+  "unmeasuredBreakdown": "Fine-grained computation vs browser vs waiting time was not instrumented; do not infer throughput.",
+  "pendingHumanFreehand": false,
+  "freehandActor": "user, confirmed in chat; saved QA revision7",
+  "humanDurationSeconds": null,
+  "acceptedSmoothingPreviews": 1,
+  "acceptedMetadataPreviews": 1,
+  "areaCount": 37,
+  "finalValidatedAt": "2026-10-18T04:35:47.607Z"
+}

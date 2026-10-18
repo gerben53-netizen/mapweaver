@@ -1,0 +1,68 @@
+{
+  "freehand": {
+    "id": "3527a451-0b93-4855-bb58-6397c27f9265",
+    "nodes": 9,
+    "existing36Unchanged": true,
+    "userConfirmed": true,
+    "role": "landmass"
+  },
+  "archiveObjectsEqual": true,
+  "pngBefore": "8abf4bc271cd93df99f48c5d4bc34033dce8adf0a12fc29376a5658c73769c8f",
+  "pngAfter": "8abf4bc271cd93df99f48c5d4bc34033dce8adf0a12fc29376a5658c73769c8f",
+  "pngIdentical": true,
+  "assets": 0,
+  "allArtifactChecksPassed": true,
+  "baselineHashes": {
+    "macroArchive": "019f9df837505e28b0a4319b7e0ee9dbfe0ba5d2f4a2aa646cfd5b6e68a735c2",
+    "macroDocument": "c99c01e202eb483c2159fb1c2b187039469c3a53a7feba1797d1f6032d770bad"
+  },
+  "pairwiseChecks": 1926,
+  "validStages": 3,
+  "selfIntersections": 0,
+  "overlaps": 0,
+  "areaCount": 37,
+  "mainNodes": 310,
+  "totalNodes": 674,
+  "precision": {
+    "changedIndices": [
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239
+    ],
+    "protected225AndNeighboursExact": true,
+    "outsideRangeExact": true,
+    "otherAreasExact": 35,
+    "maxDisplacementMapPx": 2.4045148859572767
+  },
+  "history": {
+    "undoPngExact": true,
+    "redoPngExact": true
+  },
+  "nativeUiExports": [
+    "macro",
+    "meso",
+    "micro"
+  ],
+  "referenceExcludedFromArchiveAndNativePng": true,
+  "productDiff": "",
+  "databaseReopenedUiPngExact": true
+}

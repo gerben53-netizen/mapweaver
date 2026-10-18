@@ -1,0 +1,4371 @@
+{
+  "map": {
+    "campfireRevision": 6,
+    "landEditing": {
+      "version": 1,
+      "manual": true,
+      "revision": 4
+    },
+    "mapType": "world-map",
+    "geography": {
+      "widthKm": 7617.1875,
+      "unit": "km",
+      "northDegrees": 0,
+      "projection": "none",
+      "origin": null,
+      "ruler": true,
+      "scaleBar": false,
+      "exportScaleBar": false,
+      "graticule": false
+    },
+    "width": 1625,
+    "height": 1425,
+    "backgroundColor": "#214e5a",
+    "grid": {
+      "visible": false,
+      "snapEnabled": false,
+      "cellSize": 50,
+      "offsetX": 0,
+      "offsetY": 0,
+      "color": "#58645c",
+      "opacity": 0.35,
+      "renderAboveObjects": false
+    },
+    "background": null
+  },
+  "layers": [
+    {
+      "id": "northreach-land",
+      "name": "Northreach editable land",
+      "visible": true,
+      "locked": false,
+      "objectIds": [
+        "7f9721af-05f0-479a-b5a4-4fc0a09d13f6",
+        "78811a71-20f2-4713-91cf-5d8cd455e281",
+        "baf6258d-7726-4a39-8b85-f63f764df521",
+        "3196f9e0-815a-46dc-b8c9-13e40dfeb30b",
+        "733e9a21-41ba-4942-9762-6f3b0cf7de7f",
+        "beebb2d7-13de-4485-8b9d-88834d6e930c",
+        "6547b5a9-a65f-4c64-88f9-33ce7d9228f1",
+        "0b9a47b9-6742-446c-8f77-900a1f330df8",
+        "88a5c870-5b52-44bc-9613-ad328179becc",
+        "f868cb04-e907-4df7-afb8-0ea665ecb335",
+        "3f9e8993-95af-4964-8309-a0267c68ba9d",
+        "128041b0-972b-4626-9871-3f5658406630",
+        "4c78b1dd-b9ab-48ec-82da-c2d0f1eae731",
+        "7cc1d0b6-5b2b-4fcc-bf67-ba087047a3fa",
+        "b27b80e4-d947-4928-b93d-e6e6a870631e",
+        "35413522-d813-4f96-85e8-95198eda09a2",
+        "937adc1f-509e-47a7-99dc-82dcd81918f7",
+        "cc3b0407-c24b-4c1b-a1ad-6bb12ba1ca36",
+        "9eab792e-9d12-45bc-a6fa-6bd35bca922e",
+        "f6948753-a8fa-4208-acb2-13d91086e896",
+        "90b5986b-46b8-403e-80b9-ff026e10d4ed",
+        "753ff05c-411e-4664-8dc1-9d36f28c98cc",
+        "109a92d1-2c63-481c-9fcc-351ff75c22d6",
+        "dd1dc209-aeac-4d31-9aa8-3eebd6798873",
+        "5755c555-680f-4b4f-ba3b-9cfa420b9700",
+        "b2aaaa38-a9e9-4545-9a41-43b43041a706",
+        "21a78fae-d170-4d63-9e23-6c8f85857400",
+        "f61f32dd-53ba-4743-82f9-e5c1189cb30f",
+        "bd356328-2cb5-46be-8b78-7b2d5b8f016c",
+        "07dd2c7c-4e3c-4116-b425-1ff6a79660c6",
+        "f3500fe0-2126-4d71-af8d-7f48ac0012e9",
+        "dbf1ff82-0395-4924-a08f-81fda59e00da",
+        "98d4e1a3-c4c0-4855-b50b-b02c2ea3db83",
+        "8ab69777-80c0-4a39-82a0-3a538035d201",
+        "a334f4b7-7304-4d00-885c-e3c582e5e347",
+        "3ea07278-f786-4da9-89da-e9de9010720e"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "kind": "area",
+      "id": "7f9721af-05f0-479a-b5a4-4fc0a09d13f6",
+      "name": "Northwest long island",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 435.84999999999997,
+                "y": 463.775
+              },
+              {
+                "x": 459.2,
+                "y": 446.275
+              },
+              {
+                "x": 487.875,
+                "y": 432.875
+              },
+              {
+                "x": 511.275,
+                "y": 414.19999999999993
+              },
+              {
+                "x": 536.65,
+                "y": 403.4
+              },
+              {
+                "x": 558.3,
+                "y": 410.475
+              },
+              {
+                "x": 567.825,
+                "y": 430.8
+              },
+              {
+                "x": 554.525,
+                "y": 446.65
+              },
+              {
+                "x": 528.4,
+                "y": 460.475
+              },
+              {
+                "x": 508.67499999999995,
+                "y": 482.875
+              },
+              {
+                "x": 479.625,
+                "y": 501.69999999999993
+              },
+              {
+                "x": 454.15,
+                "y": 521.5999999999999
+              },
+              {
+                "x": 427.92499999999995,
+                "y": 532.125
+              },
+              {
+                "x": 402.075,
+                "y": 545.375
+              },
+              {
+                "x": 381.375,
+                "y": 548.25
+              },
+              {
+                "x": 387.54999999999995,
+                "y": 532.925
+              },
+              {
+                "x": 407.025,
+                "y": 513.3
+              },
+              {
+                "x": 419.19999999999993,
+                "y": 487.92499999999995
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 381.375,
+      "y": 403.4,
+      "width": 186.45000000000005,
+      "height": 144.85000000000002,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 375,
+        "y": 400,
+        "width": 197.5,
+        "height": 152.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "78811a71-20f2-4713-91cf-5d8cd455e281",
+      "name": "Skjold north",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 225,
+                "y": 747.5
+              },
+              {
+                "x": 230,
+                "y": 737.5
+              },
+              {
+                "x": 242.5,
+                "y": 735
+              },
+              {
+                "x": 247.5,
+                "y": 725
+              },
+              {
+                "x": 260,
+                "y": 725
+              },
+              {
+                "x": 260,
+                "y": 712.5
+              },
+              {
+                "x": 267.5,
+                "y": 707.5
+              },
+              {
+                "x": 267.5,
+                "y": 697.5
+              },
+              {
+                "x": 285,
+                "y": 690
+              },
+              {
+                "x": 292.5,
+                "y": 700
+              },
+              {
+                "x": 290,
+                "y": 710
+              },
+              {
+                "x": 295,
+                "y": 717.5
+              },
+              {
+                "x": 285,
+                "y": 725
+              },
+              {
+                "x": 285,
+                "y": 737.5
+              },
+              {
+                "x": 295,
+                "y": 747.5
+              },
+              {
+                "x": 290,
+                "y": 755
+              },
+              {
+                "x": 277.5,
+                "y": 757.5
+              },
+              {
+                "x": 275,
+                "y": 765
+              },
+              {
+                "x": 262.5,
+                "y": 762.5
+              },
+              {
+                "x": 252.5,
+                "y": 770
+              },
+              {
+                "x": 245,
+                "y": 767.5
+              },
+              {
+                "x": 245,
+                "y": 780
+              },
+              {
+                "x": 235,
+                "y": 785
+              },
+              {
+                "x": 225,
+                "y": 785
+              },
+              {
+                "x": 212.5,
+                "y": 790
+              },
+              {
+                "x": 215,
+                "y": 775
+              },
+              {
+                "x": 225,
+                "y": 765
+              },
+              {
+                "x": 220,
+                "y": 757.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 212.5,
+      "y": 690,
+      "width": 82.5,
+      "height": 100,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 212.5,
+        "y": 690,
+        "width": 82.5,
+        "height": 100
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "baf6258d-7726-4a39-8b85-f63f764df521",
+      "name": "Skjold central",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 185,
+                "y": 802.5
+              },
+              {
+                "x": 195,
+                "y": 802.5
+              },
+              {
+                "x": 200,
+                "y": 810
+              },
+              {
+                "x": 205,
+                "y": 805
+              },
+              {
+                "x": 210,
+                "y": 817.5
+              },
+              {
+                "x": 207.5,
+                "y": 827.5
+              },
+              {
+                "x": 220,
+                "y": 827.5
+              },
+              {
+                "x": 227.5,
+                "y": 835
+              },
+              {
+                "x": 232.5,
+                "y": 845
+              },
+              {
+                "x": 225,
+                "y": 852.5
+              },
+              {
+                "x": 227.5,
+                "y": 862.5
+              },
+              {
+                "x": 217.5,
+                "y": 870
+              },
+              {
+                "x": 205,
+                "y": 870
+              },
+              {
+                "x": 197.5,
+                "y": 877.5
+              },
+              {
+                "x": 187.5,
+                "y": 872.5
+              },
+              {
+                "x": 177.5,
+                "y": 877.5
+              },
+              {
+                "x": 170,
+                "y": 872.5
+              },
+              {
+                "x": 172.5,
+                "y": 862.5
+              },
+              {
+                "x": 160,
+                "y": 860
+              },
+              {
+                "x": 160,
+                "y": 847.5
+              },
+              {
+                "x": 167.5,
+                "y": 842.5
+              },
+              {
+                "x": 165,
+                "y": 832.5
+              },
+              {
+                "x": 177.5,
+                "y": 822.5
+              },
+              {
+                "x": 177.5,
+                "y": 812.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 160,
+      "y": 802.5,
+      "width": 72.5,
+      "height": 75,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 160,
+        "y": 802.5,
+        "width": 72.5,
+        "height": 75
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "3196f9e0-815a-46dc-b8c9-13e40dfeb30b",
+      "name": "Skjold west",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 100,
+                "y": 887.5
+              },
+              {
+                "x": 110,
+                "y": 887.5
+              },
+              {
+                "x": 115,
+                "y": 877.5
+              },
+              {
+                "x": 127.5,
+                "y": 872.5
+              },
+              {
+                "x": 135,
+                "y": 880
+              },
+              {
+                "x": 145,
+                "y": 880
+              },
+              {
+                "x": 152.5,
+                "y": 887.5
+              },
+              {
+                "x": 152.5,
+                "y": 897.5
+              },
+              {
+                "x": 162.5,
+                "y": 905
+              },
+              {
+                "x": 157.5,
+                "y": 915
+              },
+              {
+                "x": 160,
+                "y": 922.5
+              },
+              {
+                "x": 150,
+                "y": 927.5
+              },
+              {
+                "x": 147.5,
+                "y": 937.5
+              },
+              {
+                "x": 137.5,
+                "y": 937.5
+              },
+              {
+                "x": 135,
+                "y": 945
+              },
+              {
+                "x": 120,
+                "y": 942.5
+              },
+              {
+                "x": 112.5,
+                "y": 947.5
+              },
+              {
+                "x": 102.5,
+                "y": 942.5
+              },
+              {
+                "x": 90,
+                "y": 942.5
+              },
+              {
+                "x": 82.5,
+                "y": 932.5
+              },
+              {
+                "x": 85,
+                "y": 920
+              },
+              {
+                "x": 80,
+                "y": 912.5
+              },
+              {
+                "x": 90,
+                "y": 902.5
+              },
+              {
+                "x": 90,
+                "y": 892.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 80,
+      "y": 872.5,
+      "width": 82.5,
+      "height": 75,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 82.5,
+        "y": 872.5,
+        "width": 77.5,
+        "height": 72.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "733e9a21-41ba-4942-9762-6f3b0cf7de7f",
+      "name": "Skjold east",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 347.5,
+                "y": 872.5
+              },
+              {
+                "x": 357.5,
+                "y": 877.5
+              },
+              {
+                "x": 365,
+                "y": 875
+              },
+              {
+                "x": 367.5,
+                "y": 885
+              },
+              {
+                "x": 362.5,
+                "y": 895
+              },
+              {
+                "x": 372.5,
+                "y": 902.5
+              },
+              {
+                "x": 380,
+                "y": 905
+              },
+              {
+                "x": 382.5,
+                "y": 915
+              },
+              {
+                "x": 392.5,
+                "y": 915
+              },
+              {
+                "x": 395,
+                "y": 927.5
+              },
+              {
+                "x": 390,
+                "y": 935
+              },
+              {
+                "x": 397.5,
+                "y": 942.5
+              },
+              {
+                "x": 387.5,
+                "y": 947.5
+              },
+              {
+                "x": 377.5,
+                "y": 945
+              },
+              {
+                "x": 370,
+                "y": 955
+              },
+              {
+                "x": 357.5,
+                "y": 950
+              },
+              {
+                "x": 350,
+                "y": 942.5
+              },
+              {
+                "x": 337.5,
+                "y": 950
+              },
+              {
+                "x": 327.5,
+                "y": 947.5
+              },
+              {
+                "x": 322.5,
+                "y": 940
+              },
+              {
+                "x": 315,
+                "y": 937.5
+              },
+              {
+                "x": 320,
+                "y": 925
+              },
+              {
+                "x": 330,
+                "y": 922.5
+              },
+              {
+                "x": 327.5,
+                "y": 912.5
+              },
+              {
+                "x": 337.5,
+                "y": 907.5
+              },
+              {
+                "x": 337.5,
+                "y": 892.5
+              },
+              {
+                "x": 345,
+                "y": 887.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 315,
+      "y": 872.5,
+      "width": 82.5,
+      "height": 82.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 315,
+        "y": 872.5,
+        "width": 82.5,
+        "height": 82.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "beebb2d7-13de-4485-8b9d-88834d6e930c",
+      "name": "Skjold south",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 240,
+                "y": 915
+              },
+              {
+                "x": 250,
+                "y": 912.5
+              },
+              {
+                "x": 257.5,
+                "y": 905
+              },
+              {
+                "x": 265,
+                "y": 910
+              },
+              {
+                "x": 272.5,
+                "y": 910
+              },
+              {
+                "x": 280,
+                "y": 920
+              },
+              {
+                "x": 275,
+                "y": 927.5
+              },
+              {
+                "x": 280,
+                "y": 937.5
+              },
+              {
+                "x": 272.5,
+                "y": 945
+              },
+              {
+                "x": 282.5,
+                "y": 955
+              },
+              {
+                "x": 292.5,
+                "y": 955
+              },
+              {
+                "x": 287.5,
+                "y": 965
+              },
+              {
+                "x": 295,
+                "y": 972.5
+              },
+              {
+                "x": 287.5,
+                "y": 982.5
+              },
+              {
+                "x": 275,
+                "y": 985
+              },
+              {
+                "x": 272.5,
+                "y": 995
+              },
+              {
+                "x": 265,
+                "y": 1000
+              },
+              {
+                "x": 272.5,
+                "y": 1010
+              },
+              {
+                "x": 267.5,
+                "y": 1022.5
+              },
+              {
+                "x": 260,
+                "y": 1027.5
+              },
+              {
+                "x": 252.5,
+                "y": 1042.5
+              },
+              {
+                "x": 242.5,
+                "y": 1037.5
+              },
+              {
+                "x": 235,
+                "y": 1040
+              },
+              {
+                "x": 227.5,
+                "y": 1030
+              },
+              {
+                "x": 217.5,
+                "y": 1032.5
+              },
+              {
+                "x": 215,
+                "y": 1020
+              },
+              {
+                "x": 207.5,
+                "y": 1010
+              },
+              {
+                "x": 217.5,
+                "y": 1002.5
+              },
+              {
+                "x": 217.5,
+                "y": 992.5
+              },
+              {
+                "x": 227.5,
+                "y": 987.5
+              },
+              {
+                "x": 225,
+                "y": 980
+              },
+              {
+                "x": 212.5,
+                "y": 977.5
+              },
+              {
+                "x": 210,
+                "y": 967.5
+              },
+              {
+                "x": 220,
+                "y": 960
+              },
+              {
+                "x": 225,
+                "y": 950
+              },
+              {
+                "x": 220,
+                "y": 940
+              },
+              {
+                "x": 230,
+                "y": 932.5
+              },
+              {
+                "x": 230,
+                "y": 922.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 207.5,
+      "y": 905,
+      "width": 87.5,
+      "height": 137.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 207.5,
+        "y": 905,
+        "width": 87.5,
+        "height": 137.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "6547b5a9-a65f-4c64-88f9-33ce7d9228f1",
+      "name": "South island",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 824.1,
+                "y": 1310.9
+              },
+              {
+                "x": 847.5,
+                "y": 1293.8249999999998
+              },
+              {
+                "x": 865.8,
+                "y": 1298.4
+              },
+              {
+                "x": 879.625,
+                "y": 1316.6
+              },
+              {
+                "x": 898.3,
+                "y": 1328.3999999999999
+              },
+              {
+                "x": 915.8999999999999,
+                "y": 1347.875
+              },
+              {
+                "x": 944.15,
+                "y": 1365.05
+              },
+              {
+                "x": 965.2749999999999,
+                "y": 1387.875
+              },
+              {
+                "x": 954.9499999999999,
+                "y": 1402.875
+              },
+              {
+                "x": 928.35,
+                "y": 1404.525
+              },
+              {
+                "x": 904.625,
+                "y": 1398.4499999999998
+              },
+              {
+                "x": 886.6,
+                "y": 1411.225
+              },
+              {
+                "x": 852.8249999999999,
+                "y": 1419.05
+              },
+              {
+                "x": 806,
+                "y": 1402.0749999999998
+              },
+              {
+                "x": 791.7499999999999,
+                "y": 1378.35
+              },
+              {
+                "x": 797.4,
+                "y": 1358.775
+              },
+              {
+                "x": 796.8499999999999,
+                "y": 1340.75
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 791.7499999999999,
+      "y": 1293.8249999999998,
+      "width": 173.52499999999998,
+      "height": 125.22500000000014,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 787.5,
+        "y": 1290,
+        "width": 185,
+        "height": 135
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "0b9a47b9-6742-446c-8f77-900a1f330df8",
+      "name": "Northern shelf west",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 737.5,
+                "y": 112.5
+              },
+              {
+                "x": 757.5,
+                "y": 102.5
+              },
+              {
+                "x": 777.5,
+                "y": 100
+              },
+              {
+                "x": 790,
+                "y": 85
+              },
+              {
+                "x": 800,
+                "y": 90
+              },
+              {
+                "x": 802.5,
+                "y": 105
+              },
+              {
+                "x": 785,
+                "y": 117.5
+              },
+              {
+                "x": 772.5,
+                "y": 132.5
+              },
+              {
+                "x": 747.5,
+                "y": 132.5
+              },
+              {
+                "x": 737.5,
+                "y": 125
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 737.5,
+      "y": 85,
+      "width": 65,
+      "height": 47.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 737.5,
+        "y": 85,
+        "width": 65,
+        "height": 47.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "88a5c870-5b52-44bc-9613-ad328179becc",
+      "name": "Northern skerry 1",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 887.5,
+                "y": 87.5
+              },
+              {
+                "x": 895,
+                "y": 72.5
+              },
+              {
+                "x": 910,
+                "y": 67.5
+              },
+              {
+                "x": 920,
+                "y": 77.5
+              },
+              {
+                "x": 915,
+                "y": 90
+              },
+              {
+                "x": 902.5,
+                "y": 95
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 887.5,
+      "y": 67.5,
+      "width": 32.5,
+      "height": 27.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 887.5,
+        "y": 67.5,
+        "width": 32.5,
+        "height": 27.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "f868cb04-e907-4df7-afb8-0ea665ecb335",
+      "name": "Northern skerry 2",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 927.5,
+                "y": 67.5
+              },
+              {
+                "x": 940,
+                "y": 55
+              },
+              {
+                "x": 952.5,
+                "y": 57.5
+              },
+              {
+                "x": 955,
+                "y": 70
+              },
+              {
+                "x": 940,
+                "y": 80
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 927.5,
+      "y": 55,
+      "width": 27.5,
+      "height": 25,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 927.5,
+        "y": 55,
+        "width": 27.5,
+        "height": 25
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "3f9e8993-95af-4964-8309-a0267c68ba9d",
+      "name": "Northern skerry 3",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 972.5,
+                "y": 62.5
+              },
+              {
+                "x": 987.5,
+                "y": 47.5
+              },
+              {
+                "x": 1002.5,
+                "y": 52.5
+              },
+              {
+                "x": 997.5,
+                "y": 67.5
+              },
+              {
+                "x": 982.5,
+                "y": 75
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 972.5,
+      "y": 47.5,
+      "width": 30,
+      "height": 27.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 972.5,
+        "y": 47.5,
+        "width": 30,
+        "height": 27.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "128041b0-972b-4626-9871-3f5658406630",
+      "name": "NW offshore small",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 522.5,
+                "y": 540
+              },
+              {
+                "x": 537.5,
+                "y": 522.5
+              },
+              {
+                "x": 557.5,
+                "y": 522.5
+              },
+              {
+                "x": 562.5,
+                "y": 540
+              },
+              {
+                "x": 547.5,
+                "y": 557.5
+              },
+              {
+                "x": 530,
+                "y": 557.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 522.5,
+      "y": 522.5,
+      "width": 40,
+      "height": 35,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 522.5,
+        "y": 522.5,
+        "width": 40,
+        "height": 35
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "4c78b1dd-b9ab-48ec-82da-c2d0f1eae731",
+      "name": "Skjold outer west",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 25,
+                "y": 857.5
+              },
+              {
+                "x": 32.5,
+                "y": 842.5
+              },
+              {
+                "x": 47.5,
+                "y": 845
+              },
+              {
+                "x": 52.5,
+                "y": 860
+              },
+              {
+                "x": 40,
+                "y": 877.5
+              },
+              {
+                "x": 25,
+                "y": 872.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 25,
+      "y": 842.5,
+      "width": 27.5,
+      "height": 35,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 25,
+        "y": 842.5,
+        "width": 27.5,
+        "height": 35
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "7cc1d0b6-5b2b-4fcc-bf67-ba087047a3fa",
+      "name": "Skjold upper east",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 322.5,
+                "y": 795
+              },
+              {
+                "x": 332.5,
+                "y": 782.5
+              },
+              {
+                "x": 347.5,
+                "y": 795
+              },
+              {
+                "x": 352.5,
+                "y": 812.5
+              },
+              {
+                "x": 340,
+                "y": 825
+              },
+              {
+                "x": 327.5,
+                "y": 817.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 322.5,
+      "y": 782.5,
+      "width": 30,
+      "height": 42.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 322.5,
+        "y": 782.5,
+        "width": 30,
+        "height": 42.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "b27b80e4-d947-4928-b93d-e6e6a870631e",
+      "name": "Skjold middle west",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 117.5,
+                "y": 832.5
+              },
+              {
+                "x": 132.5,
+                "y": 825
+              },
+              {
+                "x": 142.5,
+                "y": 837.5
+              },
+              {
+                "x": 135,
+                "y": 857.5
+              },
+              {
+                "x": 117.5,
+                "y": 867.5
+              },
+              {
+                "x": 110,
+                "y": 855
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 110,
+      "y": 825,
+      "width": 32.5,
+      "height": 42.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 110,
+        "y": 825,
+        "width": 32.5,
+        "height": 42.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "35413522-d813-4f96-85e8-95198eda09a2",
+      "name": "Skjold east rock",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 432.5,
+                "y": 872.5
+              },
+              {
+                "x": 442.5,
+                "y": 867.5
+              },
+              {
+                "x": 452.5,
+                "y": 882.5
+              },
+              {
+                "x": 445,
+                "y": 900
+              },
+              {
+                "x": 430,
+                "y": 897.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 430,
+      "y": 867.5,
+      "width": 22.5,
+      "height": 32.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 430,
+        "y": 867.5,
+        "width": 22.5,
+        "height": 32.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "937adc1f-509e-47a7-99dc-82dcd81918f7",
+      "name": "Skjold southern east",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 417.5,
+                "y": 952.5
+              },
+              {
+                "x": 437.5,
+                "y": 942.5
+              },
+              {
+                "x": 455,
+                "y": 947.5
+              },
+              {
+                "x": 450,
+                "y": 965
+              },
+              {
+                "x": 432.5,
+                "y": 977.5
+              },
+              {
+                "x": 415,
+                "y": 972.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 415,
+      "y": 942.5,
+      "width": 40,
+      "height": 35,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 415,
+        "y": 942.5,
+        "width": 40,
+        "height": 35
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "cc3b0407-c24b-4c1b-a1ad-6bb12ba1ca36",
+      "name": "Skjold southern west",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 57.5,
+                "y": 962.5
+              },
+              {
+                "x": 75,
+                "y": 955
+              },
+              {
+                "x": 92.5,
+                "y": 962.5
+              },
+              {
+                "x": 87.5,
+                "y": 982.5
+              },
+              {
+                "x": 65,
+                "y": 995
+              },
+              {
+                "x": 47.5,
+                "y": 985
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 47.5,
+      "y": 955,
+      "width": 45,
+      "height": 40,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 47.5,
+        "y": 955,
+        "width": 45,
+        "height": 40
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "9eab792e-9d12-45bc-a6fa-6bd35bca922e",
+      "name": "Skjold southern rock",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 150,
+                "y": 990
+              },
+              {
+                "x": 162.5,
+                "y": 975
+              },
+              {
+                "x": 180,
+                "y": 977.5
+              },
+              {
+                "x": 187.5,
+                "y": 995
+              },
+              {
+                "x": 175,
+                "y": 1012.5
+              },
+              {
+                "x": 160,
+                "y": 1012.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 150,
+      "y": 975,
+      "width": 37.5,
+      "height": 37.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 150,
+        "y": 975,
+        "width": 37.5,
+        "height": 37.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "f6948753-a8fa-4208-acb2-13d91086e896",
+      "name": "Skjold tail rock",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 167.5,
+                "y": 1055
+              },
+              {
+                "x": 177.5,
+                "y": 1045
+              },
+              {
+                "x": 192.5,
+                "y": 1052.5
+              },
+              {
+                "x": 190,
+                "y": 1065
+              },
+              {
+                "x": 177.5,
+                "y": 1070
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 167.5,
+      "y": 1045,
+      "width": 25,
+      "height": 25,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 167.5,
+        "y": 1045,
+        "width": 25,
+        "height": 25
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "90b5986b-46b8-403e-80b9-ff026e10d4ed",
+      "name": "Skjold outer south",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 295,
+                "y": 1107.5
+              },
+              {
+                "x": 310,
+                "y": 1097.5
+              },
+              {
+                "x": 327.5,
+                "y": 1105
+              },
+              {
+                "x": 325,
+                "y": 1117.5
+              },
+              {
+                "x": 307.5,
+                "y": 1125
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 295,
+      "y": 1097.5,
+      "width": 32.5,
+      "height": 27.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 295,
+        "y": 1097.5,
+        "width": 32.5,
+        "height": 27.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "753ff05c-411e-4664-8dc1-9d36f28c98cc",
+      "name": "Golden bay north island",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 575,
+                "y": 975
+              },
+              {
+                "x": 587.5,
+                "y": 962.5
+              },
+              {
+                "x": 600,
+                "y": 975
+              },
+              {
+                "x": 602.5,
+                "y": 992.5
+              },
+              {
+                "x": 587.5,
+                "y": 1002.5
+              },
+              {
+                "x": 570,
+                "y": 995
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 570,
+      "y": 962.5,
+      "width": 32.5,
+      "height": 40,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 570,
+        "y": 962.5,
+        "width": 32.5,
+        "height": 40
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "109a92d1-2c63-481c-9fcc-351ff75c22d6",
+      "name": "Golden bay main island",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 602.5,
+                "y": 1015
+              },
+              {
+                "x": 617.5,
+                "y": 1000
+              },
+              {
+                "x": 635,
+                "y": 1012.5
+              },
+              {
+                "x": 640,
+                "y": 1032.5
+              },
+              {
+                "x": 652.5,
+                "y": 1037.5
+              },
+              {
+                "x": 647.5,
+                "y": 1057.5
+              },
+              {
+                "x": 630,
+                "y": 1062.5
+              },
+              {
+                "x": 615,
+                "y": 1047.5
+              },
+              {
+                "x": 597.5,
+                "y": 1040
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 597.5,
+      "y": 1000,
+      "width": 55,
+      "height": 62.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 597.5,
+        "y": 1000,
+        "width": 55,
+        "height": 62.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "dd1dc209-aeac-4d31-9aa8-3eebd6798873",
+      "name": "Golden bay west island",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 560,
+                "y": 1052.5
+              },
+              {
+                "x": 570,
+                "y": 1035
+              },
+              {
+                "x": 582.5,
+                "y": 1045
+              },
+              {
+                "x": 585,
+                "y": 1062.5
+              },
+              {
+                "x": 602.5,
+                "y": 1067.5
+              },
+              {
+                "x": 592.5,
+                "y": 1080
+              },
+              {
+                "x": 575,
+                "y": 1085
+              },
+              {
+                "x": 552.5,
+                "y": 1075
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 552.5,
+      "y": 1035,
+      "width": 50,
+      "height": 50,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 552.5,
+        "y": 1035,
+        "width": 50,
+        "height": 50
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "5755c555-680f-4b4f-ba3b-9cfa420b9700",
+      "name": "Golden bay east island",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 672.5,
+                "y": 1017.5
+              },
+              {
+                "x": 682.5,
+                "y": 1005
+              },
+              {
+                "x": 700,
+                "y": 1012.5
+              },
+              {
+                "x": 692.5,
+                "y": 1027.5
+              },
+              {
+                "x": 680,
+                "y": 1030
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 672.5,
+      "y": 1005,
+      "width": 27.5,
+      "height": 25,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 672.5,
+        "y": 1005,
+        "width": 27.5,
+        "height": 25
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "b2aaaa38-a9e9-4545-9a41-43b43041a706",
+      "name": "Golden bay east rock",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 657.5,
+                "y": 1045
+              },
+              {
+                "x": 667.5,
+                "y": 1035
+              },
+              {
+                "x": 677.5,
+                "y": 1037.5
+              },
+              {
+                "x": 672.5,
+                "y": 1052.5
+              },
+              {
+                "x": 660,
+                "y": 1057.5
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 657.5,
+      "y": 1035,
+      "width": 20,
+      "height": 22.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 657.5,
+        "y": 1035,
+        "width": 20,
+        "height": 22.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "21a78fae-d170-4d63-9e23-6c8f85857400",
+      "name": "Southwest cape offshore",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 527.5,
+                "y": 1235
+              },
+              {
+                "x": 540,
+                "y": 1225
+              },
+              {
+                "x": 555,
+                "y": 1227.5
+              },
+              {
+                "x": 565,
+                "y": 1242.5
+              },
+              {
+                "x": 587.5,
+                "y": 1247.5
+              },
+              {
+                "x": 590,
+                "y": 1260
+              },
+              {
+                "x": 575,
+                "y": 1267.5
+              },
+              {
+                "x": 557.5,
+                "y": 1257.5
+              },
+              {
+                "x": 537.5,
+                "y": 1255
+              },
+              {
+                "x": 522.5,
+                "y": 1245
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 522.5,
+      "y": 1225,
+      "width": 67.5,
+      "height": 42.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 522.5,
+        "y": 1225,
+        "width": 67.5,
+        "height": 42.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "f61f32dd-53ba-4743-82f9-e5c1189cb30f",
+      "name": "Southwestern skerry",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 507.5,
+                "y": 1310
+              },
+              {
+                "x": 520,
+                "y": 1295
+              },
+              {
+                "x": 530,
+                "y": 1300
+              },
+              {
+                "x": 525,
+                "y": 1315
+              },
+              {
+                "x": 512.5,
+                "y": 1320
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 507.5,
+      "y": 1295,
+      "width": 22.5,
+      "height": 25,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 507.5,
+        "y": 1295,
+        "width": 22.5,
+        "height": 25
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "bd356328-2cb5-46be-8b78-7b2d5b8f016c",
+      "name": "South island west skerry",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 717.5,
+                "y": 1352.5
+              },
+              {
+                "x": 727.5,
+                "y": 1332.5
+              },
+              {
+                "x": 740,
+                "y": 1327.5
+              },
+              {
+                "x": 752.5,
+                "y": 1342.5
+              },
+              {
+                "x": 750,
+                "y": 1362.5
+              },
+              {
+                "x": 740,
+                "y": 1377.5
+              },
+              {
+                "x": 722.5,
+                "y": 1375
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 717.5,
+      "y": 1327.5,
+      "width": 35,
+      "height": 50,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 717.5,
+        "y": 1327.5,
+        "width": 35,
+        "height": 50
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "07dd2c7c-4e3c-4116-b425-1ff6a79660c6",
+      "name": "Eastern offshore cape island",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1482.5,
+                "y": 1050
+              },
+              {
+                "x": 1500,
+                "y": 1040
+              },
+              {
+                "x": 1515,
+                "y": 1055
+              },
+              {
+                "x": 1515,
+                "y": 1072.5
+              },
+              {
+                "x": 1527.5,
+                "y": 1082.5
+              },
+              {
+                "x": 1527.5,
+                "y": 1102.5
+              },
+              {
+                "x": 1512.5,
+                "y": 1112.5
+              },
+              {
+                "x": 1505,
+                "y": 1132.5
+              },
+              {
+                "x": 1485,
+                "y": 1140
+              },
+              {
+                "x": 1477.5,
+                "y": 1125
+              },
+              {
+                "x": 1485,
+                "y": 1105
+              },
+              {
+                "x": 1467.5,
+                "y": 1097.5
+              },
+              {
+                "x": 1472.5,
+                "y": 1075
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1467.5,
+      "y": 1040,
+      "width": 60,
+      "height": 100,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1467.5,
+        "y": 1040,
+        "width": 60,
+        "height": 100
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "f3500fe0-2126-4d71-af8d-7f48ac0012e9",
+      "name": "East small rock",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1547.5,
+                "y": 1100
+              },
+              {
+                "x": 1560,
+                "y": 1087.5
+              },
+              {
+                "x": 1572.5,
+                "y": 1097.5
+              },
+              {
+                "x": 1565,
+                "y": 1110
+              },
+              {
+                "x": 1550,
+                "y": 1115
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1547.5,
+      "y": 1087.5,
+      "width": 25,
+      "height": 27.5,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1547.5,
+        "y": 1087.5,
+        "width": 25,
+        "height": 27.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "dbf1ff82-0395-4924-a08f-81fda59e00da",
+      "name": "Northern shelf middle",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 810,
+                "y": 140
+              },
+              {
+                "x": 822.5,
+                "y": 122.5
+              },
+              {
+                "x": 850,
+                "y": 115
+              },
+              {
+                "x": 862.5,
+                "y": 105
+              },
+              {
+                "x": 872.5,
+                "y": 110
+              },
+              {
+                "x": 864.9982117534703,
+                "y": 124.99821175347026
+              },
+              {
+                "x": 840,
+                "y": 137.5
+              },
+              {
+                "x": 822.4998335138102,
+                "y": 152.5027192744332
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 810,
+      "y": 105,
+      "width": 62.5,
+      "height": 47.50271927443319,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 810,
+        "y": 105,
+        "width": 62.5,
+        "height": 47.5
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "98d4e1a3-c4c0-4855-b50b-b02c2ea3db83",
+      "name": "Northern skerry 4",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1029.9996272097894,
+                "y": 72.50016568242685
+              },
+              {
+                "x": 1037.5,
+                "y": 57.5
+              },
+              {
+                "x": 1055,
+                "y": 60
+              },
+              {
+                "x": 1057.5,
+                "y": 70
+              },
+              {
+                "x": 1045.0002582807533,
+                "y": 77.50129138502923
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1029.9996272097894,
+      "y": 57.5,
+      "width": 27.500372790210577,
+      "height": 20.001291385029234,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1030,
+        "y": 57.5,
+        "width": 27.5,
+        "height": 20
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "8ab69777-80c0-4a39-82a0-3a538035d201",
+      "name": "Northern skerry 5",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1087.496759749698,
+                "y": 109.99959490724888
+              },
+              {
+                "x": 1100,
+                "y": 100
+              },
+              {
+                "x": 1110,
+                "y": 110
+              },
+              {
+                "x": 1107.5000666463363,
+                "y": 125.00011663063594
+              },
+              {
+                "x": 1094.9992773934275,
+                "y": 122.5014454578397
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1087.496759749698,
+      "y": 100,
+      "width": 22.503240250302042,
+      "height": 25.000116630635944,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1087.5,
+        "y": 100,
+        "width": 22.5,
+        "height": 25
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "a334f4b7-7304-4d00-885c-e3c582e5e347",
+      "name": "Northern skerry 6",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 1127.4997713050477,
+                "y": 147.4999346584468
+              },
+              {
+                "x": 1137.5,
+                "y": 137.5
+              },
+              {
+                "x": 1150,
+                "y": 147.5
+              },
+              {
+                "x": 1145,
+                "y": 162.5
+              },
+              {
+                "x": 1134.9988509640812,
+                "y": 162.50229807215692
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 1127.4997713050477,
+      "y": 137.5,
+      "width": 22.500228694952284,
+      "height": 25.00229807215692,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 1127.5,
+        "y": 137.5,
+        "width": 22.5,
+        "height": 25
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    },
+    {
+      "kind": "area",
+      "id": "3ea07278-f786-4da9-89da-e9de9010720e",
+      "name": "Northreach / Westmere / Golden Marches",
+      "geometry": {
+        "polygons": [
+          {
+            "outer": [
+              {
+                "x": 443.0891553209308,
+                "y": 616.3257781193438
+              },
+              {
+                "x": 456.71101570471586,
+                "y": 605.4880728543918
+              },
+              {
+                "x": 478.72499999999997,
+                "y": 604.525
+              },
+              {
+                "x": 498.775,
+                "y": 596.6999999999999
+              },
+              {
+                "x": 521.2249999999999,
+                "y": 589.9499999999999
+              },
+              {
+                "x": 540.85,
+                "y": 576.6999999999999
+              },
+              {
+                "x": 562.5,
+                "y": 565.8
+              },
+              {
+                "x": 584.15,
+                "y": 551.275
+              },
+              {
+                "x": 599.525,
+                "y": 538.3
+              },
+              {
+                "x": 598.25,
+                "y": 522.125
+              },
+              {
+                "x": 581.75,
+                "y": 510.37499999999994
+              },
+              {
+                "x": 575.375,
+                "y": 493.775
+              },
+              {
+                "x": 568.825,
+                "y": 478.72499999999997
+              },
+              {
+                "x": 577.125,
+                "y": 461.7
+              },
+              {
+                "x": 595.8,
+                "y": 448.72499999999997
+              },
+              {
+                "x": 610.85,
+                "y": 435.9
+              },
+              {
+                "x": 625.375,
+                "y": 432.025
+              },
+              {
+                "x": 627.8249999999999,
+                "y": 420.425
+              },
+              {
+                "x": 613.825,
+                "y": 406.65
+              },
+              {
+                "x": 603.4,
+                "y": 376.65
+              },
+              {
+                "x": 610.85,
+                "y": 362.54999999999995
+              },
+              {
+                "x": 623.3,
+                "y": 354.95
+              },
+              {
+                "x": 632.125,
+                "y": 342.54999999999995
+              },
+              {
+                "x": 644.525,
+                "y": 334.95
+              },
+              {
+                "x": 646.225,
+                "y": 320.85
+              },
+              {
+                "x": 643.4,
+                "y": 307.075
+              },
+              {
+                "x": 655.05,
+                "y": 294.2
+              },
+              {
+                "x": 678.7249999999999,
+                "y": 285.79999999999995
+              },
+              {
+                "x": 696.5999999999999,
+                "y": 271.65
+              },
+              {
+                "x": 701.6997615794265,
+                "y": 251.22470495454039
+              },
+              {
+                "x": 709.6105688263211,
+                "y": 227.5932238563336
+              },
+              {
+                "x": 720.5199306593568,
+                "y": 214.25838168747148
+              },
+              {
+                "x": 742.0944143785035,
+                "y": 207.84387281463054
+              },
+              {
+                "x": 766.693053742308,
+                "y": 196.7267698084893
+              },
+              {
+                "x": 794.9418249158145,
+                "y": 188.2801106183539
+              },
+              {
+                "x": 817.1426955644785,
+                "y": 178.0111336001937
+              },
+              {
+                "x": 842.8750089503051,
+                "y": 174.9500431821566
+              },
+              {
+                "x": 861.6503791376916,
+                "y": 163.7253357391928
+              },
+              {
+                "x": 876.2997551817634,
+                "y": 148.9154516256746
+              },
+              {
+                "x": 894.147853925664,
+                "y": 145.78448223172379
+              },
+              {
+                "x": 911.6981461091298,
+                "y": 140.42043393544932
+              },
+              {
+                "x": 933.2836630997411,
+                "y": 132.84644721936758
+              },
+              {
+                "x": 952.1490372058921,
+                "y": 120.51375999450127
+              },
+              {
+                "x": 974.9415629229196,
+                "y": 114.47550507316397
+              },
+              {
+                "x": 992.1249236240003,
+                "y": 103.39984511160894
+              },
+              {
+                "x": 1012.8754766250839,
+                "y": 99.52542504017514
+              },
+              {
+                "x": 1028.7752182195563,
+                "y": 91.33610935923542
+              },
+              {
+                "x": 1044.914075277651,
+                "y": 97.18826566148138
+              },
+              {
+                "x": 1055.5289008964442,
+                "y": 112.85696770009862
+              },
+              {
+                "x": 1072.8314492792115,
+                "y": 126.35145989419061
+              },
+              {
+                "x": 1088.411782199794,
+                "y": 152.91647384972143
+              },
+              {
+                "x": 1111.9954623491992,
+                "y": 186.28639659972856
+              },
+              {
+                "x": 1125.4598992893445,
+                "y": 218.24851387962553
+              },
+              {
+                "x": 1127.5952124830005,
+                "y": 225.5017576355189
+              },
+              {
+                "x": 1124.894041626874,
+                "y": 228.90901742844943
+              },
+              {
+                "x": 1124.0256225382334,
+                "y": 231.725397548641
+              },
+              {
+                "x": 1124.455769164616,
+                "y": 235.41308647858926
+              },
+              {
+                "x": 1126.8295148188665,
+                "y": 242.48720071939886
+              },
+              {
+                "x": 1128.708521016043,
+                "y": 245.6821213880628
+              },
+              {
+                "x": 1131.273921331584,
+                "y": 247.42244860234007
+              },
+              {
+                "x": 1134.4120683380065,
+                "y": 248.21602001360785
+              },
+              {
+                "x": 1137.611309305355,
+                "y": 247.81908003847056
+              },
+              {
+                "x": 1140.3351232025755,
+                "y": 246.41924968047806
+              },
+              {
+                "x": 1141.9675925227082,
+                "y": 244.71246320335229
+              },
+              {
+                "x": 1142.9345097053115,
+                "y": 242.55467251416434
+              },
+              {
+                "x": 1143.3191728571562,
+                "y": 239.68041202513314
+              },
+              {
+                "x": 1142.3805713553174,
+                "y": 234.08795871733497
+              },
+              {
+                "x": 1147.3861158320346,
+                "y": 233.81349476116264
+              },
+              {
+                "x": 1160.8,
+                "y": 226.6
+              },
+              {
+                "x": 1172.975,
+                "y": 207.975
+              },
+              {
+                "x": 1192.875,
+                "y": 196.225
+              },
+              {
+                "x": 1209.625,
+                "y": 183.77499999999998
+              },
+              {
+                "x": 1230.375,
+                "y": 180.1
+              },
+              {
+                "x": 1242.025,
+                "y": 196.65
+              },
+              {
+                "x": 1244.25,
+                "y": 213.72499999999997
+              },
+              {
+                "x": 1254.05,
+                "y": 227.97499999999997
+              },
+              {
+                "x": 1248.825,
+                "y": 252.92499999999998
+              },
+              {
+                "x": 1247.3999999999999,
+                "y": 282.075
+              },
+              {
+                "x": 1230,
+                "y": 307.875
+              },
+              {
+                "x": 1210.475,
+                "y": 327.125
+              },
+              {
+                "x": 1206.3249999999998,
+                "y": 351.22499999999997
+              },
+              {
+                "x": 1221.275,
+                "y": 367.825
+              },
+              {
+                "x": 1247.125,
+                "y": 359.9
+              },
+              {
+                "x": 1297.0749999999998,
+                "y": 316.6
+              },
+              {
+                "x": 1307.0249999999999,
+                "y": 292.925
+              },
+              {
+                "x": 1308.8249999999998,
+                "y": 269.625
+              },
+              {
+                "x": 1323.35,
+                "y": 257.975
+              },
+              {
+                "x": 1342.45,
+                "y": 263.825
+              },
+              {
+                "x": 1353.7749999999999,
+                "y": 285.79999999999995
+              },
+              {
+                "x": 1362.8249999999998,
+                "y": 305.85
+              },
+              {
+                "x": 1353.3,
+                "y": 324.525
+              },
+              {
+                "x": 1335.05,
+                "y": 335.9
+              },
+              {
+                "x": 1326.6999999999998,
+                "y": 358.34999999999997
+              },
+              {
+                "x": 1331.3249999999998,
+                "y": 383.25
+              },
+              {
+                "x": 1352.0749999999998,
+                "y": 389.94999999999993
+              },
+              {
+                "x": 1373.725,
+                "y": 387.59999999999997
+              },
+              {
+                "x": 1386.6,
+                "y": 402.92499999999995
+              },
+              {
+                "x": 1388.8249999999998,
+                "y": 422.025
+              },
+              {
+                "x": 1402.0749999999998,
+                "y": 427.025
+              },
+              {
+                "x": 1418.35,
+                "y": 422.17499999999995
+              },
+              {
+                "x": 1436.225,
+                "y": 435.9
+              },
+              {
+                "x": 1445.75,
+                "y": 466.22499999999997
+              },
+              {
+                "x": 1442.6,
+                "y": 495
+              },
+              {
+                "x": 1451.6,
+                "y": 520.8
+              },
+              {
+                "x": 1456.75,
+                "y": 537.875
+              },
+              {
+                "x": 1474.5749999999998,
+                "y": 546.275
+              },
+              {
+                "x": 1496.7,
+                "y": 554.0999999999999
+              },
+              {
+                "x": 1522.4499999999998,
+                "y": 554.675
+              },
+              {
+                "x": 1538.3,
+                "y": 570.425
+              },
+              {
+                "x": 1548.4,
+                "y": 589.0999999999999
+              },
+              {
+                "x": 1564.8999999999999,
+                "y": 599.675
+              },
+              {
+                "x": 1561.6,
+                "y": 622.4499999999999
+              },
+              {
+                "x": 1543.3999999999999,
+                "y": 643.4
+              },
+              {
+                "x": 1532.4499999999998,
+                "y": 674.15
+              },
+              {
+                "x": 1513.725,
+                "y": 700.75
+              },
+              {
+                "x": 1490.475,
+                "y": 713.825
+              },
+              {
+                "x": 1474.9499999999998,
+                "y": 734.525
+              },
+              {
+                "x": 1458.0249999999999,
+                "y": 751.325
+              },
+              {
+                "x": 1455.3249999999998,
+                "y": 778.3
+              },
+              {
+                "x": 1446.375,
+                "y": 803.35
+              },
+              {
+                "x": 1452.4,
+                "y": 830.425
+              },
+              {
+                "x": 1449.675,
+                "y": 859.5749999999999
+              },
+              {
+                "x": 1460.853614348103,
+                "y": 884.0976217276551
+              },
+              {
+                "x": 1477.8336108167848,
+                "y": 898.4216690376608
+              },
+              {
+                "x": 1491.3364497639961,
+                "y": 920.3688520971643
+              },
+              {
+                "x": 1509.8550157096338,
+                "y": 939.6237292152426
+              },
+              {
+                "x": 1504.1939227554742,
+                "y": 965
+              },
+              {
+                "x": 1493.1680210625357,
+                "y": 990.2996505229619
+              },
+              {
+                "x": 1469.6253374526539,
+                "y": 1004.1016936909394
+              },
+              {
+                "x": 1449.1499999999999,
+                "y": 1007.175
+              },
+              {
+                "x": 1432.175,
+                "y": 1024.5749999999998
+              },
+              {
+                "x": 1428.25,
+                "y": 1045
+              },
+              {
+                "x": 1416.75,
+                "y": 1064.5749999999998
+              },
+              {
+                "x": 1420.8999999999999,
+                "y": 1082.0749999999998
+              },
+              {
+                "x": 1439.5249999999999,
+                "y": 1097.0749999999998
+              },
+              {
+                "x": 1445.3249999999998,
+                "y": 1110.425
+              },
+              {
+                "x": 1435.5249999999999,
+                "y": 1125.425
+              },
+              {
+                "x": 1441.225,
+                "y": 1142.925
+              },
+              {
+                "x": 1452.175,
+                "y": 1160.375
+              },
+              {
+                "x": 1475.75,
+                "y": 1173.4
+              },
+              {
+                "x": 1483.25,
+                "y": 1195.8
+              },
+              {
+                "x": 1474.675,
+                "y": 1217.125
+              },
+              {
+                "x": 1474.8999999999999,
+                "y": 1244.15
+              },
+              {
+                "x": 1457.0249999999999,
+                "y": 1266.6
+              },
+              {
+                "x": 1425.05,
+                "y": 1272.4499999999998
+              },
+              {
+                "x": 1400.425,
+                "y": 1268.8249999999998
+              },
+              {
+                "x": 1385.5249999999999,
+                "y": 1279.1999999999998
+              },
+              {
+                "x": 1386.975,
+                "y": 1298.725
+              },
+              {
+                "x": 1371.6499999999999,
+                "y": 1311.6
+              },
+              {
+                "x": 1348.35,
+                "y": 1312.55
+              },
+              {
+                "x": 1326.650155561127,
+                "y": 1319.1521389654986
+              },
+              {
+                "x": 1305.069687446272,
+                "y": 1327.1640725901063
+              },
+              {
+                "x": 1290.3732444589828,
+                "y": 1338.6669607367696
+              },
+              {
+                "x": 1272.5519496693173,
+                "y": 1335.796801323776
+              },
+              {
+                "x": 1259.498505280408,
+                "y": 1325.074052953894
+              },
+              {
+                "x": 1240.0849829843703,
+                "y": 1320.105628256319
+              },
+              {
+                "x": 1229.3283463890343,
+                "y": 1309.440630432898
+              },
+              {
+                "x": 1226.6169198870175,
+                "y": 1296.9707141643485
+              },
+              {
+                "x": 1225.3388543515389,
+                "y": 1295.2068830159578
+              },
+              {
+                "x": 1223.9923672169746,
+                "y": 1296.083201369947
+              },
+              {
+                "x": 1222.5428053306512,
+                "y": 1300.7932491042777
+              },
+              {
+                "x": 1218.65851161853,
+                "y": 1303.611690662671
+              },
+              {
+                "x": 1174.625,
+                "y": 1303.675
+              },
+              {
+                "x": 1157.0749999999998,
+                "y": 1292.55
+              },
+              {
+                "x": 1140.85,
+                "y": 1284.5249999999999
+              },
+              {
+                "x": 1125.8,
+                "y": 1269.2
+              },
+              {
+                "x": 1105.425,
+                "y": 1260.475
+              },
+              {
+                "x": 1085.8539893932757,
+                "y": 1261.1663786266113
+              },
+              {
+                "x": 1069.9686799347162,
+                "y": 1253.8746072496012
+              },
+              {
+                "x": 1055.031718539332,
+                "y": 1253.180498262551
+              },
+              {
+                "x": 1039.132627700082,
+                "y": 1243.4605398330473
+              },
+              {
+                "x": 1020.0161718726266,
+                "y": 1245.0995515385462
+              },
+              {
+                "x": 999.5377149378927,
+                "y": 1257.835081812038
+              },
+              {
+                "x": 977.9261037012757,
+                "y": 1262.3937761585407
+              },
+              {
+                "x": 935.0484435061733,
+                "y": 1249.9513016832
+              },
+              {
+                "x": 919.9499999999999,
+                "y": 1238.3999999999999
+              },
+              {
+                "x": 900.0491579788724,
+                "y": 1234.1013463566987
+              },
+              {
+                "x": 884.9204129483386,
+                "y": 1222.1480986631389
+              },
+              {
+                "x": 843.3596397557633,
+                "y": 1207.0811717948488
+              },
+              {
+                "x": 826.6501002160724,
+                "y": 1202.1739579302214
+              },
+              {
+                "x": 790.45177567556,
+                "y": 1221.7989983356933
+              },
+              {
+                "x": 772.866122298676,
+                "y": 1243.2826733950903
+              },
+              {
+                "x": 746.225,
+                "y": 1258.25
+              },
+              {
+                "x": 715.9,
+                "y": 1253.725
+              },
+              {
+                "x": 698.775,
+                "y": 1239.1499999999999
+              },
+              {
+                "x": 686.5999999999999,
+                "y": 1224.25
+              },
+              {
+                "x": 664.1994829732358,
+                "y": 1219.9019470016883
+              },
+              {
+                "x": 644.5530478510176,
+                "y": 1205.1503626838246
+              },
+              {
+                "x": 625.4273477782659,
+                "y": 1201.1613535388283
+              },
+              {
+                "x": 607.0715483693677,
+                "y": 1192.6366295495657
+              },
+              {
+                "x": 587.499636090205,
+                "y": 1197.0269265812685
+              },
+              {
+                "x": 569.6247867773376,
+                "y": 1192.4502200860534
+              },
+              {
+                "x": 563.4006565907667,
+                "y": 1175.8497773968288
+              },
+              {
+                "x": 567.297028675991,
+                "y": 1160.464634151514
+              },
+              {
+                "x": 555,
+                "y": 1147.5
+              },
+              {
+                "x": 565,
+                "y": 1137.5
+              },
+              {
+                "x": 575,
+                "y": 1130
+              },
+              {
+                "x": 595,
+                "y": 1125
+              },
+              {
+                "x": 605,
+                "y": 1117.5
+              },
+              {
+                "x": 615,
+                "y": 1112.5
+              },
+              {
+                "x": 625,
+                "y": 1112.5
+              },
+              {
+                "x": 635,
+                "y": 1115
+              },
+              {
+                "x": 647.5,
+                "y": 1117.5
+              },
+              {
+                "x": 660,
+                "y": 1115
+              },
+              {
+                "x": 672.5,
+                "y": 1110
+              },
+              {
+                "x": 685,
+                "y": 1102.5
+              },
+              {
+                "x": 692.5,
+                "y": 1092.5
+              },
+              {
+                "x": 695,
+                "y": 1082.5
+              },
+              {
+                "x": 685,
+                "y": 1072.5
+              },
+              {
+                "x": 680,
+                "y": 1065
+              },
+              {
+                "x": 680,
+                "y": 1055
+              },
+              {
+                "x": 685,
+                "y": 1045
+              },
+              {
+                "x": 697.5,
+                "y": 1035
+              },
+              {
+                "x": 710,
+                "y": 1030
+              },
+              {
+                "x": 725,
+                "y": 1025
+              },
+              {
+                "x": 737.50058545217,
+                "y": 1022.4279858871236
+              },
+              {
+                "x": 749.988256239757,
+                "y": 1015.0610625278069
+              },
+              {
+                "x": 762.4137989065102,
+                "y": 1010.0714414762151
+              },
+              {
+                "x": 775.3926249960939,
+                "y": 1008.1121056174479
+              },
+              {
+                "x": 788.6875733058594,
+                "y": 1006.4110420924478
+              },
+              {
+                "x": 802.1595021820314,
+                "y": 997.7613064917969
+              },
+              {
+                "x": 823.6252673613283,
+                "y": 988.1465997070311
+              },
+              {
+                "x": 840.2331808226561,
+                "y": 982.001681161719
+              },
+              {
+                "x": 849.8497366054687,
+                "y": 975.1037646585937
+              },
+              {
+                "x": 855,
+                "y": 967.5
+              },
+              {
+                "x": 865,
+                "y": 962.5
+              },
+              {
+                "x": 867.5,
+                "y": 952.5
+              },
+              {
+                "x": 859.720400626953,
+                "y": 944.7810022902345
+              },
+              {
+                "x": 847.9508211722657,
+                "y": 938.3242188882812
+              },
+              {
+                "x": 830.8577615464844,
+                "y": 933.9748782242186
+              },
+              {
+                "x": 809.7143316289064,
+                "y": 925.9372445113282
+              },
+              {
+                "x": 798.5401425050782,
+                "y": 916.3393429226562
+              },
+              {
+                "x": 790.8649454078127,
+                "y": 903.3623108730468
+              },
+              {
+                "x": 787.17409995,
+                "y": 894.3916369945312
+              },
+              {
+                "x": 782.1314442468747,
+                "y": 891.0211298808595
+              },
+              {
+                "x": 772.7542289904948,
+                "y": 894.2892578063803
+              },
+              {
+                "x": 762.2563265069879,
+                "y": 894.88570795421
+              },
+              {
+                "x": 752.8729923968751,
+                "y": 890.1558914631944
+              },
+              {
+                "x": 747.4482322992478,
+                "y": 882.4710542244507
+              },
+              {
+                "x": 744.943543676157,
+                "y": 872.553322339988
+              },
+              {
+                "x": 740,
+                "y": 865
+              },
+              {
+                "x": 732.5,
+                "y": 862.5
+              },
+              {
+                "x": 722.5,
+                "y": 865
+              },
+              {
+                "x": 712.5,
+                "y": 870
+              },
+              {
+                "x": 705,
+                "y": 875
+              },
+              {
+                "x": 697.5,
+                "y": 877.5
+              },
+              {
+                "x": 690,
+                "y": 872.5
+              },
+              {
+                "x": 687.5,
+                "y": 865
+              },
+              {
+                "x": 685.034601064941,
+                "y": 855.1384042597635
+              },
+              {
+                "x": 686.5955816871193,
+                "y": 854.1944795840515
+              },
+              {
+                "x": 687.5490934227066,
+                "y": 853.138235
+              },
+              {
+                "x": 688.1484959577344,
+                "y": 851.9082121300229
+              },
+              {
+                "x": 688.3016101682429,
+                "y": 849.9225514196778
+              },
+              {
+                "x": 687.5490934227066,
+                "y": 848.0382350000001
+              },
+              {
+                "x": 686.5955816871193,
+                "y": 846.9819904159486
+              },
+              {
+                "x": 685.352941,
+                "y": 846.1715054406994
+              },
+              {
+                "x": 683.9058552706151,
+                "y": 845.6620132859258
+              },
+              {
+                "x": 681.5697838466797,
+                "y": 845.5318662069936
+              },
+              {
+                "x": 680.0568404058095,
+                "y": 845.8764493841925
+              },
+              {
+                "x": 678.2140212207642,
+                "y": 846.9046737402547
+              },
+              {
+                "x": 672.5,
+                "y": 845
+              },
+              {
+                "x": 665,
+                "y": 850
+              },
+              {
+                "x": 657.5,
+                "y": 857.5
+              },
+              {
+                "x": 655.1565177614276,
+                "y": 859.0623214923816
+              },
+              {
+                "x": 656.1315121950678,
+                "y": 860.401255494938
+              },
+              {
+                "x": 656.588235,
+                "y": 862.352941
+              },
+              {
+                "x": 656.1315121950678,
+                "y": 864.304626505062
+              },
+              {
+                "x": 654.8308756871194,
+                "y": 865.9591855840514
+              },
+              {
+                "x": 653.588235,
+                "y": 866.7696705593006
+              },
+              {
+                "x": 652.1411492706152,
+                "y": 867.2791627140742
+              },
+              {
+                "x": 650.588235,
+                "y": 867.452941
+              },
+              {
+                "x": 649.0353207293849,
+                "y": 867.2791627140742
+              },
+              {
+                "x": 646.9356664259477,
+                "y": 866.3990430354853
+              },
+              {
+                "x": 645.3920825772934,
+                "y": 864.9029409999999
+              },
+              {
+                "x": 644.6395658317572,
+                "y": 863.0186245803222
+              },
+              {
+                "x": 644.8873941043933,
+                "y": 860.7957980347977
+              },
+              {
+                "x": 642.5,
+                "y": 860
+              },
+              {
+                "x": 637.5,
+                "y": 852.5
+              },
+              {
+                "x": 635,
+                "y": 845
+              },
+              {
+                "x": 632.5,
+                "y": 835
+              },
+              {
+                "x": 627.5,
+                "y": 827.5
+              },
+              {
+                "x": 620,
+                "y": 822.5
+              },
+              {
+                "x": 610,
+                "y": 820
+              },
+              {
+                "x": 600,
+                "y": 825
+              },
+              {
+                "x": 590,
+                "y": 827.5
+              },
+              {
+                "x": 577.5,
+                "y": 825
+              },
+              {
+                "x": 561.3249999999999,
+                "y": 816.2249999999999
+              },
+              {
+                "x": 560.6420599451262,
+                "y": 803.9829400548738
+              },
+              {
+                "x": 565.5648530957579,
+                "y": 797.4321977153677
+              },
+              {
+                "x": 583.8983747193473,
+                "y": 794.7952036979634
+              },
+              {
+                "x": 588.6334582531617,
+                "y": 793.3298652522964
+              },
+              {
+                "x": 590.5447079810855,
+                "y": 791.6396884673907
+              },
+              {
+                "x": 591.561141780085,
+                "y": 789.7946115073485
+              },
+              {
+                "x": 592.4425203070285,
+                "y": 785.6417265619303
+              },
+              {
+                "x": 597.8669774252485,
+                "y": 781.6666284404665
+              },
+              {
+                "x": 610.325,
+                "y": 765.425
+              },
+              {
+                "x": 606.65,
+                "y": 749.2
+              },
+              {
+                "x": 596.275,
+                "y": 738.3
+              },
+              {
+                "x": 585.75,
+                "y": 724.2
+              },
+              {
+                "x": 562.125,
+                "y": 717.9749999999999
+              },
+              {
+                "x": 541.65,
+                "y": 724.5749999999999
+              },
+              {
+                "x": 520,
+                "y": 729.9499999999999
+              },
+              {
+                "x": 498.3505346881254,
+                "y": 723.7198997100727
+              },
+              {
+                "x": 482.2165665831134,
+                "y": 708.2578793717678
+              },
+              {
+                "x": 478.4757322041734,
+                "y": 687.1577025427113
+              },
+              {
+                "x": 487.8758441116307,
+                "y": 671.6505174818288
+              },
+              {
+                "x": 489.52834488968927,
+                "y": 656.6984283379365
+              },
+              {
+                "x": 476.2240896442365,
+                "y": 648.7786395601885
+              },
+              {
+                "x": 456.75626815518257,
+                "y": 645.3089199601058
+              },
+              {
+                "x": 444.27011601887034,
+                "y": 633.6889314492729
+              }
+            ],
+            "holes": []
+          }
+        ]
+      },
+      "x": 443.0891553209308,
+      "y": 91.33610935923542,
+      "width": 1121.810844679069,
+      "height": 1247.3308513775341,
+      "fill": {
+        "kind": "solid",
+        "color": "#c7bb8d"
+      },
+      "opacity": 1,
+      "rotation": 0,
+      "scaleX": 1,
+      "scaleY": 1,
+      "strokeColor": "#263a42",
+      "strokeOpacity": 1,
+      "strokeWidth": 0,
+      "strokeStyle": "solid",
+      "patternFrame": {
+        "x": 440,
+        "y": 87.5,
+        "width": 1130,
+        "height": 1255
+      },
+      "land": {
+        "role": "landmass",
+        "terrain": "custom",
+        "coastline": {
+          "seed": 1,
+          "roughness": 0,
+          "step": 8
+        }
+      }
+    }
+  ],
+  "objectGroups": [],
+  "layerTree": {
+    "roots": [
+      "northreach-land"
+    ],
+    "groups": []
+  }
+}

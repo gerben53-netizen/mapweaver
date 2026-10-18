@@ -1,0 +1,66 @@
+{
+  "pairs": [
+    {
+      "id": 1,
+      "image": {
+        "x": 501,
+        "y": 55
+      },
+      "map": {
+        "x": 1027.5,
+        "y": 87.5
+      }
+    },
+    {
+      "id": 2,
+      "image": {
+        "x": 435,
+        "y": 405
+      },
+      "map": {
+        "x": 862.5,
+        "y": 962.5
+      }
+    },
+    {
+      "id": 3,
+      "image": {
+        "x": 317,
+        "y": 498
+      },
+      "map": {
+        "x": 567.5,
+        "y": 1195
+      }
+    },
+    {
+      "id": 4,
+      "image": {
+        "x": 607,
+        "y": 557
+      },
+      "map": {
+        "x": 1292.5,
+        "y": 1342.5
+      }
+    }
+  ],
+  "similarity": {
+    "a": 2.5,
+    "b": 0,
+    "x": -225,
+    "y": -50,
+    "scale": 2.5,
+    "rotation": 0,
+    "meanError": 0,
+    "maxError": 0,
+    "residuals": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "mode": "map-reference",
+  "note": "Surveyed construction coordinates under known crop/scale, not independent coastline ground truth"
+}
