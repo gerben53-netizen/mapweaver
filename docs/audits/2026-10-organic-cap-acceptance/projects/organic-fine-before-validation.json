@@ -1,0 +1,12 @@
+{
+  "variant": "organic-fine-before",
+  "mapId": "b6b983dd-931e-4974-a5ed-a132d6b373a4",
+  "exportMs": 74.40000000596046,
+  "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+  "png": "dec34940094ee9f07556bd96d34c0796ea3f31e38de2a71b8fb7fe1cfb4db420",
+  "archive": "dec34940094ee9f07556bd96d34c0796ea3f31e38de2a71b8fb7fe1cfb4db420",
+  "database": "dec34940094ee9f07556bd96d34c0796ea3f31e38de2a71b8fb7fe1cfb4db420",
+  "pngExact": true,
+  "objectsExact": true,
+  "assets": 0
+}

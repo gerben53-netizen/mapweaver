@@ -1,0 +1,12 @@
+{
+  "variant": "round-before",
+  "mapId": "639bd106-0ec4-45ed-9bac-381fa92a4cc4",
+  "exportMs": 54.79999999701977,
+  "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+  "png": "5e74bf60c8f1dc554dd409bac941ed8fb1c4d3d7487fc8f2483d60b6a626ed19",
+  "archive": "5e74bf60c8f1dc554dd409bac941ed8fb1c4d3d7487fc8f2483d60b6a626ed19",
+  "database": "5e74bf60c8f1dc554dd409bac941ed8fb1c4d3d7487fc8f2483d60b6a626ed19",
+  "pngExact": true,
+  "objectsExact": true,
+  "assets": 0
+}

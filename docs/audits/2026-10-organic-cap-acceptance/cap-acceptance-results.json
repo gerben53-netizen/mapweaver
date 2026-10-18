@@ -1,0 +1,2403 @@
+{
+  "status": "NOT ACCEPTED — no production GO; calibration incomplete; Rugged T05 rejected in both versions.",
+  "baselineCommit": "95db985",
+  "prototypeCommit": "e6d4d91",
+  "sourceSha256": "6a69c806493fe80a6788a8b5a3242bea4b8243ca348e240029497f465b7bff13",
+  "round": [
+    {
+      "testId": "T01",
+      "geometryExact": true
+    },
+    {
+      "testId": "T02",
+      "geometryExact": true
+    },
+    {
+      "testId": "T03",
+      "geometryExact": true
+    },
+    {
+      "testId": "T04",
+      "geometryExact": true
+    },
+    {
+      "testId": "T05",
+      "geometryExact": true
+    },
+    {
+      "testId": "T06",
+      "geometryExact": true
+    },
+    {
+      "testId": "T07",
+      "geometryExact": true
+    },
+    {
+      "testId": "T08",
+      "geometryExact": true
+    },
+    {
+      "testId": "T09",
+      "geometryExact": true
+    }
+  ],
+  "records": [
+    {
+      "brush": "organic-soft",
+      "testId": "T01",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 50,
+          "y": 170
+        },
+        {
+          "x": 290,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0,
+        "cbrAfter": 0,
+        "ctcBefore": 0.16980308438592076,
+        "ctcAfter": 0.33902325425506274,
+        "improvement": null,
+        "bodyHalfWidth": 17.365239181742368,
+        "reason": "CI N/A: baseline CBR <= 1e-6.",
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.008680930997092773,
+        "cbrAfter": 0.0069105791826086,
+        "ctcBefore": 0.1688292131618958,
+        "ctcAfter": 0.2019639234381529,
+        "improvement": 0.20393570863275612,
+        "bodyHalfWidth": 18.595493933862556,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 1,
+      "bodyRaster": {
+        "value": 1,
+        "originalPixels": 27621,
+        "symmetricDifferencePixels": 0,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-soft",
+      "testId": "T02",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 170,
+          "y": 50
+        },
+        {
+          "x": 170,
+          "y": 290
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0,
+        "cbrAfter": 0,
+        "ctcBefore": 0.2871078018627891,
+        "ctcAfter": 0.3738114003848317,
+        "improvement": null,
+        "bodyHalfWidth": 14.17742339362006,
+        "reason": "CI N/A: baseline CBR <= 1e-6.",
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.014678533950839423,
+        "cbrAfter": 0.014741209501589126,
+        "ctcBefore": 0.15416492602431547,
+        "ctcAfter": 0.22990504463850242,
+        "improvement": -0.004269878106329443,
+        "bodyHalfWidth": 17.67415753540422,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 1,
+      "bodyRaster": {
+        "value": 1,
+        "originalPixels": 24576,
+        "symmetricDifferencePixels": 0,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-soft",
+      "testId": "T03",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 70,
+          "y": 70
+        },
+        {
+          "x": 240,
+          "y": 240
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0,
+        "cbrAfter": 0,
+        "ctcBefore": 0.16860987015823675,
+        "ctcAfter": 0.26015698888433103,
+        "improvement": null,
+        "bodyHalfWidth": 17.569287780939792,
+        "reason": "CI N/A: baseline CBR <= 1e-6.",
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.0018001381114860493,
+        "cbrAfter": 0.0018001381114860493,
+        "ctcBefore": 0.21178202555173709,
+        "ctcAfter": 0.36609894964904305,
+        "improvement": 0,
+        "bodyHalfWidth": 19.205108737053557,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 1,
+      "bodyRaster": {
+        "value": 1,
+        "originalPixels": 28421,
+        "symmetricDifferencePixels": 0,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-soft",
+      "testId": "T04",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 50,
+          "y": 170
+        },
+        {
+          "x": 55,
+          "y": 177.17894057210285
+        },
+        {
+          "x": 60,
+          "y": 184.23504748063863
+        },
+        {
+          "x": 65,
+          "y": 191.04758878007993
+        },
+        {
+          "x": 70,
+          "y": 197.5
+        },
+        {
+          "x": 75,
+          "y": 203.48187859547963
+        },
+        {
+          "x": 80,
+          "y": 208.89087296526012
+        },
+        {
+          "x": 85,
+          "y": 213.63443371601792
+        },
+        {
+          "x": 90,
+          "y": 217.6313972081441
+        },
+        {
+          "x": 95,
+          "y": 220.81337428812077
+        },
+        {
+          "x": 100,
+          "y": 223.12592044589877
+        },
+        {
+          "x": 105,
+          "y": 224.52946737555956
+        },
+        {
+          "x": 110,
+          "y": 225
+        },
+        {
+          "x": 115,
+          "y": 224.5294673755596
+        },
+        {
+          "x": 120,
+          "y": 223.12592044589877
+        },
+        {
+          "x": 125,
+          "y": 220.81337428812077
+        },
+        {
+          "x": 130,
+          "y": 217.63139720814414
+        },
+        {
+          "x": 135,
+          "y": 213.63443371601792
+        },
+        {
+          "x": 140,
+          "y": 208.89087296526012
+        },
+        {
+          "x": 145,
+          "y": 203.48187859547966
+        },
+        {
+          "x": 150,
+          "y": 197.5
+        },
+        {
+          "x": 155,
+          "y": 191.04758878007993
+        },
+        {
+          "x": 160,
+          "y": 184.23504748063866
+        },
+        {
+          "x": 165,
+          "y": 177.17894057210285
+        },
+        {
+          "x": 170,
+          "y": 170
+        },
+        {
+          "x": 175,
+          "y": 162.82105942789715
+        },
+        {
+          "x": 180,
+          "y": 155.76495251936137
+        },
+        {
+          "x": 185,
+          "y": 148.95241121992007
+        },
+        {
+          "x": 190,
+          "y": 142.5
+        },
+        {
+          "x": 195,
+          "y": 136.51812140452037
+        },
+        {
+          "x": 200,
+          "y": 131.10912703473988
+        },
+        {
+          "x": 205,
+          "y": 126.36556628398208
+        },
+        {
+          "x": 210,
+          "y": 122.36860279185589
+        },
+        {
+          "x": 215,
+          "y": 119.18662571187924
+        },
+        {
+          "x": 220,
+          "y": 116.87407955410124
+        },
+        {
+          "x": 225,
+          "y": 115.47053262444044
+        },
+        {
+          "x": 230,
+          "y": 115
+        },
+        {
+          "x": 235,
+          "y": 115.47053262444042
+        },
+        {
+          "x": 240,
+          "y": 116.87407955410123
+        },
+        {
+          "x": 245,
+          "y": 119.18662571187923
+        },
+        {
+          "x": 250,
+          "y": 122.36860279185588
+        },
+        {
+          "x": 255,
+          "y": 126.36556628398208
+        },
+        {
+          "x": 260,
+          "y": 131.10912703473988
+        },
+        {
+          "x": 265,
+          "y": 136.51812140452034
+        },
+        {
+          "x": 270,
+          "y": 142.49999999999997
+        },
+        {
+          "x": 275,
+          "y": 148.95241121992004
+        },
+        {
+          "x": 280,
+          "y": 155.76495251936137
+        },
+        {
+          "x": 285,
+          "y": 162.82105942789715
+        },
+        {
+          "x": 290,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0,
+        "cbrAfter": 0,
+        "ctcBefore": 0.16839336001951166,
+        "ctcAfter": 0.23564498636611683,
+        "improvement": null,
+        "bodyHalfWidth": 18.647533769498793,
+        "reason": "CI N/A: baseline CBR <= 1e-6.",
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.0053792586493824675,
+        "cbrAfter": 0.004151182616137117,
+        "ctcBefore": 0.29676485699482685,
+        "ctcAfter": 0.4020039290410888,
+        "improvement": 0.22829837962640678,
+        "bodyHalfWidth": 18.67332358068717,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 1,
+      "bodyRaster": {
+        "value": 1,
+        "originalPixels": 38925,
+        "symmetricDifferencePixels": 0,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-soft",
+      "testId": "T05",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 60,
+          "y": 80
+        },
+        {
+          "x": 270,
+          "y": 80
+        },
+        {
+          "x": 270,
+          "y": 270
+        },
+        {
+          "x": 160,
+          "y": 150
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0,
+        "cbrAfter": 0,
+        "ctcBefore": 0.28451635101969475,
+        "ctcAfter": 0.43370046388463945,
+        "improvement": null,
+        "bodyHalfWidth": 17.619909220841947,
+        "reason": "CI N/A: baseline CBR <= 1e-6.",
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.2211591837180901,
+        "cbrAfter": 0.2212509212023562,
+        "ctcBefore": 1.4864822892298668,
+        "ctcAfter": 1.6629407443018092,
+        "improvement": -0.0004148029610339171,
+        "bodyHalfWidth": 73.53746662880138,
+        "reason": null,
+        "cbrStatus": "FAIL",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 1,
+      "bodyRaster": {
+        "value": 1,
+        "originalPixels": 71135,
+        "symmetricDifferencePixels": 0,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-soft",
+      "testId": "T06",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 150,
+          "y": 170
+        },
+        {
+          "x": 166,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-soft",
+      "testId": "T07",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 150,
+          "y": 170
+        },
+        {
+          "x": 150.8,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-soft",
+      "testId": "T08",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 150,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Dab has no directed start/end cap."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Dab has no directed start/end cap."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-soft",
+      "testId": "T09",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 50,
+          "y": 170
+        },
+        {
+          "x": 290,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Multiple overlapping gestures: no unique centerline/body reference; geometry and native visual comparison required."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Multiple overlapping gestures: no unique centerline/body reference; geometry and native visual comparison required."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Final native Area contours",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-soft",
+      "testId": "T10",
+      "brushDiameter": 60,
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "All three historical Northreach gestures are shorter than 3.2D; no stable adjacent body. Evaluate actual native coastal effect separately."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "All three historical Northreach gestures are shorter than 3.2D; no stable adjacent body. Evaluate actual native coastal effect separately."
+      },
+      "bodyPreservation": null,
+      "geometryValid": true,
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_VISUAL",
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "organicSoft",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "after": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 672,
+            "maxRing": 308
+          },
+          "geometryMs": 12.164600000000064,
+          "changed": true,
+          "beforeReplay": {
+            "changed": true,
+            "geometryValid": true
+          },
+          "afterReplay": {
+            "changed": true,
+            "geometryValid": true
+          }
+        },
+        {
+          "action": "add",
+          "shape": "organicSoft",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 672,
+            "maxRing": 308
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 688,
+            "maxRing": 333
+          },
+          "geometryMs": 12.706699999999955,
+          "changed": true,
+          "beforeReplay": {
+            "changed": true,
+            "geometryValid": true
+          },
+          "afterReplay": {
+            "changed": true,
+            "geometryValid": true
+          }
+        },
+        {
+          "action": "remove",
+          "shape": "organicSoft",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 3,
+          "before": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 688,
+            "maxRing": 333
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 703,
+            "maxRing": 348
+          },
+          "geometryMs": 11.053699999999935,
+          "changed": true,
+          "beforeReplay": {
+            "changed": true,
+            "geometryValid": true
+          },
+          "afterReplay": {
+            "changed": true,
+            "geometryValid": true
+          }
+        }
+      ],
+      "nativeProvenance": "Copied byte-for-byte from prior actual UI downloads; complete macrogeometry replay compared exactly to archived source documents.",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-rugged",
+      "testId": "T01",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 50,
+          "y": 170
+        },
+        {
+          "x": 290,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0.001147486239300477,
+        "cbrAfter": 0.0010946639205393182,
+        "ctcBefore": 0.23597926560923527,
+        "ctcAfter": 0.28011241117493596,
+        "improvement": 0.046033073820005065,
+        "bodyHalfWidth": 16.941204029535612,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.00021626146260871336,
+        "cbrAfter": 0.00021626146260871336,
+        "ctcBefore": 0.17169890844603514,
+        "ctcAfter": 0.27990507036943413,
+        "improvement": 0,
+        "bodyHalfWidth": 17.31205063934911,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 1,
+      "bodyRaster": {
+        "value": 1,
+        "originalPixels": 26363,
+        "symmetricDifferencePixels": 0,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-rugged",
+      "testId": "T02",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 170,
+          "y": 50
+        },
+        {
+          "x": 170,
+          "y": 290
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0,
+        "cbrAfter": 0,
+        "ctcBefore": 0.45552382118239476,
+        "ctcAfter": 0.554025920413357,
+        "improvement": null,
+        "bodyHalfWidth": 16.805868101260856,
+        "reason": "CI N/A: baseline CBR <= 1e-6.",
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.018924775610362942,
+        "cbrAfter": 0.01798299460112922,
+        "ctcBefore": 0.46387057397815995,
+        "ctcAfter": 0.5988072701503476,
+        "improvement": 0.04976444786579211,
+        "bodyHalfWidth": 18.330071012194836,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 0.999963678628505,
+      "bodyRaster": {
+        "value": 0.999963678628505,
+        "originalPixels": 27532,
+        "symmetricDifferencePixels": 1,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-rugged",
+      "testId": "T03",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 70,
+          "y": 70
+        },
+        {
+          "x": 240,
+          "y": 240
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0,
+        "cbrAfter": 0,
+        "ctcBefore": 0.1422035472596753,
+        "ctcAfter": 0.2154072260805997,
+        "improvement": null,
+        "bodyHalfWidth": 18.212298929063707,
+        "reason": "CI N/A: baseline CBR <= 1e-6.",
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.007066948470441936,
+        "cbrAfter": 0.004894906048161474,
+        "ctcBefore": 0.3041241222666953,
+        "ctcAfter": 0.3511904251108328,
+        "improvement": 0.30735223715939053,
+        "bodyHalfWidth": 18.38022563300276,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 1,
+      "bodyRaster": {
+        "value": 1,
+        "originalPixels": 28561,
+        "symmetricDifferencePixels": 0,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-rugged",
+      "testId": "T04",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 50,
+          "y": 170
+        },
+        {
+          "x": 55,
+          "y": 177.17894057210285
+        },
+        {
+          "x": 60,
+          "y": 184.23504748063863
+        },
+        {
+          "x": 65,
+          "y": 191.04758878007993
+        },
+        {
+          "x": 70,
+          "y": 197.5
+        },
+        {
+          "x": 75,
+          "y": 203.48187859547963
+        },
+        {
+          "x": 80,
+          "y": 208.89087296526012
+        },
+        {
+          "x": 85,
+          "y": 213.63443371601792
+        },
+        {
+          "x": 90,
+          "y": 217.6313972081441
+        },
+        {
+          "x": 95,
+          "y": 220.81337428812077
+        },
+        {
+          "x": 100,
+          "y": 223.12592044589877
+        },
+        {
+          "x": 105,
+          "y": 224.52946737555956
+        },
+        {
+          "x": 110,
+          "y": 225
+        },
+        {
+          "x": 115,
+          "y": 224.5294673755596
+        },
+        {
+          "x": 120,
+          "y": 223.12592044589877
+        },
+        {
+          "x": 125,
+          "y": 220.81337428812077
+        },
+        {
+          "x": 130,
+          "y": 217.63139720814414
+        },
+        {
+          "x": 135,
+          "y": 213.63443371601792
+        },
+        {
+          "x": 140,
+          "y": 208.89087296526012
+        },
+        {
+          "x": 145,
+          "y": 203.48187859547966
+        },
+        {
+          "x": 150,
+          "y": 197.5
+        },
+        {
+          "x": 155,
+          "y": 191.04758878007993
+        },
+        {
+          "x": 160,
+          "y": 184.23504748063866
+        },
+        {
+          "x": 165,
+          "y": 177.17894057210285
+        },
+        {
+          "x": 170,
+          "y": 170
+        },
+        {
+          "x": 175,
+          "y": 162.82105942789715
+        },
+        {
+          "x": 180,
+          "y": 155.76495251936137
+        },
+        {
+          "x": 185,
+          "y": 148.95241121992007
+        },
+        {
+          "x": 190,
+          "y": 142.5
+        },
+        {
+          "x": 195,
+          "y": 136.51812140452037
+        },
+        {
+          "x": 200,
+          "y": 131.10912703473988
+        },
+        {
+          "x": 205,
+          "y": 126.36556628398208
+        },
+        {
+          "x": 210,
+          "y": 122.36860279185589
+        },
+        {
+          "x": 215,
+          "y": 119.18662571187924
+        },
+        {
+          "x": 220,
+          "y": 116.87407955410124
+        },
+        {
+          "x": 225,
+          "y": 115.47053262444044
+        },
+        {
+          "x": 230,
+          "y": 115
+        },
+        {
+          "x": 235,
+          "y": 115.47053262444042
+        },
+        {
+          "x": 240,
+          "y": 116.87407955410123
+        },
+        {
+          "x": 245,
+          "y": 119.18662571187923
+        },
+        {
+          "x": 250,
+          "y": 122.36860279185588
+        },
+        {
+          "x": 255,
+          "y": 126.36556628398208
+        },
+        {
+          "x": 260,
+          "y": 131.10912703473988
+        },
+        {
+          "x": 265,
+          "y": 136.51812140452034
+        },
+        {
+          "x": 270,
+          "y": 142.49999999999997
+        },
+        {
+          "x": 275,
+          "y": 148.95241121992004
+        },
+        {
+          "x": 280,
+          "y": 155.76495251936137
+        },
+        {
+          "x": 285,
+          "y": 162.82105942789715
+        },
+        {
+          "x": 290,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0.018554568429791373,
+        "cbrAfter": 0.015742798085762733,
+        "ctcBefore": 0.21793866046905222,
+        "ctcAfter": 0.18929970533226834,
+        "improvement": 0.15154059522688967,
+        "bodyHalfWidth": 18.270212424832287,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0,
+        "cbrAfter": 0,
+        "ctcBefore": 0.2720011909284991,
+        "ctcAfter": 0.428989981871848,
+        "improvement": null,
+        "bodyHalfWidth": 18.56077587236583,
+        "reason": "CI N/A: baseline CBR <= 1e-6.",
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 1,
+      "bodyRaster": {
+        "value": 1,
+        "originalPixels": 39621,
+        "symmetricDifferencePixels": 0,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-rugged",
+      "testId": "T05",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 60,
+          "y": 80
+        },
+        {
+          "x": 270,
+          "y": 80
+        },
+        {
+          "x": 270,
+          "y": 270
+        },
+        {
+          "x": 160,
+          "y": 150
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0,
+        "cbrAfter": 0,
+        "ctcBefore": 0.3117648957816286,
+        "ctcAfter": 0.4331712985327222,
+        "improvement": null,
+        "bodyHalfWidth": 18.07663867675212,
+        "reason": "CI N/A: baseline CBR <= 1e-6.",
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.20183852801490723,
+        "cbrAfter": 0.20180139344387804,
+        "ctcBefore": 1.31453873427503,
+        "ctcAfter": 1.7472290992991415,
+        "improvement": 0.0001839815787125029,
+        "bodyHalfWidth": 74.43387160029894,
+        "reason": null,
+        "cbrStatus": "FAIL",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 0.9999446021743646,
+      "bodyRaster": {
+        "value": 0.9999446021743646,
+        "originalPixels": 72205,
+        "symmetricDifferencePixels": 4,
+        "pixelSize": 0.5
+      },
+      "geometryValid": false,
+      "geometryErrors": [
+        "before: This coast exceeds safe geometry limits. Use shorter strokes or a smoother shape.",
+        "after: This coast exceeds safe geometry limits. Use shorter strokes or a smoother shape."
+      ],
+      "nativeExportVerified": false,
+      "decision": "REJECT",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Atlas was exported, but T05 is intentionally empty: operation rejected both before and after; raw masks are diagnostic evidence only."
+    },
+    {
+      "brush": "organic-rugged",
+      "testId": "T06",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 150,
+          "y": 170
+        },
+        {
+          "x": 166,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-rugged",
+      "testId": "T07",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 150,
+          "y": 170
+        },
+        {
+          "x": 150.8,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-rugged",
+      "testId": "T08",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 150,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Dab has no directed start/end cap."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Dab has no directed start/end cap."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-rugged",
+      "testId": "T09",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 50,
+          "y": 170
+        },
+        {
+          "x": 290,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Multiple overlapping gestures: no unique centerline/body reference; geometry and native visual comparison required."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Multiple overlapping gestures: no unique centerline/body reference; geometry and native visual comparison required."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Final native Area contours",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-rugged",
+      "testId": "T10",
+      "brushDiameter": 60,
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "All three historical Northreach gestures are shorter than 3.2D; no stable adjacent body. Evaluate actual native coastal effect separately."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "All three historical Northreach gestures are shorter than 3.2D; no stable adjacent body. Evaluate actual native coastal effect separately."
+      },
+      "bodyPreservation": null,
+      "geometryValid": true,
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_VISUAL",
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "organicRugged",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "after": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 683,
+            "maxRing": 319
+          },
+          "geometryMs": 11.833100000000286,
+          "changed": true,
+          "beforeReplay": {
+            "changed": true,
+            "geometryValid": true
+          },
+          "afterReplay": {
+            "changed": true,
+            "geometryValid": true
+          }
+        },
+        {
+          "action": "add",
+          "shape": "organicRugged",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 683,
+            "maxRing": 319
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 703,
+            "maxRing": 348
+          },
+          "geometryMs": 20.41939999999977,
+          "changed": true,
+          "beforeReplay": {
+            "changed": true,
+            "geometryValid": true
+          },
+          "afterReplay": {
+            "changed": true,
+            "geometryValid": true
+          }
+        },
+        {
+          "action": "remove",
+          "shape": "organicRugged",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 3,
+          "before": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 703,
+            "maxRing": 348
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 720,
+            "maxRing": 365
+          },
+          "geometryMs": 15.692800000000261,
+          "changed": true,
+          "beforeReplay": {
+            "changed": true,
+            "geometryValid": true
+          },
+          "afterReplay": {
+            "changed": true,
+            "geometryValid": true
+          }
+        }
+      ],
+      "nativeProvenance": "Copied byte-for-byte from prior actual UI downloads; complete macrogeometry replay compared exactly to archived source documents.",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-fine",
+      "testId": "T01",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 50,
+          "y": 170
+        },
+        {
+          "x": 290,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0.0037668969691807773,
+        "cbrAfter": 0.0025457450107321477,
+        "ctcBefore": 0.28201978662001465,
+        "ctcAfter": 0.4683767384232468,
+        "improvement": 0.32417981389976935,
+        "bodyHalfWidth": 17.732518709579693,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.0058275395745432945,
+        "cbrAfter": 0.004718664766311775,
+        "ctcBefore": 0.25827181527203746,
+        "ctcAfter": 0.2894110871199409,
+        "improvement": 0.1902818151721298,
+        "bodyHalfWidth": 17.69769474206815,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 0.9999631703005304,
+      "bodyRaster": {
+        "value": 0.9999631703005304,
+        "originalPixels": 27152,
+        "symmetricDifferencePixels": 1,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-fine",
+      "testId": "T02",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 170,
+          "y": 50
+        },
+        {
+          "x": 170,
+          "y": 290
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0.003963990576298926,
+        "cbrAfter": 0.0034785113168144476,
+        "ctcBefore": 0.2373797454056728,
+        "ctcAfter": 0.31428392607896144,
+        "improvement": 0.12247235459821841,
+        "bodyHalfWidth": 17.881101348841284,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0,
+        "cbrAfter": 0,
+        "ctcBefore": 0.22421814650944114,
+        "ctcAfter": 0.2485540780693384,
+        "improvement": null,
+        "bodyHalfWidth": 17.997983272428016,
+        "reason": "CI N/A: baseline CBR <= 1e-6.",
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 0.9999636376859024,
+      "bodyRaster": {
+        "value": 0.9999636376859024,
+        "originalPixels": 27501,
+        "symmetricDifferencePixels": 1,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-fine",
+      "testId": "T03",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 70,
+          "y": 70
+        },
+        {
+          "x": 240,
+          "y": 240
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0.003934380562723128,
+        "cbrAfter": 0.002657268215202713,
+        "ctcBefore": 0.12838750861724263,
+        "ctcAfter": 0.2286178748109383,
+        "improvement": 0.3246031559886721,
+        "bodyHalfWidth": 16.76731726662006,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.008700764084002267,
+        "cbrAfter": 0.007109398936121636,
+        "ctcBefore": 0.3986180534468654,
+        "ctcAfter": 0.5624860503914519,
+        "improvement": 0.1828994709564195,
+        "bodyHalfWidth": 17.238011688291095,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 0.9999617824657953,
+      "bodyRaster": {
+        "value": 0.9999617824657953,
+        "originalPixels": 26166,
+        "symmetricDifferencePixels": 1,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-fine",
+      "testId": "T04",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 50,
+          "y": 170
+        },
+        {
+          "x": 55,
+          "y": 177.17894057210285
+        },
+        {
+          "x": 60,
+          "y": 184.23504748063863
+        },
+        {
+          "x": 65,
+          "y": 191.04758878007993
+        },
+        {
+          "x": 70,
+          "y": 197.5
+        },
+        {
+          "x": 75,
+          "y": 203.48187859547963
+        },
+        {
+          "x": 80,
+          "y": 208.89087296526012
+        },
+        {
+          "x": 85,
+          "y": 213.63443371601792
+        },
+        {
+          "x": 90,
+          "y": 217.6313972081441
+        },
+        {
+          "x": 95,
+          "y": 220.81337428812077
+        },
+        {
+          "x": 100,
+          "y": 223.12592044589877
+        },
+        {
+          "x": 105,
+          "y": 224.52946737555956
+        },
+        {
+          "x": 110,
+          "y": 225
+        },
+        {
+          "x": 115,
+          "y": 224.5294673755596
+        },
+        {
+          "x": 120,
+          "y": 223.12592044589877
+        },
+        {
+          "x": 125,
+          "y": 220.81337428812077
+        },
+        {
+          "x": 130,
+          "y": 217.63139720814414
+        },
+        {
+          "x": 135,
+          "y": 213.63443371601792
+        },
+        {
+          "x": 140,
+          "y": 208.89087296526012
+        },
+        {
+          "x": 145,
+          "y": 203.48187859547966
+        },
+        {
+          "x": 150,
+          "y": 197.5
+        },
+        {
+          "x": 155,
+          "y": 191.04758878007993
+        },
+        {
+          "x": 160,
+          "y": 184.23504748063866
+        },
+        {
+          "x": 165,
+          "y": 177.17894057210285
+        },
+        {
+          "x": 170,
+          "y": 170
+        },
+        {
+          "x": 175,
+          "y": 162.82105942789715
+        },
+        {
+          "x": 180,
+          "y": 155.76495251936137
+        },
+        {
+          "x": 185,
+          "y": 148.95241121992007
+        },
+        {
+          "x": 190,
+          "y": 142.5
+        },
+        {
+          "x": 195,
+          "y": 136.51812140452037
+        },
+        {
+          "x": 200,
+          "y": 131.10912703473988
+        },
+        {
+          "x": 205,
+          "y": 126.36556628398208
+        },
+        {
+          "x": 210,
+          "y": 122.36860279185589
+        },
+        {
+          "x": 215,
+          "y": 119.18662571187924
+        },
+        {
+          "x": 220,
+          "y": 116.87407955410124
+        },
+        {
+          "x": 225,
+          "y": 115.47053262444044
+        },
+        {
+          "x": 230,
+          "y": 115
+        },
+        {
+          "x": 235,
+          "y": 115.47053262444042
+        },
+        {
+          "x": 240,
+          "y": 116.87407955410123
+        },
+        {
+          "x": 245,
+          "y": 119.18662571187923
+        },
+        {
+          "x": 250,
+          "y": 122.36860279185588
+        },
+        {
+          "x": 255,
+          "y": 126.36556628398208
+        },
+        {
+          "x": 260,
+          "y": 131.10912703473988
+        },
+        {
+          "x": 265,
+          "y": 136.51812140452034
+        },
+        {
+          "x": 270,
+          "y": 142.49999999999997
+        },
+        {
+          "x": 275,
+          "y": 148.95241121992004
+        },
+        {
+          "x": 280,
+          "y": 155.76495251936137
+        },
+        {
+          "x": 285,
+          "y": 162.82105942789715
+        },
+        {
+          "x": 290,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0,
+        "cbrAfter": 0,
+        "ctcBefore": 0.15327256385057755,
+        "ctcAfter": 0.26965905146000335,
+        "improvement": null,
+        "bodyHalfWidth": 16.910492378597404,
+        "reason": "CI N/A: baseline CBR <= 1e-6.",
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.01514450808962824,
+        "cbrAfter": 0.011905058054451346,
+        "ctcBefore": 0.22567615967282326,
+        "ctcAfter": 0.352849082582967,
+        "improvement": 0.21390262503114515,
+        "bodyHalfWidth": 17.597118900979446,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 0.9999759592268488,
+      "bodyRaster": {
+        "value": 0.9999759592268488,
+        "originalPixels": 41596,
+        "symmetricDifferencePixels": 1,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-fine",
+      "testId": "T05",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 60,
+          "y": 80
+        },
+        {
+          "x": 270,
+          "y": 80
+        },
+        {
+          "x": 270,
+          "y": 270
+        },
+        {
+          "x": 160,
+          "y": 150
+        }
+      ],
+      "capStart": {
+        "cbrBefore": 0.005305043682653565,
+        "cbrAfter": 0.00533191116455578,
+        "ctcBefore": 0.2344504817693867,
+        "ctcAfter": 0.3992335925394318,
+        "improvement": -0.0050645166202997255,
+        "bodyHalfWidth": 17.825613521606208,
+        "reason": null,
+        "cbrStatus": "PASS",
+        "ctcStatus": "FAIL"
+      },
+      "capEnd": {
+        "cbrBefore": 0.19879804461637285,
+        "cbrAfter": 0.19879804461637285,
+        "ctcBefore": 1.5249237810461818,
+        "ctcAfter": 1.8714520331001363,
+        "improvement": 0,
+        "bodyHalfWidth": 73.29517745791166,
+        "reason": null,
+        "cbrStatus": "FAIL",
+        "ctcStatus": "FAIL"
+      },
+      "bodyPreservation": 0.9999859643213047,
+      "bodyRaster": {
+        "value": 0.9999859643213047,
+        "originalPixels": 71247,
+        "symmetricDifferencePixels": 1,
+        "pixelSize": 0.5
+      },
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_METRICS",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-fine",
+      "testId": "T06",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 150,
+          "y": 170
+        },
+        {
+          "x": 166,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-fine",
+      "testId": "T07",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 150,
+          "y": 170
+        },
+        {
+          "x": 150.8,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "No non-overlapping adjacent stable body window (requires length >= 3.2D)."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-fine",
+      "testId": "T08",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 150,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Dab has no directed start/end cap."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Dab has no directed start/end cap."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Clipped raw stroke union before simplification",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-fine",
+      "testId": "T09",
+      "brushDiameter": 40,
+      "seed": 713,
+      "points": [
+        {
+          "x": 50,
+          "y": 170
+        },
+        {
+          "x": 290,
+          "y": 170
+        }
+      ],
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Multiple overlapping gestures: no unique centerline/body reference; geometry and native visual comparison required."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "Multiple overlapping gestures: no unique centerline/body reference; geometry and native visual comparison required."
+      },
+      "bodyPreservation": null,
+      "bodyRaster": null,
+      "geometryValid": true,
+      "geometryErrors": [],
+      "nativeExportVerified": true,
+      "decision": "INTERNAL_VISUAL_REVIEW_ONLY",
+      "measurementGeometry": "Final native Area contours",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    },
+    {
+      "brush": "organic-fine",
+      "testId": "T10",
+      "brushDiameter": 60,
+      "capStart": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "All three historical Northreach gestures are shorter than 3.2D; no stable adjacent body. Evaluate actual native coastal effect separately."
+      },
+      "capEnd": {
+        "cbrBefore": null,
+        "cbrAfter": null,
+        "ctcAfter": null,
+        "improvement": null,
+        "reason": "All three historical Northreach gestures are shorter than 3.2D; no stable adjacent body. Evaluate actual native coastal effect separately."
+      },
+      "bodyPreservation": null,
+      "geometryValid": true,
+      "nativeExportVerified": true,
+      "decision": "NOT_ACCEPTED_VISUAL",
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "organicFine",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "after": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 681,
+            "maxRing": 317
+          },
+          "geometryMs": 14.186400000000049,
+          "changed": true,
+          "beforeReplay": {
+            "changed": true,
+            "geometryValid": true
+          },
+          "afterReplay": {
+            "changed": true,
+            "geometryValid": true
+          }
+        },
+        {
+          "action": "add",
+          "shape": "organicFine",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 681,
+            "maxRing": 317
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 700,
+            "maxRing": 345
+          },
+          "geometryMs": 19.618600000000242,
+          "changed": true,
+          "beforeReplay": {
+            "changed": true,
+            "geometryValid": true
+          },
+          "afterReplay": {
+            "changed": true,
+            "geometryValid": true
+          }
+        },
+        {
+          "action": "remove",
+          "shape": "organicFine",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 3,
+          "before": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 700,
+            "maxRing": 345
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 719,
+            "maxRing": 364
+          },
+          "geometryMs": 15.476599999999962,
+          "changed": true,
+          "beforeReplay": {
+            "changed": true,
+            "geometryValid": true
+          },
+          "afterReplay": {
+            "changed": true,
+            "geometryValid": true
+          }
+        }
+      ],
+      "nativeProvenance": "Copied byte-for-byte from prior actual UI downloads; complete macrogeometry replay compared exactly to archived source documents.",
+      "nativeAtlasVerified": true,
+      "nativeAtlasNote": "Actual UI download equals native/archive/database render."
+    }
+  ],
+  "roundNativeSha256": "5e74bf60c8f1dc554dd409bac941ed8fb1c4d3d7487fc8f2483d60b6a626ed19",
+  "measurement": {
+    "diameter": 40,
+    "crossSectionStepMapPixels": 1,
+    "capArcIntervalD": [
+      -0.5,
+      0.8
+    ],
+    "bodyReferenceArcIntervalD": [
+      0.8,
+      1.6
+    ],
+    "bodyExclusionD": 0.6,
+    "minimumStableLengthD": 3.2,
+    "rasterPixelSizeMapPixels": 0.5,
+    "alphaThreshold": 128,
+    "ciNegligibleCbr": 0.000001,
+    "ringTolerance": "Existing native normalizeGeometry/validateArea; no altered tolerances",
+    "crossSectionWidth": "Full span between extreme line/ring intersections, including disconnected intervals. Large T05 end values may include another branch; these are diagnostic, not calibrated local cap scores.",
+    "calibration": "NOT CALIBRATED. CBR misses longitudinal tip excess. CTC includes the outer-tip interval and can be dominated by the first silhouette intersection; no automated premium verdict."
+  },
+  "summary": {
+    "cases": 30,
+    "validCases": 29,
+    "rejectedCases": [
+      {
+        "brush": "organic-rugged",
+        "testId": "T05",
+        "errors": [
+          "before: This coast exceeds safe geometry limits. Use shorter strokes or a smoother shape.",
+          "after: This coast exceeds safe geometry limits. Use shorter strokes or a smoother shape."
+        ]
+      }
+    ],
+    "measuredCaps": 30,
+    "tests": {
+      "passed": 115,
+      "failed": 0,
+      "unloadedSuites": 0,
+      "suites": 15
+    },
+    "independentArtisticAcceptance": false,
+    "productCodeChanged": false
+  }
+}
