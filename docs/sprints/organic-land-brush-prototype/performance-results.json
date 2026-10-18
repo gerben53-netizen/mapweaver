@@ -1,0 +1,789 @@
+{
+  "status": "Five native UI downloads verified against archive and isolated database renders",
+  "baseArchiveSha256": "06a0cad4010647f75f278d9c7adf35f291b34f95796b3c9923574eca0d20c1f9",
+  "geometryContext": "Node.js Vite SSR, one cold run per variant in listed order; rendering is measured separately in the real browser. Includes validation/boolean processing, not a human drawing latency benchmark.",
+  "matchedVariants": 4,
+  "extraSmoothing": false,
+  "records": [
+    {
+      "variant": "round",
+      "baseGeometryHash": "9468d385abb9c0ff7147486ea2a176413d6ab53de9a886a29efa7f48d1c5667d",
+      "start": {
+        "areas": 37,
+        "polygons": 37,
+        "nodes": 674,
+        "maxRing": 310
+      },
+      "end": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 713,
+        "maxRing": 358
+      },
+      "newNodes": 39,
+      "rejected": 0,
+      "invalid": 0,
+      "geometryMs": 65.55370000000039,
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "round",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "after": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 677,
+            "maxRing": 313
+          },
+          "geometryMs": 34.2800000000002,
+          "changed": true
+        },
+        {
+          "action": "add",
+          "shape": "round",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 677,
+            "maxRing": 313
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 691,
+            "maxRing": 336
+          },
+          "geometryMs": 17.396200000000135,
+          "changed": true
+        },
+        {
+          "action": "remove",
+          "shape": "round",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 3,
+          "before": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 691,
+            "maxRing": 336
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 713,
+            "maxRing": 358
+          },
+          "geometryMs": 13.877500000000055,
+          "changed": true
+        }
+      ],
+      "native": {
+        "variant": "round",
+        "mapId": "fa37fe60-b2ef-447b-80e2-c752ae43e0e9",
+        "exportMs": 77.80000001192093,
+        "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+        "png": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+        "archive": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+        "database": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+        "pngExact": true,
+        "objectsExact": true,
+        "assets": 0
+      },
+      "uiDownloadSha256": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+      "uiDownloadExact": true,
+      "drawingLatencyMs": null,
+      "drawingLatencyNote": "No instrumented pointer-to-pixel latency measurement; real worker gesture verified separately. Geometry timings exclude pointer delivery."
+    },
+    {
+      "variant": "organic-soft",
+      "baseGeometryHash": "9468d385abb9c0ff7147486ea2a176413d6ab53de9a886a29efa7f48d1c5667d",
+      "start": {
+        "areas": 37,
+        "polygons": 37,
+        "nodes": 674,
+        "maxRing": 310
+      },
+      "end": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 696,
+        "maxRing": 341
+      },
+      "newNodes": 22,
+      "rejected": 0,
+      "invalid": 0,
+      "geometryMs": 36.88129999999978,
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "organicSoft",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "after": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "geometryMs": 12.357299999999896,
+          "changed": true
+        },
+        {
+          "action": "add",
+          "shape": "organicSoft",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 682,
+            "maxRing": 327
+          },
+          "geometryMs": 13.661699999999882,
+          "changed": true
+        },
+        {
+          "action": "remove",
+          "shape": "organicSoft",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 3,
+          "before": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 682,
+            "maxRing": 327
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 696,
+            "maxRing": 341
+          },
+          "geometryMs": 10.862300000000005,
+          "changed": true
+        }
+      ],
+      "native": {
+        "variant": "organic-soft",
+        "mapId": "858745c8-4790-45b0-9d36-377241805697",
+        "exportMs": 43.80000001192093,
+        "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+        "png": "c7490989df3ca6540738a635ee54a40ab517bad2ab249cea57e89346a0a535eb",
+        "archive": "c7490989df3ca6540738a635ee54a40ab517bad2ab249cea57e89346a0a535eb",
+        "database": "c7490989df3ca6540738a635ee54a40ab517bad2ab249cea57e89346a0a535eb",
+        "pngExact": true,
+        "objectsExact": true,
+        "assets": 0
+      },
+      "uiDownloadSha256": "c7490989df3ca6540738a635ee54a40ab517bad2ab249cea57e89346a0a535eb",
+      "uiDownloadExact": true,
+      "drawingLatencyMs": null,
+      "drawingLatencyNote": "No instrumented pointer-to-pixel latency measurement; real worker gesture verified separately. Geometry timings exclude pointer delivery."
+    },
+    {
+      "variant": "organic-rugged",
+      "baseGeometryHash": "9468d385abb9c0ff7147486ea2a176413d6ab53de9a886a29efa7f48d1c5667d",
+      "start": {
+        "areas": 37,
+        "polygons": 37,
+        "nodes": 674,
+        "maxRing": 310
+      },
+      "end": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 717,
+        "maxRing": 362
+      },
+      "newNodes": 43,
+      "rejected": 0,
+      "invalid": 0,
+      "geometryMs": 40.29939999999965,
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "organicRugged",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "after": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 678,
+            "maxRing": 314
+          },
+          "geometryMs": 10.821099999999888,
+          "changed": true
+        },
+        {
+          "action": "add",
+          "shape": "organicRugged",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 678,
+            "maxRing": 314
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 697,
+            "maxRing": 342
+          },
+          "geometryMs": 16.111699999999928,
+          "changed": true
+        },
+        {
+          "action": "remove",
+          "shape": "organicRugged",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 3,
+          "before": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 697,
+            "maxRing": 342
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 717,
+            "maxRing": 362
+          },
+          "geometryMs": 13.366599999999835,
+          "changed": true
+        }
+      ],
+      "native": {
+        "variant": "organic-rugged",
+        "mapId": "1c0128ea-936e-457f-88c1-dbe7e053b93c",
+        "exportMs": 55.099999994039536,
+        "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+        "png": "f0702221aa3bb3df8f066e31323dbb2b5883498fe7a0f816371b9ae9413d1628",
+        "archive": "f0702221aa3bb3df8f066e31323dbb2b5883498fe7a0f816371b9ae9413d1628",
+        "database": "f0702221aa3bb3df8f066e31323dbb2b5883498fe7a0f816371b9ae9413d1628",
+        "pngExact": true,
+        "objectsExact": true,
+        "assets": 0
+      },
+      "uiDownloadSha256": "f0702221aa3bb3df8f066e31323dbb2b5883498fe7a0f816371b9ae9413d1628",
+      "uiDownloadExact": true,
+      "drawingLatencyMs": null,
+      "drawingLatencyNote": "No instrumented pointer-to-pixel latency measurement; real worker gesture verified separately. Geometry timings exclude pointer delivery."
+    },
+    {
+      "variant": "organic-fine",
+      "baseGeometryHash": "9468d385abb9c0ff7147486ea2a176413d6ab53de9a886a29efa7f48d1c5667d",
+      "start": {
+        "areas": 37,
+        "polygons": 37,
+        "nodes": 674,
+        "maxRing": 310
+      },
+      "end": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 697,
+        "maxRing": 342
+      },
+      "newNodes": 23,
+      "rejected": 0,
+      "invalid": 0,
+      "geometryMs": 41.21759999999995,
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "organicFine",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "after": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 672,
+            "maxRing": 308
+          },
+          "geometryMs": 13.123399999999947,
+          "changed": true
+        },
+        {
+          "action": "add",
+          "shape": "organicFine",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 6,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 672,
+            "maxRing": 308
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 680,
+            "maxRing": 325
+          },
+          "geometryMs": 15.532600000000002,
+          "changed": true
+        },
+        {
+          "action": "remove",
+          "shape": "organicFine",
+          "size": 60,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 3,
+          "before": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 680,
+            "maxRing": 325
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 697,
+            "maxRing": 342
+          },
+          "geometryMs": 12.561599999999999,
+          "changed": true
+        }
+      ],
+      "native": {
+        "variant": "organic-fine",
+        "mapId": "b35f001b-053c-4bf9-a65f-5297ff3c9428",
+        "exportMs": 53.20000000298023,
+        "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+        "png": "df58f42d026bf2a2800eaaf1512f91c1747cf102f265192ffb0c81cb60cb5ba8",
+        "archive": "df58f42d026bf2a2800eaaf1512f91c1747cf102f265192ffb0c81cb60cb5ba8",
+        "database": "df58f42d026bf2a2800eaaf1512f91c1747cf102f265192ffb0c81cb60cb5ba8",
+        "pngExact": true,
+        "objectsExact": true,
+        "assets": 0
+      },
+      "uiDownloadSha256": "df58f42d026bf2a2800eaaf1512f91c1747cf102f265192ffb0c81cb60cb5ba8",
+      "uiDownloadExact": true,
+      "drawingLatencyMs": null,
+      "drawingLatencyNote": "No instrumented pointer-to-pixel latency measurement; real worker gesture verified separately. Geometry timings exclude pointer delivery."
+    },
+    {
+      "variant": "combined",
+      "baseGeometryHash": "9468d385abb9c0ff7147486ea2a176413d6ab53de9a886a29efa7f48d1c5667d",
+      "start": {
+        "areas": 37,
+        "polygons": 37,
+        "nodes": 674,
+        "maxRing": 310
+      },
+      "end": {
+        "areas": 36,
+        "polygons": 36,
+        "nodes": 710,
+        "maxRing": 355
+      },
+      "newNodes": 36,
+      "rejected": 0,
+      "invalid": 0,
+      "geometryMs": 45.076099999999315,
+      "operations": [
+        {
+          "action": "remove",
+          "shape": "organicSoft",
+          "size": 85,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 713,
+          "points": [
+            {
+              "x": 720,
+              "y": 895
+            },
+            {
+              "x": 735,
+              "y": 895
+            },
+            {
+              "x": 750,
+              "y": 900
+            }
+          ],
+          "mapSampling": 5,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 674,
+            "maxRing": 310
+          },
+          "after": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 671,
+            "maxRing": 307
+          },
+          "geometryMs": 9.2195999999999,
+          "changed": true
+        },
+        {
+          "action": "add",
+          "shape": "organicRugged",
+          "size": 45,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 714,
+          "points": [
+            {
+              "x": 747.5,
+              "y": 1022.5
+            },
+            {
+              "x": 755,
+              "y": 1005
+            },
+            {
+              "x": 762.5,
+              "y": 997.5
+            }
+          ],
+          "mapSampling": 7,
+          "before": {
+            "areas": 37,
+            "polygons": 37,
+            "nodes": 671,
+            "maxRing": 307
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 697,
+            "maxRing": 342
+          },
+          "geometryMs": 12.30749999999989,
+          "changed": true
+        },
+        {
+          "action": "remove",
+          "shape": "organicFine",
+          "size": 24,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 715,
+          "points": [
+            {
+              "x": 667.5,
+              "y": 1097.5
+            },
+            {
+              "x": 677.5,
+              "y": 1095
+            }
+          ],
+          "mapSampling": 5,
+          "before": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 697,
+            "maxRing": 342
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 703,
+            "maxRing": 348
+          },
+          "geometryMs": 10.73319999999967,
+          "changed": true
+        },
+        {
+          "action": "remove",
+          "shape": "organicFine",
+          "size": 24,
+          "softness": 0,
+          "irregularity": 0.65,
+          "smoothing": "off",
+          "seed": 716,
+          "points": [
+            {
+              "x": 782.5,
+              "y": 897.5
+            },
+            {
+              "x": 795,
+              "y": 905
+            }
+          ],
+          "mapSampling": 7,
+          "before": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 703,
+            "maxRing": 348
+          },
+          "after": {
+            "areas": 36,
+            "polygons": 36,
+            "nodes": 710,
+            "maxRing": 355
+          },
+          "geometryMs": 12.815799999999854,
+          "changed": true
+        }
+      ],
+      "native": {
+        "variant": "combined",
+        "mapId": "ed4e6571-7b13-49a3-9b5b-95bf1aa5c34b",
+        "exportMs": 60.79999999701977,
+        "exportTiming": "Repeated native exportPng verification after real pointer Add, undo, redo, final undo and Save; includes rendering/encoding/cache policy. Original UI download is independently hash-checked.",
+        "png": "6c31ee395cf939d4f33c461a9b20cfcf782ab169a30f9931c7bdb5ce933a4852",
+        "archive": "6c31ee395cf939d4f33c461a9b20cfcf782ab169a30f9931c7bdb5ce933a4852",
+        "database": "6c31ee395cf939d4f33c461a9b20cfcf782ab169a30f9931c7bdb5ce933a4852",
+        "pngExact": true,
+        "objectsExact": true,
+        "assets": 0
+      },
+      "uiDownloadSha256": "6c31ee395cf939d4f33c461a9b20cfcf782ab169a30f9931c7bdb5ce933a4852",
+      "uiDownloadExact": true,
+      "drawingLatencyMs": null,
+      "drawingLatencyNote": "No instrumented pointer-to-pixel latency measurement; real worker gesture verified separately. Geometry timings exclude pointer delivery."
+    }
+  ],
+  "detailCrop": {
+    "left": 550,
+    "top": 800,
+    "width": 400,
+    "height": 430
+  }
+}

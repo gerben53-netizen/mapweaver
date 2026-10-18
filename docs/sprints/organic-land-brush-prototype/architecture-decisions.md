@@ -1,0 +1,10 @@
+# Prototype architecture decisions
+
+1. **Extend the existing footprint boundary.** Three discriminated shape values delegate from `landFootprint`; existing Round/legacy branches remain unchanged. No second boolean engine or persistent brush object.
+2. **Positive periodic radial field.** 72 ordered angles and strictly positive radii yield a simple closed contour. Frequencies and phase drift are profile-specific. Maximum radius is normalized to the chosen diameter, with the existing softness contraction supported internally. The fixed budget is local to the footprint, not a new global geometry limit.
+3. **Spatially continuous variation.** Phase depends on world position and seed, not time, event number or dab number. Orientation is fixed within a gesture; path turns do not flip the footprint. Existing distance-based resampling supplies coverage. Seed advances after completed organic strokes; cancellation preserves it. Recipes remain session state, while native Areas persist the actual result.
+4. **Simple defaults.** Selecting a new organic shape sets softness 0, irregularity .65 and smoothing off, preserving current diameter and action. Soft/Rugged presets use 180 logical pixels, Fine uses 60. No advanced controls are needed for the prototype Add/Remove workflow. Round selection does not reset its controls.
+5. **Preserve precision semantics.** Local Contour Precision protects marked vertices only for its supported operations. Boolean Add/Remove retains its existing behavior; this sprint does not promise landmark preservation across topology changes.
+6. **Evidence separated from implementation.** Controlled fixtures replay exactly equal paths through existing domain functions; real editor UI performs all five final PNG downloads. Archive/database render parity is independently recorded. A separate real worker gesture checks UI integration. These are different kinds of proof and are labelled accordingly.
+
+No irreversible data-model decision, new dependency, format version or Campfire artifact is introduced. This is a prototype decision record; production promotion requires a later explicit visual acceptance.

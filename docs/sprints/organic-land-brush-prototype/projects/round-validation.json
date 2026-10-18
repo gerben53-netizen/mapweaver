@@ -1,0 +1,12 @@
+{
+  "variant": "round",
+  "mapId": "fa37fe60-b2ef-447b-80e2-c752ae43e0e9",
+  "exportMs": 77.80000001192093,
+  "exportTiming": "First native exportPng call after import; includes rendering/encoding and native cache policy. UI download is checked independently.",
+  "png": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+  "archive": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+  "database": "57d99d383144c3d1b15675d7161d08fdddaef8c6e012f3a6fcfa7c286d34ac6c",
+  "pngExact": true,
+  "objectsExact": true,
+  "assets": 0
+}

@@ -1,0 +1,12 @@
+{
+  "variant": "combined",
+  "mapId": "ed4e6571-7b13-49a3-9b5b-95bf1aa5c34b",
+  "exportMs": 60.79999999701977,
+  "exportTiming": "Repeated native exportPng verification after real pointer Add, undo, redo, final undo and Save; includes rendering/encoding/cache policy. Original UI download is independently hash-checked.",
+  "png": "6c31ee395cf939d4f33c461a9b20cfcf782ab169a30f9931c7bdb5ce933a4852",
+  "archive": "6c31ee395cf939d4f33c461a9b20cfcf782ab169a30f9931c7bdb5ce933a4852",
+  "database": "6c31ee395cf939d4f33c461a9b20cfcf782ab169a30f9931c7bdb5ce933a4852",
+  "pngExact": true,
+  "objectsExact": true,
+  "assets": 0
+}
